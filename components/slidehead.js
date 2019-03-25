@@ -43,13 +43,13 @@ export class SlideHead extends React.Component {
     @observable
     endings = '                ';
 
-    words = ['automated', 'algorithmic', 'convenient', 'profitable', 'bot', 'easy'];
+    words = ['algorithmic', 'automated', 'convenient', 'profitable', 'bot', 'easy'];
 
     @observable
     currentWordIndex = 0;
 
     @observable
-    currentWord = 'automated';
+    currentWord = 'algorithmic';
 
     @observable
     wordDirection = 0;
@@ -125,7 +125,7 @@ export class SlideHead extends React.Component {
     get header() {
         return (
             <div>
-                brings <br />
+                Brings <br />
                 <Highlight>{this.currentWord}</Highlight>
                 <Cursor>|</Cursor>
                 <br />
