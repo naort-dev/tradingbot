@@ -68,7 +68,7 @@ class Footer extends React.Component {
     }
 
     onClickTwitter() {
-        window.open('https://twitter.com/trality_crypto', '_blank');
+        window.open('https://twitter.com/trality_bots', '_blank');
         this.context.mixpanel.track(`clickedOnTwitterBottom`)
     }
 
@@ -90,7 +90,7 @@ class Footer extends React.Component {
                             <img src={logo} alt="Trality Logo"/>
                         </div>
                         <div>
-                            { !this.jobs && 
+                            { !this.jobs &&
                             <Button hollow small onClick={() => this.linkTo("#head")}>
                                 subscribe
                             </Button>
@@ -102,7 +102,7 @@ class Footer extends React.Component {
                     </Top>
                     <Bottom>
                         <L>all rights reserved © trality 2018</L>
-                        { !this.jobs && 
+                        { !this.jobs &&
                         <R>
                             <div>
                                 <a onClick={() => this.linkTo("#follow")}>follow bots</a>
@@ -126,4 +126,3 @@ Footer.contextTypes = {
 Footer = withRouter(Footer)
 
 export { Footer };
-
