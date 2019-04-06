@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { observable, computed } from 'mobx';
 import { Button } from '../theme';
 import jsonp from 'jsonp';
-import PropTypes from 'prop-types';
 import { getCookie, setCookie } from '../util/cookies';
 import * as arrow from '../assets/images/arrow-down.svg';
 
@@ -50,7 +49,7 @@ const InputContainer = styled.div`
     display: flex;
 `;
 
-const Confirm = styled.div`
+const Confirm = styled.div<{ disabled?: boolean }>`
     border: solid 1px #c4c4e2;
     width: 30px;
     height: 55px;
@@ -62,7 +61,7 @@ const Confirm = styled.div`
     ${(props) => props.disabled && 'background-color: #F2F1F0'};
 `;
 
-const Checkmark = styled.div`
+const Checkmark = styled.div<{ show?: boolean }>`
     position: absolute;
     top: 17px;
     transition: 0.3s all;
@@ -79,7 +78,7 @@ const Checkmark = styled.div`
     ${(props) => props.show && 'opacity: 1.0'};
 `;
 
-const Error = styled.div`
+const Error = styled.div<{ show?: boolean }>`
     position: absolute;
     left: 0px;
     top: 18px;
@@ -105,7 +104,7 @@ const Error = styled.div`
     ${(props) => props.show && 'opacity: 1.0'};
 `;
 
-const Loader = styled.div`
+const Loader = styled.div<{ show?: boolean }>`
     position: absolute;
     width: 28px;
     height: 28px;
@@ -153,6 +152,9 @@ class Subscribe extends React.Component {
     @observable
     sending = false;
 
+    @observable
+    isOpen = false;
+
     componentDidMount() {
         let subscribed = getCookie('trality_subscribed');
         if (subscribed) {
@@ -160,7 +162,7 @@ class Subscribe extends React.Component {
         }
     }
 
-    onChange(ev) {
+    onChange(ev: any) {
         this.email = ev.target.value;
     }
 
@@ -193,7 +195,7 @@ class Subscribe extends React.Component {
         let multiple = false;
         let track = () => {
             this.context.mixpanel.track('subscribed');
-        }
+        };
         jsonp(
             this.url,
             {
@@ -201,7 +203,7 @@ class Subscribe extends React.Component {
             },
             (err, data) => {
                 if (err) {
-                    this.error = err;
+                    this.error = true;
                 } else if (data.result !== 'success') {
                     if (data.msg.indexOf('is already subscribed to list') !== -1) {
                         this.context.mixpanel.track('subscribedMultiple');
@@ -230,7 +232,7 @@ class Subscribe extends React.Component {
     renderSuccess() {
         return (
             <Confirmation>
-                <img src={arrow} alt="Arrow down"/> Awesome! Thank you for subscribing to our beta wait list.
+                <img src={arrow} alt="Arrow down" /> Awesome! Thank you for subscribing to our beta wait list.
             </Confirmation>
         );
     }
@@ -239,21 +241,14 @@ class Subscribe extends React.Component {
         return (
             <React.Fragment>
                 <InputContainer>
-                    <Text
-                        disabled={this.disabled}
-                        type="input"
-                        placeholder="Your email <3"
-                        isOpen={this.isOpen}
-                        value={this.email}
-                        onChange={this.onChange.bind(this)}
-                    />
+                    <Text disabled={this.disabled} type="input" placeholder="Your email <3" value={this.email} onChange={this.onChange.bind(this)} />
                     <Confirm disabled={this.disabled}>
                         <Checkmark show={this.isValidEmail && !this.sending && !this.error} />
                         <Error show={this.error && !this.sending} />
                         <Loader show={this.sending} />
                     </Confirm>
                 </InputContainer>
-                <Button type="button" onClick={this.onClick.bind(this)} isOpen={this.isOpen}>
+                <Button type="button" onClick={this.onClick.bind(this)}>
                     trade together.
                 </Button>
             </React.Fragment>
@@ -264,9 +259,5 @@ class Subscribe extends React.Component {
         return <ButtonContainer>{this.success ? this.renderSuccess() : this.renderSubscribe()}</ButtonContainer>;
     }
 }
-
-Subscribe.contextTypes = {
-    mixpanel: PropTypes.object.isRequired,
-};
 
 export { Subscribe };

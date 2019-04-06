@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { Button } from '../theme';
 import styled from 'styled-components';
-import { withRouter } from 'next/router';
+import { withRouter, WithRouterProps } from 'next/router';
 import * as logo from '../assets/images/logo_black_blue.png';
 import * as logoDark from '../assets/images/trality_logo_white.png';
 import * as twitter from '../assets/images/twitter.svg';
 
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import { Container } from '../theme';
 import { observable } from 'mobx';
 import { scrollIt } from '../util/scrollit';
-import Link from 'next/link'
+import Link from 'next/link';
+
+interface BaseStyleProps {
+    open?: boolean;
+    dark?: boolean;
+}
 
 const Logo = styled.img`
     height: 33px;
@@ -20,7 +24,7 @@ const Logo = styled.img`
     }
 `;
 
-const Top = styled.div`
+const Top = styled.div<BaseStyleProps>`
     height: 113px;
     width: 100%;
     align-items: center;
@@ -50,7 +54,7 @@ const Top = styled.div`
     `};
 `;
 
-const ItemContainer = styled.nav`
+const ItemContainer = styled.nav<BaseStyleProps>`
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -77,7 +81,7 @@ const ItemContainer = styled.nav`
     }
 `;
 
-const Item = styled.div`
+const Item = styled.div<BaseStyleProps & { num: number }>`
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -134,7 +138,7 @@ const NavContainer = styled(Container)`
     }
 `;
 
-const MenuRight = styled.div`
+const MenuRight = styled.div<BaseStyleProps>`
     display: none;
     height: 25px;
     width: 25px;
@@ -161,7 +165,7 @@ const Twitter = styled.img`
     height: 20px;
 `;
 
-const MenuBar = styled.div`
+const MenuBar = styled.div<BaseStyleProps>`
     width: 20px;
     height: 2px;
     position: absolute;
@@ -200,7 +204,7 @@ const MenuBar = styled.div`
     `}
 `;
 
-const ContactButton = styled(Button)`
+const ContactButton = styled(Button)<BaseStyleProps>`
     border: none;
     padding: 0;
     &:hover {
@@ -218,9 +222,12 @@ const ContactButton = styled(Button)`
         `}
 `;
 
-@observer
-class Navigation extends React.Component {
+interface NavigationProps {
+    dark: boolean;
+}
 
+@observer
+class Component extends React.Component<NavigationProps & WithRouterProps> {
     @observable
     open = false;
 
@@ -228,8 +235,8 @@ class Navigation extends React.Component {
     jobs = false;
 
     componentDidMount() {
-        let { router } = this.props
-        this.jobs = router.route.indexOf('/jobs') !== -1
+        let { router } = this.props;
+        this.jobs = router ? router.route.indexOf('/jobs') !== -1 : false;
     }
 
     get menu() {
@@ -250,52 +257,59 @@ class Navigation extends React.Component {
         this.open = !this.open;
     }
 
-    linkTo(id) {
+    linkTo(id: string) {
         this.open = false;
-        scrollIt(
-            document.querySelector(id),
-            300,
-            'easeOutQuad',
-            () => this.context.mixpanel.track(`clicked${id}`)
-        )
+        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => this.context.mixpanel.track(`clicked${id}`));
     }
 
     onClickTwitter() {
         window.open('https://twitter.com/trality_bots', '_blank');
-        this.context.mixpanel.track(`clickedOnTwitterTop`)
+        this.context.mixpanel.track(`clickedOnTwitterTop`);
     }
 
     render() {
         return (
             <Top dark={this.props.dark} open={this.open}>
                 <NavContainer>
-                    <Link prefetch replace href="/"><a><Logo src={this.props.dark || this.open ? logoDark : logo} /></a></Link>
+                    <Link prefetch replace href="/">
+                        <a>
+                            <Logo src={this.props.dark || this.open ? logoDark : logo} />
+                        </a>
+                    </Link>
                     <ItemContainer open={this.open}>
-                        { this.jobs ?
+                        {this.jobs ? (
                             <>
                                 <Item open={this.open} num={1}>
-                                    <Link replace prefetch href="/#follow"><a>follow bots</a></Link>
+                                    <Link replace prefetch href="/#follow">
+                                        <a>follow bots</a>
+                                    </Link>
                                 </Item>
                                 <Item open={this.open} num={2}>
-                                    <Link replace prefetch href="/#build"><a>build bots</a></Link>
+                                    <Link replace prefetch href="/#build">
+                                        <a>build bots</a>
+                                    </Link>
                                 </Item>
                                 <Item open={this.open} num={3}>
-                                    <Link replace prefetch href="/jobs"><a>jobs</a></Link>
+                                    <Link replace prefetch href="/jobs">
+                                        <a>jobs</a>
+                                    </Link>
                                 </Item>
                             </>
-                            :
+                        ) : (
                             <>
                                 <Item open={this.open} num={1}>
-                                    <a onClick={() => this.linkTo("#follow")}>follow bots</a>
+                                    <a onClick={() => this.linkTo('#follow')}>follow bots</a>
                                 </Item>
                                 <Item open={this.open} num={2}>
-                                    <a onClick={() => this.linkTo("#build")}>build bots</a>
+                                    <a onClick={() => this.linkTo('#build')}>build bots</a>
                                 </Item>
                                 <Item open={this.open} num={3}>
-                                    <Link replace prefetch href="/jobs"><a>jobs</a></Link>
+                                    <Link replace prefetch href="/jobs">
+                                        <a>jobs</a>
+                                    </Link>
                                 </Item>
                             </>
-                        }
+                        )}
                         <Item open={this.open} num={3}>
                             <ContactButton type="button" hollow small open={this.open} onClick={this.onClickTwitter.bind(this)}>
                                 <Twitter src={twitter} />
@@ -313,10 +327,4 @@ class Navigation extends React.Component {
     }
 }
 
-Navigation.contextTypes = {
-    mixpanel: PropTypes.object.isRequired,
-};
-
-Navigation = withRouter(Navigation);
-
-export { Navigation };
+export const Navigation = withRouter(Component);

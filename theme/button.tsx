@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import * as React from 'react';
 import * as arrow from '../assets/images/arrow-down.svg';
 
-export const Button = styled.button`
+export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean }>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
@@ -66,13 +66,11 @@ export const Button = styled.button`
 
 `;
 
-export class KnowMore extends React.Component {
-    render() {
-        return (
-            <Button knowmore>
-                <img src={arrow} alt="Arrow down"/>
-                {this.props.children}
-            </Button>
-        );
-    }
-}
+export const KnowMore: React.FunctionComponent<{}> = (props) => {
+    return (
+        <Button knowmore>
+            <img src={arrow} alt="Arrow down" />
+            {props.children}
+        </Button>
+    );
+};

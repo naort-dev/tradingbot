@@ -1,9 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
-import { GDPR, Navigation, Footer } from '../components';
+import { Navigation, Footer } from '../components';
 import { Section, LayoutDivided, Content, LayoutCentered } from '../theme';
-import PropTypes from 'prop-types';
-import Link from 'next/link'
+import Link from 'next/link';
 
 import * as image from '../assets/images/jobs@2x.png';
 import * as arrow from '../assets/images/arrow-down.svg';
@@ -23,7 +22,7 @@ const Header = styled.h1`
         margin-top: 100px;
         margin-bottom: 80px;
     }
-`
+`;
 
 const WhyContainer = styled.div`
     display: flex;
@@ -84,7 +83,6 @@ const Job = styled.div`
         padding-left: 25px;
         font-size: 14px;
     }
-
 `;
 
 const Why = styled.div`
@@ -123,7 +121,7 @@ const Why = styled.div`
             text-align: center;
         }
     }
-`
+`;
 
 const Img = styled.img`
     height: 45vh;
@@ -133,7 +131,7 @@ const Img = styled.img`
     @media (max-width: 768px) {
         display: none;
     }
-`; 
+`;
 
 const Description = styled.div`
     margin-bottom: 100px;
@@ -150,15 +148,17 @@ const Description = styled.div`
 `;
 
 class Component extends React.Component {
-
     componentDidMount() {
-        this.context.mixpanel.track(`openedJobs`)
+        this.context.mixpanel.track(`openedJobs`);
     }
 
     get left() {
         return (
             <Content header={"we're hiring"}>
-                <div>would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic trading? We are a small but very diverse teamand we would love to hear from you!</div>
+                <div>
+                    would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic trading? We are a small but
+                    very diverse teamand we would love to hear from you!
+                </div>
             </Content>
         );
     }
@@ -166,7 +166,7 @@ class Component extends React.Component {
     get right() {
         return (
             <React.Fragment>
-                <Img src={image} alt="Jobs"/>
+                <Img src={image} alt="Jobs" />
             </React.Fragment>
         );
     }
@@ -182,24 +182,26 @@ class Component extends React.Component {
                     <Header>why join us</Header>
                     <WhyContainer>
                         <Why>
-                            <img src={ic1}/>
+                            <img src={ic1} />
                             <h5>small team, large responsibilty</h5>
                             <div>we are currently a team of only 5 and if you’re the right person for job, you’re basically in charge of it.</div>
                         </Why>
                         <Why>
-                            <img src={ic2}/>
+                            <img src={ic2} />
                             <h5>competitive remuneration</h5>
                             <div>we want the best for the job and pay accordingly! We are also open to negotiating equity-based compensation..</div>
                         </Why>
                         <Why>
-                            <img src={ic3}/>
+                            <img src={ic3} />
                             <h5>flexibility</h5>
-                            <div>we understand that people are different. Want to work remotely? Fine. Wanna join us in our offices? Perfect as well.</div>
+                            <div>
+                                we understand that people are different. Want to work remotely? Fine. Wanna join us in our offices? Perfect as well.
+                            </div>
                         </Why>
                     </WhyContainer>
                 </div>
             </LayoutCentered>
-        )
+        );
     }
 
     renderOpen() {
@@ -211,17 +213,27 @@ class Component extends React.Component {
                         <Job>
                             <h5>Senior/Junior Backend Developer</h5>
                             <div>build state-of-the-art systems that empower the complex trading-bots running on our platform!.</div>
-                            <Link replace href="/jobs_backend"><a>Interested<img src={arrow}/></a></Link>
+                            <Link replace href="/jobs_backend">
+                                <a>
+                                    Interested
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
                         </Job>
                         <Job>
                             <h5>Senior/Junior Frontend Developer</h5>
                             <div>use cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX!</div>
-                            <Link replace href="/jobs_frontend"><a>Interested<img src={arrow}/></a></Link>
+                            <Link replace href="/jobs_frontend">
+                                <a>
+                                    Interested
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
                         </Job>
                     </JobContainer>
                 </div>
             </LayoutCentered>
-        )
+        );
     } //<GDPR />
 
     renderYourRole() {
@@ -230,12 +242,12 @@ class Component extends React.Component {
                 <div>
                     <Header>Your Role not on the List?</Header>
                     <Description>
-                    We probably have a position for you if you are a great fit! Simply drop us an email including a CV and a 1-page cover letter including a brief description of your desired role at trality
-                    to <span>jobs [at] trality dot com</span> 
+                        We probably have a position for you if you are a great fit! Simply drop us an email including a CV and a 1-page cover letter
+                        including a brief description of your desired role at trality to <span>jobs [at] trality dot com</span>
                     </Description>
                 </div>
             </LayoutCentered>
-        )
+        );
     } //<GDPR />
 
     render() {
@@ -243,28 +255,23 @@ class Component extends React.Component {
             <React.Fragment>
                 <Navigation dark={false} />
                 <Section first id="head">
-                    { this.renderHead() }
+                    {this.renderHead()}
                 </Section>
                 <Section id="why" clearHeight>
-                    { this.renderWhy() }
+                    {this.renderWhy()}
                 </Section>
                 <Section id="open" dark darkbg clearHeight>
-                    { this.renderOpen() }
+                    {this.renderOpen()}
                 </Section>
                 <Section id="role" dark darkbg clearHeight>
-                    { this.renderYourRole() }
+                    {this.renderYourRole()}
                 </Section>
                 <Section dark clearHeight darkbg>
                     <Footer />
                 </Section>
             </React.Fragment>
-        )
+        );
     }
-
 }
-
-Component.contextTypes = {
-    mixpanel: PropTypes.object.isRequired,
-};
 
 export default Component;

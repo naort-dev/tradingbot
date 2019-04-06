@@ -1,4 +1,4 @@
-export function fontFace(name, src, fontWeight = 'normal', fontstyle = 'normal') {
+export function fontFace(name: string, src: string, fontWeight = 'normal', fontstyle = 'normal') {
     return `
         @font-face{
             font-family: "${name}";

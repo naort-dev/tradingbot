@@ -1,9 +1,9 @@
-export function scrollIt(destination, duration = 200, easing = 'easeOutQuad', callback) {
+export function scrollIt(destination: any, duration = 200, easing = 'easeOutQuad', callback: any) {
     const easings = {
-        easeOutQuad(t) {
+        easeOutQuad(t: number) {
             return t * (2 - t);
         },
-    };
+    } as any;
 
     const start = window.pageYOffset;
     const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();

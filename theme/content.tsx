@@ -9,7 +9,7 @@ const Container = styled.div`
     }
 `;
 
-const Head = styled.h1`
+const Head = styled.h1<{ small?: boolean }>`
     font-size: 60px;
     font-weight: normal;
     font-style: normal;
@@ -27,7 +27,9 @@ const Head = styled.h1`
     @media (max-width: 550px) {
         max-width: 90%;
     }
-    ${props => props.small && `
+    ${(props) =>
+        props.small &&
+        `
         font-size: 20px;
     `}
 `;
@@ -58,23 +60,31 @@ const Icon = styled.div`
 `;
 
 const Img = styled.img`
-    height: ${props => props.height}px;
+    height: ${(props) => props.height}px;
     object-fit: contain;
     margin: auto;
 `;
 
-export class Content extends React.Component {
-    render() {
-        return (
-            <Container>
-                {this.props.icon && (
-                    <Icon>
-                        <Img src={this.props.icon} height={this.props.iconHeight || 18} alt="Icon"/>
-                    </Icon>
-                )}
-                <Head small={this.props.small}>{this.props.header} </Head>
-                <Main>{this.props.children}</Main>
-            </Container>
-        );
-    }
+interface ContentProps {
+    icon?: string;
+    iconHeight?: number;
+    small?: boolean;
+    header: string | React.ReactNode;
 }
+
+const Content: React.FunctionComponent<ContentProps> = (props) => {
+    return (
+        <Container>
+            {props.icon && (
+                <Icon>
+                    <Img src={props.icon} height={props.iconHeight} alt="Icon" />
+                </Icon>
+            )}
+            <Head small={props.small}>{props.header} </Head>
+            <Main>{props.children}</Main>
+        </Container>
+    );
+};
+
+//Content.defaultProps.iconHeight = 18;
+export { Content };

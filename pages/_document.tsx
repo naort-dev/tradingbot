@@ -1,9 +1,10 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet, injectGlobal } from 'styled-components';
+import * as React from 'react';
+import Document, { Head, Main, NextScript, NextDocumentContext } from 'next/document';
+import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
 import { fontFace } from '../util/fontface';
 import { theme } from '../theme/theme';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
 
 ${fontFace('basier', 'basiersquare-regular-webfont', 'regular', 'regular')}
 ${fontFace('basier', 'basiersquare-bold-webfont', 'bold', 'bold')}
@@ -53,12 +54,25 @@ input:focus {
 
 `;
 
-export default class Doc extends Document {
-    static getInitialProps({ renderPage }) {
+interface DocProps {
+    styleTags: any;
+}
+
+export default class Doc extends Document<DocProps> {
+    /*static getInitialProps({ renderPage }) {
         const sheet = new ServerStyleSheet();
         const page = renderPage((App) => (props) => sheet.collectStyles(<App {...props} />));
         const styleTags = sheet.getStyleElement();
         return { ...page, styleTags };
+    }*/
+
+    static async getInitialProps(ctx: NextDocumentContext) {
+        const sheet = new ServerStyleSheet();
+        const page = ctx.renderPage((App) => (props) => sheet.collectStyles(<App {...props} />));
+        const initialProps = await Document.getInitialProps(ctx);
+        const styleTags = sheet.getStyleElement();
+        //return { ...initialProps };
+        return { ...page, ...initialProps, styleTags };
     }
 
     render() {
@@ -68,6 +82,7 @@ export default class Doc extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <GlobalStyle />
                 </body>
             </html>
         );

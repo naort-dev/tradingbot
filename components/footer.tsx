@@ -3,11 +3,9 @@ import { LayoutCentered, Button } from '../theme';
 import styled from 'styled-components';
 import * as logo from '../assets/images/trality_logo_white.png';
 import { scrollIt } from '../util/scrollit';
-import PropTypes from 'prop-types';
-import { withRouter } from 'next/router';
+import { withRouter, WithRouterProps } from 'next/router';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
-
 
 const Wrap = styled.div`
     margin-bottom: 15px;
@@ -34,9 +32,7 @@ const Bottom = styled.div`
     justify-content: space-between;
 `;
 
-const L = styled.div`
-
-`;
+const L = styled.div``;
 
 const R = styled.div`
     display: flex;
@@ -45,7 +41,7 @@ const R = styled.div`
     }
     & > div > a:hover {
         cursor: pointer;
-        color: ${props => props.theme.main};
+        color: ${(props) => props.theme.main};
     }
 `;
 
@@ -54,31 +50,25 @@ const MButton = styled(Button)`
     @media (max-width: 500px) {
         display: none;
     }
-`
+`;
 
 @observer
-class Footer extends React.Component {
-
+class Component extends React.Component<WithRouterProps> {
     @observable
     jobs = false;
 
     componentDidMount() {
-        let { router } = this.props
-        this.jobs = router.route == '/jobs'
+        let { router } = this.props;
+        this.jobs = router!.route == '/jobs';
     }
 
     onClickTwitter() {
         window.open('https://twitter.com/trality_bots', '_blank');
-        this.context.mixpanel.track(`clickedOnTwitterBottom`)
+        this.context.mixpanel.track(`clickedOnTwitterBottom`);
     }
 
-    linkTo(id) {
-        scrollIt(
-            document.querySelector(id),
-            300,
-            'easeOutQuad',
-            () => this.context.mixpanel.track(`clicked${id}`)
-        )
+    linkTo(id: any) {
+        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => this.context.mixpanel.track(`clicked${id}`));
     }
 
     render() {
@@ -87,14 +77,14 @@ class Footer extends React.Component {
                 <Wrap>
                     <Top>
                         <div>
-                            <img src={logo} alt="Trality Logo"/>
+                            <img src={logo} alt="Trality Logo" />
                         </div>
                         <div>
-                            { !this.jobs &&
-                            <Button hollow small onClick={() => this.linkTo("#head")}>
-                                subscribe
-                            </Button>
-                            }
+                            {!this.jobs && (
+                                <Button hollow small onClick={() => this.linkTo('#head')}>
+                                    subscribe
+                                </Button>
+                            )}
                             <MButton hollow small onClick={this.onClickTwitter.bind(this)}>
                                 follow us on twitter
                             </MButton>
@@ -102,16 +92,16 @@ class Footer extends React.Component {
                     </Top>
                     <Bottom>
                         <L>all rights reserved © trality 2018</L>
-                        { !this.jobs &&
-                        <R>
-                            <div>
-                                <a onClick={() => this.linkTo("#follow")}>follow bots</a>
-                            </div>
-                            <div>
-                                <a onClick={() => this.linkTo("#build")}>build bots</a>
-                            </div>
-                        </R>
-                        }
+                        {!this.jobs && (
+                            <R>
+                                <div>
+                                    <a onClick={() => this.linkTo('#follow')}>follow bots</a>
+                                </div>
+                                <div>
+                                    <a onClick={() => this.linkTo('#build')}>build bots</a>
+                                </div>
+                            </R>
+                        )}
                     </Bottom>
                 </Wrap>
             </LayoutCentered>
@@ -119,10 +109,4 @@ class Footer extends React.Component {
     }
 }
 
-Footer.contextTypes = {
-    mixpanel: PropTypes.object.isRequired,
-};
-
-Footer = withRouter(Footer)
-
-export { Footer };
+export const Footer = withRouter(Component);

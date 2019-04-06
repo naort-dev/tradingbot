@@ -1,10 +1,19 @@
 import styled from 'styled-components';
-import Waypoint from 'react-waypoint';
+import { Waypoint } from 'react-waypoint';
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 
-export const S = styled.div`
+export interface SectionProps {
+    id?: string;
+    first?: boolean;
+    dark?: boolean;
+    clearHeight?: boolean;
+    darkbg?: boolean;
+    nocenter?: boolean;
+}
+
+export const S = styled.div<SectionProps>`
     width: 100%;
     display: block;
     overflow: hidden;
@@ -50,8 +59,8 @@ export const S = styled.div`
             color: #fff !important;
         }
     `} ${(props) =>
-        props.clearHeight &&
-        `
+    props.clearHeight &&
+    `
         height: unset !important;
         min-height: unset!important;
     `}
@@ -67,26 +76,22 @@ export const S = styled.div`
     `}
 `;
 
-@observer
-export class Section extends React.Component {
-    @observable
-    entered = false;
-
-    _handleWaypointEnter() {
+export const Section: React.FunctionComponent<SectionProps> = (props) => {
+    let [entered, setEntered] = React.useState(false);
+    const handleWaypointEnter = React.useCallback(() => {
         setTimeout(() => {
-            this.entered = true;
+            setEntered(true);
         }, 500);
-    }
+    }, []);
+    const handleWaypointLeave = React.useCallback(() => {
+        setTimeout(() => {
+            setEntered(false);
+        }, 500);
+    }, []);
 
-    _handleWaypointLeave() {
-        this.entered = false;
-    }
-
-    render() {
-        return (
-            <Waypoint onEnter={this._handleWaypointEnter.bind(this)} onLeave={this._handleWaypointLeave.bind(this)}>
-                <S {...this.props}>{this.props.children}</S>
-            </Waypoint>
-        );
-    }
-}
+    return (
+        <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave}>
+            <S {...props}>{props.children}</S>
+        </Waypoint>
+    );
+};

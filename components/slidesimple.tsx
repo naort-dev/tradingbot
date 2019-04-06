@@ -2,23 +2,12 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
 import { Content, LayoutCentered, Button } from '../theme';
-import * as icon from '../assets/images/trality_small.png';
-import Link from 'next/link'
+import Link from 'next/link';
 
 import * as follow from '../assets/images/follow.svg';
 import * as create from '../assets/images/create.svg';
 import * as profit from '../assets/images/profit.svg';
 import * as arrow from '../assets/images/arrow-down.svg';
-
-const Center = styled.div`
-    width: 60%;
-    @media (max-width: 768px) {
-        width: 70%;
-    }
-    @media (max-width: 468px) {
-        width: 90%;
-    }
-`;
 
 const Header = styled.h1`
     font-weight: normal;
@@ -45,7 +34,6 @@ const Simple = styled.div`
     padding: 0px 50px 0px;
     text-align: center;
     & > img {
-
         margin-bottom: 25px;
     }
     & > h5 {
@@ -98,10 +86,8 @@ const Simple = styled.div`
     }
 `;
 
-
 @observer
 export class SlideSimple extends React.Component {
-
     render() {
         return (
             <LayoutCentered>
@@ -109,26 +95,43 @@ export class SlideSimple extends React.Component {
                     <Header>It's simple.</Header>
                     <SimpleContainer>
                         <Simple>
-                            <img src={follow}/>
+                            <img src={follow} />
                             <h5>Follow bots</h5>
-                            <div>Some traders just want to sit back, relax and let experts do the work for them. On our bot marketplace, they can simply select a bot and follow it.</div>
-                            <Link replace href="/slidefollow"><a>Read more<img src={arrow}/></a></Link>
+                            <div>
+                                Some traders just want to sit back, relax and let experts do the work for them. On our bot marketplace, they can
+                                simply select a bot and follow it.
+                            </div>
+                            <Link replace href="/slidefollow">
+                                <a>
+                                    Read more
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
                         </Simple>
                         <Simple>
-                            <img src={create}/>
+                            <img src={create} />
                             <h5>Create bots</h5>
-                            <div>Others just love to build custom trading bots. They are wizards with technical analysis and want to maintain and improve their bots constantly.</div>
-                            <Link replace href="/slidebuild"><a>Read more<img src={arrow}/></a></Link>
+                            <div>
+                                Others just love to build custom trading bots. They are wizards with technical analysis and want to maintain and
+                                improve their bots constantly.
+                            </div>
+                            <Link replace href="/slidebuild">
+                                <a>
+                                    Read more
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
                         </Simple>
                         <Simple>
-                            <img src={profit}/>
+                            <img src={profit} />
                             <h5>Profit from each other</h5>
-                            <div>On Trality leisure and expert traders can profit from bots individually but, more importantly, also from each other.</div>
+                            <div>
+                                On Trality leisure and expert traders can profit from bots individually but, more importantly, also from each other.
+                            </div>
                         </Simple>
                     </SimpleContainer>
                 </div>
             </LayoutCentered>
-        )
+        );
     }
-
 }

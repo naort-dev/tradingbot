@@ -38,8 +38,12 @@ const Cursor = styled.span`
     font-size: 1.1em;
 `;
 
+interface SideHeadProps {
+    side?: 'left' | 'right';
+}
+
 @observer
-export class SlideHead extends React.Component {
+export class SlideHead extends React.Component<SideHeadProps> {
     @observable
     endings = '                ';
 
@@ -129,7 +133,9 @@ export class SlideHead extends React.Component {
                 <Highlight>{this.currentWord}</Highlight>
                 <Cursor>|</Cursor>
                 <br />
-                trading into<br/>your life.
+                trading into
+                <br />
+                your life.
             </div>
         );
     }
@@ -139,13 +145,13 @@ export class SlideHead extends React.Component {
             <Content header={this.header}>
                 <div>We connect people who know how to make the most of cryptotrading with people who prefer their money to work for them.</div>
                 <Subscribe />
-                <Call src={call}/>
+                <Call src={call} />
             </Content>
         );
     }
 
     get right() {
-        return <Img src={phone} alt="Trality Phone Screenshot"/>;
+        return <Img src={phone} alt="Trality Phone Screenshot" />;
     }
 
     render() {
