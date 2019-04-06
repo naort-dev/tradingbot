@@ -261,17 +261,17 @@ class Navigation extends React.Component {
     }
 
     onClickTwitter() {
-        window.open('https://twitter.com/trality_crypto', '_blank');
+        window.open('https://twitter.com/trality_bots', '_blank');
         this.context.mixpanel.track(`clickedOnTwitterTop`)
     }
-    
+
     render() {
         return (
             <Top dark={this.props.dark} open={this.open}>
                 <NavContainer>
                     <Link prefetch replace href="/"><a><Logo src={this.props.dark || this.open ? logoDark : logo} /></a></Link>
                     <ItemContainer open={this.open}>
-                        { this.jobs ? 
+                        { this.jobs ?
                             <>
                                 <Item open={this.open} num={1}>
                                     <Link replace prefetch href="/#follow"><a>follow bots</a></Link>
