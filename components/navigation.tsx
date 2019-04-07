@@ -6,11 +6,11 @@ import * as logo from '../assets/images/logo_black_blue.png';
 import * as logoDark from '../assets/images/trality_logo_white.png';
 import * as twitter from '../assets/images/twitter.svg';
 
-import { observer } from 'mobx-react';
 import { Container } from '../theme';
-import { observable } from 'mobx';
 import { scrollIt } from '../util/scrollit';
 import Link from 'next/link';
+
+import { useMixpanel } from '../hooks/mixpanel';
 
 interface BaseStyleProps {
     open?: boolean;
@@ -31,12 +31,12 @@ const Top = styled.div<BaseStyleProps>`
     justify-content: center;
     display: flex;
     z-index: 1002;
-    background-color: white;
     @media (max-width: 768px) {
         border-bottom: solid 1px #e9ecef;
         position: fixed;
         left: 0;
         top: 0;
+        background-color: white;
         height: 60px;
         ${(props) =>
             props.open &&
@@ -226,105 +226,82 @@ interface NavigationProps {
     dark: boolean;
 }
 
-@observer
-class Component extends React.Component<NavigationProps & WithRouterProps> {
-    @observable
-    open = false;
+const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (props) => {
+    let [open, setOpen] = React.useState(false);
+    let jobs = props.router ? props.router.route.indexOf('/jobs') !== -1 : false;
+    let mixpanel = useMixpanel();
 
-    @observable
-    jobs = false;
+    const toggleMenu = React.useCallback(() => {
+        mixpanel.track('toggleMenu');
+        setOpen(!open);
+    }, [open]);
 
-    componentDidMount() {
-        let { router } = this.props;
-        this.jobs = router ? router.route.indexOf('/jobs') !== -1 : false;
-    }
-
-    get menu() {
-        return (
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M20 0L0 0L0 2L20 2V0ZM20 7L0 7L0 9L20 9V7ZM20 14L5.75073 14V16L20 16V14Z"
-                    fill="#231F20"
-                />
-            </svg>
-        );
-    }
-
-    toggleMenu() {
-        this.context.mixpanel.track('toggleMenu');
-        this.open = !this.open;
-    }
-
-    linkTo(id: string) {
-        this.open = false;
-        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => this.context.mixpanel.track(`clicked${id}`));
-    }
-
-    onClickTwitter() {
+    const onClickTwitter = React.useCallback(() => {
+        mixpanel.track('clickedOnTwitterTop');
         window.open('https://twitter.com/trality_bots', '_blank');
-        this.context.mixpanel.track(`clickedOnTwitterTop`);
-    }
+    }, []);
 
-    render() {
-        return (
-            <Top dark={this.props.dark} open={this.open}>
-                <NavContainer>
-                    <Link prefetch replace href="/">
-                        <a>
-                            <Logo src={this.props.dark || this.open ? logoDark : logo} />
-                        </a>
-                    </Link>
-                    <ItemContainer open={this.open}>
-                        {this.jobs ? (
-                            <>
-                                <Item open={this.open} num={1}>
-                                    <Link replace prefetch href="/#follow">
-                                        <a>follow bots</a>
-                                    </Link>
-                                </Item>
-                                <Item open={this.open} num={2}>
-                                    <Link replace prefetch href="/#build">
-                                        <a>build bots</a>
-                                    </Link>
-                                </Item>
-                                <Item open={this.open} num={3}>
-                                    <Link replace prefetch href="/jobs">
-                                        <a>jobs</a>
-                                    </Link>
-                                </Item>
-                            </>
-                        ) : (
-                            <>
-                                <Item open={this.open} num={1}>
-                                    <a onClick={() => this.linkTo('#follow')}>follow bots</a>
-                                </Item>
-                                <Item open={this.open} num={2}>
-                                    <a onClick={() => this.linkTo('#build')}>build bots</a>
-                                </Item>
-                                <Item open={this.open} num={3}>
-                                    <Link replace prefetch href="/jobs">
-                                        <a>jobs</a>
-                                    </Link>
-                                </Item>
-                            </>
-                        )}
-                        <Item open={this.open} num={3}>
-                            <ContactButton type="button" hollow small open={this.open} onClick={this.onClickTwitter.bind(this)}>
-                                <Twitter src={twitter} />
-                            </ContactButton>
-                        </Item>
-                    </ItemContainer>
-                    <MenuRight onClick={this.toggleMenu.bind(this)} open={this.open || this.props.dark}>
-                        <MenuBar id="1" open={this.open} />
-                        <MenuBar id="2" open={this.open} />
-                        <MenuBar id="3" open={this.open} />
-                    </MenuRight>
-                </NavContainer>
-            </Top>
-        );
-    }
-}
+    const linkTo = React.useCallback((id: string) => {
+        setOpen(false);
+        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
+    }, []);
+
+    return (
+        <Top dark={props.dark} open={open}>
+            <NavContainer>
+                <Link prefetch replace href="/">
+                    <a>
+                        <Logo src={props.dark || open ? logoDark : logo} />
+                    </a>
+                </Link>
+                <ItemContainer open={open}>
+                    {jobs ? (
+                        <>
+                            <Item open={open} num={1}>
+                                <Link replace prefetch href="/#follow">
+                                    <a>follow bots</a>
+                                </Link>
+                            </Item>
+                            <Item open={open} num={2}>
+                                <Link replace prefetch href="/#build">
+                                    <a>build bots</a>
+                                </Link>
+                            </Item>
+                            <Item open={open} num={3}>
+                                <Link replace prefetch href="/jobs">
+                                    <a>jobs</a>
+                                </Link>
+                            </Item>
+                        </>
+                    ) : (
+                        <>
+                            <Item open={open} num={1}>
+                                <a onClick={() => linkTo('#follow')}>follow bots</a>
+                            </Item>
+                            <Item open={open} num={2}>
+                                <a onClick={() => linkTo('#build')}>build bots</a>
+                            </Item>
+                            <Item open={open} num={3}>
+                                <Link replace prefetch href="/jobs">
+                                    <a>jobs</a>
+                                </Link>
+                            </Item>
+                        </>
+                    )}
+                    <Item open={open} num={3}>
+                        <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
+                            <Twitter src={twitter} />
+                        </ContactButton>
+                    </Item>
+                </ItemContainer>
+                <MenuRight onClick={toggleMenu} open={open || props.dark}>
+                    <MenuBar id="1" open={open} />
+                    <MenuBar id="2" open={open} />
+                    <MenuBar id="3" open={open} />
+                </MenuRight>
+            </NavContainer>
+        </Top>
+    );
+};
 
 export const Navigation = withRouter(Component);

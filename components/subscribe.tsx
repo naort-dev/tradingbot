@@ -23,6 +23,7 @@ const Text = styled.input`
     border-radius: 0px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    box-sizing: border-box;
     &:focus {
         outline: none;
     }
@@ -58,6 +59,7 @@ const Confirm = styled.div<{ disabled?: boolean }>`
     border-left: none;
     display: flex;
     position: relative;
+    box-sizing: border-box;
     ${(props) => props.disabled && 'background-color: #F2F1F0'};
 `;
 
@@ -135,6 +137,25 @@ const Loader = styled.div<{ show?: boolean }>`
 const Confirmation = styled.div`
     color: black;
 `;
+
+/*const Subscribe: React.FunctionComponent<{}> = props => {
+
+    let [email, setEmail] = React.useState('')
+    let [error, setError] = React.useState(false)
+    let [success, setSuccess] = React.useState(false)
+    let [sending, setSending] = React.useState(false)
+    let [open, setOpen] = React.useState(false)
+
+    React.useCallback(() => {
+        let subscribed = getCookie('trality_subscribed');
+        if (subscribed) {
+            setSuccess(true)
+        }
+    }, [])
+
+
+
+}*/
 
 @observer
 class Subscribe extends React.Component {

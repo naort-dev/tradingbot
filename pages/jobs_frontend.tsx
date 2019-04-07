@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Navigation, Footer } from '../components';
-import { Section, LayoutTop } from '../theme';
+import { LayoutTop, Page } from '../theme';
 import Link from 'next/link';
 import * as arrow from '../assets/images/arrow-down.svg';
+import { useMixpanel } from '../hooks/mixpanel';
 
 const Header = styled.h1`
     font-weight: normal;
@@ -54,13 +54,13 @@ const Breadcrumb = styled.div`
     }
 `;
 
-class Component extends React.Component {
-    componentDidMount() {
-        this.context.mixpanel.track(`openedJobsFrontend`);
-    }
-
-    renderJob() {
-        return (
+const Component: React.FunctionComponent<{}> = () => {
+    const mixpanel = useMixpanel();
+    React.useCallback(() => {
+        mixpanel.track(`openedJobsFrontend`);
+    }, []);
+    return (
+        <Page>
             <LayoutTop>
                 <div>
                     <Breadcrumb>
@@ -153,22 +153,8 @@ class Component extends React.Component {
                     </Description>
                 </div>
             </LayoutTop>
-        );
-    } //<GDPR />
-
-    render() {
-        return (
-            <React.Fragment>
-                <Navigation dark={false} />
-                <Section first id="head" nocenter>
-                    {this.renderJob()}
-                </Section>
-                <Section dark clearHeight darkbg>
-                    <Footer />
-                </Section>
-            </React.Fragment>
-        );
-    }
-}
+        </Page>
+    );
+};
 
 export default Component;

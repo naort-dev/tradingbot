@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Button } from '../theme';
 import styled from 'styled-components';
 import { useMixpanel } from '../hooks/mixpanel';
+import { useDark, DarkProp } from '../hooks/dark';
 
-const Container = styled.div`
+const Container = styled.div<DarkProp>`
     position: fixed;
     bottom: 0;
     left: 0;
@@ -18,11 +19,19 @@ const Container = styled.div`
     justify-content: center;
     border-top: 2px solid ${(props) => props.theme.main};
     transition: 0.3s all;
-
     @media (max-width: 768px) {
         display: block;
         text-align: center;
     }
+    ${(props) =>
+        props.dark &&
+        `
+        background: #181927;
+        color: #6d7385;
+        & h1 {
+            color: #fff !important;
+        }
+    `}
 `;
 
 const B = styled(Button)`
@@ -32,6 +41,7 @@ const B = styled(Button)`
 export const GDPR: React.FunctionComponent<{}> = () => {
     const mixPanel = useMixpanel();
     let [hasOptedIn, setHasOptedIn] = React.useState(mixPanel.has_opted_in_tracking());
+    const { dark } = useDark();
 
     let accept = React.useCallback(() => {
         mixPanel.opt_in_tracking();
@@ -43,7 +53,7 @@ export const GDPR: React.FunctionComponent<{}> = () => {
     }
 
     return (
-        <Container>
+        <Container dark={dark}>
             <p>We use cookies to provide and improve our services. By using our site, you consent to cookies.</p>
             <B hollow small onClick={() => accept()}>
                 Accept

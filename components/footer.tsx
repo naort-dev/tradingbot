@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import * as logo from '../assets/images/trality_logo_white.png';
 import { scrollIt } from '../util/scrollit';
 import { withRouter, WithRouterProps } from 'next/router';
-import { observer } from 'mobx-react';
-import { observable } from 'mobx';
+import { useMixpanel } from '../hooks/mixpanel';
 
 const Wrap = styled.div`
     margin-bottom: 15px;
@@ -52,61 +51,51 @@ const MButton = styled(Button)`
     }
 `;
 
-@observer
-class Component extends React.Component<WithRouterProps> {
-    @observable
-    jobs = false;
-
-    componentDidMount() {
-        let { router } = this.props;
-        this.jobs = router!.route == '/jobs';
-    }
-
-    onClickTwitter() {
+const Component: React.FunctionComponent<WithRouterProps> = (props) => {
+    let jobs = props.router ? props.router.route == '/jobs' : false;
+    let mixpanel = useMixpanel();
+    const onClickTwitter = React.useCallback(() => {
+        mixpanel.track('clickedOnTwitterBottom');
         window.open('https://twitter.com/trality_bots', '_blank');
-        this.context.mixpanel.track(`clickedOnTwitterBottom`);
-    }
+    }, []);
+    const linkTo = React.useCallback((id: string) => {
+        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
+    }, []);
 
-    linkTo(id: any) {
-        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => this.context.mixpanel.track(`clicked${id}`));
-    }
-
-    render() {
-        return (
-            <LayoutCentered>
-                <Wrap>
-                    <Top>
-                        <div>
-                            <img src={logo} alt="Trality Logo" />
-                        </div>
-                        <div>
-                            {!this.jobs && (
-                                <Button hollow small onClick={() => this.linkTo('#head')}>
-                                    subscribe
-                                </Button>
-                            )}
-                            <MButton hollow small onClick={this.onClickTwitter.bind(this)}>
-                                follow us on twitter
-                            </MButton>
-                        </div>
-                    </Top>
-                    <Bottom>
-                        <L>all rights reserved © trality 2018</L>
-                        {!this.jobs && (
-                            <R>
-                                <div>
-                                    <a onClick={() => this.linkTo('#follow')}>follow bots</a>
-                                </div>
-                                <div>
-                                    <a onClick={() => this.linkTo('#build')}>build bots</a>
-                                </div>
-                            </R>
+    return (
+        <LayoutCentered>
+            <Wrap>
+                <Top>
+                    <div>
+                        <img src={logo} alt="Trality Logo" />
+                    </div>
+                    <div>
+                        {!jobs && (
+                            <Button hollow small onClick={() => linkTo('#head')}>
+                                subscribe
+                            </Button>
                         )}
-                    </Bottom>
-                </Wrap>
-            </LayoutCentered>
-        );
-    }
-}
+                        <MButton hollow small onClick={onClickTwitter}>
+                            follow us on twitter
+                        </MButton>
+                    </div>
+                </Top>
+                <Bottom>
+                    <L>all rights reserved © trality 2018</L>
+                    {!jobs && (
+                        <R>
+                            <div>
+                                <a onClick={() => linkTo('#follow')}>follow bots</a>
+                            </div>
+                            <div>
+                                <a onClick={() => linkTo('#build')}>build bots</a>
+                            </div>
+                        </R>
+                    )}
+                </Bottom>
+            </Wrap>
+        </LayoutCentered>
+    );
+};
 
 export const Footer = withRouter(Component);

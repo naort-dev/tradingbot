@@ -75,11 +75,6 @@ interface ContentProps {
 const Content: React.FunctionComponent<ContentProps> = (props) => {
     return (
         <Container>
-            {props.icon && (
-                <Icon>
-                    <Img src={props.icon} height={props.iconHeight} alt="Icon" />
-                </Icon>
-            )}
             <Head small={props.small}>{props.header} </Head>
             <Main>{props.children}</Main>
         </Container>
