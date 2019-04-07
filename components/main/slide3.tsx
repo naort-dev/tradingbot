@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
-import { Content, LayoutDivided, KnowMore } from '../../theme';
+import { LayoutDivided, KnowMore } from '../../theme';
+import { Content } from '../general';
 
 import * as icon from '../../assets/images/marketplaceicon.svg';
 import * as image from './slide3/group-30.png';
@@ -37,20 +38,19 @@ const Left: React.FunctionComponent<{}> = (props) => {
 
 const Right: React.FunctionComponent<{}> = (props) => {
     return (
-        <React.Fragment>
-            <Content header="create bots." icon={icon}>
-                <div>
-                    On our bot marketplace, select a bot from an expert that you like and follow it. While the expert is carefully watching and
-                    adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
-                </div>
-                <ul>
-                    <li>No coding skills needed</li>
-                    <li>Simple backtesting</li>
-                    <li>Code window for experts</li>
-                </ul>
-                <KnowMore>scroll down for more information</KnowMore>
-            </Content>
-        </React.Fragment>
+        <Content>
+            <h1>Create Bots.</h1>
+            <p>
+                On our bot marketplace, select a bot from an expert that you like and follow it. While the expert is carefully watching and adjusting
+                the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
+            </p>
+            <ul>
+                <li>No coding skills needed</li>
+                <li>Simple backtesting</li>
+                <li>Code window for experts</li>
+            </ul>
+            <button>Read more</button>
+        </Content>
     );
 };
 

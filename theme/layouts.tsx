@@ -38,6 +38,13 @@ const Center = styled.div`
     text-align: center;
 `;
 
+const CenterHorizontal = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+`;
+
 const LayoutContainer = styled(Container)<{ content: 'left' | 'right' }>`
     @media (max-width: 768px) {
         display: flex;
@@ -84,7 +91,7 @@ export const LayoutCentered: React.FunctionComponent<LayoutProps> = (props) => {
 export const LayoutTop: React.FunctionComponent<LayoutProps> = (props) => {
     return (
         <Container dark={props.dark}>
-            <Center>{props.children}</Center>
+            <CenterHorizontal>{props.children}</CenterHorizontal>
         </Container>
     );
 };

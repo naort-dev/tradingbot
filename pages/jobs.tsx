@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Navigation, Footer } from '../components';
 import { Section, LayoutDivided, Content, LayoutCentered } from '../theme';
 import Link from 'next/link';
+import { withMixpanel } from '../hooks/mixpanel';
 
 import * as image from '../assets/images/jobs@2x.png';
 import * as arrow from '../assets/images/arrow-down.svg';
@@ -149,7 +150,7 @@ const Description = styled.div`
 
 class Component extends React.Component {
     componentDidMount() {
-        this.context.mixpanel.track(`openedJobs`);
+        this.props.mixpanel.track(`openedJobs`);
     }
 
     get left() {
@@ -274,4 +275,4 @@ class Component extends React.Component {
     }
 }
 
-export default Component;
+export default withMixpanel(Component);

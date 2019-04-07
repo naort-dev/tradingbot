@@ -14,7 +14,6 @@ import {
     Footer,
     GDPR,
 } from '../components';
-import { GlobalStyle } from '../theme/style';
 
 import * as MainSlides from '../components/main';
 
@@ -66,7 +65,6 @@ const Main: React.FunctionComponent<{}> = () => {
         <React.Fragment>
             <GDPR />
             <Container dark={dark}>
-                <GlobalStyle />
                 <Navigation dark={dark} />
                 <Section first id="head">
                     <MainSlides.Slide0 />
@@ -93,7 +91,7 @@ const Main: React.FunctionComponent<{}> = () => {
                             <MainSlides.Slide5 />
                         </Section>
                         <Waypoint onEnter={(e) => handleScrollLog(8, e)} />
-                        <Section dark>
+                        <Section clearHeight dark>
                             <Footer />
                         </Section>
                     </div>

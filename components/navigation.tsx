@@ -11,6 +11,7 @@ import { scrollIt } from '../util/scrollit';
 import Link from 'next/link';
 
 import { useMixpanel } from '../hooks/mixpanel';
+import { useDark } from '../hooks/dark';
 
 interface BaseStyleProps {
     open?: boolean;
@@ -43,6 +44,12 @@ const Top = styled.div<BaseStyleProps>`
             `
             background-color: #181927;
             transition: background-color 0.3s;
+            border-bottom: solid 1px #32364c;
+        `};
+        ${(props) =>
+            props.dark &&
+            `
+            background-color: #181927;
             border-bottom: solid 1px #32364c;
         `};
     }
@@ -133,8 +140,9 @@ const NavContainer = styled(Container)`
     @media (max-width: 768px) {
         width: 100%;
         padding-left: 20px;
-        paddingright: 20px;
+        padding-right: 20px;
         justify-content: space-between;
+        display: flex;
     }
 `;
 
@@ -230,6 +238,7 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
     let [open, setOpen] = React.useState(false);
     let jobs = props.router ? props.router.route.indexOf('/jobs') !== -1 : false;
     let mixpanel = useMixpanel();
+    let { dark } = useDark();
 
     const toggleMenu = React.useCallback(() => {
         mixpanel.track('toggleMenu');
@@ -247,54 +256,46 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
     }, []);
 
     return (
-        <Top dark={props.dark} open={open}>
+        <Top dark={dark} open={open}>
             <NavContainer>
                 <Link prefetch replace href="/">
                     <a>
-                        <Logo src={props.dark || open ? logoDark : logo} />
+                        <Logo src={dark || open ? logoDark : logo} />
                     </a>
                 </Link>
                 <ItemContainer open={open}>
-                    {jobs ? (
-                        <>
-                            <Item open={open} num={1}>
-                                <Link replace prefetch href="/#follow">
-                                    <a>follow bots</a>
-                                </Link>
-                            </Item>
-                            <Item open={open} num={2}>
-                                <Link replace prefetch href="/#build">
-                                    <a>build bots</a>
-                                </Link>
-                            </Item>
-                            <Item open={open} num={3}>
-                                <Link replace prefetch href="/jobs">
-                                    <a>jobs</a>
-                                </Link>
-                            </Item>
-                        </>
-                    ) : (
-                        <>
-                            <Item open={open} num={1}>
-                                <a onClick={() => linkTo('#follow')}>follow bots</a>
-                            </Item>
-                            <Item open={open} num={2}>
-                                <a onClick={() => linkTo('#build')}>build bots</a>
-                            </Item>
-                            <Item open={open} num={3}>
-                                <Link replace prefetch href="/jobs">
-                                    <a>jobs</a>
-                                </Link>
-                            </Item>
-                        </>
-                    )}
+                    <Item open={open} num={1}>
+                        <Link replace prefetch href="/">
+                            <a>Home</a>
+                        </Link>
+                    </Item>
+                    <Item open={open} num={1}>
+                        <Link replace prefetch href="/follow">
+                            <a>Follow bots</a>
+                        </Link>
+                    </Item>
+                    <Item open={open} num={2}>
+                        <Link replace prefetch href="/build">
+                            <a>Build bots</a>
+                        </Link>
+                    </Item>
+                    <Item open={open} num={3}>
+                        <Link replace prefetch href="/jobs">
+                            <a>Jobs</a>
+                        </Link>
+                    </Item>
+                    <Item open={open} num={4}>
+                        <Link replace prefetch href="/contact">
+                            <a>Contact</a>
+                        </Link>
+                    </Item>
                     <Item open={open} num={3}>
                         <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
                             <Twitter src={twitter} />
                         </ContactButton>
                     </Item>
                 </ItemContainer>
-                <MenuRight onClick={toggleMenu} open={open || props.dark}>
+                <MenuRight onClick={toggleMenu} open={open || dark}>
                     <MenuBar id="1" open={open} />
                     <MenuBar id="2" open={open} />
                     <MenuBar id="3" open={open} />

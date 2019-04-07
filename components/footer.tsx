@@ -1,10 +1,16 @@
 import * as React from 'react';
 import { LayoutCentered, Button } from '../theme';
 import styled from 'styled-components';
-import * as logo from '../assets/images/trality_logo_white.png';
+import * as logoWhite from '../assets/images/trality_logo_white.png';
+import * as logo from '../assets/images/logo_black_blue.png';
+
 import { scrollIt } from '../util/scrollit';
 import { withRouter, WithRouterProps } from 'next/router';
 import { useMixpanel } from '../hooks/mixpanel';
+import Link from 'next/link';
+import { useDark, DarkProp } from '../hooks/dark';
+
+import * as twitter from '../assets/images/twitter.svg';
 
 const Wrap = styled.div`
     margin-bottom: 15px;
@@ -51,6 +57,22 @@ const MButton = styled(Button)`
     }
 `;
 
+const LinkContainer = styled.div<DarkProp>`
+    > a {
+        color: #646482;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Component: React.FunctionComponent<WithRouterProps> = (props) => {
     let jobs = props.router ? props.router.route == '/jobs' : false;
     let mixpanel = useMixpanel();
@@ -61,37 +83,33 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
     const linkTo = React.useCallback((id: string) => {
         scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
     }, []);
+    const { dark } = useDark();
 
     return (
         <LayoutCentered>
             <Wrap>
                 <Top>
                     <div>
-                        <img src={logo} alt="Trality Logo" />
+                        <img src={dark ? logoWhite : logo} alt="Trality Logo" />
                     </div>
-                    <div>
-                        {!jobs && (
-                            <Button hollow small onClick={() => linkTo('#head')}>
-                                subscribe
-                            </Button>
-                        )}
-                        <MButton hollow small onClick={onClickTwitter}>
-                            follow us on twitter
-                        </MButton>
-                    </div>
+                    <LinkContainer dark={dark}>
+                        <Link replace prefetch href="/follow">
+                            <a>Follow bots</a>
+                        </Link>
+                        <Link replace prefetch href="/build">
+                            <a>Build bots</a>
+                        </Link>
+                        <Link replace prefetch href="/jobs">
+                            <a>Jobs</a>
+                        </Link>
+                        <Link replace prefetch href="/contact">
+                            <a>Contact</a>
+                        </Link>
+                    </LinkContainer>
                 </Top>
                 <Bottom>
-                    <L>all rights reserved © trality 2018</L>
-                    {!jobs && (
-                        <R>
-                            <div>
-                                <a onClick={() => linkTo('#follow')}>follow bots</a>
-                            </div>
-                            <div>
-                                <a onClick={() => linkTo('#build')}>build bots</a>
-                            </div>
-                        </R>
-                    )}
+                    <L>All rights reserved © Trality 2019</L>
+                    <R>Made with 💙 by Trality</R>
                 </Bottom>
             </Wrap>
         </LayoutCentered>

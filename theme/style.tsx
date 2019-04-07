@@ -1,4 +1,4 @@
-import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { fontFace } from '../util/fontface';
 import { theme } from './theme';
 
@@ -41,23 +41,6 @@ input:focus {
     outline: none;
 }
 
-ul {
-    list-style: none;
-}
-  
-ul li::before {
-    content: "\2022";
-    color: #00b3d8;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-ul li {
-    color: #646482;
-}
-
 @keyframes "blink" {
     from, to {
       color: transparent;
@@ -65,6 +48,10 @@ ul li {
     50% {
       color: black;
     }
-  }
+}
+
+button {
+    border: none;
+}
 
 `;

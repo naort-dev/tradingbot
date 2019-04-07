@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { LayoutCentered } from '../../theme';
+import { LayoutTop } from '../../theme';
 import styled from 'styled-components';
+import { Content } from '../general';
 
 const Center = styled.div`
-    width: 60%;
+    width: 80%;
     @media (max-width: 768px) {
-        width: 70%;
+        width: 80%;
     }
     @media (max-width: 468px) {
         width: 90%;
@@ -82,22 +83,24 @@ const Question: React.FunctionComponent<QuestionProp> = (props) => {
 
 export const Slide4: React.FunctionComponent<{}> = (props) => {
     return (
-        <LayoutCentered>
+        <LayoutTop>
             <Center>
-                <h1>The most frequently asked questions</h1>
-                <Question q="How long can I follow a bot">
-                    Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                    improve their bots constantly.
-                </Question>
-                <Question q="How long can I follow a bot">
-                    Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                    improve their bots constantly.
-                </Question>
-                <Question q="How long can I follow a bot">
-                    Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                    improve their bots constantly.
-                </Question>
+                <Content>
+                    <h1>The most frequently asked questions</h1>
+                    <Question q="How long can I follow a bot">
+                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
+                        improve their bots constantly.
+                    </Question>
+                    <Question q="How long can I follow a bot">
+                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
+                        improve their bots constantly.
+                    </Question>
+                    <Question q="How long can I follow a bot">
+                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
+                        improve their bots constantly.
+                    </Question>
+                </Content>
             </Center>
-        </LayoutCentered>
+        </LayoutTop>
     );
 };

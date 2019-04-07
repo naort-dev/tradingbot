@@ -46,3 +46,10 @@ export const MixpanelProvider: React.FunctionComponent<{}> = (props) => {
 export const useMixpanel = () => {
     return React.useContext(context);
 };
+
+export const withMixpanel = (Comp: any) => {
+    return (props: any) => {
+        let mixpanel = useMixpanel();
+        return <Comp {...props} mixpanel={mixpanel} />;
+    };
+};

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as image from '../assets/images/background.svg';
 import { Navigation, Footer, GDPR } from '../components';
-import { GlobalStyle } from '../theme/style';
 
-import * as Slides from '../components/leisure';
+import * as Slides from '../components/build';
 
 import { Section } from '../theme';
 
@@ -49,16 +48,28 @@ const Page: React.FunctionComponent<{}> = () => {
         }
     }, []);
 
+    React.useCallback(() => {
+        setDark(true);
+    });
+
     return (
         <React.Fragment>
             <GDPR />
             <Container dark={dark}>
-                <GlobalStyle />
                 <Navigation dark={dark} />
                 <Section first id="head">
                     <Slides.Slide0 />
                 </Section>
                 <Section>
+                    <Slides.Slide1 />
+                </Section>
+                <Section>
+                    <Slides.Slide2 />
+                </Section>
+                <Section>
+                    <Slides.Slide3 />
+                </Section>
+                <Section clearHeight>
                     <Footer />
                 </Section>
                 <Background src={image} />
