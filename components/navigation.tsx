@@ -88,7 +88,7 @@ const ItemContainer = styled.nav<BaseStyleProps>`
     }
 `;
 
-const Item = styled.div<BaseStyleProps & { num: number }>`
+const Item = styled.div<BaseStyleProps & { num: number; selected?: boolean }>`
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -101,6 +101,11 @@ const Item = styled.div<BaseStyleProps & { num: number }>`
         text-decoration: none;
         color: black;
         transition: 0.3s all;
+        ${(props) =>
+            props.selected &&
+            `
+             color: ${props.theme.main};
+        `}
     }
     &:hover {
         & > a {
@@ -236,7 +241,10 @@ interface NavigationProps {
 
 const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (props) => {
     let [open, setOpen] = React.useState(false);
+    let home = props.router ? props.router.route === '/' : false;
     let jobs = props.router ? props.router.route.indexOf('/jobs') !== -1 : false;
+    let follow = props.router ? props.router.route.indexOf('/follow') !== -1 : false;
+    let build = props.router ? props.router.route.indexOf('/build') !== -1 : false;
     let mixpanel = useMixpanel();
     let { dark } = useDark();
 
@@ -264,29 +272,24 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
                     </a>
                 </Link>
                 <ItemContainer open={open}>
-                    <Item open={open} num={1}>
+                    <Item open={open} num={1} selected={home}>
                         <Link replace prefetch href="/">
                             <a>Home</a>
                         </Link>
                     </Item>
-                    <Item open={open} num={1}>
+                    <Item open={open} num={1} selected={follow}>
                         <Link replace prefetch href="/follow">
                             <a>Follow bots</a>
                         </Link>
                     </Item>
-                    <Item open={open} num={2}>
+                    <Item open={open} num={2} selected={build}>
                         <Link replace prefetch href="/build">
                             <a>Build bots</a>
                         </Link>
                     </Item>
-                    <Item open={open} num={3}>
+                    <Item open={open} num={3} selected={jobs}>
                         <Link replace prefetch href="/jobs">
                             <a>Jobs</a>
-                        </Link>
-                    </Item>
-                    <Item open={open} num={4}>
-                        <Link replace prefetch href="/contact">
-                            <a>Contact</a>
                         </Link>
                     </Item>
                     <Item open={open} num={3}>

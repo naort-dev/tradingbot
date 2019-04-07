@@ -4,7 +4,6 @@ const withImages = require('next-images');
 
 module.exports = withImages(
     withTypescript({
-        target: 'serverless',
         webpack(config, options) {
             const { isServer } = options;
             const prefix = config.assetPrefix ? config.assetPrefix : '';

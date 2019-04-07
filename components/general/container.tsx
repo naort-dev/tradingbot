@@ -5,10 +5,12 @@ export const Container = styled.div`
     display: flex;
     width: 80vw;
     max-width: 1100px;
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         display: block;
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 40px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 20px;
     }
 `;

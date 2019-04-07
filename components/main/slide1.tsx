@@ -25,6 +25,9 @@ const Header = styled.h1`
 const SimpleContainer = styled.div`
     display: flex;
     margin-bottom: 100px;
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const Simple = styled.div`

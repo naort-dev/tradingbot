@@ -5,6 +5,12 @@ export interface LayoutDividedProps {
     imageIn: 'left' | 'right';
 }
 
+export const ThreeColumnLayout = styled(Container)`
+    > div {
+        width: 33%;
+    }
+`;
+
 export const LayoutDivided = styled(Container)<LayoutDividedProps>`
     align-items: center;
     > div {
