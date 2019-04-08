@@ -158,19 +158,19 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         <img src={dark ? logoWhite : logo} alt="Trality Logo" />
                     </div>
                     <LinkContainer dark={dark}>
-                        <Link replace prefetch href="/follow">
+                        <Link replace href="/follow">
                             <a>Follow bots</a>
                         </Link>
-                        <Link replace prefetch href="/build">
+                        <Link replace href="/build">
                             <a>Create bots</a>
                         </Link>
-                        <Link replace prefetch href="/jobs">
+                        <Link replace href="/jobs">
                             <a>Jobs</a>
                         </Link>
                         {main ? (
                             <Button onClick={() => linkTo('#head')}>Subscribe</Button>
                         ) : (
-                            <Link replace prefetch href="/">
+                            <Link replace href="/">
                                 <Button>Subscribe</Button>
                             </Link>
                         )}

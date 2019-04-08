@@ -5,6 +5,7 @@ import { withRouter, WithRouterProps } from 'next/router';
 import * as logo from '../assets/images/logo_black_blue.png';
 import * as logoDark from '../assets/images/trality_logo_white.png';
 import * as twitter from '../assets/images/twitter.svg';
+import * as medium from './navigation/medium.svg';
 
 import { Container } from '../theme';
 import { scrollIt } from '../util/scrollit';
@@ -235,6 +236,14 @@ const ContactButton = styled(Button)<BaseStyleProps>`
         `}
 `;
 
+const Group = styled.div`
+    display: flex;
+    > * {
+        margin: 0;
+    }
+    margin-left: ;
+`;
+
 interface NavigationProps {
     dark: boolean;
 }
@@ -258,6 +267,11 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
         window.open('https://twitter.com/trality_bots', '_blank');
     }, []);
 
+    const onClickMedium = React.useCallback(() => {
+        mixpanel.track('clickedMediumTop');
+        window.open('https://medium.com/trality', '_blank');
+    }, []);
+
     const linkTo = React.useCallback((id: string) => {
         setOpen(false);
         scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
@@ -266,36 +280,41 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
     return (
         <Top dark={dark} open={open}>
             <NavContainer>
-                <Link prefetch replace href="/">
+                <Link replace href="/">
                     <a>
                         <Logo src={dark || open ? logoDark : logo} />
                     </a>
                 </Link>
                 <ItemContainer open={open}>
                     <Item open={open} num={1} selected={home}>
-                        <Link replace prefetch href="/">
+                        <Link replace href="/">
                             <a>Home</a>
                         </Link>
                     </Item>
                     <Item open={open} num={1} selected={follow}>
-                        <Link replace prefetch href="/follow">
+                        <Link replace href="/follow">
                             <a>Follow bots</a>
                         </Link>
                     </Item>
                     <Item open={open} num={2} selected={build}>
-                        <Link replace prefetch href="/build">
+                        <Link replace href="/build">
                             <a>Create bots</a>
                         </Link>
                     </Item>
                     <Item open={open} num={3} selected={jobs}>
-                        <Link replace prefetch href="/jobs">
+                        <Link replace href="/jobs">
                             <a>Jobs</a>
                         </Link>
                     </Item>
                     <Item open={open} num={3}>
-                        <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
-                            <Twitter src={twitter} />
-                        </ContactButton>
+                        <Group>
+                            <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
+                                <Twitter src={twitter} />
+                            </ContactButton>
+                            <ContactButton type="button" hollow small open={open} onClick={onClickMedium}>
+                                <Twitter src={medium} />
+                            </ContactButton>
+                        </Group>
                     </Item>
                 </ItemContainer>
                 <MenuRight onClick={toggleMenu} open={open || dark}>

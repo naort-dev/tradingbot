@@ -5,6 +5,7 @@ import { observable, computed } from 'mobx';
 import { Button } from '../theme';
 import jsonp from 'jsonp';
 import { getCookie, setCookie } from '../util/cookies';
+import { withMixpanel } from '../hooks/mixpanel';
 import * as arrow from '../assets/images/arrow-down.svg';
 
 const Text = styled.input`
@@ -215,7 +216,7 @@ class Subscribe extends React.Component {
         this.sending = true;
         let multiple = false;
         let track = () => {
-            this.context.mixpanel.track('subscribed');
+            this.props.mixpanel.track('subscribed');
         };
         jsonp(
             this.url,
@@ -227,7 +228,7 @@ class Subscribe extends React.Component {
                     this.error = true;
                 } else if (data.result !== 'success') {
                     if (data.msg.indexOf('is already subscribed to list') !== -1) {
-                        this.context.mixpanel.track('subscribedMultiple');
+                        this.props.mixpanel.track('subscribedMultiple');
                         this.success = true;
                         multiple = true;
                     } else {
@@ -280,5 +281,7 @@ class Subscribe extends React.Component {
         return <ButtonContainer>{this.success ? this.renderSuccess() : this.renderSubscribe()}</ButtonContainer>;
     }
 }
+
+Subscribe = withMixpanel(Subscribe);
 
 export { Subscribe };

@@ -77,7 +77,7 @@ const Component: React.FunctionComponent<{}> = () => {
                 <div>
                     <Breadcrumb>
                         <span>
-                            <Link replace prefetch href="/jobs">
+                            <Link replace href="/jobs">
                                 <a>Jobs</a>
                             </Link>
                             <img src={arrow} />
