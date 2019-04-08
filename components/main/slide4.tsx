@@ -35,6 +35,10 @@ const H = styled.div`
     margin: 30px 0px;
     margin-right: 50px;
     cursor: pointer;
+    @media (max-width: 768px) {
+        font-size: 19px;
+        letter-spacing: -0.1px;
+    }
 `;
 
 const A = styled.div`

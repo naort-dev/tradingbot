@@ -1,9 +1,12 @@
 const webpack = require('webpack');
 const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
+const withOptimizedImages = require('next-optimized-images');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = withImages(
     withTypescript({
+        target: 'serverless',
         webpack(config, options) {
             const { isServer } = options;
             const prefix = config.assetPrefix ? config.assetPrefix : '';
@@ -37,12 +40,14 @@ module.exports = withImages(
                     ],
                 },
             );
-            config.plugins.push(
-                new webpack.DefinePlugin({
-                    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-                    'process.env.DEBUG': JSON.stringify(process.env.DEBUG ? process.env.DEBUG : false),
+            /*config.plugins.push(
+                new webpack.EnvironmentPlugin({
+                    NODE_ENV: 'production',
+                    DEBUG: false,
                 }),
-            );
+            );*/
+            // TODO
+            // config.optimization.minimize = false;
             return config;
         },
     }),

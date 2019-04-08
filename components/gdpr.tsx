@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useMixpanel } from '../hooks/mixpanel';
 import { useDark, DarkProp } from '../hooks/dark';
 
-const Container = styled.div<DarkProp>`
+const GdprContainer = styled.div<DarkProp>`
     position: fixed;
     bottom: 0;
     left: 0;
@@ -38,7 +38,7 @@ const B = styled(Button)`
     margin-left: 30px;
 `;
 
-export const GDPR: React.FunctionComponent<{}> = () => {
+export const GDPR: React.FunctionComponent = () => {
     const mixPanel = useMixpanel();
     let [hasOptedIn, setHasOptedIn] = React.useState(mixPanel.has_opted_in_tracking());
     const { dark } = useDark();
@@ -53,11 +53,11 @@ export const GDPR: React.FunctionComponent<{}> = () => {
     }
 
     return (
-        <Container dark={dark}>
+        <GdprContainer dark={dark}>
             <p>We use cookies to provide and improve our services. By using our site, you consent to cookies.</p>
             <B hollow small onClick={() => accept()}>
                 Accept
             </B>
-        </Container>
+        </GdprContainer>
     );
 };

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
 import { Content, LayoutCentered, Button } from '../../theme';
+
 import Link from 'next/link';
 
 import * as follow from '../../assets/images/follow.svg';
@@ -50,6 +51,7 @@ const Simple = styled.div`
     & > div {
         text-align: center;
         margin-bottom: 15px;
+        line-height: 1.53;
     }
     & > a {
         text-align: center;

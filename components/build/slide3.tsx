@@ -1,8 +1,15 @@
 import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
-import * as img from './slide3/bitmap.png';
-const Img = styled.img``;
+import * as img from './slide3/bitmap@3x.png';
+const Img = styled.img`
+    right: 25% !important;
+    max-height: 70vh !important;
+    @media (max-width: 768px) {
+        position: initial !important;
+        margin-left: -50px;
+    }
+`;
 
 export const Slide3: React.FunctionComponent<{}> = (props) => {
     return (

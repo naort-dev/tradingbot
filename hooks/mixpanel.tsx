@@ -2,24 +2,31 @@ import * as React from 'react';
 import mixpanel from 'mixpanel-browser';
 
 class MixPanelWrapper {
-    private local = false;
+    private debug = false;
+    private browser = typeof window !== 'undefined';
     constructor() {
-        this.local = process.env.DEBUG !== undefined;
+        this.debug = true; //process.env.DEBUG !== undefined;
+        if (!this.debug && this.browser) {
+            mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
+            mixpanel.register({
+                landingpage: 2,
+            });
+        }
     }
     track(name: string) {
-        if (!this.local) {
+        if (!this.debug && this.browser) {
             mixpanel.track(name);
         }
     }
     has_opted_in_tracking() {
-        if (!this.local) {
+        if (!this.debug && this.browser) {
             return mixpanel.has_opted_in_tracking();
         } else {
             return true;
         }
     }
     opt_in_tracking() {
-        if (!this.local) {
+        if (!this.debug && this.browser) {
             mixpanel.opt_in_tracking();
         }
     }
@@ -27,15 +34,6 @@ class MixPanelWrapper {
 
 const context = React.createContext<MixPanelWrapper>(null as any);
 export const Provider = context.Provider;
-
-if ((process as any).browser) {
-    if (process.env.DEBUG === undefined) {
-        mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
-        mixpanel.register({
-            landingpage: 2,
-        });
-    }
-}
 
 const wrapper = new MixPanelWrapper();
 

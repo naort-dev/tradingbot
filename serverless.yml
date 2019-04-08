@@ -3,14 +3,19 @@ service: trality-landingpage
 provider:
     name: aws
     runtime: nodejs8.10
-    stage: ${self:custom.secrets.NODE_ENV}
-    region: us-east-1
-    environment:
-        NODE_ENV: ${self:custom.secrets.NODE_ENV}
+    region: ${env:APP_REGION}
+    stage: ${env:APP_STAGE}
+    profile: ${opt:profile, 'default'}
+    apiName: ${self:provider.stage}-${self:service}
+    stackName: ${self:provider.stage}-${self:service}
+
+plugins:
+    - serverless-dotenv-plugin
+    - serverless-offline
 
 functions:
     server:
-        handler: index.default
+        handler: index.server
         events:
             - http: ANY /
             - http: ANY /{proxy+}

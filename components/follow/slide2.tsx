@@ -2,7 +2,7 @@ import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
 
-import * as image from './slide2/group.png';
+import * as image from './slide2/group@3x.png';
 import * as bg from './slide2/rectangle.svg';
 
 const Img = styled.img``;

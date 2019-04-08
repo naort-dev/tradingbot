@@ -19,6 +19,7 @@ const C = styled.div<DarkProp>`
             max-width: 70vw;
         }
     }
+
     > p {
         color: #646482;
         margin-bottom: 28px;
@@ -26,6 +27,8 @@ const C = styled.div<DarkProp>`
         line-height: 1.53;
         @media (max-width: 768px) {
             text-align: justify;
+            font-size: 14px;
+            padding: 0 10px;
         }
     }
     > ul {
@@ -46,6 +49,7 @@ const C = styled.div<DarkProp>`
         }
         @media (max-width: 768px) {
             text-align: left;
+            font-size: 14px;
         }
     }
     > button {
@@ -71,6 +75,7 @@ const C = styled.div<DarkProp>`
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        font-size: 14px;
     }
 `;
 

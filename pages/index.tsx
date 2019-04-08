@@ -1,19 +1,7 @@
 import * as React from 'react';
 import * as image from '../assets/images/background.svg';
 
-import {
-    SlideHead,
-    SlideSimple,
-    SlideFollow,
-    SlideAlgotrading,
-    SlideLetExpertsTrade,
-    SlideBuild,
-    SlideForFree,
-    SlideRent,
-    Navigation,
-    Footer,
-    GDPR,
-} from '../components';
+import { Navigation, Footer, GDPR } from '../components';
 
 import * as MainSlides from '../components/main';
 

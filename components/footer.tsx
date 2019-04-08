@@ -16,6 +16,9 @@ const Wrap = styled.div`
     margin-bottom: 15px;
     margin-top: 15px;
     width: 100%;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 const Top = styled.div`
@@ -37,16 +40,25 @@ const Bottom = styled.div`
     justify-content: space-between;
 `;
 
-const L = styled.div``;
+const L = styled.div`
+    text-align: left;
+    @media (max-width: 768px) {
+        width: 50%;
+    }
+`;
 
 const R = styled.div`
-    display: flex;
+    text-align: right;
     & > div {
         margin-left: 35px;
     }
     & > div > a:hover {
         cursor: pointer;
         color: ${(props) => props.theme.main};
+    }
+    margin-top: -4px;
+    @media (max-width: 768px) {
+        width: 50%;
     }
 `;
 

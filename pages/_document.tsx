@@ -41,11 +41,10 @@ export default class Doc extends Document<DocProps> {
         }
     }
 
-    /*
-    render() {
+    /*render() {
         return (
             <html lang="en">
-                <Head>{this.props.styleTags}</Head>
+                <Head>{this.props.styles}</Head>
                 <body>
                     <Main />
                     <NextScript />
