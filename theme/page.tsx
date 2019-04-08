@@ -10,7 +10,7 @@ export const Page: React.FunctionComponent<{}> = (props) => {
             <Section first id="head" nocenter>
                 {props.children}
             </Section>
-            <Section dark clearHeight darkbg>
+            <Section clearHeight>
                 <Footer />
             </Section>
         </React.Fragment>

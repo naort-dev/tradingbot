@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
-import * as img from './slide1/group-12@3xv2.png';
+import * as img from './slide1/group-12@3xv3.png';
 const Img = styled.img``;
 
 export const Slide1: React.FunctionComponent<{}> = (props) => {
@@ -19,7 +19,7 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
                         <li>Easy-to-use API to access financial data</li>
                         <li>Access to numerous synthesized order types</li>
                         <li>Intelligent auto-complete</li>
-                        <li>Access to full-range of indicators, etc.</li>
+                        <li>Access to a full range of indicators, etc.</li>
                     </ul>
                 </Content>
             </div>

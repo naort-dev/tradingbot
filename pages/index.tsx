@@ -11,11 +11,7 @@ import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
 import { useMixpanel } from '../hooks/mixpanel';
 import { useDark } from '../hooks/dark';
-
-const Container = styled.div<{ dark?: boolean }>`
-    background-color: ${(props) => (props.dark ? '#181927' : 'transparent')};
-    transition: 0.3s all;
-`;
+import { ColorContainer } from '../components/general';
 
 const Background = styled.img`
     z-index: -1;
@@ -30,12 +26,12 @@ const Main: React.FunctionComponent<{}> = () => {
     let mixpanel = useMixpanel();
 
     const handleWaypointEnter = React.useCallback(() => {
-        setDark(true);
+        //setDark(true);
     }, []);
 
     const handleWaypointLeave = React.useCallback(({ currentPosition }: Waypoint.CallbackArgs) => {
         if (currentPosition == 'below') {
-            setDark(false);
+            //setDark(false);
         }
     }, []);
 
@@ -52,7 +48,7 @@ const Main: React.FunctionComponent<{}> = () => {
     return (
         <React.Fragment>
             <GDPR />
-            <Container dark={dark}>
+            <ColorContainer>
                 <Navigation dark={dark} />
                 <Section first id="head">
                     <MainSlides.Slide0 />
@@ -81,7 +77,7 @@ const Main: React.FunctionComponent<{}> = () => {
                     </div>
                 </Waypoint>
                 <Background src={image} />
-            </Container>
+            </ColorContainer>
         </React.Fragment>
     );
 };

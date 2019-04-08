@@ -18,14 +18,7 @@ const Q = styled.div<{ open: boolean }>`
     position: relative;
     width: 100%;
     border-bottom: 1px solid #6d7385;
-    height: 80px;
     overflow: hidden;
-    transition: height 0.5s;
-    ${(props) =>
-        props.open &&
-        `
-        height: auto;
-    `}
 `;
 
 const H = styled.div`
@@ -42,13 +35,24 @@ const H = styled.div`
     }
 `;
 
-const A = styled.div`
-    margin-bottom: 23px;
+const A = styled.div<{ open: boolean }>`
+    margin-bottom: 0px;
     font-size: 15px;
     line-height: 1.53;
     text-align: left;
     margin-right: 50px;
     color: ${(props) => props.theme.onDark};
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    ${(props) =>
+        props.open &&
+        `
+        height: auto;
+        opacity: 1.0;
+        margin-bottom: 23px;
+    `}
+    transition: all 0.5s;
 `;
 
 const Indicator = styled.div`
@@ -81,28 +85,29 @@ const Question: React.FunctionComponent<QuestionProp> = (props) => {
         <Q onClick={toggleOpen} open={open}>
             <Indicator>{open ? '-' : '+'}</Indicator>
             <H>{props.q}</H>
-            <A>{props.children}</A>
+            <A open={open}>{props.children}</A>
         </Q>
     );
 };
 
-export const Slide4: React.FunctionComponent<{}> = (props) => {
+export const Slide4: React.FunctionComponent<{}> = () => {
     return (
         <LayoutTop>
             <Center>
                 <Content>
-                    <h1>The most frequently asked questions</h1>
-                    <Question q="How long can I follow a bot">
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots constantly.
+                    <h1>Frequently asked questions.</h1>
+                    <Question q="Where do i need to deposit money/how do i start trading?">
+                        All you need is an exchange account on your favorite crypto exchange and API keys, which allow access to it. We currently
+                        support Binance and more exchanges will follow. For more info on connecting exchanges and APIs, please visit our wiki.
                     </Question>
-                    <Question q="How long can I follow a bot">
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots constantly.
+                    <Question q="How do you guarantee that the bots on the marketplace arent used for scamming people?">
+                        We have a state-of-the-art screening process in place, which will ensure only trustworthy bots to be published on the Bot
+                        Marketplace. This includes a set of risk/return criteria as well as extensive scenario testing of each bot.
                     </Question>
-                    <Question q="How long can I follow a bot">
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots constantly.
+                    <Question q="How do you guarantee that my algorithm remains safe and unseen by others?">
+                        Bots are completely sandboxed and run individually. Your followers will never directly touch your bot or the underlying
+                        code/algorithm. Instead, will will forward only signals and portfolio distributions depending on the circumstances of the
+                        individual follower. Logging, debugging and other functionality is not available for followers.
                     </Question>
                 </Content>
             </Center>

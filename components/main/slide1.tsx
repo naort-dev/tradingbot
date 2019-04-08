@@ -100,7 +100,7 @@ export class Slide1 extends React.Component {
                             <img src={follow} />
                             <h5>Follow bots</h5>
                             <div>
-                                Some traders just want to sit back, relax and let experts do the work for them. On our bot marketplace, they can
+                                Some traders just want to sit back, relax and let experts do the work for them. On our Bot Marketplace, they can
                                 simply select a bot and follow it.
                             </div>
                             <Link replace href="/follow">

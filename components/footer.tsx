@@ -21,7 +21,7 @@ import * as vbaWhite from './footer/vba_white.png';
 
 const Wrap = styled.div<DarkProp>`
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 45px;
     width: 100%;
     @media (max-width: 768px) {
         font-size: 14px;
@@ -139,6 +139,7 @@ const Logo = styled.div`
 
 const Component: React.FunctionComponent<WithRouterProps> = (props) => {
     let jobs = props.router ? props.router.route == '/jobs' : false;
+    let main = props.router ? props.router.route == '/' : false;
     let mixpanel = useMixpanel();
     const onClickTwitter = React.useCallback(() => {
         mixpanel.track('clickedOnTwitterBottom');
@@ -166,9 +167,13 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         <Link replace prefetch href="/jobs">
                             <a>Jobs</a>
                         </Link>
-                        <Link replace prefetch href="/contact">
-                            <a>Contact</a>
-                        </Link>
+                        {main ? (
+                            <Button onClick={() => linkTo('#head')}>Subscribe</Button>
+                        ) : (
+                            <Link replace prefetch href="/">
+                                <Button>Subscribe</Button>
+                            </Link>
+                        )}
                     </LinkContainer>
                 </Top>
                 <LogoHeader dark={dark}>Proudly supported by</LogoHeader>

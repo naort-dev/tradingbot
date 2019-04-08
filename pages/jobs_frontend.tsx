@@ -4,6 +4,7 @@ import { LayoutTop, Page } from '../theme';
 import Link from 'next/link';
 import * as arrow from '../assets/images/arrow-down.svg';
 import { useMixpanel } from '../hooks/mixpanel';
+import { useDark } from '../hooks/dark';
 
 const Header = styled.h1`
     font-weight: normal;
@@ -61,9 +62,15 @@ const Breadcrumb = styled.div`
 
 const Component: React.FunctionComponent<{}> = () => {
     const mixpanel = useMixpanel();
+    let { dark, setDark } = useDark();
     React.useCallback(() => {
         mixpanel.track(`openedJobsFrontend`);
     }, []);
+
+    React.useEffect(() => {
+        setDark(false);
+    }, [dark]);
+
     return (
         <Page>
             <LayoutTop>

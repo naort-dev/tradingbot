@@ -4,6 +4,7 @@ import { Navigation, Footer } from '../components';
 import { Section, LayoutDivided, Content, LayoutCentered } from '../theme';
 import Link from 'next/link';
 import { withMixpanel } from '../hooks/mixpanel';
+import { ColorContainer } from '../components/general';
 
 import * as image from '../assets/images/jobs@2x.png';
 import * as arrow from '../assets/images/arrow-down.svg';
@@ -155,9 +156,9 @@ class Component extends React.Component {
 
     get left() {
         return (
-            <Content header={"we're hiring"}>
+            <Content header={"We're hiring"}>
                 <div>
-                    would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic trading? We are a small but
+                    Would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic trading? We are a small but
                     very diverse teamand we would love to hear from you!
                 </div>
             </Content>
@@ -180,23 +181,23 @@ class Component extends React.Component {
         return (
             <LayoutCentered>
                 <div>
-                    <Header>why join us</Header>
+                    <Header>Why join us</Header>
                     <WhyContainer>
                         <Why>
                             <img src={ic1} />
-                            <h5>small team, large responsibilty</h5>
-                            <div>we are currently a team of only 5 and if you’re the right person for job, you’re basically in charge of it.</div>
+                            <h5>Small team, large responsibilty</h5>
+                            <div>We are currently a team of only 5 and if you’re the right person for job, you’re basically in charge of it.</div>
                         </Why>
                         <Why>
                             <img src={ic2} />
-                            <h5>competitive remuneration</h5>
-                            <div>we want the best for the job and pay accordingly! We are also open to negotiating equity-based compensation..</div>
+                            <h5>Competitive remuneration</h5>
+                            <div>We want the best for the job and pay accordingly! We are also open to negotiating equity-based compensation..</div>
                         </Why>
                         <Why>
                             <img src={ic3} />
-                            <h5>flexibility</h5>
+                            <h5>Flexibility</h5>
                             <div>
-                                we understand that people are different. Want to work remotely? Fine. Wanna join us in our offices? Perfect as well.
+                                We understand that people are different. Want to work remotely? Fine. Wanna join us in our offices? Perfect as well.
                             </div>
                         </Why>
                     </WhyContainer>
@@ -213,7 +214,7 @@ class Component extends React.Component {
                     <JobContainer>
                         <Job>
                             <h5>Senior/Junior Backend Developer</h5>
-                            <div>build state-of-the-art systems that empower the complex trading-bots running on our platform!.</div>
+                            <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!.</div>
                             <Link replace href="/jobs_backend">
                                 <a>
                                     Interested
@@ -223,7 +224,7 @@ class Component extends React.Component {
                         </Job>
                         <Job>
                             <h5>Senior/Junior Frontend Developer</h5>
-                            <div>use cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX!</div>
+                            <div>Use cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX!</div>
                             <Link replace href="/jobs_frontend">
                                 <a>
                                     Interested
@@ -253,7 +254,7 @@ class Component extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <ColorContainer>
                 <Navigation dark={false} />
                 <Section first id="head">
                     {this.renderHead()}
@@ -261,16 +262,16 @@ class Component extends React.Component {
                 <Section id="why" clearHeight>
                     {this.renderWhy()}
                 </Section>
-                <Section id="open" dark darkbg clearHeight>
+                <Section id="open" dark clearHeight>
                     {this.renderOpen()}
                 </Section>
-                <Section id="role" dark darkbg clearHeight>
+                <Section id="role" dark clearHeight>
                     {this.renderYourRole()}
                 </Section>
-                <Section dark clearHeight darkbg>
+                <Section dark clearHeight>
                     <Footer />
                 </Section>
-            </React.Fragment>
+            </ColorContainer>
         );
     }
 }

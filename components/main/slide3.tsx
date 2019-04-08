@@ -16,9 +16,9 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
             </div>
             <div>
                 <Content>
-                    <h1>Create Bots.</h1>
+                    <h1>Create bots.</h1>
                     <p>
-                        We believe that building a trading bot is pretty cool. That's why we built the most advanced bot creation module in the field
+                        We believe that building a trading bot is pretty cool. That's why we built the most advanced Bot Creation Module in the field
                         that leaves nothing to be desired. The cherry on the cake: publish your bot to our marketplace and generate risk free
                         side-income.
                     </p>

@@ -17,12 +17,12 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Follow bots.</h1>
                     <p>
-                        On our bot marketplace, select a bot from an expert that you like and follow it. While the expert is carefully watching and
+                        On our Bot Marketplace, select a bot from an expert you like and follow it. While the expert is carefully watching and
                         adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
                     </p>
                     <ul>
                         <li>No coding skills needed</li>
-                        <li>Customize to your needs</li>
+                        <li>Possibility to customize bot to your needs</li>
                         <li>Watch your portfolio grow</li>
                     </ul>
                     <Link replace href="/follow">

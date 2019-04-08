@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
 import * as React from 'react';
-import { observer } from 'mobx-react';
-import { observable } from 'mobx';
+import { useDark } from '../hooks/dark';
 
 export interface SectionProps {
     id?: string;
@@ -41,7 +40,7 @@ export const S = styled.div<SectionProps>`
 
     transition: all 0.3s;
 
-    min-height: 70vh;
+    min-height: 80vh;
 
     @media (max-width: 768px) {
         min-height: 35vh;
@@ -78,10 +77,16 @@ export const S = styled.div<SectionProps>`
 
 export const Section: React.FunctionComponent<SectionProps> = (props) => {
     let [entered, setEntered] = React.useState(false);
+    let { setDark } = useDark();
     const handleWaypointEnter = React.useCallback(() => {
         setTimeout(() => {
             setEntered(true);
         }, 500);
+        if (props.dark) {
+            setDark(true);
+        } else {
+            setDark(false);
+        }
     }, []);
     const handleWaypointLeave = React.useCallback(() => {
         setTimeout(() => {
@@ -90,7 +95,7 @@ export const Section: React.FunctionComponent<SectionProps> = (props) => {
     }, []);
 
     return (
-        <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave}>
+        <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="50%">
             <S {...props}>{props.children}</S>
         </Waypoint>
     );

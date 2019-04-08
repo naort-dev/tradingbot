@@ -19,11 +19,11 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
             </div>
             <div>
                 <Content>
-                    <h1>Publish and profit double.</h1>
+                    <h1>Publish and profit twice.</h1>
                     <p>
-                        Once you've got your idea for your strategy figured out, you can publish your bot on our marketplace. People who follow you
-                        will pay you a monthly fee for your effort - generating a side income for you independent of the portfolio amount you're
-                        trading. And the best of it: your algorithm will never be revealed to anyone.
+                        Once you've got the idea for your algorithm figured out, you can publish your bot on our marketplace. Followers in turn reward
+                        you with a monthly fee for your effort, thereby providing you a risk-free side income. And the best part: your algorithm will
+                        never be revealed to anyone.
                     </p>
                 </Content>
             </div>

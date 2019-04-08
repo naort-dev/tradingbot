@@ -31,15 +31,18 @@ export const LayoutDivided = styled(Container)<LayoutDividedProps>`
             @media (max-width: 768px) {
                 margin-right: -20px;
                 max-height: 60vh;
+                right: 0px;
             }
         }
     }
     > div:last-child {
         > img:first-child {
-            position: relative;
-            left: 20px;
+            position: absolute;
+            left: 10%;
             @media (max-width: 768px) {
                 max-height: 60vh;
+                margin-left: -20px;
+                left: 0px;
             }
         }
     }

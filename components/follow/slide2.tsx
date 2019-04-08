@@ -31,7 +31,6 @@ export const Slide2: React.FunctionComponent<{}> = () => {
             <div>
                 <Img src={image} />
             </div>
-            <Rect src={bg} />
         </LayoutDivided>
     );
 };
