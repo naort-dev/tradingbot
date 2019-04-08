@@ -4,12 +4,19 @@ import styled from 'styled-components';
 import * as img from './slide0/group-30@3x.png';
 const Img = styled.img``;
 
+const Highlight = styled.span`
+    background-color: ${(props) => props.theme.main};
+    color: white;
+`;
+
 export const Slide0: React.FunctionComponent<{}> = (props) => {
     return (
         <LayoutDivided imageIn="right">
             <div>
                 <Content>
-                    <h1>I want to create bots.</h1>
+                    <h1>
+                        I want to <Highlight>create</Highlight> bots.
+                    </h1>
                     <p>
                         Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
                         improve their bots.

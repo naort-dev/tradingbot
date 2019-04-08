@@ -37,6 +37,11 @@ const Description = styled.div`
     & > span {
         color: #00b3d8 !important;
     }
+    display: flex;
+    justify-content: center;
+    ul {
+        text-align: left;
+    }
 `;
 
 const Breadcrumb = styled.div`

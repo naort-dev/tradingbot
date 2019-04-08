@@ -27,6 +27,11 @@ const SubHeader = styled.h5`
 
 const Description = styled.div`
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    ul {
+        text-align: left;
+    }
     @media (max-width: 768px) {
         width: 100%;
         padding-right: 25px;
