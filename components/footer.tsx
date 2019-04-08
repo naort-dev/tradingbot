@@ -12,6 +12,13 @@ import { useDark, DarkProp } from '../hooks/dark';
 
 import * as twitter from '../assets/images/twitter.svg';
 
+import * as aws from './footer/aws.png';
+import * as awsWhite from './footer/aws_white.png';
+import * as hk from './footer/hk.png';
+import * as inits from './footer/inits.png';
+import * as vba from './footer/vba.png';
+import * as vbaWhite from './footer/vba_white.png';
+
 const Wrap = styled.div`
     margin-bottom: 15px;
     margin-top: 15px;
@@ -21,7 +28,7 @@ const Wrap = styled.div`
     }
 `;
 
-const Top = styled.div`
+const Top = styled.div<DarkProp>`
     padding-top: 35px;
     padding-bottom: 35px;
     border-bottom: 1px solid white;
@@ -31,6 +38,11 @@ const Top = styled.div`
     & img {
         height: 25px;
     }
+    ${(props) =>
+        !props.dark &&
+        `
+        border-bottom: 1px solid #dedede;
+    `}
 `;
 
 const Bottom = styled.div`
@@ -73,7 +85,16 @@ const LinkContainer = styled.div<DarkProp>`
     > a {
         color: #646482;
         text-decoration: none;
-        font-weight: 500;
+        &:hover {
+            color: #fff;
+        }
+        ${(props) =>
+            !props.dark &&
+            `
+            &:hover {
+                color: ${props.theme.main};
+            }
+        `}
     }
     display: flex;
     flex-grow: 1;
@@ -82,6 +103,25 @@ const LinkContainer = styled.div<DarkProp>`
     max-width: 500px;
     @media (max-width: 768px) {
         display: none;
+    }
+`;
+
+const LogoContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+const LogoHeader = styled.div`
+    margin: 30px 0;
+    font-weight: bold;
+`;
+
+const Logo = styled.div`
+    width: 15%;
+    > img {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 `;
 
@@ -100,7 +140,7 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
     return (
         <LayoutCentered>
             <Wrap>
-                <Top>
+                <Top dark={dark}>
                     <div>
                         <img src={dark ? logoWhite : logo} alt="Trality Logo" />
                     </div>
@@ -119,6 +159,21 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         </Link>
                     </LinkContainer>
                 </Top>
+                <LogoHeader>Proudly sponsored by</LogoHeader>
+                <LogoContainer>
+                    <Logo>
+                        <img src={dark ? vbaWhite : vba} />
+                    </Logo>
+                    <Logo>
+                        <img src={inits} />
+                    </Logo>
+                    <Logo>
+                        <img src={hk} />
+                    </Logo>
+                    <Logo>
+                        <img src={dark ? awsWhite : aws} />
+                    </Logo>
+                </LogoContainer>
                 <Bottom>
                     <L>All rights reserved © Trality 2019</L>
                     <R>Made with 💙 by Trality</R>
