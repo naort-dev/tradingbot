@@ -45,6 +45,12 @@ const Main: React.FunctionComponent<{}> = () => {
         }
     }, []);
 
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            mixpanel.pageview('home');
+        }
+    }, []);
+
     return (
         <React.Fragment>
             <GDPR />
@@ -53,6 +59,7 @@ const Main: React.FunctionComponent<{}> = () => {
                 <Section first id="head">
                     <MainSlides.Slide0 />
                 </Section>
+                <Waypoint onEnter={(e) => handleScrollLog(1, e)} />
                 <Section>
                     <MainSlides.Slide1 />
                 </Section>
@@ -60,17 +67,17 @@ const Main: React.FunctionComponent<{}> = () => {
                 <Section id="follow">
                     <MainSlides.Slide2 />
                 </Section>
-                <Waypoint onEnter={(e) => handleScrollLog(5, e)} />
+                <Waypoint onEnter={(e) => handleScrollLog(3, e)} />
                 <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="50%">
                     <div>
                         <Section dark id="build">
                             <MainSlides.Slide3 />
                         </Section>
-                        <Waypoint onEnter={(e) => handleScrollLog(6, e)} />
+                        <Waypoint onEnter={(e) => handleScrollLog(4, e)} />
                         <Section dark>
                             <MainSlides.Slide4 />
                         </Section>
-                        <Waypoint onEnter={(e) => handleScrollLog(8, e)} />
+                        <Waypoint onEnter={(e) => handleScrollLog(5, e)} />
                         <Section clearHeight dark>
                             <Footer />
                         </Section>

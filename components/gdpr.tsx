@@ -40,13 +40,21 @@ const B = styled(Button)`
 
 export const GDPR: React.FunctionComponent = () => {
     const mixPanel = useMixpanel();
-    let [hasOptedIn, setHasOptedIn] = React.useState(mixPanel.has_opted_in_tracking());
+    let [hasOptedIn, setHasOptedIn] = React.useState(true);
     const { dark } = useDark();
 
     let accept = React.useCallback(() => {
         mixPanel.opt_in_tracking();
         setHasOptedIn(true);
     }, [hasOptedIn]);
+
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setTimeout(() => {
+                setHasOptedIn(mixPanel.has_opted_in_tracking());
+            }, 200);
+        }
+    }, []);
 
     if (hasOptedIn) {
         return null;

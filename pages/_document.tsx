@@ -7,15 +7,6 @@ interface DocProps {
 }
 
 export default class Doc extends Document<DocProps> {
-    /*static async getInitialProps(ctx: NextDocumentContext) {
-        const sheet = new ServerStyleSheet();
-        const page = ctx.renderPage((App) => (props) => sheet.collectStyles(<App {...props} />));
-        const initialProps = await Document.getInitialProps(ctx);
-        const styleTags = sheet.getStyleElement();
-        //return { ...initialProps };
-        return { ...page, ...initialProps, styleTags };
-    }*/
-
     static async getInitialProps(ctx: NextDocumentContext) {
         const sheet = new ServerStyleSheet();
         const originalRenderPage = ctx.renderPage;

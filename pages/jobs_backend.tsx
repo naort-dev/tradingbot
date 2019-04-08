@@ -71,6 +71,12 @@ const Component: React.FunctionComponent<{}> = () => {
         setDark(false);
     }, [dark]);
 
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            mixpanel.pageview('jobs_backend');
+        }
+    }, []);
+
     return (
         <Page>
             <LayoutTop>

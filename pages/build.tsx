@@ -52,6 +52,12 @@ const Page: React.FunctionComponent<{}> = () => {
         setDark(false);
     }, [dark]);
 
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            mixpanel.pageview('build');
+        }
+    }, []);
+
     return (
         <React.Fragment>
             <GDPR />

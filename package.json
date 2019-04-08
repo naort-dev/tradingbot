@@ -21,6 +21,7 @@
         "path-match": "^1.2.4",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
+        "react-ga": "^2.5.7",
         "react-waypoint": "^9.0.1",
         "styled-components": "^4.2.0"
     },
