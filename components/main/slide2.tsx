@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { LayoutDivided, Content } from '../general';
-import * as image from './slide2/image@3x.png';
+import * as image from './slide2/group-24@3x.png';
+import Link from 'next/link';
 
 const Img = styled.img`
     @media (max-width: 768px) {
@@ -21,10 +22,12 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
                     </p>
                     <ul>
                         <li>No coding skills needed</li>
-                        <li>Simple backtesting</li>
-                        <li>Code window for experts</li>
+                        <li>Customize to your needs</li>
+                        <li>Watch your portfolio grow</li>
                     </ul>
-                    <button>Read more</button>
+                    <Link replace href="/follow">
+                        <button>Read more</button>
+                    </Link>
                 </Content>
             </div>
             <div>

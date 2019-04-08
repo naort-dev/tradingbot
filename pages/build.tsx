@@ -48,10 +48,6 @@ const Page: React.FunctionComponent<{}> = () => {
         }
     }, []);
 
-    React.useCallback(() => {
-        setDark(true);
-    }, []);
-
     return (
         <React.Fragment>
             <GDPR />

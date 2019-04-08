@@ -17,13 +17,12 @@ export const Slide0: React.FunctionComponent<{}> = (props) => {
             <div>
                 <Content>
                     <h1>
-                        I want to <Highlight>follow</Highlight> experts
+                        I want to <Highlight>follow</Highlight> expert bots.
                     </h1>
                     <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
+                        Life gets busy - most people don't have the time or experience to build and maintain complex trading bots. On Trality, you're
+                        given an easy tool to let experts do the hard work for you - all from the comfort of our app.
                     </p>
-                    <button>Trade together now.</button>
                 </Content>
             </div>
             <div>

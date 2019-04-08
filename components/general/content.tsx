@@ -30,6 +30,11 @@ const C = styled.div<DarkProp>`
             font-size: 14px;
             padding: 0 10px;
         }
+        ${(props) =>
+            props.dark &&
+            `
+            color: ${props.theme.onDark}
+        `}
     }
     > ul {
         margin-bottom: 28px;
@@ -51,6 +56,11 @@ const C = styled.div<DarkProp>`
             text-align: left;
             font-size: 14px;
         }
+        ${(props) =>
+            props.dark &&
+            `
+            color: ${props.theme.onDark}
+        `}
     }
     > button {
         padding: 19px 41px;

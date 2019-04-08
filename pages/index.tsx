@@ -74,10 +74,6 @@ const Main: React.FunctionComponent<{}> = () => {
                         <Section dark>
                             <MainSlides.Slide4 />
                         </Section>
-                        <Waypoint onEnter={(e) => handleScrollLog(7, e)} />
-                        <Section dark>
-                            <MainSlides.Slide5 />
-                        </Section>
                         <Waypoint onEnter={(e) => handleScrollLog(8, e)} />
                         <Section clearHeight dark>
                             <Footer />

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
 import { LayoutDivided, Content } from '../general';
+import Link from 'next/link';
 
 import * as image from './slide3/group-30@3x.png';
 
@@ -17,15 +18,18 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Create Bots.</h1>
                     <p>
-                        On our bot marketplace, select a bot from an expert that you like and follow it. While the expert is carefully watching and
-                        adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
+                        We believe that building a trading bot is pretty cool. That's why we built the most advanced bot creation module in the field
+                        that leaves nothing to be desired. The cherry on the cake: publish your bot to our marketplace and generate risk free
+                        side-income.
                     </p>
                     <ul>
-                        <li>No coding skills needed</li>
-                        <li>Simple backtesting</li>
-                        <li>Code window for experts</li>
+                        <li>Multiple coding languages</li>
+                        <li>Blazing-fast backtesting</li>
+                        <li>Cloud deployments</li>
                     </ul>
-                    <button>Read more</button>
+                    <Link replace href="/build">
+                        <button>Read more</button>
+                    </Link>
                 </Content>
             </div>
         </LayoutDivided>

@@ -270,7 +270,7 @@ class Subscribe extends React.Component {
                     </Confirm>
                 </InputContainer>
                 <Button type="button" onClick={this.onClick.bind(this)}>
-                    trade together.
+                    Stay connected.
                 </Button>
             </React.Fragment>
         );

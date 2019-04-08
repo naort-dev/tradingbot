@@ -11,6 +11,7 @@ const Center = styled.div`
     @media (max-width: 468px) {
         width: 90%;
     }
+    margin-bottom: 25px;
 `;
 
 const Q = styled.div<{ open: boolean }>`
@@ -42,12 +43,12 @@ const H = styled.div`
 `;
 
 const A = styled.div`
-    color: #6d7385;
     margin-bottom: 23px;
     font-size: 15px;
     line-height: 1.53;
     text-align: left;
     margin-right: 50px;
+    color: ${(props) => props.theme.onDark};
 `;
 
 const Indicator = styled.div`

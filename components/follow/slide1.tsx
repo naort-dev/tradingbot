@@ -2,7 +2,7 @@ import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
 
-import * as image from './slide1/group-30@3x.png';
+import * as image from './slide1/group-20@3x.png';
 
 const Img = styled.img``;
 
@@ -16,10 +16,9 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>What is algorithmic trading?</h1>
                     <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
+                        Trading bots are a set of algorithms that control automated buying and selling of assets. Doing so they are exploiting price
+                        volatility, which is particularly high in crypto currencies.
                     </p>
-                    <button>Trade together now.</button>
                 </Content>
             </div>
         </LayoutDivided>

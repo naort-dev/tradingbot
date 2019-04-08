@@ -15,15 +15,15 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
             <div>
                 <Content>
                     <h1>Your funds are safe.</h1>
-                    <p>Your funds will always remain safe, in fact, the bots on trality never even touch them directly!</p>
+                    <p>Your funds will always remain safe, in fact, the bots on Trality never even touch them directly!</p>
                     <p>
-                        But instead they send trading signals to your trusted exchange such as Binance, Bittrex or Bitfinex. Trality will never be
-                        able to withdraw your funds!
+                        Instead, we send trading signals to your trusted exchange such as Binance, Bittrex or Bitfinex. Trality will never be able to
+                        withdraw your funds!
                     </p>
                     <ul>
-                        <li>2 step verification</li>
-                        <li>SMS confirmation</li>
-                        <li>Completely secure account</li>
+                        <li>Multi-Factor Authentification to start bots</li>
+                        <li>Rejection of withdrawal-enabled API keys</li>
+                        <li>Full control over your accounts</li>
                     </ul>
                 </Content>
             </div>

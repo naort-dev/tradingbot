@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
-import * as img from './slide1/group-30@3x.png';
+import * as img from './slide1/group-12@3x.png';
 const Img = styled.img``;
 
 export const Slide1: React.FunctionComponent<{}> = (props) => {

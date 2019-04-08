@@ -284,7 +284,7 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
                     </Item>
                     <Item open={open} num={2} selected={build}>
                         <Link replace prefetch href="/build">
-                            <a>Build bots</a>
+                            <a>Create bots</a>
                         </Link>
                     </Item>
                     <Item open={open} num={3} selected={jobs}>

@@ -58,6 +58,8 @@ const Simple = styled.div`
         color: #00b3d8;
         cursor: pointer;
         display: block;
+        text-decoration: none;
+        font-weight: bold;
         margin-top: 25px;
         transition: 0.3s all;
         & > img {
@@ -69,10 +71,6 @@ const Simple = styled.div`
     & > a:hover {
         margin-left: 20px;
         opacity: 0.9;
-        & > img {
-            transform: rotate(0deg);
-            margin-left: 10px;
-        }
     }
     @media (max-width: 1024px) {
         width: 50%;
@@ -105,7 +103,7 @@ export class Slide1 extends React.Component {
                                 Some traders just want to sit back, relax and let experts do the work for them. On our bot marketplace, they can
                                 simply select a bot and follow it.
                             </div>
-                            <Link replace href="/slidefollow">
+                            <Link replace href="/follow">
                                 <a>
                                     Read more
                                     <img src={arrow} />
@@ -119,7 +117,7 @@ export class Slide1 extends React.Component {
                                 Others just love to build custom trading bots. They are wizards with technical analysis and want to maintain and
                                 improve their bots constantly.
                             </div>
-                            <Link replace href="/slidebuild">
+                            <Link replace href="/build">
                                 <a>
                                     Read more
                                     <img src={arrow} />
@@ -130,7 +128,7 @@ export class Slide1 extends React.Component {
                             <img src={profit} />
                             <h5>Profit from each other</h5>
                             <div>
-                                On Trality leisure and expert traders can profit from bots individually but, more importantly, also from each other.
+                                On Trality, leisure and expert traders can profit from bots individually but, more importantly, also from each other.
                             </div>
                         </Simple>
                     </SimpleContainer>

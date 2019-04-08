@@ -19,15 +19,12 @@ export const Slide2: React.FunctionComponent<{}> = () => {
         <LayoutDivided imageIn="right">
             <div>
                 <Content>
-                    <h1>Everything in one place.</h1>
-                    <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
-                    </p>
+                    <h1>Three simple steps.</h1>
+                    <p>Using Trality is as easy as 🥧.</p>
                     <ul>
-                        <li>Find the best bot for your trading</li>
-                        <li>Choose monthly or annually payment</li>
-                        <li>Rent the bot and make a profit!</li>
+                        <li>Drop in the API keys from your favourite crypto exchange</li>
+                        <li>Select a quality-screened bot from our marketplace</li>
+                        <li>Follow the bot and automatically copy its trades</li>
                     </ul>
                 </Content>
             </div>

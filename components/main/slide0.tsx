@@ -143,7 +143,7 @@ export class Slide0 extends React.Component<SideHeadProps> {
     get left() {
         return (
             <Content header={this.header}>
-                <div>We connect people who know how to make the most of cryptotrading with people who prefer their money to work for them.</div>
+                <div>We connect people who know how to make the most of (crypto) trading with people who prefer their money to work for them.</div>
                 <Subscribe />
                 <Call src={call} />
             </Content>

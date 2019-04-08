@@ -19,13 +19,19 @@ import * as inits from './footer/inits.png';
 import * as vba from './footer/vba.png';
 import * as vbaWhite from './footer/vba_white.png';
 
-const Wrap = styled.div`
+const Wrap = styled.div<DarkProp>`
     margin-bottom: 15px;
     margin-top: 15px;
     width: 100%;
     @media (max-width: 768px) {
         font-size: 14px;
     }
+    color: ${(props) => props.theme.onLight};
+    ${(props) =>
+        props.dark &&
+        `
+        color: ${props.theme.onDark};
+    `}
 `;
 
 const Top = styled.div<DarkProp>`
@@ -83,7 +89,7 @@ const MButton = styled(Button)`
 
 const LinkContainer = styled.div<DarkProp>`
     > a {
-        color: #646482;
+        color: ${(props) => props.theme.onDark};
         text-decoration: none;
         &:hover {
             color: #fff;
@@ -91,6 +97,7 @@ const LinkContainer = styled.div<DarkProp>`
         ${(props) =>
             !props.dark &&
             `
+            color: ${props.theme.onLight};
             &:hover {
                 color: ${props.theme.main};
             }
@@ -111,9 +118,14 @@ const LogoContainer = styled.div`
     justify-content: space-between;
 `;
 
-const LogoHeader = styled.div`
+const LogoHeader = styled.div<DarkProp>`
     margin: 30px 0;
-    font-weight: bold;
+    color: ${(props) => props.theme.onLight};
+    ${(props) =>
+        props.dark &&
+        `
+        color: ${props.theme.onDark};
+    `}
 `;
 
 const Logo = styled.div`
@@ -139,7 +151,7 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
 
     return (
         <LayoutCentered>
-            <Wrap>
+            <Wrap dark={dark}>
                 <Top dark={dark}>
                     <div>
                         <img src={dark ? logoWhite : logo} alt="Trality Logo" />
@@ -149,7 +161,7 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                             <a>Follow bots</a>
                         </Link>
                         <Link replace prefetch href="/build">
-                            <a>Build bots</a>
+                            <a>Create bots</a>
                         </Link>
                         <Link replace prefetch href="/jobs">
                             <a>Jobs</a>
@@ -159,7 +171,7 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         </Link>
                     </LinkContainer>
                 </Top>
-                <LogoHeader>Proudly sponsored by</LogoHeader>
+                <LogoHeader dark={dark}>Proudly supported by</LogoHeader>
                 <LogoContainer>
                     <Logo>
                         <img src={dark ? vbaWhite : vba} />

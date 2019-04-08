@@ -21,7 +21,6 @@ export const Slide0: React.FunctionComponent<{}> = (props) => {
                         Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
                         improve their bots.
                     </p>
-                    <button>Trade together now.</button>
                 </Content>
             </div>
             <div>
