@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
-import * as img from './slide0/group-30@3x.png';
+import * as img from './slide0/group-30-copy-v2@3x.png';
 const Img = styled.img``;
 
 const Highlight = styled.span`
@@ -18,8 +18,8 @@ export const Slide0: React.FunctionComponent<{}> = (props) => {
                         I want to <Highlight>create</Highlight> bots.
                     </h1>
                     <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
+                        At Trality, we provide you with the tools you need to succeed with your trading bot. We've got you covered whether you want to
+                        code or drag-and-drop or test your machine-learning models - all at no cost.
                     </p>
                 </Content>
             </div>

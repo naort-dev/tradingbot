@@ -10,7 +10,7 @@ const C = styled.div<DarkProp>`
         font-stretch: normal;
         line-height: 1.18;
         letter-spacing: normal;
-        color: #181927;
+        color: ${(props) => props.theme.darkPrimary};
         margin-bottom: 35px;
         text-align: left;
         @media (max-width: 768px) {
@@ -18,6 +18,11 @@ const C = styled.div<DarkProp>`
             text-align: center;
             max-width: 70vw;
         }
+        ${(props) =>
+            props.dark &&
+            `
+            color: #fff;
+        `}
     }
 
     > p {
@@ -28,7 +33,6 @@ const C = styled.div<DarkProp>`
         @media (max-width: 768px) {
             text-align: justify;
             font-size: 14px;
-            padding: 0 10px;
         }
         ${(props) =>
             props.dark &&

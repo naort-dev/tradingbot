@@ -19,12 +19,12 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
             </div>
             <div>
                 <Content>
-                    <h1>Deploy in the infrastructure..</h1>
+                    <h1>Publish and profit double.</h1>
                     <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
+                        Once you've got your idea for your strategy figured out, you can publish your bot on our marketplace. People who follow you
+                        will pay you a monthly fee for your effort - generating a side income for you independent of the portfolio amount you're
+                        trading. And the best of it: your algorithm will never be revealed to anyone.
                     </p>
-                    <button>Trade together now.</button>
                 </Content>
             </div>
         </LayoutDivided>

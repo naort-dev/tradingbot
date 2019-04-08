@@ -23,9 +23,9 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                         side-income.
                     </p>
                     <ul>
-                        <li>Multiple coding languages</li>
+                        <li>Code your own bots</li>
                         <li>Blazing-fast backtesting</li>
-                        <li>Cloud deployments</li>
+                        <li>Attract followers and profit</li>
                     </ul>
                     <Link replace href="/build">
                         <button>Read more</button>

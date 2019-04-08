@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDivided, Content } from '../general';
 import styled from 'styled-components';
-import * as img from './slide1/group-12@3x.png';
+import * as img from './slide1/group-12@3xv2.png';
 const Img = styled.img``;
 
 export const Slide1: React.FunctionComponent<{}> = (props) => {
@@ -12,12 +12,15 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
             </div>
             <div>
                 <Content>
-                    <h1>Advanced Bot Editor.</h1>
-                    <p>
-                        Some traders just love to build custom trading bots. They are wizards with technical analysis and they want to maintain and
-                        improve their bots.
-                    </p>
-                    <button>Trade together now.</button>
+                    <h1>Advanced bot editor.</h1>
+                    <p>Use our bot editor to bring your trading ideas to life.</p>
+                    <ul>
+                        <li>Use Python (and more to come) to code your stategies</li>
+                        <li>Easy-to-use API to access financial data</li>
+                        <li>Access to numerous synthesized order types</li>
+                        <li>Intelligent auto-complete</li>
+                        <li>Access to full-range of indicators, etc.</li>
+                    </ul>
                 </Content>
             </div>
         </LayoutDivided>
