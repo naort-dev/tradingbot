@@ -19,12 +19,12 @@ export const Slide2: React.FunctionComponent<{}> = () => {
         <LayoutDivided imageIn="right">
             <div>
                 <Content>
-                    <h1>Three simple steps.</h1>
-                    <p>Using Trality is as easy as 🥧.</p>
+                    <h1>Follow a quality-screened expert bot.</h1>
+                    <p>Using Trality is not a black box.</p>
                     <ul>
-                        <li>Drop in the API keys from your favourite crypto exchange</li>
-                        <li>Select a quality-screened bot from our marketplace</li>
-                        <li>Follow the bot and automatically copy its trades</li>
+                        <li>Choose from well-documented expert bots and follow the one which matches your objectives</li>
+                        <li>Connect to your favorite crypto exchange</li>
+                        <li>The bot automatically starts trading for you</li>
                     </ul>
                 </Content>
             </div>

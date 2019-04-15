@@ -129,13 +129,13 @@ export class Slide0 extends React.Component<SideHeadProps> {
     get header() {
         return (
             <div>
-                Brings <br />
+                Makes <br />
                 <Highlight>{this.currentWord}</Highlight>
                 <Cursor>|</Cursor>
                 <br />
-                trading into
-                <br />
-                your life.
+                trading your reality.
+
+
             </div>
         );
     }
@@ -143,7 +143,8 @@ export class Slide0 extends React.Component<SideHeadProps> {
     get left() {
         return (
             <Content header={this.header}>
-                <div>We connect people who know how to make the most of (crypto) trading with people who prefer their money to work for them.</div>
+                <div>We make the tools of Wall Street available to everyone
+                - with Trality bots for all levels of experience.</div>
                 <Subscribe />
                 <Call src={call} />
             </Content>

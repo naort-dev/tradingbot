@@ -97,7 +97,7 @@ export const Slide4: React.FunctionComponent<{}> = () => {
                 <Content>
                     <h1>Frequently asked questions.</h1>
                     <Question q="Where do i need to deposit money/how do i start trading?">
-                        All you need is an exchange account on your favorite crypto exchange and API keys, which allow access to it. We currently
+                        All you need is an account on your favorite crypto exchange as well as API keys, which allow access to it. We currently
                         support Binance and more exchanges will follow. For more info on connecting exchanges and APIs, please visit our wiki.
                     </Question>
                     <Question q="How do you guarantee that the bots on the marketplace arent used for scamming people?">
@@ -105,8 +105,8 @@ export const Slide4: React.FunctionComponent<{}> = () => {
                         Marketplace. This includes a set of risk/return criteria as well as extensive scenario testing of each bot.
                     </Question>
                     <Question q="How do you guarantee that my algorithm remains safe and unseen by others?">
-                        Bots are completely sandboxed and run individually. Your followers will never directly touch your bot or the underlying
-                        code/algorithm. Instead, will will forward only signals and portfolio distributions depending on the circumstances of the
+                        All bots are completely sandboxed and run individually. Your followers will never directly touch your bot or the underlying
+                        code/algorithm. Instead, Trality only mirrors signals and portfolio distributions depending on the circumstances of the
                         individual follower. Logging, debugging and other functionality is not available for followers.
                     </Question>
                 </Content>

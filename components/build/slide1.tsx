@@ -12,14 +12,14 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
             </div>
             <div>
                 <Content>
-                    <h1>Advanced bot editor.</h1>
-                    <p>Use our bot editor to bring your trading ideas to life.</p>
+                    <h1>Advanced coding in the Trality Bot Creator.</h1>
+                    <p>Use the Trality Bot Creator to bring your trading ideas to life.</p>
                     <ul>
-                        <li>Use Python (and more to come) to code your stategies</li>
+                        <li>Support of Python (and more to come) to code algorithms</li>
                         <li>Easy-to-use API to access financial data</li>
-                        <li>Access to numerous synthesized order types</li>
+                        <li>Numerous synthesized order types</li>
                         <li>Intelligent auto-complete</li>
-                        <li>Access to a full range of indicators, etc.</li>
+                        <li>Access to full range of indicators</li>
                     </ul>
                 </Content>
             </div>

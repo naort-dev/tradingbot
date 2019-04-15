@@ -20,8 +20,7 @@ export const Slide0: React.FunctionComponent<{}> = (props) => {
                         I want to <Highlight>follow</Highlight> expert bots.
                     </h1>
                     <p>
-                        Life gets busy - most people don't have the time or experience to build and maintain complex trading bots. On Trality, you're
-                        given an easy tool to let experts do the hard work for you - all from the comfort of our app.
+                        Trality finally lets you experience the excitement of algorithmic trading without the need for expert experience.
                     </p>
                 </Content>
             </div>
