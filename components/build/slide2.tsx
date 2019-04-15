@@ -9,15 +9,14 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
         <LayoutDivided imageIn="right">
             <div>
                 <Content>
-                    <h1>Fast backtesting.</h1>
+                    <h1>Blazing-fast backtesting.</h1>
                     <p>
-                        Backtesting is at the heart of every trading algorithm iteration. That's why we made it as fast as possible and provide you
-                        with debugging features you'll find nowhere else.
+                        Backtesting is at the heart of every trading algorithm iteration. That's why we made it as fast as possible and provide debugging features you'll find nowhere else.
                     </p>
                     <ul>
-                        <li>Live debugging using breakpoints or events</li>
                         <li>Interactive, blazing-fast backtesting</li>
-                        <li>Automated scenario tests</li>
+                        <li>Automated scenario tests or individual time frames</li>
+                        <li>Live debugging using breakpoints or events</li>
                         <li>Parameter optimization</li>
                     </ul>
                 </Content>

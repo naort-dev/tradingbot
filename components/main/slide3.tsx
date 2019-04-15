@@ -18,14 +18,12 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Create bots.</h1>
                     <p>
-                        We believe that building a trading bot is pretty cool. That's why we built the most advanced Bot Creation Module in the field
-                        that leaves nothing to be desired. The cherry on the cake: publish your bot to our marketplace and generate risk free
-                        side-income.
+                        We believe that building a trading bot is pretty cool. That's why we crafted the Trality Bot Creator: the most advanced of its kind that leaves nothing to be desired. The cherry on the cake: publish your bot to our Trality Bot Marketplace and generate risk free side-income.
                     </p>
                     <ul>
-                        <li>Code your own bots</li>
+                        <li>Advanced coding in the Trality Bot Creator</li>
                         <li>Blazing-fast backtesting</li>
-                        <li>Attract followers and profit</li>
+                        <li>Build a follower base and generate income</li>
                     </ul>
                     <Link replace href="/build">
                         <button>Read more</button>

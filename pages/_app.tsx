@@ -18,12 +18,12 @@ class Trality extends App {
                         <Container>
                             <GlobalStyle />
                             <Head>
-                                <title>Trality. - Build & Follow bots</title>
+                                <title>Trality - Follow & Create Bots</title>
                                 <meta charSet="UTF-8" />
                                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" />
                                 <meta
                                     name="description"
-                                    content="We connect people who know how to make the most of cryptotrading with people who prefer their money to work for them."
+                                    content="We make the tools of Wall Street available to everyone - with Trality bots for all levels of experience."
                                 />
                                 <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />
