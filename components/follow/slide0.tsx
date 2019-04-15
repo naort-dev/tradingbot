@@ -20,7 +20,7 @@ export const Slide0: React.FunctionComponent<{}> = (props) => {
                         I want to <Highlight>follow</Highlight> expert bots.
                     </h1>
                     <p>
-                        Trality finally lets you experience the excitement of algorithmic trading with no need for trading skills. 
+                        Trality finally lets you experience the excitement of algorithmic trading without the need for expert experience.
                     </p>
                 </Content>
             </div>

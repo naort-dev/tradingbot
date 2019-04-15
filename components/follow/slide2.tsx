@@ -20,7 +20,7 @@ export const Slide2: React.FunctionComponent<{}> = () => {
             <div>
                 <Content>
                     <h1>Follow a quality-screened expert bot.</h1>
-                    <p>Using the Trality is not a black box.</p>
+                    <p>Using Trality is not a black box.</p>
                     <ul>
                         <li>Choose from well-documented expert bots and follow the one which matches your objectives</li>
                         <li>Connect to your favorite crypto exchange</li>

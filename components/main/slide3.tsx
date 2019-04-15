@@ -18,7 +18,7 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Create bots.</h1>
                     <p>
-                        We believe that building a trading bot is pretty cool. That's why we crafted the Trality Bot Creator: the most advanced of its kind that leaves nothing to be desired. The cherry on the cake: publish your bot to our Trality Bot Marketplace and generate risk free side-income.
+                        We believe that building a trading bot is pretty cool. That's why we crafted the Trality Bot Creator: the most advanced editor of its kind that leaves nothing to be desired. The cherry on the cake: publish your bot to our Trality Bot Marketplace and generate risk free side-income.
                     </p>
                     <ul>
                         <li>Advanced coding in the Trality Bot Creator</li>

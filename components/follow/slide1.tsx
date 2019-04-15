@@ -16,7 +16,7 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Make profits with algorithmic trading.</h1>
                     <p>
-                        Trading bots are a set of algorithms that control automated buying and selling of assets. Doing so they exploite price
+                        Trading bots are a set of algorithms that control automated buying and selling of assets. Doing so they exploit price
                         volatility, which is particularly high in crypto assets.
                     </p>
                 </Content>

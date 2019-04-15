@@ -18,8 +18,8 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                     <p>Your funds will always remain safe, in fact, the bots on Trality never touch them directly!</p>
                     <ul>
                         <li>Trality sends trading signals to your trusted exchange</li>
-                        <li>Withdrawel-enabled API keys will always be rejected</li>
-                        <li>The dashboard lets you unfollow and stop investment at any time</li>
+                        <li>Withdrawal-enabled API keys will always be rejected</li>
+                        <li>Dashboard lets you unfollow and stop investment at any time</li>
                     </ul>
                 </Content>
             </div>

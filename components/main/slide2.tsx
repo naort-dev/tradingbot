@@ -17,7 +17,7 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Follow bots.</h1>
                     <p>
-                        On our Bot Marketplace, simply select a bot from an expert, which matches your objectives and follow it. While the expert is carefully watching and
+                        On the Trality Bot Marketplace, simply select a bot from an expert, which matches your objectives and follow it. While the expert is carefully watching and
                         adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
                     </p>
                     <ul>

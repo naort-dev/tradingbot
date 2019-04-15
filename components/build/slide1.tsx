@@ -13,9 +13,9 @@ export const Slide1: React.FunctionComponent<{}> = (props) => {
             <div>
                 <Content>
                     <h1>Advanced coding in the Trality Bot Creator.</h1>
-                    <p>Use our Bot Creator to bring your trading ideas to life.</p>
+                    <p>Use the Trality Bot Creator to bring your trading ideas to life.</p>
                     <ul>
-                        <li>Support of Python (and more to come) to code algos</li>
+                        <li>Support of Python (and more to come) to code algorithms</li>
                         <li>Easy-to-use API to access financial data</li>
                         <li>Numerous synthesized order types</li>
                         <li>Intelligent auto-complete</li>

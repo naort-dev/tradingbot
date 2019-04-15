@@ -21,7 +21,7 @@ export const Slide3: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Build a follower base and generate income.</h1>
                     <p>
-                        Once you've got your strategy figured out, you can publish your bot on our marketplace. For every follower you are rewarded a monthly rent for your effort. The best part: your algorithm will never be revealed to anyone.
+                        Once you've got your strategy figured out, you can publish your bot on the Trality Bot Marketplace. For every follower you are rewarded a monthly rent for your effort. The best part: your algorithm will never be revealed to anyone.
                     </p>
                 </Content>
             </div>
