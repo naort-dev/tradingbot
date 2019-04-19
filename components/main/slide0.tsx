@@ -143,8 +143,7 @@ export class Slide0 extends React.Component<SideHeadProps> {
     get left() {
         return (
             <Content header={this.header}>
-                <div>We make the tools of Wall Street available to everyone
-                - with Trality bots for all levels of experience.</div>
+                <div>We bring together expert and leisure traders of digital assets, enabling them to beat the market with trading bots.</div>
                 <Subscribe />
                 <Call src={call} />
             </Content>

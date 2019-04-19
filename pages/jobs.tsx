@@ -159,7 +159,7 @@ class Component extends React.Component {
             <Content header={"We're hiring"}>
                 <div>
                     Would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic trading? We are a small but
-                    very diverse teamand we would love to hear from you!
+                    very diverse team and we would love to hear from you!
                 </div>
             </Content>
         );
