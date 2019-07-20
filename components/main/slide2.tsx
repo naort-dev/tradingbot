@@ -17,15 +17,16 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
                 <Content>
                     <h1>Follow bots.</h1>
                     <p>
-                        On the Trality Bot Marketplace, simply select a bot from an expert, which matches your objectives and follow it. While the expert is carefully watching and
-                        adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto your account.
+                        On the Trality Bot Marketplace, simply select a bot from an expert, which matches your objectives and follow it. While the
+                        expert is carefully watching and adjusting the bot's strategy, your own bot mirrors the expert’s every algorithmic trade onto
+                        your account.
                     </p>
                     <ul>
                         <li>Make profits with algorithmic trading</li>
                         <li>Follow a quality-screened expert bot</li>
                         <li>Enjoy complete safety of your funds</li>
                     </ul>
-                    <Link replace href="/follow">
+                    <Link href="/follow">
                         <button>Read more</button>
                     </Link>
                 </Content>

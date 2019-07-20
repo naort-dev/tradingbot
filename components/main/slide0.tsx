@@ -7,6 +7,7 @@ import { Subscribe } from '../subscribe';
 
 import * as phone from '../../assets/images/phone@3x.png';
 import * as call from '../../assets/images/actioncall_beta.svg';
+import { SignupCta } from '../signupcta';
 
 const Img = styled.img`
     height: 60vh;
@@ -134,8 +135,6 @@ export class Slide0 extends React.Component<SideHeadProps> {
                 <Cursor>|</Cursor>
                 <br />
                 trading your reality.
-
-
             </div>
         );
     }
@@ -144,8 +143,7 @@ export class Slide0 extends React.Component<SideHeadProps> {
         return (
             <Content header={this.header}>
                 <div>We make the tools of Wall Street available to everyone - with trading bots for all levels of experience.</div>
-                <Subscribe />
-                <Call src={call} />
+                <SignupCta />
             </Content>
         );
     }

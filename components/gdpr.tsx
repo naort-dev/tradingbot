@@ -3,6 +3,7 @@ import { Button } from '../theme';
 import styled from 'styled-components';
 import { useMixpanel } from '../hooks/mixpanel';
 import { useDark, DarkProp } from '../hooks/dark';
+import Link from 'next/link';
 
 const GdprContainer = styled.div<DarkProp>`
     position: fixed;
@@ -10,7 +11,7 @@ const GdprContainer = styled.div<DarkProp>`
     left: 0;
     max-width: 100%;
     width: 100%;
-    padding: 2rem 0.5rem;
+    padding: 2rem 2rem;
     background: #fff;
     z-index: 1030;
     color: black;
@@ -32,6 +33,9 @@ const GdprContainer = styled.div<DarkProp>`
             color: #fff !important;
         }
     `}
+    > p {
+        line-height: 1.2;
+    }
 `;
 
 const B = styled(Button)`
@@ -62,7 +66,13 @@ export const GDPR: React.FunctionComponent = () => {
 
     return (
         <GdprContainer dark={dark}>
-            <p>We use cookies to provide and improve our services. By using our site, you consent to cookies.</p>
+            <p>
+                We use cookies to provide and improve our services. By using our site, you consent to cookies. For more information, please read our{' '}
+                <Link href="/privacy">
+                    <a>Privacy policy</a>
+                </Link>
+            </p>
+
             <B hollow small onClick={() => accept()}>
                 Accept
             </B>

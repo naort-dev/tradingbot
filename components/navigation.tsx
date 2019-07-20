@@ -254,6 +254,7 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
     let jobs = props.router ? props.router.route.indexOf('/jobs') !== -1 : false;
     let follow = props.router ? props.router.route.indexOf('/follow') !== -1 : false;
     let build = props.router ? props.router.route.indexOf('/build') !== -1 : false;
+    let imprint = props.router ? props.router.route.indexOf('/imprint') !== -1 : false;
     let mixpanel = useMixpanel();
     let { dark } = useDark();
 
@@ -280,33 +281,38 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
     return (
         <Top dark={dark} open={open}>
             <NavContainer>
-                <Link replace href="/">
+                <Link href="/">
                     <a>
                         <Logo src={dark || open ? logoDark : logo} />
                     </a>
                 </Link>
                 <ItemContainer open={open}>
                     <Item open={open} num={1} selected={home}>
-                        <Link replace href="/">
+                        <Link href="/">
                             <a>Home</a>
                         </Link>
                     </Item>
                     <Item open={open} num={1} selected={follow}>
-                        <Link replace href="/follow">
+                        <Link href="/follow">
                             <a>Follow bots</a>
                         </Link>
                     </Item>
                     <Item open={open} num={2} selected={build}>
-                        <Link replace href="/build">
+                        <Link href="/build">
                             <a>Create bots</a>
                         </Link>
                     </Item>
                     <Item open={open} num={3} selected={jobs}>
-                        <Link replace href="/jobs">
+                        <Link href="/jobs">
                             <a>Jobs</a>
                         </Link>
                     </Item>
-                    <Item open={open} num={3}>
+                    <Item open={open} num={2}>
+                        <a href="https://auth.beta.trality.com/#/login" target="_blank">
+                            <Button small>Login</Button>
+                        </a>
+                    </Item>
+                    <Item open={open} num={5}>
                         <Group>
                             <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
                                 <Twitter src={twitter} />
