@@ -6,7 +6,7 @@ import { Content, LayoutDivided } from '../../theme';
 import { Subscribe } from '../subscribe';
 
 import * as phone from '../../assets/images/phone@3x.png';
-import * as call from '../../assets/images/actioncall.svg';
+import * as call from '../../assets/images/actioncall_beta.svg';
 
 const Img = styled.img`
     height: 60vh;
@@ -143,7 +143,7 @@ export class Slide0 extends React.Component<SideHeadProps> {
     get left() {
         return (
             <Content header={this.header}>
-                <div>We bring together expert and leisure traders of digital assets, enabling them to beat the market with trading bots.</div>
+                <div>We make the tools of Wall Street available to everyone - with trading bots for all levels of experience.</div>
                 <Subscribe />
                 <Call src={call} />
             </Content>
