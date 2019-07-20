@@ -158,21 +158,24 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         <img src={dark ? logoWhite : logo} alt="Trality Logo" />
                     </div>
                     <LinkContainer dark={dark}>
-                        <Link replace href="/follow">
-                            <a>Follow bots</a>
-                        </Link>
-                        <Link replace href="/build">
-                            <a>Create bots</a>
-                        </Link>
-                        <Link replace href="/jobs">
+                        <Link href="/jobs">
                             <a>Jobs</a>
+                        </Link>
+                        <Link href="/imprint">
+                            <a>Imprint</a>
+                        </Link>
+                        <Link href="/privacy">
+                            <a>Privacy</a>
+                        </Link>
+                        <Link href="/terms">
+                            <a>Terms</a>
                         </Link>
                         {main ? (
                             <Button onClick={() => linkTo('#head')}>Subscribe</Button>
                         ) : (
-                            <Link replace href="/">
+                            <a href="https://auth.beta.trality.com/#/signup" target="_blank">
                                 <Button>Subscribe</Button>
-                            </Link>
+                            </a>
                         )}
                     </LinkContainer>
                 </Top>

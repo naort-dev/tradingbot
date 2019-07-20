@@ -1,6 +1,7 @@
 import { LayoutCentered } from '../../theme';
 import styled from 'styled-components';
 import { Content } from '../general';
+import { Subscribe } from '../subscribe';
 
 const Center = styled.div`
     width: 60%;
@@ -16,7 +17,7 @@ export const Slide5: React.FunctionComponent<{}> = (props) => {
     return (
         <LayoutCentered>
             <Content>
-                <h1>Trality iOS & Android application soon!</h1>
+                <Subscribe />
             </Content>
         </LayoutCentered>
     );

@@ -100,9 +100,10 @@ export class Slide1 extends React.Component {
                             <img src={follow} />
                             <h5>Follow bots</h5>
                             <div>
-                                With the Trality Bot Marketplace, you can start trading like a Wall Street Pro: follow the best-rated expert bots and mirror its trades. No need for expert skills.
+                                With the Trality Bot Marketplace, you can start trading like a Wall Street Pro: follow the best-rated expert bots and
+                                mirror its trades. No need for expert skills.
                             </div>
-                            <Link replace href="/follow">
+                            <Link href="/follow">
                                 <a>
                                     Read more
                                     <img src={arrow} />
@@ -113,9 +114,10 @@ export class Slide1 extends React.Component {
                             <img src={create} />
                             <h5>Create bots</h5>
                             <div>
-                                Trality gives you the most advanced tools to create trading bots. And more! Start building a follower base and generate a risk-free side income.
+                                Trality gives you the most advanced tools to create trading bots. And more! Start building a follower base and
+                                generate a risk-free side income.
                             </div>
-                            <Link replace href="/build">
+                            <Link href="/build">
                                 <a>
                                     Read more
                                     <img src={arrow} />

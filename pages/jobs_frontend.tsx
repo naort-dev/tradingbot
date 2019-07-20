@@ -83,14 +83,14 @@ const Component: React.FunctionComponent<{}> = () => {
                 <div>
                     <Breadcrumb>
                         <span>
-                            <Link replace href="/jobs">
+                            <Link href="/jobs">
                                 <a>Jobs</a>
                             </Link>
                             <img src={arrow} />
                         </span>
                         <span>Senior/Junior Frontend Developer</span>
                     </Breadcrumb>
-                    <Header>Senior/Junior Frontend Developer</Header>
+                    <Header>Senior/Junior Frontend Developer (Part-/Full-time)</Header>
                     <Description>
                         We’re looking for talented frontend engineers, who not only have a solid programming background, but also a love for the use
                         of cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX. If you are able to
@@ -150,8 +150,8 @@ const Component: React.FunctionComponent<{}> = () => {
                     <Description>
                         <ul>
                             <li>
-                                38,5h full-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
-                                Vienna
+                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city
+                                in the word – Vienna
                             </li>
                             <li>
                                 An extremely flexible working environment with a lot of creative freedom in the further development of our startup
@@ -159,9 +159,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             <li>A competitive remuneration based on your qualification, education and experience</li>
                             <li>A possibility to negotiate an equity-based compensation</li>
                             <li>
-                                Austrian labor law requires us to state the minimum salary for this role (on a junior level), which is 2.393€ (per
-                                month, paid 14 times). However, we are willing to overpay you significantly based qualification, education and
-                                experience
+                                Austrian labor law requires us to state the minimum salary for this role (on a full-time, junior level), which is
+                                2.393€ (per month, paid 14 times). However, we are willing to overpay you significantly based qualification, education
+                                and experience
                             </li>
                         </ul>
                     </Description>

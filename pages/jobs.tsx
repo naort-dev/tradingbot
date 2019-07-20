@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Navigation, Footer } from '../components';
+import { Navigation, Footer, GDPR } from '../components';
 import { Section, LayoutDivided, Content, LayoutCentered } from '../theme';
 import Link from 'next/link';
 import { withMixpanel } from '../hooks/mixpanel';
@@ -215,7 +215,7 @@ class Component extends React.Component {
                         <Job>
                             <h5>Senior/Junior Backend Developer</h5>
                             <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!.</div>
-                            <Link replace href="/jobs_backend">
+                            <Link href="/jobs_backend">
                                 <a>
                                     Interested
                                     <img src={arrow} />
@@ -225,7 +225,7 @@ class Component extends React.Component {
                         <Job>
                             <h5>Senior/Junior Frontend Developer</h5>
                             <div>Use cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX!</div>
-                            <Link replace href="/jobs_frontend">
+                            <Link href="/jobs_frontend">
                                 <a>
                                     Interested
                                     <img src={arrow} />
@@ -256,6 +256,7 @@ class Component extends React.Component {
         return (
             <ColorContainer>
                 <Navigation dark={false} />
+                <GDPR />
                 <Section first id="head">
                     {this.renderHead()}
                 </Section>

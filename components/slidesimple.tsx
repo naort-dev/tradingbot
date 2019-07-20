@@ -101,7 +101,7 @@ export class SlideSimple extends React.Component {
                                 Some traders just want to sit back, relax and let experts do the work for them. On our bot marketplace, they can
                                 simply select a bot and follow it.
                             </div>
-                            <Link replace href="/slidefollow">
+                            <Link href="/slidefollow">
                                 <a>
                                     Read more
                                     <img src={arrow} />
@@ -115,7 +115,7 @@ export class SlideSimple extends React.Component {
                                 Others just love to build custom trading bots. They are wizards with technical analysis and want to maintain and
                                 improve their bots constantly.
                             </div>
-                            <Link replace href="/slidebuild">
+                            <Link href="/slidebuild">
                                 <a>
                                     Read more
                                     <img src={arrow} />
