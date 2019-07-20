@@ -170,13 +170,9 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         <Link href="/terms">
                             <a>Terms</a>
                         </Link>
-                        {main ? (
-                            <Button onClick={() => linkTo('#head')}>Subscribe</Button>
-                        ) : (
-                            <a href="https://auth.beta.trality.com/#/signup" target="_blank">
-                                <Button>Subscribe</Button>
-                            </a>
-                        )}
+                        <a href="https://auth.beta.trality.com/#/signup" target="_blank">
+                            <Button>Join now</Button>
+                        </a>
                     </LinkContainer>
                 </Top>
                 <LogoHeader dark={dark}>Proudly supported by</LogoHeader>
