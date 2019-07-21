@@ -6,6 +6,7 @@ import * as logo from '../assets/images/logo_black_blue.png';
 import * as logoDark from '../assets/images/trality_logo_white.png';
 import * as twitter from '../assets/images/twitter.svg';
 import * as medium from './navigation/medium.svg';
+import * as telegram from '../assets/images/telegram_trality.png';
 
 import { Container } from '../theme';
 import { scrollIt } from '../util/scrollit';
@@ -273,6 +274,11 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
         window.open('https://medium.com/trality', '_blank');
     }, []);
 
+    const onClickTelegram = React.useCallback(() => {
+        mixpanel.track('clickedTelegramTop');
+        window.open('https://t.me/trality', '_blank');
+    }, []);
+
     const linkTo = React.useCallback((id: string) => {
         setOpen(false);
         scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
@@ -314,6 +320,9 @@ const Component: React.FunctionComponent<NavigationProps & WithRouterProps> = (p
                     </Item>
                     <Item open={open} num={5}>
                         <Group>
+                            <ContactButton type="button" hollow small open={open} onClick={onClickTelegram}>
+                                <Twitter src={telegram} />
+                            </ContactButton>
                             <ContactButton type="button" hollow small open={open} onClick={onClickTwitter}>
                                 <Twitter src={twitter} />
                             </ContactButton>
