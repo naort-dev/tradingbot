@@ -6,19 +6,23 @@ import * as call from '../assets/images/actioncall_beta.svg';
 import { useMixpanel } from '../hooks/mixpanel';
 
 const Call = styled.img`
-    margin-left: 75px;
+    margin-left:100px;
     margin-top: 15px;
 `;
 
 const Container = styled.div`
     margin-top: 25px;
     text-align: left !important;
+
     > div {
         text-align: center;
+
     }
     > button {
         display: block;
-        margin-left: 25px;
+        margin-left: 0px;
+        width:40%;
+
     }
 `;
 

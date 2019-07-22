@@ -57,6 +57,8 @@ const Top = styled.div`
 const Section = styled.div<{ center?: boolean }>`
     margin-top: 15px;
     text-align: justify;
+
+    line-height: 170%;
     width: 100%;
     ${(props) =>
         props.center &&
@@ -65,7 +67,7 @@ const Section = styled.div<{ center?: boolean }>`
         margin-bottom: 40px;
     `}
 
-    
+
     }
       ol {
         counter-reset: item
@@ -73,6 +75,7 @@ const Section = styled.div<{ center?: boolean }>`
         li {
           display: block;
           margin: 15px 0;
+          font-size: 13px;
         }
         li:before {
           margin-right: 10px;

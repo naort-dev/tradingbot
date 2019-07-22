@@ -2,12 +2,14 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { LayoutDivided, Content } from '../general';
 import * as image from './slide2/group-24@3x.png';
+import * as comingsoon from '../../assets/images/coming-soon_grey.svg';
 import Link from 'next/link';
 
 const Img = styled.img`
     @media (max-width: 768px) {
         max-height: 60vh;
-    }
+        }
+
 `;
 
 export const Slide2: React.FunctionComponent<{}> = (props) => {
@@ -15,6 +17,9 @@ export const Slide2: React.FunctionComponent<{}> = (props) => {
         <LayoutDivided imageIn="right">
             <div>
                 <Content>
+                    <div>
+                    <Img src={comingsoon} />
+                    </div>
                     <h1>Follow bots.</h1>
                     <p>
                         On the Trality Bot Marketplace, simply select a bot from an expert, which matches your objectives and follow it. While the

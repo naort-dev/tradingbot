@@ -33,7 +33,7 @@ const Container = styled.div`
     ul {
         text-align: left;
     }
-    font-size: 13px;
+    font-size: 15px;
     @media (max-width: 768px) {
         width: 100%;
         padding-right: 25px;
@@ -59,6 +59,7 @@ const Section = styled.div<{ center?: boolean }>`
     margin-top: 15px;
     text-align: justify;
     width: 100%;
+    line-height: 170%;
     ${(props) =>
         props.center &&
         `
@@ -98,7 +99,7 @@ const Component: React.FunctionComponent<{}> = () => {
                                 <b>Controller of all processing activities is:</b>
                                 <p>TRALITY GmbH</p>
                                 <p>Novaragasse 19/9 AT-1020 Wien</p>
-                                <p>Email: legal@trality.com</p>
+                                <p>Email: hello@trality.com</p>
                                 <p>UID: ATU73931338</p>
                                 <p>Company Register: 504493b, Commercial Court Vienna</p>
                                 <p>Member of the Austrian Economic Chambers</p>
@@ -108,13 +109,18 @@ const Component: React.FunctionComponent<{}> = () => {
                             </div>
                         </Top>
                         <Section>
-                            For all inquiries concerning the protection of your personal data please contact TRALITY GmbH legal@trality.com
+                            <div>
+                            <b>For all inquiries concerning the protection of your personal data please contact:
+                            <br/> TRALITY GmbH
+                            <br/> legal@trality.com
+                            </b>
+                            </div>
                         </Section>
                         <Section>
                             <h2>1.Who We Are and What this Policy Is</h2>
                             <div>
                                 Welcome to <a href="https://www.trality.com">https://www.trality.com</a>, the website of TRALITY GmbH, Novaragasse 19/9, 1020 Wien, Austria (FN 504493 b) (“TRALITY,” “we,” “us” and “our” etc.). We are a software and online services provider firm. For additional
-                                information, please visit <a href="https://www.trality.com">https://www.trality.com</a>. We respect the privacy of the users of our website and our services (“you”, “your”) and are committed to protecting your personal data and information according to the applicable law.
+                                information, please visit <a href="https://www.trality.com">https://www.trality.com</a>. <p/> We respect the privacy of the users of our website and our services (“you”, “your”) and are committed to protecting your personal data and information according to the applicable law.
                                 For this reason, your data will be used exclusively on the basis of the applicable legal provisions, in particular the
                                 National Data Protection Act (DSG), the General Data Protection Regulation (GDPR) as well as the Federal Act enacting
                                 the Telecommunications Act (TKG 2003). This privacy policy (“Policy”) explains how, to what extent and for what
@@ -125,7 +131,7 @@ const Component: React.FunctionComponent<{}> = () => {
                         <Section>
                             <h2>2.Definitions</h2>
                             <div>
-                                “Personal Information” means any information that either (a) personally identifies a natural person; or (b) pertains
+                                <b>“Personal Information”</b> means any information that either (a) personally identifies a natural person; or (b) pertains
                                 to an identifiable natural person, i.e. someone who can be identified, directly or indirectly, in particular, by
                                 reference to an identifier such as a name, an identification number, location data, an online identifier or to one or
                                 more factors specific to his or her physical, physiological, genetic, mental, economic, cultural or social identity,
@@ -135,11 +141,11 @@ const Component: React.FunctionComponent<{}> = () => {
                                 and privacy laws, directives, regulations and comparable legal acts). Examples of Personal Information include your
                                 contact details such as your name, email address, birthday or phone number as well as information about your
                                 professional education and experience, skills, preferences, membership in professional organizations, etc.;
-                                “Processing” means any operation or set of operations which is performed on Personal Information or on sets of
+                                <p/><b>“Processing”</b> means any operation or set of operations which is performed on Personal Information or on sets of
                                 Personal Information, whether or not by automated means, such as the collection, recording, organization, structuring,
                                 storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or
-                                otherwise making available, alignment or combination, blocking, restriction, erasure or destruction; “Sensitive
-                                Personal Information” means Personal Information revealing racial or ethnic origin, political opinions, religious or
+                                otherwise making available, alignment or combination, blocking, restriction, erasure or destruction;
+                                <p/><b>“Sensitive Personal Information”</b> means Personal Information revealing racial or ethnic origin, political opinions, religious or
                                 philosophical beliefs, or trade union membership, and the Processing of genetic data, biometric data for the purpose
                                 of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or
                                 sexual orientation; “Site” means / and all web pages hosted at that domain.
@@ -256,7 +262,7 @@ const Component: React.FunctionComponent<{}> = () => {
                             - your length of stay on our site; and
                             <br/>
                             - the frequency with which our pages are accessed.
-
+                            <br/>
                             The data is used by CloudFlare for statistical evaluations of the accesses as well as for the security and optimization of the offer.
                             If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.
                             CloudFlare offers further information about its data collection and processing as well your rights and your options for protecting your privacy at this link: <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a>.
@@ -274,7 +280,7 @@ const Component: React.FunctionComponent<{}> = () => {
                             <p>
                             Hotjar is used to analyze how our website is used. Our legitimate interest lies in the analysis, optimization, and economic operation of our site.
 
-                            Hotjar allows us to monitor your usage behaviour on our website, such as logging and evaluating your mouse movements or mouse clicks. However, your visit to our website will be anonymized. In addition, information about your operating system, your internet browser, incoming or outgoing links, the geographical origin of your access, and the type and resolution of the device you are using are evaluated by Hotjar and processed for statistical purposes. Hotjar can also obtain direct feedback from you. Hotjar offers further information about its data protection practices at https://www.hotjar.com/privacy.
+                            Hotjar allows us to monitor your usage behaviour on our website, such as logging and evaluating your mouse movements or mouse clicks. However, your visit to our website will be anonymized. In addition, information about your operating system, your internet browser, incoming or outgoing links, the geographical origin of your access, and the type and resolution of the device you are using are evaluated by Hotjar and processed for statistical purposes. Hotjar can also obtain direct feedback from you. Hotjar offers further information about its data protection practices at <a href="https://www.hotjar.com/privacy">https://www.hotjar.com/privacy</a>.
                             </p>
                             <p>
                             In addition, you have the option of terminating the analysis of your usage behavior by opting out. By confirming the link

@@ -69,7 +69,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     <Description>
                         <p>TRALITY GmbH</p>
                         <p>Novaragasse 19/9 AT-1020 Wien</p>
-                        <p>Email: legal@trality.com</p>
+                        <p>Email: hello@trality.com</p>
                         <p>UID: ATU73931338</p>
                         <p>Company Register: 504493b, Commercial Court Vienna</p>
                         <p>Member of the Austrian Economic Chambers</p>
