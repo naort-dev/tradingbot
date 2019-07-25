@@ -68,9 +68,9 @@ const Section = styled.div<{ center?: boolean }>`
     `}
 
 
-    }
+
       ol {
-        counter-reset: item
+        counter-reset: item;
         margin-top: 25px;
         li {
           display: block;
