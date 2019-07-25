@@ -9,7 +9,7 @@
         "prettier": "prettier --write \"pages/**/*.{ts, tsx}\"",
         "export": "next export",
         "test": "serverless offline",
-        "deploy": "next build && serverless deploy"
+        "deploy": "now --target production"
     },
     "dependencies": {
         "express": "^4.16.4",
