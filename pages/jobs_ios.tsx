@@ -92,17 +92,19 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Breadcrumb>
                     <Header>Senior/Junior iOS Developer</Header>
                     <Description>
-                        We’re looking for a talented iOS engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a possibility of extension) in order to develop the platform’s iOS app.
+                        We’re looking for a talented iOS engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a
+                        possibility of extension) in order to develop the platform’s iOS app.
                     </Description>
                     <SubHeader>What you will do everyday</SubHeader>
                     <Description>
                         <ul>
                             <li>Build an iOS app for the Trality platform from scratch using Swift and the newest iOS APIs</li>
 
-                            <li>Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final markup is standards compliant, and UI deliverables are completed on time</li>
                             <li>
-                                Work with the real time feedback from our users (external and internal) to make the products better
+                                Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final
+                                markup is standards compliant, and UI deliverables are completed on time
                             </li>
+                            <li>Work with the real time feedback from our users (external and internal) to make the products better</li>
                             <li>Enthuse the trality team with your ideas and suggestions for solutions, libraries and technologies</li>
                             <li>
                                 Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of our
@@ -113,11 +115,11 @@ const Component: React.FunctionComponent<{}> = () => {
                     <SubHeader>What you bring to the table</SubHeader>
                     <Description>
                         <ul>
+                            <li>You have at least 3 years of experience in iOS development</li>
                             <li>
-                                You have at least 3 years of experience in iOS development
+                                You have worked with Swift (or Objective-C) and you know your way around Git, moreover, experience with e.g. GraphQL
+                                is a plus
                             </li>
-                            <li>You have worked with Swift and Objective-C and you know your way around Git, moreover, experience with XXX is a plus</li>
-
                             <li>In-depth knowledge of modular, reusable and intelligent API design is also nice to have</li>
                             <li>You work independently and like to take the initiative</li>
                             <li>
@@ -130,15 +132,14 @@ const Component: React.FunctionComponent<{}> = () => {
                     <Description>
                         <ul>
                             <li>
-                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city in the word – Vienna
+                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city
+                                in the word – Vienna
                             </li>
+                            <li>A short-term contract length of 3-4 months, with the possibility of extension at the end of the employment</li>
                             <li>
-                                A short-term contract length of 3-4 months, with the possibility of extension at the end of the employment
+                                An extremely flexible working environment with a lot of creative freedom in the further development of our startup
                             </li>
-                            <li>An extremely flexible working environment with a lot of creative freedom in the further development of our startup</li>
-                            <li>
-                            A competitive remuneration based on your qualification, education and experience
-                            </li>
+                            <li>A competitive remuneration based on your qualification, education and experience</li>
                         </ul>
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
