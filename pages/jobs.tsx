@@ -213,7 +213,7 @@ class Component extends React.Component {
                     <Header>Open Positions</Header>
                     <JobContainer>
                         <Job>
-                            <h5>Senior/Junior Backend Developer</h5>
+                            <h5>Senior/Junior Backend Developer (Part-/Full-time)</h5>
                             <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!</div>
                             <Link href="/jobs_backend">
                                 <a>
@@ -223,7 +223,7 @@ class Component extends React.Component {
                             </Link>
                         </Job>
                         <Job>
-                            <h5>Senior/Junior Frontend Developer</h5>
+                            <h5>Senior/Junior Frontend Developer (Part-/Full-time)</h5>
                             <div>Use cutting edge UI frameworks (mostly React) in order to raise the bar for state-of-the-art UI and UX!</div>
                             <Link href="/jobs_frontend">
                                 <a>
@@ -245,7 +245,7 @@ class Component extends React.Component {
                     </JobContainer>
                     <JobContainer>
                         <Job>
-                            <h5>Part-time Manager Algorithmic Trading Strategies</h5>
+                            <h5>Manager Algorithmic Trading Strategies (Part-time)</h5>
                             <div>Manage the most complex algorithms and constantly improve the performance of our trading bots and API!</div>
                             <Link href="/jobs_algorithms">
                                 <a>
@@ -255,7 +255,7 @@ class Component extends React.Component {
                             </Link>
                         </Job>
                         <Job>
-                            <h5>Part-time Manager Marketing & Communication</h5>
+                            <h5>Manager Marketing & Communication (Part-time)</h5>
                             <div>Spread the word on our startup and be responsible for driving awareness and user growth!</div>
                             <Link href="/jobs_marketing">
                                 <a>
