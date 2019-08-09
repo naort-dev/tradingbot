@@ -100,17 +100,11 @@ const Component: React.FunctionComponent<{}> = () => {
                     <SubHeader>What you will do everyday</SubHeader>
                     <Description>
                         <ul>
-                            <li>Design and build efficient, scalable systems that will soon be used by millions of people across the globe</li>
+                            <li>Design and build well-designed, efficient, scalable systems that will soon be used by millions of people across the globe</li>
                             <li>
-                                Build well-designed software in a way that is generic, reusable, and easily extensible while solving our business’
-                                needs and requirements
+                                Be proactive in finding ways to improve the performance, architecture, and development processes for a high-performance computation system
                             </li>
-                            <li>Work closely with other developers to develop backend services that work together</li>
-                            <li>
-                                Be proactive in finding ways to improve the performance, architecture, and development processes for a high
-                                performance computation system
-                            </li>
-                            <li>Investigate production issues pertaining to customer features to determine root cause and implement solutions</li>
+                            <li>Investigate production/performance issues and scalability bottlenecks to determine root cause and implement solutions</li>
                             <li>
                                 Investigate performance issues/scalability bottlenecks, existing queries and/or write new queries with performance
                                 optimization in mind
@@ -136,15 +130,11 @@ const Component: React.FunctionComponent<{}> = () => {
                                 analysis
                             </li>
                             <li>
-                                Working with MongoDB databases and Redis Caches as well as analyzing the efficiency of and performance of databases is
-                                your alley
+                                Working with MongoDB databases and Redis caches as well as analyzing the efficiency and performance of databases is right along your alley
                             </li>
-                            <li>You have worked with real time web applications and event driven architectures like Node.js </li>
+                            <li>You have worked with real time web applications and event driven architectures like Nodejs </li>
                             <li>In-depth knowledge of modular, reusable and intelligent API design is a plus</li>
-                            <li>
-                                You hold a bachelor’s degree in Computer Science, Computer Engineering, Electrical Engineering OR equivalent work
-                                experience
-                            </li>
+
                             <li>You can talk to your team (conversational proof) in English</li>
                             <li>You work independently and like to take the initiative</li>
                             <li>
@@ -160,18 +150,14 @@ const Component: React.FunctionComponent<{}> = () => {
                     <Description>
                         <ul>
                             <li>
-                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city
-                                in the word – Vienna
+                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city in the word – Vienna
                             </li>
                             <li>
                                 An extremely flexible working environment with a lot of creative freedom in the further development of our startup
                             </li>
-                            <li>A competitive remuneration based on your qualification, education and experience</li>
                             <li>A possibility to negotiate an equity-based compensation</li>
                             <li>
-                                Austrian labor law requires us to state the minimum salary for this role (on a full-time, junior level), which is
-                                2.393€ (per month, paid 14 times). However, we are willing to overpay you significantly based qualification, education
-                                and experience
+                                Austrian labor law requires us to state the minimum salary for this role (on a junior level), which is 2.461€ (per month, paid 14 times). <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
                             </li>
                         </ul>
                     </Description>

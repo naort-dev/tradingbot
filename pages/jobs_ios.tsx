@@ -64,7 +64,7 @@ const Component: React.FunctionComponent<{}> = () => {
     const mixpanel = useMixpanel();
     let { dark, setDark } = useDark();
     React.useCallback(() => {
-        mixpanel.track(`openedJobsFrontend`);
+        mixpanel.track(`openedJobsiOS`);
     }, []);
 
     React.useEffect(() => {
@@ -73,7 +73,7 @@ const Component: React.FunctionComponent<{}> = () => {
 
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
-            mixpanel.pageview('jobs_frontend');
+            mixpanel.pageview('jobs_iOS');
         }
     }, []);
 
@@ -88,25 +88,21 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Senior/Junior Frontend Developer</span>
+                        <span>Senior/Junior iOS Developer</span>
                     </Breadcrumb>
-                    <Header>Senior/Junior Frontend Developer (Part-/Full-time)</Header>
+                    <Header>Senior/Junior iOS Developer</Header>
                     <Description>
-                        We’re looking for talented frontend engineers, who not only have a solid programming background, but also a love for the use
-                        of cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX. If you are able to
-                        think modularly, want to create beautiful trading bot modules, and are able to work on a sophisticated and challenging web
-                        platform, you've come to the right place.
+                        We’re looking for a talented iOS engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a possibility of extension) in order to develop the platform’s iOS app.
                     </Description>
                     <SubHeader>What you will do everyday</SubHeader>
                     <Description>
                         <ul>
-                            <li>Design and build well-designed, efficient, scalable systems that will soon be used by millions of people across the globe</li>
+                            <li>Build an iOS app for the Trality platform from scratch using Swift and the newest iOS APIs</li>
 
-                            <li>Investigate production issues pertaining to UI to determine root cause and implement solutions</li>
+                            <li>Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final markup is standards compliant, and UI deliverables are completed on time</li>
                             <li>
-                                Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final markup is standards compliant, and UI deliverables are completed on time
+                                Work with the real time feedback from our users (external and internal) to make the products better
                             </li>
-                            <li>Work with the real time feedback from our users (external and internal) to make the products better</li>
                             <li>Enthuse the trality team with your ideas and suggestions for solutions, libraries and technologies</li>
                             <li>
                                 Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of our
@@ -118,16 +114,11 @@ const Component: React.FunctionComponent<{}> = () => {
                     <Description>
                         <ul>
                             <li>
-                                You have at least 3 years of experience in web development (Javascript and Typescript preferred) and are always happy
-                                to learn
+                                You have at least 3 years of experience in iOS development
                             </li>
-                            <li>Modern web development stacks (React, MobX, Webpack) interest you and you know your way around Git</li>
-                            <li>
-                                You have worked with real time web applications and event driven architectures like Node.js and are not frightened to
-                                investigate issues together with backend engineers
-                            </li>
-                            <li>In-depth knowledge of modular, reusable and intelligent API design is a plus</li>
-                            <li>You can talk to your team (conversational proof) in English</li>
+                            <li>You have worked with Swift and Objective-C and you know your way around Git, moreover, experience with XXX is a plus</li>
+
+                            <li>In-depth knowledge of modular, reusable and intelligent API design is also nice to have</li>
                             <li>You work independently and like to take the initiative</li>
                             <li>
                                 You have experience with cross-functional teams and managing relationships with business or operations stakeholders
@@ -142,11 +133,11 @@ const Component: React.FunctionComponent<{}> = () => {
                                 38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city in the word – Vienna
                             </li>
                             <li>
-                                An extremely flexible working environment with a lot of creative freedom in the further development of our startup
+                                A short-term contract length of 3-4 months, with the possibility of extension at the end of the employment
                             </li>
-                            <li>A possibility to negotiate an equity-based compensation</li>
+                            <li>An extremely flexible working environment with a lot of creative freedom in the further development of our startup</li>
                             <li>
-                                Austrian labor law requires us to state the minimum salary for this role (on a junior level), which is 2.461€ (per month, paid 14 times). <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
+                            A competitive remuneration based on your qualification, education and experience
                             </li>
                         </ul>
                     </Description>

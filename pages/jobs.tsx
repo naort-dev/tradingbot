@@ -34,14 +34,14 @@ const WhyContainer = styled.div`
 
 const JobContainer = styled.div`
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     flex-wrap: wrap;
 `;
 
 const Job = styled.div`
-    width: 40%;
-    padding-right: 120px;
-    margin-bottom: 55px;
+    width: 33%;
+    padding-right: 60px;
+    margin-bottom: 30px;
     & > h5 {
         color: #fff;
         font-size: 20px;
@@ -186,7 +186,7 @@ class Component extends React.Component {
                         <Why>
                             <img src={ic1} />
                             <h5>Small team, large responsibilty</h5>
-                            <div>We are currently a team of only 5 and if you’re the right person for job, you’re basically in charge of it.</div>
+                            <div>We are currently a team of only 6 and if you’re the right person for job, you’re basically in charge of it.</div>
                         </Why>
                         <Why>
                             <img src={ic2} />
@@ -214,7 +214,7 @@ class Component extends React.Component {
                     <JobContainer>
                         <Job>
                             <h5>Senior/Junior Backend Developer</h5>
-                            <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!.</div>
+                            <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!</div>
                             <Link href="/jobs_backend">
                                 <a>
                                     Interested
@@ -223,14 +223,49 @@ class Component extends React.Component {
                             </Link>
                         </Job>
                         <Job>
-                            <h5>Senior/Junior Frontend Developer</h5>
-                            <div>Use cutting edge UI frameworks (mostly ReactJS) in order to raise the bar for state-of-the-art UI and UX!</div>
-                            <Link href="/jobs_frontend">
+                            <h5>Senior/Junior Backend Developer</h5>
+                            <div>Build state-of-the-art systems that empower the complex trading-bots running on our platform!</div>
+                            <Link href="/jobs_backend">
                                 <a>
                                     Interested
                                     <img src={arrow} />
                                 </a>
                             </Link>
+                        </Job>
+                        <Job>
+                            <h5>Senior/Junior Frontend Developer (Part-/Full-time)</h5>
+                            <div>Join our team on a short-term contract to develop our iOS app from scratch!</div>
+                            <Link href="/jobs_iOS">
+                                <a>
+                                    Interested
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
+                        </Job>
+                    </JobContainer>
+                    <JobContainer>
+                        <Job>
+                            <h5>Part-time Manager Algorithmic Trading Strategies</h5>
+                            <div>Manage the most complex algorithms and constantly improve the performance of our trading bots!</div>
+                            <Link href="/jobs_algorithms">
+                                <a>
+                                    Interested
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
+                        </Job>
+                        <Job>
+                            <h5>Part-time Manager Marketing & Communication</h5>
+                            <div>Spread the word on our startup and be responsible for driving awareness and user growth!</div>
+                            <Link href="/jobs_marketing">
+                                <a>
+                                    Interested
+                                    <img src={arrow} />
+                                </a>
+                            </Link>
+                        </Job>
+                        <Job>
+                            
                         </Job>
                     </JobContainer>
                 </div>
