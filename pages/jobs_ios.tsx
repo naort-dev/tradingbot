@@ -88,9 +88,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Senior/Junior iOS Developer</span>
+                        <span>Senior/Junior iOS Developer (Part-/Full-time)</span>
                     </Breadcrumb>
-                    <Header>Senior/Junior iOS Developer</Header>
+                    <Header>Senior/Junior iOS Developer (Part-/Full-time)</Header>
                     <Description>
                         We’re looking for a talented iOS engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a
                         possibility of extension) in order to develop the platform’s iOS app.
@@ -98,14 +98,14 @@ const Component: React.FunctionComponent<{}> = () => {
                     <SubHeader>What you will do everyday</SubHeader>
                     <Description>
                         <ul>
-                            <li>Build an iOS app for the Trality platform from scratch using Swift and the newest iOS APIs</li>
+                            <li>Build an iOS app for the Trality platform from scratch using React Native or Swift and the newest iOS APIs</li>
 
                             <li>
                                 Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final
                                 markup is standards compliant, and UI deliverables are completed on time
                             </li>
                             <li>Work with the real time feedback from our users (external and internal) to make the products better</li>
-                            <li>Enthuse the trality team with your ideas and suggestions for solutions, libraries and technologies</li>
+                            <li>Enthuse the Trality team with your ideas and suggestions for solutions, libraries and technologies</li>
                             <li>
                                 Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of our
                                 platform
@@ -117,7 +117,7 @@ const Component: React.FunctionComponent<{}> = () => {
                         <ul>
                             <li>You have at least 3 years of experience in iOS development</li>
                             <li>
-                                You have worked with Swift (or Objective-C) and you know your way around Git, moreover, experience with e.g. GraphQL
+                                You have worked with React Native (or ReactJS) or, alternatively, Swift (or Objective-C) and you know your way around Git, moreover, experience with e.g. GraphQL
                                 is a plus
                             </li>
                             <li>In-depth knowledge of modular, reusable and intelligent API design is also nice to have</li>
@@ -144,7 +144,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
                     <Description>
-                        To apply, drop us an email including a CV and a 1-page cover letter to <span>jobs [at] trality dot com</span>
+                        To apply, drop us an email including a CV and a 1-page cover letter to<span> jobs [at] trality [dot] com</span>
                     </Description>
                 </div>
             </LayoutTop>

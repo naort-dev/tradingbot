@@ -88,7 +88,7 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Senior/Junior Frontend Developer</span>
+                        <span>Senior/Junior Frontend Developer (Part-/Full-time)</span>
                     </Breadcrumb>
                     <Header>Senior/Junior Frontend Developer (Part-/Full-time)</Header>
                     <Description>
@@ -110,7 +110,7 @@ const Component: React.FunctionComponent<{}> = () => {
                                 markup is standards compliant, and UI deliverables are completed on time
                             </li>
                             <li>Work with the real time feedback from our users (external and internal) to make the products better</li>
-                            <li>Enthuse the trality team with your ideas and suggestions for solutions, libraries and technologies</li>
+                            <li>Enthuse the Trality team with your ideas and suggestions for solutions, libraries and technologies</li>
                             <li>
                                 Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of our
                                 platform
@@ -159,7 +159,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
                     <Description>
-                        To apply, drop us an email including a CV and a 1-page cover letter to <span>jobs [at] trality dot com</span>
+                        To apply, drop us an email including a CV and a 1-page cover letter to<span> jobs [at] trality [dot] com</span>
                     </Description>
                 </div>
             </LayoutTop>

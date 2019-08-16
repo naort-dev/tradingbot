@@ -88,9 +88,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Senior/Junior Backend Developer</span>
+                        <span>Senior/Junior Backend Developer (Part-/Full-time)</span>
                     </Breadcrumb>
-                    <Header>Senior/Junior Backend Developer (Part-/Full-time) </Header>
+                    <Header>Senior/Junior Backend Developer (Part-/Full-time)</Header>
                     <Description>
                         We’re looking for talented backend engineers who build state-of-the-art systems that empower the complex trading-bots running
                         on our platform. If building fast, scalable systems based on Kubernetes, and deep diving through frameworks to figure out how
@@ -173,7 +173,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
                     <Description>
-                        To apply, drop us an email including a CV and a 1-page cover letter to <span>jobs [at] trality dot com</span>
+                        To apply, drop us an email including a CV and a 1-page cover letter to<span> jobs [at] trality [dot] com</span>
                     </Description>
                 </div>
             </LayoutTop>

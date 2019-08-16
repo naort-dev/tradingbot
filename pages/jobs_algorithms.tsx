@@ -88,9 +88,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Part-time Manager Algorithmic Trading Strategies </span>
+                        <span>Manager Algorithmic Trading Strategies (Part-time)</span>
                     </Breadcrumb>
-                    <Header>Part-time Manager Algorithmic Trading Strategies </Header>
+                    <Header>Manager Algorithmic Trading Strategies (Part-time)</Header>
                     <Description>
                         We’re looking for talented quants, who manage the most complex algorithms in order to constantly improve the performance of our trading bots. This role is responsible for the development, maintenance and constant improvement of the trading bots that are being offered as predefined solutions to users on our platform. If you love to dive deep into large time series of crypto assets and apply state-of-the-art technical analysis in order to boost trading returns, you will fit right in at Trality.
                     </Description>
@@ -146,7 +146,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
                     <Description>
-                        To apply, drop us an email including a CV and a 1-page cover letter to <span>jobs [at] trality dot com</span>
+                        To apply, drop us an email including a CV and a 1-page cover letter to<span> jobs [at] trality [dot] com</span>
                     </Description>
                 </div>
             </LayoutTop>

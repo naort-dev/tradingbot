@@ -88,9 +88,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Part-time Manager Marketing & Communication</span>
+                        <span>Manager Marketing & Communication (Part-time)</span>
                     </Breadcrumb>
-                    <Header>Part-time Manager Marketing & Communication</Header>
+                    <Header>Manager Marketing & Communication (Part-time)</Header>
                     <Description>
                         We’re looking for talented marketing or PR students, who work on marketing (Social, SEO and Brand) as well as communication
                         and PR directly together with the CEO of Trality. If you would love to help us spread the word on our startup and be
@@ -135,7 +135,7 @@ const Component: React.FunctionComponent<{}> = () => {
                     </Description>
                     <SubHeader>Sounds interesting?</SubHeader>
                     <Description>
-                        To apply, drop us an email including a CV and a 1-page cover letter to <span>jobs [at] trality dot com</span>
+                        To apply, drop us an email including a CV and a 1-page cover letter to<span> jobs [at] trality [dot] com</span>
                     </Description>
                 </div>
             </LayoutTop>
