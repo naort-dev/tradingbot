@@ -64,7 +64,7 @@ const Component: React.FunctionComponent<{}> = () => {
     const mixpanel = useMixpanel();
     let { dark, setDark } = useDark();
     React.useCallback(() => {
-        mixpanel.track(`openedJobsiOS`);
+        mixpanel.track(`openedJobsMobile`);
     }, []);
 
     React.useEffect(() => {
@@ -73,7 +73,7 @@ const Component: React.FunctionComponent<{}> = () => {
 
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
-            mixpanel.pageview('jobs_iOS');
+            mixpanel.pageview('jobs_mobile');
         }
     }, []);
 
@@ -88,17 +88,17 @@ const Component: React.FunctionComponent<{}> = () => {
                             </Link>
                             <img src={arrow} />
                         </span>
-                        <span>Senior/Junior iOS Developer (Part-/Full-time)</span>
+                        <span>Senior/Junior Mobile Developer (Part-/Full-time)</span>
                     </Breadcrumb>
-                    <Header>Senior/Junior iOS Developer (Part-/Full-time)</Header>
+                    <Header>Senior/Junior Mobile Developer (Part-/Full-time)</Header>
                     <Description>
-                        We’re looking for a talented iOS engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a
-                        possibility of extension) in order to develop the platform’s iOS app.
+                        We’re looking for a talented mobile engineer, who is willing to join the Trality team on a short-term contract (3-4 months with a
+                        possibility of extension) in order to develop the platform’s mobile app.
                     </Description>
                     <SubHeader>What you will do everyday</SubHeader>
                     <Description>
                         <ul>
-                            <li>Build an iOS app for the Trality platform from scratch using React Native or Swift and the newest iOS APIs</li>
+                            <li>Build an mobile app for the Trality platform from scratch using React Native</li>
 
                             <li>
                                 Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained, final
@@ -115,9 +115,9 @@ const Component: React.FunctionComponent<{}> = () => {
                     <SubHeader>What you bring to the table</SubHeader>
                     <Description>
                         <ul>
-                            <li>You have at least 3 years of experience in iOS development</li>
+                            <li>You have at least 3 years of experience in mobile development</li>
                             <li>
-                                You have worked with React Native (or ReactJS) or, alternatively, Swift (or Objective-C) and you know your way around Git, moreover, experience with e.g. GraphQL
+                                You have worked with React Native (and/or ReactJS) and you know your way around Git, moreover, experience with e.g. GraphQL
                                 is a plus
                             </li>
                             <li>In-depth knowledge of modular, reusable and intelligent API design is also nice to have</li>

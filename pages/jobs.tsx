@@ -233,9 +233,9 @@ class Component extends React.Component {
                             </Link>
                         </Job>
                         <Job>
-                            <h5>Senior/Junior iOS Developer (Part-/Full-time)</h5>
-                            <div>Join our team on a short-term contract to develop our iOS app from scratch!</div>
-                            <Link href="/jobs_ios">
+                            <h5>Senior/Junior Mobile Developer (Part-/Full-time)</h5>
+                            <div>Join our team on a short-term contract to develop our mobile app from scratch!</div>
+                            <Link href="/jobs_mobile">
                                 <a>
                                     Interested
                                     <img src={arrow} />
