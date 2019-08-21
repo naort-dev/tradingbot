@@ -29,7 +29,7 @@ const SubHeader = styled.h5`
 const Description = styled.div`
     margin-bottom: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     ul {
         text-align: left;
     }
@@ -37,7 +37,7 @@ const Description = styled.div`
         width: 100%;
         padding-right: 25px;
         padding-left: 25px;
-        text-align: center;
+        text-align: left;
         font-size: 14px;
     }
     & > span {

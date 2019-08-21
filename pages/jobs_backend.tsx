@@ -32,14 +32,14 @@ const Description = styled.div`
         width: 100%;
         padding-right: 25px;
         padding-left: 25px;
-        text-align: center;
+        text-align: left;
         font-size: 14px;
     }
     & > span {
         color: #00b3d8 !important;
     }
     display: flex;
-    justify-content: center;
+    justify-content: left;
     ul {
         text-align: left;
     }
