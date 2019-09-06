@@ -67,23 +67,20 @@ const Section = styled.div<{ center?: boolean }>`
         margin-bottom: 40px;
     `}
 
-
-
-      ol {
+    ol {
         counter-reset: item;
         margin-top: 25px;
         li {
-          display: block;
-          margin: 15px 0;
-          font-size: 13px;
+            display: block;
+            margin: 15px 0;
+            font-size: 13px;
         }
         li:before {
-          margin-right: 10px;
-          content: counters(item, ".") " ";
-          counter-increment: item
+            margin-right: 10px;
+            content: counters(item, '.') ' ';
+            counter-increment: item;
         }
-        }
-
+    }
 `;
 
 const Component: React.FunctionComponent<{}> = () => {
@@ -108,11 +105,20 @@ const Component: React.FunctionComponent<{}> = () => {
             <LayoutTop>
                 <div>
                     <Header>Blog</Header>
-                        <Section>
-                        <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://medium.com/trality/we-got-big-plans-7c7bba227fbd">We got Big Plans</a></h4><p>A first view on the product development roadmap of Trality. Ok, here it comes: Trality's first ever Medium story. I want to kick things off on this channel by giving you an "exclusive" glimpse at the roadmap we have set out for developing Trality over the coming months.</p></blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-                        </Section>
-                    </div>
+                    <Section>
+                        <blockquote class="embedly-card" data-card-controls="0">
+                            <h4>
+                                <a href="https://medium.com/trality/we-got-big-plans-7c7bba227fbd">We got Big Plans</a>
+                            </h4>
+                            <p>
+                                A first view on the product development roadmap of Trality. Ok, here it comes: Trality's first ever Medium story. I
+                                want to kick things off on this channel by giving you an "exclusive" glimpse at the roadmap we have set out for
+                                developing Trality over the coming months.
+                            </p>
+                        </blockquote>
+                        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                    </Section>
+                </div>
             </LayoutTop>
         </Page>
     );
