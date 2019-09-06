@@ -80,13 +80,6 @@ const R = styled.div`
     }
 `;
 
-const MButton = styled(Button)`
-    margin-left: 10px;
-    @media (max-width: 500px) {
-        display: none;
-    }
-`;
-
 const LinkContainer = styled.div<DarkProp>`
     > a {
         color: ${(props) => props.theme.onDark};

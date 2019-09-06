@@ -141,7 +141,7 @@ const Item = styled.div<BaseStyleProps & { num: number; selected?: boolean }>`
         `}
 `;
 
-const NavContainer = styled(Container)`
+const NavContainer = styled((props) => <Container {...props} />)`
     display: flex;
     z-index: 1;
     @media (max-width: 768px) {
@@ -219,7 +219,7 @@ const MenuBar = styled.div<BaseStyleProps>`
     `}
 `;
 
-const ContactButton = styled(Button)<BaseStyleProps>`
+const ContactButton = styled((props) => <Button {...props} />)<BaseStyleProps>`
     border: none;
     padding: 0;
     &:hover {

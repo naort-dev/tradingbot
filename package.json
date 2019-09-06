@@ -4,6 +4,7 @@
     "scripts": {
         "tsc": "tsc",
         "dev": "DEBUG=true next",
+        "dev:prod": "NODE_ENV=production DEBUG=false next",
         "build": "next build",
         "start": "next start",
         "prettier": "prettier --write \"pages/**/*.{ts, tsx}\"",

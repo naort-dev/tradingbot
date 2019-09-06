@@ -5,13 +5,13 @@ export interface LayoutDividedProps {
     imageIn: 'left' | 'right';
 }
 
-export const ThreeColumnLayout = styled(Container)`
+export const ThreeColumnLayout = styled((props) => <Container {...props} />)`
     > div {
         width: 33%;
     }
 `;
 
-export const LayoutDivided = styled(Container)<LayoutDividedProps>`
+export const LayoutDivided = styled((props) => <Container {...props} />)<LayoutDividedProps>`
     align-items: center;
     > div {
         width: 50%;
@@ -64,4 +64,4 @@ export const LayoutDivided = styled(Container)<LayoutDividedProps>`
     `}
 `;
 
-export const LayoutSingle = styled(Container)``;
+export const LayoutSingle = styled((props) => <Container {...props} />)``;

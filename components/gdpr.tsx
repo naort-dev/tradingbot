@@ -38,7 +38,7 @@ const GdprContainer = styled.div<DarkProp>`
     }
 `;
 
-const B = styled(Button)`
+const B = styled((props) => <Button {...props} />)`
     margin-left: 30px;
 `;
 

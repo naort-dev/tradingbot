@@ -28,7 +28,7 @@ const Left = styled.div<{ justify?: string; hide?: boolean }>`
     }
 `;
 
-const Right = styled(Left)``;
+const Right = styled((props) => <Left {...props} />)``;
 
 const Center = styled.div`
     width: 100%;
@@ -45,7 +45,7 @@ const CenterHorizontal = styled.div`
     text-align: center;
 `;
 
-const LayoutContainer = styled(Container)<{ content: 'left' | 'right' }>`
+const LayoutContainer = styled((props) => <Container {...props} />)<{ content: 'left' | 'right' }>`
     @media (max-width: 768px) {
         display: flex;
         flex-wrap: wrap;
