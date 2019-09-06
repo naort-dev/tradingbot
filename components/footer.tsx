@@ -158,6 +158,9 @@ const Component: React.FunctionComponent<WithRouterProps> = (props) => {
                         <img src={dark ? logoWhite : logo} alt="Trality Logo" />
                     </div>
                     <LinkContainer dark={dark}>
+                        <Link href="/blog">
+                            <a>Blog</a>
+                        </Link>
                         <Link href="/jobs">
                             <a>Jobs</a>
                         </Link>
