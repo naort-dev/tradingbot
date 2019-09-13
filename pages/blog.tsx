@@ -5,8 +5,7 @@ import Link from 'next/link';
 import * as arrow from '../assets/images/arrow-down.svg';
 import { useMixpanel } from '../hooks/mixpanel';
 import { useDark } from '../hooks/dark';
-import Head from 'next/head'
-
+import Head from 'next/head';
 
 const Header = styled.h1`
     font-weight: normal;
@@ -104,9 +103,9 @@ const Component: React.FunctionComponent<{}> = () => {
 
     return (
         <Page>
-        <Head>
-        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-        </Head>
+            <Head>
+                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+            </Head>
             <LayoutTop>
                 <div>
                     <Header>Blog</Header>
