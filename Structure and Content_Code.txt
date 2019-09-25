@@ -1,0 +1,27 @@
+---
+SLIDE 0
+
+<Content>
+    <h1>
+        I want to <Highlight>code</Highlight> bots.
+    </h1>
+    <p>
+    We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Algorithm Editor: the most advanced of its kind that leaves nothing to be desired.
+</Content>
+
+***CTA!
+
+---
+SLIDE 1
+
+<Content>
+    <h1>Rely on the Trality Bot Code Editor.</h1>
+    <p>Bring your most advanced trading ideas to life.</p>
+    <ul>
+        <li>Support of Python to code algorithms</li>
+        <li>Easy-to-use API to access financial data</li>
+        <li>Numerous synthesized order types</li>
+        <li>Intelligent auto-complete</li>
+        <li>Access to full range of indicators</li>
+    </ul>
+</Content>

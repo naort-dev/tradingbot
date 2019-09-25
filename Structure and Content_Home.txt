@@ -1,0 +1,93 @@
+***STRUCTURE***
+Header:
+-Product
+  -Trality Bot Editor
+  -Trality Bot Builder
+  -Trality Bot Marketplace
+-Pricing
+-Resources
+  -FAQs
+  -Documentation
+  -Feature Request Board
+  -Blog
+Footer:
+-Same elements as Header
+-Community
+  -Telegram
+  -Twitter
+  -Youtube
+  -Instagram
+  -Mailing list
+-Company
+  -Careers
+  -Imprint
+  -Privacy
+  -Terms
+-Log in
+-Register
+
+
+***INDEX***
+---
+SLIDE 0
+
+Create
+
+professional, convenient, profitable, complex, easy
+
+Crypto Trading Bots!
+
+Not just another trading bot platform: Trality provides the perfect algorithmic trading experience to everyone: from experienced quant to excited novice.
+Not just another algorithmic trading platform: Trality lets everyone create the most advanced trading bots: from experienced quant to excited leisure trader.
+Register now
+
+---
+SLIDE 1
+We got you covered, whether you want to:
+
+Code bots
+Quants, data scientists and everyone with an interest for quantitative problem solving rely on our Python-based Bot Code Editor to create pro-level trading bots.
+
+Build bots
+Excited novices and experienced leisure traders master our Bot Rule Builder to develop profitable trading bots without the need for a single line of code.
+
+Follow bots (coming soon)
+Trading enthusiasts, who lack the time or experience to develop bots themselves, love the Trality Bot Marketplace to mirror-trade the best trading bots with only a few clicks.
+
+---
+SLIDE 3
+*Trality Bot Code Editor:
+-> read more (code editor)
+
+*Trality Bot Rule Builder:
+-> read more (rule builder)
+
+*Trality Bot Marketplace (coming soon):
+-> read more (marketplace)
+
+---
+SLIDE 4
+But that's not all:
+⚡ Be amazed by our blazing-fast backtesting to test your algorithms on heaps of historical data
+📈 Directly connect all bots to our growing list of crypto exchanges for reliable live-trading
+☁️ Let your bots run 24/7 on our cloud-based infrastructure so they don't miss a single trade
+🛒 Publish your bot to our Trality Bot Marketplace and build a follower base to generate a risk free side-income.
+🔒 Rely on our state-of-the-art security infrastructure to enjoy complete privacy and safety of algorithms and funds
+-> read more (features)
+
+---
+SLIDE 5
+Waiting for cool Trality updates?
+Join our monthly mailing list and stay up to date.
+
+---
+SLIDE 6
+Evolve your algorithmic trading game!
+The cherry on the cake with Trality: become more and more proficient with algorithmic trading while moving through the different options of trading bots.
+-Enjoy video tutorials to learn more about algorithmic trading
+-Move closer to mastering the art of algorithm coding by working with automatically generated Python code from rule-based bots
+-...
+
+---
+SLIDE 7
+CTA: Register now
