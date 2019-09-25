@@ -4,6 +4,7 @@ Header:
   -Trality Bot Editor
   -Trality Bot Builder
   -Trality Bot Marketplace
+  -Other Features
 -Pricing
 -Resources
   -FAQs
