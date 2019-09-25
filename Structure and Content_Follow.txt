@@ -1,0 +1,25 @@
+---
+SLIDE 0
+
+<Content>
+    <h1>
+        I want to <Highlight>follow</Highlight> other creators' bots.
+    </h1>
+    <p>
+    On the Trality Bot Marketplace, simply select a bot from a creator, which matches your objectives and follow it. While the creator is carefully watching and adjusting the bot's strategy, your own bot mirrors the creators’s every algorithmic trade onto your account.
+</Content>
+
+***CTA!
+
+---
+SLIDE 1
+
+<Content>
+    <h1>Follow a quality-screened expert bot.</h1>
+    <p>Using Trality is not a black box.</p>
+    <ul>
+        <li>Choose from well-documented expert bots and follow the one which matches your objectives</li>
+        <li>Connect to your favorite crypto exchange</li>
+        <li>The bot automatically starts trading for you</li>
+    </ul>
+</Content>
