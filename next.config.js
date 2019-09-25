@@ -3,11 +3,18 @@ const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
 const withOptimizedImages = require('next-optimized-images');
 const TerserPlugin = require('terser-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = withImages(
     withTypescript({
         target: 'serverless',
         webpack(config, options) {
+            if (config.resolve.plugins) {
+                config.resolve.plugins(new TsconfigPathsPlugin());
+            } else {
+                config.resolve.plugins = [new TsconfigPathsPlugin()];
+            }
+
             const { isServer } = options;
             const prefix = config.assetPrefix ? config.assetPrefix : '';
             config.module.rules.push(

@@ -7,6 +7,7 @@ import { theme } from '../theme/theme';
 import { MixpanelProvider } from '../hooks/mixpanel';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
+import { PortalProvider } from 'hooks/usePortal';
 
 class Trality extends App {
     render() {
@@ -37,7 +38,9 @@ class Trality extends App {
                                 <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
                                 <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
                             </Head>
-                            <Component {...pageProps} />
+                            <PortalProvider>
+                                <Component {...pageProps} />
+                            </PortalProvider>
                         </Container>
                     </DarkProvider>
                 </ThemeProvider>

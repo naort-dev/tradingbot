@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import * as React from 'react';
 import * as arrow from '../assets/images/arrow-down.svg';
 
-export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean }>`
+export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean }>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
@@ -33,6 +33,16 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
             border: 1px solid black;
         }
     `}
+    ${(props) =>
+        props.dark &&
+        `
+        background-color: #181927;
+        color: #fff;
+        &:hover {
+            opacity: 0.9;
+        }
+    `}
+
     ${(props) =>
         props.small &&
         `
