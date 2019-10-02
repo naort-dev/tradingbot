@@ -1,5 +1,5 @@
 import * as React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
 
 import { ThemeProvider } from '../components/themeprovider';
@@ -17,7 +17,7 @@ class Trality extends App {
             <MixpanelProvider>
                 <DarkProvider>
                     <ThemeProvider>
-                        <Container>
+                        <>
                             <GlobalStyle />
                             <Head>
                                 <title>Trality - Follow & Create Bots</title>
@@ -42,7 +42,7 @@ class Trality extends App {
                             <PortalProvider>
                                 <Component {...pageProps} />
                             </PortalProvider>
-                        </Container>
+                        </>
                     </ThemeProvider>
                 </DarkProvider>
             </MixpanelProvider>

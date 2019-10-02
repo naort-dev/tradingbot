@@ -1,5 +1,7 @@
+import { css } from 'styled-components';
+
 export function fontFace(name: string, src: string, fontWeight = 'normal', fontstyle = 'normal') {
-    return `
+    return css`
         @font-face{
             font-family: "${name}";
             src: url(/static/fonts/${src}.eot);
