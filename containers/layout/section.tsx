@@ -20,7 +20,6 @@ const SectionWrapper = styled.section<SectionProps>`
     justify-content: center;
     position: relative;
     padding: 80px 0px;
-    border: 1px solid red;
     ${(props) =>
         props.fullHeight &&
         `

@@ -72,7 +72,7 @@ export default () => {
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="followers" fullHeight>
+            <Layout.Section id="creators" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn></Layout.OneColumn>
@@ -85,6 +85,22 @@ export default () => {
                                 </p>
                             </Header>
                         </Layout.OneColumn>
+                    </Layout.TwoColumn>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="followers" fullHeight>
+                <Layout.Center>
+                    <Layout.TwoColumn>
+                        <Layout.OneColumn>
+                            <Header title="Follow bots.">
+                                <p>
+                                    Once you've got your strategy figured out, you can publish your bot on the Trality Bot Marketplace. For every
+                                    follower you are rewarded a monthly rent for your effort. The best part: your algorithm will never be revealed to
+                                    anyone.
+                                </p>
+                            </Header>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn></Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>

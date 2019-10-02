@@ -16,3 +16,5 @@ const Img = styled.img`
 export const HeaderImage = () => {
     return <Img src={Screens.Phone} alt="Trality Phone Screenshot" />;
 };
+
+export default HeaderImage;

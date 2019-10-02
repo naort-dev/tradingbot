@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import * as React from 'react';
 import { ArrowDown } from './arrow';
+import Router from 'next/router';
 
 export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean }>`
     background-color: ${(props) => props.theme.main};
@@ -74,11 +75,26 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
 
 `;
 
-export const KnowMore: React.FunctionComponent<{}> = (props) => {
+interface Props {
+    to?: string;
+    blank?: boolean;
+}
+
+export const KnowMore: React.FunctionComponent<Props> = ({ children, to, blank }) => {
+    const onClick = () => {
+        if (to) {
+            if (blank) {
+                window.open(to, '_blank');
+            } else {
+                Router.push(to);
+            }
+        }
+    };
+
     return (
-        <Button knowmore>
+        <Button knowmore onClick={onClick}>
             <ArrowDown />
-            {props.children}
+            {children}
         </Button>
     );
 };

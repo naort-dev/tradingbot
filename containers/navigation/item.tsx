@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useOpen } from './hooks/useOpen';
 import styled from 'styled-components';
-import Link from 'next/link';
-import { Button } from '@components';
+import { Button, Link } from '@components';
 import { useHover } from 'hooks/useHover';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';

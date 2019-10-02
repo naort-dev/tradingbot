@@ -77,7 +77,7 @@ h3 {
 }
 
 h4 {
-    color: #0c1014;
+    color: ${(props) => props.theme.fontHeader};
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: normal;
@@ -113,6 +113,17 @@ ul li {
 
 p {
     margin: 10px 0px;
+}
+
+a {
+    color: ${(props) => props.theme.bluePrimary};
+    &:visited {
+        color: ${(props) => props.theme.bluePrimary};
+    }
+    &:hover {
+        opacity: 0.8;
+        color: ${(props) => props.theme.bluePrimary};
+    }
 }
 
 `;

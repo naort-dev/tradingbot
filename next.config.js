@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
 const withOptimizedImages = require('next-optimized-images');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -10,16 +9,7 @@ module.exports = withCSS(
     withImages({
         target: 'serverless',
         webpack(config, options) {
-            /*if (config.resolve.plugins) {
-                config.resolve.plugins(new TsconfigPathsPlugin());
-            } else {
-                config.resolve.plugins = [new TsconfigPathsPlugin()];
-            }*/
-
             if (config.resolve.plugins) {
-                /*console.log(typeof config.resolve.plugins);
-                console.log(config.resolve.plugins);
-                process.exit(1);*/
                 config.resolve.plugins.push(new TsconfigPathsPlugin());
             } else {
                 config.resolve.plugins = [new TsconfigPathsPlugin()];

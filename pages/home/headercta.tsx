@@ -56,3 +56,5 @@ export const HeaderCta = () => {
         </Container>
     );
 };
+
+export default HeaderCta;

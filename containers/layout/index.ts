@@ -5,6 +5,7 @@ import { Section } from './section';
 import { Slider } from './slider';
 import { Banner } from './banner';
 import { Collapsible } from './collapsible';
+import { Grid } from './grid';
 
 export const Layout = {
     Center,
@@ -23,4 +24,5 @@ export const Layout = {
     Slider,
     Banner,
     Collapsible,
+    Grid,
 };
