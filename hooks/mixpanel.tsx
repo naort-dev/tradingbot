@@ -7,7 +7,7 @@ class MixPanelWrapper {
     private debug = false;
     private browser = typeof window !== 'undefined';
     constructor() {
-        //this.debug = true; //process.env.DEBUG !== undefined;
+        this.debug = process.env.DEBUG !== undefined;
         if (!this.debug && this.browser) {
             mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
             mixpanel.register({

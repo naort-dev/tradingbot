@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useOpen } from './hooks/useOpen';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Button } from 'theme';
+import { Button } from '@components';
 import { useHover } from 'hooks/useHover';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';
@@ -23,7 +23,6 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
     position: relative;
     & > a {
         text-decoration: none;
-        color: black;
         transition: 0.3s all;
         ${(props) =>
             props.selected &&
@@ -65,12 +64,17 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
         }
 `;
 
+export const LinkEntry = styled.a`
+    padding: 10px 16px;
+    color: ${(props) => props.theme.font};
+`;
+
 export const LinkItem: React.FC<LinkItemProps> = ({ target, name }) => {
     const { open } = useOpen();
     return (
         <Item open={open} num={1} selected={false}>
             <Link href={target}>
-                <a>{name}</a>
+                <LinkEntry>{name}</LinkEntry>
             </Link>
         </Item>
     );
@@ -123,7 +127,7 @@ const DropdownButton = styled.div`
         }
     }
     svg {
-        margin-left: 5px;
+        margin-left: 7px;
     }
 `;
 
@@ -139,6 +143,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     border-radius: 5px;
     box-shadow: 0 15px 60px 0 rgba(13, 21, 67, 0.1);
     background-color: #ffffff;
+    min-width: 100%;
     ${(props) =>
         props.visible &&
         `
@@ -154,7 +159,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
 `;
 
 const DropdownEntry = styled.a`
-    padding: 10px 20px;
+    padding: 10px 16px;
     cursor: pointer;
     text-decoration: none;
     font-size: 14px;
@@ -232,7 +237,7 @@ const Img = styled.img`
     height: 20px;
 `;
 
-export const ContactItem: React.FC<ContactItemProps> = ({ source, target }) => {
+export const ContactItem: React.FC<ContactItemProps> = ({ source }) => {
     const { open } = useOpen();
     return (
         <ContactItemButton type="button" hollow small open={open}>
@@ -249,6 +254,8 @@ export const ItemGroupWrapper = styled.div`
     > div:first-child {
         margin-left: 0px;
     }
+    margin-left: 16px;
+    margin-right: 16px;
     @media (max-width: 768px) {
         margin-left: 22px !important;
         margin-top: 25px !important;

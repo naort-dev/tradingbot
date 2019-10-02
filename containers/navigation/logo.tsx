@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-import * as logo from '../../assets/images/logo_black_blue.png';
-import * as logoDark from '../../assets/images/trality_logo_white.png';
 import { useDark } from '../../hooks/dark';
 import { useOpen } from './hooks/useOpen';
 import Link from 'next/link';
+import { Logos } from '@assets';
 
 const LogoImg = styled.img`
     height: 33px;
@@ -13,14 +12,19 @@ const LogoImg = styled.img`
     }
 `;
 
+const A = styled.a`
+    display: flex;
+    align-items: center;
+`;
+
 export const Logo = () => {
     const { dark } = useDark();
     const { open } = useOpen();
     return (
         <Link href="/">
-            <a>
-                <LogoImg src={dark || open ? logoDark : logo} />
-            </a>
+            <A>
+                <LogoImg src={dark || open ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} />
+            </A>
         </Link>
     );
 };

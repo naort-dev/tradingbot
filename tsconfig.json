@@ -19,7 +19,9 @@
         "strict": true,
         "target": "esnext",
         "paths": {
-            "@containers": ["./containers/index.ts"]
+            "@containers": ["./containers/index.ts"],
+            "@components": ["./components/index.ts"],
+            "@assets": ["assets/index.ts"]
         },
         "baseUrl": "."
     }

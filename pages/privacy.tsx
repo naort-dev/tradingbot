@@ -1,30 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { LayoutTop, Page } from '../theme';
-import Link from 'next/link';
-import * as arrow from '../assets/images/arrow-down.svg';
-import { useMixpanel } from '../hooks/mixpanel';
-import { useDark } from '../hooks/dark';
-import { GDPR } from '../components';
-
-const Header = styled.h1`
-    font-weight: normal;
-    font-size: 42px;
-    text-align: left;
-    @media (max-width: 768px) {
-        text-align: center;
-    }
-`;
-const Subheader = styled.h2`
-    font-weight: normal;
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    @media (max-width: 768px) {
-        text-align: center;
-    }
-`;
+import { Layout } from '@containers';
+import { Header } from '@components';
 
 const Container = styled.div`
     margin-bottom: 50px;
@@ -68,32 +45,14 @@ const Section = styled.div<{ center?: boolean }>`
     `}
 `;
 
-const Component: React.FunctionComponent<{}> = () => {
-    const mixpanel = useMixpanel();
-    let { dark, setDark } = useDark();
-    React.useCallback(() => {
-        mixpanel.track(`imprint`);
-    }, []);
 
-    React.useEffect(() => {
-        setDark(false);
-    }, [dark]);
-
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            mixpanel.pageview('imprint');
-        }
-    }, []);
-
+export default () => {
     return (
-        <Page>
-            <GDPR />
-            <LayoutTop>
-                <div>
-                    <Header>Privacy Policy for Website Users</Header>
-                    <Subheader>(information in accordance with Article 13 GDPR)</Subheader>
-                    <Subheader>(18 July 2019)</Subheader>
-                    <Container>
+        <Layout.Page title="privacy">
+            <Layout.Section fullHeight noPadding id="policy">
+                <Layout.Center>
+                    <Header title="Privacy Policy for Website Users" subtitle="(information in accordance with Article 13 GDPR, 18 July 2019)">
+                        <Container>
                         <Top>
                             <div>
                                 <b>Controller of all processing activities is:</b>
@@ -184,19 +143,19 @@ const Component: React.FunctionComponent<{}> = () => {
                             <div>
                             Our Site makes use of cookies. Cookies are small text files or other storage technologies downloaded by your Internet browser and stored on the device you use to access the Site (e.g., your desktop computer, tablet or smartphone). Depending on their purpose, cookies log specific user-related information such as your user preferences, authentication information, security parameters, data concerning the device you access the Site with, location data, IP address and statistical information regarding your use of the Site. Where necessary during your visit of the Site or when revisiting the Site, your Internet browser transmits the cookies including the contained information back to the servers they were initially downloaded from. The analysis and Processing of such information allows us to ensure the functionality of the Site, improve your online experience and optimize the structure and content of the Site. The cookies we use can be categorized as follows:
                             <p>
-                            <p><b>Session Cookies</b></p>
+                            <b>Session Cookies</b>
                             These are cookies that allow our Site to collect information about what you do during a browsing session each time you visit the Site. When connecting to our server, your device will be allocated a session ID, which enables our server to identify your device during the session and facilitates Site usability. These cookies are temporary and are set to be deleted when you leave the Site;
                             </p>
                             <p>
-                            <p><b>Persistent Cookies</b></p>
+                            <b>Persistent Cookies</b>
                             These are cookies that are stored by your Internet browser for more than a session and are set to expire within a defined time period. Persistent cookies enable us to remember your settings and information, so you do not have to keep re-entering them whenever you visit our Site. They also measure how you use and interact with the Site and enable us to personalize the Site. For example, they may allow us to alter the rotation of images on the Site so that different images will be displayed on your next visit;
                             </p>
                             <p>
-                            <p><b>First-Party Cookies</b></p>
+                            <b>First-Party Cookies</b>
                             These are cookies that we store and access on your device in our capacity as controller of your Personal Information when you visit our Site. They might include cookies related to third-party service providers, provided that we control and determine the purposes and means of the Processing of your Personal Information logged by such cookies. As a result, first-party cookies might log user-related Personal Information accessible to and Processed by third parties on our behalf and subject to our instructions.
                             </p>
                             <p>
-                            <p><b>Third-Party Cookies</b></p>
+                            <b>Third-Party Cookies</b>
                             These are cookies that are stored and accessed on your device by third parties determining the purposes and means of the Processing of your Personal Information logged by such cookies.
 
                             You may influence the scope and extent to which we use cookies when you visit our Site. In particular, you may prevent cookies from being stored on your device by adjusting the respective settings on your Internet browser. For more information on how to do so in the settings of your particular Internet browser, please see the following information:
@@ -351,10 +310,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </div>
                         </Section>
                       </Container>
-                </div>
-            </LayoutTop>
-        </Page>
+                    </Header>
+                </Layout.Center>
+            </Layout.Section>
+        </Layout.Page>
     );
 };
-
-export default Component;

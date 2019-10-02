@@ -2,8 +2,7 @@ import * as React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../theme/theme';
+import { ThemeProvider } from '../components/themeprovider';
 import { MixpanelProvider } from '../hooks/mixpanel';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
@@ -14,8 +13,8 @@ class Trality extends App {
         const { Component, pageProps } = this.props;
         return (
             <MixpanelProvider>
-                <ThemeProvider theme={theme}>
-                    <DarkProvider>
+                <DarkProvider>
+                    <ThemeProvider>
                         <Container>
                             <GlobalStyle />
                             <Head>
@@ -42,8 +41,8 @@ class Trality extends App {
                                 <Component {...pageProps} />
                             </PortalProvider>
                         </Container>
-                    </DarkProvider>
-                </ThemeProvider>
+                    </ThemeProvider>
+                </DarkProvider>
             </MixpanelProvider>
         );
     }

@@ -1,58 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { LayoutTop, Page } from '../theme';
-import Link from 'next/link';
-import * as arrow from '../assets/images/arrow-down.svg';
-import { useMixpanel } from '../hooks/mixpanel';
-import { useDark } from '../hooks/dark';
-
-const Header = styled.h1`
-    font-weight: normal;
-    font-size: 42px;
-    text-align: left;
-    @media (max-width: 768px) {
-        text-align: center;
-    }
-`;
-const Subheader = styled.h2`
-    font-weight: normal;
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    @media (max-width: 768px) {
-        text-align: center;
-    }
-`;
-
-const Container = styled.div`
-    margin-bottom: 50px;
-    justify-content: left;
-    text-align: left;
-    ul {
-        text-align: left;
-    }
-    font-size: 13px;
-    @media (max-width: 768px) {
-        width: 100%;
-        padding-right: 25px;
-        padding-left: 25px;
-        text-align: center;
-        font-size: 13px;
-    }
-    & > span {
-        color: #00b3d8 !important;
-    }
-    > p {
-        display: block;
-        margin-top: 15px;
-    }
-`;
-
-const Top = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
+import { Layout } from '@containers';
+import { Header } from '@components';
 
 const Section = styled.div<{ center?: boolean }>`
     margin-top: 15px;
@@ -83,30 +32,14 @@ const Section = styled.div<{ center?: boolean }>`
     }
 `;
 
-const Component: React.FunctionComponent<{}> = () => {
-    const mixpanel = useMixpanel();
-    let { dark, setDark } = useDark();
-    React.useCallback(() => {
-        mixpanel.track(`imprint`);
-    }, []);
 
-    React.useEffect(() => {
-        setDark(false);
-    }, [dark]);
-
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            mixpanel.pageview('imprint');
-        }
-    }, []);
-
+export default () => {
     return (
-        <Page>
-            <LayoutTop>
-                <div>
-                    <Header>General Terms and Conditions</Header>
-                    <Subheader>(18 July 2019)</Subheader>
-                    <Section>
+        <Layout.Page title="terms">
+            <Layout.Section fullHeight noPadding id="overview">
+                <Layout.Center>
+                    <Header title="General Terms and Conditions" subtitle="(18 July 2019)">
+                        <Section>
                         <ol>
                             <li>
                                 <b>Scope / amendment of the General Terms and Conditions</b>
@@ -535,10 +468,9 @@ const Component: React.FunctionComponent<{}> = () => {
                             </li>
                         </ol>
                     </Section>
-                </div>
-            </LayoutTop>
-        </Page>
+                    </Header>
+                </Layout.Center>
+            </Layout.Section>
+        </Layout.Page>
     );
-};
-
-export default Component;
+}

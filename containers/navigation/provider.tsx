@@ -3,7 +3,7 @@ import { OpenCtx } from './hooks/useOpen';
 import useMedia from 'use-media';
 
 export const NavigationProvider: React.FC = ({ children }) => {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const isMobile = useMedia({ maxWidth: 768 });
 
     useEffect(() => {

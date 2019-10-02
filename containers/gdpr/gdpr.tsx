@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '../../theme';
+import { Button } from '@components';
 import styled from 'styled-components';
 import { useMixpanel } from '../../hooks/mixpanel';
 import { useDark, DarkProp } from '../../hooks/dark';

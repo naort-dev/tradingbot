@@ -31,16 +31,4 @@ export default class Doc extends Document<DocProps> {
             sheet.seal();
         }
     }
-
-    /*render() {
-        return (
-            <html lang="en">
-                <Head>{this.props.styles}</Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </html>
-        );
-    }*/
 }

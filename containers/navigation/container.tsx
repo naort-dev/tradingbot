@@ -8,7 +8,7 @@ interface Props {
     open?: boolean;
 }
 
-const Top = styled.div<Props>`
+const Top = styled.nav<Props>`
     height: 113px;
     width: 100%;
     align-items: center;
