@@ -21,7 +21,7 @@ const Wrap = styled.div`
 const Top = styled.div`
     padding-top: 35px;
     padding-bottom: 35px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid ${(props) => props.theme.borderColor};
     display: flex;
     justify-content: space-between;
     align-items: center;

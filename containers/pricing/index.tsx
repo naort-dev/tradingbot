@@ -6,15 +6,6 @@ const Container = styled.div`
     justify-content: space-around;
 `;
 
-const Item = styled.div`
-    border-radius: 5px;
-    box-shadow: 0 15px 60px 0 rgba(13, 21, 67, 0.05);
-    padding: 45px 30px;
-    > button {
-        width: 100%;
-    }
-`;
-
 const Header = styled.h2`
     font-size: 25px;
     font-weight: normal;
@@ -53,6 +44,29 @@ const Entry = styled.div`
         margin-bottom: 30px;
     }
 `;
+
+const I = styled.div`
+    border-radius: 5px;
+    box-shadow: 0 15px 60px 0 rgba(13, 21, 67, 0.05);
+    padding: 45px 30px;
+    cursor: pointer;
+    background-color: ${(props) => props.theme.background};
+    transition: 0.5s all;
+    > button {
+        width: 100%;
+    }
+    &:hover {
+        background-color: ${(props) => props.theme.oppositeBackground};
+        margin-top: 3px;
+        h4 {
+            color: ${(props) => props.theme.lightPrimary};
+        }
+    }
+`;
+
+const Item: React.FC<{ id: string }> = ({ children }) => {
+    return <I>{children}</I>;
+};
 
 const Description: React.FC<{ title: string }> = ({ title, children }) => {
     return (

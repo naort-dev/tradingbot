@@ -23,15 +23,13 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
     &:hover {
         opacity: 0.8;
     }
+    border: 2px solid transparent;
     ${(props) =>
         props.hollow &&
         `
         background-color: transparent;
         color: ${props.theme.main};
-        border: 1px solid ${props.theme.main};
-        &:hover {
-            border: 1px solid black;
-        }
+        border: 2px solid ${props.theme.main};
     `}
     ${(props) =>
         props.dark &&
@@ -65,9 +63,9 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
         border: none;
         padding-left: 0px;
         margin-top: 10px;
-        cursor: auto;
         &:hover {
             opacity: 1.0;
+            margin-left: 5px;
         }
     `}
     & > img {

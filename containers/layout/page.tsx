@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { GDPR } from '../gdpr';
 import { Navigation } from '../navigation';
@@ -6,9 +6,10 @@ import { Background as Container } from '../../components/background';
 import { Footer } from '@containers';
 import { Section } from './section';
 import { ImagesMisc } from '@assets';
+import { useDark } from 'hooks/dark';
 
 const Background = styled.img`
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -16,9 +17,18 @@ const Background = styled.img`
 
 interface Props {
     title: string;
+    dark?: boolean;
 }
 
-export const Page: React.FC<Props> = ({ children }) => {
+export const Page: React.FC<Props> = ({ dark, children }) => {
+    const { setDark } = useDark();
+
+    useEffect(() => {
+        if (dark) {
+            setDark(true);
+        }
+    }, []);
+
     return (
         <Container>
             <GDPR />

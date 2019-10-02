@@ -44,7 +44,8 @@ export const HeaderCta = () => {
         <Container>
             <h5>
                 Trality is a platform for traders of all levels of experience to create automated trading bots. Use the most flexible tools to code,
-                test, deploy, follow or rent bots in crypto and bring your trading to a whole new level.
+                build, test and live-trade using our Creator tools. Follow or rent-out bots in our marketplace and bring your trading to a whole new
+                level.
             </h5>
             <Bottom>
                 <Button onClick={onClick}>Join now</Button>

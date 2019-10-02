@@ -56,6 +56,9 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
         `
         opacity: 1.0;
     `}
+    > img {
+        max-width: 100%;
+    }
 `;
 
 const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...props }) => {

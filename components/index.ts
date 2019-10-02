@@ -9,3 +9,6 @@ export * from './preload';
 export * from './themeprovider';
 export * from './header';
 export * from './logolist';
+export * from './highlight';
+export * from './cursor';
+export * from './wordanimation';

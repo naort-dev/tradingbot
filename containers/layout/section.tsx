@@ -12,13 +12,14 @@ interface SectionProps {
     noPadding?: boolean;
     dark?: boolean;
     noBgChange?: boolean;
+    minimumPadding?: boolean;
 }
 
 const SectionWrapper = styled.section<SectionProps>`
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 125px 0px;
+    padding: 80px 0px;
     border: 1px solid red;
     ${(props) =>
         props.fullHeight &&
@@ -34,6 +35,11 @@ const SectionWrapper = styled.section<SectionProps>`
         props.noPadding &&
         `
         padding: 0px 0px;
+    `}
+    ${(props) =>
+        props.minimumPadding &&
+        `
+        padding: 20px 0px;
     `}
 `;
 

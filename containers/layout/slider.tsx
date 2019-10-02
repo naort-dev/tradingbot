@@ -2,10 +2,11 @@ import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { Preload } from 'components/preload';
 import { useInterval } from 'hooks/useInterval';
+import { Loader, KnowMore } from '@components';
 
 const SlideContainer = styled.div`
     width: 100%;
-    height: 100%;
+    height: 500px;
     display: flex;
 `;
 
@@ -26,10 +27,20 @@ const Content = styled.div`
     display: flex;
     flex-grow: 1;
     position: relative;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
 `;
 
-const Item = styled.div<{ visible?: boolean; imageSrc?: string }>`
+const Item = styled.img`
+    max-width: 100%;
+    height: auto;
+`;
+
+const ItemWrapper = styled.div<{ visible?: boolean }>`
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -42,8 +53,6 @@ const Item = styled.div<{ visible?: boolean; imageSrc?: string }>`
         `
         opacity: 1;
     `}
-    background: url(${(props) => props.imageSrc}) no-repeat center;
-    background-size: contain;
 `;
 
 const MenuItem = styled.div<{ active?: boolean }>`
@@ -68,6 +77,16 @@ const MenuItem = styled.div<{ active?: boolean }>`
     `}
 `;
 
+const LinkItem = styled.div`
+    margin: 0px 20px;
+    cursor: pointer;
+    max-width: 200px;
+    text-align: center;
+    > button {
+        padding: 0px;
+    }
+`;
+
 const MenuIcon = styled.div`
     > img {
         max-height: 30px;
@@ -80,6 +99,17 @@ const MenuText = styled.div`
     font-weight: 500;
 `;
 
+const LoaderCenter = styled.div`
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    margin-left: -14px;
+    margin-top: -14px;
+    width: 28px;
+    height: 28px;
+`;
+
 interface SliderItem {
     name: string;
     source?: string;
@@ -88,6 +118,10 @@ interface SliderItem {
 
 interface SliderProps {
     items: SliderItem[];
+    link?: {
+        title: string;
+        target: string;
+    };
 }
 
 export const Slider: React.FC<SliderProps> = ({ items }) => {
@@ -116,8 +150,13 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
         <SlideContainer>
             <Content>
                 {items.map((i, idx) => (
-                    <Item key={i.name} imageSrc={i.source} visible={active === idx} />
+                    <ItemWrapper key={i.name} visible={active === idx}>
+                        <Item src={i.source} />
+                    </ItemWrapper>
                 ))}
+                <LoaderCenter>
+                    <Loader show />
+                </LoaderCenter>
             </Content>
             <Bar>
                 {items.map((i, idx) => (
@@ -126,6 +165,9 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
                         <MenuText>{i.name}</MenuText>
                     </MenuItem>
                 ))}
+                <LinkItem style={{ display: 'none' }}>
+                    <KnowMore>Getting started guide</KnowMore>
+                </LinkItem>
             </Bar>
             <Preload images={items.filter((i) => i.source).map((i) => i.source as string)} />
         </SlideContainer>

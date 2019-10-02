@@ -81,7 +81,7 @@ export const LinkItem: React.FC<LinkItemProps> = ({ target, name }) => {
 };
 
 interface ButtonItemProps extends LinkItemProps {
-    dark?: boolean;
+    hollow?: boolean;
 }
 
 const ButtonItemWrapper = styled(Item)`
@@ -94,13 +94,13 @@ const ButtonItemWrapper = styled(Item)`
     }
 `;
 
-export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, dark }) => {
+export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow }) => {
     const { open } = useOpen();
     const isMobile = useIsMobile();
     return (
         <ButtonItemWrapper open={open} num={1} selected={false}>
             <a href={target} target="_blank">
-                <Button small={!isMobile} dark={dark}>
+                <Button small={!isMobile} hollow={hollow}>
                     {name}
                 </Button>
             </a>
@@ -141,8 +141,8 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     padding: 10px 0px;
     display: none;
     border-radius: 5px;
-    box-shadow: 0 15px 60px 0 rgba(13, 21, 67, 0.1);
-    background-color: #ffffff;
+    box-shadow: 0 15px 60px 0 ${(props) => props.theme.shadowColor};
+    background-color: ${(props) => props.theme.background};
     min-width: 100%;
     ${(props) =>
         props.visible &&
@@ -210,6 +210,7 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
 const ContactItemButton = styled((props) => <Button {...props} />)<{ open?: boolean }>`
     border: none;
     padding: 0;
+    min-width: 35px;
     &:hover {
         border: none;
     }

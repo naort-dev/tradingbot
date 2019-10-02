@@ -8,6 +8,8 @@ import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
 import { PortalProvider } from 'hooks/usePortal';
 
+import '../fix.css';
+
 class Trality extends App {
     render() {
         const { Component, pageProps } = this.props;

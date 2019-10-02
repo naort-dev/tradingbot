@@ -88,8 +88,8 @@ export const Menu = () => {
                 ]}
             />
             <ItemGroup>
-                <ButtonItem name="Login" target="https://auth.beta.trality.com/#/login" />
-                <ButtonItem name="Signup" target="https://auth.beta.trality.com/#/signup" dark={!isMobile} />
+                <ButtonItem name="Login" target="https://auth.beta.trality.com/#/login" hollow={!isMobile} />
+                <ButtonItem name="Signup" target="https://auth.beta.trality.com/#/signup" />
             </ItemGroup>
             <ItemGroup>
                 <ContactItem name="Telegram" source={Logos.Telegram} target="/" />

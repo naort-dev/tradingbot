@@ -15,6 +15,7 @@ const LogoImg = styled.img`
 const A = styled.a`
     display: flex;
     align-items: center;
+    cursor: pointer;
 `;
 
 export const Logo = () => {
