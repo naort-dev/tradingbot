@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header } from '@components';
+import { Highlight, Button, Header, Image } from '@components';
 import { Screens } from '@assets';
 
 export default () => {
@@ -26,7 +26,9 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight></Layout.CenterRight>
+                                <Layout.CenterRight>
+                                    <Image image={Screens.CodeEditorH1} />
+                                </Layout.CenterRight>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -35,7 +37,11 @@ export default () => {
             <Layout.Section id="python" fullHeight dark>
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.CodeEditorV1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Header title="Python FTW!">
                                 <p>Use the language and libraries you are already familiar with.</p>
@@ -69,7 +75,13 @@ export default () => {
                                 </p>
                             </Header>
                         </Layout.OneColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Layout.CenterRight>
+                                    <Image image={Screens.CodeEditorH1} />
+                                </Layout.CenterRight>
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>

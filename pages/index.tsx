@@ -5,7 +5,7 @@ import { HeaderCta } from './home/headercta';
 
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
-import { Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor } from '@components';
+import { Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image } from '@components';
 import { Screens, Illustrations, Logos } from '@assets';
 
 import { Header } from '@components';
@@ -86,7 +86,7 @@ export default () => {
                             items={[
                                 {
                                     name: 'Code your own trading bots using our python API',
-                                    source: Screens.CodeEditor,
+                                    source: Screens.RuleBuilder,
                                     icon: Illustrations.Create,
                                 },
                                 {
@@ -129,7 +129,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterRight>
-                                <HeaderImage />
+                                <Image image={Screens.Phone} />
                             </Layout.CenterRight>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -176,7 +176,11 @@ export default () => {
             <Layout.Section id="evolve" fullHeight dark>
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.EvolveH1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Header title="Evolve your trading game!">
                                 <p>

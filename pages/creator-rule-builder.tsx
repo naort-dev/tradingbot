@@ -1,5 +1,6 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header } from '@components';
+import { Highlight, Button, Header, Image } from '@components';
+import { Screens } from '@assets';
 
 export default () => {
     return (
@@ -9,7 +10,9 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight></Layout.CenterRight>
+                                <Layout.CenterRight>
+                                    <Image image={Screens.RuleBuilderH1} />
+                                </Layout.CenterRight>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -48,14 +51,22 @@ export default () => {
                                 </p>
                             </Header>
                         </Layout.OneColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.RuleBuilderV1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section id="learn" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.RuleBuilderV1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Header title="Learn to how to code.">
                                 <p>Turn your rules into code automatically.</p>

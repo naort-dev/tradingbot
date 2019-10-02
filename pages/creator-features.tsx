@@ -1,5 +1,6 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header } from '@components';
+import { Highlight, Button, Header, Image } from '@components';
+import { Screens, Illustrations } from '@assets';
 
 export default () => {
     return (
@@ -9,7 +10,7 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight></Layout.CenterRight>
+                                <Image image={Screens.BacktestH1} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -50,14 +51,22 @@ export default () => {
                                 </p>
                             </Header>
                         </Layout.OneColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.BacktestV1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section id="live-trading" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.BacktestV1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Header title="Cloud-based live-trading.">
                                 <p>
@@ -95,7 +104,11 @@ export default () => {
                                 </ul>
                             </Header>
                         </Layout.OneColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Security} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
