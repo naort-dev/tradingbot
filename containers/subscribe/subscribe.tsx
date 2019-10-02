@@ -42,6 +42,9 @@ const ButtonContainer = styled.div`
     @media (max-width: 768px) {
         width: 100%;
         justify-content: center;
+        > div {
+            width: 100%;
+        }
     }
 `;
 

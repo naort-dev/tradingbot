@@ -7,8 +7,8 @@ export const Center = styled.div<{ direction?: 'column' | 'row' }>`
     @media (max-width: 768px) {
         display: block;
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     ${(props) =>
         props.direction &&
@@ -31,10 +31,16 @@ export const CenterHorizontal = styled.div`
 
 export const CenterRight = styled(CenterHorizontal)`
     justify-content: flex-end;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 export const CenterLeft = styled(CenterHorizontal)`
     justify-content: flex-start;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 export const CenterAllDirections = styled.div`

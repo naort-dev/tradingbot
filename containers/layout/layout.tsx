@@ -6,11 +6,22 @@ const SingleColumnWrapper = styled.div`
     width: 100%;
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        min-height: 80vh;
+        align-items: center;
+    }
 `;
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)`
     > div {
         width: 50%;
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 100%;
+        }
     }
 `;
 
@@ -32,6 +43,11 @@ const ThreeColumnWrapper = styled.div`
         'a b c'
         'a b c'
         'a b c';
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const ThreeColumnContainer: React.FC = ({ children }) => {
@@ -59,6 +75,10 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
     > img {
         max-width: 100%;
     }
+    @media (max-width: 768px) {
+        margin: 0px 30px;
+        margin-bottom: 30px;
+    }
 `;
 
 const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...props }) => {
@@ -73,6 +93,9 @@ const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...
 const ThreeColumnHeaderWrapper = styled.div`
     grid-area: h;
     margin-bottom: 45px;
+    @media (max-width: 768px) {
+        margin-bottom: 15px;
+    }
 `;
 
 const ThreeColumnHeader: React.FC = ({ children }) => {

@@ -20,7 +20,7 @@ const Top = styled.nav<Props>`
         position: fixed;
         left: 0;
         top: 0;
-        background-color: white;
+        background-color: ${(props) => props.theme.background};
         height: 60px;
         ${(props) =>
             props.open &&

@@ -14,6 +14,9 @@ body {
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     color: ${(props) => props.theme.font};
     line-height: 1.56;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 * {
@@ -60,6 +63,10 @@ h1 {
     font-weight: normal;
     color: ${(props) => props.theme.fontHeader};
     line-height: 1.15;
+    @media (max-width: 768px) {
+        font-size: 45px;
+        text-align: center;
+    }
 }
 
 h2 {
@@ -67,6 +74,10 @@ h2 {
     font-weight: normal;
     color: ${(props) => props.theme.fontHeader};
     line-height: 1.15;
+    @media (max-width: 768px) {
+        font-size: 30px;
+        text-align: center;
+    }
 }
 
 h3 {
@@ -74,6 +85,10 @@ h3 {
     font-weight: normal;
     color: ${(props) => props.theme.fontHeader};
     line-height: 1.15;
+    @media (max-width: 768px) {
+        font-size: 18px;
+        text-align: center;
+    }
 }
 
 h4 {
@@ -84,12 +99,18 @@ h4 {
     text-align: center;
     min-height: 55px;
     margin-top: 10px;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 h5 {
-  font-size: 16px;
-  color: rgb(100, 100, 130);
-  font-weight: normal;
+    font-size: 16px;
+    color: rgb(100, 100, 130);
+    font-weight: normal;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 ul {

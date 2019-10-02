@@ -4,6 +4,9 @@ import styled from 'styled-components';
 const Container = styled.div`
     display: flex;
     justify-content: space-around;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const Header = styled.h2`
@@ -58,6 +61,14 @@ const I = styled.div`
     &:hover {
         background-color: ${(props) => props.theme.oppositeBackground};
         margin-top: 3px;
+        h4 {
+            color: ${(props) => props.theme.lightPrimary};
+        }
+    }
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-bottom: 30px;
+        background-color: ${(props) => props.theme.oppositeBackground};
         h4 {
             color: ${(props) => props.theme.lightPrimary};
         }

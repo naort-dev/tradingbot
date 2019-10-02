@@ -39,6 +39,7 @@ const SectionWrapper = styled.section<SectionProps>`
         props.minimumPadding &&
         `
         padding: 20px 0px;
+
     `}
 `;
 

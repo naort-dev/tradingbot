@@ -8,6 +8,9 @@ const SlideContainer = styled.div`
     width: 100%;
     height: 500px;
     display: flex;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 const Bar = styled.div`
@@ -31,6 +34,9 @@ const Content = styled.div`
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const Item = styled.img`
@@ -68,12 +74,20 @@ const MenuItem = styled.div<{ active?: boolean }>`
     &:hover {
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
     ${(props) =>
         props.active &&
         `
         box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);    
         color: ${props.theme.lightPrimary};
         background-color: ${props.theme.darkPrimary};
+        @media (max-width: 768px) {
+            color: ${props.theme.font};
+            background-color: transparent;
+            text-align: center;
+        }
     `}
 `;
 
