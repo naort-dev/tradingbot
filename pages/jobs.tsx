@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Header, ImageContainer, HeaderIcon, KnowMore } from '@components';
+import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock } from '@components';
 import { ImagesMisc, Icons } from '@assets';
 
 export default () => {
@@ -12,10 +12,10 @@ export default () => {
                             <Layout.CenterVertical>
                                 <div>
                                     <h1>We're hiring!</h1>
-                                    <h5>
+                                    <TextBlock>
                                         Would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic
                                         trading? We are a small but very diverse team and we would love to hear from you!
-                                    </h5>
+                                    </TextBlock>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>

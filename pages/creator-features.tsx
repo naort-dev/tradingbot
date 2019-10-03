@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header, Image } from '@components';
+import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@components';
 import { Screens, Illustrations } from '@assets';
 
 export default () => {
@@ -19,12 +19,10 @@ export default () => {
                                     <h1>
                                         I want to <Highlight>upgrade</Highlight> my trading.
                                     </h1>
-                                    <h5>
+                                    <TextBlock>
                                         To trade profitably, you need every help you can get. At Trality, we provide you with the tools to succeed.
-                                    </h5>
-                                    <p>
-                                        <Button>Upgrade your trading for free!</Button> COMMENT: NEED A BUTTON COMPONENT HERE
-                                    </p>
+                                    </TextBlock>
+                                    <Button>Upgrade your trading for free!</Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -36,19 +34,19 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Header title="Blazing-fast backtesting!">
-                                <p>
-                                    Backtesting is at the heart of every bot creation iteration. That's why we made it as fast as possible and provide
-                                    debugging features you'll find nowhere else.
-                                </p>
-                                <ul>
-                                    <li>Improve your algorithms with in-browser backtesting</li>
-                                    <li>Chose individual time frames or automated scenario tests</li>
-                                    <li>Use breakpoints or events when debugging (coming soon!)</li>
-                                    <li>Optimize strategy parameters using ML (coming soon!)</li>
-                                </ul>
-                                <p>
-                                    <Button>Read more</Button> COMMENT: THIS SHOULD NOT BE A BUTTON BUT A READ MORE
-                                </p>
+                                <TextBlock>
+                                    <p>
+                                        Backtesting is at the heart of every bot creation iteration. That's why we made it as fast as possible and
+                                        provide debugging features you'll find nowhere else.
+                                    </p>
+                                    <ul>
+                                        <li>Improve your algorithms with in-browser backtesting</li>
+                                        <li>Chose individual time frames or automated scenario tests</li>
+                                        <li>Use breakpoints or events when debugging (coming soon!)</li>
+                                        <li>Optimize strategy parameters using ML (coming soon!)</li>
+                                    </ul>
+                                </TextBlock>
+                                <KnowMore>Read more</KnowMore>
                             </Header>
                         </Layout.OneColumn>
                         <Layout.OneColumn>

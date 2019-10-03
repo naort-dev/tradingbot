@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Header, HeaderIcon, KnowMore, Highlight, WordAnimation, Button, Cursor } from '@components';
+import { Header, HeaderIcon, KnowMore, Highlight, WordAnimation, Button, Cursor, TextBlock } from '@components';
 import { Illustrations } from '@assets';
 
 export default () => {
@@ -20,13 +20,11 @@ export default () => {
                                         <br />
                                         meet.
                                     </h1>
-                                    <h5>
+                                    <TextBlock>
                                         We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Algorithm
                                         Editor: the most advanced of its kind that leaves nothing to be desired.
-                                    </h5>
-                                    <p>
-                                        <Button>Signup now</Button>
-                                    </p>
+                                    </TextBlock>
+                                    <Button>Signup now</Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>

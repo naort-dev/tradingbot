@@ -17,8 +17,7 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
     line-height: 1.53;
     letter-spacing: normal;
     cursor: pointer;
-    max-height: 55px;
-    max-width: 200px;
+    max-width: 250px;
     transition: 0.3s all;
     &:hover {
         opacity: 0.8;

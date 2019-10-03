@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header, Image } from '@components';
+import { Highlight, Button, Header, Image, TextBlock } from '@components';
 import { Screens } from '@assets';
 
 export default () => {
@@ -21,13 +21,11 @@ export default () => {
                                     <h1>
                                         I want to <Highlight>build</Highlight> bots without code.
                                     </h1>
-                                    <h5>
+                                    <TextBlock>
                                         Start your journey to profitable algorithmic trading with the our Rule Builder. Its graphical user interface
                                         lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
-                                    </h5>
-                                    <p>
-                                        <Button>Start building for free!</Button> COMMENT: NEED A BUTTON COMPONENT HERE
-                                    </p>
+                                    </TextBlock>
+                                    <Button hollow>Start building for free!</Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
