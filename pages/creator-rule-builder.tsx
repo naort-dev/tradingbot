@@ -22,12 +22,11 @@ export default () => {
                                         I want to <Highlight>build</Highlight> bots without code.
                                     </h1>
                                     <h5>
-                                        Not a Coding guru? No problem! Simply start your journey to profitable algorithmic trading with the Trality
-                                        Rule-based Bot Builder. It's clear user interface lets you develop the logic of your trading bot simply by
-                                        dragging and dropping indicators and strategies.
+                                        Start your journey to profitable algorithmic trading with the our Rule Builder. Its graphical user interface
+                                        lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
                                     </h5>
                                     <p>
-                                        <Button>Signup now</Button>
+                                        <Button>Start building for free!</Button> COMMENT: NEED A BUTTON COMPONENT HERE
                                     </p>
                                 </div>
                             </Layout.CenterVertical>
@@ -39,16 +38,14 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Master the Trality Bot Rule Builder.">
+                            <Header title="Easy!">
                                 <p>Design trading bots with the help of a graphical user interface.</p>
                                 <ul>
-                                    <li>Build upon pre-defined trading strategies.</li>
-                                    <li>Select from over 100 technical indicators.</li>
-                                    <li>Use boolean logic to arrange strategy parts.</li>
+                                    <li>Build upon pre-defined trading strategies</li>
+                                    <li>Select from over 100 technical indicators</li>
+                                    <li>Use boolean logic to arrange strategy parts</li>
+                                    <li>Backtest your strategy with historical data</li>
                                 </ul>
-                                <p>
-                                    <Button>Read more</Button>
-                                </p>
                             </Header>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -68,16 +65,13 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Learn to how to code.">
-                                <p>Turn your rules into code automatically.</p>
+                            <Header title="Learn!">
+                                <p>Turn your rules into code automatically. (coming soon!)</p>
                                 <ul>
-                                    <li>Build upon pre-defined trading strategies.</li>
-                                    <li>Select from over 100 technical indicators.</li>
-                                    <li>Use boolean logic to arrange strategy parts.</li>
+                                    <li>Transform built logics into Python code</li>
+                                    <li>Evolve your trading game with new skills</li>
+                                    <li>Improve your algorithms with additional possibilities</li>
                                 </ul>
-                                <p>
-                                    <Button>Read more</Button>
-                                </p>
                             </Header>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

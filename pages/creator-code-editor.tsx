@@ -4,8 +4,8 @@ import { Screens } from '@assets';
 
 export default () => {
     return (
-        <Layout.Page title="creator-code-editor" dark>
-            <Layout.Section fullHeight noPadding id="description" dark>
+        <Layout.Page title="creator-code-editor">
+            <Layout.Section fullHeight noPadding id="description">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -15,11 +15,11 @@ export default () => {
                                         I want to <Highlight>code</Highlight> bots.
                                     </h1>
                                     <h5>
-                                        We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Algorithm
+                                        We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Code
                                         Editor: the most advanced of its kind that leaves nothing to be desired.
                                     </h5>
                                     <p>
-                                        <Button>Signup now</Button>
+                                        <Button>Start creating for free!</Button> COMMENT: NEED A BUTTON COMPONENT HERE
                                     </p>
                                 </div>
                             </Layout.CenterVertical>
@@ -34,7 +34,7 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="python" fullHeight dark>
+            <Layout.Section id="python" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -46,33 +46,32 @@ export default () => {
                             <Header title="Python FTW!">
                                 <p>Use the language and libraries you are already familiar with.</p>
                                 <ul>
-                                    <li>Support of Python to code algorithms</li>
-                                    <li>Easy-to-use API to access financial data</li>
-                                    <li>Access to full range of indicators.</li>
-                                    <li>Use numpy and other libraries (soon!).</li>
+                                    <li>Exploit the power of Python to code your algorithms</li>
+                                    <li>Access financial data with our easy-to-use API</li>
+                                    <li>Access a full range of TA indicators</li>
+                                    <li>Use numpy and other libraries (more to come!)</li>
                                 </ul>
                                 <p>
-                                    <Button hollow>Documentation</Button>
+                                    <Button hollow>Visit our Documentation</Button> COMMENT: THIS SHOULD NOT BE A BUTTON BUT A READ MORE
                                 </p>
                             </Header>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="detail" fullHeight dark>
+            <Layout.Section id="detail" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Rely on the Trality Bot Code Editor.">
-                                <p>Bring your most advanced trading ideas to life.</p>
+                            <Header title="Features!">
+                                <p>Rely on them to bring your most advanced trading ideas to life.</p>
                                 <ul>
-                                    <li>Direct in-browser editing and backtesting.</li>
-                                    <li>Intelligent auto-complete.</li>
-                                    <li>In-browser debugging (Coming soon!).</li>
+                                    <li>Edit and backtest directly in the browser</li>
+                                    <li>Make use of intelligent auto-complete</li>
+                                    <li>Benefit from clear versioning</li>
+                                    <li>Use in-browser debugging (coming soon!)</li>
+                                    <li>Use automatic rebalancing (coming soon!)</li>
                                 </ul>
-                                <p>
-                                    <Button>Read more</Button>
-                                </p>
                             </Header>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -85,7 +84,7 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section dark id="future" minimumPadding>
+/*            <Layout.Section dark id="future" minimumPadding>
                 <Layout.Banner backgroundColor={'darkPrimary'} color={'onDark'}>
                     <Layout.Center direction="column">
                         <Header title="Have a look into the future of trading!">
@@ -106,7 +105,7 @@ export default () => {
                         </Header>
                     </Layout.Center>
                 </Layout.Banner>
-            </Layout.Section>
+            </Layout.Section>*/
         </Layout.Page>
     );
 };

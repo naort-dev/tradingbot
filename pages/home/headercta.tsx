@@ -43,12 +43,12 @@ export const HeaderCta = () => {
     return (
         <Container>
             <TextBlock>
-                Trality is a platform for traders of all levels of experience to create automated trading bots. Use the most flexible tools to code,
-                build, test and live-trade using our Creator tools. Follow or rent-out bots in our marketplace and bring your trading to a whole new
-                level.
+                Trality lets traders of all levels of experience profit from trading bots. Use the Trality Creator Tools to code, build and optimize
+                the most professional trading bots or, alternatively, simply follow created bots on the Trality Bot Marketplace. Cloud-based, 24/7,
+                secure and encrypted! ✌️
             </TextBlock>
             <Bottom>
-                <Button onClick={onClick}>Join now</Button>
+                <Button onClick={onClick}>Try it for free!</Button>
                 <div>
                     <Call src={Icons.ActionCall} />
                 </div>
