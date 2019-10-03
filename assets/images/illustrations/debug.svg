@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="64" viewBox="0 0 71 64">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" fill-rule="nonzero" d="M50.4 18h-31v-2.5C19.4 6.94 26.34 0 34.9 0c8.56 0 15.5 6.94 15.5 15.5V18z"/>
+        <path fill="#E5F7FB" fill-rule="nonzero" d="M49.4 18h-16V1l.867.197A19.613 19.613 0 0 1 49.4 18z"/>
+        <path fill-rule="nonzero" stroke="#00B3D8" stroke-width="3" d="M20.9 16.5h28v-1c0-7.732-6.268-14-14-14s-14 6.268-14 14v1z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M15.4 15h40a3 3 0 0 1 3 3v23c0 12.703-10.297 23-23 23s-23-10.297-23-23V18a3 3 0 0 1 3-3z"/>
+        <path fill="#E5F7FB" fill-rule="nonzero" d="M36.4 15l18.969.583a3 3 0 0 1 2.905 3.123l-1.01 24.241C56.793 54.301 47.75 63.426 36.4 64V15z"/>
+        <path fill-rule="nonzero" stroke="#00B3D8" stroke-width="3" d="M15.4 16.5a1.5 1.5 0 0 0-1.5 1.5v23c0 11.874 9.626 21.5 21.5 21.5S56.9 52.874 56.9 41V18a1.5 1.5 0 0 0-1.5-1.5h-40z"/>
+        <path stroke="#00B3D8" stroke-linecap="round" stroke-width="3" d="M6.4 8l7.883 8.906M6.4 61l9-10M64.172 60.521l-9.03-9.783M64.172 9l-7.741 7.906M69.184 37.613H57.179M13.392 37.613H1.648M27.4 31l15 15M42.4 31l-15 15"/>
+    </g>
+</svg>

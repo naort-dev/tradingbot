@@ -4,7 +4,7 @@ import { ArrowDown, ArrowRight } from './arrow';
 import Router from 'next/router';
 import { Paddings, Margins } from 'theme';
 
-export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean }>`
+export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean; border?: boolean }>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
@@ -19,10 +19,15 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
     cursor: pointer;
     max-width: 250px;
     transition: 0.3s all;
+    box-sizing: border-box;
+    ${(props) =>
+        props.border &&
+        `
+        border: 2px solid transparent;
+    `}
     &:hover {
         opacity: 0.8;
     }
-    border: 2px solid transparent;
     ${(props) =>
         props.hollow &&
         `

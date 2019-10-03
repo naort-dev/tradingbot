@@ -1,6 +1,6 @@
 import { Layout, Subscribe } from '@containers';
-import { Header, HeaderIcon, Highlight, TextBlock } from '@components';
-import { Illustrations } from '@assets';
+import { Header, HeaderIcon, Highlight, TextBlock, Image } from '@components';
+import { Illustrations, Screens } from '@assets';
 
 export default () => {
     return (
@@ -25,7 +25,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight></Layout.CenterRight>
+                                <Image image={Screens.PhoneMockup} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

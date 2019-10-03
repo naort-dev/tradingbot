@@ -4,10 +4,10 @@ import { HeaderCta } from './home/headercta';
 
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
-import { Header, Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
+import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
 import { Screens, Illustrations, Logos } from '@assets';
 
-const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'one-click'];
+const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
 
 export default () => {
     return (
@@ -20,7 +20,8 @@ export default () => {
                                 <div>
                                     <Layout.TwoRows>
                                         <h1>
-                                            Introducing <br />
+                                            Start
+                                            <br />
                                             <Highlight>
                                                 <WordAnimation words={HeaderWords} />
                                             </Highlight>
@@ -62,7 +63,7 @@ export default () => {
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Optimize" source={Illustrations.Marketplace} />
+                            <HeaderIcon name="Optimize" source={Illustrations.Rules} />
                             <p>Perfect your bot with backtesting and practice trading including detailed charts and metrics.</p>
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
@@ -146,8 +147,8 @@ export default () => {
                         <Layout.ThreeColumn.Column area="c">
                             <HeaderIcon name="Encrypted" source={Illustrations.Encrypted} />
                             <p>
-                                Your trading strategies are end-to-end encrypted. Trality cannot see your strategies as they are encrypted in your
-                                browser (coming soon!).
+                                Your trading strategies are end-to-end encrypted. We can't see your strategies as they are in-browser encrypted
+                                (coming soon!).
                             </p>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
@@ -156,19 +157,19 @@ export default () => {
             <Layout.Section id="mailinglist" noBgChange minimumPadding>
                 <Layout.Banner backgroundColor={'bluePrimary'} color={'lightPrimary'}>
                     <Layout.Center direction="column">
-                        <Header title="Stay connected">
+                        <Header title="Stay connected!">
                             <h5>Waiting for cool Trality updates? Join our monthly mailing list and stay up to date 💙</h5>
                         </Header>
                         <Subscribe />
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>
-            <Layout.Section id="evolve" dark>
+            <Layout.Section id="evolve" dark fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.EvolveH1} />
+                                <Image image={Illustrations.Learning} scale={2} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -195,7 +196,7 @@ export default () => {
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section dark id="trade-now" minimumPadding>
-                <Layout.Banner backgroundColor={'darkPrimary'} color={'onDark'}>
+                <Layout.Banner backgroundColor={'backgroundLight'} color={'onDark'}>
                     <Layout.Center direction="column">
                         <Header title="Start trading now!">
                             <p>Trade on a continousy growing number of exchanges. </p>

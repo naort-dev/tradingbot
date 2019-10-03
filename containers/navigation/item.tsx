@@ -99,7 +99,7 @@ export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow }) 
     return (
         <ButtonItemWrapper open={open} num={1} selected={false}>
             <a href={target} target="_blank">
-                <Button small={!isMobile} hollow={hollow}>
+                <Button small={!isMobile} hollow={hollow} border>
                     {name}
                 </Button>
             </a>

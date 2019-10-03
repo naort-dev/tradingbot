@@ -11,6 +11,10 @@ import * as Thanks from './images/illustrations/thanks.svg';
 import * as Encrypted from './images/illustrations/encrypted.svg';
 import * as Learning from './images/illustrations/learning.svg';
 
+import * as Debug from './images/illustrations/debug.svg';
+import * as DebugList from './images/illustrations/debuglist.svg';
+import * as Rules from './images/illustrations/rules.svg';
+
 export const Illustrations = {
     Follow,
     Profit,
@@ -24,4 +28,7 @@ export const Illustrations = {
     Thanks,
     Encrypted,
     Learning,
+    Debug,
+    DebugList,
+    Rules,
 };

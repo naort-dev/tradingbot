@@ -7,7 +7,7 @@ interface Props {
 
 const Wrapper = styled.div<Props>`
     > img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
         ${(props) =>
             props.scale &&

@@ -7,7 +7,7 @@ export default () => {
         <Layout.Page title="creator-code-editor">
             <Layout.Section fullHeight noPadding id="description">
                 <Layout.Center>
-                    <Layout.TwoColumn>
+                    <Layout.TwoColumn width={40}>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
@@ -24,9 +24,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight>
-                                    <Image image={Screens.MacMockupV2} />
-                                </Layout.CenterRight>
+                                <Image image={Screens.MacMockupCodeBased} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

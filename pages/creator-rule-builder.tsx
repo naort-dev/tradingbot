@@ -7,12 +7,10 @@ export default () => {
         <Layout.Page title="creator-rule-editor">
             <Layout.Section fullHeight noPadding id="rule-editor-description">
                 <Layout.Center>
-                    <Layout.TwoColumn>
+                    <Layout.TwoColumn width={55}>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight>
-                                    <Image image={Screens.RuleBuilderH1} />
-                                </Layout.CenterRight>
+                                <Image image={Screens.MacMockupRuleBased} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>

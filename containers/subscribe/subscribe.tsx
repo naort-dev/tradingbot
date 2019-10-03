@@ -14,9 +14,9 @@ const Text = styled.input`
     border: solid 1px ${(props) => props.theme.borderColor};
     box-shadow: none !important;
     border-right: none;
-    height: 55px;
+    height: 55px
     transition: 0.3s;
-    padding: 0px ${Paddings.Middle};
+    padding: 0px ${Paddings.Large};
     font-size: 16px;
     color: #8686ac;
     width: 100%;
@@ -37,9 +37,6 @@ const ButtonContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     max-width: 600px;
-    & > div:first-child {
-        margin-bottom: ${Margins.Middle};
-    }
     @media (max-width: 768px) {
         width: 100%;
         justify-content: center;
@@ -100,7 +97,7 @@ const Error = styled.div<{ show?: boolean }>`
         content: ' ';
         height: 20px;
         width: 3px;
-        background-color: #ec4040;
+        background-color: ${(props) => props.theme.errorRed};
     }
     &:before {
         transform: rotate(45deg);

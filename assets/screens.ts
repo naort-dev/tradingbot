@@ -17,6 +17,8 @@ import * as PhoneMockup from './images/screens/iphone_mockup.png';
 import * as PhoneMacMockup from './images/screens/iphone_mac_mockup.png';
 import * as MacMockup from './images/screens/mac_mockup.png';
 import * as MacMockupV2 from './images/screens/mac_mockup_v2.png';
+import * as MacMockupRuleBased from './images/screens/rulebasedmbp.png';
+import * as MacMockupCodeBased from './images/screens/codebasedmbp.png';
 
 export const Screens = {
     PhoneMockup,
@@ -33,4 +35,6 @@ export const Screens = {
     RuleBuilderH1,
     RuleBuilderV1,
     BacktestV1,
+    MacMockupRuleBased,
+    MacMockupCodeBased,
 };

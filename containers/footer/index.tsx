@@ -74,7 +74,7 @@ const LinkContainer = styled.div`
 
 const LogoHeader = styled.div`
     margin: ${Margins.Large} 0;
-    color: ${(props) => props.theme.onLight};
+    color: ${(props) => props.theme.onDark};
 `;
 
 export const Footer: React.FunctionComponent = () => {
