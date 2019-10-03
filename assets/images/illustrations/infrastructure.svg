@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="65" viewBox="0 0 100 65">
-    <g fill="none" fill-rule="nonzero">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="65">
+    <g fill="none">
         <g transform="translate(0 46)">
             <rect width="68" height="19" fill="#FFF" rx="3"/>
             <rect width="29" height="19" x="39" fill="#F5F5F8" rx="3"/>
@@ -12,12 +12,10 @@
             <rect width="65.5" height="16.5" x="1.25" y="1.25" stroke="#9D9DBF" stroke-width="2.5" rx="4"/>
             <circle cx="12.5" cy="9.5" r="2.5" fill="#9D9DBF"/>
         </g>
-        <g>
-            <rect width="68" height="19" fill="#FFF" rx="3"/>
-            <rect width="29" height="19" x="39" fill="#F5F5F8" rx="3"/>
-            <rect width="65.5" height="16.5" x="1.25" y="1.25" stroke="#9D9DBF" stroke-width="2.5" rx="4"/>
-            <circle cx="12.5" cy="9.5" r="2.5" fill="#9D9DBF"/>
-        </g>
+        <rect width="68" height="19" fill="#FFF" rx="3"/>
+        <rect width="29" height="19" x="39" fill="#F5F5F8" rx="3"/>
+        <rect width="65.5" height="16.5" x="1.25" y="1.25" stroke="#9D9DBF" stroke-width="2.5" rx="4"/>
+        <circle cx="12.5" cy="9.5" r="2.5" fill="#9D9DBF"/>
         <g transform="translate(45 9)">
             <rect width="55" height="38" y="18" fill="#FFF" rx="10"/>
             <path fill="#E5F7FB" d="M36 18h8c5.523 0 10 4.477 10 10v18c0 5.523-4.477 10-10 10h-8V18z"/>

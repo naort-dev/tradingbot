@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="223" height="165" viewBox="0 0 223 165">
-    <g fill="none" fill-rule="nonzero">
+<svg xmlns="http://www.w3.org/2000/svg" width="223" height="165">
+    <g fill="none">
         <g transform="translate(110)">
             <ellipse cx="55.54" cy="37.431" fill="#FFF" stroke="#9D9DBF" stroke-width="4.375" rx="35.352" ry="35.243"/>
             <path fill="#9D9DBF" d="M58.042 74.861c19.35 0 35.037-16.758 35.037-37.43C93.08 16.758 77.393 0 58.042 0v74.861z" opacity=".1"/>
@@ -15,11 +15,6 @@
         </g>
         <rect width="92.156" height="62.125" x="55.188" y="100.688" fill="#FFF" stroke="#9D9DBF" stroke-width="4.375" rx="17.5"/>
         <path fill="#9D9DBF" d="M116.184 98.5h14.092c9.664 0 17.5 7.835 17.5 17.5v31.5c0 9.665-7.836 17.5-17.5 17.5h-14.092V98.5z" opacity=".1"/>
-        <g stroke="#9D9DBF" stroke-linecap="round" stroke-width="4">
-            <path d="M80.681 123.224l8.665 8.664M89.493 123.076l-8.96 8.96"/>
-        </g>
-        <g stroke="#9D9DBF" stroke-linecap="round" stroke-width="4">
-            <path d="M110.681 123.224l8.665 8.664M119.493 123.076l-8.96 8.96"/>
-        </g>
+        <path d="M80.681 123.224l8.665 8.664m.147-8.812l-8.96 8.96m30.148-8.812l8.665 8.664m.147-8.812l-8.96 8.96" stroke="#9D9DBF" stroke-linecap="round" stroke-width="4"/>
     </g>
 </svg>
