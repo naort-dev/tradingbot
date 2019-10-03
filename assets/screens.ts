@@ -1,8 +1,6 @@
-import * as Phone from './images/screens/phone@3x.png';
 import * as RuleBuilder from './images/screens/rulescreen.png';
 import * as Backtesting from './images/screens/backtesting.png';
 import * as Debugging from './images/screens/debugging.png';
-import * as Imac from './images/screens/imac.png';
 
 // Moritz renders
 import * as BacktestH1 from './images/screens/backtest_h1.png';
@@ -14,12 +12,18 @@ import * as EvolveH1 from './images/screens/evolve_h1.png';
 import * as RuleBuilderH1 from './images/screens/rule_builder_h1.png';
 import * as RuleBuilderV1 from './images/screens/rule_builder_v1.png';
 
+// Mockups
+import * as PhoneMockup from './images/screens/iphone_mockup.png';
+import * as PhoneMacMockup from './images/screens/iphone_mac_mockup.png';
+import * as MacMockup from './images/screens/mac_mockup.png';
+
 export const Screens = {
-    Phone,
+    PhoneMockup,
+    PhoneMacMockup,
+    MacMockup,
     RuleBuilder,
     Backtesting,
     Debugging,
-    Imac,
     CodeEditorH1,
     CodeEditorV1,
     BacktestH1,

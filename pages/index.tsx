@@ -7,7 +7,7 @@ import { Subscribe } from '@containers';
 import { Header, Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
 import { Screens, Illustrations, Logos } from '@assets';
 
-const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'easy', 'professional', 'one-click'];
+const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'one-click'];
 
 export default () => {
     return (
@@ -20,7 +20,7 @@ export default () => {
                                 <div>
                                     <Layout.TwoRows>
                                         <h1>
-                                            #Enter <br />
+                                            Introducing <br />
                                             <Highlight>
                                                 <WordAnimation words={HeaderWords} />
                                             </Highlight>
@@ -36,7 +36,7 @@ export default () => {
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
                                 <Layout.CenterRight>
-                                    <Image image={Screens.Imac} alt="Trality Phone Screenshot" />
+                                    <Image image={Screens.PhoneMockup} alt="Trality Phone Screenshot" />
                                 </Layout.CenterRight>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
@@ -48,7 +48,7 @@ export default () => {
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
                             <Layout.CenterAllDirections>
-                                <h2>Trality Creator Tools</h2>
+                                <h2>Ways to create your trading bot.</h2>
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
@@ -71,21 +71,21 @@ export default () => {
             </Layout.Section>
             <Layout.Section themeColor={'background'} fullHeight id="foobar">
                 <Layout.Center>
-                    <Header title="Flexible features that will convince you:" center expandHeight>
+                    <Header title="Fall in love with our Creator tools." center expandHeight>
                         <Layout.Slider
                             items={[
                                 {
-                                    name: 'powerful Python API to code algorithms',
+                                    name: 'Powerful Python API to code algorithms',
                                     source: Screens.RuleBuilder,
                                     icon: Illustrations.Create,
                                 },
                                 {
-                                    name: 'flexible Rule Builder to build logic',
+                                    name: 'Flexible Rule Builder to build logic',
                                     source: Screens.RuleBuilder,
                                     icon: Illustrations.Leisure,
                                 },
                                 {
-                                    name: `strong Backtester to optimize bots`,
+                                    name: `Fast Backtester to optimize bots`,
                                     source: Screens.Backtesting,
                                     icon: Illustrations.Infrastructure,
                                 },
@@ -98,11 +98,11 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Trality Bot Marketplace">
+                            <Header title="Connecting traders.">
                                 <TextBlock>
                                     <p>
-                                        Whether you create trading bots or you prefer to let others do the hard work for you: here is where Creators
-                                        and Followers come together to profit from each other.
+                                        Whether you create trading bots or you prefer to let others do the hard work for you: the Trality Bot
+                                        Marketplace is where Creators and Followers come together to profit from each other.
                                     </p>
                                     <ul>
                                         <li>Creators publish their best bots onto the marketplace</li>
@@ -116,7 +116,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterRight>
-                                <Image image={Screens.Phone} />
+                                <Image image={Screens.PhoneMockup} />
                             </Layout.CenterRight>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -127,7 +127,7 @@ export default () => {
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
                             <Layout.CenterAllDirections>
-                                <h2>Enjoy complete safety of your funds and algorithms</h2>
+                                <h2>Your funds and algorithms are safe.</h2>
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
@@ -161,6 +161,38 @@ export default () => {
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>
+            <Layout.Section id="evolve" fullHeight dark>
+                <Layout.Center>
+                    <Layout.TwoColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.EvolveH1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Header title="Evolve your algorithmic trading game!">
+                                <TextBlock>
+                                    <p>
+                                        The cherry on the cake with Trality: become more and more proficient with algorithmic trading using our
+                                        different Creator Tools.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Move closer to mastering the art of coding algorithms by working with automatically generated Python code
+                                            from rule-based bots.
+                                        </li>
+                                        <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
+                                        <li>Make use of our detailed documentation.</li>
+                                    </ul>
+                                </TextBlock>
+                                <p>
+                                    <Button>Read more</Button>
+                                </p>
+                            </Header>
+                        </Layout.OneColumn>
+                    </Layout.TwoColumn>
+                </Layout.Center>
+            </Layout.Section>
             <Layout.Section dark id="trade-now" minimumPadding>
                 <Layout.Banner backgroundColor={'darkPrimary'} color={'onDark'}>
                     <Layout.Center direction="column">
@@ -175,7 +207,6 @@ export default () => {
                                 ]}
                             />
                         </Header>
-                        <Button>Signup</Button>
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>

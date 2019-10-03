@@ -121,8 +121,8 @@ export const Footer: React.FunctionComponent = () => {
                     logos={[
                         {
                             title: 'Vienna Business Agency',
-                            light: Logos.VbaWhite,
-                            dark: Logos.Vba,
+                            light: Logos.Vba,
+                            dark: Logos.VbaWhite,
                         },
                         {
                             title: 'Inits Incubator',
@@ -134,8 +134,8 @@ export const Footer: React.FunctionComponent = () => {
                         },
                         {
                             title: 'AWS Activate',
-                            light: Logos.AwsWhite,
-                            dark: Logos.Aws,
+                            light: Logos.Aws,
+                            dark: Logos.AwsWhite,
                         },
                     ]}
                 />

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import * as React from 'react';
-import { ArrowDown } from './arrow';
+import { ArrowDown, ArrowRight } from './arrow';
 import Router from 'next/router';
 import { Paddings, Margins } from 'theme';
 
@@ -91,7 +91,7 @@ export const KnowMore: React.FunctionComponent<Props> = ({ children, to, blank }
 
     return (
         <Button knowmore onClick={onClick}>
-            <ArrowDown />
+            <ArrowRight />
             {children}
         </Button>
     );

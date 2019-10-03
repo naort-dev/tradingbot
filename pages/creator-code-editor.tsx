@@ -45,7 +45,7 @@ export default () => {
                                 <TextBlock>
                                     <p>Use the language and libraries you are already familiar with.</p>
                                     <ul>
-                                        <li>Exploit the power of Python to code your algorithms</li>
+                                        <li>Use Python to code your algorithms</li>
                                         <li>Access financial data with our easy-to-use API</li>
                                         <li>Access a full range of TA indicators</li>
                                         <li>Use numpy and other libraries (more to come!)</li>
@@ -61,11 +61,11 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Features!">
-                                <p>Rely on them to bring your most advanced trading ideas to life.</p>
+                            <Header title="We've got you covered.">
+                                <p>Bring your most advanced trading ideas to life using our growing list of tools and features.</p>
                                 <ul>
-                                    <li>Edit and backtest directly in the browser</li>
-                                    <li>Make use of intelligent auto-complete</li>
+                                    <li>Edit in the browser with intelligent auto-complete</li>
+                                    <li>Backtest directly in the browser</li>
                                     <li>Benefit from clear versioning</li>
                                     <li>Use in-browser debugging (coming soon!)</li>
                                     <li>Use automatic rebalancing (coming soon!)</li>
