@@ -21,6 +21,11 @@ const Description = styled.div`
     z-index: 1;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     opacity: 0.95;
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 100vw;
+        opacity: 0.8;
+    }
 `;
 
 const ImageWrapper = styled.div<{ image?: string }>`
@@ -36,6 +41,10 @@ const ImageWrapper = styled.div<{ image?: string }>`
         background: url(${props.image}) no-repeat center;
         background-size: cover;
     `}
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 100vw;
+    }
 `;
 
 export const BlogHeader: React.FC<Article> = (article) => {

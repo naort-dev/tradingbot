@@ -14,6 +14,9 @@ const C = styled.div`
         width: 25%;
         margin-left: ${Margins.Middle};
         margin-bottom: ${Margins.Middle};
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 `;
 

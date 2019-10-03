@@ -22,8 +22,15 @@ const HeaderImage = styled.div<{ image?: string }>`
     `}
 `;
 const ContentContainer = styled.div`
-    > a {
+    a {
         color: ${(props) => props.theme.bluePrimary};
+    }
+    img {
+        max-width: 100%;
+        text-align: center;
+    }
+    p < img {
+        text-align: center;
     }
 `;
 
