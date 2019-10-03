@@ -4,6 +4,7 @@ import { useSection } from 'hooks/useSection';
 
 const SingleColumnWrapper = styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -15,9 +16,20 @@ const SingleColumnWrapper = styled.div`
     }
 `;
 
-const TwoColumnWrapper = styled(SingleColumnWrapper)`
-    > div {
-        width: 50%;
+interface TwoColumnProps {
+    width?: number;
+}
+
+const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
+    > div:first-child {
+        width: ${(props) => (props.width ? props.width : 50)}%;
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    > div:last-child {
+        width: ${(props) => (props.width ? 100 - props.width : 50)}%;
         @media (max-width: 768px) {
             width: 100%;
             height: 100%;
@@ -29,8 +41,8 @@ export const OneColumn: React.FC = ({ children }) => {
     return <SingleColumnWrapper>{children}</SingleColumnWrapper>;
 };
 
-export const TwoColumn: React.FC = ({ children }) => {
-    return <TwoColumnWrapper>{children}</TwoColumnWrapper>;
+export const TwoColumn: React.FC<TwoColumnProps> = ({ children, ...props }) => {
+    return <TwoColumnWrapper {...props}>{children}</TwoColumnWrapper>;
 };
 
 const ThreeColumnWrapper = styled.div`

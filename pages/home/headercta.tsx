@@ -59,7 +59,7 @@ export const HeaderCta = () => {
     return (
         <Container>
             <TextBlock>
-                Code, build, optimize and live-trade your trading bots using our creator tools. Or follow creators on our marketplace on your mobile
+                Code, build, optimize and live-trade your trading bots using our Creator tools. Or follow Creators on our marketplace on your mobile
                 app. The choice is yours! ✌️
             </TextBlock>
             <Bottom>

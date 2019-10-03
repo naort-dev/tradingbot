@@ -98,21 +98,23 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Connecting traders.">
-                                <TextBlock>
-                                    <p>
-                                        Whether you create trading bots or you prefer to let others do the hard work for you: the Trality Bot
-                                        Marketplace is where Creators and Followers come together to profit from each other.
-                                    </p>
-                                    <ul>
-                                        <li>Creators publish their best bots onto the marketplace</li>
-                                        <li>Followers select a bot which matches their objectives</li>
-                                        <li>Followers reward Creators with a monthly rent for their efforts</li>
-                                        <li>Algorithms will always remain visible only to the Creator</li>
-                                    </ul>
-                                </TextBlock>
-                                <KnowMore>Read more</KnowMore>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Connecting traders.">
+                                    <TextBlock>
+                                        <p>
+                                            Whether you create trading bots or you prefer to let others do the hard work for you: the Trality Bot
+                                            Marketplace is where Creators and Followers come together to profit from each other.
+                                        </p>
+                                        <ul>
+                                            <li>Creators publish their best bots onto the marketplace</li>
+                                            <li>Followers select a bot which matches their objectives</li>
+                                            <li>Followers reward Creators with a monthly rent for their efforts</li>
+                                            <li>Algorithms will always remain visible only to the Creator</li>
+                                        </ul>
+                                    </TextBlock>
+                                    <KnowMore>Read more</KnowMore>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterRight>
@@ -161,7 +163,7 @@ export default () => {
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>
-            <Layout.Section id="evolve" fullHeight dark>
+            <Layout.Section id="evolve" dark>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -170,25 +172,24 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Evolve your algorithmic trading game!">
-                                <TextBlock>
-                                    <p>
-                                        The cherry on the cake with Trality: become more and more proficient with algorithmic trading using our
-                                        different Creator Tools.
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            Move closer to mastering the art of coding algorithms by working with automatically generated Python code
-                                            from rule-based bots.
-                                        </li>
-                                        <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
-                                        <li>Make use of our detailed documentation.</li>
-                                    </ul>
-                                </TextBlock>
-                                <p>
-                                    <Button>Read more</Button>
-                                </p>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Evolve your algorithmic trading game!">
+                                    <TextBlock>
+                                        <p>
+                                            The cherry on the cake with Trality: become more and more proficient with algorithmic trading using our
+                                            different Creator Tools.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Move closer to mastering the art of coding algorithms by working with automatically generated Python
+                                                code from rule-based bots.
+                                            </li>
+                                            <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
+                                            <li>Make use of our detailed documentation.</li>
+                                        </ul>
+                                    </TextBlock>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

@@ -19,27 +19,30 @@ export default () => {
                             <Layout.CenterVertical>
                                 <div>
                                     <h1>
-                                        I want to <Highlight>build</Highlight> bots without code.
+                                        I want to <Highlight>build</Highlight> bots graphically.
                                     </h1>
                                     <TextBlock>
-                                        Start your journey to profitable algorithmic trading with the our Rule Builder. Its graphical user interface
-                                        lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
+                                        Start your journey to profitable algorithmic trading with the Trality Rule Builder. Its graphical user
+                                        interface lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
                                     </TextBlock>
-                                    <Button hollow>Start building for free!</Button>
+                                    <Button>Start building for free!</Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="detail" fullHeight>
+            <Layout.Section id="detail">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Easy!">
-                                <p>Design trading bots with the help of a graphical user interface.</p>
+                            <Header title="Building bots in a few minutes.">
+                                <p>
+                                    Using the Trality Rule Builder, you can turn your ideas into a profitable strategy and optimize it until you're
+                                    satisfied.
+                                </p>
                                 <ul>
-                                    <li>Build upon pre-defined trading strategies</li>
+                                    <li>Build upon curated, pre-defined trading strategies</li>
                                     <li>Select from over 100 technical indicators</li>
                                     <li>Use boolean logic to arrange strategy parts</li>
                                     <li>Backtest your strategy with historical data</li>
@@ -54,7 +57,7 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="learn" fullHeight>
+            <Layout.Section id="learn">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -63,12 +66,12 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Learn!">
-                                <p>Turn your rules into code automatically. (coming soon!)</p>
+                            <Header title="Evolve from rules to code.">
+                                <p>Step up your game and turn your rule-based bots into code automatically. (coming soon!)</p>
                                 <ul>
                                     <li>Transform built logics into Python code</li>
                                     <li>Evolve your trading game with new skills</li>
-                                    <li>Improve your algorithms with additional possibilities</li>
+                                    <li>Improve your algorithms by slowly adapting code to your needs</li>
                                 </ul>
                             </Header>
                         </Layout.OneColumn>

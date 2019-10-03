@@ -16,11 +16,13 @@ import * as RuleBuilderV1 from './images/screens/rule_builder_v1.png';
 import * as PhoneMockup from './images/screens/iphone_mockup.png';
 import * as PhoneMacMockup from './images/screens/iphone_mac_mockup.png';
 import * as MacMockup from './images/screens/mac_mockup.png';
+import * as MacMockupV2 from './images/screens/mac_mockup_v2.png';
 
 export const Screens = {
     PhoneMockup,
     PhoneMacMockup,
     MacMockup,
+    MacMockupV2,
     RuleBuilder,
     Backtesting,
     Debugging,

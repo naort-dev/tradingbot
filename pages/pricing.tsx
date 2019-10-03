@@ -1,7 +1,17 @@
-import { Layout, Pricing } from '@containers';
-import { Header, Button } from '@components';
+import { Layout } from '@containers';
+import { Header } from '@components';
 
 export default () => {
+    return (
+        <Layout.Page title="pricing">
+            <Layout.Section fullHeight noPadding id="pricing-overview">
+                <Layout.Center>
+                    <Header title="Coming soon!"></Header>
+                </Layout.Center>
+            </Layout.Section>
+        </Layout.Page>
+    );
+    /*
     return (
         <Layout.Page title="pricing">
             <Layout.Section fullHeight noPadding id="pricing-overview">
@@ -44,5 +54,5 @@ export default () => {
                 </Layout.Banner>
             </Layout.Section>
         </Layout.Page>
-    );
+    );*/
 };

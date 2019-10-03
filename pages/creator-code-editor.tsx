@@ -25,14 +25,14 @@ export default () => {
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
                                 <Layout.CenterRight>
-                                    <Image image={Screens.CodeEditorH1} />
+                                    <Image image={Screens.MacMockupV2} />
                                 </Layout.CenterRight>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="python" fullHeight>
+            <Layout.Section id="python">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -57,7 +57,7 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="detail" fullHeight>
+            <Layout.Section id="detail">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -66,7 +66,7 @@ export default () => {
                                 <ul>
                                     <li>Edit in the browser with intelligent auto-complete</li>
                                     <li>Backtest directly in the browser</li>
-                                    <li>Benefit from clear versioning</li>
+                                    <li>Benefit from clear versioning and your backtest history</li>
                                     <li>Use in-browser debugging (coming soon!)</li>
                                     <li>Use automatic rebalancing (coming soon!)</li>
                                 </ul>

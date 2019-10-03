@@ -1,5 +1,5 @@
-import { Layout } from '@containers';
-import { Header, HeaderIcon, KnowMore, Highlight, WordAnimation, Button, Cursor, TextBlock } from '@components';
+import { Layout, Subscribe } from '@containers';
+import { Header, HeaderIcon, Highlight, TextBlock } from '@components';
 import { Illustrations } from '@assets';
 
 export default () => {
@@ -12,19 +12,14 @@ export default () => {
                             <Layout.CenterVertical>
                                 <div>
                                     <h1>
-                                        Where{' '}
-                                        <Highlight>
-                                            <WordAnimation words={['creators', 'followers']} />
-                                        </Highlight>
-                                        <Cursor />
-                                        <br />
-                                        meet.
+                                        Where <Highlight>Creators</Highlight> and <Highlight>Followers</Highlight> meet.
                                     </h1>
                                     <TextBlock>
                                         We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Algorithm
                                         Editor: the most advanced of its kind that leaves nothing to be desired.
                                     </TextBlock>
-                                    <Button>Signup now</Button>
+                                    <p>Let us notify you when our Marketplace is ready!</p>
+                                    <Subscribe />
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -41,61 +36,64 @@ export default () => {
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
                             <Layout.CenterAllDirections>
-                                <h2>This is a marketplace header</h2>
+                                <h2>It's simple.</h2>
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Follow bots" source={Illustrations.Follow} />
+                            <HeaderIcon name="Rent out bots" source={Illustrations.Create} />
                             <p>
-                                With the Trality Bot Marketplace, you can start trading like a Wall Street Pro: follow the best-rated expert bots and
-                                mirror its trades. No need for expert skills.{' '}
+                                After you have created an awesome trading bot you can start building a follower base and generate a risk-free side
+                                income.
                             </p>
-                            <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Create bots" source={Illustrations.Create} />
+                            <HeaderIcon name="Follow bots" source={Illustrations.Follow} />
                             <p>
-                                Trality gives you the most advanced tools to create trading bots. And more! Start building a follower base and
-                                generate a risk-free side income.{' '}
+                                Our Bot Marketplace gives you the option to follow the best-rated Creator bots and mirror its trades. No need for
+                                expert skills.
                             </p>
-                            <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
                             <HeaderIcon name="Profit from each other" source={Illustrations.Profit} />
-                            <p>
-                                On Trality, leisure and expert traders can profit from bots individually but, more importantly, also from each other.{' '}
-                            </p>
-                            <KnowMore>Read more</KnowMore>
+                            <p>On Trality, Creators and Followers can profit from bots individually but, more importantly, also from each other.</p>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="creators" fullHeight>
+            <Layout.Section id="creators">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn></Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Build a follower base and generate income.">
+                            <Header title="Creators build a follower base and generate income.">
                                 <p>
-                                    Once you've got your strategy figured out, you can publish your bot on the Trality Bot Marketplace. For every
-                                    follower you are rewarded a monthly rent for your effort. The best part: your algorithm will never be revealed to
-                                    anyone.
+                                    Publish your bot on the Trality Bot Marketplace. For every follower you are rewarded a monthly rent for your
+                                    effort.
                                 </p>
+                                <ul>
+                                    <li>Generate income without the need for large initial funds - only your trading idea counts</li>
+                                    <li>Stay in touch with your followers and improve your bot together</li>
+                                    <li>Your algorithm will never be revealed to anyone.</li>
+                                </ul>
                             </Header>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="followers" fullHeight>
+            <Layout.Section id="followers">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Follow bots.">
+                            <Header title="Followers profit from a quality-screened Creator bot.">
                                 <p>
-                                    Once you've got your strategy figured out, you can publish your bot on the Trality Bot Marketplace. For every
-                                    follower you are rewarded a monthly rent for your effort. The best part: your algorithm will never be revealed to
-                                    anyone.
+                                    Using Trality is not a black box. Choose from well-documented expert bots and follow the one which matches your
+                                    objectives.
                                 </p>
+                                <ul>
+                                    <li>Connect to your favorite crypto exchange</li>
+                                    <li>The bot automatically starts trading for you</li>
+                                    <li>Receive updates to your bot from Creators</li>
+                                </ul>
                             </Header>
                         </Layout.OneColumn>
                         <Layout.OneColumn></Layout.OneColumn>

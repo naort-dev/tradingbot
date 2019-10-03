@@ -17,23 +17,24 @@ export default () => {
                             <Layout.CenterVertical>
                                 <div>
                                     <h1>
-                                        I want to <Highlight>upgrade</Highlight> my trading.
+                                        <Highlight>Upgrade</Highlight> your trading.
                                     </h1>
                                     <TextBlock>
-                                        To trade profitably, you need every help you can get. At Trality, we provide you with the tools to succeed.
+                                        To trade profitably, you need every help you can get. At Trality, we provide you with the tools you need to
+                                        succeed - from bot creation to trade execution.
                                     </TextBlock>
-                                    <Button>Upgrade your trading for free!</Button>
+                                    <Button>Try Trality for free!</Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="backtesting" fullHeight>
+            <Layout.Section id="backtesting">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Blazing-fast backtesting!">
+                            <Header title="Blazing-fast backtesting.">
                                 <TextBlock>
                                     <p>
                                         Backtesting is at the heart of every bot creation iteration. That's why we made it as fast as possible and
@@ -43,7 +44,7 @@ export default () => {
                                         <li>Improve your algorithms with in-browser backtesting</li>
                                         <li>Chose individual time frames or automated scenario tests</li>
                                         <li>Use breakpoints or events when debugging (coming soon!)</li>
-                                        <li>Optimize strategy parameters using ML (coming soon!)</li>
+                                        <li>Optimize strategy parameters automatically (coming soon!)</li>
                                     </ul>
                                 </TextBlock>
                                 <KnowMore>Read more</KnowMore>
@@ -57,7 +58,7 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="live-trading" fullHeight>
+            <Layout.Section id="live-trading">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -66,11 +67,15 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Cloud-based live-trading!">
-                                <p>Trading bots should not miss a single trade and therefore need to run 24/7.</p>
+                            <Header title="Cloud-based live-trading.">
+                                <p>
+                                    Trading bots should not miss a single trade and need to run 24/7. Our infrastructure is built for fast and
+                                    reliable execution of your strategies.
+                                </p>
                                 <ul>
-                                    <li>Rely on AWS-based cloud infrastructure</li>
-                                    <li>Microservices...</li>
+                                    <li>Rely on our infrastructure located in multiple regions - close to your favourite crypto exchange.</li>
+                                    <li>No more maintenance and setup of your own servers</li>
+                                    <li>Direct and reliable access to tickers, orderbooks and more</li>
                                     <li>Access your bots on web and mobile</li>
                                 </ul>
                             </Header>
@@ -78,11 +83,11 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="safety" fullHeight>
+            <Layout.Section id="safety">
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Complete safety of funds!">
+                            <Header title="Complete safety of funds.">
                                 <p>Your funds' safety lie at the heart of our business and we will do anything to protect them.</p>
                                 <ul>
                                     <li>Trality never touches your funds directly, bots merely send trading signals to your trusted exchange</li>
@@ -93,7 +98,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Security} />
+                                <Image image={Illustrations.Security} scale={2} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
