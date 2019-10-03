@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ThemeColors } from 'theme';
+import { ThemeColors, Paddings } from 'theme';
 
 interface BannerProps {
     color?: ThemeColors | 'transparent';
@@ -24,7 +24,7 @@ const BannerContainer = styled.div<BannerProps>`
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 70px 0px;
+    padding: ${Paddings.VeryLarge} 0px;
 `;
 
 export const Banner: React.FC<BannerProps> = ({ children, ...props }) => {

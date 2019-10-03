@@ -21,7 +21,8 @@
         "paths": {
             "@containers": ["./containers/index.ts"],
             "@components": ["./components/index.ts"],
-            "@assets": ["assets/index.ts"]
+            "@assets": ["assets/index.ts"],
+            "@util": ["util/index.ts"]
         },
         "baseUrl": ".",
         "forceConsistentCasingInFileNames": true,

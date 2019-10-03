@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { useMixpanel } from '../../hooks/mixpanel';
 import { useDark, DarkProp } from '../../hooks/dark';
 import Link from 'next/link';
+import { Misc } from '@util';
+import { Paddings } from 'theme';
 
 const GdprContainer = styled.div<DarkProp>`
     position: fixed;
@@ -11,7 +13,7 @@ const GdprContainer = styled.div<DarkProp>`
     left: 0;
     max-width: 100%;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: ${Paddings.Middle} ${Paddings.Middle};
     background: #fff;
     z-index: 1030;
     color: black;
@@ -34,7 +36,7 @@ const GdprContainer = styled.div<DarkProp>`
         }
     `}
     > p {
-        line-height: 1.2;
+        line-height: 2;
     }
 `;
 
@@ -53,10 +55,11 @@ export const GDPR: React.FunctionComponent = () => {
     }, [hasOptedIn]);
 
     React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setTimeout(() => {
+        if (!Misc.IsServer()) {
+            const timeout = setTimeout(() => {
                 setHasOptedIn(mixPanel.has_opted_in_tracking());
             }, 200);
+            return clearTimeout(timeout);
         }
     }, []);
 

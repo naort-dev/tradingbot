@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Margins, Paddings } from 'theme';
 
 const Container = styled.div`
     display: flex;
@@ -32,7 +33,6 @@ const Entry = styled.div`
         letter-spacing: normal;
         text-align: center;
         margin: 0px 0px;
-        margin-bottom: 5px;
         min-height: 0;
     }
     > p {
@@ -44,14 +44,14 @@ const Entry = styled.div`
         letter-spacing: normal;
         text-align: center;
         margin: 0px 0px;
-        margin-bottom: 30px;
+        margin-bottom: ${Margins.Large};
     }
 `;
 
 const I = styled.div`
     border-radius: 5px;
     box-shadow: 0 15px 60px 0 rgba(13, 21, 67, 0.05);
-    padding: 45px 30px;
+    padding: ${Paddings.Large} ${Paddings.Large};
     cursor: pointer;
     background-color: ${(props) => props.theme.background};
     transition: 0.5s all;
@@ -67,7 +67,7 @@ const I = styled.div`
     }
     @media (max-width: 768px) {
         width: 90%;
-        margin-bottom: 30px;
+        margin-bottom: ${Margins.Large};
         background-color: ${(props) => props.theme.oppositeBackground};
         h4 {
             color: ${(props) => props.theme.lightPrimary};

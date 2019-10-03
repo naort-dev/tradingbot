@@ -14,3 +14,4 @@ export * from './cursor';
 export * from './wordanimation';
 export * from './imagecontainer';
 export * from './breadcrumb';
+export * from './textblock';

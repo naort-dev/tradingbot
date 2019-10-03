@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useMixpanel } from 'hooks/mixpanel';
-import { Button } from '@components';
+import { Button, TextBlock } from '@components';
 import { Icons } from '@assets';
 
 const Container = styled.div``;
@@ -42,11 +42,11 @@ export const HeaderCta = () => {
 
     return (
         <Container>
-            <h5>
+            <TextBlock>
                 Trality is a platform for traders of all levels of experience to create automated trading bots. Use the most flexible tools to code,
                 build, test and live-trade using our Creator tools. Follow or rent-out bots in our marketplace and bring your trading to a whole new
                 level.
-            </h5>
+            </TextBlock>
             <Bottom>
                 <Button onClick={onClick}>Join now</Button>
                 <div>

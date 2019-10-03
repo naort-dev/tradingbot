@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from './link';
+import { Margins } from 'theme';
 
 const Container = styled.div`
-    margin: 50px 0px;
+    margin: ${Margins.VeryLarge} 0px;
     width: 100%;
     display: flex;
     color: ${(props) => props.theme.bluePrimary};
     * {
-        margin-left: 15px;
+        margin-left: ${Margins.Small};
     }
 `;
 

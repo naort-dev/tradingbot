@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Preload } from 'components/preload';
 import { useInterval } from 'hooks/useInterval';
 import { Loader, KnowMore } from '@components';
+import { Paddings, Margins } from 'theme';
 
 const SlideContainer = styled.div`
     width: 100%;
@@ -19,9 +20,9 @@ const Bar = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: ${Paddings.Middle};
+    padding-left: ${Paddings.Large};
+    padding-right: ${Paddings.Large};
 `;
 
 const Content = styled.div`
@@ -62,8 +63,8 @@ const ItemWrapper = styled.div<{ visible?: boolean }>`
 `;
 
 const MenuItem = styled.div<{ active?: boolean }>`
-    padding: 20px;
-    margin: 10px 20px;
+    padding: ${Paddings.Large};
+    margin: ${Margins.Small} ${Margins.Large};
     cursor: pointer;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
     transition: 0.3s all;
@@ -92,7 +93,7 @@ const MenuItem = styled.div<{ active?: boolean }>`
 `;
 
 const LinkItem = styled.div`
-    margin: 0px 20px;
+    margin: 0px ${Margins.Large};
     cursor: pointer;
     max-width: 200px;
     text-align: center;
@@ -104,7 +105,7 @@ const LinkItem = styled.div`
 const MenuIcon = styled.div`
     > img {
         max-height: 30px;
-        margin-bottom: 15px;
+        margin-bottom: ${Margins.Middle};
     }
 `;
 

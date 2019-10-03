@@ -5,6 +5,7 @@ import { LinkItem, ButtonItem, DropdownItem, ItemGroup, ContactItem } from './it
 
 import { useIsMobile } from 'hooks/useIsMobile';
 import { Logos } from '@assets';
+import { Navigation } from 'theme';
 
 interface OpenProps {
     open?: boolean;
@@ -30,8 +31,8 @@ const Container = styled.nav<OpenProps>`
             `
             opacity: 1.0;
             position: fixed;
-            top: 60px;
-            height: calc(100vh - 60px);
+            top: ${Navigation.Height};
+            height: calc(100vh - ${Navigation.Height});
             left: 0;
             background-color: #181927;
             width: 100%;
@@ -83,7 +84,7 @@ export const Menu = () => {
                     },
                     {
                         name: 'Blog',
-                        target: '/resources-blog',
+                        target: '/blog',
                     },
                 ]}
             />

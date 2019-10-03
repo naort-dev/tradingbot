@@ -2,15 +2,13 @@ import styled from 'styled-components';
 import * as React from 'react';
 import { ArrowDown } from './arrow';
 import Router from 'next/router';
+import { Paddings, Margins } from 'theme';
 
 export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean }>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px ${Paddings.Large};
     border-radius: 3px;
     font-size: 15px;
     font-weight: 600;
@@ -20,6 +18,7 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
     letter-spacing: normal;
     cursor: pointer;
     max-height: 55px;
+    max-width: 200px;
     transition: 0.3s all;
     &:hover {
         opacity: 0.8;
@@ -63,14 +62,14 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
         background-color: transparent;
         border: none;
         padding-left: 0px;
-        margin-top: 10px;
+        margin-top: ${Margins.Middle};
         &:hover {
             opacity: 1.0;
-            margin-left: 5px;
+            margin-left: ${Margins.Small};
         }
     `}
     & > img {
-        margin-right: 10px;
+        margin-right: ${Margins.Middle};
     }
 
 `;

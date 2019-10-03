@@ -5,18 +5,18 @@ import { useMailChimp } from 'hooks/useMailchimp';
 import { ArrowDown } from 'components/arrow';
 import { Button } from '@components';
 import { Loader } from 'components/loader';
+import { Paddings, Margins } from 'theme';
 
 const EmailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const Text = styled.input`
     border-radius: none;
-    border: solid 1px #c4c4e2;
+    border: solid 1px ${(props) => props.theme.borderColor};
     box-shadow: none !important;
     border-right: none;
     height: 55px;
     transition: 0.3s;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px ${Paddings.Middle};
     font-size: 16px;
     color: #8686ac;
     width: 100%;
@@ -31,13 +31,14 @@ const Text = styled.input`
 `;
 
 const ButtonContainer = styled.div`
-    margin-top: 25px;
+    margin-top: ${Margins.Large};
     position: relative;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    max-width: 600px;
     & > div:first-child {
-        margin-bottom: 15px;
+        margin-bottom: ${Margins.Middle};
     }
     @media (max-width: 768px) {
         width: 100%;
@@ -50,7 +51,7 @@ const ButtonContainer = styled.div`
 
 const InputContainer = styled.div`
     flex-grow: 1;
-    margin-right: 10px;
+    margin-right: ${Margins.Middle};
     display: flex;
 `;
 

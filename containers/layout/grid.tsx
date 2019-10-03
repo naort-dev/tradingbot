@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Paddings, Margins } from 'theme';
 
 const Container = styled.div`
     display: flex;
@@ -7,8 +8,8 @@ const Container = styled.div`
 
 const Item = styled.div`
     width: 33%;
-    padding-right: 60px;
-    margin-bottom: 30px;
+    padding-right: ${Paddings.VeryLarge};
+    margin-bottom: ${Margins.Large};
     text-align: justify;
 `;
 

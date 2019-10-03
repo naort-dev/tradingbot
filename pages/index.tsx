@@ -1,14 +1,11 @@
 import React from 'react';
 import { Layout } from '@containers';
-import { HeaderImage } from './home/headerimage';
 import { HeaderCta } from './home/headercta';
 
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
-import { Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image } from '@components';
+import { Header, Button, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
 import { Screens, Illustrations, Logos } from '@assets';
-
-import { Header } from '@components';
 
 const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'easy', 'professional', 'one-click'];
 
@@ -39,7 +36,7 @@ export default () => {
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
                                 <Layout.CenterRight>
-                                    <HeaderImage />
+                                    <Image image={Screens.Imac} alt="Trality Phone Screenshot" />
                                 </Layout.CenterRight>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
@@ -109,19 +106,21 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Header title="Creators and Followers">
-                                <p>
-                                    Whether you build bots or you just want to let others do the hard work for you: on the{' '}
-                                    <b>Trality Bot Marktplace</b>, creators and followers come together to profit from each other.
-                                </p>
-                                <ul>
-                                    <li>⚡Select a bot from an expert, which matches your objectives and follow it.</li>
-                                    <li>📈Monitor your bot using our mobile app.</li>
-                                    <li>
-                                        {' '}
-                                        🛒Publish your bot to our Trality Bot Marketplace and build a follower base to generate a risk free
-                                        side-income.
-                                    </li>
-                                </ul>
+                                <TextBlock>
+                                    <p>
+                                        Whether you build bots or you just want to let others do the hard work for you: on the{' '}
+                                        <b>Trality Bot Marktplace</b>, creators and followers come together to profit from each other.
+                                    </p>
+                                    <ul>
+                                        <li>⚡Select a bot from an expert, which matches your objectives and follow it.</li>
+                                        <li>📈Monitor your bot using our mobile app.</li>
+                                        <li>
+                                            {' '}
+                                            🛒Publish your bot to our Trality Bot Marketplace and build a follower base to generate a risk free
+                                            side-income.
+                                        </li>
+                                    </ul>
+                                </TextBlock>
                                 <p>
                                     <Button>Read more</Button>
                                 </p>
@@ -183,18 +182,20 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Header title="Evolve your trading game!">
-                                <p>
-                                    The cherry on the cake with Trality: become more and more proficient with algorithmic trading while moving through
-                                    the different tools of trading bots.
-                                </p>
-                                <ul>
-                                    <li>
-                                        Move closer to mastering the art of algorithm coding by working with automatically generated Python code from
-                                        rule-based bots.
-                                    </li>
-                                    <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
-                                    <li>Make use of our detailed documentation.</li>
-                                </ul>
+                                <TextBlock>
+                                    <p>
+                                        The cherry on the cake with Trality: become more and more proficient with algorithmic trading while moving
+                                        through the different tools of trading bots.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Move closer to mastering the art of algorithm coding by working with automatically generated Python code
+                                            from rule-based bots.
+                                        </li>
+                                        <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
+                                        <li>Make use of our detailed documentation.</li>
+                                    </ul>
+                                </TextBlock>
                                 <p>
                                     <Button>Read more</Button>
                                 </p>

@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Margins } from 'theme';
 
 const Q = styled.div`
     position: relative;
     width: 100%;
-    border-bottom: 1px solid #6d7385;
+    border-bottom: 1px solid ${(props) => props.theme.borderColor};
     overflow: hidden;
 `;
 
@@ -12,8 +13,8 @@ const H = styled.div`
     font-size: 25px;
     letter-spacing: -0.5px;
     text-align: left;
-    margin: 30px 0px;
-    margin-right: 50px;
+    margin: ${Margins.Large} 0px;
+    margin-right: ${Margins.VeryLarge};
     cursor: pointer;
     @media (max-width: 768px) {
         font-size: 19px;
@@ -26,8 +27,8 @@ const A = styled.div<{ open: boolean }>`
     font-size: 15px;
     line-height: 1.53;
     text-align: left;
-    margin-right: 50px;
-    color: ${(props) => props.theme.onDark};
+    margin-right: ${Margins.VeryLarge};
+    color: ${(props) => props.theme.font};
     height: 0;
     overflow: hidden;
     opacity: 0;
@@ -46,7 +47,7 @@ const Indicator = styled.div`
     height: 19px;
     object-fit: contain;
     border-radius: 3px;
-    border: 1px solid #6d7385;
+    border: 1px solid ${(props) => props.theme.borderColor};
     position: absolute;
     right: 0px;
     top: 35px;

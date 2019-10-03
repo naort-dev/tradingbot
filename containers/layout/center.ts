@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Paddings } from 'theme';
 
 export const Center = styled.div<{ direction?: 'column' | 'row' }>`
     display: flex;
@@ -7,8 +8,7 @@ export const Center = styled.div<{ direction?: 'column' | 'row' }>`
     @media (max-width: 768px) {
         display: block;
         width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 0px ${Paddings.Large};
     }
     ${(props) =>
         props.direction &&

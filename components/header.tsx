@@ -10,7 +10,6 @@ interface Props {
 }
 
 const Container = styled.div<{ center?: boolean }>`
-    margin: 10px 0px;
     width: 100%;
     ${(props) =>
         props.center &&

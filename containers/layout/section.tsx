@@ -1,9 +1,10 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { ThemeColors } from 'theme';
+import { ThemeColors, Paddings } from 'theme';
 import { Waypoint } from 'react-waypoint';
 import { SectionCtx } from 'hooks/useSection';
 import { useDark } from 'hooks/dark';
+import { Misc } from '@util';
 
 interface SectionProps {
     fullHeight?: boolean;
@@ -13,13 +14,14 @@ interface SectionProps {
     dark?: boolean;
     noBgChange?: boolean;
     minimumPadding?: boolean;
+    defaultDark?: boolean;
 }
 
 const SectionWrapper = styled.section<SectionProps>`
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 80px 0px;
+    padding: ${Paddings.VeryLarge} 0px;
     ${(props) =>
         props.fullHeight &&
         `
@@ -38,7 +40,7 @@ const SectionWrapper = styled.section<SectionProps>`
     ${(props) =>
         props.minimumPadding &&
         `
-        padding: 20px 0px;
+        padding: ${Paddings.Large} 0px;
 
     `}
 `;
@@ -46,7 +48,7 @@ const SectionWrapper = styled.section<SectionProps>`
 const EnterDelay = 0;
 const LeaveDelay = 0;
 
-export const Section: React.FC<SectionProps> = ({ children, dark, ...props }) => {
+export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, ...props }) => {
     const [entered, setEntered] = useState(false);
     const [seen, setSeen] = useState(false);
     const darkHook = useDark();
@@ -75,11 +77,13 @@ export const Section: React.FC<SectionProps> = ({ children, dark, ...props }) =>
             } else {
                 darkHook.setDark(dark);
             }
+        } else if (props.id === 'footer' && defaultDark) {
+            darkHook.setDark(true);
         }
     }, [entered]);
 
     useEffect(() => {
-        if (typeof window !== undefined && ref.current) {
+        if (!Misc.IsServer() && ref.current) {
             const { top, bottom } = ref.current.getBoundingClientRect();
             if (window.scrollY + window.innerHeight / 2 > top + (bottom - top) / 4) {
                 setSeen(true);

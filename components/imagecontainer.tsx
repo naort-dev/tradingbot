@@ -15,10 +15,10 @@ export const ImageContainer: React.FC<Props> = ({ children }) => {
     return <Wrapper>{children}</Wrapper>;
 };
 
-export const Image: React.FC<{ image: string }> = ({ image }) => {
+export const Image: React.FC<{ image: string; alt?: string }> = ({ image, alt }) => {
     return (
         <ImageContainer>
-            <img src={image} />
+            <img src={image} alt={alt} />
         </ImageContainer>
     );
 };

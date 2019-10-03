@@ -27,9 +27,9 @@ class Trality extends App {
                                     name="description"
                                     content="We make the tools of Wall Street available to everyone - with Trality bots for all levels of experience."
                                 />
-                                <meta http-equiv="content-language" content="en" />
+                                <meta httpEquiv="content-language" content="en" />
                                 <meta name="title" content="Trality - Follow and Create Bots" />
-                                <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                                <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
                                 <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />
                                 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />

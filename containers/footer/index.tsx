@@ -7,10 +7,11 @@ import { Logos } from '@assets';
 import { Layout } from '@containers';
 import Link from 'next/link';
 import { Button, LogoList } from '@components';
+import { Margins, Paddings } from 'theme';
 
 const Wrap = styled.div`
-    margin-bottom: 15px;
-    margin-top: 45px;
+    margin-bottom: ${Margins.Middle};
+    margin-top: ${Margins.Middle};
     width: 100%;
     @media (max-width: 768px) {
         font-size: 14px;
@@ -19,8 +20,7 @@ const Wrap = styled.div`
 `;
 
 const Top = styled.div`
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: ${Paddings.Large} 0px;
     border-bottom: 1px solid ${(props) => props.theme.borderColor};
     display: flex;
     justify-content: space-between;
@@ -31,8 +31,7 @@ const Top = styled.div`
 `;
 
 const Bottom = styled.div`
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: ${Paddings.Large} 0px;
     display: flex;
     justify-content: space-between;
 `;
@@ -61,11 +60,7 @@ const R = styled.div`
 
 const LinkContainer = styled.div`
     > a {
-        color: ${(props) => props.theme.onDark};
         text-decoration: none;
-        &:hover {
-            color: #fff;
-        }
     }
     display: flex;
     flex-grow: 1;
@@ -78,7 +73,7 @@ const LinkContainer = styled.div`
 `;
 
 const LogoHeader = styled.div`
-    margin: 30px 0;
+    margin: ${Margins.Large} 0;
     color: ${(props) => props.theme.onLight};
 `;
 
@@ -101,7 +96,7 @@ export const Footer: React.FunctionComponent = () => {
                         <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
-                        <Link href="/resources-blog">
+                        <Link href="/blog">
                             <a>Blog</a>
                         </Link>
                         <Link href="/jobs">

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '@containers';
 import { useOpen } from './hooks/useOpen';
+import { Navigation, Paddings } from 'theme';
 
 interface Props {
     dark?: boolean;
@@ -21,7 +22,7 @@ const Top = styled.nav<Props>`
         left: 0;
         top: 0;
         background-color: ${(props) => props.theme.background};
-        height: 60px;
+        height: ${Navigation.Height};
         ${(props) =>
             props.open &&
             `
@@ -49,8 +50,8 @@ const Wrapper = styled((props) => <Layout.Center {...props} />)`
     z-index: 1;
     @media (max-width: 768px) {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: ${Paddings.Large};
+        padding-right: ${Paddings.Large};
         justify-content: space-between;
         display: flex;
     }

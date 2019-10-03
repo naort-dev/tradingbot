@@ -40,8 +40,6 @@ const ThreeColumnWrapper = styled.div`
     grid-column-gap: 2em;
     grid-template-areas:
         'h h h'
-        'a b c'
-        'a b c'
         'a b c';
 
     @media (max-width: 768px) {
@@ -75,10 +73,6 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
     > img {
         max-width: 100%;
     }
-    @media (max-width: 768px) {
-        margin: 0px 30px;
-        margin-bottom: 30px;
-    }
 `;
 
 const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...props }) => {
@@ -92,10 +86,6 @@ const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...
 
 const ThreeColumnHeaderWrapper = styled.div`
     grid-area: h;
-    margin-bottom: 45px;
-    @media (max-width: 768px) {
-        margin-bottom: 15px;
-    }
 `;
 
 const ThreeColumnHeader: React.FC = ({ children }) => {
