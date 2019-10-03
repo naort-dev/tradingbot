@@ -1,4 +1,4 @@
-# This is a testarticle
+# How to create your trading bot
 
 ## Header
 
