@@ -152,4 +152,32 @@ a {
     }
 }
 
+
+svg.illCreate {
+    * {
+        transition: 0.3s all;
+    }
+    .a {
+        transform: scaleX(0.8);
+        transform: translateX(-3px);
+        opacity: 0;
+
+        > rect:not(.r) {
+            transform: scaleX(0);
+        }
+    }
+    &:hover {
+        .a {
+            transform: scaleX(1);
+            transform:  translateX(0px);
+            opacity: 1;
+            > rect {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+
+
 `;

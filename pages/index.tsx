@@ -5,7 +5,7 @@ import { HeaderCta } from './home/headercta';
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
 import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
-import { Screens, Illustrations, Logos } from '@assets';
+import { Screens, Illustrations, Logos, Videos } from '@assets';
 
 const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
 
@@ -53,7 +53,7 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Code" source={Illustrations.Create} />
+                            <HeaderIcon name="Code" source={Illustrations.CreateComponent} />
                             <p>Make the most of your Python skills and rely on our cloud-based Code Editor for bots.</p>
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
@@ -77,13 +77,15 @@ export default () => {
                             items={[
                                 {
                                     name: 'Powerful Python API to code algorithms',
-                                    source: Screens.RuleBuilder,
+                                    source: Videos.CodeV1,
                                     icon: Illustrations.Create,
+                                    timeout: 11000,
                                 },
                                 {
                                     name: 'Flexible Rule Builder to build logic',
-                                    source: Screens.RuleBuilder,
+                                    source: Videos.RuleV1,
                                     icon: Illustrations.Leisure,
+                                    timeout: 10000,
                                 },
                                 {
                                     name: `Fast Backtester to optimize bots`,

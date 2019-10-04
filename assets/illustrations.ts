@@ -1,6 +1,8 @@
 import * as Follow from './images/illustrations/follow.svg';
 import * as Profit from './images/illustrations/profit.svg';
 import * as Create from './images/illustrations/create.svg';
+import CreateComponent from './images/illustrations/create';
+
 import * as Infrastructure from './images/illustrations/infrastructure.svg';
 import * as Jobs from './images/illustrations/jobs.svg';
 import * as Leisure from './images/illustrations/leisure.svg';
@@ -19,6 +21,7 @@ export const Illustrations = {
     Follow,
     Profit,
     Create,
+    CreateComponent,
     Infrastructure,
     Jobs,
     Leisure,

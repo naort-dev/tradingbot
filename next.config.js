@@ -18,19 +18,36 @@ module.exports = withCSS(
             const { isServer } = options;
             const prefix = config.assetPrefix ? config.assetPrefix : '';
 
-            config.module.rules.push({
-                test: /\.ico$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            context: '',
-                            emitFile: true,
-                            name: '[name].[ext]',
+            config.module.rules.push(
+                {
+                    test: /\.ico$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                context: '',
+                                emitFile: true,
+                                name: '[name].[ext]',
+                            },
                         },
-                    },
-                ],
-            });
+                    ],
+                },
+                {
+                    test: /\.mp4$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                context: '',
+                                emitFile: true,
+                                name: '[hash].[ext]',
+                                publicPath: `${prefix}/_next/static/videos/`,
+                                outputPath: `${isServer ? '../' : ''}static/videos/`,
+                            },
+                        },
+                    ],
+                },
+            );
             /*config.plugins.push(
                 new webpack.EnvironmentPlugin({
                     NODE_ENV: 'production',
