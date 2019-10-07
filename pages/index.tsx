@@ -5,7 +5,7 @@ import { HeaderCta } from './home/headercta';
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
 import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
-import { Screens, Illustrations, Logos } from '@assets';
+import { Screens, Illustrations, Logos, Videos } from '@assets';
 
 const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
 
@@ -36,9 +36,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight>
-                                    <Image image={Screens.PhoneMockup} alt="Trality Phone Screenshot" />
-                                </Layout.CenterRight>
+                                <Image image={Screens.V2PhoneRotDb} alt="Trality Phone Screenshot" scale={0.9} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -53,19 +51,19 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Code" source={Illustrations.Create} />
+                            <HeaderIcon name="Code" source={Illustrations.CreateComponent} />
                             <p>Make the most of your Python skills and rely on our cloud-based Code Editor for bots.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/code-editor">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Build" source={Illustrations.Leisure} />
+                            <HeaderIcon name="Build" source={Illustrations.LeisureComponent} />
                             <p>Master our Rule Builder and develop bots without the need for a single line of code.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/rule-builder">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Optimize" source={Illustrations.Rules} />
+                            <HeaderIcon name="Optimize" source={Illustrations.RulesComponent} />
                             <p>Perfect your bot with backtesting and practice trading including detailed charts and metrics.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/features">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
@@ -77,13 +75,15 @@ export default () => {
                             items={[
                                 {
                                     name: 'Powerful Python API to code algorithms',
-                                    source: Screens.RuleBuilder,
+                                    source: Videos.CodeV1,
                                     icon: Illustrations.Create,
+                                    timeout: 11000,
                                 },
                                 {
                                     name: 'Flexible Rule Builder to build logic',
-                                    source: Screens.RuleBuilder,
+                                    source: Videos.RuleV1,
                                     icon: Illustrations.Leisure,
+                                    timeout: 10000,
                                 },
                                 {
                                     name: `Fast Backtester to optimize bots`,
@@ -113,19 +113,19 @@ export default () => {
                                             <li>Algorithms will always remain visible only to the Creator</li>
                                         </ul>
                                     </TextBlock>
-                                    <KnowMore>Read more</KnowMore>
+                                    <KnowMore to="/marketplace">Read more</KnowMore>
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Layout.CenterRight>
-                                <Image image={Screens.PhoneMockup} />
-                            </Layout.CenterRight>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2PhoneFrontalA} alt="Trality Phone Screenshot" />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="foobar">
+            <Layout.Section id="safety">
                 <Layout.Center>
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
@@ -164,12 +164,12 @@ export default () => {
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>
-            <Layout.Section id="evolve" dark fullHeight>
+            <Layout.Section id="evolve" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Learning} scale={2} />
+                                <Image image={Illustrations.Evolve} scale={1.4} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -195,8 +195,8 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section dark id="trade-now" minimumPadding>
-                <Layout.Banner backgroundColor={'backgroundLight'} color={'onDark'}>
+            <Layout.Section id="trade-now" minimumPadding>
+                <Layout.Banner backgroundColor={'backgroundLight'} color={'onLight'}>
                     <Layout.Center direction="column">
                         <Header title="Start trading now!">
                             <p>Trade on a continousy growing number of exchanges. </p>

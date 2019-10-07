@@ -56,15 +56,15 @@ export const Menu = () => {
                 items={[
                     {
                         name: 'Code Editor',
-                        target: '/creator-code-editor',
+                        target: '/creator/code-editor',
                     },
                     {
                         name: 'Rule Builder',
-                        target: '/creator-rule-builder',
+                        target: '/creator/rule-builder',
                     },
                     {
                         name: 'Features',
-                        target: '/creator-features',
+                        target: '/creator/features',
                     },
                 ]}
             />
@@ -75,11 +75,11 @@ export const Menu = () => {
                 items={[
                     {
                         name: 'FAQs',
-                        target: '/resources-faq',
+                        target: '/resources/faq',
                     },
                     {
                         name: 'Documentation',
-                        target: '/product-code',
+                        target: 'https://docs.trality.com',
                     },
                     {
                         name: 'Blog',

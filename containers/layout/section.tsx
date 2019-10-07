@@ -55,12 +55,10 @@ export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, .
     const ref = useRef<HTMLDivElement>(null);
 
     const handleWaypointEnter = useCallback(() => {
-        setTimeout(() => {
-            setEntered(true);
-            if (!seen) {
-                setSeen(true);
-            }
-        }, EnterDelay);
+        setEntered(true);
+        if (!seen) {
+            setSeen(true);
+        }
     }, [seen]);
 
     const handleWaypointLeave = useCallback(() => {
@@ -86,10 +84,12 @@ export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, .
         if (!Misc.IsServer() && ref.current) {
             const { top, bottom } = ref.current.getBoundingClientRect();
             if (window.scrollY + window.innerHeight / 2 > top + (bottom - top) / 4) {
-                setSeen(true);
+                if (!seen) {
+                    setSeen(true);
+                }
             }
         }
-    }, [ref.current]);
+    }, [seen, ref.current]);
 
     return (
         <SectionCtx.Provider value={{ entered, seen }}>

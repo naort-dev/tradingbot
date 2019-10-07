@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Margins } from 'theme';
 
 interface HeaderIconProps {
     name: string;
-    source: string;
+    source: string | any;
 }
 
 const Wrapper = styled.div`
@@ -21,11 +20,10 @@ const ImgWrapper = styled.div`
 `;
 
 export const HeaderIcon: React.FC<HeaderIconProps> = ({ name, source }) => {
+    const Item = source;
     return (
         <Wrapper>
-            <ImgWrapper>
-                <img src={source} />
-            </ImgWrapper>
+            <ImgWrapper>{typeof Item === 'string' ? <img src={Item} /> : <Item />}</ImgWrapper>
             <h4>{name}</h4>
         </Wrapper>
     );

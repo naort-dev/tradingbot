@@ -6,9 +6,14 @@ interface Props {
 }
 
 const Wrapper = styled.div<Props>`
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
     > img {
-        max-width: 100%;
-        height: auto;
+        max-height: 70vh;
+        max-width: 90%;
+        width: auto;
         ${(props) =>
             props.scale &&
             `

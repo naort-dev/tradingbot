@@ -4,7 +4,16 @@ import { ArrowDown, ArrowRight } from './arrow';
 import Router from 'next/router';
 import { Paddings, Margins } from 'theme';
 
-export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; small?: boolean; dark?: boolean; border?: boolean }>`
+interface BProps {
+    hollow?: boolean;
+    knowmore?: boolean;
+    small?: boolean;
+    dark?: boolean;
+    border?: boolean;
+    onClick?: () => void;
+}
+
+export const B = styled.button<BProps>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
@@ -20,6 +29,9 @@ export const Button = styled.button<{ hollow?: boolean; knowmore?: boolean; smal
     max-width: 250px;
     transition: 0.3s all;
     box-sizing: border-box;
+    &:focus {
+        outline:0;
+    }
     ${(props) =>
         props.border &&
         `
@@ -83,8 +95,8 @@ interface Props {
     blank?: boolean;
 }
 
-export const KnowMore: React.FunctionComponent<Props> = ({ children, to, blank }) => {
-    const onClick = () => {
+export const Button: React.FunctionComponent<BProps & Props> = ({ children, to, blank, onClick, ...props }) => {
+    const onClickDefault = () => {
         if (to) {
             if (blank) {
                 window.open(to, '_blank');
@@ -93,9 +105,16 @@ export const KnowMore: React.FunctionComponent<Props> = ({ children, to, blank }
             }
         }
     };
-
     return (
-        <Button knowmore onClick={onClick}>
+        <B {...props} onClick={onClick || onClickDefault}>
+            {children}
+        </B>
+    );
+};
+
+export const KnowMore: React.FunctionComponent<Props> = ({ children, ...props }) => {
+    return (
+        <Button knowmore {...props}>
             <ArrowRight />
             {children}
         </Button>

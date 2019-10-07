@@ -1,9 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useEffect, createRef } from 'react';
 import styled from 'styled-components';
 import { Preload } from 'components/preload';
 import { useInterval } from 'hooks/useInterval';
 import { Loader, KnowMore } from '@components';
 import { Paddings, Margins } from 'theme';
+import { isObject } from 'util';
+import { useSection } from 'hooks/useSection';
 
 const SlideContainer = styled.div`
     width: 100%;
@@ -32,7 +34,6 @@ const Content = styled.div`
     flex-grow: 1;
     position: relative;
     background-color: transparent;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     @media (max-width: 768px) {
@@ -40,16 +41,31 @@ const Content = styled.div`
     }
 `;
 
-const Item = styled.img`
+const Item = styled.img<{ video?: boolean }>`
     max-width: 100%;
     height: auto;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+`;
+
+/*
+max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+*/
+
+const VideoItem = styled.video`
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
 `;
 
 const ItemWrapper = styled.div<{ visible?: boolean }>`
     display: flex;
     align-items: center;
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -129,6 +145,7 @@ interface SliderItem {
     name: string;
     source?: string;
     icon?: string;
+    timeout?: number;
 }
 
 interface SliderProps {
@@ -142,6 +159,8 @@ interface SliderProps {
 export const Slider: React.FC<SliderProps> = ({ items }) => {
     const [active, setActive] = useState(0);
     const [manual, setManual] = useState(0);
+    const ref = useRef([...Array(items.length)].map(() => createRef<HTMLVideoElement>()));
+    const { entered } = useSection();
 
     const select = (idx: number) => {
         setManual(Date.now());
@@ -149,7 +168,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
     };
 
     const next = useCallback(() => {
-        if (Date.now() - manual < 10000) {
+        if (Date.now() - manual < (items[active].timeout || 10000) + 1000) {
             return;
         }
         let next = active + 1;
@@ -159,16 +178,31 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
         setActive(next);
     }, [active, items, manual]);
 
-    useInterval(next, 5000);
+    useInterval(next, items[active].timeout || 5000);
+
+    useEffect(() => {
+        if (ref.current && ref.current[active] && ref.current[active].current) {
+            const video = ref.current[active].current;
+            if (video && video.pause) {
+                video.pause();
+                video.currentTime = 0;
+                video.load();
+            }
+        }
+    }, [active, ref.current]);
 
     return (
         <SlideContainer>
             <Content>
-                {items.map((i, idx) => (
-                    <ItemWrapper key={i.name} visible={active === idx}>
-                        <Item src={i.source} />
-                    </ItemWrapper>
-                ))}
+                {items.map((i, idx) => {
+                    const video = i.source && i.source.endsWith('.mp4');
+                    const Renderer: any = video ? VideoItem : Item;
+                    return (
+                        <ItemWrapper key={i.name} visible={active === idx} id={`vid-${idx}`}>
+                            <Renderer src={i.source} video={video} autoPlay loop muted={true} ref={ref.current[idx]} />
+                        </ItemWrapper>
+                    );
+                })}
                 <LoaderCenter>
                     <Loader show />
                 </LoaderCenter>
