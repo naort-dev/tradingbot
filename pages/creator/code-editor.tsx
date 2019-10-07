@@ -18,7 +18,9 @@ export default () => {
                                         We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Code
                                         Editor: the most advanced of its kind that leaves nothing to be desired.
                                     </TextBlock>
-                                    <Button>Start creating for free!</Button>
+                                    <Button to="https://auth.beta.trality.com/#/signup" blank>
+                                        Start creating for free!
+                                    </Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -50,7 +52,9 @@ export default () => {
                                             <li>Use numpy and other libraries (more to come!)</li>
                                         </ul>
                                     </TextBlock>
-                                    <KnowMore>Visit our Documentation</KnowMore>
+                                    <KnowMore to="https://docs.trality.com" blank>
+                                        Visit our Documentation
+                                    </KnowMore>
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>

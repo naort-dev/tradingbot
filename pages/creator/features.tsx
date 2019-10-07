@@ -23,7 +23,9 @@ export default () => {
                                         To trade profitably, you need every help you can get. At Trality, we provide you with the tools you need to
                                         succeed - from bot creation to trade execution.
                                     </TextBlock>
-                                    <Button>Try Trality for free!</Button>
+                                    <Button to="https://auth.beta.trality.com/#/signup" blank>
+                                        Try Trality for free!
+                                    </Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -48,7 +50,6 @@ export default () => {
                                             <li>Optimize strategy parameters automatically (coming soon!)</li>
                                         </ul>
                                     </TextBlock>
-                                    <KnowMore>Read more</KnowMore>
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>

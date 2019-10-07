@@ -18,7 +18,7 @@ export const DelayRenderer: React.FC<{ multiplier?: number }> = ({ multiplier, c
     return (
         <>
             {React.Children.map(children, (Child, index) => {
-                return <DelayProvider delay={index * (multiplier || 1)}>{Child}</DelayProvider>;
+                return <DelayProvider delay={(index - 1) * (multiplier || 1)}>{Child}</DelayProvider>;
             })}
         </>
     );

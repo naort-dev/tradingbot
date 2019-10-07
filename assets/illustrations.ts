@@ -20,6 +20,8 @@ import * as DebugList from './images/illustrations/debuglist.svg';
 import * as Rules from './images/illustrations/rules.svg';
 import RulesComponent from './images/illustrations/rules';
 
+import * as Evolve from './images/illustrations/evolve.svg';
+
 export const Illustrations = {
     Follow,
     Profit,
@@ -39,4 +41,5 @@ export const Illustrations = {
     DebugList,
     Rules,
     RulesComponent,
+    Evolve,
 };

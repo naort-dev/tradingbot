@@ -154,7 +154,7 @@ export const Subscribe = () => {
                     <Loader show={sending} />
                 </Confirm>
             </InputContainer>
-            <Button type="button" onClick={onClick} dark>
+            <Button onClick={onClick} dark>
                 Stay connected.
             </Button>
         </ButtonContainer>

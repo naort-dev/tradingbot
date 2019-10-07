@@ -53,17 +53,17 @@ export default () => {
                         <Layout.ThreeColumn.Column area="a">
                             <HeaderIcon name="Code" source={Illustrations.CreateComponent} />
                             <p>Make the most of your Python skills and rely on our cloud-based Code Editor for bots.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/code-editor">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
                             <HeaderIcon name="Build" source={Illustrations.LeisureComponent} />
                             <p>Master our Rule Builder and develop bots without the need for a single line of code.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/rule-builder">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
                             <HeaderIcon name="Optimize" source={Illustrations.RulesComponent} />
                             <p>Perfect your bot with backtesting and practice trading including detailed charts and metrics.</p>
-                            <KnowMore>Read more</KnowMore>
+                            <KnowMore to="/creator/features">Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
@@ -113,7 +113,7 @@ export default () => {
                                             <li>Algorithms will always remain visible only to the Creator</li>
                                         </ul>
                                     </TextBlock>
-                                    <KnowMore>Read more</KnowMore>
+                                    <KnowMore to="/marketplace">Read more</KnowMore>
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -169,7 +169,7 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Learning} scale={2} />
+                                <Image image={Illustrations.Evolve} scale={1.4} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>

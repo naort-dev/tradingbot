@@ -23,7 +23,9 @@ export default () => {
                                         Start your journey to profitable algorithmic trading with the Trality Rule Builder. Its graphical user
                                         interface lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
                                     </TextBlock>
-                                    <Button>Start building for free!</Button>
+                                    <Button to="https://auth.beta.trality.com/#/signup" blank>
+                                        Start building for free!
+                                    </Button>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -64,7 +66,7 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2Evolve} />
+                                <Image image={Screens.V2EvolveA} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>

@@ -5,6 +5,7 @@ import { useInterval } from 'hooks/useInterval';
 import { Loader, KnowMore } from '@components';
 import { Paddings, Margins } from 'theme';
 import { isObject } from 'util';
+import { useSection } from 'hooks/useSection';
 
 const SlideContainer = styled.div`
     width: 100%;
@@ -158,7 +159,8 @@ interface SliderProps {
 export const Slider: React.FC<SliderProps> = ({ items }) => {
     const [active, setActive] = useState(0);
     const [manual, setManual] = useState(0);
-    const ref = useRef([...Array(3)].map(() => createRef<HTMLVideoElement>()));
+    const ref = useRef([...Array(items.length)].map(() => createRef<HTMLVideoElement>()));
+    const { entered } = useSection();
 
     const select = (idx: number) => {
         setManual(Date.now());

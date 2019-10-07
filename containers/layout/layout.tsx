@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSection } from 'hooks/useSection';
-import { DelayRenderer } from 'hooks';
+import { DelayRenderer, useDelay } from 'hooks';
 
 const SingleColumnWrapper = styled.div`
     width: 100%;
@@ -64,7 +64,7 @@ const ThreeColumnWrapper = styled.div`
 const ThreeColumnContainer: React.FC = ({ children }) => {
     return (
         <ThreeColumnWrapper>
-            <DelayRenderer multiplier={0.25}>{children}</DelayRenderer>
+            <DelayRenderer multiplier={0.65}>{children}</DelayRenderer>
         </ThreeColumnWrapper>
     );
 };
@@ -76,11 +76,11 @@ const ThreeColumDelay = {
     c: 0.4,
 };
 
-const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boolean }>`
+const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boolean; delay: number }>`
     grid-area: ${(props) => props.area};
     opacity: 0;
     transition: 0.3s all;
-    transition-delay: ${(props) => ThreeColumDelay[props.area]}s;
+    transition-delay: ${(props) => props.delay}s;
     text-align: center;
     ${(props) =>
         props.seen &&
@@ -94,8 +94,9 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
 
 const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...props }) => {
     const { entered, seen } = useSection();
+    const { delay } = useDelay();
     return (
-        <ThreeColumnItemWrapper {...props} seen={seen}>
+        <ThreeColumnItemWrapper {...props} seen={seen} delay={delay}>
             {children}
         </ThreeColumnItemWrapper>
     );

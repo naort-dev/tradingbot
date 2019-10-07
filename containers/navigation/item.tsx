@@ -11,6 +11,8 @@ interface LinkItemProps {
     name: string;
 }
 
+const SimpleLink = styled.a``;
+
 const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
     font-size: 15px;
     font-weight: normal;
@@ -196,11 +198,22 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
                 </span>
             </DropdownButton>
             <DropdownMenu visible={(hovering && !isMobile) || menuOpen}>
-                {items.map(({ target, name }) => (
-                    <Link href={target} key={target}>
-                        <DropdownEntry>{name}</DropdownEntry>
-                    </Link>
-                ))}
+                {items.map(({ target, name }) => {
+                    const isRemote = target.startsWith('http');
+                    if (isRemote) {
+                        return (
+                            <DropdownEntry key={target} href={target} target="_blank">
+                                {name}
+                            </DropdownEntry>
+                        );
+                    } else {
+                        return (
+                            <Link href={target} key={target}>
+                                <DropdownEntry>{name}</DropdownEntry>
+                            </Link>
+                        );
+                    }
+                })}
             </DropdownMenu>
         </DropdownItemContainer>
     );

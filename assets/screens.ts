@@ -29,7 +29,8 @@ import * as V2RuleUIElements from './images/screens/v2/rule_ui_elements@3x.png';
 import * as V2UICombination from './images/screens/v2/ui_combination_v2@3x.png';
 import * as V2PhoneRotDb from './images/screens/v2/phone_rot_db@3x.png';
 import * as V2PhoneRotMp from './images/screens/v2/phone_rot_mp@3x.png';
-import * as V2Evolve from './images/screens/v2/evolve-v1@2x.png';
+import * as V2EvolveA from './images/screens/v2/evolve-v1@2x.png';
+import * as V2EvolveB from './images/screens/v2/evolve-v2@3x.png';
 import * as V2MacCode from './images/screens/v2/v2macmockup-code@3x.png';
 import * as V2MacRule from './images/screens/v2/v2macmockup-rule@3x.png';
 
@@ -59,7 +60,8 @@ export const Screens = {
     V2UICombination,
     V2PhoneRotDb,
     V2PhoneRotMp,
-    V2Evolve,
+    V2EvolveA,
+    V2EvolveB,
     V2MacCode,
     V2MacRule,
 };
