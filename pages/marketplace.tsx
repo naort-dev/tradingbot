@@ -62,12 +62,7 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="creators">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Create} scale={2} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <Header title="Creators build a follower base and generate income.">
@@ -84,6 +79,11 @@ export default () => {
                                     </TextBlock>
                                 </Header>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Create} scale={2} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -108,7 +108,7 @@ export default () => {
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Illustrations.Follow} scale={2} />
                             </Layout.CenterAllDirections>

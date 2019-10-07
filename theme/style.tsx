@@ -120,6 +120,11 @@ h5 {
 ul {
     padding-left: 0px;
     margin: ${Margins.Middle} 0px;
+    @media (max-width: 768px) {
+        text-align: left;
+        margin-left: ${Margins.Middle};
+    }
+    
 }
 
 ul li {

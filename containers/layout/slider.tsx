@@ -25,6 +25,9 @@ const Bar = styled.div`
     padding-top: ${Paddings.Middle};
     padding-left: ${Paddings.Large};
     padding-right: ${Paddings.Large};
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 `;
 
 const Content = styled.div`
@@ -93,6 +96,9 @@ const MenuItem = styled.div<{ active?: boolean }>`
     }
     @media (max-width: 768px) {
         text-align: center;
+        box-shadow: none;
+        margin: ${Margins.Large} 0;
+        padding: 0;
     }
     ${(props) =>
         props.active &&
@@ -104,6 +110,7 @@ const MenuItem = styled.div<{ active?: boolean }>`
             color: ${props.theme.font};
             background-color: transparent;
             text-align: center;
+            box-shadow: none;
         }
     `}
 `;
@@ -122,12 +129,20 @@ const MenuIcon = styled.div`
     > img {
         max-height: 30px;
         margin-bottom: ${Margins.Middle};
+
+        @media (max-width: 768px) {
+            max-height: 70px;
+            margin-top: ${Margins.Middle};
+        }
     }
 `;
 
 const MenuText = styled.div`
     font-size: 15px;
     font-weight: 500;
+    @media (max-width: 768px) {
+        color: ${(props) => props.theme.fontHeader};
+    }
 `;
 
 const LoaderCenter = styled.div`

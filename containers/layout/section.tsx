@@ -15,6 +15,7 @@ interface SectionProps {
     noBgChange?: boolean;
     minimumPadding?: boolean;
     defaultDark?: boolean;
+    collapseMobile?: boolean;
 }
 
 const SectionWrapper = styled.section<SectionProps>`
@@ -22,6 +23,9 @@ const SectionWrapper = styled.section<SectionProps>`
     justify-content: center;
     position: relative;
     padding: ${Paddings.VeryLarge} 0px;
+    @media (max-width: 768px) {
+        padding: ${Paddings.Large} 0px;
+    }
     ${(props) =>
         props.fullHeight &&
         `
@@ -42,6 +46,11 @@ const SectionWrapper = styled.section<SectionProps>`
         `
         padding: ${Paddings.Large} 0px;
 
+    `}
+    ${(props) =>
+        props.collapseMobile &&
+        `
+        min-height: auto;
     `}
 `;
 

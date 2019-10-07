@@ -40,6 +40,9 @@ const A = styled.div<{ open: boolean }>`
         margin-bottom: 23px;
     `}
     transition: all 0.5s;
+    @media (max-width: 768px) {
+        margin-right: 0;
+    }
 `;
 
 const Indicator = styled.div`

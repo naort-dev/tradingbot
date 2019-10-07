@@ -7,12 +7,7 @@ export default () => {
         <Layout.Page title="creator-rule-editor">
             <Layout.Section fullHeight noPadding id="rule-editor-description">
                 <Layout.Center>
-                    <Layout.TwoColumn width={55}>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2MacRule} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn width={55} reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
@@ -28,6 +23,11 @@ export default () => {
                                     </Button>
                                 </div>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2MacRule} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -53,7 +53,7 @@ export default () => {
                                 </TextBlock>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Screens.V2RuleUIElements} />
                             </Layout.CenterAllDirections>
@@ -63,12 +63,7 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="learn">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2EvolveA} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <TextBlock>
@@ -82,6 +77,11 @@ export default () => {
                                     </Header>
                                 </TextBlock>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2EvolveA} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

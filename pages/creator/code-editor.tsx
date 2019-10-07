@@ -24,7 +24,7 @@ export default () => {
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Screens.V2MacCode} />
                             </Layout.CenterAllDirections>
@@ -34,12 +34,7 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="python">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2CodeUI} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <Header title="Python FTW!">
@@ -57,6 +52,11 @@ export default () => {
                                     </KnowMore>
                                 </Header>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2CodeUI} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -80,7 +80,7 @@ export default () => {
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Illustrations.DebugList} scale={2} />
                             </Layout.CenterAllDirections>

@@ -7,12 +7,7 @@ export default () => {
         <Layout.Page title="creator-features">
             <Layout.Section fullHeight noPadding id="feature-description">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2CandleUI} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
@@ -28,6 +23,11 @@ export default () => {
                                     </Button>
                                 </div>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2CandleUI} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -53,7 +53,7 @@ export default () => {
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Screens.V2BacktestUIElements} />
                             </Layout.CenterAllDirections>
@@ -63,12 +63,7 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="live-trading">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneFrontalB} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
+                    <Layout.TwoColumn reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <Header title="Cloud-based live-trading.">
@@ -84,6 +79,11 @@ export default () => {
                                     </ul>
                                 </Header>
                             </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2PhoneFrontalB} />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -103,7 +103,7 @@ export default () => {
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Illustrations.Security} scale={2} />
                             </Layout.CenterAllDirections>

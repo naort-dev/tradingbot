@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSection } from 'hooks/useSection';
 import { DelayRenderer, useDelay } from 'hooks';
+import { Paddings } from 'theme';
 
-const SingleColumnWrapper = styled.div`
+const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,32 +15,43 @@ const SingleColumnWrapper = styled.div`
         text-align: center;
         min-height: 80vh;
         align-items: center;
+        height: auto;
+        ${(props) =>
+            props.collapseMobile &&
+            `
+            min-height: auto;
+            padding: ${Paddings.Large} 0;
+        `}
     }
 `;
 
 interface TwoColumnProps {
     width?: number;
+    reverted?: boolean;
 }
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
+    ${(props) =>
+        props.reverted &&
+        `
+        flex-direction: row-reverse;
+    `}
     > div:first-child {
         width: ${(props) => (props.width ? props.width : 50)}%;
         @media (max-width: 768px) {
             width: 100%;
-            height: 100%;
         }
     }
     > div:last-child {
         width: ${(props) => (props.width ? 100 - props.width : 50)}%;
         @media (max-width: 768px) {
             width: 100%;
-            height: 100%;
         }
     }
 `;
 
-export const OneColumn: React.FC = ({ children }) => {
-    return <SingleColumnWrapper>{children}</SingleColumnWrapper>;
+export const OneColumn: React.FC<{ collapseMobile?: boolean }> = ({ children, ...props }) => {
+    return <SingleColumnWrapper {...props}>{children}</SingleColumnWrapper>;
 };
 
 export const TwoColumn: React.FC<TwoColumnProps> = ({ children, ...props }) => {
@@ -70,11 +82,6 @@ const ThreeColumnContainer: React.FC = ({ children }) => {
 };
 
 type ThreeColumSelector = 'a' | 'b' | 'c';
-const ThreeColumDelay = {
-    a: 0,
-    b: 0.2,
-    c: 0.4,
-};
 
 const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boolean; delay: number }>`
     grid-area: ${(props) => props.area};
@@ -89,6 +96,10 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
     `}
     > img {
         max-width: 100%;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
     }
 `;
 

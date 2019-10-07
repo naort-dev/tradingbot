@@ -43,6 +43,9 @@ const ButtonContainer = styled.div`
         > div {
             width: 100%;
         }
+        > button {
+            margin-top: ${Margins.Large};
+        }
     }
 `;
 
