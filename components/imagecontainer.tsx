@@ -26,10 +26,7 @@ export const ImageContainer: React.FC<Props> = ({ children, ...props }) => {
     return <Wrapper {...props}>{children}</Wrapper>;
 };
 
-export const Image: React.FC<{ image: string; alt?: string; scale?: number }> = ({ image, alt, scale }) => {
-    return (
-        <ImageContainer scale={scale}>
-            <img src={image} alt={alt} />
-        </ImageContainer>
-    );
+export const Image: React.FC<{ image: string | any; alt?: string; scale?: number }> = ({ image, alt, scale }) => {
+    const Item = image;
+    return <ImageContainer scale={scale}>{typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
 };

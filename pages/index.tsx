@@ -134,18 +134,18 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Secure" source={Illustrations.Security} />
+                            <HeaderIcon name="Secure" source={Illustrations.SecurityComponent} />
                             <p>Your funds lie safely on your exchange. Trality will never touch them directly and only use official exchange APIs.</p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Cloud-based" source={Illustrations.Infrastructure} />
+                            <HeaderIcon name="Cloud-based" source={Illustrations.InfrastructureComponent} />
                             <p>
                                 Your algorithms run reliably 24/7 and never miss a trade. Trality eliminates the need to setup your own trading
                                 servers!
                             </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Encrypted" source={Illustrations.Encrypted} />
+                            <HeaderIcon name="Encrypted" source={Illustrations.EncryptedComponent} />
                             <p>
                                 Your trading strategies are end-to-end encrypted. We can't see your strategies as they are in-browser encrypted
                                 (coming soon!).
@@ -189,7 +189,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Evolve} scale={1.4} />
+                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

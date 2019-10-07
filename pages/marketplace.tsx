@@ -15,8 +15,8 @@ export default () => {
                                         Where <Highlight>Creators</Highlight> and <Highlight>Followers</Highlight> meet.
                                     </h1>
                                     <TextBlock>
-                                        We believe that coding a trading bot is pretty cool. That's why we crafted the cloud-based Trality Algorithm
-                                        Editor: the most advanced of its kind that leaves nothing to be desired.
+                                        Profit from algorithmic trading by either publishing a bot to the Trality Bot Marketplace or follow bots by
+                                        Creators.
                                     </TextBlock>
                                     <p>Let us notify you when our Marketplace is ready!</p>
                                     <Subscribe />

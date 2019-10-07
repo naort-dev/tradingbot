@@ -6,6 +6,7 @@ import { Loader, KnowMore } from '@components';
 import { Paddings, Margins } from 'theme';
 import { isObject } from 'util';
 import { useSection } from 'hooks/useSection';
+import { useIsMobile } from 'hooks/useIsMobile';
 
 const SlideContainer = styled.div`
     width: 100%;
@@ -93,6 +94,9 @@ const MenuItem = styled.div<{ active?: boolean }>`
     font-weight: 500;
     &:hover {
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+        @media (max-width: 768px) {
+            box-shadow: none;
+        }
     }
     @media (max-width: 768px) {
         text-align: center;
@@ -176,6 +180,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
     const [manual, setManual] = useState(0);
     const ref = useRef([...Array(items.length)].map(() => createRef<HTMLVideoElement>()));
     const { entered } = useSection();
+    const isMobile = useIsMobile();
 
     const select = (idx: number) => {
         setManual(Date.now());
@@ -214,7 +219,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
                     const Renderer: any = video ? VideoItem : Item;
                     return (
                         <ItemWrapper key={i.name} visible={active === idx} id={`vid-${idx}`}>
-                            <Renderer src={i.source} video={video} autoPlay loop muted={true} ref={ref.current[idx]} />
+                            <Renderer src={i.source} video={video} autoPlay={!isMobile} loop muted={true} ref={ref.current[idx]} />
                         </ItemWrapper>
                     );
                 })}
