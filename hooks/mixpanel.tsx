@@ -2,6 +2,7 @@ import * as React from 'react';
 import mixpanel from 'mixpanel-browser';
 import ReactGA from 'react-ga';
 import * as cookies from '../util/cookies';
+import { Router } from 'next/router';
 
 class MixPanelWrapper {
     private debug = false;
@@ -11,9 +12,12 @@ class MixPanelWrapper {
         if (!this.debug && this.browser) {
             mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
             mixpanel.register({
-                landingpage: 2,
+                landingpage: 3,
             });
             ReactGA.initialize('UA-137950515-1');
+            Router.events.on('routeChangeComplete', (url) => {
+                console.log(url);
+            });
         }
         if (this.shouldTrack) {
             this.startTimeouts();

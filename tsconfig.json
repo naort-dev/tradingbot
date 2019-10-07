@@ -22,7 +22,8 @@
             "@containers": ["./containers/index.ts"],
             "@components": ["./components/index.ts"],
             "@assets": ["assets/index.ts"],
-            "@util": ["util/index.ts"]
+            "@util": ["util/index.ts"],
+            "@constants": ["constants/index.ts"]
         },
         "baseUrl": ".",
         "forceConsistentCasingInFileNames": true,
