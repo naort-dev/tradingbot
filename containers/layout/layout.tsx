@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSection } from 'hooks/useSection';
+import { DelayRenderer } from 'hooks';
 
 const SingleColumnWrapper = styled.div`
     width: 100%;
@@ -61,7 +62,11 @@ const ThreeColumnWrapper = styled.div`
 `;
 
 const ThreeColumnContainer: React.FC = ({ children }) => {
-    return <ThreeColumnWrapper>{children}</ThreeColumnWrapper>;
+    return (
+        <ThreeColumnWrapper>
+            <DelayRenderer multiplier={0.25}>{children}</DelayRenderer>
+        </ThreeColumnWrapper>
+    );
 };
 
 type ThreeColumSelector = 'a' | 'b' | 'c';

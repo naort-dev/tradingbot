@@ -10,7 +10,7 @@ export default () => {
                     <Layout.TwoColumn width={55}>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.MacMockupRuleBased} />
+                                <Image image={Screens.V2MacRule} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -34,22 +34,26 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Building bots in a few minutes.">
-                                <p>
-                                    Using the Trality Rule Builder, you can turn your ideas into a profitable strategy and optimize it until you're
-                                    satisfied.
-                                </p>
-                                <ul>
-                                    <li>Build upon curated, pre-defined trading strategies</li>
-                                    <li>Select from over 100 technical indicators</li>
-                                    <li>Use boolean logic to arrange strategy parts</li>
-                                    <li>Backtest your strategy with historical data</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <TextBlock>
+                                    <Header title="Building bots in a few minutes.">
+                                        <p>
+                                            Using the Trality Rule Builder, you can turn your ideas into a profitable strategy and optimize it until
+                                            you're satisfied.
+                                        </p>
+                                        <ul>
+                                            <li>Build upon curated, pre-defined trading strategies</li>
+                                            <li>Select from over 100 technical indicators</li>
+                                            <li>Use boolean logic to arrange strategy parts</li>
+                                            <li>Backtest your strategy with historical data</li>
+                                        </ul>
+                                    </Header>
+                                </TextBlock>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.RuleBuilderV1} />
+                                <Image image={Screens.V2RuleUIElements} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -60,18 +64,22 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.RuleBuilderV1} />
+                                <Image image={Screens.V2Evolve} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Evolve from rules to code.">
-                                <p>Step up your game and turn your rule-based bots into code automatically. (coming soon!)</p>
-                                <ul>
-                                    <li>Transform built logics into Python code</li>
-                                    <li>Evolve your trading game with new skills</li>
-                                    <li>Improve your algorithms by slowly adapting code to your needs</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <TextBlock>
+                                    <Header title="Evolve from rules to code.">
+                                        <p>Step up your game and turn your rule-based bots into code automatically. (coming soon!)</p>
+                                        <ul>
+                                            <li>Transform built logics into Python code</li>
+                                            <li>Evolve your trading game with new skills</li>
+                                            <li>Improve your algorithms by slowly adapting code to your needs</li>
+                                        </ul>
+                                    </Header>
+                                </TextBlock>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

@@ -25,7 +25,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.PhoneMockup} />
+                                <Image image={Screens.V2PhoneRotMp} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -63,19 +63,27 @@ export default () => {
             <Layout.Section id="creators">
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Creators build a follower base and generate income.">
-                                <p>
-                                    Publish your bot on the Trality Bot Marketplace. For every follower you are rewarded a monthly rent for your
-                                    effort.
-                                </p>
-                                <ul>
-                                    <li>Generate income without the need for large initial funds - only your trading idea counts</li>
-                                    <li>Stay in touch with your followers and improve your bot together</li>
-                                    <li>Your algorithm will never be revealed to anyone.</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Create} scale={2} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterVertical>
+                                <Header title="Creators build a follower base and generate income.">
+                                    <TextBlock>
+                                        <p>
+                                            Publish your bot on the Trality Bot Marketplace. For every follower you are rewarded a monthly rent for
+                                            your effort.
+                                        </p>
+                                        <ul>
+                                            <li>Generate income without the need for large initial funds - only your trading idea counts</li>
+                                            <li>Stay in touch with your followers and improve your bot together</li>
+                                            <li>Your algorithm will never be revealed to anyone.</li>
+                                        </ul>
+                                    </TextBlock>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -84,19 +92,27 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Followers profit from a quality-screened Creator bot.">
-                                <p>
-                                    Using Trality is not a black box. Choose from well-documented expert bots and follow the one which matches your
-                                    objectives.
-                                </p>
-                                <ul>
-                                    <li>Connect to your favorite crypto exchange</li>
-                                    <li>The bot automatically starts trading for you</li>
-                                    <li>Receive updates to your bot from Creators</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Followers profit from a quality-screened Creator bot.">
+                                    <TextBlock>
+                                        <p>
+                                            Using Trality is not a black box. Choose from well-documented expert bots and follow the one which matches
+                                            your objectives.
+                                        </p>
+                                        <ul>
+                                            <li>Connect to your favorite crypto exchange</li>
+                                            <li>The bot automatically starts trading for you</li>
+                                            <li>Receive updates to your bot from Creators</li>
+                                        </ul>
+                                    </TextBlock>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn></Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Follow} scale={2} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>

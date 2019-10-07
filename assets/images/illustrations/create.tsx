@@ -1,47 +1,48 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
 import { useSection } from 'hooks/useSection';
-import * as animations from './animations';
+import { Animator } from './animations';
+import { useDelay } from 'hooks';
 
-const Svg = styled.svg<{ seen?: boolean }>`
-    > g {
-        > g.left {
-            opacity: 0;
-            > rect:not(.r) {
-                opacity: 0;
-            }
-        }
-        > g.right {
-            opacity: 0;
-        }
-    }
-    ${(props) =>
-        props.seen &&
-        css`
-            > g 
-                g.left {
-                    animation: ${animations.translationFromRight} 0.3s ease-in-out 0s 1;
-                    animation-name: ${animations.translationFromRight},${animations.opacity};
-                    animation-fill-mode: forwards;
-                    > rect:not(.r) {
-                        animation: ${animations.scaling} 0.3s ease-in-out 0.3s 1;
-                        animation-name: ${animations.scaling},${animations.opacity};
-                        animation-fill-mode: forwards;
-                    }
-                }
-                g.right {
-                    animation: ${animations.translationFromLeft},${animations.opacity} 0.2s ease-in-out 0.2s 1;
-                    animation-name: ${animations.translationFromLeft},${animations.opacity};
-                    animation-fill-mode: forwards;
-                }
-            }
-        `}
+const Svg = styled.svg<{ seen?: boolean; delay: number }>`
+    ${Animator.Animate('> g > g.left')
+        .TranslateX(25)
+        .Render()}
+    ${Animator.Animate('> g > g.right')
+        .TranslateX(-25)
+        .Delay(0.4)
+        .Render()}
+    ${Animator.Animate('> g > g.left > rect:nth-child(3)', 1)
+        .ScaleX(0.001)
+        .Delay(0.45)
+        .Render()}
+    ${Animator.Animate('> g > g.left > rect:nth-child(4)', 1)
+        .ScaleX(0.001)
+        .Delay(0.5)
+        .Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(5)', 1)
+            .ScaleX(0.001)
+            .Delay(0.55)
+            .Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(6)', 1)
+            .ScaleX(0.001)
+            .Delay(0.6)
+            .Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(7)', 1)
+            .ScaleX(0.001)
+            .Delay(0.65)
+            .Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(8)', 1)
+            .ScaleX(0.001)
+            .Delay(0.7)
+            .Render()}
 `;
 
 export default () => {
     const { seen } = useSection();
+    const { delay } = useDelay();
     return (
-        <Svg xmlns="http://www.w3.org/2000/svg" width="88" height="64" seen={seen}>
+        <Svg xmlns="http://www.w3.org/2000/svg" width="88" height="64" seen={seen} delay={delay || 0}>
             <g fill="none" fillRule="evenodd">
                 <g className="left" fillRule="nonzero">
                     <path fill="#9D9DBF" d="M43 0h14.477a4 4 0 014 4v55.183a4 4 0 01-4 4H43a4 4 0 01-4-4V4a4 4 0 014-4z" opacity=".1" />

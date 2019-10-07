@@ -6,6 +6,8 @@ import CreateComponent from './images/illustrations/create';
 import * as Infrastructure from './images/illustrations/infrastructure.svg';
 import * as Jobs from './images/illustrations/jobs.svg';
 import * as Leisure from './images/illustrations/leisure.svg';
+import LeisureComponent from './images/illustrations/leisure';
+
 import * as Lost from './images/illustrations/lost.svg';
 import * as Marketplace from './images/illustrations/marketplace.svg';
 import * as Security from './images/illustrations/security.svg';
@@ -16,6 +18,7 @@ import * as Learning from './images/illustrations/learning.svg';
 import * as Debug from './images/illustrations/debug.svg';
 import * as DebugList from './images/illustrations/debuglist.svg';
 import * as Rules from './images/illustrations/rules.svg';
+import RulesComponent from './images/illustrations/rules';
 
 export const Illustrations = {
     Follow,
@@ -25,6 +28,7 @@ export const Illustrations = {
     Infrastructure,
     Jobs,
     Leisure,
+    LeisureComponent,
     Lost,
     Marketplace,
     Security,
@@ -34,4 +38,5 @@ export const Illustrations = {
     Debug,
     DebugList,
     Rules,
+    RulesComponent,
 };

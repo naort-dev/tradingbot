@@ -10,7 +10,7 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.BacktestH1} />
+                                <Image image={Screens.V2CandleUI} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
@@ -34,25 +34,27 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Blazing-fast backtesting.">
-                                <TextBlock>
-                                    <p>
-                                        Backtesting is at the heart of every bot creation iteration. That's why we made it as fast as possible and
-                                        provide debugging features you'll find nowhere else.
-                                    </p>
-                                    <ul>
-                                        <li>Improve your algorithms with in-browser backtesting</li>
-                                        <li>Chose individual time frames or automated scenario tests</li>
-                                        <li>Use breakpoints or events when debugging (coming soon!)</li>
-                                        <li>Optimize strategy parameters automatically (coming soon!)</li>
-                                    </ul>
-                                </TextBlock>
-                                <KnowMore>Read more</KnowMore>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Blazing-fast backtesting.">
+                                    <TextBlock>
+                                        <p>
+                                            Backtesting is at the heart of every bot creation iteration. That's why we made it as fast as possible and
+                                            provide debugging features you'll find nowhere else.
+                                        </p>
+                                        <ul>
+                                            <li>Improve your algorithms with in-browser backtesting</li>
+                                            <li>Chose individual time frames or automated scenario tests</li>
+                                            <li>Use breakpoints or events when debugging (coming soon!)</li>
+                                            <li>Optimize strategy parameters automatically (coming soon!)</li>
+                                        </ul>
+                                    </TextBlock>
+                                    <KnowMore>Read more</KnowMore>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.BacktestV1} />
+                                <Image image={Screens.V2BacktestUIElements} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -63,22 +65,24 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.BacktestV1} />
+                                <Image image={Screens.V2PhoneFrontalB} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Header title="Cloud-based live-trading.">
-                                <p>
-                                    Trading bots should not miss a single trade and need to run 24/7. Our infrastructure is built for fast and
-                                    reliable execution of your strategies.
-                                </p>
-                                <ul>
-                                    <li>Rely on our infrastructure located in multiple regions - close to your favourite crypto exchange.</li>
-                                    <li>No more maintenance and setup of your own servers</li>
-                                    <li>Direct and reliable access to tickers, orderbooks and more</li>
-                                    <li>Access your bots on web and mobile</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Cloud-based live-trading.">
+                                    <p>
+                                        Trading bots should not miss a single trade and need to run 24/7. Our infrastructure is built for fast and
+                                        reliable execution of your strategies.
+                                    </p>
+                                    <ul>
+                                        <li>Rely on our infrastructure located in multiple regions - close to your favourite crypto exchange.</li>
+                                        <li>No more maintenance and setup of your own servers</li>
+                                        <li>Direct and reliable access to tickers, orderbooks and more</li>
+                                        <li>Access your bots on web and mobile</li>
+                                    </ul>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
@@ -87,14 +91,16 @@ export default () => {
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
-                            <Header title="Complete safety of funds.">
-                                <p>Your funds' safety lie at the heart of our business and we will do anything to protect them.</p>
-                                <ul>
-                                    <li>Trality never touches your funds directly, bots merely send trading signals to your trusted exchange</li>
-                                    <li>Withdrawal-enabled API keys will always be rejected</li>
-                                    <li>All bots and algorithms are completely sandboxed and are stored encrypted</li>
-                                </ul>
-                            </Header>
+                            <Layout.CenterVertical>
+                                <Header title="Complete safety of funds.">
+                                    <p>Your funds' safety lie at the heart of our business and we will do anything to protect them.</p>
+                                    <ul>
+                                        <li>Trality never touches your funds directly, bots merely send trading signals to your trusted exchange</li>
+                                        <li>Withdrawal-enabled API keys will always be rejected</li>
+                                        <li>All bots and algorithms are completely sandboxed and are stored encrypted</li>
+                                    </ul>
+                                </Header>
+                            </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>

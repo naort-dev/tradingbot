@@ -36,9 +36,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Layout.CenterRight>
-                                    <Image image={Screens.PhoneMockup} alt="Trality Phone Screenshot" />
-                                </Layout.CenterRight>
+                                <Image image={Screens.V2PhoneRotDb} alt="Trality Phone Screenshot" scale={0.9} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -58,12 +56,12 @@ export default () => {
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Build" source={Illustrations.Leisure} />
+                            <HeaderIcon name="Build" source={Illustrations.LeisureComponent} />
                             <p>Master our Rule Builder and develop bots without the need for a single line of code.</p>
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Optimize" source={Illustrations.Rules} />
+                            <HeaderIcon name="Optimize" source={Illustrations.RulesComponent} />
                             <p>Perfect your bot with backtesting and practice trading including detailed charts and metrics.</p>
                             <KnowMore>Read more</KnowMore>
                         </Layout.ThreeColumn.Column>
@@ -120,14 +118,14 @@ export default () => {
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
                         <Layout.OneColumn>
-                            <Layout.CenterRight>
-                                <Image image={Screens.PhoneMockup} />
-                            </Layout.CenterRight>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2PhoneFrontalA} alt="Trality Phone Screenshot" />
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="foobar">
+            <Layout.Section id="safety">
                 <Layout.Center>
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
@@ -166,7 +164,7 @@ export default () => {
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>
-            <Layout.Section id="evolve" dark fullHeight>
+            <Layout.Section id="evolve" fullHeight>
                 <Layout.Center>
                     <Layout.TwoColumn>
                         <Layout.OneColumn>
@@ -197,8 +195,8 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section dark id="trade-now" minimumPadding>
-                <Layout.Banner backgroundColor={'backgroundLight'} color={'onDark'}>
+            <Layout.Section id="trade-now" minimumPadding>
+                <Layout.Banner backgroundColor={'backgroundLight'} color={'onLight'}>
                     <Layout.Center direction="column">
                         <Header title="Start trading now!">
                             <p>Trade on a continousy growing number of exchanges. </p>

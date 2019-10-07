@@ -33,7 +33,6 @@ const Content = styled.div`
     flex-grow: 1;
     position: relative;
     background-color: transparent;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     @media (max-width: 768px) {
@@ -44,21 +43,28 @@ const Content = styled.div`
 const Item = styled.img<{ video?: boolean }>`
     max-width: 100%;
     height: auto;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
 `;
 
-const VideoItem = styled.video`
-    max-width: 100%;
+/*
+max-width: 100%;
     height: auto;
     position: absolute;
     left: 0;
     top: 0;
+*/
+
+const VideoItem = styled.video`
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
 `;
 
 const ItemWrapper = styled.div<{ visible?: boolean }>`
     display: flex;
     align-items: center;
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -191,7 +197,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
                     const Renderer: any = video ? VideoItem : Item;
                     return (
                         <ItemWrapper key={i.name} visible={active === idx} id={`vid-${idx}`}>
-                            <Renderer src={i.source} video={video} autoPlay loop muted ref={ref.current[idx]} />
+                            <Renderer src={i.source} video={video} autoPlay loop muted={true} ref={ref.current[idx]} />
                         </ItemWrapper>
                     );
                 })}
