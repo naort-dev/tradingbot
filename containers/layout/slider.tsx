@@ -26,6 +26,7 @@ const Bar = styled.div`
     padding-top: ${Paddings.Middle};
     padding-left: ${Paddings.Large};
     padding-right: ${Paddings.Large};
+    user-select: none;
     @media (max-width: 768px) {
         padding: 0;
     }
@@ -60,14 +61,17 @@ max-width: 100%;
 */
 
 const VideoItem = styled.video`
-    width: 100%;
     height: 100%;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+    @media (max-width: 1100px) {
+        height: auto;
+        width: 100%;
+    }
 `;
 
 const ItemWrapper = styled.div<{ visible?: boolean }>`
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -80,6 +84,15 @@ const ItemWrapper = styled.div<{ visible?: boolean }>`
         `
         opacity: 1;
     `}
+`;
+
+const ShadowWrapper = styled.div`
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    height: calc(100% - 30px);
+    @media (max-width: 1100px) {
+        height: auto;
+        width: calc(100% - 30px);
+    }
 `;
 
 const MenuItem = styled.div<{ active?: boolean }>`
@@ -198,7 +211,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
         setActive(next);
     }, [active, items, manual]);
 
-    useInterval(next, items[active].timeout || 5000);
+    //useInterval(next, items[active].timeout || 5000);
 
     useEffect(() => {
         if (ref.current && ref.current[active] && ref.current[active].current) {
@@ -219,7 +232,9 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
                     const Renderer: any = video ? VideoItem : Item;
                     return (
                         <ItemWrapper key={i.name} visible={active === idx} id={`vid-${idx}`}>
-                            <Renderer src={i.source} video={video} autoPlay={!isMobile} loop muted={true} ref={ref.current[idx]} />
+                            <ShadowWrapper>
+                                <Renderer src={i.source} video={video} autoPlay={!isMobile} loop muted={true} ref={ref.current[idx]} />
+                            </ShadowWrapper>
                         </ItemWrapper>
                     );
                 })}
