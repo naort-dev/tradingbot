@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 interface Props {
     scale?: number;
+    marginLeft?: number;
+    marginTop?: number;
 }
 
 const Wrapper = styled.div<Props>`
@@ -19,6 +21,16 @@ const Wrapper = styled.div<Props>`
             `
             transform: scale(${props.scale});
         `}
+        ${(props) =>
+            props.marginLeft &&
+            `
+            margin-left: ${props.marginLeft}px;
+        `}
+        ${(props) =>
+            props.marginTop &&
+            `
+            margin-top: ${props.marginTop}px;
+        `}
     }
 `;
 
@@ -26,7 +38,16 @@ export const ImageContainer: React.FC<Props> = ({ children, ...props }) => {
     return <Wrapper {...props}>{children}</Wrapper>;
 };
 
-export const Image: React.FC<{ image: string | any; alt?: string; scale?: number }> = ({ image, alt, scale }) => {
+export const Image: React.FC<{ image: string | any; alt?: string; scale?: number; marginLeft?: number; marginTop?: number }> = ({
+    image,
+    alt,
+    scale,
+    ...props
+}) => {
     const Item = image;
-    return <ImageContainer scale={scale}>{typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
+    return (
+        <ImageContainer scale={scale} {...props}>
+            {typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}
+        </ImageContainer>
+    );
 };

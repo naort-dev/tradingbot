@@ -98,7 +98,7 @@ interface Props {
 export const Button: React.FunctionComponent<BProps & Props> = ({ children, to, blank, onClick, ...props }) => {
     const onClickDefault = () => {
         if (to) {
-            if (blank) {
+            if (blank || to.startsWith('http')) {
                 window.open(to, '_blank');
             } else {
                 Router.push(to);

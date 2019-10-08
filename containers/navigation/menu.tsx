@@ -92,9 +92,9 @@ export const Menu = () => {
                 <ButtonItem name="Signup" target="https://auth.beta.trality.com/#/signup" />
             </ItemGroup>
             <ItemGroup>
-                <ContactItem name="Telegram" source={Logos.Telegram} target="/" />
-                <ContactItem name="Twitter" source={Logos.Twitter} target="/" />
-                <ContactItem name="Medium" source={Logos.Medium} target="/" />
+                <ContactItem name="Telegram" source={Logos.Telegram} target="https://t.me/trality" />
+                <ContactItem name="Twitter" source={Logos.Twitter} target="https://twitter.com/trality_bots" />
+                <ContactItem name="Medium" source={Logos.Medium} target="https://medium.com/trality" />
             </ItemGroup>
         </Container>
     );
