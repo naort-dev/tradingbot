@@ -138,7 +138,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     flex-direction: column;
     align-items: flex-start;
     white-space: nowrap;
-    z-index: 1;
+    z-index: 1003;
     padding: 10px 0px;
     display: none;
     border-radius: 5px;

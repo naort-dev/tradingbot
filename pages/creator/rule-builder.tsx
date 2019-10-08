@@ -32,10 +32,10 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="detail">
+            <Layout.Section id="detail" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <TextBlock>
                                     <Header title="Building bots in a few minutes.">
@@ -61,10 +61,10 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="learn">
+            <Layout.Section id="learn" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn reverted collapseMobile>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <TextBlock>
                                     <Header title="Evolve from rules to code.">

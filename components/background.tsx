@@ -5,10 +5,6 @@ import { Navigation } from 'theme';
 const Container = styled.div`
     background-color: ${(props) => props.theme.background};
     transition: 0.3s all;
-    > section,
-    > div {
-        z-index: 1;
-    }
     @media (max-width: 768px) {
         > section:nth-child(2) {
             margin-top: ${Navigation.Height};

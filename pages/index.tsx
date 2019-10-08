@@ -174,7 +174,12 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="evolve" fullHeight collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Evolve your algorithmic trading game!">
@@ -194,11 +199,6 @@ export default () => {
                                     </TextBlock>
                                 </Header>
                             </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
-                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

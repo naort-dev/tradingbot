@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Blog } from './types';
 import { decode } from '@util';
+import { Margins } from 'theme';
 
 interface Props {
     article: Blog;
@@ -31,6 +32,15 @@ const ContentContainer = styled.div`
     }
     p < img {
         text-align: center;
+    }
+    p {
+        margin: ${Margins.Middle} 0;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        color: ${(props) => props.theme.borderColor};
+        background-color: ${(props) => props.theme.borderColor};
     }
 `;
 
