@@ -1,6 +1,7 @@
 export enum Events {
     Signup = 'signup_initiated',
     Subscribed = 'subscribe_completed',
+    Pageview = 'pageview',
 }
 
 export enum SignupOrigins {
