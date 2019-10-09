@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import * as React from 'react';
 import { ArrowDown, ArrowRight } from './arrow';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import { Paddings, Margins } from 'theme';
+import { useMixpanel } from 'hooks/mixpanel';
+import { Events } from '@constants';
 
 interface BProps {
     hollow?: boolean;
@@ -90,16 +92,27 @@ export const B = styled.button<BProps>`
 
 `;
 
-interface Props {
+export interface ButtonProps {
     to?: string;
     blank?: boolean;
+    attributes?: { [key: string]: string };
+    event?: Events;
 }
 
-export const Button: React.FunctionComponent<BProps & Props> = ({ children, to, blank, onClick, ...props }) => {
+export const Button: React.FunctionComponent<BProps & ButtonProps> = ({ children, to, blank, attributes, event, onClick, ...props }) => {
+    const mixpanel = useMixpanel();
+    const router = useRouter();
     const onClickDefault = () => {
+        if (event) {
+            if (!attributes) {
+                attributes = {};
+            }
+            attributes.page = router.pathname;
+            mixpanel.track(event, attributes);
+        }
         if (to) {
             if (blank || to.startsWith('http')) {
-                window.open(to, '_blank');
+                window.open(mixpanel.AppendDistinctId(to), '_blank');
             } else {
                 Router.push(to);
             }
@@ -112,7 +125,7 @@ export const Button: React.FunctionComponent<BProps & Props> = ({ children, to, 
     );
 };
 
-export const KnowMore: React.FunctionComponent<Props> = ({ children, ...props }) => {
+export const KnowMore: React.FunctionComponent<ButtonProps> = ({ children, ...props }) => {
     return (
         <Button knowmore {...props}>
             <ArrowRight />

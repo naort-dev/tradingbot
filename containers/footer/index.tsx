@@ -8,6 +8,7 @@ import { Layout } from '@containers';
 import Link from 'next/link';
 import { Button, LogoList } from '@components';
 import { Margins, Paddings } from 'theme';
+import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 const Wrap = styled.div`
     margin-bottom: ${Margins.Middle};
@@ -78,14 +79,6 @@ const LogoHeader = styled.div`
 `;
 
 export const Footer: React.FunctionComponent = () => {
-    let mixpanel = useMixpanel();
-    const onClickTwitter = React.useCallback(() => {
-        mixpanel.track('clickedOnTwitterBottom');
-        window.open('https://twitter.com/trality_bots', '_blank');
-    }, []);
-    const linkTo = React.useCallback((id: string) => {
-        scrollIt(document.querySelector(id), 300, 'easeOutQuad', () => mixpanel.track(`clicked${id}`));
-    }, []);
     const { dark } = useDark();
 
     return (
@@ -111,8 +104,14 @@ export const Footer: React.FunctionComponent = () => {
                         <Link href="/terms">
                             <a>Terms</a>
                         </Link>
-                        <a href="https://auth.beta.trality.com/#/signup" target="_blank">
-                            <Button>Join now</Button>
+                        <a>
+                            <Button
+                                to="https://auth.beta.trality.com/#/signup"
+                                event={Events.Signup}
+                                attributes={SignupAttribute(SignupOrigins.Footer)}
+                            >
+                                Join now
+                            </Button>
                         </a>
                     </LinkContainer>
                 </Top>

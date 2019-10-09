@@ -1,6 +1,7 @@
 import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock } from '@components';
 import { Screens } from '@assets';
+import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 export default () => {
     return (
@@ -18,7 +19,12 @@ export default () => {
                                         Start your journey to profitable algorithmic trading with the Trality Rule Builder. Its graphical user
                                         interface lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
                                     </TextBlock>
-                                    <Button to="https://auth.beta.trality.com/#/signup" blank>
+                                    <Button
+                                        to="https://auth.beta.trality.com/#/signup"
+                                        blank
+                                        event={Events.Signup}
+                                        attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                    >
                                         Start building for free!
                                     </Button>
                                 </div>
