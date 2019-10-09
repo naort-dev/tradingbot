@@ -4,9 +4,7 @@
 
 On this warm and sunny late-summer day we are very happy to announce another milestone release of our Beta with you. Today, we launched the possibility to live-trade with bots on Trality. Creators can now let their bots trade on their Binance account, 24/7, cloud-based, for free! ✌️
 
-![updates #4](./assets/asset_5.png)
-
-**[Join our Beta!]**(https://auth.beta.trality.com/#/signup)
+**[Join our Beta!](https://auth.beta.trality.com/#/signup)**
 
 ## What went in to this release?
 

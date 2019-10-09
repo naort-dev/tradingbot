@@ -4,8 +4,6 @@
 
 It’s spring and our list of followers is steadily growing. This can only mean one thing: it’s time to kick off this mailing list! Welcome to the first ever Trality updates — your one-stop shop for everything we’ve been up to lately. Hope you enjoy! ✌️
 
-![updates #1](./assets/asset_2.png)
-
 ## The product development timeline
 
 First things first: when do we finally launch?!

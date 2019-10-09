@@ -4,11 +4,9 @@
 
 A warm welcome to the Trality updates — coming to you now on a regular first-week-of-the-month-basis! Today, we briefly want to share with you: a) our gratitude and b) the progress that has been made during the first two weeks of our Beta. Enjoy! ✌️
 
-![updates #3](./assets/asset_4.png)
-
 ## A token of our gratitude:
 
-We are overwhelmed with the response we have received from our ever growing community of Trality users. Even though this current Beta release targets the specialized group people who really love to dive deep into algorithms and want to code amazing trading bots using Python, we have already enjoyed significant user growth and received so much valuable feedback. For everyone, who would still like to join our Beta, there’s no time like the present: **[Join our Beta!]**(https://auth.beta.trality.com/#/signup)
+We are overwhelmed with the response we have received from our ever growing community of Trality users. Even though this current Beta release targets the specialized group people who really love to dive deep into algorithms and want to code amazing trading bots using Python, we have already enjoyed significant user growth and received so much valuable feedback. For everyone, who would still like to join our Beta, there’s no time like the present: **[Join our Beta!](https://auth.beta.trality.com/#/signup)**
 
 ## Beta progress so far: we’ve listened to your feedback
 

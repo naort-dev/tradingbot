@@ -6,11 +6,9 @@ Yes, it’s been a while since you heard from us, but we’ve been busy building
 
 Let’s fill you in on the details! ✌️
 
-![updates #2](./assets/asset_3.png)
-
 ## This Beta version is perfect for…
 
-…people who really love to dive deep into algorithms and want to code amazing trading bots: quants, mathematicians, statisticians or people who generally love quantitative problem solving. To all of you we say: try our Beta! To all non-coders we say: check out the outlook section below, soon we will release features which let you profit from bots without the need a single line of code! **[Join our Beta!]**(https://auth.beta.trality.com/#/signup)
+…people who really love to dive deep into algorithms and want to code amazing trading bots: quants, mathematicians, statisticians or people who generally love quantitative problem solving. To all of you we say: try our Beta! To all non-coders we say: check out the outlook section below, soon we will release features which let you profit from bots without the need a single line of code! **[Join our Beta!](https://auth.beta.trality.com/#/signup)**
 
 ## Key feature: the code-based Trality Bot Creator
 
