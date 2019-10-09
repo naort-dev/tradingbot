@@ -7,7 +7,7 @@ export default () => {
         <Layout.Page title="creator-code-editor">
             <Layout.Section fullHeight noPadding id="description">
                 <Layout.Center>
-                    <Layout.TwoColumn width={40}>
+                    <Layout.TwoColumn columnWidth={40}>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>

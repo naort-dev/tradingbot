@@ -7,7 +7,7 @@ export default () => {
         <Layout.Page title="creator-rule-editor">
             <Layout.Section fullHeight noPadding id="rule-editor-description">
                 <Layout.Center>
-                    <Layout.TwoColumn width={55} reverted>
+                    <Layout.TwoColumn columnWidth={55} reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>

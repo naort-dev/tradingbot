@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Blog } from './types';
-import { decode } from '@util';
+import { decode, Misc } from '@util';
 import { Margins } from 'theme';
 
 interface Props {
@@ -44,11 +44,23 @@ const ContentContainer = styled.div`
     }
 `;
 
+const HeaderBar = styled.div`
+    width: 100%;
+    margin: ${Margins.Large} 0;
+    > span:first-child {
+        margin-right: ${Margins.Large};
+    }
+`;
+
 export const BlogContent: React.FC<Props> = ({ article }) => {
     const html = decode(article.content);
     return (
         <Container>
             <HeaderImage image={article.image} />
+            <HeaderBar>
+                <span>{article.author}</span>
+                <span>{Misc.FormatDate(article.date)}</span>
+            </HeaderBar>
             <ContentContainer dangerouslySetInnerHTML={{ __html: html }} />
         </Container>
     );

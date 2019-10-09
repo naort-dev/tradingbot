@@ -1,4 +1,4 @@
-# We got Big Plans
+# We've got Big Plans
 
 ### A first view on the product development roadmap of Trality.
 
@@ -38,6 +38,11 @@ Of course, we have many more features planned for Trality, such as ML-based bot 
 
 ### Quick Summary:
 
--\*April:** we started private Beta with limited feature range (minimum viable product) for extensive user testing -**End of May:** we complete the private Beta -**June:** we offer exclusive Beta access to the Trality Bot Creator for early users -**Mid June:** we start the public Beta of the Trality Bot Creator -**July:** we start the public Beta of the Trality Bot Marketplace -**End of Summer:\*\* we complete the public Beta
+-   **April:** we started private Beta with limited feature range (minimum viable product) for extensive user testing
+-   **End of May:** we complete the private Beta
+-   **June:** we offer exclusive Beta access to the Trality Bot Creator for early users
+-   **Mid June:** we start the public Beta of the Trality Bot Creator
+-   **July:** we start the public Beta of the Trality Bot Marketplace
+-   **End of Summer** we complete the public Beta
 
-That’s all for now, I hope this update made our plans a bit clearer for you and I hope you enjoyed reading it. Lastly, if you have experience in coding python-based trading algorithms and want to **become a private Beta tester** as well, contact us at hello[]trality.com. Thanks! ✌️
+That’s all for now, I hope this update made our plans a bit clearer for you and I hope you enjoyed reading it. Lastly, if you have experience in coding python-based trading algorithms and want to **become a private Beta tester** as well, contact us at hello\[at\]trality.com. Thanks! ✌️

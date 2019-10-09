@@ -12,6 +12,7 @@ const SlideContainer = styled.div`
     width: 100%;
     height: 500px;
     display: flex;
+    margin-left: -${Margins.Large};
     @media (max-width: 768px) {
         justify-content: center;
     }
@@ -24,7 +25,7 @@ const Bar = styled.div`
     align-items: center;
     justify-content: center;
     padding-top: ${Paddings.Middle};
-    padding-left: ${Paddings.Large};
+    padding-left: 0;
     padding-right: ${Paddings.Large};
     user-select: none;
     @media (max-width: 768px) {
@@ -72,6 +73,8 @@ const ItemWrapper = styled.div<{ visible?: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: flex-end;
+    padding-right: ${Margins.Large};
     height: 100%;
     width: 100%;
     position: absolute;

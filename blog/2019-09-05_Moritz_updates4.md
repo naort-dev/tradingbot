@@ -29,4 +29,4 @@ Looking forward, we have many more great releases planned for the near future, s
 
 We are starting to build up our sales and marketing channels so to grow our user base beyond amazing Beta users. As our sales and (growth-) marketing experience is still limited, we are looking for help with this topic. We appreciate any introductions to people who might be interested to help/collaborate.
 
-[Mail us directly with any leads ->](hello@trality.com)
+[Mail us directly with any leads ->](mailto:hello@trality.com)
