@@ -20,7 +20,7 @@ const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
             props.collapseMobile &&
             `
             min-height: auto;
-            padding: ${Paddings.Large} 0;
+            padding: ${Paddings.Middle} 0;
         `}
     }
 `;
@@ -28,6 +28,9 @@ const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
 interface TwoColumnProps {
     width?: number;
     reverted?: boolean;
+    mobileWithHeader?: boolean;
+    mobileReverted?: boolean;
+    collapseMobile?: boolean;
 }
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
@@ -35,6 +38,10 @@ const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
         props.reverted &&
         `
         flex-direction: row-reverse;
+        ${props.mobileReverted !== undefined &&
+            `
+            flex-direction: ${props.mobileReverted ? 'row-reverse' : 'row'};
+        `}
     `}
     > div:first-child {
         width: ${(props) => (props.width ? props.width : 50)}%;

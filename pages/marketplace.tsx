@@ -60,10 +60,15 @@ export default () => {
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="creators">
+            <Layout.Section id="creators" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Create} scale={2} mobileScale={1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Creators build a follower base and generate income.">
                                     <TextBlock>
@@ -80,18 +85,18 @@ export default () => {
                                 </Header>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Create} scale={2} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="followers">
+            <Layout.Section id="followers" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Follow} scale={2} mobileScale={1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Followers profit from a quality-screened Creator bot.">
                                     <TextBlock>
@@ -107,11 +112,6 @@ export default () => {
                                     </TextBlock>
                                 </Header>
                             </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Follow} scale={2} />
-                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

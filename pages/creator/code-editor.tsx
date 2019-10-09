@@ -32,11 +32,11 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="python">
+            <Layout.Section id="python" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
+                    <Layout.TwoColumn>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
                                 <Header title="Python FTW!">
                                     <TextBlock>
                                         <p>Use the language and libraries you are already familiar with.</p>
@@ -51,7 +51,7 @@ export default () => {
                                         Visit our Documentation
                                     </KnowMore>
                                 </Header>
-                            </Layout.CenterVertical>
+                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
@@ -61,10 +61,15 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="detail">
+            <Layout.Section id="detail" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.DebugList} scale={2} mobileScale={1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="We've got you covered.">
                                     <TextBlock>
@@ -79,11 +84,6 @@ export default () => {
                                     </TextBlock>
                                 </Header>
                             </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.DebugList} scale={2} />
-                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

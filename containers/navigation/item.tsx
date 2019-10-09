@@ -100,8 +100,8 @@ export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow }) 
     const isMobile = useIsMobile();
     return (
         <ButtonItemWrapper open={open} num={1} selected={false}>
-            <a href={target} target="_blank">
-                <Button small={!isMobile} hollow={hollow} border>
+            <a>
+                <Button small={!isMobile} hollow={hollow} border to={target}>
                     {name}
                 </Button>
             </a>
@@ -138,7 +138,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     flex-direction: column;
     align-items: flex-start;
     white-space: nowrap;
-    z-index: 1;
+    z-index: 1003;
     padding: 10px 0px;
     display: none;
     border-radius: 5px;
@@ -226,7 +226,7 @@ const ContactItemButton = styled((props) => <Button {...props} />)<{ open?: bool
     &:hover {
         border: none;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         display: none;
     }
     @media (max-width: 768px) {
@@ -250,10 +250,10 @@ const Img = styled.img`
     height: 20px;
 `;
 
-export const ContactItem: React.FC<ContactItemProps> = ({ source }) => {
+export const ContactItem: React.FC<ContactItemProps> = ({ source, target }) => {
     const { open } = useOpen();
     return (
-        <ContactItemButton type="button" hollow small open={open}>
+        <ContactItemButton type="button" hollow small open={open} to={target}>
             <Img src={source} />
         </ContactItemButton>
     );

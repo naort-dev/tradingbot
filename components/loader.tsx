@@ -6,6 +6,7 @@ export const Loader = styled.div<{ show?: boolean }>`
     height: 28px;
     top: 17px;
     left: -5px;
+    z-index: 0;
     &:after {
         content: ' ';
         display: block;

@@ -23,10 +23,20 @@ export const CenterVertical = styled.div`
     height: 100%;
 `;
 
-export const CenterHorizontal = styled.div`
+export const CenterHorizontal = styled.div<{ marginLeft?: number; marginTop?: number }>`
     display: flex;
     justify-content: center;
     width: 100%;
+    ${(props) =>
+        props.marginLeft &&
+        `
+        margin-left: ${props.marginLeft}px;
+    `}
+    ${(props) =>
+        props.marginTop &&
+        `
+        margin-top: ${props.marginTop}px;
+    `}
 `;
 
 export const CenterRight = styled(CenterHorizontal)`

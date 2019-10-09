@@ -10,10 +10,10 @@ import { useDark } from 'hooks/dark';
 import { scrollIt } from 'util/scrollit';
 
 const Background = styled.img`
-    z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
 `;
 
 interface Props {

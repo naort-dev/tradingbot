@@ -1,11 +1,11 @@
 import React from 'react';
 import { Layout } from '@containers';
-import { HeaderCta } from './home/headercta';
+import styled from 'styled-components';
 
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
-import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock } from '@components';
-import { Screens, Illustrations, Logos, Videos } from '@assets';
+import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock, Button } from '@components';
+import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
 
 const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
 
@@ -18,19 +18,26 @@ export default () => {
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
-                                    <Layout.TwoRows>
-                                        <h1>
-                                            Start
-                                            <br />
-                                            <Highlight>
-                                                <WordAnimation words={HeaderWords} />
-                                            </Highlight>
-                                            <Cursor />
-                                            <br />
-                                            crypto trading.
-                                        </h1>
-                                        <HeaderCta />
-                                    </Layout.TwoRows>
+                                    <h1>
+                                        Start
+                                        <br />
+                                        <Highlight>
+                                            <WordAnimation words={HeaderWords} />
+                                        </Highlight>
+                                        <Cursor />
+                                        <br />
+                                        crypto trading.
+                                    </h1>
+                                    <TextBlock>
+                                        Code, build, optimize and live-trade your trading bots using our Creator tools. Or follow Creators on our
+                                        marketplace on your mobile app. The choice is yours! ✌️
+                                    </TextBlock>
+                                    <Button to="https://auth.beta.trality.com/#/signup">Try it for free!</Button>
+                                    <div>
+                                        <Layout.CenterLeft marginTop={15}>
+                                            <Image image={Icons.ActionCall} marginLeft={75} />
+                                        </Layout.CenterLeft>
+                                    </div>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -68,7 +75,7 @@ export default () => {
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section themeColor={'background'} fullHeight id="foobar">
+            <Layout.Section themeColor={'background'} fullHeight id="creator-tools">
                 <Layout.Center>
                     <Header title="Fall in love with our Creator tools." center expandHeight>
                         <Layout.Slider
@@ -87,8 +94,9 @@ export default () => {
                                 },
                                 {
                                     name: `Fast Backtester to optimize bots`,
-                                    source: Screens.Backtesting,
+                                    source: Videos.BacktestV1,
                                     icon: Illustrations.Infrastructure,
+                                    timeout: 13000,
                                 },
                             ]}
                         ></Layout.Slider>
@@ -166,7 +174,12 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="evolve" fullHeight collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
+                    <Layout.TwoColumn collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Evolve your algorithmic trading game!">
@@ -186,11 +199,6 @@ export default () => {
                                     </TextBlock>
                                 </Header>
                             </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
-                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

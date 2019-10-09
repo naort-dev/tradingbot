@@ -1,7 +1,6 @@
 import * as React from 'react';
 import mixpanel from 'mixpanel-browser';
 import ReactGA from 'react-ga';
-import * as cookies from '../util/cookies';
 import { Router } from 'next/router';
 
 class MixPanelWrapper {
@@ -10,14 +9,18 @@ class MixPanelWrapper {
     constructor() {
         this.debug = process.env.DEBUG !== undefined;
         if (!this.debug && this.browser) {
-            mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
-            mixpanel.register({
+            const opts = {
                 landingpage: 3,
-            });
+            };
+            mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
+            mixpanel.register(opts);
             ReactGA.initialize('UA-137950515-1');
+            ReactGA.set(opts);
             Router.events.on('routeChangeComplete', (url) => {
-                console.log(url);
+                this.pageview(url);
             });
+            // Initial pageview
+            this.pageview(window.location.pathname);
         }
         if (this.shouldTrack) {
             this.startTimeouts();
@@ -40,10 +43,10 @@ class MixPanelWrapper {
     get shouldTrack() {
         return !this.debug && this.browser;
     }
-    pageview(name: string) {
+    pageview(location: string) {
         if (this.shouldTrack) {
-            ReactGA.pageview(name);
-            mixpanel.track('pageview-' + name);
+            ReactGA.pageview(location);
+            mixpanel.track(location);
         }
     }
     track(name: string) {

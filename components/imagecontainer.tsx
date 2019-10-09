@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 interface Props {
     scale?: number;
+    marginLeft?: number;
+    marginTop?: number;
+    mobileScale?: number;
 }
 
 const Wrapper = styled.div<Props>`
@@ -19,6 +22,25 @@ const Wrapper = styled.div<Props>`
             `
             transform: scale(${props.scale});
         `}
+        ${(props) =>
+            props.marginLeft &&
+            `
+            margin-left: ${props.marginLeft}px;
+        `}
+        ${(props) =>
+            props.marginTop &&
+            `
+            margin-top: ${props.marginTop}px;
+        `}
+        @media (max-width: 768px) {
+            ${(props) =>
+                props.mobileScale &&
+                `
+                transform: scale(${props.mobileScale});
+            `}
+        }
+
+
     }
 `;
 
@@ -26,7 +48,14 @@ export const ImageContainer: React.FC<Props> = ({ children, ...props }) => {
     return <Wrapper {...props}>{children}</Wrapper>;
 };
 
-export const Image: React.FC<{ image: string | any; alt?: string; scale?: number }> = ({ image, alt, scale }) => {
+export const Image: React.FC<{
+    image: string | any;
+    alt?: string;
+    scale?: number;
+    mobileScale?: number;
+    marginLeft?: number;
+    marginTop?: number;
+}> = ({ image, alt, ...props }) => {
     const Item = image;
-    return <ImageContainer scale={scale}>{typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
+    return <ImageContainer {...props}>{typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
 };

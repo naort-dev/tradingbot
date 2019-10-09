@@ -35,7 +35,7 @@ export default () => {
             <Layout.Section id="backtesting">
                 <Layout.Center>
                     <Layout.TwoColumn>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Blazing-fast backtesting.">
                                     <TextBlock>
@@ -64,7 +64,7 @@ export default () => {
             <Layout.Section id="live-trading">
                 <Layout.Center>
                     <Layout.TwoColumn reverted>
-                        <Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Cloud-based live-trading.">
                                     <p>
@@ -90,8 +90,13 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="safety">
                 <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
+                    <Layout.TwoColumn reverted collapseMobile>
+                        <Layout.OneColumn collapseMobile>
+                            <Layout.CenterAllDirections>
+                                <Image image={Illustrations.Security} scale={2} mobileScale={1} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn collapseMobile>
                             <Layout.CenterVertical>
                                 <Header title="Complete safety of funds.">
                                     <p>Your funds' safety lie at the heart of our business and we will do anything to protect them.</p>
@@ -102,11 +107,6 @@ export default () => {
                                     </ul>
                                 </Header>
                             </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Security} scale={2} />
-                            </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
                 </Layout.Center>

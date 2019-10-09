@@ -13,6 +13,14 @@ const DATATARGET = path.join(TARGET, 'data');
 const IMAGETARGET = path.join(DATATARGET, 'headers');
 const ASSETSTARGET = path.join(DATATARGET, 'images');
 
+function escape(s) {
+    let lookup = {
+        '&': '&amp;',
+        '"': '&quot;',
+    };
+    return s.replace(/[&"<>]/g, (c) => lookup[c]);
+}
+
 const copyRecursiveSync = function(src, dest) {
     fsExtra.copySync(src, dest);
 };
@@ -68,8 +76,9 @@ async function getFiles() {
                     .toFile(`${IMAGETARGET}/${linkSlug}-preview.png`);
             }
 
-            const replaced = content.replace(/.\/assets\//, '/static/db/data/images/');
-            const base64 = Buffer.from(Renderer.render(replaced)).toString('base64');
+            const replaced = content.replace(/.\/assets\//g, '/static/db/data/images/');
+            const rendered = Renderer.render(replaced);
+            const base64 = Buffer.from(rendered).toString('base64');
 
             fileContents.push({
                 date: Date.parse(date),
