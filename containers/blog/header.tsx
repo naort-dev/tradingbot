@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Article } from './types';
 import { TextBlock, KnowMore } from '@components';
 import { Paddings, Margins } from 'theme';
+import { Misc } from '@util';
 
 const Container = styled.div`
     position: relative;
@@ -53,7 +54,12 @@ export const BlogHeader: React.FC<Article> = (article) => {
             <Description>
                 <h1>{article.header}</h1>
                 <TextBlock>{article.subheader}</TextBlock>
-                <KnowMore to={`/blog/${article.link}`}>Read more </KnowMore>
+                <div>
+                    <div>
+                        {article.author}, {Misc.FormatDate(article.date)}
+                    </div>
+                    <KnowMore to={`/blog/${article.link}`}>Read more </KnowMore>
+                </div>
             </Description>
             <ImageWrapper image={article.image} />
         </Container>

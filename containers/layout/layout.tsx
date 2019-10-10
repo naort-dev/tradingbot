@@ -26,7 +26,7 @@ const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
 `;
 
 interface TwoColumnProps {
-    width?: number;
+    columnWidth?: number;
     reverted?: boolean;
     mobileWithHeader?: boolean;
     mobileReverted?: boolean;
@@ -34,27 +34,27 @@ interface TwoColumnProps {
 }
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
-    ${(props) =>
-        props.reverted &&
-        `
-        flex-direction: row-reverse;
-        ${props.mobileReverted !== undefined &&
-            `
-            flex-direction: ${props.mobileReverted ? 'row-reverse' : 'row'};
-        `}
-    `}
     > div:first-child {
-        width: ${(props) => (props.width ? props.width : 50)}%;
+        width: ${(props) => (props.columnWidth ? props.columnWidth : 50)}%;
         @media (max-width: 768px) {
             width: 100%;
         }
     }
     > div:last-child {
-        width: ${(props) => (props.width ? 100 - props.width : 50)}%;
+        width: ${(props) => (props.columnWidth ? 100 - props.columnWidth : 50)}%;
         @media (max-width: 768px) {
             width: 100%;
         }
     }
+    ${(props) =>
+        props.reverted &&
+        `
+    flex-direction: row-reverse;
+    ${props.mobileReverted !== undefined &&
+        `
+        flex-direction: ${props.mobileReverted ? 'row-reverse' : 'row'};
+    `}
+`}
 `;
 
 export const OneColumn: React.FC<{ collapseMobile?: boolean }> = ({ children, ...props }) => {

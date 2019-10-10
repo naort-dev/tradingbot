@@ -1,6 +1,7 @@
 import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@components';
 import { Screens, Illustrations } from '@assets';
+import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 export default () => {
     return (
@@ -18,7 +19,12 @@ export default () => {
                                         To trade profitably, you need every help you can get. At Trality, we provide you with the tools you need to
                                         succeed - from bot creation to trade execution.
                                     </TextBlock>
-                                    <Button to="https://auth.beta.trality.com/#/signup" blank>
+                                    <Button
+                                        to="https://auth.beta.trality.com/#/signup"
+                                        blank
+                                        event={Events.Signup}
+                                        attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                    >
                                         Try Trality for free!
                                     </Button>
                                 </div>

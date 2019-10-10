@@ -11,7 +11,8 @@
         "prettier": "prettier --write \"pages/**/*.{ts, tsx}\"",
         "export": "next export",
         "test": "serverless offline",
-        "deploy": "now --target production"
+        "deploy": "now",
+        "deploy:production": "now --target production"
     },
     "dependencies": {
         "@zeit/next-css": "^1.0.1",

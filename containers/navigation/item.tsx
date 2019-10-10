@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useOpen } from './hooks/useOpen';
 import styled from 'styled-components';
-import { Button, Link } from '@components';
+import { Button, Link, ButtonProps } from '@components';
 import { useHover } from 'hooks/useHover';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';
@@ -81,7 +81,7 @@ export const LinkItem: React.FC<LinkItemProps> = ({ target, name }) => {
     );
 };
 
-interface ButtonItemProps extends LinkItemProps {
+interface ButtonItemProps extends LinkItemProps, ButtonProps {
     hollow?: boolean;
 }
 
@@ -95,13 +95,13 @@ const ButtonItemWrapper = styled(Item)`
     }
 `;
 
-export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow }) => {
+export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow, ...props }) => {
     const { open } = useOpen();
     const isMobile = useIsMobile();
     return (
         <ButtonItemWrapper open={open} num={1} selected={false}>
             <a>
-                <Button small={!isMobile} hollow={hollow} border to={target}>
+                <Button small={!isMobile} hollow={hollow} border to={target} {...props}>
                     {name}
                 </Button>
             </a>

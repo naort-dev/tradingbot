@@ -6,6 +6,7 @@ import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
 import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock, Button } from '@components';
 import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
+import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
 
@@ -32,7 +33,13 @@ export default () => {
                                         Code, build, optimize and live-trade your trading bots using our Creator tools. Or follow Creators on our
                                         marketplace on your mobile app. The choice is yours! ✌️
                                     </TextBlock>
-                                    <Button to="https://auth.beta.trality.com/#/signup">Try it for free!</Button>
+                                    <Button
+                                        to="https://auth.beta.trality.com/#/signup"
+                                        event={Events.Signup}
+                                        attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                    >
+                                        Try it for free!
+                                    </Button>
                                     <div>
                                         <Layout.CenterLeft marginTop={15}>
                                             <Image image={Icons.ActionCall} marginLeft={75} />

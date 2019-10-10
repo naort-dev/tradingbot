@@ -6,6 +6,7 @@ import { LinkItem, ButtonItem, DropdownItem, ItemGroup, ContactItem } from './it
 import { useIsMobile } from 'hooks/useIsMobile';
 import { Logos } from '@assets';
 import { Navigation } from 'theme';
+import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 interface OpenProps {
     open?: boolean;
@@ -89,7 +90,12 @@ export const Menu = () => {
             />
             <ItemGroup>
                 <ButtonItem name="Login" target="https://auth.beta.trality.com/#/login" hollow={!isMobile} />
-                <ButtonItem name="Signup" target="https://auth.beta.trality.com/#/signup" />
+                <ButtonItem
+                    name="Signup"
+                    target="https://auth.beta.trality.com/#/signup"
+                    event={Events.Signup}
+                    attributes={SignupAttribute(SignupOrigins.NavigationBar)}
+                />
             </ItemGroup>
             <ItemGroup>
                 <ContactItem name="Telegram" source={Logos.Telegram} target="https://t.me/trality" />

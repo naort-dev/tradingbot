@@ -27,4 +27,4 @@ To get you aquatinted with all of Trality’s current features — including liv
 
 Fundraising can be a long process and we are currently building our network for a financing round due to be be closed by Spring 2020. If you know investors, VCs or other relevant stakeholders in the FinTech space, we would be very grateful for your warm introduction.
 
-[Mail us directly with any leads ->](hello@trality.com)
+[Mail us directly with any leads ->](mailto:hello@trality.com)
