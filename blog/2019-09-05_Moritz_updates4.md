@@ -1,4 +1,4 @@
-# Trality updates #4:
+# Trality updates #4
 
 ### Live trading!
 
@@ -8,10 +8,10 @@ On this warm and sunny late-summer day we are very happy to announce another mil
 
 ## What went in to this release?
 
--Since we launched the Beta, we have strived to constantly improve our platform. Without your constant feedback this wouldn’t have been possible.
--We worked tirelessly on our authentication, security and bot deployment frameworks to give you a trading experience as smooth and error-free as possible.
--We built a secure encryption system for your API keys so that your funds remain completely safe and untouchable to us.
--We connected to the official Binance API so that all your funds remain safe on your exchange account and your bots merely send trade signals to Binance.
+-   Since we launched the Beta, we have strived to constantly improve our platform. Without your constant feedback this wouldn’t have been possible.
+-   We worked tirelessly on our authentication, security and bot deployment frameworks to give you a trading experience as smooth and error-free as possible.
+-   We built a secure encryption system for your API keys so that your funds remain completely safe and untouchable to us.
+-   We connected to the official Binance API so that all your funds remain safe on your exchange account and your bots merely send trade signals to Binance.
 
 [Join our Beta if that sounds like a great experience ->](https://auth.beta.trality.com/#/signup)
 

@@ -1,4 +1,4 @@
-# Trality updates #1:
+# Trality updates #1
 
 ### slowly but surely!
 

@@ -1,4 +1,4 @@
-# Trality updates #3:
+# Trality updates #3
 
 ### Beta going great and live trading coming soon!
 
@@ -10,10 +10,10 @@ We are overwhelmed with the response we have received from our ever growing comm
 
 ## Beta progress so far: we’ve listened to your feedback
 
--We have addressed and fixed over 30 tickets pertaining to bugs or improvement requests.
--We have widened our data basis and added additional candle intervals to the Trality Bot Back-tester. Available now: 1d, 12h, 6h, 1h, 30m, 15m and 5m.
--We have improved the mobile view so that you are now able to deploy and monitor your bots on cell phones and tablets. The Bot Code Editor will remain web-based for the time being.
--Live trading will be available soon! Everything is already in place, we are just undergoing the final tests. Within the next 2 weeks we will enable live trading on Binance!
+-   We have addressed and fixed over 30 tickets pertaining to bugs or improvement requests.
+-   We have widened our data basis and added additional candle intervals to the Trality Bot Back-tester. Available now: 1d, 12h, 6h, 1h, 30m, 15m and 5m.
+-   We have improved the mobile view so that you are now able to deploy and monitor your bots on cell phones and tablets. The Bot Code Editor will remain web-based for the time being.
+-   Live trading will be available soon! Everything is already in place, we are just undergoing the final tests. Within the next 2 weeks we will enable live trading on Binance!
 
 [Join our Beta to be informed about live trading ->](https://auth.beta.trality.com/#/signup)
 

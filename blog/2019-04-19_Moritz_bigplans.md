@@ -15,10 +15,11 @@ While Trality is not the first ever platform for trading bots, none of the few e
 ## Where are we now?
 
 A lot has happened since we first started developing the platform last summer. As of the beginning of April, we can proudly say that we have evolved to private Beta stage. [Lean-startup](http://theleanstartup.com/principles) aficionados will know that, unless you’re swimming in money, the idea at this point of product development is to release a minimum viable product (MVP) with a limited feature set in order to minimize the risk of significant sunk costs. Hence, we decided concentrate on the most important part of Trality’s selling proposition: the Trality Bot Creator. Specifically, the MVP comprises of:
--a **code-based Bot Creator** supporting Python as it is one of the main languages in the field of data science
--a **virtual trading connection** only in the first months of the Beta phase as trading with real assets early on might entail risks -**backtesting** with a complete set of Binance financial data and pre-defined scenarios of various market conditions and length
--a **dashboard** to monitor virtual trading of all bots
--all relevant **settings and base functionality** for the above-mentioned features
+
+-   a **code-based Bot Creator** supporting Python as it is one of the main languages in the field of data science
+-   a **virtual trading connection** only in the first months of the Beta phase as trading with real assets early on might entail risks -**backtesting** with a complete set of Binance financial data and pre-defined scenarios of various market conditions and length
+-   a **dashboard** to monitor virtual trading of all bots
+-   all relevant **settings and base functionality** for the above-mentioned features
 
 Our aim with this MVP is to **complete the private Beta phase by the end of May.**
 We will subsequently start a limited phase of exclusive beta access to our early users and will commence the **full-on public beta by mid June**. Importantly, we have not yet decided when to stop virtual trading only mode and start real trading as this depends on the reliability of our backend. It goes without saying that the plan is to do so asap. The main goal is to **complete the public Beta phase by the end of summer.**
