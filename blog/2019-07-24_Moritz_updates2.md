@@ -1,4 +1,4 @@
-# Trality updates #2:
+# Trality updates #2
 
 ### Bot Creator Beta is now online!
 
