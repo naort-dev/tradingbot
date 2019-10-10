@@ -1,4 +1,4 @@
-export function scrollIt(destination: any, duration = 200, easing = 'easeOutQuad', callback: any) {
+export function scrollIt(destination: any, duration = 200, easing = 'easeOutQuad', callback?: any) {
     const easings = {
         easeOutQuad(t: number) {
             return t * (2 - t);

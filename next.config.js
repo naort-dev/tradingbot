@@ -1,31 +1,24 @@
 const webpack = require('webpack');
-const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
 const withOptimizedImages = require('next-optimized-images');
 const TerserPlugin = require('terser-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const withCSS = require('@zeit/next-css');
 
-module.exports = withImages(
-    withTypescript({
+module.exports = withCSS(
+    withImages({
         target: 'serverless',
         webpack(config, options) {
+            if (config.resolve.plugins) {
+                config.resolve.plugins.push(new TsconfigPathsPlugin());
+            } else {
+                config.resolve.plugins = [new TsconfigPathsPlugin()];
+            }
+
             const { isServer } = options;
             const prefix = config.assetPrefix ? config.assetPrefix : '';
+
             config.module.rules.push(
-                {
-                    test: /\.(eot|ttf|woff|woff2|otf)$/,
-                    use: [
-                        {
-                            loader: 'file-loader',
-                            options: {
-                                context: '',
-                                emitFile: true,
-                                name: '[hash].[ext]',
-                                publicPath: `${prefix}/_next/static/fonts/`,
-                                outputPath: `${isServer ? '../' : ''}static/fonts/`,
-                            },
-                        },
-                    ],
-                },
                 {
                     test: /\.ico$/,
                     use: [
@@ -35,6 +28,21 @@ module.exports = withImages(
                                 context: '',
                                 emitFile: true,
                                 name: '[name].[ext]',
+                            },
+                        },
+                    ],
+                },
+                {
+                    test: /\.mp4$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                context: '',
+                                emitFile: true,
+                                name: '[hash].[ext]',
+                                publicPath: `${prefix}/_next/static/videos/`,
+                                outputPath: `${isServer ? '../' : ''}static/videos/`,
                             },
                         },
                     ],

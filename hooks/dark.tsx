@@ -11,11 +11,18 @@ export interface Darkmode extends DarkProp {
 const context = React.createContext<Darkmode>(null as any);
 export const Provider = context.Provider;
 
-export const DarkProvider: React.FunctionComponent<{}> = (props) => {
-    const [dark, setDark] = React.useState(false);
-    return <Provider value={{ dark, setDark }}>{props.children}</Provider>;
-};
-
 export const useDark = () => {
     return React.useContext(context);
+};
+
+export const DarkProvider: React.FC = ({ children }) => {
+    const parent = useDark();
+    const [dark, setDark] = React.useState(false);
+
+    const provider = {
+        dark: parent === null ? dark : !parent.dark,
+        setDark: parent === null ? setDark : (nextValue: boolean) => parent.setDark(!nextValue),
+    };
+
+    return <Provider value={provider}>{children}</Provider>;
 };

@@ -1,0 +1,66 @@
+import styled from 'styled-components';
+import { Paddings } from 'theme';
+
+export const Center = styled.div<{ direction?: 'column' | 'row' }>`
+    display: flex;
+    width: 80vw;
+    max-width: 1100px;
+    @media (max-width: 768px) {
+        display: block;
+        width: 100%;
+        padding: 0px ${Paddings.Large};
+    }
+    ${(props) =>
+        props.direction &&
+        `
+        flex-direction: ${props.direction};
+    `}
+`;
+
+export const CenterVertical = styled.div`
+    display: flex;
+    align-items: center;
+    height: 100%;
+`;
+
+export const CenterHorizontal = styled.div<{ marginLeft?: number; marginTop?: number }>`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ${(props) =>
+        props.marginLeft &&
+        `
+        margin-left: ${props.marginLeft}px;
+    `}
+    ${(props) =>
+        props.marginTop &&
+        `
+        margin-top: ${props.marginTop}px;
+    `}
+`;
+
+export const CenterRight = styled(CenterHorizontal)`
+    justify-content: flex-end;
+    text-align: right;
+    height: 100%;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+`;
+
+export const CenterLeft = styled(CenterHorizontal)`
+    justify-content: flex-start;
+    text-align: left;
+    height: 100%;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+`;
+
+export const CenterAllDirections = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`;

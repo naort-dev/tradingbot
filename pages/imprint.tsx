@@ -1,24 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { LayoutTop, Page } from '../theme';
-import Link from 'next/link';
-import * as arrow from '../assets/images/arrow-down.svg';
-import { useMixpanel } from '../hooks/mixpanel';
-import { useDark } from '../hooks/dark';
-import { GDPR } from '../components';
-
-const Header = styled.h1`
-    font-weight: normal;
-    font-size: 42px;
-    text-align: left;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    @media (max-width: 768px) {
-        text-align: center;
-        margin-top: 100px;
-        margin-bottom: 80px;
-    }
-`;
+import { Layout } from '@containers';
+import { Header } from '@components';
 
 const Description = styled.div`
     margin-bottom: 50px;
@@ -43,41 +26,23 @@ const Description = styled.div`
     }
 `;
 
-const Component: React.FunctionComponent<{}> = () => {
-    const mixpanel = useMixpanel();
-    let { dark, setDark } = useDark();
-    React.useCallback(() => {
-        mixpanel.track(`imprint`);
-    }, []);
-
-    React.useEffect(() => {
-        setDark(false);
-    }, [dark]);
-
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            mixpanel.pageview('imprint');
-        }
-    }, []);
-
+export default () => {
     return (
-        <Page>
-            <GDPR />
-            <LayoutTop>
-                <div>
-                    <Header>Imprint</Header>
-                    <Description>
-                        <p>TRALITY GmbH</p>
-                        <p>Novaragasse 19/9 AT-1020 Wien</p>
-                        <p>Email: hello@trality.com</p>
-                        <p>UID: ATU73931338</p>
-                        <p>Company Register: 504493b, Commercial Court Vienna</p>
-                        <p>Member of the Austrian Economic Chambers</p>
-                    </Description>
-                </div>
-            </LayoutTop>
-        </Page>
+        <Layout.Page title="imprint">
+            <Layout.Section fullHeight noPadding id="imprint">
+                <Layout.Center>
+                    <Header title="Imprint">
+                        <Description>
+                            <p>TRALITY GmbH</p>
+                            <p>Novaragasse 19/9 AT-1020 Wien</p>
+                            <p>Email: hello@trality.com</p>
+                            <p>UID: ATU73931338</p>
+                            <p>Company Register: 504493b, Commercial Court Vienna</p>
+                            <p>Member of the Austrian Economic Chambers</p>
+                        </Description>
+                    </Header>
+                </Layout.Center>
+            </Layout.Section>
+        </Layout.Page>
     );
 };
-
-export default Component;

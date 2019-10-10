@@ -1,21 +1,23 @@
 import * as React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
 
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../theme/theme';
+import { ThemeProvider } from '../components/themeprovider';
 import { MixpanelProvider } from '../hooks/mixpanel';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
+import { PortalProvider } from 'hooks/usePortal';
+
+import '../fix.css';
 
 class Trality extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
             <MixpanelProvider>
-                <ThemeProvider theme={theme}>
-                    <DarkProvider>
-                        <Container>
+                <DarkProvider>
+                    <ThemeProvider>
+                        <>
                             <GlobalStyle />
                             <Head>
                                 <title>Trality - Follow & Create Bots</title>
@@ -25,6 +27,9 @@ class Trality extends App {
                                     name="description"
                                     content="We make the tools of Wall Street available to everyone - with Trality bots for all levels of experience."
                                 />
+                                <meta httpEquiv="content-language" content="en" />
+                                <meta name="title" content="Trality - Follow and Create Bots" />
+                                <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
                                 <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />
                                 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
@@ -37,10 +42,12 @@ class Trality extends App {
                                 <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
                                 <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
                             </Head>
-                            <Component {...pageProps} />
-                        </Container>
-                    </DarkProvider>
-                </ThemeProvider>
+                            <PortalProvider>
+                                <Component {...pageProps} />
+                            </PortalProvider>
+                        </>
+                    </ThemeProvider>
+                </DarkProvider>
             </MixpanelProvider>
         );
     }
