@@ -16,12 +16,6 @@ Great news: today we are launching another puzzle piece in our mission of bringi
 
 [Join our Beta if that sounds like a great experience ->](https://trality.com)
 
-## Added features
-
-We listed to your feedback and also included some new features in this release. Among these are the use of limit orders in both our editor and while doing paper-trading, additional backtesting scenarios (6 each for BTC, ETH and USDT), new bot templates (multi-asset and multi-period trading), and much more.
-
-[Visit the docs ->](https://docs.trality.com/)
-
 ## Walk through
 
 To see the Trality Rule Builder in action, check out this short Youtube walkthrough, in which we show you the main features of this new release!
