@@ -56,7 +56,7 @@ export default () => {
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="positions" dark>
+            <Layout.Section id="positions">
                 <Layout.Center>
                     <Header title="Open Positions">
                         <Layout.Grid.Container>
