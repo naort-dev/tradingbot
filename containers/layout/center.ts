@@ -42,7 +42,6 @@ export const CenterHorizontal = styled.div<{ marginLeft?: number; marginTop?: nu
 export const CenterRight = styled(CenterHorizontal)`
     justify-content: flex-end;
     text-align: right;
-    height: 100%;
     @media (max-width: 768px) {
         justify-content: center;
     }
@@ -51,7 +50,6 @@ export const CenterRight = styled(CenterHorizontal)`
 export const CenterLeft = styled(CenterHorizontal)`
     justify-content: flex-start;
     text-align: left;
-    height: 100%;
     @media (max-width: 768px) {
         justify-content: center;
     }

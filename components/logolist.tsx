@@ -5,6 +5,9 @@ import { useDark } from 'hooks/dark';
 const LogoContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 const Logo = styled.div`

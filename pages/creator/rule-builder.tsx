@@ -1,6 +1,6 @@
 import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock } from '@components';
-import { Screens } from '@assets';
+import { Screens, Illustrations } from '@assets';
 import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
 export default () => {
@@ -8,7 +8,7 @@ export default () => {
         <Layout.Page title="creator-rule-editor">
             <Layout.Section fullHeight noPadding id="rule-editor-description">
                 <Layout.Center>
-                    <Layout.TwoColumn columnWidth={55} reverted>
+                    <Layout.TwoColumn columnWidth={40} reverted>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
@@ -74,11 +74,11 @@ export default () => {
                             <Layout.CenterVertical>
                                 <TextBlock>
                                     <Header title="Evolve from rules to code.">
-                                        <p>Step up your game and turn your rule-based bots into code automatically. (coming soon!)</p>
+                                        <p>Step up your algorithmic trading game using our different Creator Tools.</p>
                                         <ul>
-                                            <li>Transform built logics into Python code</li>
-                                            <li>Evolve your trading game with new skills</li>
-                                            <li>Improve your algorithms by slowly adapting code to your needs</li>
+                                            <li>Transform your rule-based bots into Python code automatically</li>
+                                            <li>Enjoy video tutorials to learn more about algorithmic trading</li>
+                                            <li>Make use of our detailed documentation</li>
                                         </ul>
                                     </Header>
                                 </TextBlock>
@@ -86,7 +86,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2EvolveA} />
+                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

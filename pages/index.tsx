@@ -8,7 +8,7 @@ import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, Te
 import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
 import { Events, SignupAttribute, SignupOrigins } from '@constants';
 
-const HeaderWords = ['algorithmic', 'automated', 'python-based', 'rule-based', 'bot', 'professional', 'awesome'];
+const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
 
 export default () => {
     return (
@@ -20,18 +20,18 @@ export default () => {
                             <Layout.CenterVertical>
                                 <div>
                                     <h1>
-                                        Start
-                                        <br />
                                         <Highlight>
                                             <WordAnimation words={HeaderWords} />
                                         </Highlight>
                                         <Cursor />
                                         <br />
-                                        crypto trading.
+                                        trading bots
+                                        <br />
+                                        like a professional
                                     </h1>
                                     <TextBlock>
-                                        Code, build, optimize and live-trade your trading bots using our Creator tools. Or follow Creators on our
-                                        marketplace on your mobile app. The choice is yours! ✌️
+                                        Trality is a platform for anybody who wants to profit from algorithmic crypto trading without giving up the
+                                        day job. At least not right away 😉 ️
                                     </TextBlock>
                                     <Button
                                         to="https://auth.beta.trality.com/#/signup"
@@ -56,30 +56,66 @@ export default () => {
                     </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
-            <Layout.Section id="weve-got-you-covered">
+            <Layout.Section id="for-everybody">
                 <Layout.Center>
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
                             <Layout.CenterAllDirections>
-                                <h2>Ways to create your trading bot.</h2>
+                                <h2>Trality is for you if you are ...</h2>
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Code" source={Illustrations.CreateComponent} />
-                            <p>Make the most of your Python skills and rely on our cloud-based Code Editor for bots.</p>
-                            <KnowMore to="/creator/code-editor">Read more</KnowMore>
+                            <HeaderIcon name="a Python guru" source={Illustrations.BotThreeDotComponent} scale={2} />
+                            <p>
+                                ...wanting to make the most of their quantiative skills and code sophisticated trading algorithms in order to boost
+                                returns.
+                            </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Build" source={Illustrations.LeisureComponent} />
-                            <p>Master our Rule Builder and develop bots without the need for a single line of code.</p>
-                            <KnowMore to="/creator/rule-builder">Read more</KnowMore>
+                            <HeaderIcon name="a Casual trader" source={Illustrations.BotOneDotComponent} scale={2} />
+                            <p>
+                                ...looking for an entry into automated trading, hoping to increase returns while spending less time on manual trades.
+                            </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Optimize" source={Illustrations.RulesComponent} />
-                            <p>Perfect your bot with backtesting and practice trading including detailed charts and metrics.</p>
-                            <KnowMore to="/creator/features">Read more</KnowMore>
+                            <HeaderIcon name="Anyone in between" source={Illustrations.BotTwoDotComponent} scale={2} />
+                            <p>...eager to try out something new, improve existing skills or simply test out a trading idea in their head.</p>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="weve-got-you-covered">
+                <Layout.Center>
+                    <Layout.OneColumn>
+                        <Layout.CenterHorizontal>
+                            <h2>Ways to create your trading bot.</h2>
+                        </Layout.CenterHorizontal>
+                        <Layout.TwoColumn border>
+                            <Layout.OneColumn collapseMobile>
+                                <Layout.CenterHorizontal>
+                                    <Layout.Features.TypeA header="Create using code" icon={Illustrations.CreateComponent}>
+                                        <div>
+                                            Make best use of your Python skills and code sophisticated bots. Perfect them with backtesting and
+                                            practice trading. When you’re satisfied, deploy on our cloud and hit the market with live-trading!
+                                        </div>
+                                        <KnowMore to="/creator/code-editor">Read more</KnowMore>
+                                    </Layout.Features.TypeA>
+                                </Layout.CenterHorizontal>
+                            </Layout.OneColumn>
+                            <Layout.OneColumn collapseMobile>
+                                <Layout.CenterHorizontal>
+                                    <Layout.Features.TypeA header="Create using rules" icon={Illustrations.LeisureComponent}>
+                                        <div>
+                                            Develop bots without a single line of code. Adjust and tweak them with the help of backtesting and
+                                            practice trading. Deploy your bot in the cloud and watch your rules work their magic with 24/7
+                                            live-trading!
+                                        </div>
+                                        <KnowMore to="/creator/rule-builder">Read more</KnowMore>
+                                    </Layout.Features.TypeA>
+                                </Layout.CenterHorizontal>
+                            </Layout.OneColumn>
+                        </Layout.TwoColumn>
+                    </Layout.OneColumn>
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section themeColor={'background'} fullHeight id="creator-tools">
@@ -108,36 +144,6 @@ export default () => {
                             ]}
                         ></Layout.Slider>
                     </Header>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="features">
-                <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
-                                <Header title="Connecting traders.">
-                                    <TextBlock>
-                                        <p>
-                                            Whether you create trading bots or you prefer to let others do the hard work for you: the Trality Bot
-                                            Marketplace is where Creators and Followers come together to profit from each other.
-                                        </p>
-                                        <ul>
-                                            <li>Creators publish their best bots onto the marketplace</li>
-                                            <li>Followers select a bot which matches their objectives</li>
-                                            <li>Followers reward Creators with a monthly rent for their efforts</li>
-                                            <li>Algorithms will always remain visible only to the Creator</li>
-                                        </ul>
-                                    </TextBlock>
-                                    <KnowMore to="/marketplace">Read more</KnowMore>
-                                </Header>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneFrontalA} alt="Trality Phone Screenshot" />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section id="safety">
@@ -169,6 +175,56 @@ export default () => {
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
             </Layout.Section>
+            <Layout.Section id="trade-now" minimumPadding>
+                <Layout.Banner backgroundColor={'backgroundLight'} color={'onLight'}>
+                    <Layout.Center direction="column">
+                        <h2>Start trading now!</h2>
+                        <LogoList
+                            logos={[
+                                {
+                                    title: 'Binance',
+                                    light: Logos.Binance,
+                                },
+                            ]}
+                        />
+                        <TextBlock>
+                            <Layout.CenterLeft>Trade on a continousy growing number of exchanges.</Layout.CenterLeft>
+                        </TextBlock>
+                        <Layout.CenterLeft>
+                            <Button
+                                to="https://auth.beta.trality.com/#/signup"
+                                event={Events.Signup}
+                                attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                            >
+                                Try it for free!
+                            </Button>
+                        </Layout.CenterLeft>
+                    </Layout.Center>
+                </Layout.Banner>
+            </Layout.Section>
+            <Layout.Section id="features">
+                <Layout.Center>
+                    <Layout.TwoColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterVertical>
+                                <Header title="Coming soon: Connecting traders.">
+                                    <TextBlock>
+                                        Once you've built a profitable bot, others will want to copy its moves - and they'll happily pay for the
+                                        privilege! We're building a marketplace where you'll be able to publish your best bots and get paid rent by
+                                        anyone wanting to piggyback. Your bot's algorithmic secret sauce, of course, will be for your eyes only!
+                                    </TextBlock>
+                                    <KnowMore to="/marketplace">Read more</KnowMore>
+                                </Header>
+                            </Layout.CenterVertical>
+                        </Layout.OneColumn>
+                        <Layout.OneColumn>
+                            <Layout.CenterAllDirections>
+                                <Image image={Screens.V2PhoneFrontalA} alt="Trality Phone Screenshot" scale={0.8} />
+                            </Layout.CenterAllDirections>
+                        </Layout.OneColumn>
+                    </Layout.TwoColumn>
+                </Layout.Center>
+            </Layout.Section>
             <Layout.Section id="mailinglist" noBgChange minimumPadding>
                 <Layout.Banner backgroundColor={'bluePrimary'} color={'lightPrimary'}>
                     <Layout.Center direction="column">
@@ -176,54 +232,6 @@ export default () => {
                             <h5>Waiting for cool Trality updates? Join our monthly mailing list and stay up to date 💙</h5>
                         </Header>
                         <Subscribe />
-                    </Layout.Center>
-                </Layout.Banner>
-            </Layout.Section>
-            <Layout.Section id="evolve" fullHeight collapseMobile>
-                <Layout.Center>
-                    <Layout.TwoColumn collapseMobile>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterVertical>
-                                <Header title="Evolve your algorithmic trading game!">
-                                    <TextBlock>
-                                        <p>
-                                            The cherry on the cake with Trality: become more and more proficient with algorithmic trading using our
-                                            different Creator Tools.
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                Move closer to mastering the art of coding algorithms by working with automatically generated Python
-                                                code from rule-based bots.
-                                            </li>
-                                            <li>Enjoy video tutorials to learn more about algorithmic trading.</li>
-                                            <li>Make use of our detailed documentation.</li>
-                                        </ul>
-                                    </TextBlock>
-                                </Header>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="trade-now" minimumPadding>
-                <Layout.Banner backgroundColor={'backgroundLight'} color={'onLight'}>
-                    <Layout.Center direction="column">
-                        <Header title="Start trading now!">
-                            <p>Trade on a continousy growing number of exchanges. </p>
-                            <LogoList
-                                logos={[
-                                    {
-                                        title: 'Binance',
-                                        light: Logos.Binance,
-                                    },
-                                ]}
-                            />
-                        </Header>
                     </Layout.Center>
                 </Layout.Banner>
             </Layout.Section>

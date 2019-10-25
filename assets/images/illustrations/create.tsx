@@ -42,7 +42,7 @@ export default () => {
     const { seen } = useSection();
     const { delay } = useDelay();
     return (
-        <Svg xmlns="http://www.w3.org/2000/svg" width="88" height="64" seen={seen} delay={delay || 0}>
+        <Svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 88 64" seen={seen} delay={delay || 0}>
             <g fill="none" fillRule="evenodd">
                 <g className="left" fillRule="nonzero">
                     <path fill="#9D9DBF" d="M43 0h14.477a4 4 0 014 4v55.183a4 4 0 01-4 4H43a4 4 0 01-4-4V4a4 4 0 014-4z" opacity=".1" />

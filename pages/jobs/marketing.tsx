@@ -52,7 +52,7 @@ export default () => {
                         <>
                             <ul>
                                 <li>
-                                    10h part-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
+                                    12h part-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
                                     Vienna
                                 </li>
                                 <li>An extremely flexible working environment with a lot of creative freedom in further developing of our startup</li>

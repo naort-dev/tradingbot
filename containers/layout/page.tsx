@@ -28,7 +28,7 @@ export const Page: React.FC<Props> = ({ dark, children }) => {
         if (dark) {
             setDark(true);
         }
-        //scrollIt(0, 0);
+        scrollIt(0, 0);
     }, []);
 
     return (

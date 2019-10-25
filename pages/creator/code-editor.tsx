@@ -25,7 +25,7 @@ export default () => {
                                         event={Events.Signup}
                                         attributes={SignupAttribute(SignupOrigins.HeaderCta)}
                                     >
-                                        Start creating for free!
+                                        Start coding for free!
                                     </Button>
                                 </div>
                             </Layout.CenterVertical>
@@ -43,7 +43,7 @@ export default () => {
                     <Layout.TwoColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Header title="Python FTW!">
+                                <Header title="Coding in Python.">
                                     <TextBlock>
                                         <p>Use the language and libraries you are already familiar with.</p>
                                         <ul>

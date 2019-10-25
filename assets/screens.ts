@@ -33,6 +33,7 @@ import * as V2EvolveA from './images/screens/v2/evolve-v1@2x.png';
 import * as V2EvolveB from './images/screens/v2/evolve-v2@3x.png';
 import * as V2MacCode from './images/screens/v2/v2macmockup-code@3x.png';
 import * as V2MacRule from './images/screens/v2/v2macmockup-rule@3x.png';
+import * as V3MacFeatures from './images/screens/v3/V3macmockup-features@3x.png';
 
 export const Screens = {
     PhoneMockup,
@@ -64,4 +65,5 @@ export const Screens = {
     V2EvolveB,
     V2MacCode,
     V2MacRule,
+    V3MacFeatures,
 };

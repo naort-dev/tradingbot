@@ -25,7 +25,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneRotMp} />
+                                <Image image={Screens.V2PhoneRotMp} scale={0.9} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -62,7 +62,7 @@ export default () => {
             </Layout.Section>
             <Layout.Section id="creators" collapseMobile>
                 <Layout.Center>
-                    <Layout.TwoColumn collapseMobile>
+                    <Layout.TwoColumn collapseMobile reverted>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
                                 <Image image={Illustrations.Create} scale={2} mobileScale={1} />

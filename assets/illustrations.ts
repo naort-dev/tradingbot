@@ -3,6 +3,10 @@ import * as Profit from './images/illustrations/profit.svg';
 import * as Create from './images/illustrations/create.svg';
 import CreateComponent from './images/illustrations/create';
 
+import * as GuruTrader from './images/illustrations/gurutrader.svg';
+import * as InBetweenTrader from './images/illustrations/inbetweentrader.svg';
+import * as LeisureTrader from './images/illustrations/leisuretrader.svg';
+
 import * as Infrastructure from './images/illustrations/infrastructure.svg';
 import InfrastructureComponent from './images/illustrations/infrastructure';
 
@@ -29,6 +33,15 @@ import RulesComponent from './images/illustrations/rules';
 import * as Evolve from './images/illustrations/evolve.svg';
 import EvolveComponent from './images/illustrations/evolve';
 
+import * as BotOneDot from './images/illustrations/botOneDot.svg';
+import BotOneDotComponent from './images/illustrations/botOneDot';
+
+import * as BotThreeDot from './images/illustrations/botThreeDot.svg';
+import BotThreeDotComponent from './images/illustrations/botThreeDot';
+
+import * as BotTwoDot from './images/illustrations/botTwoDot.svg';
+import BotTwoDotComponent from './images/illustrations/botTwoDot';
+
 export const Illustrations = {
     Follow,
     Profit,
@@ -53,4 +66,13 @@ export const Illustrations = {
     RulesComponent,
     Evolve,
     EvolveComponent,
+    GuruTrader,
+    InBetweenTrader,
+    LeisureTrader,
+    BotOneDot,
+    BotOneDotComponent,
+    BotThreeDot,
+    BotThreeDotComponent,
+    BotTwoDot,
+    BotTwoDotComponent,
 };

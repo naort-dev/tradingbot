@@ -6,6 +6,7 @@ import { Slider } from './slider';
 import { Banner } from './banner';
 import { Collapsible } from './collapsible';
 import { Grid } from './grid';
+import { FeatureLayouts } from './featurelayouts';
 
 export const Layout = {
     Center,
@@ -25,4 +26,5 @@ export const Layout = {
     Banner,
     Collapsible,
     Grid,
+    Features: FeatureLayouts,
 };

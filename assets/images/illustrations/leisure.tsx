@@ -19,7 +19,7 @@ export default () => {
     const { seen } = useSection();
     const { delay } = useDelay();
     return (
-        <Svg xmlns="http://www.w3.org/2000/svg" width="104" height="69" seen={seen} delay={delay || 0}>
+        <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 69" width="100%" height="100%" seen={seen} delay={delay || 0}>
             <g fill="none" fillRule="evenodd">
                 <g transform="translate(26)" className="left">
                     <rect width="78" height="69" fill="#FFF" fillRule="nonzero" rx="4" />
