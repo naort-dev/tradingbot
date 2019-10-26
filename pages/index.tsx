@@ -78,7 +78,7 @@ export default () => {
                             </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Anyone in between" source={Illustrations.BotTwoDotComponent} scale={2} />
+                            <HeaderIcon name="anyone in between" source={Illustrations.BotTwoDotComponent} scale={2} />
                             <p>...eager to try out something new, improve existing skills or simply test out a trading idea in your head.</p>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
