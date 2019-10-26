@@ -65,21 +65,21 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="a Python guru" source={Illustrations.BotThreeDotComponent} scale={2} />
+                            <HeaderIcon name="a Python Guru" source={Illustrations.BotThreeDotComponent} scale={2} />
                             <p>
-                                ...wanting to make the most of their quantiative skills and code sophisticated trading algorithms in order to boost
+                                ...wanting to make the most of your quantitative skills and code sophisticated trading algorithms in order to boost
                                 returns.
                             </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="a Casual trader" source={Illustrations.BotOneDotComponent} scale={2} />
+                            <HeaderIcon name="a Casual Trader" source={Illustrations.BotOneDotComponent} scale={2} />
                             <p>
                                 ...looking for an entry into automated trading, hoping to increase returns while spending less time on manual trades.
                             </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="c">
                             <HeaderIcon name="Anyone in between" source={Illustrations.BotTwoDotComponent} scale={2} />
-                            <p>...eager to try out something new, improve existing skills or simply test out a trading idea in their head.</p>
+                            <p>...eager to try out something new, improve existing skills or simply test out a trading idea in your head.</p>
                         </Layout.ThreeColumn.Column>
                     </Layout.ThreeColumn.Container>
                 </Layout.Center>
