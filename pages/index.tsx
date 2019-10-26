@@ -61,18 +61,18 @@ export default () => {
                     <Layout.ThreeColumn.Container>
                         <Layout.ThreeColumn.Header>
                             <Layout.CenterAllDirections>
-                                <h2>Trality is for you if you are ...</h2>
+                                <h2>Trality is for you if you are...</h2>
                             </Layout.CenterAllDirections>
                         </Layout.ThreeColumn.Header>
                         <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="a Python Guru" source={Illustrations.BotThreeDotComponent} scale={2} />
+                            <HeaderIcon name="a Python guru" source={Illustrations.BotThreeDotComponent} scale={2} />
                             <p>
                                 ...wanting to make the most of your quantitative skills and code sophisticated trading algorithms in order to boost
                                 returns.
                             </p>
                         </Layout.ThreeColumn.Column>
                         <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="a Casual Trader" source={Illustrations.BotOneDotComponent} scale={2} />
+                            <HeaderIcon name="a casual trader" source={Illustrations.BotOneDotComponent} scale={2} />
                             <p>
                                 ...looking for an entry into automated trading, hoping to increase returns while spending less time on manual trades.
                             </p>
@@ -88,7 +88,7 @@ export default () => {
                 <Layout.Center>
                     <Layout.OneColumn>
                         <Layout.CenterHorizontal>
-                            <h2>Ways to create your trading bot.</h2>
+                            <h2>Ways to create your trading bot:</h2>
                         </Layout.CenterHorizontal>
                         <Layout.TwoColumn border>
                             <Layout.OneColumn collapseMobile>
@@ -106,7 +106,7 @@ export default () => {
                                 <Layout.CenterHorizontal>
                                     <Layout.Features.TypeA header="Create using rules" icon={Illustrations.LeisureComponent}>
                                         <div>
-                                            Develop bots without a single line of code. Adjust and tweak them with the help of backtesting and
+                                            Build bots without a single line of code. Adjust and tweak them with the help of backtesting and
                                             practice trading. Deploy your bot in the cloud and watch your rules work their magic with 24/7
                                             live-trading!
                                         </div>
