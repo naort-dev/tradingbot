@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ThemeColors, Paddings } from 'theme';
+import { PatternType, Patterns } from '@assets';
 
 interface BannerProps {
+    pattern?: PatternType;
     color?: ThemeColors | 'transparent';
     backgroundColor?: ThemeColors | 'transparent';
 }
@@ -20,6 +22,11 @@ const BannerContainer = styled.div<BannerProps>`
         props.backgroundColor &&
         `
         background-color: ${props.theme[props.backgroundColor]};
+    `}
+    ${(props) =>
+        props.pattern &&
+        `
+        background: url(${Patterns[props.pattern]});
     `}
     width: 100%;
     display: flex;

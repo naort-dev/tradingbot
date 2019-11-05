@@ -8,7 +8,7 @@ export default () => {
         <Layout.Page title="creator-features">
             <Layout.Section fullHeight noPadding id="feature-description">
                 <Layout.Center>
-                    <Layout.TwoColumn reverted>
+                    <Layout.TwoColumn reverted columnWidth={40}>
                         <Layout.OneColumn>
                             <Layout.CenterVertical>
                                 <div>
@@ -32,7 +32,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2CandleUI} />
+                                <Image image={Screens.V3MacFeatures} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -78,7 +78,7 @@ export default () => {
                                         reliable execution of your strategies.
                                     </p>
                                     <ul>
-                                        <li>Rely on our infrastructure located in multiple regions - close to your favourite crypto exchange.</li>
+                                        <li>Rely on our infrastructure located in multiple regions - close to your favourite crypto exchange</li>
                                         <li>No more maintenance and setup of your own servers</li>
                                         <li>Direct and reliable access to tickers, orderbooks and more</li>
                                         <li>Access your bots on web and mobile</li>
@@ -88,7 +88,7 @@ export default () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneFrontalB} />
+                                <Image image={Screens.V2PhoneFrontalB} scale={0.6} />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

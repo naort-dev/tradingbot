@@ -15,6 +15,7 @@ const SlideContainer = styled.div`
     margin-left: -${Margins.Large};
     @media (max-width: 768px) {
         justify-content: center;
+        margin-left: 0;
     }
 `;
 

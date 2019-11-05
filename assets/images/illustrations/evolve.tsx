@@ -25,7 +25,7 @@ export default () => {
     const { seen } = useSection();
     const { delay } = useDelay();
     return (
-        <Svg width="258" height="124" viewBox="0 0 258 124" fill="none" xmlns="http://www.w3.org/2000/svg" seen={seen} delay={delay}>
+        <Svg width="100%" height="100%" viewBox="0 0 258 124" fill="none" xmlns="http://www.w3.org/2000/svg" seen={seen} delay={delay}>
             <g>
                 <g>
                     <path

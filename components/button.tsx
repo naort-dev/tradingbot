@@ -107,7 +107,7 @@ export const Button: React.FunctionComponent<BProps & ButtonProps> = ({ children
             if (!attributes) {
                 attributes = {};
             }
-            attributes.page = router.pathname;
+            attributes.location = router.pathname;
             mixpanel.track(event, attributes);
         }
         if (to) {

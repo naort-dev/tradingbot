@@ -6,7 +6,6 @@ import { Paddings } from 'theme';
 
 const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
     width: 100%;
-    height: 100%;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -31,13 +30,20 @@ interface TwoColumnProps {
     mobileWithHeader?: boolean;
     mobileReverted?: boolean;
     collapseMobile?: boolean;
+    border?: boolean;
 }
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
     > div:first-child {
         width: ${(props) => (props.columnWidth ? props.columnWidth : 50)}%;
+        ${(props) =>
+            props.border &&
+            `
+            border-right: 1px solid ${props.theme.borderColor};
+        `}
         @media (max-width: 768px) {
             width: 100%;
+            border-right: 0;
         }
     }
     > div:last-child {
