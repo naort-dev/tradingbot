@@ -13,7 +13,7 @@ class MixPanelWrapper {
     constructor() {
         this.debug = process.env.DEBUG !== undefined;
         if (!this.debug && this.browser) {
-            mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
+            mixpanel.init('8b4bcb5de9824d9f88c5f79eaa8f06cb');
             mixpanel.register(this.opts);
             ReactGA.initialize('UA-137950515-1');
             ReactGA.set(this.opts);
@@ -58,7 +58,10 @@ class MixPanelWrapper {
                 category: 'event',
                 action: name,
             });
-            mixpanel.track(name, properties);
+            mixpanel.track(name, {
+                ...(properties || {}),
+                app: 'landingpage'
+            });
         }
     }
     has_opted_in_tracking() {
