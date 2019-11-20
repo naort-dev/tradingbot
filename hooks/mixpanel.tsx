@@ -9,6 +9,7 @@ class MixPanelWrapper {
     private browser = typeof window !== 'undefined';
     public opts = {
         landingpage: 3,
+        app: 'landingpage',
     };
     constructor() {
         this.debug = process.env.DEBUG !== undefined;
@@ -60,7 +61,6 @@ class MixPanelWrapper {
             });
             mixpanel.track(name, {
                 ...(properties || {}),
-                app: 'landingpage'
             });
         }
     }
