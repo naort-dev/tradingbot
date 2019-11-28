@@ -46,6 +46,7 @@ class MixPanelWrapper {
         return !this.debug && this.browser;
     }
     pageview(location: string) {
+        location = (location || '/').split('?')[0];
         if (this.shouldTrack) {
             ReactGA.pageview(location);
             mixpanel.track(Events.Pageview, {
