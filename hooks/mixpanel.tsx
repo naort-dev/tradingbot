@@ -4,6 +4,12 @@ import ReactGA from 'react-ga';
 import { Router } from 'next/router';
 import { Events } from '@constants';
 
+import TagManager from 'react-gtm-module';
+
+const tagManagerArgs = {
+    gtmId: 'GTM-KP8HKKB',
+};
+
 class MixPanelWrapper {
     private debug = false;
     private browser = typeof window !== 'undefined';
@@ -16,6 +22,7 @@ class MixPanelWrapper {
         if (!this.debug && this.browser) {
             mixpanel.init('8b4bcb5de9824d9f88c5f79eaa8f06cb');
             mixpanel.register(this.opts);
+            TagManager.initialize(tagManagerArgs);
             ReactGA.initialize('UA-137950515-1');
             ReactGA.set(this.opts);
             Router.events.on('routeChangeComplete', (url) => {
