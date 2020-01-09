@@ -12,7 +12,7 @@
         "export": "next export",
         "test": "serverless offline",
         "deploy": "now",
-        "deploy:production": "now --target production"
+        "deploy:production": "now --prod"
     },
     "dependencies": {
         "@zeit/next-css": "^1.0.1",
@@ -58,5 +58,8 @@
         "typescript": "^3.4.2",
         "typescript-plugin-styled-components": "^1.4.2"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "engines": {
+        "node": "12.x"
+    }
 }

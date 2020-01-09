@@ -139,7 +139,7 @@ export const Footer: React.FunctionComponent = () => {
                     ]}
                 />
                 <Bottom>
-                    <L>All rights reserved © Trality 2019</L>
+                    <L>All rights reserved © Trality 2020</L>
                     <R>Made with 💙 by Trality</R>
                 </Bottom>
             </Wrap>
