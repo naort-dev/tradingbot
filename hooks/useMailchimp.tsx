@@ -1,7 +1,7 @@
 import jsonp from 'jsonp';
 import { useState } from 'react';
 
-const BASE_URL = 'https://trality.us19.list-manage.com/subscribe/post-json?u=c7a47bb0a40e39af74ae61074&id=9db93b0bb1&EMAIL=';
+const BASE_URL = 'https://trality.us19.list-manage.com/subscribe/post-json?u=c7a47bb0a40e39af74ae61074&id=7c454193ce&EMAIL=';
 
 function makeUrl(email: string) {
     return `${BASE_URL}${email.toLowerCase()}`;
