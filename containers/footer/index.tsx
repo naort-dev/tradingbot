@@ -119,22 +119,32 @@ export const Footer: React.FunctionComponent = () => {
                 <LogoList
                     logos={[
                         {
-                            title: 'Vienna Business Agency',
-                            light: Logos.Vba,
-                            dark: Logos.VbaWhite,
+                            title: 'AWS Activate',
+                            light: Logos.Aws,
+                            dark: Logos.AwsWhite,
                         },
                         {
-                            title: 'Inits Incubator',
-                            light: Logos.Inits,
+                            title: 'Blockrocket',
+                            light: Logos.BlockRocketBlack,
+                            dark: Logos.BlockRocketWhite,
+                        },
+                        {
+                            title: 'FFG',
+                            light: Logos.FFGBlack,
+                            dark: Logos.FFGWhite,
                         },
                         {
                             title: 'Herbst Kinsky Incubator',
                             light: Logos.Hk,
                         },
                         {
-                            title: 'AWS Activate',
-                            light: Logos.Aws,
-                            dark: Logos.AwsWhite,
+                            title: 'Inits Incubator',
+                            light: Logos.Inits,
+                        },
+                        {
+                            title: 'Vienna Business Agency',
+                            light: Logos.Vba,
+                            dark: Logos.VbaWhite,
                         },
                     ]}
                 />
