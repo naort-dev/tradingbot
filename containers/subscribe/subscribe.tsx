@@ -123,16 +123,6 @@ export const Subscribe = () => {
     const [email, setEmail] = useState('');
     const { sending, send, error, setError, success } = useMailChimp();
 
-    if (!!cookie) {
-        return (
-            <ButtonContainer>
-                <Confirmation>
-                    <ArrowDown /> Awesome! Thank you for subscribing to our mailing list.
-                </Confirmation>
-            </ButtonContainer>
-        );
-    }
-
     const isValidEmail = EmailRegex.test(email.toLowerCase());
 
     const onClick = () => {
@@ -150,6 +140,16 @@ export const Subscribe = () => {
             mixpanel.track(Events.Subscribed);
         }
     }, [success]);
+
+    if (!!cookie) {
+        return (
+            <ButtonContainer>
+                <Confirmation>
+                    <ArrowDown /> Awesome! Thank you for subscribing to our mailing list.
+                </Confirmation>
+            </ButtonContainer>
+        );
+    }
 
     return (
         <ButtonContainer>

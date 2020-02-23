@@ -7,18 +7,24 @@ const LogoContainer = styled.div`
     justify-content: space-between;
     @media (max-width: 768px) {
         justify-content: center;
+        flex-wrap: wrap;
     }
 `;
 
 const Logo = styled.div`
     width: 15%;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
     > img {
         display: block;
-        width: 100%;
+        width: 90%;
+        margin-left: 5%;
         height: auto;
+        max-width: 150px;
     }
     @media (max-width: 768px) {
-        width: 32%;
+        width: 32.99%;
     }
 `;
 

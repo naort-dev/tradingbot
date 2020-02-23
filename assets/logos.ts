@@ -12,6 +12,11 @@ import * as Twitter from './images/logos/twitter.svg';
 import * as Medium from './images/logos/medium.svg';
 import * as Binance from './images/logos/binance.png';
 
+import * as FFGBlack from './images/logos/ffg_black.png';
+import * as FFGWhite from './images/logos/ffg_white.png';
+import * as BlockRocketBlack from './images/logos/blockrocket_black.png';
+import * as BlockRocketWhite from './images/logos/blockrocket_white.png';
+
 export const Logos = {
     Aws,
     AwsWhite,
@@ -26,4 +31,8 @@ export const Logos = {
     Twitter,
     Medium,
     Binance,
+    BlockRocketBlack,
+    FFGBlack,
+    FFGWhite,
+    BlockRocketWhite,
 };

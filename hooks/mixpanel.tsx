@@ -4,17 +4,25 @@ import ReactGA from 'react-ga';
 import { Router } from 'next/router';
 import { Events } from '@constants';
 
+import TagManager from 'react-gtm-module';
+
+const tagManagerArgs = {
+    gtmId: 'GTM-KP8HKKB',
+};
+
 class MixPanelWrapper {
     private debug = false;
     private browser = typeof window !== 'undefined';
     public opts = {
         landingpage: 3,
+        app: 'landingpage',
     };
     constructor() {
         this.debug = process.env.DEBUG !== undefined;
         if (!this.debug && this.browser) {
-            mixpanel.init('1c23a8e7b7d2bfa789f7d1d000dbdb92');
+            mixpanel.init('8b4bcb5de9824d9f88c5f79eaa8f06cb');
             mixpanel.register(this.opts);
+            TagManager.initialize(tagManagerArgs);
             ReactGA.initialize('UA-137950515-1');
             ReactGA.set(this.opts);
             Router.events.on('routeChangeComplete', (url) => {
@@ -45,6 +53,7 @@ class MixPanelWrapper {
         return !this.debug && this.browser;
     }
     pageview(location: string) {
+        location = (location || '/').split('?')[0];
         if (this.shouldTrack) {
             ReactGA.pageview(location);
             mixpanel.track(Events.Pageview, {
@@ -58,7 +67,9 @@ class MixPanelWrapper {
                 category: 'event',
                 action: name,
             });
-            mixpanel.track(name, properties);
+            mixpanel.track(name, {
+                ...(properties || {}),
+            });
         }
     }
     has_opted_in_tracking() {

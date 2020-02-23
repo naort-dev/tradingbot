@@ -38,7 +38,7 @@ export default () => {
         <Layout.Page title="terms">
             <Layout.Section fullHeight noPadding id="overview">
                 <Layout.Center>
-                    <Header title="General Terms and Conditions" subtitle="(18 July 2019)">
+                    <Header title="General Terms and Conditions" subtitle="(November 2019)">
                         <Section>
                         <ol>
                             <li>
@@ -217,7 +217,7 @@ export default () => {
                                     </li>
                                     <li>
                                         Marketplace: Via the Platform, TRALITY provides the possibility for Users to follow Bots from other Users of
-                                        trality. The Bots followed send trading signals to the followers account. A software solution on the Platform
+                                        TRALITY. The Bots followed send trading signals to the followers account. A software solution on the Platform
                                         forward these signals to the respective Exchange of the following User for trading with their Cryptocurrencies
                                         on the account of the following User. The User understands and expressly acknowledges, that the service on the
                                         Platform, which enables a User to follow Bots of other Users, shall and must not be considered an investment
@@ -225,19 +225,42 @@ export default () => {
                                         follows one or several Bots.
                                     </li>
                                     <li>
-                                        TRALITY agrees to grant the User a non-exclusive license to use the software services on the Platform. TRALITY
-                                        reserves the right to exclude the User from such services without any notice and without any grounds in the
-                                        sole discretion of TRALITY, in particular, if the User has breached one of his obligations under this GTC
-                                        without curing such breach within 14 days or, if the User creates a Bot which does not comply with the rules
-                                        and regulations of a Cryptoasset exchange used by the Bot, or if the User has breached any law in connection
-                                        with the function of the Bot.
+                                        Live Trading
+                                        <ol>
+                                            <li>
+                                                TRALITY offers the User the possibility to enable the Bot(s) for live trading on a connected exchange (Live Trading). For Live Trading, the Bot needs to utilize an API of the User in respect of the exchange. Via such API the Bot may communicate with the respective exchange and place sell and buy orders respectively. The User is obliged to test and to check whether the Bot is compatible with the exchange and/or its API in respect of the exchange, from time to time. TRALITY does not assume any liability for any compatibility with the exchange from time to time.
+                                            </li>
+                                            <li>
+                                                The user understands and expressly acknowledges the risks related to live trading, including, in particular, but not limited to, the risks stated in section 8 of this GTC. TRALITY does not assume any liability in respect of the API, the functionality of the API, the compatibility of the Bot on the Platform with the exchange and with functions of the API, any settings of the User with such exchange or different verification levels. The User is solely responsible to provide for the respective settings and/or verification levels necessary or useful to operate the Bot with the exchange. Further, TRALITY does not assume any liability for any internet connections with the exchange, in particular, but not limited to, in respect of any bandwidth, ping time, or any other details of any internet connection.
+                                            </li>
+                                        </ol>
                                     </li>
                                     <li>
-                                        The User and TRALITY are each entitled to terminate the service license agreement and any further contract in
-                                        respect of the Platform ordinarily at the end of each month.
+                                        Licencing: TRALITY agrees to grant the User a non-exclusive license to use the software services on the Platform. TRALITY reserves the right to exclude the User from such services without any notice and without any grounds in the sole discretion of TRALITY, in particular, if the User has breached one of his obligations under this GTC without curing such breach within 14 days or, if the User creates a Bot which does not comply with the rules and regulations of a Cryptoasset exchange used by the Bot, or if the User has breached any law in connection with the function of the Bot.
                                     </li>
                                 </ol>
                             </li>
+                            <li>
+                                <b>Payment and delay of payment</b>
+                                <ol>
+                                    <li>
+                                        If the user enables one (or several) Bot(s) for Live Trading via the Platform, the User will be charged a monthly fee (the "Fee") by TRALITY. Therefore TRALITY offers the User the following payment options: a recurring credit card payment system and/or SEPA-payment system; payment via Stripe or Paypal (the "Payment Method").
+                                    </li>
+                                    <li>
+                                        When signing up for Live Trading, the User is obliged to deposit his payment information subject to the Payment Method used by the User (the "Payment Account") with TRALITY. The respective Fee shall be immediately payable and due on the first day of each calendar month in advance. Thus, the User shall authorize TRALITY to charge the Payment Account in accordance with the general terms and conditions applicable for the Payment Method used by the User for payment. The User is obliged to provide sufficient funds on the due date. If collection via the Payment Method is not possible (e.g. insufficient funds), the User will bear any resulting costs (e.g. credit card fees). In such a case, the provisions of point 8.9 and 8.10 apply equally.
+                                    </li>
+                                    <li>
+                                        The User is in delay with a payment if the respective payment cannot be charged from the Payment Account because of insufficient funds or any other reason attributable to the User.
+                                    </li>
+                                    <li>
+                                        In the case of delay of the User, TRALITY shall be entitled to charge any fees related to such delay, in particular, but not limited to, any dunning fees (a total amount of at least EUR 10.00 up to a maximum of EUR 20.00 will be charged). In case TRALITY engages a third party with any dunning and collection services, TRALITY shall be entitled to additionally charge any additional expenses charged by the third party and in compliance with the "Verordnung des Bundesministers für wirtschaftliche Angelegenheiten über die Höchstsätze der Inkassoinstituten gebührenden Vergütungen" (BGBI Nr. 141/1996 idgF), to the extent that these are reasonable and necessary to cover adequate prosecution costs.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <b>Termination</b>
+                            </li>
+                                The User and TRALITY are each entitled to terminate the contracts concluded in respect of the Platform ordinarily at the end of each month, without the observance of any notice period. Both parties shall be entitled to terminate the contract extraordinarily with immediate effect for cause, in particular, but not limited to, in case of violation of contract. 
                             <li>
                                 <b>Exception to the right of withdrawal</b>
                             </li>
