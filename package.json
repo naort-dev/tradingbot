@@ -6,7 +6,6 @@
         "dev": "DEBUG=true next",
         "dev:prod": "NODE_ENV=production DEBUG=false next",
         "build": "next build",
-        "blog": "node scripts/generate.js",
         "start": "next start",
         "prettier": "prettier --write \"pages/**/*.{ts, tsx}\"",
         "export": "next export",

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useOpen } from './hooks/useOpen';
 import { LinkItem, ButtonItem, DropdownItem, ItemGroup, ContactItem } from './item';
 
-import { useIsMobile } from 'hooks/useIsMobile';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import { Logos } from '@assets';
 import { Navigation } from 'theme';
 import { Events, SignupAttribute, SignupOrigins } from '@constants';
@@ -84,7 +84,7 @@ export const Menu = () => {
                     },
                     {
                         name: 'Blog',
-                        target: '/blog',
+                        target: 'https://blog.trality.com',
                     },
                 ]}
             />
