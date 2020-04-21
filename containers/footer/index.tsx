@@ -89,7 +89,7 @@ export const Footer: React.FunctionComponent = () => {
                         <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
-                        <Link href="/blog">
+                        <Link href="https://blog.trality.com">
                             <a>Blog</a>
                         </Link>
                         <Link href="/jobs">

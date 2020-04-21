@@ -67,7 +67,7 @@ export default () => {
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
                                 <h4>Senior/Junior Frontend Developer (Part-/Full-time)</h4>
-                                <p>Use cutting edge UI frameworks (mostly React) in order to raise the bar for state-of-the-art UI and UX!</p>
+                                <p>Use cutting edge UI frameworks in order to raise the bar for state-of-the-art UI and UX!</p>
                                 <KnowMore to="/jobs/frontend">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
@@ -76,9 +76,9 @@ export default () => {
                                 <KnowMore to="/jobs/mobile">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4>Manager Algorithmic Trading Strategies (Part-time)</h4>
-                                <p>Manage the most complex algorithms and constantly improve the performance of our trading bots and API!</p>
-                                <KnowMore to="/jobs/algorithms">Interested</KnowMore>
+                                <h4>Junior AI-Engineer</h4>
+                                <p>Work on state-of-the art ML projects at Trality.</p>
+                                <KnowMore to="/jobs/ai">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
                                 <h4>Manager Marketing & Communication (Part-time)</h4>

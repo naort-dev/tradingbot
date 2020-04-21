@@ -19,24 +19,24 @@ export default () => {
                     />
                     <Header title="Senior/Junior Frontend Developer (Part-/Full-time)">
                         <p>
-                            We’re looking for talented frontend engineers, who not only have a solid programming background, but also a love for the
-                            use of cutting edge UI frameworks (mostly React) in order to raise the bar for state-of-the-art UI and UX. If you are able
-                            to think modularly, want to create beautiful trading bot modules, and are able to work on a sophisticated and challenging
-                            web platform, you've come to the right place.
+                            We’re looking for talented frontend engineers with a solid programming background who love to use React in order to raise
+                            the bar for state-of-the-art UI and UX. If you are able to think modularly, want to create beautiful trading bot modules,
+                            and are able to work on a sophisticated and challenging web platform, you've come to the right place.
                         </p>
                         <h3>What you will do everyday</h3>
                         <>
                             <ul>
+                                <li>Use Typescript and React to implement new frontend functionality for our Webapp</li>
+                                <li>Investigate production issues pertaining to UI to determine root causes and implement solutions</li>
                                 <li>
-                                    Design and build well-designed, efficient, scalable systems that will soon be used by millions of people across
-                                    the globe
+                                    Improve Typescript-based backend code on your own should the need arise and work toghether with our engineers to
+                                    communicate interface requirements
                                 </li>
-                                <li>Investigate production issues pertaining to UI to determine root cause and implement solutions</li>
                                 <li>
                                     Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained,
                                     final markup is standards compliant, and UI deliverables are completed on time
                                 </li>
-                                <li>Work with the real time feedback from our users (external and internal) to make the products better</li>
+                                <li>Work with the real time feedback from our users (external and internal) to make our products better</li>
                                 <li>Enthuse the Trality team with your ideas and suggestions for solutions, libraries and technologies</li>
                                 <li>
                                     Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of

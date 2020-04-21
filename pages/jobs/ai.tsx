@@ -1,0 +1,85 @@
+import { Layout } from '@containers';
+import { Header, Link, Breadcrumb } from '@components';
+
+export default () => {
+    return (
+        <Layout.Page title="jobs-ai">
+            <Layout.Section fullHeight noPadding id="jobs-header">
+                <Layout.Center direction="column">
+                    <Breadcrumb
+                        crumbs={[
+                            {
+                                title: 'Jobs',
+                                link: '/jobs',
+                            },
+                            {
+                                title: 'Junior AI-Engineer (Full-time)',
+                            },
+                        ]}
+                    />
+                    <Header title="Junior AI-Engineer (Full-time)">
+                        <p>
+                            We’re looking for talented data scientists with who would like to work on building a state-of-the art machine learning
+                            (ML) project from the ground up together with an experienced team at Trality. If deep diving through massive amounts of
+                            data as well as designing and evaluating ML models is your thing, you'll fit right into our team!
+                        </p>
+                        <h3>What you will do everyday</h3>
+                        <>
+                            <ul>
+                                <li>Design and evaluate ML-models to predict large amounts of financial data using Python and Tensorflow/PyTorch</li>
+                                <li>
+                                    Build a data processing pipeline for retreival, cleaning and augmentation that can be used during in an
+                                    offline-fashion for trainings that's highy generic and reusable and can be run on AWS/GCP
+                                </li>
+                                <li>Work together with our engineers to conceptionally design and implement the production inference pipeline</li>
+                                <li>
+                                    Investigate production/performance issues and scalability bottlenecks in your models in order to improve
+                                    production inference
+                                </li>
+                                <li>Enthuse the Trality team with your ideas and suggestions for solutions, libraries and technologies</li>
+                                <li>
+                                    Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of
+                                    our platform
+                                </li>
+                            </ul>
+                        </>
+                        <h3>What you bring to the table</h3>
+                        <>
+                            <ul>
+                                <li>Writing python code is a piece of cake for you, and you feel comfortable using Numpy, Pandas, Scipy etc.</li>
+                                <li>You've worked on a Machine Learning project before and know your way around Tensorflow or Pytorch</li>
+                                <li>
+                                    You know your way around a console and are not afraid to setup cloud-based infrastructure for e.g. ML-model
+                                    training on AWS/GCP
+                                </li>
+                                <li>You hold at least a bachelor's degree in computer science</li>
+                                <li>You can talk to your team (conversational proof) in English</li>
+                                <li>You work independently and like to take the initiative</li>
+                                <li>You don’t mind having a beer with us on Friday afternoons after work is done</li>
+                            </ul>
+                        </>
+                        <h3>What you'll get/our offer</h3>
+                        <>
+                            <ul>
+                                <li>38,5h full-time or 20h part-time job with working in our office in Vienna in the 1st district</li>
+                                <li>
+                                    an extremely flexible working environment with a lot of creative freedom in the further development of our startup
+                                </li>
+                                <li>a possibility to negotiate an equity-based compensation</li>
+                                <li>
+                                    Austrian labor law requires us to state the minimum salary for this role (on a junior level), which is 2.461€ (per
+                                    month, paid 14 times). However, we are willing to overpay you significantly based qualification, education and
+                                    experience
+                                </li>
+                            </ul>
+                        </>
+                        <h3>Sounds interesting?</h3>
+                        <p>
+                            To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
+                        </p>
+                    </Header>
+                </Layout.Center>
+            </Layout.Section>
+        </Layout.Page>
+    );
+};
