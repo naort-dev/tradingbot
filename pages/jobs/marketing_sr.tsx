@@ -63,11 +63,12 @@ export default () => {
                         <h3>What you'll get/our offer</h3>
                         <>
                             <ul>
-                                <li>38.5h full-time job at a modern desk in our offices in the most livable city in the word – Vienna</li>
+                            <li>38,5h full-time job, working in our brand new office in the most livable city
+                                in the word – Vienna</li>
                                 <li>An extremely flexible working environment with a lot of creative freedom in further developing of our startup</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum salary for this role, which is 3.000€ (per
+                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is 3.048€ (per
                                     month, paid 14 times).{' '}
                                     <u>However, we are willing to overpay you based qualification, education and experience</u>
                                 </li>
