@@ -76,7 +76,7 @@ export default () => {
                                 </li>
                                 <li>a possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                Austrian labor law requires us to state the minimum collective bargening agreement salary for this role, which is 2.518€ (per
+                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is 2.518€ (per
                                     month, paid 14 times). However, we are going to overpay you significantly based qualification, education and
                                     experience
                                 </li>

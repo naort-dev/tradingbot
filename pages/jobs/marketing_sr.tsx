@@ -68,7 +68,7 @@ export default () => {
                                 <li>An extremely flexible working environment with a lot of creative freedom in further developing of our startup</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum salary for this role, which is 3.048€ (per
+                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is 3.048€ (per
                                     month, paid 14 times).{' '}
                                     <u>However, we are willing to overpay you based qualification, education and experience</u>
                                 </li>
