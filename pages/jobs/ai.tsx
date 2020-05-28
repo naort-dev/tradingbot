@@ -19,17 +19,25 @@ export default () => {
                     />
                     <Header title="Junior AI-Engineer (Full-time)">
                         <p>
-                            We’re looking for talented data scientists with who would like to work on building a state-of-the art machine learning
-                            (ML) project from the ground up together with an experienced team at Trality. If deep diving through massive amounts of
-                            data as well as designing and evaluating ML models is your thing, you'll fit right into our team!
+                            We’re looking for talented data scientists who would like to work on building a state-of-the art machine learning (ML)
+                            project from the ground up together with an experienced team at Trality. If deep diving through massive amounts of data as
+                            well as designing and evaluating ML models is your thing, you'll fit right into our team!
                         </p>
                         <h3>What you will do everyday</h3>
                         <>
                             <ul>
-                                <li>Design and evaluate ML-models to predict large amounts of financial data using Python and Tensorflow/PyTorch</li>
+                                <li>
+                                    Design, implement and evaluate ML-models to predict large amounts of historical financial data using Python and
+                                    Tensorflow or PyTorch.
+                                </li>
+                                <li>
+                                    Research and implement a generic supervised learning training and evaluation pipeline to improve and measure
+                                    prediction accuracy of existing and newly designed ML-models
+                                </li>
+                                <li>Implement prototypical reinforcement learning agents to complete autonomous trading tasks</li>
                                 <li>
                                     Build a data processing pipeline for retreival, cleaning and augmentation that can be used during in an
-                                    offline-fashion for trainings that's highy generic and reusable and can be run on AWS/GCP
+                                    offline-fashion for trainings that's highly generic and reusable and can be run on AWS/GCP
                                 </li>
                                 <li>Work together with our engineers to conceptionally design and implement the production inference pipeline</li>
                                 <li>
@@ -49,8 +57,8 @@ export default () => {
                                 <li>Writing python code is a piece of cake for you, and you feel comfortable using Numpy, Pandas, Scipy etc.</li>
                                 <li>You've worked on a Machine Learning project before and know your way around Tensorflow or Pytorch</li>
                                 <li>
-                                    You know your way around a console and are not afraid to setup cloud-based infrastructure for e.g. ML-model
-                                    training on AWS/GCP
+                                    You know your way around a console and are not afraid to setup cloud-based infrastructure for e.g. parallelized
+                                    ML-model training on AWS/GCP
                                 </li>
                                 <li>You hold at least a bachelor's degree in computer science</li>
                                 <li>You can talk to your team (conversational proof) in English</li>
