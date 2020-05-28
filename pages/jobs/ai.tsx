@@ -69,14 +69,15 @@ export default () => {
                         <h3>What you'll get/our offer</h3>
                         <>
                             <ul>
-                                <li>38,5h full-time or 20h part-time job with working in our office in Vienna in the 1st district</li>
+                            <li>38,5h full-time job, working in our brand new office in the most livable city
+                                in the word – Vienna (flexible home-office arrangement possible)</li>
                                 <li>
                                     an extremely flexible working environment with a lot of creative freedom in the further development of our startup
                                 </li>
                                 <li>a possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum salary for this role (on a junior level), which is 2.461€ (per
-                                    month, paid 14 times). However, we are willing to overpay you significantly based qualification, education and
+                                Austrian labor law requires us to state the minimum collective bargening agreement salary for this role, which is 2.518€ (per
+                                    month, paid 14 times). However, we are going to overpay you significantly based qualification, education and
                                     experience
                                 </li>
                             </ul>
