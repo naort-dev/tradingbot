@@ -60,7 +60,7 @@ export default () => {
                                     You know your way around a console and are not afraid to setup cloud-based infrastructure for e.g. parallelized
                                     ML-model training on AWS/GCP
                                 </li>
-                                <li>You hold at least a bachelor's degree in computer science</li>
+                                <li>You hold at least a bachelor's degree in computer science or equivalent</li>
                                 <li>You can talk to your team (conversational proof) in English</li>
                                 <li>You work independently and like to take the initiative</li>
                                 <li>You don’t mind having a beer with us on Friday afternoons after work is done</li>
