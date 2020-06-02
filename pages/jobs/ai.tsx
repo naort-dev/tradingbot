@@ -36,7 +36,7 @@ export default () => {
                                 </li>
                                 <li>Implement prototypical reinforcement learning agents to complete autonomous trading tasks</li>
                                 <li>
-                                    Build a data processing pipeline for retreival, cleaning and augmentation that can be used during in an
+                                    Build a data processing pipeline for retreival, cleaning and augmentation that can be used in an
                                     offline-fashion for trainings that's highly generic and reusable and can be run on AWS/GCP
                                 </li>
                                 <li>Work together with our engineers to conceptionally design and implement the production inference pipeline</li>
@@ -85,6 +85,9 @@ export default () => {
                         <h3>Sounds interesting?</h3>
                         <p>
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
+                        </p>
+                        <p>
+                            Application deadline: <b>17.6.2020</b> but applications will be evaluated on a rolling basis!
                         </p>
                     </Header>
                 </Layout.Center>
