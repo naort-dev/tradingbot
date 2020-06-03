@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106" height="106" viewBox="0 0 106 106">
+    <defs>
+        <circle id="prefix__a" cx="53" cy="53" r="53"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#FFF" xlink:href="#prefix__a"/>
+        <g transform="rotate(5 -373.589 118.206)">
+            <rect width="94" height="56" fill="#FFF" fill-rule="nonzero" rx="3"/>
+            <path fill="#E5F7FB" fill-rule="nonzero" d="M73.591.112L90.984.017C92.64.007 93.99 1.343 94 3V52.962c0 1.657-1.343 3-3 3h-.038l-86.467-1.09c-1.657-.02-2.983-1.38-2.962-3.037v-.019l.24-12.733 68.85-.349-.015-35.621C70.607 1.463 71.94.121 73.59.112z"/>
+            <rect width="91.5" height="53.5" x="1.25" y="1.25" fill-rule="nonzero" stroke="#00B3D8" stroke-width="2.5" rx="3"/>
+            <text fill="#00B3D8" font-family="BasierSquare-Bold, Basier Square" font-size="9" font-weight="bold" letter-spacing=".3">
+                <tspan x="31.265" y="18">UNDER </tspan> <tspan x="10.231" y="30">CONSTRUCTION</tspan>
+            </text>
+            <path stroke="#00B3D8" stroke-width="2.5" d="M1.812 39.52h90.59"/>
+            <path fill="#00B3D8" d="M4.738 40L15.738 40 25.738 55 14.738 55zM25.738 40L36.738 40 46.738 55 35.738 55zM46.738 40L57.738 40 67.738 55 56.738 55zM67.738 40L78.738 40 88.738 55 77.738 55z"/>
+        </g>
+        <circle cx="55" cy="18" r="3.75" fill-rule="nonzero" stroke="#00B3D8" stroke-width="2.5"/>
+        <path stroke="#00B3D8" stroke-width="2.5" d="M57 22l8.058 17.292M53 22l-8 16"/>
+    </g>
+</svg>

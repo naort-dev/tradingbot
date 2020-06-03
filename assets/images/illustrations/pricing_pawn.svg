@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150">
+    <defs>
+        <circle id="prefix__a" cx="75" cy="75" r="75"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#E5F7FB" xlink:href="#prefix__a"/>
+        <g fill-rule="nonzero" mask="url(#prefix__b)">
+            <g transform="translate(49 62)">
+                <path fill="#FFF" d="M33.215 24C36.703 21.65 39 17.646 39 13.1 39 5.866 33.18 0 26 0S13 5.865 13 13.1c0 4.521 2.272 8.507 5.728 10.862"/>
+                <path fill="#E5F7FB" d="M32.993 24C36.615 21.65 39 17.646 39 13.1 39 5.866 32.956 0 25.5 0s1.936 5.865 1.936 13.1c0 4.521-2.863 8.507.726 10.862"/>
+                <path stroke="#00B3D8" stroke-width="2.5" d="M32.824 22.749c3.063-2.206 4.926-5.767 4.926-9.648C37.75 6.554 32.487 1.25 26 1.25S14.25 6.554 14.25 13.1c0 3.86 1.842 7.403 4.876 9.613l13.698.036z"/>
+                <path fill="#FFF" d="M16.433 28.52h19.134c1.535 0 2.822 1.159 2.984 2.685l2.782 26.315H10.666l2.783-26.315c.162-1.526 1.449-2.685 2.984-2.685z"/>
+                <path fill="#E5F7FB" d="M32.141 28.52h3.426c1.535 0 2.822 1.159 2.984 2.685l2.782 26.315H30.812l-1.665-25.807c-.106-1.653 1.148-3.08 2.8-3.186.065-.005.13-.007.194-.007z"/>
+                <rect width="27.5" height="6.5" x="12.25" y="22.77" fill="#FFF" stroke="#00B3D8" stroke-width="2.5" rx="3"/>
+                <path fill="#FFF" stroke="#00B3D8" stroke-width="2.5" d="M7.25 63.27h37.5v-3.46c0-1.91-1.55-3.46-3.46-3.46H10.71c-1.91 0-3.46 1.55-3.46 3.46v3.46z"/>
+                <path fill="#FFF" stroke="#00B3D8" stroke-width="2.5" d="M1.25 70.797h49.5v-3.773c0-2.083-1.69-3.773-3.773-3.773H5.023c-2.084 0-3.773 1.69-3.773 3.773v3.773z"/>
+                <path stroke="#00B3D8" stroke-width="2.5" d="M14.86 29.356L12.053 56.27h27.893L37.14 29.356H14.86z"/>
+            </g>
+        </g>
+        <path stroke="#00B3D8" stroke-width="2.5" d="M7.449 132.798H146.76" mask="url(#prefix__b)"/>
+    </g>
+</svg>

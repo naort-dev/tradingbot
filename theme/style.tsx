@@ -77,6 +77,7 @@ h2 {
     color: ${(props) => props.theme.fontHeader};
     line-height: 1.15;
     margin: ${Margins.VeryLarge} 0px;
+    margin-top: ${Margins.Large};
     @media (max-width: 768px) {
         font-size: 30px;
         text-align: center;

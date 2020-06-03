@@ -35,6 +35,7 @@ const Bottom = styled.div`
     padding: ${Paddings.Large} 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 const L = styled.div`
@@ -42,6 +43,8 @@ const L = styled.div`
     @media (max-width: 768px) {
         width: 50%;
     }
+    display: flex;
+    align-items: center;
 `;
 
 const R = styled.div`
@@ -56,6 +59,17 @@ const R = styled.div`
     margin-top: -4px;
     @media (max-width: 768px) {
         width: 50%;
+    }
+`;
+
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-block;
+    > a > img {
+        max-height: 25px;
+        margin-left: 10px;
     }
 `;
 
@@ -149,7 +163,17 @@ export const Footer: React.FunctionComponent = () => {
                     ]}
                 />
                 <Bottom>
-                    <L>All rights reserved © Trality 2020</L>
+                    <L>
+                        All rights reserved © Trality 2020
+                        <LogoContainer>
+                            <a href="https://t.me/trality" target="_blank">
+                                <img src={Logos.Telegram} />
+                            </a>
+                            <a href="https://twitter.com/trality_bots" target="_blank">
+                                <img src={Logos.Twitter} />
+                            </a>
+                        </LogoContainer>
+                    </L>
                     <R>Made with 💙 by Trality</R>
                 </Bottom>
             </Wrap>
