@@ -75,8 +75,8 @@ export default () => {
                                 <li>Team events throughout the year to foster the company spirit and make you feel right at home</li>
                                 <li>Free snacks, geat coffee and mate to keep you fueled happy through the work day</li>
                                 <li>The technical equipment you need to bring out the best in you</li>
-                                We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to grow
-                                with the company.
+                                <li>We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to grow
+                                with the company</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
                                     Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
