@@ -70,6 +70,7 @@ export const Menu = () => {
                 ]}
             />
             <LinkItem name="Marketplace" target="/marketplace" />
+            <LinkItem name="Pricing" target="/pricing" />
             <DropdownItem
                 name="Resources"
                 target="/"
@@ -96,11 +97,6 @@ export const Menu = () => {
                     event={Events.Signup}
                     attributes={SignupAttribute(SignupOrigins.NavigationBar)}
                 />
-            </ItemGroup>
-            <ItemGroup>
-                <ContactItem name="Telegram" source={Logos.Telegram} target="https://t.me/trality" />
-                <ContactItem name="Twitter" source={Logos.Twitter} target="https://twitter.com/trality_bots" />
-                <ContactItem name="Medium" source={Logos.Medium} target="https://medium.com/trality" />
             </ItemGroup>
         </Container>
     );

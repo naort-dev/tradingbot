@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Header } from '@components';
+import { Header, Link } from '@components';
 
 export default () => {
     return (
@@ -57,6 +57,12 @@ export default () => {
                             All bots are completely sandboxed and run individually. Your followers will never directly touch your bot or the
                             underlying code/algorithm. Instead, Trality only mirrors signals and portfolio distributions depending on the
                             circumstances of the individual follower. Logging, debugging and other functionality is not available for followers.{' '}
+                        </Layout.Collapsible>
+
+                        <Layout.Collapsible title="How much does it cost?">
+                            We offer a free plan for you to create and backtest your strategies. Once you're satisfied with your strategy and want to
+                            trade with real money, you can select one of our plans starting at 9,99€. See our{' '}
+                            <Link href="/pricing">pricing page</Link> for more information.
                         </Layout.Collapsible>
                     </Header>
                 </Layout.Center>
