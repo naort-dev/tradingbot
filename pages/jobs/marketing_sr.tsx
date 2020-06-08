@@ -1,7 +1,6 @@
 import { Layout } from '@containers';
 import { Header, Link, Breadcrumb } from '@components';
 
-
 export default () => {
     return (
         <Layout.Page title="jobs-marketing_sr">
@@ -22,8 +21,8 @@ export default () => {
                         <p>
                             We’re looking for an experienced, creative and performance-oriented Sr. Manager to lead our growth marketing and
                             communications efforts. Being the one in charge of our online marketing (paid and organic) as well as communications/PR,
-                            you will work together with the CEO of Trality as well as existing freelancers and possible jr. managers in order
-                            to fuel our growth ambitions. If you have a strong background in online marketing and love to take on the challenge of spreading
+                            you will work together with the CEO of Trality as well as existing freelancers and possible jr. managers in order to fuel
+                            our growth ambitions. If you have a strong background in online marketing and love to take on the challenge of spreading
                             the message about our startup, we would love to hear from you!
                         </p>
                         <h3>What you will do everyday</h3>
@@ -33,7 +32,10 @@ export default () => {
 
                                 <li>
                                     Take control of Trality’s existing and future traction channels (mostly online) and develop ideas to grow
-                                    awareness and user growth. These channels include but are not limited to: Community building, SEA/paid social, SEO/ASO, content marketing, targeting blogs/influencers, affiliate and referral programs, business development, direct marketing, offline events</li>
+                                    awareness and user growth. These channels include but are not limited to: Community building, SEA/paid social,
+                                    SEO/ASO, content marketing, targeting blogs/influencers, affiliate and referral programs, business development,
+                                    direct marketing, offline events
+                                </li>
                                 <li>
                                     Track and analyze all traction channels and their effectiveness in order to constantly improve and expand our
                                     marketing measures
@@ -63,14 +65,23 @@ export default () => {
                         <h3>What you'll get/our offer</h3>
                         <>
                             <ul>
-                            <li>38,5h full-time job, working in our brand new office in the most livable city
-                                in the word – Vienna</li>
+                                <li>38,5h full-time job, working in our brand new office in the most livable city in the word – Vienna</li>
                                 <li>An extremely flexible working environment with a lot of creative freedom in further developing of our startup</li>
+                                <li>The newest technical gear to bring out the best in you</li>
+                                <li>
+                                    A yearly learning allowance to pay for relevant trainings and certificates in order to help you grow with the
+                                    company
+                                </li>
+                                <li>Team events throughout the year to foster the company spirit and make you feel right at home</li>
+                                <li>Free snacks, geat coffee and mate to keep you fueled happy through the work day</li>
+                                <li>The technical equipment you need to bring out the best in you</li>
+                                <li>We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to grow
+                                with the company</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is 3.048€ (per
-                                    month, paid 14 times).{' '}
-                                    <u>However, we are willing to overpay you based qualification, education and experience</u>
+                                    Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
+                                    3.048€ (per month, paid 14 times).{' '}
+                                    <b>However, we are going to overpay you significantly based qualification, education and experience</b>
                                 </li>
                             </ul>
                         </>

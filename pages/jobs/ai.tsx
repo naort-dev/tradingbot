@@ -36,8 +36,8 @@ export default () => {
                                 </li>
                                 <li>Implement prototypical reinforcement learning agents to complete autonomous trading tasks</li>
                                 <li>
-                                    Build a data processing pipeline for retreival, cleaning and augmentation that can be used in an
-                                    offline-fashion for trainings that's highly generic and reusable and can be run on AWS/GCP
+                                    Build a data processing pipeline for retreival, cleaning and augmentation that can be used in an offline-fashion
+                                    for trainings that's highly generic and reusable and can be run on AWS/GCP
                                 </li>
                                 <li>Work together with our engineers to conceptionally design and implement the production inference pipeline</li>
                                 <li>
@@ -69,16 +69,23 @@ export default () => {
                         <h3>What you'll get/our offer</h3>
                         <>
                             <ul>
-                            <li>38,5h full-time job, working in our brand new office in the most livable city
-                                in the word – Vienna (flexible home-office arrangement possible)</li>
+                                <li>38,5h full-time job, working in our brand new office in the most livable city in the word – Vienna</li>
+                                <li>An extremely flexible working environment with a lot of creative freedom in further developing of our startup</li>
+                                <li>The newest technical gear to bring out the best in you</li>
                                 <li>
-                                    an extremely flexible working environment with a lot of creative freedom in the further development of our startup
+                                    A yearly learning allowance to pay for relevant trainings and certificates in order to help you grow with the
+                                    company
                                 </li>
-                                <li>a possibility to negotiate an equity-based compensation</li>
+                                <li>Team events throughout the year to foster the company spirit and make you feel right at home</li>
+                                <li>Free snacks, geat coffee and mate to keep you fueled happy through the work day</li>
+                                <li>The technical equipment you need to bring out the best in you</li>
+                                <li>We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to grow
+                                with the company.</li>
+                                <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is 2.518€ (per
-                                    month, paid 14 times). However, we are going to overpay you significantly based qualification, education and
-                                    experience
+                                    Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
+                                    3.048€ (per month, paid 14 times).{' '}
+                                    <b>However, we are going to overpay you significantly based qualification, education and experience</b>
                                 </li>
                             </ul>
                         </>
