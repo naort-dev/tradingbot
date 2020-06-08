@@ -84,7 +84,7 @@ export default () => {
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
                                     Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
-                                    3.048€ (per month, paid 14 times).{' '}
+                                    2.518€ (per month, paid 14 times).{' '}
                                     <b>However, we are going to overpay you significantly based qualification, education and experience</b>
                                 </li>
                             </ul>
