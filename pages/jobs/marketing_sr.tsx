@@ -75,8 +75,10 @@ export default () => {
                                 <li>Team events throughout the year to foster the company spirit and make you feel right at home</li>
                                 <li>Free snacks, geat coffee and mate to keep you fueled happy through the work day</li>
                                 <li>The technical equipment you need to bring out the best in you</li>
-                                <li>We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to grow
-                                with the company</li>
+                                <li>
+                                    We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to
+                                    grow with the company
+                                </li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
                                     Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
@@ -88,6 +90,9 @@ export default () => {
                         <h3>Sounds interesting?</h3>
                         <p>
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
+                        </p>
+                        <p>
+                            Application deadline: <b>30.6.2020!</b>
                         </p>
                     </Header>
                 </Layout.Center>
