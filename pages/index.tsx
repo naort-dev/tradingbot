@@ -106,9 +106,8 @@ export default () => {
                                 <Layout.CenterHorizontal>
                                     <Layout.Features.TypeA header="Create using rules" icon={Illustrations.LeisureComponent}>
                                         <div>
-                                            Build bots without a single line of code. Adjust and tweak them with the help of backtesting and
-                                            practice trading. Deploy your bot in the cloud and watch your rules work their magic with 24/7
-                                            live-trading!
+                                            Build bots without a single line of code. Adjust and tweak them with the help of backtesting and practice
+                                            trading. Deploy your bot in the cloud and watch your rules work their magic with 24/7 live-trading!
                                         </div>
                                         <KnowMore to="/creator/rule-builder">Read more</KnowMore>
                                     </Layout.Features.TypeA>
@@ -188,7 +187,7 @@ export default () => {
                             ]}
                         />
                         <TextBlock>
-                            <Layout.CenterLeft>Trade on a continousy growing number of exchanges.</Layout.CenterLeft>
+                            <Layout.CenterLeft>Trade on a continuously growing number of exchanges.</Layout.CenterLeft>
                         </TextBlock>
                         <Layout.CenterLeft>
                             <Button
