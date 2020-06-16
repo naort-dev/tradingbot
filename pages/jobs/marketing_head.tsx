@@ -19,13 +19,13 @@ export default () => {
                     />
                     <Header title="Head of Growth Marketing (Full-time)">
                         <p>
-                            <i>
+                            <i><b>
                                 Once upon a time, two guys met and wondered why trading bots are only accessible to big banks & hedge funds and why
                                 75% of private traders lose money when they actively trade and compete against machines that are better at everything
                                 they do. This wonder led once to an idea which led to a vision, which led to the foundation of Trality, which led to a
                                 current team of 5, to a successful Beta phase with over 1000 users and in the end all this will hopefully lead to you!
                                 You are the missing link that fuels our growth ambitions of 100x over the next 2 years!
-                            </i>
+                                </b></i>
                         </p>
                         <p>
                             We’re looking for a Head of Growth Marketing with a track record of driving growth in a fast-paced B2C startup. Being in
@@ -89,7 +89,7 @@ export default () => {
                                 </li>
                                 <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
                                 <li>
-                                    A minimum salary of 3.500€ (per month, paid 14 times), with a possibility to negotiate an overpay based on your
+                                    A minimum salary of 3.600€ (per month, paid 14 times), with a possibility to negotiate an overpay based on your
                                     qualification as well as a significant performance-based compensation!
                                 </li>
                                 <li>
