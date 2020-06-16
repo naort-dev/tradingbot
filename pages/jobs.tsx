@@ -81,9 +81,9 @@ export default () => {
                                 <KnowMore to="/jobs/ai">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                            <h4>Sr. Manager Marketing & Communication (Full-time)</h4>
+                            <h4>Head of Growth Marketing (Full-time)</h4>
                                 <p>Spread the word on our startup and be responsible for fuelling our growth ambitions!</p>
-                                <KnowMore to="/jobs/marketing_sr">Interested</KnowMore>
+                                <KnowMore to="/jobs/marketing_head">Interested</KnowMore>
                             </Layout.Grid.Item>
                         </Layout.Grid.Container>
                     </Header>
