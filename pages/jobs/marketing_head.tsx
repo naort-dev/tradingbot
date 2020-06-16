@@ -23,7 +23,7 @@ export default () => {
                                 Once upon a time, two guys met and wondered why trading bots are only accessible to big banks & hedge funds and why
                                 75% of private traders lose money when they actively trade and compete against machines that are better at everything
                                 they do. This wonder led once to an idea which led to a vision, which led to the foundation of Trality, which led to a
-                                current team of 5, to a successful Beta phase with over 1000 users and in the end all this will hopefully lead to you!
+                                current team of 6, to a successful Beta phase with over 1000 users and in the end all this will hopefully lead to you!
                                 You are the missing link that fuels our growth ambitions of 100x over the next 2 years!
                                 </b></i>
                         </p>
@@ -104,7 +104,7 @@ export default () => {
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
                         <p>
-                            Application deadline: <b>12.7.2020!</b>
+                            Application deadline: <b>12.7.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>
