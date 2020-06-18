@@ -10,17 +10,20 @@ import { PortalProvider } from 'hooks/usePortal';
 
 import '../fix.css';
 
+// Found no way to fetch via env variable prefix, fetching explicitly ...
+const trackingLinks = [
+    process.env.NEXT_PUBLIC_APP_TRACKER_ECHO,
+    process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
+    process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
+];
+
 const trackingConfig: TrackingConfig = {
-    configLinks: [
-        'echo://?id=echoTrackerId',
-        'gtm://?gtmId=GTM-KP8HKKB', 
-        'mixpanel://?mixpanelId=8b4bcb5de9824d9f88c5f79eaa8f06cb&app=landingpage&landingpage=3&crossSubdomainCookie=true'
-    ],
+    configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
         cookieName: 'tracking-optedin',
         ignoreGDPR: false,
-        debug: !!process.env.DEBUG,
-        browser: typeof window !== 'undefined'
+        debug: !!process.env.NEXT_PUBLIC_APP_DEBUG,
+        browser: typeof window !== 'undefined',
     },
     eventProperties: {
         landingpage: 3,
@@ -28,7 +31,9 @@ const trackingConfig: TrackingConfig = {
         origin: EventOrigin.LandingPage,
         stage: EventStage.Live,
     },
-    setPageviewCallback: (fct) => { Router.events.on('routeChangeComplete', fct) }
+    setPageviewCallback: (fct) => {
+        Router.events.on('routeChangeComplete', fct);
+    },
 };
 
 class Trality extends App {
@@ -44,7 +49,10 @@ class Trality extends App {
                                 <title>{'Trality - Follow & Create Bots'}</title>
                                 <meta charSet="UTF-8" />
                                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" />
-                                <meta name="description" content="Trality is a platform for anybody who wants to profit from algorithmic crypto trading. " />
+                                <meta
+                                    name="description"
+                                    content="Trality is a platform for anybody who wants to profit from algorithmic crypto trading. "
+                                />
                                 <meta httpEquiv="content-language" content="en" />
                                 <meta name="title" content="Trality - Create Trading Bots" />
                                 <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
@@ -65,7 +73,7 @@ class Trality extends App {
                             </PortalProvider>
                         </>
                     </ThemeProvider>
-                </DarkProvider>          
+                </DarkProvider>
             </TrackingProvider>
         );
     }
