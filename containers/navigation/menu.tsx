@@ -6,7 +6,7 @@ import { LinkItem, ButtonItem, DropdownItem, ItemGroup, ContactItem } from './it
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { Logos } from '@assets';
 import { Navigation } from 'theme';
-import { Events, SignupAttribute, SignupOrigins } from '@constants';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 interface OpenProps {
     open?: boolean;
@@ -94,8 +94,10 @@ export const Menu = () => {
                 <ButtonItem
                     name="Signup"
                     target="https://auth.beta.trality.com/#/signup"
-                    event={Events.Signup}
-                    attributes={SignupAttribute(SignupOrigins.NavigationBar)}
+                    event={{
+                        type: EventType.SignupInitiated,
+                        attributes: { signupOrigin: SignupOrigins.HeaderCta }
+                    }}
                 />
             </ItemGroup>
         </Container>

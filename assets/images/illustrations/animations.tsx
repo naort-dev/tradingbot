@@ -45,7 +45,6 @@ export const combine = (...keyframes: Keyframes[]) => {
 export class Animator {
     private delay: number = 0;
     private duration: number = 0.3;
-    private repeat: string = '1';
     private easing: string = 'ease-in-out';
     private translateX?: number;
     private translateY?: number;

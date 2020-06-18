@@ -12,7 +12,7 @@ import * as UnderConstruction from '../assets/images/illustrations/under_constru
 import * as SavePercent from '../assets/images/pngs/save_20p.png';
 
 import * as PricingEnterprise from '../assets/images/illustrations/pricing_enterprise_king.svg';
-import { Events, SignupOrigins, SignupAttribute } from '@constants';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 interface Plan {
     image: string;
@@ -168,11 +168,13 @@ export default () => {
                                     <Pricing.Button
                                         popular={plan.popular}
                                         to={`https://auth.beta.trality.com/#/signup?pricing=${plan.link}`}
-                                        event={Events.Signup}
-                                        attributes={{
-                                            ...SignupAttribute(plan.origin),
-                                            interval: yearly === 0 ? 'monthly' : 'yearly',
-                                        }}
+                                        event={{
+                                            type: EventType.SignupInitiated,
+                                            attributes: { 
+                                                signupOrigin: plan.origin, 
+                                                interval: yearly === 0 ? 'monthly' : 'yearly'
+                                            }
+                                        }}                                      
                                     >
                                         Start now
                                     </Pricing.Button>

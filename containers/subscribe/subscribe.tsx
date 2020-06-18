@@ -6,8 +6,7 @@ import { ArrowDown } from 'components/arrow';
 import { Button } from '@components';
 import { Loader } from 'components/loader';
 import { Paddings, Margins } from 'theme';
-import { useMixpanel } from 'hooks/mixpanel';
-import { Events } from '@constants';
+import { useTracker, createEvent, EventType} from '@trality/web-tracking';
 
 const EmailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -118,7 +117,7 @@ const Confirmation = styled.div`
 `;
 
 export const Subscribe = () => {
-    const mixpanel = useMixpanel();
+    const tracker = useTracker()
     const [cookie, setCookie] = useCookie('trality_subscribed');
     const [email, setEmail] = useState('');
     const { sending, send, error, setError, success } = useMailChimp();
@@ -137,7 +136,12 @@ export const Subscribe = () => {
     useEffect(() => {
         if (success) {
             setCookie('true');
-            mixpanel.track(Events.Subscribed);
+            tracker.TrackEvent(
+                createEvent(
+                    EventType.SubscribeCompleted,
+                    {}
+                )
+            );
         }
     }, [success]);
 

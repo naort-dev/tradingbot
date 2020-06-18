@@ -117,7 +117,7 @@ const ThreeColumnItemWrapper = styled.div<{ area: ThreeColumSelector; seen?: boo
 `;
 
 const ThreeColumnItem: React.FC<{ area: ThreeColumSelector }> = ({ children, ...props }) => {
-    const { entered, seen } = useSection();
+    const { seen } = useSection();
     const { delay } = useDelay();
     return (
         <ThreeColumnItemWrapper {...props} seen={seen} delay={delay}>

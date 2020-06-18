@@ -1,26 +1,47 @@
 import * as React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-
+import { Router } from 'next/router';
+import { TrackingProvider, TrackingConfig, EventOrigin, EventStage } from '@trality/web-tracking';
 import { ThemeProvider } from '../components/themeprovider';
-import { MixpanelProvider } from '../hooks/mixpanel';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
 import { PortalProvider } from 'hooks/usePortal';
 
 import '../fix.css';
 
+const trackingConfig: TrackingConfig = {
+    configLinks: [
+        'echo://?id=echoTrackerId',
+        'gtm://?gtmId=GTM-KP8HKKB', 
+        'mixpanel://?mixpanelId=8b4bcb5de9824d9f88c5f79eaa8f06cb&app=landingpage&landingpage=3&crossSubdomainCookie=true'
+    ],
+    options: {
+        cookieName: 'tracking-optedin',
+        ignoreGDPR: false,
+        debug: !!process.env.DEBUG,
+        browser: typeof window !== 'undefined'
+    },
+    eventProperties: {
+        landingpage: 3,
+        app: 'landingpage',
+        origin: EventOrigin.LandingPage,
+        stage: EventStage.Live,
+    },
+    setPageviewCallback: (fct) => { Router.events.on('routeChangeComplete', fct) }
+};
+
 class Trality extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
-            <MixpanelProvider>
+            <TrackingProvider config={trackingConfig}>
                 <DarkProvider>
                     <ThemeProvider>
                         <>
                             <GlobalStyle />
                             <Head>
-                                <title>Trality - Follow & Create Bots</title>
+                                <title>{'Trality - Follow & Create Bots'}</title>
                                 <meta charSet="UTF-8" />
                                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" />
                                 <meta name="description" content="Trality is a platform for anybody who wants to profit from algorithmic crypto trading. " />
@@ -44,8 +65,8 @@ class Trality extends App {
                             </PortalProvider>
                         </>
                     </ThemeProvider>
-                </DarkProvider>
-            </MixpanelProvider>
+                </DarkProvider>          
+            </TrackingProvider>
         );
     }
 }

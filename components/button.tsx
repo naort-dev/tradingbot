@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import * as React from 'react';
-import { ArrowDown, ArrowRight } from './arrow';
+import { ArrowRight } from './arrow';
 import Router, { useRouter } from 'next/router';
 import { Paddings, Margins } from 'theme';
-import { useMixpanel } from 'hooks/mixpanel';
-import { Events } from '@constants';
+import { useTracker, EventType, createEvent, EventProperties } from '@trality/web-tracking';
 
 interface BProps {
     hollow?: boolean;
@@ -15,7 +14,7 @@ interface BProps {
     onClick?: () => void;
 }
 
-export const B = styled.button<BProps>`
+export const StyledButton = styled.button<BProps>`
     background-color: ${(props) => props.theme.main};
     color: white;
     border: 0;
@@ -92,40 +91,42 @@ export const B = styled.button<BProps>`
 
 `;
 
-export interface ButtonProps {
+export interface ButtonProps<K extends keyof EventProperties = EventType> {
     to?: string;
     blank?: boolean;
-    attributes?: { [key: string]: string };
-    event?: Events;
+    event?: { type: K, attributes: EventProperties[K] };
 }
 
-export const Button: React.FunctionComponent<BProps & ButtonProps> = ({ children, to, blank, attributes, event, onClick, ...props }) => {
-    const mixpanel = useMixpanel();
+export function Button<K extends keyof EventProperties>(props: React.PropsWithChildren<BProps & ButtonProps<K>>) {
+    const { children, to, blank, event, onClick, ...rest } = props
+    const tracker = useTracker();
     const router = useRouter();
+
     const onClickDefault = () => {
         if (event) {
-            if (!attributes) {
-                attributes = {};
-            }
-            attributes.location = router.pathname;
-            mixpanel.track(event, attributes);
+            tracker.TrackEvent(
+                createEvent(
+                    event.type,
+                    {...event.attributes}
+                )
+            );
         }
         if (to) {
             if (blank || to.startsWith('http')) {
-                window.open(mixpanel.AppendDistinctId(to), '_blank');
+                window.open(to, '_blank');
             } else {
                 Router.push(to);
             }
         }
     };
     return (
-        <B {...props} onClick={onClick || onClickDefault}>
+        <StyledButton {...props} onClick={onClick || onClickDefault}>
             {children}
-        </B>
+        </StyledButton>
     );
 };
 
-export const KnowMore: React.FunctionComponent<ButtonProps> = ({ children, ...props }) => {
+export const KnowMore: React.FunctionComponent<ButtonProps<EventType>> = ({ children, ...props }) => {
     return (
         <Button knowmore {...props}>
             <ArrowRight />

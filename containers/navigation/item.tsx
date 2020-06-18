@@ -5,6 +5,7 @@ import { Button, Link, ButtonProps } from '@components';
 import { useHover } from 'hooks/useHover';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';
+import { EventType } from '@trality/web-tracking';
 
 interface LinkItemProps {
     target: string;
@@ -63,6 +64,7 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
             display: flex;
             align-items: center;
         }
+    }
 `;
 
 export const LinkEntry = styled.a`
@@ -81,7 +83,7 @@ export const LinkItem: React.FC<LinkItemProps> = ({ target, name }) => {
     );
 };
 
-interface ButtonItemProps extends LinkItemProps, ButtonProps {
+interface ButtonItemProps extends LinkItemProps, ButtonProps<EventType> {
     hollow?: boolean;
 }
 
@@ -239,7 +241,9 @@ const ContactItemButton = styled((props) => <Button {...props} />)<{ open?: bool
             `
             display: block;
             margin-top: 15px;
-        `}
+            `
+        }
+    }
 `;
 
 interface ContactItemProps extends LinkItemProps {

@@ -54,7 +54,6 @@ const SectionWrapper = styled.section<SectionProps>`
     `}
 `;
 
-const EnterDelay = 0;
 const LeaveDelay = 0;
 
 export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, ...props }) => {

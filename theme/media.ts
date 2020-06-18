@@ -1,6 +1,6 @@
 import { css, CSSObject, SimpleInterpolation, BaseThemedCssFunction } from 'styled-components';
 
-type SizeType = { [key: string]: number };
+// type SizeType = { [key: string]: number };
 
 const sizes = {
     mobile: 768,

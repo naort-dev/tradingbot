@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@components';
 import { Screens, Illustrations } from '@assets';
-import { Events, SignupAttribute, SignupOrigins } from '@constants';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 export default () => {
     return (
@@ -22,8 +22,10 @@ export default () => {
                                     <Button
                                         to="https://auth.beta.trality.com/#/signup"
                                         blank
-                                        event={Events.Signup}
-                                        attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                        event={{
+                                            type: EventType.SignupInitiated,
+                                            attributes: { signupOrigin: SignupOrigins.HeaderCta }
+                                        }}
                                     >
                                         Start coding for free!
                                     </Button>

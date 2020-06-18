@@ -6,7 +6,7 @@ import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
 import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock, Button } from '@components';
 import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
-import { Events, SignupAttribute, SignupOrigins } from '@constants';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
 
@@ -35,8 +35,10 @@ export default () => {
                                     </TextBlock>
                                     <Button
                                         to="https://auth.beta.trality.com/#/signup"
-                                        event={Events.Signup}
-                                        attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                        event={{
+                                            type: EventType.SignupInitiated,
+                                            attributes: { signupOrigin: SignupOrigins.Footer }
+                                        }}
                                     >
                                         Try it for free!
                                     </Button>
@@ -192,8 +194,10 @@ export default () => {
                         <Layout.CenterLeft>
                             <Button
                                 to="https://auth.beta.trality.com/#/signup"
-                                event={Events.Signup}
-                                attributes={SignupAttribute(SignupOrigins.HeaderCta)}
+                                event={{
+                                    type: EventType.SignupInitiated,
+                                    attributes: { signupOrigin: SignupOrigins.Footer }
+                                }}
                             >
                                 Try it for free!
                             </Button>

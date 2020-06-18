@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Button } from '@components';
 import styled from 'styled-components';
-import { useMixpanel } from '../../hooks/mixpanel';
-import { useDark, DarkProp } from '../../hooks/dark';
 import Link from 'next/link';
-import { Misc } from '@util';
+
+import { Button } from '@components';
+import { useDark, DarkProp } from '../../hooks/dark';
 import { Paddings } from 'theme';
+import { useTracker } from '@trality/web-tracking';
 
 const GdprContainer = styled.div<DarkProp>`
     position: fixed;
@@ -40,28 +40,19 @@ const GdprContainer = styled.div<DarkProp>`
     }
 `;
 
-const B = styled((props) => <Button {...props} />)`
+const StyledButton = styled((props) => <Button {...props} />)`
     margin-left: 30px;
 `;
 
 export const GDPR: React.FunctionComponent = () => {
-    const mixPanel = useMixpanel();
-    let [hasOptedIn, setHasOptedIn] = React.useState(true);
+    const tracker = useTracker()
+    let [hasOptedIn, setHasOptedIn] = React.useState(tracker.HasOptedIn());
     const { dark } = useDark();
 
     let accept = React.useCallback(() => {
-        mixPanel.opt_in_tracking();
-        setHasOptedIn(true);
+        tracker.OptIn()
+        setHasOptedIn(true)
     }, [hasOptedIn]);
-
-    React.useEffect(() => {
-        if (!Misc.IsServer()) {
-            const timeout = setTimeout(() => {
-                setHasOptedIn(mixPanel.has_opted_in_tracking());
-            }, 200);
-            return clearTimeout(timeout);
-        }
-    }, []);
 
     if (hasOptedIn) {
         return null;
@@ -76,9 +67,9 @@ export const GDPR: React.FunctionComponent = () => {
                 </Link>
             </p>
 
-            <B hollow small onClick={() => accept()}>
+            <StyledButton hollow small onClick={() => accept()}>
                 Accept
-            </B>
+            </StyledButton>
         </GdprContainer>
     );
 };

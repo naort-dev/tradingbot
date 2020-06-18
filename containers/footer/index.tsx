@@ -1,14 +1,14 @@
-import styled from 'styled-components';
 import * as React from 'react';
-import { useMixpanel } from 'hooks/mixpanel';
+import Link from 'next/link';
+import styled from 'styled-components';
+
 import { useDark } from 'hooks/dark';
-import { scrollIt } from 'util/scrollit';
+import { Margins, Paddings } from 'theme';
+
 import { Logos } from '@assets';
 import { Layout } from '@containers';
-import Link from 'next/link';
 import { Button, LogoList } from '@components';
-import { Margins, Paddings } from 'theme';
-import { Events, SignupAttribute, SignupOrigins } from '@constants';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 const Wrap = styled.div`
     margin-bottom: ${Margins.Middle};
@@ -121,8 +121,10 @@ export const Footer: React.FunctionComponent = () => {
                         <a>
                             <Button
                                 to="https://auth.beta.trality.com/#/signup"
-                                event={Events.Signup}
-                                attributes={SignupAttribute(SignupOrigins.Footer)}
+                                event={{
+                                    type: EventType.SignupInitiated,
+                                    attributes: { signupOrigin: SignupOrigins.Footer }
+                                }}
                             >
                                 Join now
                             </Button>
