@@ -1,10 +1,10 @@
 import { Provider, ProviderType } from '../Provider';
 import { Registry, Config } from '../Registry';
-import { Event, TrackingConfig } from '../../types';
+import { Event, TrackingManagerConfig } from '../../types';
 
 export interface EchoTrackerConfig {
   id: string;
-  eventProperties: TrackingConfig['eventProperties'];
+  eventProperties: TrackingManagerConfig['eventProperties'];
 }
 
 export class EchoTracker implements Provider {

@@ -154,7 +154,7 @@ export default () => {
                         </Pricing.PageHeader>
                         <Pricing.Container>
                             {AllPlans.map((plan) => (
-                                <Pricing.Item id={plan.title}>
+                                <Pricing.Item id={plan.title} key={plan.title}>
                                     {plan.popular && <Pricing.PopularChoice>Popular choice</Pricing.PopularChoice>}
                                     {plan.trial && <Pricing.FreeTrial>1 week free trial</Pricing.FreeTrial>}
                                     <Pricing.Image src={plan.image} />

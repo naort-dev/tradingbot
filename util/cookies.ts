@@ -18,3 +18,14 @@ export function getCookie(name: string) {
     }
     return null;
 }
+
+export function parseCookies(cookieString: string = '') {
+    var ca = cookieString.split(';');
+    return ca.reduce((acc, item) => {
+        if (item && item.length) {
+            const [key, value] = item.split('=');
+            acc[key.trim()] = value.trim();
+        }
+        return acc;
+    }, {} as { [key: string]: string });
+}

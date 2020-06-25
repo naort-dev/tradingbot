@@ -1,24 +1,21 @@
 import { Provider, ProviderType } from './Provider';
-import { TrackingConfig } from '../types';
-import { getCookie, setCookie } from '../util';
+import { TrackingManagerConfig } from '../types';
 import { Registry } from './Registry';
 import { createEvent, EventType, Event, EventProperties } from '../types';
+import { CookieStorage, CookieStorageProvider } from '../storage';
 
 export class TrackingManager implements Provider {
   private providers: Provider[];
-  private config: TrackingConfig;
-  private cookie: string | null;
+  private config: TrackingManagerConfig;
+  private cookieStorage: CookieStorage;
 
-  public constructor(config: TrackingConfig) {
+  public constructor(config: TrackingManagerConfig) {
     this.providers = [];
     this.config = config;
+    this.cookieStorage = CookieStorageProvider.Get();
     if (config.setPageviewCallback) {
       config.setPageviewCallback(this.OnPageView.bind(this));
     }
-
-    this.cookie = this.config.options.browser
-      ? getCookie(this.config.options.cookieName)
-      : null;
   }
 
   public InitTracking() {
@@ -68,21 +65,15 @@ export class TrackingManager implements Provider {
   }
 
   public HasOptedIn(): boolean {
-    if (!this.cookie && this.config.options.browser) {
-      this.cookie = getCookie(this.config.options.cookieName);
-    }
-
     return (
-      !this.config.options.browser ||
-      !!this.cookie ||
+      !!this.cookieStorage.Get(this.config.options.cookieName) ||
       !!this.config.options.ignoreGDPR
     );
   }
 
   public OptIn() {
     if (!this.HasOptedIn()) {
-      this.cookie = 'true';
-      setCookie(this.config.options.cookieName, 'true', 360);
+      this.cookieStorage.Set(this.config.options.cookieName, 'true', 360);
       this.providers.map(provider => provider.OptIn());
     }
   }

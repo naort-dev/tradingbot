@@ -6,7 +6,7 @@ import { ArrowDown } from 'components/arrow';
 import { Button } from '@components';
 import { Loader } from 'components/loader';
 import { Paddings, Margins } from 'theme';
-import { useTracker, createEvent, EventType} from '@trality/web-tracking';
+import { useTracker, createEvent, EventType, CookieStorageProvider, CookieStorage } from '@trality/web-tracking';
 
 const EmailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -121,6 +121,7 @@ export const Subscribe = () => {
     const [cookie, setCookie] = useCookie('trality_subscribed');
     const [email, setEmail] = useState('');
     const { sending, send, error, setError, success } = useMailChimp();
+    const cookieStorage:CookieStorage = CookieStorageProvider.Get();
 
     const isValidEmail = EmailRegex.test(email.toLowerCase());
 
@@ -135,7 +136,7 @@ export const Subscribe = () => {
 
     useEffect(() => {
         if (success) {
-            setCookie('true');
+            setCookie('true')
             tracker.TrackEvent(
                 createEvent(
                     EventType.SubscribeCompleted,
@@ -145,7 +146,7 @@ export const Subscribe = () => {
         }
     }, [success]);
 
-    if (!!cookie) {
+    if (cookieStorage.Get('trality_subscribed')) {
         return (
             <ButtonContainer>
                 <Confirmation>

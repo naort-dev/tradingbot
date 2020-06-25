@@ -7,7 +7,7 @@ import { Margins, Paddings } from 'theme';
 
 import { Logos } from '@assets';
 import { Layout } from '@containers';
-import { Button, LogoList } from '@components';
+import { Button, LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 
 const Wrap = styled.div`
@@ -103,9 +103,9 @@ export const Footer: React.FunctionComponent = () => {
                         <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
-                        <Link href="https://blog.trality.com">
-                            <a>Blog</a>
-                        </Link>
+                        <ExternalLink href="https://blog.trality.com" >
+                            {'Blog'}
+                        </ExternalLink>
                         <Link href="/jobs">
                             <a>Jobs</a>
                         </Link>

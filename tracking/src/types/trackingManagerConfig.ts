@@ -1,12 +1,12 @@
 import { EventOrigin, EventStage } from './eventProperties';
 
-export interface TrackingConfig {
+export interface TrackingManagerConfig {
   configLinks: string[];
   options: {
     cookieName: string;
     ignoreGDPR?: boolean;
     debug?: boolean;
-    browser: boolean;
+    isBrowser: boolean;
   };
   eventProperties: {
     landingpage?: number;

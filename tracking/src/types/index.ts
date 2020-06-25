@@ -1,3 +1,3 @@
 export * from './eventProperties';
 export * from './events';
-export * from './trackingConfig';
+export * from './trackingManagerConfig';

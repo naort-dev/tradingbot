@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
@@ -45,6 +45,7 @@ const StyledButton = styled((props) => <Button {...props} />)`
 `;
 
 export const GDPR: React.FunctionComponent = () => {
+    const [isClient, setIsClient] = useState<boolean>(false);
     const tracker = useTracker()
     let [hasOptedIn, setHasOptedIn] = React.useState(tracker.HasOptedIn());
     const { dark } = useDark();
@@ -69,7 +70,7 @@ export const GDPR: React.FunctionComponent = () => {
 
             <StyledButton hollow small onClick={() => accept()}>
                 Accept
-            </StyledButton>
+                </StyledButton>
         </GdprContainer>
     );
 };

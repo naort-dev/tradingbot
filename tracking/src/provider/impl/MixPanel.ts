@@ -1,12 +1,12 @@
 import mixpanel from 'mixpanel-browser';
 import { Provider, ProviderType } from '../Provider';
 import { Registry, Config } from '../Registry';
-import { Event, EventProperties, TrackingConfig } from '../../types';
+import { Event, EventProperties, TrackingManagerConfig } from '../../types';
 
 export interface MixpanelConfig {
   mixpanelId: string;
   crossSubdomainCookie: boolean;
-  eventProperties: TrackingConfig['eventProperties'];
+  eventProperties: TrackingManagerConfig['eventProperties'];
 }
 
 export class Mixpanel implements Provider {

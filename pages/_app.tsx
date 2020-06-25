@@ -1,14 +1,15 @@
 import * as React from 'react';
-import App from 'next/app';
+import App, { AppContext, AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
-import { TrackingProvider, TrackingConfig, EventOrigin, EventStage } from '@trality/web-tracking';
+import { TrackingProvider, TrackingManagerConfig, EventOrigin, EventStage, CookieStorageProvider } from '@trality/web-tracking';
 import { ThemeProvider } from '../components/themeprovider';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
 import { PortalProvider } from 'hooks/usePortal';
 
 import '../fix.css';
+import { parseCookies } from '@util';
 
 // Found no way to fetch via env variable prefix, fetching explicitly ...
 const trackingLinks = [
@@ -17,13 +18,13 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
 ];
 
-const trackingConfig: TrackingConfig = {
+const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
         cookieName: 'tracking-optedin',
         ignoreGDPR: false,
         debug: !!process.env.NEXT_PUBLIC_APP_DEBUG,
-        browser: typeof window !== 'undefined',
+        isBrowser: typeof window !== 'undefined',
     },
     eventProperties: {
         landingpage: 3,
@@ -31,14 +32,30 @@ const trackingConfig: TrackingConfig = {
         origin: EventOrigin.LandingPage,
         stage: EventStage.Live,
     },
-    setPageviewCallback: (fct) => {
-        Router.events.on('routeChangeComplete', fct);
+    setPageviewCallback: (callback: (url: string) => void) => {
+        Router.events.on('routeChangeComplete', callback);
     },
 };
 
+
 class Trality extends App {
+    static async getInitialProps(appContext: AppContext) {
+        const appProps = await App.getInitialProps(appContext);
+        
+        if (appContext.ctx.req) {
+            const cookies = parseCookies(appContext.ctx.req.headers.cookie)
+            CookieStorageProvider.Set({
+                Set: () => {},
+                Get: (name: string) => cookies[name] || null,
+            })
+        }
+
+        return appProps
+    }
+
     render() {
         const { Component, pageProps } = this.props;
+
         return (
             <TrackingProvider config={trackingConfig}>
                 <DarkProvider>

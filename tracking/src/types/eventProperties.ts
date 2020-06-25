@@ -124,7 +124,7 @@ export interface SignupCompletedProperties {}
 export interface SignupConfirmedProperties {}
 
 export interface SignupInitiatedProperties {
-  signupOrigin: SignupOrigins;
+  signupOrigin?: SignupOrigins;
 }
 
 export interface SubscribeCompletedProperties {}

@@ -1,12 +1,17 @@
 import TagManager from 'react-gtm-module';
 import { Provider, ProviderType } from '../Provider';
 import { Registry, Config } from '../Registry';
-import { Event, EventProperties, EventType, TrackingConfig } from '../../types';
+import {
+  Event,
+  EventProperties,
+  EventType,
+  TrackingManagerConfig,
+} from '../../types';
 
 export interface GoogleTagManagerConfig {
   gtmId: string;
   dataLayerName?: string;
-  eventProperties: TrackingConfig['eventProperties'];
+  eventProperties: TrackingManagerConfig['eventProperties'];
 }
 
 export class GoogleTagManager implements Provider {

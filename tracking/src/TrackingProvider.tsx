@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo, useEffect } from 'react';
 import { TrackingManager } from './provider';
-import { TrackingConfig } from './types';
+import { TrackingManagerConfig } from './types';
 
 const TrackerContext = createContext<TrackingManager>(null as any);
 
@@ -9,7 +9,7 @@ export const useTracker = () => {
 };
 
 interface TrackingProviderProps {
-  config: TrackingConfig;
+  config: TrackingManagerConfig;
 }
 
 export const TrackingProvider: React.FC<TrackingProviderProps> = props => {
@@ -17,7 +17,7 @@ export const TrackingProvider: React.FC<TrackingProviderProps> = props => {
   const tracker = useMemo(() => new TrackingManager(config), [config]);
 
   useEffect(() => {
-    if (config.options.browser) {
+    if (config.options.isBrowser) {
       tracker.InitTracking();
     }
   }, [tracker]);
