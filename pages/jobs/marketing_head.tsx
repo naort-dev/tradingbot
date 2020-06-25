@@ -19,18 +19,28 @@ export default () => {
                     />
                     <Header title="Head of Growth Marketing (Full-time)">
                         <p>
-                            <i><b>
+                            <b>
                                 Once upon a time, two guys met and wondered why trading bots are only accessible to big banks & hedge funds and why
                                 75% of private traders lose money when they actively trade and compete against machines that are better at everything
-                                they do. This wonder led once to an idea which led to a vision, which led to the foundation of Trality, which led to a
-                                current team of 6, to a successful Beta phase with over 1000 users and in the end all this will hopefully lead to you!
-                                You are the missing link that fuels our growth ambitions of 100x over the next 2 years!
-                                </b></i>
+                                they do. This wonder led to an idea, which led to the vision of Trality: We want to become <i>the</i> platform for
+                                anyone to create and invest through automated trading bots! That's why we build the first marketplace for trading bots
+                                that is available for traders of all levels of experience. We attract the best bot creators by offering the most
+                                advanced tools for bot creation and enable followers to easily invest in bots created on the platform.
+                            </b>
                         </p>
                         <p>
-                            We’re looking for a Head of Growth Marketing with a track record of driving growth in a fast-paced B2C startup. Being in
-                            charge of our online marketing (paid and organic) as well as our communications strategy, you will be able to build your
-                            own team of Jr. Marketing Managers and freelancers in order to assist you in fuelling our growth ambitions.
+                            <b>
+                                This vision led to a current team of 6 passionate members, to hard work and motivation, to a successful Beta
+                                phase with over 1000 users and in the end all this will hopefully lead to you! You are the missing link that fuels our
+                                growth ambitions of 100x over the next 2 years!
+                            </b>
+                        </p>
+                        <p>
+                            <b>
+                                We’re looking for a Head of Growth Marketing with a track record of driving growth in a fast-paced B2C startup. Being
+                                in charge of our online marketing (paid and organic) as well as our communications strategy, you will be able to build
+                                your own team of Jr. Marketing Managers and freelancers in order to assist you in fueling our growth ambitions.
+                            </b>
                         </p>
                         <h3>Are you getting excited when reading this?</h3>
                         <>

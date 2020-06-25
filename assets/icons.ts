@@ -1,6 +1,6 @@
 import * as BuildBots from './images/icons/buildbotsicon.svg';
 
-import * as ActionCall from './images/icons/actioncall_beta.svg';
+import * as ActionCall from './images/icons/actioncall_beta_launch.svg';
 
 import * as ArrowDown from './images/icons/arrow-down.svg';
 import * as ArrowLeft from './images/icons/arrow-left.svg';
