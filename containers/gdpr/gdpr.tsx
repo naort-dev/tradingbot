@@ -42,17 +42,20 @@ const GdprContainer = styled.div<DarkProp>`
 
 const StyledButton = styled((props) => <Button {...props} />)`
     margin-left: 30px;
+    @media (max-width: 768px) {
+        margin-left: 0px;
+    }
 `;
 
 export const GDPR: React.FunctionComponent = () => {
     const [isClient, setIsClient] = useState<boolean>(false);
-    const tracker = useTracker()
+    const tracker = useTracker();
     let [hasOptedIn, setHasOptedIn] = React.useState(tracker.HasOptedIn());
     const { dark } = useDark();
 
     let accept = React.useCallback(() => {
-        tracker.OptIn()
-        setHasOptedIn(true)
+        tracker.OptIn();
+        setHasOptedIn(true);
     }, [hasOptedIn]);
 
     if (hasOptedIn) {
@@ -70,7 +73,7 @@ export const GDPR: React.FunctionComponent = () => {
 
             <StyledButton hollow small onClick={() => accept()}>
                 Accept
-                </StyledButton>
+            </StyledButton>
         </GdprContainer>
     );
 };

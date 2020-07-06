@@ -13,11 +13,11 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior/Junior Backend Developer (Part-/Full-time)',
+                                title: 'Senior Backend Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior/Junior Backend Developer (Part-/Full-time)">
+                    <Header title="Senior Backend Developer (Full-time)">
                         <p>
                             We’re looking for talented backend engineers who build state-of-the-art systems that empower the complex trading-bots
                             running on our platform. If building fast, scalable systems based on Kubernetes, and deep diving through frameworks to
@@ -78,16 +78,16 @@ export default () => {
                         <h3>What you'll get/our offer</h3>
                         <ul>
                             <li>
-                                38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable city
-                                in the word – Vienna
+                                38,5h full-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
+                                Vienna
                             </li>
                             <li>
                                 An extremely flexible working environment with a lot of creative freedom in the further development of our startup
                             </li>
                             <li>A possibility to negotiate an equity-based compensation</li>
                             <li>
-                            Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role (on a junior level), which is 2.518€ (per
-                                month, paid 14 times).{' '}
+                                Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role (on a junior
+                                level), which is 2.518€ (per month, paid 14 times).
                                 <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
                             </li>
                         </ul>

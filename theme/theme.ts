@@ -12,6 +12,7 @@ export const darkTheme = {
     errorRed: '#ec4040',
     borderColor: '#fff',
     backgroundLight: '#a5a5b029',
+    lightGray: '#f1f1f2',
     shadowColor: 'rgba(2, 179, 216, 0.09);',
 };
 
@@ -29,6 +30,7 @@ export const lightTheme = {
     errorRed: '#ec4040',
     borderColor: '#c4c4e2',
     backgroundLight: '#a5a5b029',
+    lightGray: '#f1f1f2',
     shadowColor: 'rgba(13, 21, 67, 0.1)',
 };
 

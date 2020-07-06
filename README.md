@@ -1,21 +1,18 @@
 # Trality Landingpage
 
-## Adding blog articles
+## Adding Popups
 
-Simple add a markdown page in the folder `./blog` with the following format
+Create your popup under 
 
-    YYYY-MM-DD_authorName_linkName
+    containers/popup/impl
 
-`linkName` must be unique and will be the url under which the blog entry is visible,
-e.g.
+then add it to 
 
-    `/blog/linkName`
+    containers/popup/types.ts
 
-Once ready, run
+with a random UUID.
 
-    `yarn blog`
-
-to update blog articles. You can also preview them locally, just make sure to refresh your page.
+Finally, add it as an environment variable in  `.env`.
 
 ## Deploying
 

@@ -9,6 +9,7 @@ import { Logos } from '@assets';
 import { Layout } from '@containers';
 import { Button, LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 const Wrap = styled.div`
     margin-bottom: ${Margins.Middle};
@@ -103,9 +104,7 @@ export const Footer: React.FunctionComponent = () => {
                         <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
-                        <ExternalLink href="https://blog.trality.com" >
-                            {'Blog'}
-                        </ExternalLink>
+                        <ExternalLink href="https://blog.trality.com">{'Blog'}</ExternalLink>
                         <Link href="/jobs">
                             <a>Jobs</a>
                         </Link>
@@ -120,10 +119,10 @@ export const Footer: React.FunctionComponent = () => {
                         </Link>
                         <a>
                             <Button
-                                to="https://auth.beta.trality.com/#/signup"
+                                to={ConstUrl.Signup}
                                 event={{
                                     type: EventType.SignupInitiated,
-                                    attributes: { signupOrigin: SignupOrigins.Footer }
+                                    attributes: { signupOrigin: SignupOrigins.Footer },
                                 }}
                             >
                                 Join now

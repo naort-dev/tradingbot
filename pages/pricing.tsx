@@ -13,6 +13,7 @@ import * as SavePercent from '../assets/images/pngs/save_20p.png';
 
 import * as PricingEnterprise from '../assets/images/illustrations/pricing_enterprise_king.svg';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 interface Plan {
     image: string;
@@ -167,14 +168,14 @@ export default () => {
                                     <Pricing.Description title="Backtests">{plan.backtests}</Pricing.Description>
                                     <Pricing.Button
                                         popular={plan.popular}
-                                        to={`https://auth.beta.trality.com/#/signup?pricing=${plan.link}`}
+                                        to={`${ConstUrl.Signup}?pricing=${plan.link}`}
                                         event={{
                                             type: EventType.SignupInitiated,
-                                            attributes: { 
-                                                signupOrigin: plan.origin, 
-                                                interval: yearly === 0 ? 'monthly' : 'yearly'
-                                            }
-                                        }}                                      
+                                            attributes: {
+                                                signupOrigin: plan.origin,
+                                                interval: yearly === 0 ? 'monthly' : 'yearly',
+                                            },
+                                        }}
                                     >
                                         Start now
                                     </Pricing.Button>
@@ -242,7 +243,7 @@ export default () => {
                             Become one of our many awesome traders that trust Trality.
                             <br /> No credit card required for you to get started.
                         </h3>
-                        <Button dark to="https://auth.beta.trality.com/#/signup">
+                        <Button dark to={ConstUrl.Signup}>
                             Signup now
                         </Button>
                     </CTA>

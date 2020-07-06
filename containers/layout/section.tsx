@@ -16,6 +16,7 @@ interface SectionProps {
     minimumPadding?: boolean;
     defaultDark?: boolean;
     collapseMobile?: boolean;
+    marginTop?: number;
 }
 
 const SectionWrapper = styled.section<SectionProps>`
@@ -51,6 +52,11 @@ const SectionWrapper = styled.section<SectionProps>`
         props.collapseMobile &&
         `
         min-height: auto;
+    `}
+    ${(props) =>
+        props.marginTop &&
+        `
+        margin-top: ${props.marginTop}px;
     `}
 `;
 

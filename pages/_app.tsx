@@ -10,6 +10,7 @@ import { PortalProvider } from 'hooks/usePortal';
 
 import '../fix.css';
 import { parseCookies } from '@util';
+import { PopupManagerComponent } from '../containers/popup';
 
 // Found no way to fetch via env variable prefix, fetching explicitly ...
 const trackingLinks = [
@@ -23,7 +24,7 @@ const trackingConfig: TrackingManagerConfig = {
     options: {
         cookieName: 'tracking-optedin',
         ignoreGDPR: false,
-        debug: !!process.env.NEXT_PUBLIC_APP_DEBUG,
+        debug: false,
         isBrowser: typeof window !== 'undefined',
     },
     eventProperties: {
@@ -37,20 +38,19 @@ const trackingConfig: TrackingManagerConfig = {
     },
 };
 
-
 class Trality extends App {
     static async getInitialProps(appContext: AppContext) {
         const appProps = await App.getInitialProps(appContext);
-        
+
         if (appContext.ctx.req) {
-            const cookies = parseCookies(appContext.ctx.req.headers.cookie)
+            const cookies = parseCookies(appContext.ctx.req.headers.cookie);
             CookieStorageProvider.Set({
                 Set: () => {},
                 Get: (name: string) => cookies[name] || null,
-            })
+            });
         }
 
-        return appProps
+        return appProps;
     }
 
     render() {
@@ -87,6 +87,7 @@ class Trality extends App {
                             </Head>
                             <PortalProvider>
                                 <Component {...pageProps} />
+                                <PopupManagerComponent />
                             </PortalProvider>
                         </>
                     </ThemeProvider>

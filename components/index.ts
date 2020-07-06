@@ -16,3 +16,4 @@ export * from './preload';
 export * from './textblock';
 export * from './themeprovider';
 export * from './wordanimation';
+export * from './popup';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from '@containers';
+import { Layout, AsSeenIn } from '@containers';
 import styled from 'styled-components';
 
 import { HeaderIcon } from 'components/headericon';
@@ -7,6 +7,7 @@ import { Subscribe } from '@containers';
 import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock, Button } from '@components';
 import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
 
@@ -34,10 +35,10 @@ export default () => {
                                         day job. At least not right away 😉 ️
                                     </TextBlock>
                                     <Button
-                                        to="https://auth.beta.trality.com/#/signup"
+                                        to={ConstUrl.Signup}
                                         event={{
                                             type: EventType.SignupInitiated,
-                                            attributes: { signupOrigin: SignupOrigins.Footer }
+                                            attributes: { signupOrigin: SignupOrigins.Footer },
                                         }}
                                     >
                                         Try it for free!
@@ -56,6 +57,11 @@ export default () => {
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="as-seen-in" themeColor="lightGray" marginTop={20} minimumPadding>
+                <Layout.Center>
+                    <AsSeenIn />
                 </Layout.Center>
             </Layout.Section>
             <Layout.Section id="for-everybody">
@@ -193,10 +199,10 @@ export default () => {
                         </TextBlock>
                         <Layout.CenterLeft>
                             <Button
-                                to="https://auth.beta.trality.com/#/signup"
+                                to={ConstUrl.Signup}
                                 event={{
                                     type: EventType.SignupInitiated,
-                                    attributes: { signupOrigin: SignupOrigins.Footer }
+                                    attributes: { signupOrigin: SignupOrigins.Footer },
                                 }}
                             >
                                 Try it for free!

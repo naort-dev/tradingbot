@@ -2,6 +2,7 @@ import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock } from '@components';
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 export default () => {
     return (
@@ -20,11 +21,11 @@ export default () => {
                                         interface lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
                                     </TextBlock>
                                     <Button
-                                        to="https://auth.beta.trality.com/#/signup"
+                                        to={ConstUrl.Signup}
                                         blank
                                         event={{
                                             type: EventType.SignupInitiated,
-                                            attributes: { signupOrigin: SignupOrigins.HeaderCta }
+                                            attributes: { signupOrigin: SignupOrigins.HeaderCta },
                                         }}
                                     >
                                         Start building for free!

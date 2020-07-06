@@ -7,6 +7,7 @@ import { useIsMobile } from '../../hooks/useIsMobile';
 import { Logos } from '@assets';
 import { Navigation } from 'theme';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 interface OpenProps {
     open?: boolean;
@@ -90,13 +91,13 @@ export const Menu = () => {
                 ]}
             />
             <ItemGroup>
-                <ButtonItem name="Login" target="https://auth.beta.trality.com/#/login" hollow={!isMobile} />
+                <ButtonItem name="Login" target={ConstUrl.Login} hollow={!isMobile} />
                 <ButtonItem
                     name="Signup"
-                    target="https://auth.beta.trality.com/#/signup"
+                    target={ConstUrl.Signup}
                     event={{
                         type: EventType.SignupInitiated,
-                        attributes: { signupOrigin: SignupOrigins.HeaderCta }
+                        attributes: { signupOrigin: SignupOrigins.HeaderCta },
                     }}
                 />
             </ItemGroup>

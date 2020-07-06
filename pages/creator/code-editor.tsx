@@ -2,6 +2,7 @@ import { Layout } from '@containers';
 import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@components';
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 
 export default () => {
     return (
@@ -20,11 +21,11 @@ export default () => {
                                         Editor: the most advanced of its kind that leaves nothing to be desired.
                                     </TextBlock>
                                     <Button
-                                        to="https://auth.beta.trality.com/#/signup"
+                                        to={ConstUrl.Signup}
                                         blank
                                         event={{
                                             type: EventType.SignupInitiated,
-                                            attributes: { signupOrigin: SignupOrigins.HeaderCta }
+                                            attributes: { signupOrigin: SignupOrigins.HeaderCta },
                                         }}
                                     >
                                         Start coding for free!

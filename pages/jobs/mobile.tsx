@@ -13,15 +13,12 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior/Junior Mobile Developer (Part-/Full-time)',
+                                title: 'Senior Mobile Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior/Junior Mobile Developer (Part-/Full-time)">
-                        <p>
-                            We’re looking for a talented mobile engineer, who is willing to join the Trality team on a short-term contract (3-4 months
-                            with a possibility of extension) in order to develop the platform’s mobile app.
-                        </p>
+                    <Header title="Senior Mobile Developer (Full-time)">
+                        <p>We’re looking for a talented mobile engineer, who will take the lead in developing Trality’s mobile app (iOS+Android).</p>
                         <h3>What you will do everyday</h3>
                         <>
                             <ul>
@@ -60,10 +57,9 @@ export default () => {
                         <>
                             <ul>
                                 <li>
-                                    38,5h full-time or 20h part-time job with a possibility to work remotely or at a modern desk in the most livable
-                                    city in the word – Vienna
+                                    38,5h full-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
+                                    Vienna
                                 </li>
-                                <li>A short-term contract length of 3-4 months, with the possibility of extension at the end of the employment</li>
                                 <li>
                                     An extremely flexible working environment with a lot of creative freedom in the further development of our startup
                                 </li>
