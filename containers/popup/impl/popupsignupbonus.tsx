@@ -3,8 +3,9 @@ import { PopupComponent } from '../types';
 import { PopupLayout, Button } from '@components';
 
 import * as Image from './popupcompetition.png';
+import { ConstUrl } from '@constants';
 
-export const PopupSignupBonus: PopupComponent = ({ id }) => {
+export const PopupSignupBonus: PopupComponent = ({ id, onClose }) => {
     return (
         <>
             <PopupLayout.Left>
@@ -17,7 +18,7 @@ export const PopupSignupBonus: PopupComponent = ({ id }) => {
                     Experience unlimited trading volume, tick intervals as low as 1m, large number of parallel bots all while using the world’s best
                     Trading Bot Creator tools available in private trading!
                 </h3>
-                <Button>Start creating for free!</Button>
+                <Button onClick={() => onClose(ConstUrl.Signup)}>Start creating for free!</Button>
             </PopupLayout.Left>
             <PopupLayout.Right>
                 <img src={Image} />

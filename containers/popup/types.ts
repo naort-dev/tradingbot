@@ -16,11 +16,11 @@ export type PopupComponent = React.FC<PopupProps>;
 export interface PopupOptions {
     Component: PopupComponent;
     timeout?: number;
-    utmCampaign?: string;
+    utmCampaign?: string[];
     default?: boolean;
 }
 
 export const PopupComponents: { [key: string]: PopupOptions } = {
-    [Popups.LaunchSignupBonus]: { Component: PopupSignupBonus, utmCampaign: 'EUENGGeneral_Promo' },
-    [Popups.LaunchTradingSkills]: { Component: PopupTradingSkills, utmCampaign: 'EUENGPython_Comp' },
+    [Popups.LaunchSignupBonus]: { Component: PopupSignupBonus, utmCampaign: ['EUENGGeneral_Promo', 'EUENGPython_Promo'], default: true },
+    [Popups.LaunchTradingSkills]: { Component: PopupTradingSkills, utmCampaign: ['EUENGPython_Comp'] },
 };

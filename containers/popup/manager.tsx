@@ -77,7 +77,10 @@ export class PopupManager {
             if (!options) {
                 return false;
             }
-            if ((PopupManager.utmCampaign === null && options.default) || PopupManager.utmCampaign === options.utmCampaign) {
+            if (
+                (PopupManager.utmCampaign === null && options.default) ||
+                (options.utmCampaign && PopupManager.utmCampaign && options.utmCampaign.includes(PopupManager.utmCampaign))
+            ) {
                 return true;
             }
             return false;
