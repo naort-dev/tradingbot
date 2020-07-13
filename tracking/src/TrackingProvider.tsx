@@ -20,7 +20,7 @@ export const TrackingProvider: React.FC<TrackingProviderProps> = props => {
     if (config.options.isBrowser) {
       tracker.InitTracking();
     }
-  }, [tracker]);
+  }, [tracker, config.options.isBrowser]);
 
   return (
     <TrackerContext.Provider value={tracker}>

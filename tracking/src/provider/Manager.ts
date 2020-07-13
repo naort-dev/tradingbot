@@ -23,7 +23,7 @@ export class TrackingManager implements Provider {
       return;
     }
 
-    this.config.configLinks.map(link => {
+    this.config.configLinks.forEach(link => {
       try {
         const parsedLink = this.ParseConfigLink(link);
         this.providers.push(

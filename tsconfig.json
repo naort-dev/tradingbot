@@ -37,6 +37,6 @@
         "isolatedModules": true,
         "pretty": true
     },
-    "exclude": ["node_modules"],
+    "exclude": ["node_modules", "tracking"],
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
