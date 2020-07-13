@@ -66,9 +66,7 @@ export interface BotRuleCreatedProperties {
 }
 
 export interface BotTemplateLoadedProperties {
-  bot_type: string;
-  quoted: string;
-  exchange: string;
+  template_name: string;
 }
 
 export interface BotTutorialCompletedProperties {
@@ -100,6 +98,19 @@ export interface ExchangeAccountDeletedProperties {
   exchange: string;
 }
 
+export interface LoginProperties {
+  email?: string,
+  phone?: string,
+  firstName?: string,
+  lastName?: string,
+  created?: Date,
+  confirmed?: Date
+}
+
+export interface IdentifyProperties {
+  userId: string;
+}
+
 export interface InstanceDeployedProperties {
   account_type: string;
   exchange: string;
@@ -119,6 +130,10 @@ export interface PageviewProperties extends EventDefaultProperties {
   location?: string;
 }
 
+export interface PageviewProperties {
+  location?: string;
+}
+
 export interface SignupCompletedProperties {}
 
 export interface SignupConfirmedProperties {}
@@ -135,7 +150,7 @@ export interface Time1mProperties {}
 
 export interface Time3mProperties {}
 
-export interface Time5mProperties {}
+export interface Time5mProperties {} 
 
 export interface TosAgreedProperties {}
 

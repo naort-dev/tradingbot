@@ -2,7 +2,7 @@ import * as React from 'react';
 import App, { AppContext, AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
-import { TrackingProvider, TrackingManagerConfig, EventOrigin, EventStage, CookieStorageProvider } from '@trality/web-tracking';
+import { TrackingProvider, TrackingManagerConfig, EventOrigin, EventStage, CookieStorageProvider, EventType } from '@trality/web-tracking';
 import { ThemeProvider } from '../components/themeprovider';
 import { DarkProvider } from '../hooks/dark';
 import { GlobalStyle } from '../theme/style';
@@ -24,7 +24,7 @@ const trackingConfig: TrackingManagerConfig = {
     options: {
         cookieName: 'tracking-optedin',
         ignoreGDPR: false,
-        debug: false,
+        debug: !!process.env.NEXT_PUBLIC_APP_DEBUG,
         isBrowser: typeof window !== 'undefined',
     },
     eventProperties: {
@@ -36,6 +36,12 @@ const trackingConfig: TrackingManagerConfig = {
     setPageviewCallback: (callback: (url: string) => void) => {
         Router.events.on('routeChangeComplete', callback);
     },
+    setSessionDurationTracker: [
+        EventType.Time1m,
+        EventType.Time3m,
+        EventType.Time5m,
+        EventType.Time10m
+    ]
 };
 
 class Trality extends App {

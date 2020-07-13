@@ -30,6 +30,10 @@ export class Mixpanel implements Provider {
   public Types() {
     return [ProviderType.Statistics];
   }
+
+  public Identify(userId: string) {
+    mixpanel.identify(userId)
+  }  
 }
 
 Registry.Add(

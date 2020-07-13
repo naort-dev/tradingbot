@@ -12,6 +12,8 @@ import {
   BotTutorialStartedProperties,
   ExchangeAccountCreatedProperties,
   ExchangeAccountDeletedProperties,
+  LoginProperties,
+  IdentifyProperties,
   InstanceDeployedProperties,
   InstanceStoppedProperties,
   InstanceViewedProperties,
@@ -20,10 +22,10 @@ import {
   SignupConfirmedProperties,
   SignupInitiatedProperties,
   SubscribeCompletedProperties,
-  Time10mProperties,
   Time1mProperties,
   Time3mProperties,
   Time5mProperties,
+  Time10mProperties,
   TosAgreedProperties,
   VolumeReportProperties,
 } from './eventProperties';
@@ -42,6 +44,8 @@ export enum EventType {
   BotTutorialStarted = 'bot_tutorial_started',
   ExchangeAccountCreated = 'exchange_account_created',
   ExchangeAccountDeleted = 'exchange_account_deleted',
+  Login = 'login',
+  Identify = 'identify',
   InstanceDeployed = 'instance_deployed',
   InstanceStopped = 'instance_stopped',
   InstanceViewed = 'instance_viewed',
@@ -72,6 +76,8 @@ export type EventProperties = {
   [EventType.BotTutorialStarted]: BotTutorialStartedProperties;
   [EventType.ExchangeAccountCreated]: ExchangeAccountCreatedProperties;
   [EventType.ExchangeAccountDeleted]: ExchangeAccountDeletedProperties;
+  [EventType.Login]: LoginProperties;
+  [EventType.Identify]: IdentifyProperties;
   [EventType.InstanceDeployed]: InstanceDeployedProperties;
   [EventType.InstanceStopped]: InstanceStoppedProperties;
   [EventType.InstanceViewed]: InstanceViewedProperties;

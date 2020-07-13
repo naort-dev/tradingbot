@@ -27,6 +27,10 @@ export class EchoTracker implements Provider {
     console.log('[Echo Tracker]: Called types method.');
     return [ProviderType.Marketing, ProviderType.Statistics];
   }
+
+  public Identify(userId: string) {
+    console.log('[Echo Tracker]: called identify method:', { userId });
+  }
 }
 
 Registry.Add(

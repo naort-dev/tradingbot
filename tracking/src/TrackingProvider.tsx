@@ -8,6 +8,7 @@ export const useTracker = () => {
   return useContext(TrackerContext);
 };
 
+
 interface TrackingProviderProps {
   config: TrackingManagerConfig;
 }

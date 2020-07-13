@@ -10,5 +10,6 @@ export interface Provider {
     event: Event<EventProperties[K], K>
   ): void;
   OptIn(): void;
+  Identify(userId: string): void;
   Types(): ProviderType[];
 }

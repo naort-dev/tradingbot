@@ -1,5 +1,5 @@
 import { Provider, ProviderType } from './Provider';
-import { TrackingManagerConfig } from '../types';
+import { TrackingManagerConfig, SessionDurationEvents } from '../types';
 import { Registry } from './Registry';
 import { createEvent, EventType, Event, EventProperties } from '../types';
 import { CookieStorage, CookieStorageProvider } from '../storage';
@@ -37,7 +37,42 @@ export class TrackingManager implements Provider {
       }
     });
 
-    this.HasOptedIn() && this.OnPageView(window.location.pathname);
+    if(this.HasOptedIn()) {
+      this.OnPageView(this.getPathname())
+      this.startTimeTracker()
+    }      
+  }
+
+  private startTimeTracker() {
+    const timeoutEvents = this.config.setSessionDurationTracker;
+    if(!timeoutEvents) {
+      return
+    }
+
+    timeoutEvents.map(event => {
+      setTimeout(() => {
+        this.TrackEvent(
+          createEvent(
+            event,
+            {}
+          )
+        )
+      }, this.getTimeoutDuration(event))
+    })
+  }
+
+  private getTimeoutDuration(event: SessionDurationEvents) {
+    switch(event) {
+      case EventType.Time1m:
+        console.log("get duration", event)
+        return 1000 * 60;
+      case EventType.Time3m: 
+        return 1000 * 60 * 3;
+      case EventType.Time5m:
+        return 1000 * 60 * 5;
+      case EventType.Time10m:
+        return 1000 * 60 * 10;
+    }
   }
 
   private ParseConfigLink(
@@ -87,6 +122,10 @@ export class TrackingManager implements Provider {
     return Array.from(new Set(usedTypes));
   }
 
+  public Identify(userId: string) {
+    this.providers.map(provider => provider.Identify(userId));
+  }
+
   private OnPageView(url: string) {
     const location = (url || '/').split('?')[0];
     const pageView = createEvent(EventType.Pageview, {
@@ -94,5 +133,12 @@ export class TrackingManager implements Provider {
       ...this.config.eventProperties,
     });
     this.providers.map(provider => provider.TrackEvent(pageView));
+  }
+
+  private getPathname() {
+    if(window.location.pathname === '/' && window.location.hash.length > 0) {
+      return window.location.hash.split('#')[1]
+    }
+    return window.location.pathname
   }
 }

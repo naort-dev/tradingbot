@@ -46,6 +46,16 @@ export class GoogleTagManager implements Provider {
   public Types() {
     return [ProviderType.Marketing, ProviderType.Statistics];
   }
+
+  public Identify(userId: string) {
+    this.TrackEvent({
+      key: EventType.Identify,
+      payload: {
+        userId
+      },
+    });
+  }
+
 }
 
 Registry.Add(
