@@ -10,7 +10,11 @@ import * as TralityBlackBlue from './images/logos/logo_black_blue.png';
 import * as Telegram from './images/logos/telegram_trality.png';
 import * as Twitter from './images/logos/twitter.svg';
 import * as Medium from './images/logos/medium.svg';
+
 import * as Binance from './images/logos/binance.png';
+import * as Bitpanda from './images/logos/bitpanda.png';
+import * as Kraken from './images/logos/kraken.png';
+import * as Coinbase from './images/logos/coinbase.png';
 
 import * as FFGBlack from './images/logos/ffg_black.png';
 import * as FFGWhite from './images/logos/ffg_white.png';
@@ -31,6 +35,9 @@ export const Logos = {
     Twitter,
     Medium,
     Binance,
+    Bitpanda,
+    Kraken,
+    Coinbase,
     BlockRocketBlack,
     FFGBlack,
     FFGWhite,

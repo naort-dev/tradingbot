@@ -192,6 +192,18 @@ export default () => {
                                     title: 'Binance',
                                     light: Logos.Binance,
                                 },
+                                {
+                                    title: 'Bitpanda',
+                                    light: Logos.Bitpanda,
+                                },
+                                {
+                                    title: 'Coinbase Pro',
+                                    light: Logos.Coinbase,
+                                },
+                                {
+                                    title: 'Kraken',
+                                    light: Logos.Kraken,
+                                },
                             ]}
                         />
                         <TextBlock>

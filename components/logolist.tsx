@@ -4,10 +4,20 @@ import { useDark } from 'hooks/dark';
 
 const LogoContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 15px;
     @media (max-width: 768px) {
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 25px;
+        > div:nth-child(even) {
+            justify-content: flex-start;
+            padding-left: 10px;
+        }
+        > div:nth-child(odd) {
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
     }
 `;
 
@@ -16,6 +26,9 @@ const Logo = styled.div`
     vertical-align: middle;
     margin-top: auto;
     margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     > img {
         display: block;
         width: 90%;
@@ -24,7 +37,7 @@ const Logo = styled.div`
         max-width: 150px;
     }
     @media (max-width: 768px) {
-        width: 32.99%;
+        width: 49.99%;
     }
 `;
 

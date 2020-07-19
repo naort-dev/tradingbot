@@ -11,6 +11,10 @@ const Item = styled.div`
     padding-right: ${Paddings.VeryLarge};
     margin-bottom: ${Margins.Large};
     text-align: justify;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding-right 0px;
+    }
 `;
 
 export const Grid = {
