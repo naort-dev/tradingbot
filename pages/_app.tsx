@@ -23,8 +23,8 @@ const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
         cookieName: 'tracking-optedin',
-        ignoreGDPR: false,
-        debug: !!process.env.NEXT_PUBLIC_APP_DEBUG,
+        ignoreGDPR: true,
+        debug: process.env.NEXT_PUBLIC_APP_DEBUG === 'true',
         isBrowser: typeof window !== 'undefined',
     },
     eventProperties: {

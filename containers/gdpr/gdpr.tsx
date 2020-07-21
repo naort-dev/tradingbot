@@ -50,10 +50,14 @@ const StyledButton = styled((props) => <Button {...props} />)`
 export const GDPR: React.FunctionComponent = () => {
     const [isClient, setIsClient] = useState<boolean>(false);
     const tracker = useTracker();
-    let [hasOptedIn, setHasOptedIn] = React.useState(tracker.HasOptedIn());
+    //tmp cookie consent necessary till the cookie consent popup is redesigned
+    const tmpCookieConsent = process.browser && window?.localStorage?.getItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd')
+    const [hasOptedIn, setHasOptedIn] = React.useState(!!tmpCookieConsent);
     const { dark } = useDark();
 
-    let accept = React.useCallback(() => {
+    const accept = React.useCallback(() => {
+        //tmp cookie consent necessary till the cookie consent popup is redesigned
+        window.localStorage.setItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd', 'true')
         tracker.OptIn();
         setHasOptedIn(true);
     }, [hasOptedIn]);
