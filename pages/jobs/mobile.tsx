@@ -18,12 +18,11 @@ export default () => {
                         ]}
                     />
                     <Header title="Senior Mobile Developer (Full-time)">
-                        <p>We’re looking for a talented mobile engineer, who will take the lead in developing Trality’s mobile app (iOS+Android).</p>
+                        <p>We’re looking for a talented mobile engineer, who will take the lead in developing Trality’s mobile app (iOS+Swift).</p>
                         <h3>What you will do everyday</h3>
                         <>
                             <ul>
-                                <li>Build a mobile app for the Trality platform from scratch using React Native</li>
-
+                                <li>Build a mobile app for the Trality platform from scratch using native iOS Swift and SwiftUI.</li>
                                 <li>
                                     Collaborate with product managers, designers, and software engineers to ensure our design vision is maintained,
                                     final markup is standards compliant, and UI deliverables are completed on time
@@ -40,11 +39,8 @@ export default () => {
                         <>
                             <ul>
                                 <li>You have at least 3 years of experience in mobile development</li>
-                                <li>
-                                    You have worked with React Native (and/or ReactJS) and you know your way around Git, moreover, experience with
-                                    e.g. GraphQL is a plus
-                                </li>
-                                <li>In-depth knowledge of modular, reusable and intelligent API design is also nice to have</li>
+                                <li>You have worked with Swift or Objective C before and published one or more apps to the Apple App Store. </li>
+                                <li>You know your way around Git, experience with GraphQL is a plus</li>
                                 <li>You work independently and like to take the initiative</li>
                                 <li>
                                     You have experience with cross-functional teams and managing relationships with business or operations
