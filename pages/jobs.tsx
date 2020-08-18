@@ -13,8 +13,8 @@ export default () => {
                                 <div>
                                     <h1>We're hiring!</h1>
                                     <TextBlock>
-                                        Would you like to help us revolutionize crypto trading by enabling everyone to profit from algorithmic
-                                        trading? We are a small but very diverse team and we would love to hear from you!
+                                        Would you like to help us revolutionize trading by enabling everyone to profit from algorithmic trading? We
+                                        are a small but very diverse team and we would love to hear from you!
                                     </TextBlock>
                                 </div>
                             </Layout.CenterVertical>
@@ -61,14 +61,19 @@ export default () => {
                     <Header title="Open Positions">
                         <Layout.Grid.Container>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior Backend Developer (Full-time)</h4>
+                                <h4 style={{ textAlign: 'left' }}>Senior Full-Stack Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>
                                     Build state-of-the-art systems that empower the complex trading-bots running on our platform!
                                 </p>
+                                <KnowMore to="/jobs/fullstack">Interested</KnowMore>
+                            </Layout.Grid.Item>
+                            <Layout.Grid.Item>
+                                <h4 style={{ textAlign: 'left' }}>Senior backend Developer (Full-time)</h4>
+                                <p style={{ textAlign: 'left' }}>Develop and maintain the backend powering Trality!</p>
                                 <KnowMore to="/jobs/backend">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior/Junior Frontend Developer (Full-time)</h4>
+                                <h4 style={{ textAlign: 'left' }}>Senior Frontend Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>
                                     Use cutting edge UI frameworks in order to raise the bar for state-of-the-art UI and UX!
                                 </p>
@@ -78,13 +83,6 @@ export default () => {
                                 <h4 style={{ textAlign: 'left' }}>Senior Mobile Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>Join our team on to develop our mobile app from scratch!</p>
                                 <KnowMore to="/jobs/mobile">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Head of Growth Marketing (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>
-                                    Spread the word on our startup and be responsible for fuelling our growth ambitions!
-                                </p>
-                                <KnowMore to="/jobs/marketing_head">Interested</KnowMore>
                             </Layout.Grid.Item>
                         </Layout.Grid.Container>
                     </Header>

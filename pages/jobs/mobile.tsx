@@ -53,18 +53,36 @@ export default () => {
                         <>
                             <ul>
                                 <li>
-                                    38,5h full-time job with a possibility to work remotely or at a modern desk in the most livable city in the word –
-                                    Vienna
+                                    38,5h full-time job with a possibility to work a modern desk in the most livable city in the word – Vienna - in
+                                    our brand new office
                                 </li>
                                 <li>
                                     An extremely flexible working environment with a lot of creative freedom in the further development of our startup
                                 </li>
-                                <li>A competitive remuneration based on your qualification, education and experience</li>
+                                <li>The newest technical gear to bring out the best in you</li>
+                                <li>
+                                    A yearly learning allowance to pay for relevant trainings and certificates in order to help you grow with the
+                                    company
+                                </li>
+                                <li>
+                                    A startup atmosphere and team events throughout the year to foster the company spirit and make you feel right at
+                                    home
+                                </li>
+                                <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
+                                <li>A possibility to negotiate an equity-based compensation</li>
+                                <li>
+                                    Austrian labor law requires us to state the minimum salary for this role, which is 3200€ (per month, paid 14
+                                    times).
+                                    <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
+                                </li>
                             </ul>
                         </>
                         <h3>Sounds interesting?</h3>
                         <p>
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
+                        </p>
+                        <p>
+                            Application deadline: <b>01.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

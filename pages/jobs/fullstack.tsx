@@ -3,7 +3,7 @@ import { Header, Link, Breadcrumb } from '@components';
 
 export default () => {
     return (
-        <Layout.Page title="jobs-backend">
+        <Layout.Page title="jobs-fullstack">
             <Layout.Section fullHeight noPadding id="jobs-header">
                 <Layout.Center direction="column">
                     <Breadcrumb
@@ -13,13 +13,13 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior Backend Developer (Full-time)',
+                                title: 'Senior Full-Stack Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior Backend Developer (Full-time)">
+                    <Header title="Senior Full-Stack Developer (Full-time)">
                         <p>
-                            We’re looking for talented backend engineers who build state-of-the-art systems that empower the complex trading-bots
+                            We’re looking for talented full-stack engineers who build state-of-the-art systems that empower the complex trading-bots
                             running on our platform. If building fast, scalable systems based on Kubernetes, and deep diving through frameworks to
                             figure out how they work is your thing, you’ll be welcomed with open arms at Trality. Interest or experience in
                             machine-learning or data-analysis will be valued deeply as well.
@@ -46,6 +46,7 @@ export default () => {
                                 continuous testing
                             </li>
                             <li>Enthuse the Trality team with your ideas and suggestions for solutions, libraries and technologies</li>
+                            <li>Selectively manage and improve parts of our stack ranging from frontend issues to infrastructure setups</li>
                             <li>
                                 Take responsibility not just for your own code, but for the entire product, always refine what’s under the hood of our
                                 platform
@@ -55,16 +56,14 @@ export default () => {
                         <ul>
                             <li>You have at least 3 years of experience with significant consumer-facing websites or services</li>
                             <li>You have worked closely with and monitored Kubernetes clusters to develop complex microservices-architectures</li>
-                            <li>
-                                You bring along full-cycle code development experience (oneof Typescript, Go, Python) including debugging and
-                                performance analysis
-                            </li>
+                            <li>You bring along full-cycle code development experience (Typescript) including debugging and performance analysis</li>
                             <li>
                                 Working with AWS, Elasticsearch, MongoDB and/or Redis caches as well as analyzing the efficiency and performance of
                                 databases is right along your alley
                             </li>
-                            <li>You have worked with real time web applications and event driven architectures like Nodejs </li>
+                            <li>You have worked with real time web applications and event driven architectures (Nodejs) </li>
                             <li>In-depth knowledge of modular, reusable and intelligent API design is a plus</li>
+                            <li>You feel comfortable deep-diving into Frontend issues and improving our React-based frontend</li>
                             <li>You can talk to your team (conversational proof) in English</li>
                             <li>You work independently and like to take the initiative</li>
                             <li>
@@ -97,8 +96,8 @@ export default () => {
                                 <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum salary for this role, which is 3200€ (per month, paid 14
-                                    times).
+                                    Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
+                                    3600€ (per month, paid 14 times).
                                     <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
                                 </li>
                             </ul>
@@ -107,6 +106,9 @@ export default () => {
                         <p>
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>. We can’t wait
                             to hear about your ambitions and experience to grow Trality with us!
+                        </p>
+                        <p>
+                            Application deadline: <b>01.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

@@ -88,6 +88,10 @@ export const Menu = () => {
                         name: 'Blog',
                         target: 'https://blog.trality.com',
                     },
+                    {
+                        name: 'Jobs',
+                        target: '/jobs',
+                    },
                 ]}
             />
             <ItemGroup>
