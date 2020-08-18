@@ -82,7 +82,7 @@ export default () => {
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
                         </p>
                         <p>
-                            Application deadline: <b>01.09.2020!</b> However, applications will be reviewed on a rolling basis.
+                            Application deadline: <b>14.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>
