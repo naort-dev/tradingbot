@@ -97,9 +97,8 @@ export default () => {
                                 <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum salary for this role, which is 3200€ (per month, paid 14
-                                    times).
-                                    <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
+                                    Austrian labor law requires us to state the minimum salary for this role, which is 3600€ (per month, paid 14
+                                    times). <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
                                 </li>
                             </ul>
                         </>
@@ -107,6 +106,9 @@ export default () => {
                         <p>
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>. We can’t wait
                             to hear about your ambitions and experience to grow Trality with us!
+                        </p>
+                        <p>
+                            Application deadline: <b>14.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

@@ -94,8 +94,7 @@ export default () => {
                                 <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
                                     Austrian labor law requires us to state the minimum salary for this role, which is 3200€ (per month, paid 14
-                                    times).
-                                    <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
+                                    times). <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
                                 </li>
                             </ul>
                         </>
