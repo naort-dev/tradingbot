@@ -107,7 +107,7 @@ export default () => {
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
                         <p>
-                            Application deadline: <b>01.09.2020!</b> However, applications will be reviewed on a rolling basis.
+                            Application deadline: <b>06.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>
