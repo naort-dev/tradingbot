@@ -30,7 +30,7 @@ export default () => {
                             in bots created on the platform.
                         </p>
                         <p>
-                            We’re seeking a creative, ambitious, self-motivated personalities who can balance strategic thinking with written
+                            We’re seeking a creative, ambitious, self-motivated personality who can balance strategic thinking with written
                             execution. As a key member of Trality’s marketing team, you will create engaging content that increases brand awareness
                             and attracts new business. Your work will have a direct impact on positioning Trality as a thought leader in the crypto
                             world.
