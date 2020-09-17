@@ -84,6 +84,11 @@ export default () => {
                                 <p style={{ textAlign: 'left' }}>Join our team on to develop our mobile app from scratch!</p>
                                 <KnowMore to="/jobs/mobile">Interested</KnowMore>
                             </Layout.Grid.Item>
+                            <Layout.Grid.Item>
+                                <h4 style={{ textAlign: 'left' }}>Copywriter & Content Specialist (Freelance/Full-time)</h4>
+                                <p style={{ textAlign: 'left' }}>Drive our go-to-market by writing creative and impactful copy!</p>
+                                <KnowMore to="/jobs/content">Interested</KnowMore>
+                            </Layout.Grid.Item>
                         </Layout.Grid.Container>
                     </Header>
                 </Layout.Center>
