@@ -13,11 +13,11 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior Frontend Developer (Full-time)',
+                                title: 'Frontend Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior Frontend Developer (Full-time)">
+                    <Header title="Frontend Developer (Full-time)">
                         <p>
                             We’re looking for talented frontend engineers with a solid programming background who love to use React in order to raise
                             the bar for state-of-the-art UI and UX. If you are able to think modularly, want to create beautiful trading bot modules,
@@ -104,7 +104,7 @@ export default () => {
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
                         <p>
-                            Application deadline: <b>06.09.2020!</b> However, applications will be reviewed on a rolling basis.
+                            Application deadline: <b>11.10.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

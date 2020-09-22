@@ -13,11 +13,11 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior Mobile Developer (Full-time)',
+                                title: 'Mobile Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior Mobile Developer (Full-time)">
+                    <Header title="Mobile Developer (Full-time)">
                         <p>We’re looking for a talented mobile engineer, who will take the lead in developing Trality’s mobile app (iOS+Swift).</p>
                         <h3>What you will do everyday</h3>
                         <>
@@ -81,7 +81,7 @@ export default () => {
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
                         </p>
                         <p>
-                            Application deadline: <b>20.09.2020!</b> However, applications will be reviewed on a rolling basis.
+                            Application deadline: <b>11.10.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

@@ -62,8 +62,7 @@ export default () => {
                                     3+ years of experience creating compelling and engaging content, preferably in the tech, finance, or crypto space
                                 </li>
                                 <li>
-                                    You have a very good command of English (spoken and written language) and are ideally able to converse with your
-                                    team in German
+                                    You have a very good command of English (spoken and written language), ideally mother-tongue
                                 </li>
                                 <li>Ability to write in a range of voices and styles for a variety of diverse audiences</li>
                                 <li>You work independently and like to take the initiative</li>
@@ -110,7 +109,7 @@ export default () => {
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
                         <p>
-                            Application deadline: <b>07.10.2020!</b> However, applications will be reviewed on a rolling basis.
+                            Application deadline: <b>27.09.2020!</b> However, applications will be reviewed on a rolling basis.
                         </p>
                     </Header>
                 </Layout.Center>

@@ -68,19 +68,19 @@ export default () => {
                                 <KnowMore to="/jobs/fullstack">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior backend Developer (Full-time)</h4>
+                                <h4 style={{ textAlign: 'left' }}>Backend Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>Develop and maintain the backend powering Trality!</p>
                                 <KnowMore to="/jobs/backend">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior Frontend Developer (Full-time)</h4>
+                                <h4 style={{ textAlign: 'left' }}>Frontend Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>
                                     Use cutting edge UI frameworks in order to raise the bar for state-of-the-art UI and UX!
                                 </p>
                                 <KnowMore to="/jobs/frontend">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior Mobile Developer (Full-time)</h4>
+                                <h4 style={{ textAlign: 'left' }}>Mobile Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>Join our team on to develop our mobile app from scratch!</p>
                                 <KnowMore to="/jobs/mobile">Interested</KnowMore>
                             </Layout.Grid.Item>

@@ -13,11 +13,11 @@ export default () => {
                                 link: '/jobs',
                             },
                             {
-                                title: 'Senior Backend Developer (Full-time)',
+                                title: 'Backend Developer (Full-time)',
                             },
                         ]}
                     />
-                    <Header title="Senior Backend Developer (Full-time)">
+                    <Header title="Backend Developer (Full-time)">
                         <p>
                             We’re looking for talented backend engineers who build state-of-the-art systems that empower the complex trading-bots
                             running on our platform. If building fast, scalable systems based on Kubernetes, and deep diving through frameworks to
@@ -107,9 +107,7 @@ export default () => {
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>. We can’t wait
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
-                        <p>
-                            Application deadline: <b>14.09.2020!</b> However, applications will be reviewed on a rolling basis.
-                        </p>
+                        
                     </Header>
                 </Layout.Center>
             </Layout.Section>
