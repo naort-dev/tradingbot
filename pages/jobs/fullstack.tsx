@@ -95,10 +95,7 @@ export default () => {
                                 </li>
                                 <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
-                                <li>
-                                    Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
-                                    3600€ (per month, paid 14 times). <u>However, we are willing to overpay you significantly based qualification, education and experience</u>
-                                </li>
+                                
                             </ul>
                         </>
                         <h3>Sounds interesting?</h3>
