@@ -100,7 +100,7 @@ export default () => {
                         </>
                         <h3>Sounds interesting?</h3>
                         <p>
-                            To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>. We can’t wait
+                            To apply, drop us an email including a CV and a message stating your motivation to work with us to <b>jobs [at] trality [dot] com</b>. We can’t wait
                             to hear about your ambitions and experience to grow Trality with us!
                         </p>
                         <p>
