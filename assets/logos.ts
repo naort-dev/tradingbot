@@ -20,6 +20,8 @@ import * as FFGBlack from './images/logos/ffg_black.png';
 import * as FFGWhite from './images/logos/ffg_white.png';
 import * as BlockRocketBlack from './images/logos/blockrocket_black.png';
 import * as BlockRocketWhite from './images/logos/blockrocket_white.png';
+import * as TokentusBlack from './images/logos/tokentus_black.png';
+import * as TokentusWhite from './images/logos/tokentus_white.png';
 
 export const Logos = {
     Aws,
@@ -42,4 +44,6 @@ export const Logos = {
     FFGBlack,
     FFGWhite,
     BlockRocketWhite,
+    TokentusBlack,
+    TokentusWhite,
 };

@@ -133,10 +133,15 @@ export const Footer: React.FunctionComponent = () => {
                 <LogoHeader>Proudly supported by</LogoHeader>
                 <LogoList
                     logos={[
-                        {
+                        /**{
                             title: 'AWS Activate',
                             light: Logos.Aws,
                             dark: Logos.AwsWhite,
+                        },*/
+                        {
+                            title: 'Tokentus',
+                            light: Logos.TokentusBlack,
+                            dark: Logos.TokentusWhite,
                         },
                         {
                             title: 'Blockrocket',
