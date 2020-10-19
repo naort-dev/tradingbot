@@ -14,6 +14,9 @@ export const darkTheme = {
     backgroundLight: '#a5a5b029',
     lightGray: '#f1f1f2',
     shadowColor: 'rgba(2, 179, 216, 0.09);',
+    lightBlue: '#e5f7fb',
+    linkBlue: '#00b4da',
+    grayPrimary: '#181927'
 };
 
 export const lightTheme = {
@@ -32,6 +35,9 @@ export const lightTheme = {
     backgroundLight: '#a5a5b029',
     lightGray: '#f1f1f2',
     shadowColor: 'rgba(13, 21, 67, 0.1)',
+    lightBlue: '#e5f7fb',
+    linkBlue: '#00b4da',
+    grayPrimary: '#181927'
 };
 
 export type ThemeType = typeof darkTheme;

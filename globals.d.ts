@@ -31,6 +31,11 @@ declare module '*.png' {
     export = value;
 }
 
+declare module '*.jpg' {
+    const value: any;
+    export = value;
+}
+
 declare module '*.data' {
     const value: any;
     export = value;
