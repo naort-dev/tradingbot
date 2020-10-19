@@ -11,7 +11,7 @@ ${fontFace('basier', 'basiersquare-bold-webfont', 'bold', 'bold')}
 html,
 body {
     margin: 0;
-    font-family: basier;
+    font-family: basier, sans-serif;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     color: ${(props) => props.theme.font};
     line-height: 1.56;
