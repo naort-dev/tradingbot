@@ -101,32 +101,32 @@ const pageData: Person[] = [
     }
 ];
 
+const People = React.memo(() => {
+    var items: ReactNode[] = [];
+    pageData.forEach((item, i) => {
+        items.push(<GridItem key={`griditem-${i}-${item.name}`}>
+            <PersonImg src={item.photo ?? DummyPerson} />
+            <Name>{item.name}</Name>
+            <Title>{item.title}</Title>
+            <SocialLinks>{
+                item.socialLinks.map((socialLink, i) => {
+                    return <SocialLink key={socialLink.link} href={socialLink.link}>
+                        <SocialImg src={Linkedin} />
+                    </SocialLink>
+                })}
+            </SocialLinks>
+            </GridItem>)
+    });
+    return <>{items}</>;
+});
 
 export default () => {
-    const getPeople = () => {
-        var items: ReactNode[] = [];
-        pageData.forEach((item, i) => {
-            items.push(<GridItem key={`griditem-${i}-${item.name}`}>
-                <PersonImg src={item.photo ? item.photo : DummyPerson} />
-                <Name>{item.name}</Name>
-                <Title>{item.title}</Title>
-                <SocialLinks>{
-                    item.socialLinks.map((socialLink, i) => {
-                        return <SocialLink key={socialLink.link} href={socialLink.link}>
-                            <SocialImg src={Linkedin} />
-                        </SocialLink>
-                    })}
-                </SocialLinks>
-                </GridItem>)
-        });
-        return items;
-    }
     return <Layout.Page title="team">
         <Layout.Section id="headline" noPadding>
             <Layout.Center>
                 <ExtendedHeader center title="Meet the Trality Team!" subtitle="These people help you create successful bots. Nice to meet you!">
                     <Layout.Grid.Container>
-                        {getPeople()}
+                        <People />
                     </Layout.Grid.Container>
                 </ExtendedHeader>
             </Layout.Center>
