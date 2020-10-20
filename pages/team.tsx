@@ -58,7 +58,7 @@ const pageData: Person[] = [
         name: 'Ovidiu Popescu',
         title: "Head of Growth Marketing",
         photo: null,
-        socialLinks: [/* TBC */]
+        socialLinks: [/* Don't have one. */]
     },
     {
         name: 'Max Schneider',
@@ -73,13 +73,19 @@ const pageData: Person[] = [
         name: 'Constantin Dißelkamp',
         title: "Jr. AI Engineer",
         photo: null,
-        socialLinks: [/* TBC */]
+        socialLinks: [{
+            type: 'linkedin',
+            link: 'https://www.linkedin.com/in/constantin-dißelkamp-7105b81a2'
+        }]
     },
     {
         name: 'Tamas Hodobay',
         title: "Sr. Backend Engineer",
         photo: null,
-        socialLinks: [/* TBC */]
+        socialLinks: [{
+            type: 'linkedin',
+            link: 'https://www.linkedin.com/in/hodobay/'
+        }]
     },
     {
         name: 'Declan Igoe',
