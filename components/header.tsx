@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface Props {
+    className?: string;
     title: string;
     subtitle?: string;
     expandHeight?: boolean;
@@ -28,9 +29,9 @@ const Content = styled.div<{ expandHeight?: boolean }>`
 `}
 `;
 
-export const Header: React.FC<Props> = ({ children, title, subtitle, ...props }) => {
+export const Header: React.FC<Props> = ({ className, children, title, subtitle, ...props }) => {
     return (
-        <Container {...props}>
+        <Container {...props} className={className}>
             <h2>{title}</h2>
             {subtitle && <h5>{subtitle}</h5>}
             <Content {...props}>{children}</Content>

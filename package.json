@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "scripts": {
         "tsc": "tsc",
-        "dev": "NODE_ENV=development next",
-        "dev:prod": "NODE_ENV=production DEBUG=false next",
+        "dev": "cross-env NODE_ENV=development next",
+        "dev:prod": "cross-env NODE_ENV=production DEBUG=false next",
         "build": "next build",
         "start": "next start",
         "prettier": "prettier --write \"pages/**/*.{ts, tsx}\"",
@@ -46,6 +46,7 @@
         "babel-loader": "^8.0.6",
         "babel-plugin-inline-react-svg": "^1.1.0",
         "babel-plugin-styled-components": "^1.10.0",
+        "cross-env": "^7.0.2",
         "escape-html": "^1.0.3",
         "file-loader": "^4.2.0",
         "fs-extra": "^8.1.0",
