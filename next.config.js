@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const withImages = require('next-images');
 const withOptimizedImages = require('next-optimized-images');
 const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');

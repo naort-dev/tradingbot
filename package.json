@@ -60,7 +60,6 @@
         "husky": "^4.2.5",
         "imagemin-pngquant": "^9.0.1",
         "markdown-it": "^10.0.0",
-        "next-images": "^1.1.1",
         "next-optimized-images": "^2.4.0",
         "react-svg-loader": "^3.0.3",
         "sharp": "^0.23.1",
