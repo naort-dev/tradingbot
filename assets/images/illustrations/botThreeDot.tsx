@@ -18,7 +18,7 @@ const Svg = styled.svg<{ seen?: boolean; delay: number }>`
         .Render()}
 `;
 
-export default () => {
+const BotThreeDot = () => {
     const { seen } = useSection();
     const { delay } = useDelay();
     return (
@@ -98,3 +98,5 @@ export default () => {
         </Svg>
     );
 };
+
+export default BotThreeDot;

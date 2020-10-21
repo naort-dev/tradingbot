@@ -4,7 +4,7 @@ import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
-export default () => {
+const RuleBuilder = () => {
     return (
         <Layout.Page title="creator-rule-editor">
             <Layout.Section fullHeight noPadding id="rule-editor-description">
@@ -98,3 +98,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default RuleBuilder;

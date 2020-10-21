@@ -2,7 +2,7 @@ import { Layout } from '@containers';
 import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock } from '@components';
 import { ImagesMisc, Icons } from '@assets';
 
-export default () => {
+const Jobs = () => {
     return (
         <Layout.Page title="jobs">
             <Layout.Section fullHeight noPadding id="jobs-header">
@@ -103,3 +103,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Jobs;

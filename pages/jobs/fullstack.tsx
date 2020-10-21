@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Header, Link, Breadcrumb } from '@components';
 
-export default () => {
+const Fullstack = () => {
     return (
         <Layout.Page title="jobs-fullstack">
             <Layout.Section fullHeight noPadding id="jobs-header">
@@ -110,3 +110,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Fullstack;

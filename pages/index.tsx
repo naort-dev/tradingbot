@@ -11,7 +11,7 @@ import { ConstUrl } from '@constants';
 
 const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
 
-export default () => {
+const Index = () => {
     return (
         <Layout.Page title="home">
             <Layout.Section fullHeight noPadding id="home-description">
@@ -259,3 +259,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Index;

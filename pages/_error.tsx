@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Header } from '@components';
 
-export default () => {
+const Error = () => {
     return (
         <Layout.Page title="error">
             <Layout.Section fullHeight noPadding id="error-description">
@@ -12,3 +12,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Error;

@@ -4,7 +4,7 @@ import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
-export default () => {
+const CodeEditor = () => {
     return (
         <Layout.Page title="creator-code-editor">
             <Layout.Section fullHeight noPadding id="description">
@@ -100,3 +100,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default CodeEditor;

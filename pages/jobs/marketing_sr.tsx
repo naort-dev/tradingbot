@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Header, Link, Breadcrumb } from '@components';
 
-export default () => {
+const MarketingSr = () => {
     return (
         <Layout.Page title="jobs-marketing_sr">
             <Layout.Section fullHeight noPadding id="jobs-header">
@@ -100,3 +100,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default MarketingSr;

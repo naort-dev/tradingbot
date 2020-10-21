@@ -4,7 +4,7 @@ import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
-export default () => {
+const Features = () => {
     return (
         <Layout.Page title="creator-features">
             <Layout.Section fullHeight noPadding id="feature-description">
@@ -123,3 +123,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Features;

@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Header, Link } from '@components';
 
-export default () => {
+const Faq = () => {
     return (
         <Layout.Page title="resources-faq">
             <Layout.Section id="faq">
@@ -70,3 +70,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Faq;
