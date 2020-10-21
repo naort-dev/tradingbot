@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const withOptimizedImages = require('next-optimized-images');
-const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withCSS = require('@zeit/next-css');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
