@@ -12,11 +12,17 @@ import '../fix.css';
 import { parseCookies } from '@util';
 import { PopupManagerComponent } from '../containers/popup';
 
+let segmentTracking = undefined;
+if(process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT && typeof window !== 'undefined') {
+    segmentTracking = process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT.replace('{category}', window.location.pathname);
+}
+
 // Found no way to fetch via env variable prefix, fetching explicitly ...
 const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_ECHO,
     process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
+    segmentTracking
 ];
 
 const trackingConfig: TrackingManagerConfig = {
