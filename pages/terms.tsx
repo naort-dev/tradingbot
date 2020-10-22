@@ -33,7 +33,7 @@ const Section = styled.div<{ center?: boolean }>`
 `;
 
 
-export default () => {
+const Terms = () => {
     return (
         <Layout.Page title="terms">
             <Layout.Section fullHeight noPadding id="overview">
@@ -496,4 +496,7 @@ export default () => {
             </Layout.Section>
         </Layout.Page>
     );
-}
+};
+
+
+export default Terms;

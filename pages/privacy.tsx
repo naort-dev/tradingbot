@@ -46,7 +46,7 @@ const Section = styled.div<{ center?: boolean }>`
 `;
 
 
-export default () => {
+const Privacy = () => {
     return (
         <Layout.Page title="privacy">
             <Layout.Section fullHeight noPadding id="policy">
@@ -316,3 +316,6 @@ export default () => {
         </Layout.Page>
     );
 };
+
+
+export default Privacy;

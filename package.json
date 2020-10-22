@@ -26,7 +26,6 @@
         "express": "^4.16.4",
         "isomorphic-fetch": "^2.2.1",
         "jsonp": "^0.2.1",
-        "mixpanel-browser": "^2.23.0",
         "next": "^9.0.7",
         "path-match": "^1.2.4",
         "react": "^16.8.6",

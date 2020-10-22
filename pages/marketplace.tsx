@@ -2,7 +2,7 @@ import { Layout, Subscribe } from '@containers';
 import { Header, HeaderIcon, Highlight, TextBlock, Image } from '@components';
 import { Illustrations, Screens } from '@assets';
 
-export default () => {
+const Marketplace = () => {
     return (
         <Layout.Page title="marketplace">
             <Layout.Section fullHeight noPadding id="marketplace-description">
@@ -119,3 +119,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Marketplace;

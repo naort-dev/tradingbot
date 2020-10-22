@@ -1,7 +1,7 @@
 import { Layout } from '@containers';
 import { Header, Link, Breadcrumb } from '@components';
 
-export default () => {
+const Backend = () => {
     return (
         <Layout.Page title="jobs-backend">
             <Layout.Section fullHeight noPadding id="jobs-header">
@@ -111,3 +111,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Backend;

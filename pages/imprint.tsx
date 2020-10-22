@@ -26,7 +26,7 @@ const Description = styled.div`
     }
 `;
 
-export default () => {
+const Imprint = () => {
     return (
         <Layout.Page title="imprint">
             <Layout.Section fullHeight noPadding id="imprint">
@@ -46,3 +46,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default Imprint;

@@ -121,7 +121,7 @@ const CTA = styled.div`
     }
 `;
 
-export default () => {
+const PricingComponent = () => {
     const [yearly, setYearly] = useState(0);
 
     const onContact = useCallback(() => {
@@ -252,3 +252,5 @@ export default () => {
         </Layout.Page>
     );
 };
+
+export default PricingComponent;

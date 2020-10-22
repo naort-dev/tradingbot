@@ -126,7 +126,7 @@ const People = React.memo(() => {
     return <>{items}</>;
 });
 
-export default () => {
+const Team = () => {
     return <Layout.Page title="team">
         <Layout.Section id="headline" noPadding>
             <Layout.Center>
@@ -148,7 +148,9 @@ export default () => {
             </Layout.CenterLeft>
         </Layout.Section>
     </Layout.Page>
-}
+};
+
+export default Team;
 
 const ExtendedHeader = styled(Header)`
     & > h5 {
