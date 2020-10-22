@@ -3,6 +3,9 @@ import { Header, Button } from '@components';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import * as DummyPerson from '../assets/images/dummy-person.jpg';
+import * as Chris from '../assets/images/people/chris.jpg';
+import * as Alex from '../assets/images/people/alex.jpg';
+import * as Moritz from '../assets/images/people/moritz.jpg';
 import * as Linkedin from '../assets/images/logos/linkedin-square.svg';
 
 type PersonSocialLinks = {
@@ -21,7 +24,7 @@ const pageData: Person[] = [
     {
         name: 'Moritz Putzhammer',
         title: "Co-Founder & CEO",
-        photo: null,
+        photo: Moritz,
         socialLinks: [{
             type: 'linkedin',
             link: 'https://www.linkedin.com/in/putzhammer'
@@ -30,7 +33,7 @@ const pageData: Person[] = [
     {
         name: 'Christopher Helf',
         title: "Co-Founder & CTO",
-        photo: null,
+        photo: Chris,
         socialLinks: [{
             type: 'linkedin',
             link: 'https://www.linkedin.com/in/christopher-helf'
@@ -39,7 +42,7 @@ const pageData: Person[] = [
     {
         name: 'Alexander Kahl',
         title: "VP of Product",
-        photo: null,
+        photo: Alex,
         socialLinks: [{
             type: 'linkedin',
             link: 'https://www.linkedin.com/in/alexander-kahl'
