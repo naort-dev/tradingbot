@@ -5,6 +5,9 @@ export const Center = styled.div<{ direction?: 'column' | 'row' }>`
     display: flex;
     width: 80vw;
     max-width: 1100px;
+    @media (max-width: 980px) {
+        width:95vw;
+    }
     @media (max-width: 768px) {
         display: block;
         width: 100%;

@@ -39,10 +39,12 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
     }
     @media (max-width: 1024px) {
         margin: 0;
+        font-size: 12px;
     }
     @media (max-width: 768px) {
         display: none;
         opacity: 0.0;
+        font-size: 15px;
         margin-left: 0px;
         transition: 0.3s all;
         transition-delay: ${(props) => 0.3 + props.num * 0.1}s;

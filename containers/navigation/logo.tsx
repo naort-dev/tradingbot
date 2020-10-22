@@ -7,6 +7,12 @@ import { Logos } from '@assets';
 
 const LogoImg = styled.img`
     height: 33px;
+    @media (max-width: 920px) {
+        height: 25px;
+    }
+    @media (max-width: 850px) {
+        height: 15px;
+    }
     @media (max-width: 768px) {
         height: 25px;
     }

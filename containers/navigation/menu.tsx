@@ -4,7 +4,6 @@ import { useOpen } from './hooks/useOpen';
 import { LinkItem, ButtonItem, DropdownItem, ItemGroup, ContactItem } from './item';
 
 import { useIsMobile } from '../../hooks/useIsMobile';
-import { Logos } from '@assets';
 import { Navigation } from 'theme';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
