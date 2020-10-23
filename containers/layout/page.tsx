@@ -33,13 +33,28 @@ export const Page: React.FC<Props> = ({ dark, children }) => {
 
     return (
         <Container>
+            <BackgroundTriangle />
             <GDPR />
             <Navigation />
             <>{children}</>
             <Section id="footer">
                 <Footer />
-            </Section>
-            <Background src={ImagesMisc.Background} />
+            </Section>           
         </Container>
     );
 };
+
+const BackgroundTriangle = styled.div`
+    display:none;
+    @media(min-width: 767px) {
+        max-width: 60vw;
+        max-height: 90vh;
+        width: 100%;
+        height: 100%;    
+        display:block;
+        background: linear-gradient(to top right, #fff 0%, #fff 50%, rgba(45, 50, 124, 0.01) 50%, rgba(45, 50, 124, 0.03)100%);
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+`;
