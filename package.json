@@ -20,7 +20,7 @@
         "deploy:production": "now --prod"
     },
     "dependencies": {
-        "@trality/web-tracking": "^1.0.1",
+        "@trality/web-tracking": "2.0.0",
         "@zeit/next-css": "^1.0.1",
         "dotenv": "^8.2.0",
         "express": "^4.16.4",

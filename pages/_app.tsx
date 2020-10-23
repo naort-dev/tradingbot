@@ -17,6 +17,7 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_ECHO,
     process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
+    process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT
 ];
 
 const trackingConfig: TrackingManagerConfig = {
