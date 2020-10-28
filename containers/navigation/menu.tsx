@@ -92,6 +92,10 @@ export const Menu = () => {
                         name: 'Jobs',
                         target: '/jobs',
                     },
+                    {
+                        name: 'Competition',
+                        target: '/competition',
+                    },
                 ]}
             />
             <ItemGroup>
