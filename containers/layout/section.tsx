@@ -10,6 +10,7 @@ interface SectionProps {
     fullHeight?: boolean;
     themeColor?: ThemeColors;
     id: string;
+    className?: string;
     noPadding?: boolean;
     dark?: boolean;
     noBgChange?: boolean;
@@ -62,7 +63,7 @@ const SectionWrapper = styled.section<SectionProps>`
 
 const LeaveDelay = 0;
 
-export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, ...props }) => {
+export const Section: React.FC<SectionProps> = ({ children, dark, className, defaultDark, ...props }) => {
     const [entered, setEntered] = useState(false);
     const [seen, setSeen] = useState(false);
     const darkHook = useDark();
@@ -108,7 +109,7 @@ export const Section: React.FC<SectionProps> = ({ children, dark, defaultDark, .
     return (
         <SectionCtx.Provider value={{ entered, seen }}>
             <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="35%" topOffset="35%">
-                <SectionWrapper {...props} ref={ref}>
+                <SectionWrapper {...props} className={className} ref={ref}>
                     {children}
                 </SectionWrapper>
             </Waypoint>

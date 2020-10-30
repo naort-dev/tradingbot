@@ -6,3 +6,5 @@ yarn-error.log
 .now
 .env*.local
 .npmrc
+.vercel/README.txt
+.vercel/project.json

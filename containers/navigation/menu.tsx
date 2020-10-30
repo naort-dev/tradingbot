@@ -71,7 +71,7 @@ export const Menu = () => {
             />
             <LinkItem name="Marketplace" target="/marketplace" />
             <LinkItem name="Pricing" target="/pricing" />
-            <LinkItem name="Team" target="/team" />
+            <LinkItem name="Competition" target="/competition" />
             <DropdownItem
                 name="Resources"
                 target="/"
@@ -93,8 +93,8 @@ export const Menu = () => {
                         target: '/jobs',
                     },
                     {
-                        name: 'Competition',
-                        target: '/competition',
+                        name: 'Team',
+                        target: '/team',
                     },
                 ]}
             />
