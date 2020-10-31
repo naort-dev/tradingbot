@@ -3,16 +3,23 @@ import { Header, Button, KnowMore } from '@components';
 import * as HeroBackground from '../assets/images/misc/banner.jpg';
 import * as MobileHeroBackground from '../assets/images/misc/banner-mobile.jpg';
 import * as Calendar from '../assets/images/icons/calendar.svg';
-import * as TickYes from '../assets/images/icons/tick-yes.svg';
-import * as TickNo from '../assets/images/icons/tick-no.svg';
 import * as Trophy1 from '../assets/images/icons/trophy-1.png';
 import * as Trophy2 from '../assets/images/icons/trophy-2.png';
 import * as TimelineImgMobile from '../assets/images/screens/competition-timeline-mobile.png';
 import * as TimelineImg from '../assets/images/screens/competition-timeline.png';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { ConstUrl } from '@constants';
 import CompetitionBoxes from 'components/competitionboxes';
+
+type FractionProps = {
+    up: string | ReactNode;
+    down: string | ReactNode;
+}
+
+const FractionLayout = ({up, down}:FractionProps) => {
+return <table style={{position: 'relative', bottom: '1px', display:"inline-table", fontSize:"100%", borderCollapse:"collapse", verticalAlign:"middle"}}><tbody><tr><td style={{padding:"0px", borderBottom: "solid 1px", width:"8px", textAlign:"center"}}>{up}</td></tr><tr><td style={{padding:"0px", textAlign:"center"}}>{down}</td></tr></tbody></table>
+}
 
 const Competition = () => {
     return <Layout.Page title="Competition">
@@ -94,10 +101,10 @@ const Competition = () => {
                     </p>
                     <Formula>
                         <p>
-                            TotalReturn / (1 + MaxDrawDown)
+                            <FractionLayout up={'TotalReturn'} down={'1 + MaxDrawDown'} />
                         </p>
                         <p>
-                            TotalReturn = X_t / X_0 -1, where X_i is the capital at time i
+                            <i>TotalReturn</i> = <FractionLayout up={<>X<sub>t</sub></>} down={<>X<sub>0</sub></>}/> - 1, where X<sub>i</sub> is the capital at time i
                         </p>
                         <p>
                             <strong>MaxDrawDown will be measured in absolute percent. </strong>
@@ -154,7 +161,7 @@ const Competition = () => {
                         <tr>
                             <td></td>
                             <td>
-                                <i>performance</i> = <table style={{display:"inline-table", fontSize:"65%", borderCollapse:"collapse", verticalAlign:"middle"}}><tbody><tr><td style={{padding:"0px", borderBottom: "solid 1px", width:"8px", textAlign:"center"}}>X<sub>1</sub></td></tr> <tr><td style={{padding:"0px", textAlign:"center"}}>X<sub>0</sub></td></tr></tbody></table> - 1  
+                                <i>performance</i> = <FractionLayout up={<>X<sub>t</sub></>} down={<>X<sub>0</sub></>}/> - 1  
                             </td>
                         </tr>
                     </Table>
@@ -198,7 +205,7 @@ const Competition = () => {
                         <li>Every bot will receive 20,000 $USDT as a starting balance</li>
                     </List>
                     <p>
-                        Read the full rules and T&amp;Cs <a href="#">here</a>.
+                        Read the full rules and T&amp;Cs <a href="/competition-terms">here</a>.
                     </p>
                 </ExtendedHeader>
             </Layout.Center>
@@ -257,7 +264,7 @@ const FirstSection = styled(Layout.Section)`
 const PrizesCenterContainer = styled(Layout.Center)`
     display:flex;
     justify-content: center;
-    max-width:50px;
+    max-width:450px;
     margin:0 auto;
     margin-bottom: 22px;
     @media only screen and (min-width: 750px) {
@@ -346,7 +353,7 @@ const Formula = styled.div`
     margin: 0 auto;
     margin-bottom: 22px;
     @media only screen and (min-width: 768px) {
-        max-width: 800px;
+        max-width: 650px;
         margin-bottom: 25px;
     }
 `;

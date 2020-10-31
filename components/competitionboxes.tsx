@@ -1,11 +1,11 @@
 import useFetch from 'hooks/useFetch';
 import React from 'react';
 import styled from 'styled-components';
-import { Loader } from './loader';
 import * as Participants from '../assets/images/icons/participants.svg';
 import * as StatusClosed from '../assets/images/icons/status-closed.svg';
 import * as HoursGlassStart from '../assets/images/icons/hourglass-start.svg';
 import * as HoursGlassEnd from '../assets/images/icons/hourglass-end.svg';
+import * as LoaderGif from '../assets/images/misc/trality-bot-animation.gif';
 
 
 type callResponse = {
@@ -15,6 +15,8 @@ type callResponse = {
     status: number;
 }
 
+const url = process.env.NEXT_COMPETITION_URL ? process.env.NEXT_COMPETITION_URL : null;
+console.log(url);
 const getCompetitionStatus = (status: number) => {
     switch (status) {
         case 1:
@@ -29,7 +31,7 @@ const getCompetitionStatus = (status: number) => {
 }
 
 const CompetitionBoxes = () => {
-    const [data, error] = useFetch<callResponse>("testingurl", {});
+    const [data, error] = useFetch<callResponse>(url, {});
     if (data !== null) {
     return <BoxesContainer>
             <Box>
@@ -50,8 +52,15 @@ const CompetitionBoxes = () => {
             </Box>
         </BoxesContainer>
     }
-    return <LoaderPosition><Loader show={true} /></LoaderPosition>
+    return <LoaderPosition>
+                <Loader src={LoaderGif} />
+                <p>We're loading competition info...</p>
+           </LoaderPosition>
 };
+
+const Loader = styled.img`
+    max-width: 150px;
+`;
 
 const BoxHeadline = styled.div`
     color: #a5a5b0;
@@ -72,8 +81,8 @@ const BoxData = styled.div`
 `;
 
 const LoaderPosition = styled.div`
-    position:relative;
-    margin-left:50%;
+    text-align:center;
+    margin: 0 auto;
 `;
 
 const BoxesContainer = styled.div`
