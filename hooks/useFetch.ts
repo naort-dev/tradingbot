@@ -8,7 +8,7 @@ const useFetch = <T>(url: string | null, options: RequestInit) => {
         try {
           if(!url) {
             // Simulating URL call
-            const json: T = {startDate: "08.12.2019", endDate: "08.01.2020", participants: 78, status: 0} as any;
+            const json: T = {"participants":1,"name":"Trading Competition November 2020","start":1606777200000,"end":1612134000000} as any;
             setTimeout(() => setResponse(json), 10000);
             return;
           }

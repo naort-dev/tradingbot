@@ -7,27 +7,31 @@ import * as HoursGlassStart from '../assets/images/icons/hourglass-start.svg';
 import * as HoursGlassEnd from '../assets/images/icons/hourglass-end.svg';
 import * as LoaderGif from '../assets/images/misc/trality-bot-animation.gif';
 
-
 type callResponse = {
-    startDate: string;
-    endDate: string;
+    start: number;
+    end: number;
     participants: number;
-    status: number;
+    name: string;
 }
 
-const url = process.env.NEXT_COMPETITION_URL ? process.env.NEXT_COMPETITION_URL : null;
+const url = process.env.NEXT_PUBLIC_APP_COMPETITION_URL ? process.env.NEXT_PUBLIC_APP_COMPETITION_URL : null;
 console.log(url);
-const getCompetitionStatus = (status: number) => {
-    switch (status) {
-        case 1:
-            return "Scheduled";
-        case 0:
-            return "Running";
-        case -1:
-            return "Closed"
-        default:
-            return "Closed";
+
+const getCompetitionStatus = (start: number, end: number) => {
+    const now = Date.now();
+    console.log(now.valueOf());
+    if(now < start) {
+        return "Scheduled";
     }
+    if(end > now) {
+        return "Closed";
+    }
+    return "Running";
+}
+
+const getReadableDataFormat = (timestamp: number) => {
+    const date = new Date(timestamp);
+    return `${date.getDate()}.${date.getMonthFormatted()}.${date.getFullYear()}-${date.getHoursFormatted()}:${date.getMinutesFormatted()}:${date.getSecondsFormatted()}`;
 }
 
 const CompetitionBoxes = () => {
@@ -36,11 +40,19 @@ const CompetitionBoxes = () => {
     return <BoxesContainer>
             <Box>
                 <BoxHeadline><img src={HoursGlassStart} height={19}/>Start</BoxHeadline>
-                <BoxData>{data.startDate}</BoxData>
+                <BoxData>
+                    {getReadableDataFormat(data.start).split('-').map((item) =>{
+                        return <>{item}<br/></>
+                    })}
+                </BoxData>
             </Box>
             <Box>
                 <BoxHeadline><img src={HoursGlassEnd} height={19}/>End</BoxHeadline>
-                <BoxData>{data.endDate}</BoxData>
+                <BoxData>
+                    {getReadableDataFormat(data.end).split('-').map((item) =>{
+                        return <>{item}<br/></>
+                    })}    
+                </BoxData>
             </Box>
             <Box>
                 <BoxHeadline><img src={Participants} height={19}/>Participants</BoxHeadline> 
@@ -48,7 +60,7 @@ const CompetitionBoxes = () => {
             </Box>
             <Box>
                 <BoxHeadline><img src={StatusClosed} height={19}/>Status</BoxHeadline> 
-                <BoxData>{getCompetitionStatus(data.status)}</BoxData>
+                <BoxData>{getCompetitionStatus(data.start, data.end)}</BoxData>
             </Box>
         </BoxesContainer>
     }

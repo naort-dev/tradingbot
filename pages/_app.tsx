@@ -20,6 +20,25 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT
 ];
 
+// Date prototype enrichment
+
+Date.prototype.getMonthFormatted = function() {
+    var month = this.getMonth() + 1;
+    return month < 10 ? '0' + month : '' + month;
+}
+Date.prototype.getHoursFormatted = function() {
+    var month = this.getHours();
+    return month < 10 ? '0' + month : '' + month;
+}
+Date.prototype.getSecondsFormatted = function() {
+    var month = this.getSeconds();
+    return month < 10 ? '0' + month : '' + month;
+}
+Date.prototype.getMinutesFormatted = function() {
+    var month = this.getMinutes();
+    return month < 10 ? '0' + month : '' + month;
+}
+
 const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
