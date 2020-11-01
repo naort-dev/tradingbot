@@ -12,62 +12,91 @@ type callResponse = {
     end: number;
     participants: number;
     name: string;
-}
+};
 
 const url = process.env.NEXT_PUBLIC_APP_COMPETITION_URL ? process.env.NEXT_PUBLIC_APP_COMPETITION_URL : null;
-console.log(url);
 
 const getCompetitionStatus = (start: number, end: number) => {
     const now = Date.now();
     console.log(now.valueOf());
-    if(now < start) {
-        return "Scheduled";
+    if (now < start) {
+        return 'Scheduled';
     }
-    if(end > now) {
-        return "Closed";
+    if (end > now) {
+        return 'Closed';
     }
-    return "Running";
-}
+    return 'Running';
+};
 
 const getReadableDataFormat = (timestamp: number) => {
     const date = new Date(timestamp);
     return `${date.getDate()}.${date.getMonthFormatted()}.${date.getFullYear()}-${date.getHoursFormatted()}:${date.getMinutesFormatted()}:${date.getSecondsFormatted()}`;
-}
+};
 
 const CompetitionBoxes = () => {
     const [data, error] = useFetch<callResponse>(url, {});
     if (data !== null) {
-    return <BoxesContainer>
-            <Box>
-                <BoxHeadline><img src={HoursGlassStart} height={19}/>Start</BoxHeadline>
-                <BoxData>
-                    {getReadableDataFormat(data.start).split('-').map((item) =>{
-                        return <>{item}<br/></>
-                    })}
-                </BoxData>
-            </Box>
-            <Box>
-                <BoxHeadline><img src={HoursGlassEnd} height={19}/>End</BoxHeadline>
-                <BoxData>
-                    {getReadableDataFormat(data.end).split('-').map((item) =>{
-                        return <>{item}<br/></>
-                    })}    
-                </BoxData>
-            </Box>
-            <Box>
-                <BoxHeadline><img src={Participants} height={19}/>Participants</BoxHeadline> 
-                <BoxData>{data.participants}</BoxData>
-            </Box>
-            <Box>
-                <BoxHeadline><img src={StatusClosed} height={19}/>Status</BoxHeadline> 
-                <BoxData>{getCompetitionStatus(data.start, data.end)}</BoxData>
-            </Box>
-        </BoxesContainer>
+        return (
+            <BoxesContainer>
+                <Box>
+                    <BoxHeadline>
+                        <img src={HoursGlassStart} height={19} />
+                        Start
+                    </BoxHeadline>
+                    <BoxData>
+                        {getReadableDataFormat(data.start)
+                            .split('-')
+                            .map((item) => {
+                                return (
+                                    <>
+                                        {item}
+                                        <br />
+                                    </>
+                                );
+                            })}
+                    </BoxData>
+                </Box>
+                <Box>
+                    <BoxHeadline>
+                        <img src={HoursGlassEnd} height={19} />
+                        End
+                    </BoxHeadline>
+                    <BoxData>
+                        {getReadableDataFormat(data.end)
+                            .split('-')
+                            .map((item) => {
+                                return (
+                                    <>
+                                        {item}
+                                        <br />
+                                    </>
+                                );
+                            })}
+                    </BoxData>
+                </Box>
+                <Box>
+                    <BoxHeadline>
+                        <img src={Participants} height={19} />
+                        Participants
+                    </BoxHeadline>
+                    <BoxData>{data.participants}</BoxData>
+                </Box>
+                <Box>
+                    <BoxHeadline>
+                        <img src={StatusClosed} height={19} />
+                        Status
+                    </BoxHeadline>
+                    <BoxData>{getCompetitionStatus(data.start, data.end)}</BoxData>
+                </Box>
+            </BoxesContainer>
+        );
     }
-    return <LoaderPosition>
-                <Loader src={LoaderGif} />
-                <p>We're loading competition info...</p>
-           </LoaderPosition>
+    return (
+        <LoaderPosition>
+            <Loader src={LoaderGif} />
+            <p>We're loading competition info...</p>
+        </LoaderPosition>
+    );
 };
 
 const Loader = styled.img`
@@ -79,7 +108,7 @@ const BoxHeadline = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     img {
-        position:relative;
+        position: relative;
         top: 5px;
         margin-right: 5px;
     }
@@ -93,12 +122,12 @@ const BoxData = styled.div`
 `;
 
 const LoaderPosition = styled.div`
-    text-align:center;
+    text-align: center;
     margin: 0 auto;
 `;
 
 const BoxesContainer = styled.div`
-    display:flex;
+    display: flex;
     width: 100%;
     flex-flow: row;
     flex-wrap: wrap;
@@ -113,7 +142,7 @@ const Box = styled.div`
     flex-basis: 100%;
     width: 100%;
     padding: 36px;
-    
+
     @media only screen and (min-width: 768px) {
         flex-basis: 47%;
     }
@@ -121,7 +150,6 @@ const Box = styled.div`
     @media only screen and (min-width: 1375px) {
         flex-basis: 22.5%;
     }
-    
 `;
 
 export default CompetitionBoxes;

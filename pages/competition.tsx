@@ -352,7 +352,7 @@ const Formula = styled.div`
     border-radius: 10px;
     padding: 0 20px;
 
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     margin-bottom: 22px;
     @media only screen and (min-width: 768px) {

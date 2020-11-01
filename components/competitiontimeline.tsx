@@ -140,7 +140,7 @@ const Entry = styled(BasicEntry)`
         height: 1px;
         position: absolute;
         left: -33px;
-        top: 43px;
+        top: 42px;
         margin-left: -2px;
 
         @media only screen and (min-width: 768px) {
@@ -163,7 +163,7 @@ const Entry = styled(BasicEntry)`
         border: 3px solid #646482;
         position: absolute;
         left: 1px;
-        top: 40.5px;
+        top: 40px;
         @media only screen and (min-width: 768px) {
             left: 50%;
             top: -27px;
@@ -175,7 +175,7 @@ const Entry = styled(BasicEntry)`
 const MainEntryData = styled.div`
     font-size: 13px;
     color: #646482;
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 850px) {
         font-size: 15px;
     }
 `;
@@ -183,7 +183,7 @@ const MainEntryData = styled.div`
 const SecondaryEntryData = styled.div`
     font-size: 13px;
     color: #171826;
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 850px) {
         font-size: 14px;
     }
 `;
@@ -220,10 +220,15 @@ const Bar = styled.div`
         color: white;
         position: absolute;
         top: 99%;
-        right: 0px;
+        height: 10px;
+        box-sizing: border-box;
+        display: block;
+        text-align:center;
+        right: -5px;
         background-image: url(${Arrow});
         transform: rotate(90deg);
         @media only screen and (min-width: 768px) {
+            bottom: auto;
             right: -10px;
             top: -5px;
             transform: rotate(0deg);
