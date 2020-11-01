@@ -11,6 +11,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { ConstUrl } from '@constants';
 import CompetitionBoxes from 'components/competitionboxes';
+import CompetitionTimeline from 'components/competitiontimeline';
 
 type FractionProps = {
     up: string | ReactNode;
@@ -177,7 +178,7 @@ const Competition = () => {
                     <p>
                         There are two main phases in the competition: the <strong>submission</strong> period and the <strong>live simulation</strong> period. The submission period is the time where you can create and submit your bot to and it will go from November 4th until November 30th. The live simulation period will run from December 1st until January 14th and during this period, the bots run continuously on a virtual account. The bots submitted to this competition will NOT be trading with real assets but instead, run in a simulated environment mirroring the real market. Winners will be selected based on RoMAd (Return Over Maximum Drawdown) for the whole simulation period (1.12.2020 - 14.1.2021).
                     </p>
-                    <Timeline />
+                    <CompetitionTimeline />
                 </ExtendedHeader>
             </Layout.Center>
         </Layout.Section>
@@ -350,10 +351,14 @@ const Formula = styled.div`
     max-width: 80%;
     border-radius: 10px;
     padding: 0 20px;
+
+    text-align: center;
     margin: 0 auto;
     margin-bottom: 22px;
     @media only screen and (min-width: 768px) {
+        margin-top: 40px;
         max-width: 650px;
+        margin-bottom: 50px;
         margin-bottom: 25px;
     }
 `;
