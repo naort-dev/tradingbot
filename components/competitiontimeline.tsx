@@ -136,7 +136,7 @@ const Entry = styled(BasicEntry)`
         content: '';
         display: block;
         width: 32px;
-        border: 1px dashed #646482;
+        border: 1px dashed ${(props) => props.theme.onLight};
         height: 1px;
         position: absolute;
         left: -33px;
@@ -147,7 +147,7 @@ const Entry = styled(BasicEntry)`
             text-align: center;
             margin-left: 0px;
             height: auto;
-            left: 50%;
+            left: 49%;
             top: -57px;
             width: 1px;
             height: 32px;
@@ -160,7 +160,7 @@ const Entry = styled(BasicEntry)`
         width: 6px;
         height: 6px;
         border-radius: 6px;
-        border: 3px solid #646482;
+        border: 3px solid ${(props) => props.theme.onLight};
         position: absolute;
         left: 1px;
         top: 40px;
@@ -174,7 +174,7 @@ const Entry = styled(BasicEntry)`
 
 const MainEntryData = styled.div`
     font-size: 13px;
-    color: #646482;
+    color: ${(props) => props.theme.onLight};
     @media only screen and (min-width: 850px) {
         font-size: 15px;
     }

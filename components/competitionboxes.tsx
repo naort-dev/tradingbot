@@ -104,7 +104,7 @@ const Loader = styled.img`
 `;
 
 const BoxHeadline = styled.div`
-    color: #a5a5b0;
+    color: ${(props) => props.theme.onDark};
     text-transform: uppercase;
     font-size: 12px;
     img {
@@ -116,7 +116,7 @@ const BoxHeadline = styled.div`
 
 const BoxData = styled.div`
     font-size: 28px;
-    color: #646482;
+    color: ${(props) => props.theme.onLight};
     font-weight: bold;
     margin-top: 23px;
 `;
