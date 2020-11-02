@@ -142,7 +142,7 @@ const Competition = () => {
                         <p>The winning metrics are calculated as follows:</p>
                         <Formula>
                             <p>
-                                <i>RoMaD</i> =
+                                <i>RoMaD</i> = {' '}
                                 <FractionLayout up={'TotalReturn'} down={'1 + MDD'} />
                             </p>
                             <p>where</p>
