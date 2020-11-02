@@ -6,39 +6,34 @@ type FractionProps = {
     down: string | ReactNode;
 };
 
-const FractionTable = styled.table`
-    position: relative;
-    bottom: 1px;
-    display: inline-table;
-    font-size: 100%;
-    border-collapse: collapse;
+const Fraction = styled.span`
+    display: inline-block;
+    text-align: center;
     vertical-align: middle;
 `;
 
-const UpFractionTd = styled.td`
-    padding: 0px;
-    border-bottom: solid 1px;
-    width: 8px;
-    text-align: center;
+const UpFractionTd = styled.sup`
+    display: block;
+    padding: 0 0.3em;
+    border-bottom: 0.08em solid;
 `;
 
-const DownFractionTd = styled.td`
-    padding: 0px;
-    text-align: center;
+const Invisible = styled.span`
+    display: none;
+`;
+
+const DownFractionTd = styled.sub`
+    display: block;
+    padding: 0 0.3em;
 `;
 
 const FractionLayout = ({ up, down }: FractionProps) => {
     return (
-        <FractionTable>
-            <tbody>
-                <tr>
+        <Fraction>
                     <UpFractionTd>{up}</UpFractionTd>
-                </tr>
-                <tr>
+                    <Invisible>&frasl;</Invisible>
                     <DownFractionTd>{down}</DownFractionTd>
-                </tr>
-            </tbody>
-        </FractionTable>
+        </Fraction>
     );
 };
 
