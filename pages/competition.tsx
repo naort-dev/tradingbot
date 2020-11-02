@@ -38,15 +38,15 @@ const Competition = () => {
                 <Layout.Center>
                     <ExtendedHeader center title="Overview">
                         <p>
-                            <strong>Create a winning trading bot using our state-of-the-art tools and get your hands on a big cash prize.</strong>
+                            <strong>Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize!</strong>
                         </p>
                         <p>
                             You have until the end of November to create and submit a bot after which it will run in a simulated environment for 45
-                            days. At the end of the simulation period, the top three ranked participants according to RoMaD (Return Over Maximum
-                            Drawdown) will receive a cash prize. This cash price is related to the performance of the winning bot which we will
-                            outline below. Trality will provide standard sets of price data (source: Binance) to help with your bot development, which
-                            can be done with our <a href="/creator/code-editor">Python Code Editor</a> or our intuitive drag-and-drop{' '}
-                            <a href="/creator/rule-builder">Rule Builder</a>.
+                            days. At the end of the simulation period, the top three ranked participants according to our risk-adjusted return metric,
+                            namely RoMaD (Return Over Maximum Drawdown) will receive a cash prize. This cash price is related to the performance of
+                            the winning bot, but you can find all the fine details in the following paragraphs. Participating Trading Bots can be
+                            created with the Python-based <a href="/creator/code-editor">Trality Code Editor</a> or the intuitive drag-and-drop{' '}
+                            <a href="/creator/rule-builder">Trality Rule Builder</a>{' '}
                         </p>
                         <Layout.Grid.Container>
                             <VideoRow>
@@ -55,7 +55,7 @@ const Competition = () => {
                                         <iframe
                                             width="560"
                                             height="349"
-                                            src="https://www.youtube.com/embed/OPY3alCHv-8?modestbranding=1"
+                                            src="https://www.youtube.com/embed/u0-IZknoCmE?modestbranding=1"
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
@@ -67,7 +67,7 @@ const Competition = () => {
                                         <iframe
                                             width="560"
                                             height="349"
-                                            src="https://www.youtube.com/embed/OPY3alCHv-8?modestbranding=1"
+                                            src="https://www.youtube.com/embed/MSenmNzuRAI?modestbranding=1"
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
@@ -109,7 +109,7 @@ const Competition = () => {
                                         Submit the bot
                                     </a>
                                 </strong>{' '}
-                                in the submission section
+                                in the Competition module
                             </li>
                         </NonDiscList>
                     </ExtendedHeader>
@@ -120,10 +120,9 @@ const Competition = () => {
                     <ExtendedHeader center title="Creativity pays">
                         <p>
                             We recently launched our <a href="https://blog.trality.com/introducing-the-trading-engine-2-0/">Trading Engine 2.0</a>{' '}
-                            where flexibility took centre stage. In that, we provided our creators with the tools they need to build the most advanced
-                            bots possible. Trality is for those who want the most freedom when developing bots with cutting-edge technology. We
-                            attract the smartest bot creators by constantly working on innovative functionality and we stay ahead of the curve by
-                            improving our existing products and constantly introducing new services for our users.
+                            where flexibility took center stage. In that, we provided our creators with the tools they need to build the most advanced
+                            trading bots they can imagine. Trality is for those who want the most freedom when developing bots with cutting-edge
+                            technology.
                         </p>
                         <p>
                             Our goal with this competition is to expand our community of enthusiastic developers and tech-savvy people in the industry
@@ -143,8 +142,10 @@ const Competition = () => {
                         <p>The winning metrics are calculated as follows:</p>
                         <Formula>
                             <p>
-                                <FractionLayout up={'TotalReturn'} down={'1 + MaxDrawDown'} />
+                                <i>RoMaD</i> =
+                                <FractionLayout up={'TotalReturn'} down={'1 + MDD'} />
                             </p>
+                            <p>where</p>
                             <p>
                                 <i>TotalReturn</i> ={' '}
                                 <FractionLayout
@@ -159,10 +160,12 @@ const Competition = () => {
                                         </>
                                     }
                                 />{' '}
-                                - 1, where X<sub>i</sub> is the capital at time i
+                                - 1
                             </p>
                             <p>
-                                <strong>MaxDrawDown will be measured in absolute percent. </strong>
+                                X<sub>t</sub> is the portfolio value in quoted currency at timestamp t, X<sub>0</sub> is the start capital at the
+                                beginning of the Simulation Period (20,000 USDT). MDDis the maximum drawdown in percent. For details see the full
+                                Rules <a href="/competition-terms">here</a>.
                             </p>
                         </Formula>
                         <CenteredParagraph>
@@ -197,45 +200,50 @@ const Competition = () => {
                                 </PrizeMoney>
                             </PrizePiece>
                         </PrizesCenterContainer>
-                        <p>This cash prizes are related to the performance of their bot and will be calculated thusly:</p>
+                        <p>
+                            This cash prize is related to the performance of their trading bot and is made up of a minimum absolute reward and a
+                            variable performance-based reward:
+                        </p>
                         <Table>
-                            <tr>
-                                <td>
-                                    <strong>1st place</strong>
-                                </td>
-                                <td>EUR 20000 * min(max(performance,5%),15%)</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>2nd place</strong>
-                                </td>
-                                <td>EUR 20000 * min(max(performance,2.5%),10%)</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>3rd place</strong>
-                                </td>
-                                <td>EUR 20000 * min(max(performance,1.5%),5%)</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <i>performance</i> ={' '}
-                                    <FractionLayout
-                                        up={
-                                            <>
-                                                X<sub>t</sub>
-                                            </>
-                                        }
-                                        down={
-                                            <>
-                                                X<sub>0</sub>
-                                            </>
-                                        }
-                                    />{' '}
-                                    - 1
-                                </td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>1st place</strong>
+                                    </td>
+                                    <td>EUR 20000 * min(max(Total Return,5%),15%)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>2nd place</strong>
+                                    </td>
+                                    <td>EUR 20000 * min(max(Total Return,2.5%),10%)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>3rd place</strong>
+                                    </td>
+                                    <td>EUR 20000 * min(max(Total Return,1.5%),5%)</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <InfoTd>
+                                        <i>Total Return</i> ={' '}
+                                        <FractionLayout
+                                            up={
+                                                <>
+                                                    X<sub>t</sub>
+                                                </>
+                                            }
+                                            down={
+                                                <>
+                                                    X<sub>0</sub>
+                                                </>
+                                            }
+                                        />{' '}
+                                        - 1<p>as described above</p>
+                                    </InfoTd>
+                                </tr>
+                            </tbody>
                         </Table>
                         <p>
                             Following this prize model, the best-ranked bot creator will receive a payout of between €1000 and €3000. Second place
@@ -246,14 +254,14 @@ const Competition = () => {
             </Layout.Section>
             <Layout.Section id="competition">
                 <Layout.Center>
-                    <ExtendedHeader center title="Competition Timeline">
+                    <ExtendedHeader center title="Competition timeline">
                         <p>
-                            There are two main phases in the competition: the <strong>submission</strong> period and the{' '}
-                            <strong>live simulation</strong> period. The submission period is the time where you can create and submit your bot to and
-                            it will go from November 4th until November 30th. The live simulation period will run from December 1st until January 14th
-                            and during this period, the bots run continuously on a virtual account. The bots submitted to this competition will NOT be
-                            trading with real assets but instead, run in a simulated environment mirroring the real market. Winners will be selected
-                            based on RoMAd (Return Over Maximum Drawdown) for the whole simulation period (1.12.2020 - 14.1.2021).
+                            There are two main phases in the competition: the <strong>submission</strong> period and the <strong>simulation</strong>{' '}
+                            period. The submission period is the time where you can create and submit your bot to and it will run from November 4th
+                            until November 30th. The simulation period will run from December 1st until January 14th and during this period, the bots
+                            run continuously on a virtual Binance exchange account. The bots submitted to this competition will NOT be trading with
+                            real assets but instead, run in a simulated environment mirroring the real market. Winners will be selected based on RoMaD
+                            (Return Over Maximum Drawdown) achieved over the course of the simulation period (1.12.2020 - 14.1.2021).
                         </p>
                         <CompetitionTimeline />
                     </ExtendedHeader>
@@ -262,39 +270,32 @@ const Competition = () => {
 
             <Layout.Section id="rules">
                 <Layout.Center>
-                    <ExtendedHeader center title="Eligibility">
+                    <ExtendedHeader center title="Criteria and Eligibility">
+                        <p>
+                            In order to be eligible for participation in the Competition, all trading bots submitted are required to meet a particular
+                            set of criteria:
+                        </p>
+                        <List>
+                            <li>Your bot has USDT as quoted currency.</li>
+                            <li>Your bot trades with 1 or more of the following coins as base currency: BTC, ETH, XRP, LTC and EOS.</li>
+                            <li>Your bot is created either by using the Trality Code Editor or the Trality Rule Builder.</li>
+                        </List>
+                        <InBetweenLists>To be eligible to take part in the competition, participants must also meet these criteria:</InBetweenLists>
                         <List>
                             <li>
-                                To be eligible to take part in the competition, participants must have a registered Trality account. If you don’t have
-                                an account yet, you can sign up here. Trality accounts are for free at the moment and you will never be charged for
-                                our services without additional consent!
+                                Participants must have a registered Trality account. If you don’t have an account yet, you can sign up{' '}
+                                <a href={ConstUrl.Signup}>here</a>. Trality accounts are for free at the moment and you will never be charged for our
+                                services without additional consent!
                             </li>
-                            <li>Participants must be at least 18 years old at the time of entry. Age may be verified before prize distribution.</li>
+                            <li>
+                                Participants must be at least 18 years old or older at the time of entry. Age may be verified prior to prize
+                                distribution.
+                            </li>
                             <li>Participants may be from any country or region where their entry is not prohibited or restricted by law.</li>
                             <li>There is no fee for entry and no purchase is necessary.</li>
                         </List>
-                    </ExtendedHeader>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="rules">
-                <Layout.Center>
-                    <ExtendedHeader center title="Rules">
-                        <List>
-                            <li>You must use the Traity Rule Editor or the Code Editor to create your bot</li>
-                            <li>
-                                The bot submission deadline is <strong>November 30th at midnight CET</strong>.
-                            </li>
-                            <li>
-                                Only <strong>one</strong> bot per entry
-                            </li>
-                            <li>
-                                Your bot is allowed to trade in one or more of the following coins: <strong>BTC, ETH, XRP, LTC</strong> and{' '}
-                                <strong>EOS</strong>. The respective trading intervals for your bot can be chosen freely
-                            </li>
-                            <li>Every bot will receive 20,000 $USDT as a starting balance</li>
-                        </List>
                         <p>
-                            Read the full rules and T&amp;Cs <a href="/competition-terms">here</a>.
+                            Read the complete rules for the competition <a href={ConstUrl.Signup}>here</a>.
                         </p>
                     </ExtendedHeader>
                 </Layout.Center>
@@ -343,6 +344,19 @@ const ExtendedHeader = styled(Header)`
                 margin-bottom: 0px;
             }
         }
+    }
+`;
+
+const InfoTd = styled.td`
+    & > p {
+        margin: 0;
+    }
+`;
+
+const InBetweenLists = styled.p`
+    margin-top: 22px !important;
+    @media only screen and (min-width: 750px) {
+        margin-top: 25px !important;
     }
 `;
 

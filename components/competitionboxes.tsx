@@ -1,5 +1,5 @@
 import useFetch from 'hooks/useFetch';
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import * as Participants from '../assets/images/icons/participants.svg';
 import * as StatusClosed from '../assets/images/icons/status-closed.svg';
@@ -38,7 +38,7 @@ const CompetitionBoxes = () => {
     if (data !== null) {
         return (
             <BoxesContainer>
-                <Box>
+                <Box key='start'>
                     <BoxHeadline>
                         <img src={HoursGlassStart} height={19} />
                         Start
@@ -46,17 +46,17 @@ const CompetitionBoxes = () => {
                     <BoxData>
                         {getReadableDataFormat(data.start)
                             .split('-')
-                            .map((item) => {
+                            .map((item, i) => {
                                 return (
-                                    <>
+                                    <Fragment key={`${item}-${i}`}>
                                         {item}
                                         <br />
-                                    </>
+                                    </Fragment>
                                 );
                             })}
                     </BoxData>
                 </Box>
-                <Box>
+                <Box key='end'>
                     <BoxHeadline>
                         <img src={HoursGlassEnd} height={19} />
                         End
@@ -64,24 +64,24 @@ const CompetitionBoxes = () => {
                     <BoxData>
                         {getReadableDataFormat(data.end)
                             .split('-')
-                            .map((item) => {
+                            .map((item, i) => {
                                 return (
-                                    <>
+                                    <Fragment key={`${item}-${i}`}>
                                         {item}
                                         <br />
-                                    </>
+                                    </Fragment>
                                 );
                             })}
                     </BoxData>
                 </Box>
-                <Box>
+                <Box key='participants'>
                     <BoxHeadline>
                         <img src={Participants} height={19} />
                         Participants
                     </BoxHeadline>
                     <BoxData>{data.participants}</BoxData>
                 </Box>
-                <Box>
+                <Box key='status'>
                     <BoxHeadline>
                         <img src={StatusClosed} height={19} />
                         Status
