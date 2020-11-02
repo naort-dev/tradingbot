@@ -295,7 +295,7 @@ const Competition = () => {
                             <li>There is no fee for entry and no purchase is necessary.</li>
                         </List>
                         <p>
-                            Read the complete rules for the competition <a href={ConstUrl.Signup}>here</a>.
+                            Read the complete rules for the competition <a href="/competition-terms">here</a>.
                         </p>
                     </ExtendedHeader>
                 </Layout.Center>
