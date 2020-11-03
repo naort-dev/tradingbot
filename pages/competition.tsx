@@ -12,6 +12,14 @@ import CompetitionBoxes from 'components/competitionboxes';
 import CompetitionTimeline from 'components/competitiontimeline';
 import FractionLayout from 'components/fractionlayout';
 
+const HeroButtonSection = React.memo(() => {
+    return (
+        <ButtonSection>
+            <HeroButton to={ConstUrl.Signup}>Register Now</HeroButton>
+        </ButtonSection>
+    );
+});
+
 const Competition = () => {
     return (
         <Layout.Page title="Competition">
@@ -79,6 +87,7 @@ const Competition = () => {
                     </ExtendedHeader>
                 </Layout.Center>
             </BoxesSection>
+            <HeroButtonSection />
             <Layout.Section id="how-to-participate">
                 <Layout.Center>
                     <ExtendedHeader center title="How to participate">
@@ -142,8 +151,7 @@ const Competition = () => {
                         <p>The winning metrics are calculated as follows:</p>
                         <Formula>
                             <p>
-                                <i>RoMaD</i> = {' '}
-                                <FractionLayout up={'TotalReturn'} down={'1 + MDD'} />
+                                <i>RoMaD</i> = <FractionLayout up={'TotalReturn'} down={'1 + MDD'} />
                             </p>
                             <p>where</p>
                             <p>
@@ -252,6 +260,8 @@ const Competition = () => {
                     </ExtendedHeader>
                 </Layout.Center>
             </Layout.Section>
+
+            <HeroButtonSection />
             <Layout.Section id="competition">
                 <Layout.Center>
                     <ExtendedHeader center title="Competition timeline">
@@ -315,6 +325,7 @@ const Competition = () => {
                     </ExtendedHeader>
                 </Layout.Center>
             </Layout.Section>
+            <HeroButtonSection />
         </Layout.Page>
     );
 };
@@ -346,6 +357,11 @@ const ExtendedHeader = styled(Header)`
             }
         }
     }
+`;
+
+const ButtonSection = styled.div`
+    margin: 10px auto;
+    text-align: center;
 `;
 
 const InfoTd = styled.td`
