@@ -274,8 +274,8 @@ export const ItemGroupWrapper = styled.div`
         margin-left: 0px;
     }
     margin-left: 16px;
-    margin-right: 16px;
     @media (max-width: 768px) {
+        margin-right: 16px;
         margin-left: 22px !important;
         margin-top: 25px !important;
         width: 100%;

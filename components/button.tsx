@@ -9,6 +9,7 @@ interface BProps {
     hollow?: boolean;
     knowmore?: boolean;
     small?: boolean;
+    className?: string;
     dark?: boolean;
     border?: boolean;
     onClick?: () => void;
@@ -98,7 +99,7 @@ export interface ButtonProps<K extends keyof EventProperties = EventType> {
 }
 
 export function Button<K extends keyof EventProperties>(props: React.PropsWithChildren<BProps & ButtonProps<K>>) {
-    const { children, to, blank, event, onClick, ...rest } = props
+    const { children, to, blank, event, className, onClick, ...rest } = props
     const tracker = useTracker();
     const router = useRouter();
 
@@ -120,7 +121,7 @@ export function Button<K extends keyof EventProperties>(props: React.PropsWithCh
         }
     };
     return (
-        <StyledButton {...props} onClick={onClick || onClickDefault}>
+        <StyledButton {...props} className={className} onClick={onClick || onClickDefault}>
             {children}
         </StyledButton>
     );

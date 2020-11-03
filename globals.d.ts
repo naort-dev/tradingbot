@@ -6,6 +6,13 @@
     browser: boolean;
 };*/
 
+interface Date {
+    getMinutesFormatted: () => string;
+    getHoursFormatted: () => string;
+    getSecondsFormatted: () => string;
+    getMonthFormatted: () => string;
+}
+
 declare module '*.json' {
     const value: any;
     export = value;
