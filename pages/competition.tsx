@@ -279,6 +279,7 @@ const Competition = () => {
                             <li>Your bot has USDT as quoted currency.</li>
                             <li>Your bot trades with 1 or more of the following coins as base currency: BTC, ETH, XRP, LTC and EOS.</li>
                             <li>Your bot is created either by using the Trality Code Editor or the Trality Rule Builder.</li>
+                            <li>Your bot must run on a Binance account</li>
                         </List>
                         <InBetweenLists>To be eligible to take part in the competition, participants must also meet these criteria:</InBetweenLists>
                         <List>
