@@ -1223,10 +1223,10 @@
   dependencies:
     "@babel/runtime" "^7.11.2"
 
-"@trality/web-tracking@2.0.0":
-  version "2.0.0"
-  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/2.0.0/30d00073fc29b8958637fb9bd183f9fdfea433a1925509a4c564fc5b39b2fd3b#776dd143ec5ebf82401f54416ac16aaa0e520e2e"
-  integrity sha512-ZaRihaoYPwdxWRVuIJNNMxNOvSnY2hwjBvul9ZR9v9O9m9A5jAZfP47y1tIDiYnq+oXUQc2z5UufpdCJCBRqdg==
+"@trality/web-tracking@3.0.0":
+  version "3.0.0"
+  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/3.0.0/02a937f0818db386c73b8382170cabbdc697dafd66d394ce422cb54d7bb3014a#a0c81af9a639715a76735313ef77b3c5ff47c229"
+  integrity sha512-PlNVhfuCDBTzh4lanhufAN36uuJ9A5vddfde68IZKY1bKqh8nLQZvT4WnRCGgfQnb6dJH5P/6HJmuGCFZjkHeg==
   dependencies:
     mixpanel-browser "^2.38.0"
     react-gtm-module "^2.0.8"

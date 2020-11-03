@@ -44,6 +44,10 @@ const trackingConfig: TrackingManagerConfig = {
     options: {
         cookieName: 'tracking-optedin',
         ignoreGDPR: true,
+        trackingCookie: {
+            cookieName: "_tra_origin",
+            cookieHostname: process.env.NODE_ENV === "development" ? "localhost" : undefined,
+        },
         debug: process.env.NEXT_PUBLIC_APP_DEBUG === 'true',
         isBrowser: typeof window !== 'undefined',
     },
