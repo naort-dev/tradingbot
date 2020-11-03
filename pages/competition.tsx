@@ -410,7 +410,8 @@ const PrizePiece = styled.div`
     display: inline-block;
     @media only screen and (min-width: 768px) {
         max-width: 350px;
-        margin-left: 100px;
+        margin-left: 30px;
+        white-space: nowrap;
     }
     text-align: center;
 `;
@@ -450,7 +451,7 @@ const PrizeText = styled.div<{ color: 'primary' | 'secondary' }>`
     margin-bottom: 15px;
     text-transform: uppercase;
     @media only screen and (min-width: 768px) {
-        font-size: 15px;
+        font-size: 13px;
     }
 `;
 
@@ -484,7 +485,7 @@ const PrizeMoneyValue = styled.div`
     display: inline-block;
     margin-left: 2px;
     @media only screen and (min-width: 768px) {
-        font-size: 40px;
+        font-size: 30px;
     }
 `;
 
