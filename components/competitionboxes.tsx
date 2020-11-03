@@ -18,7 +18,6 @@ const url = process.env.NEXT_PUBLIC_APP_COMPETITION_URL ? process.env.NEXT_PUBLI
 
 const getCompetitionStatus = (start: number, end: number) => {
     const now = Date.now();
-    console.log(now.valueOf());
     if (now < start) {
         return 'Scheduled';
     }
@@ -34,6 +33,9 @@ const getReadableDataFormat = (timestamp: number) => {
 };
 
 const CompetitionBoxes = () => {
+    if(url == null) {
+        return null;
+    }
     const [data, error] = useFetch<callResponse>(url, {});
     if (data !== null) {
         return (
