@@ -164,7 +164,7 @@ const Competition = () => {
                             </p>
                             <p>
                                 X<sub>t</sub> is the portfolio value in quoted currency at timestamp t, X<sub>0</sub> is the start capital at the
-                                beginning of the Simulation Period (20,000 USDT). MDDis the maximum drawdown in percent. For details see the full
+                                beginning of the Simulation Period (20,000 USDT). MDD is the maximum drawdown in percent. For details see the full
                                 Rules <a href="/competition-terms">here</a>.
                             </p>
                         </Formula>
