@@ -164,7 +164,7 @@ const Competition = () => {
                             </p>
                             <p>
                                 X<sub>t</sub> is the portfolio value in quoted currency at timestamp t, X<sub>0</sub> is the start capital at the
-                                beginning of the Simulation Period (20,000 USDT). MDDis the maximum drawdown in percent. For details see the full
+                                beginning of the Simulation Period (20,000 USDT). MDD is the maximum drawdown in percent. For details see the full
                                 Rules <a href="/competition-terms">here</a>.
                             </p>
                         </Formula>
@@ -410,7 +410,8 @@ const PrizePiece = styled.div`
     display: inline-block;
     @media only screen and (min-width: 768px) {
         max-width: 350px;
-        margin-left: 100px;
+        margin-left: 30px;
+        white-space: nowrap;
     }
     text-align: center;
 `;
@@ -450,7 +451,7 @@ const PrizeText = styled.div<{ color: 'primary' | 'secondary' }>`
     margin-bottom: 15px;
     text-transform: uppercase;
     @media only screen and (min-width: 768px) {
-        font-size: 15px;
+        font-size: 13px;
     }
 `;
 
@@ -484,7 +485,7 @@ const PrizeMoneyValue = styled.div`
     display: inline-block;
     margin-left: 2px;
     @media only screen and (min-width: 768px) {
-        font-size: 40px;
+        font-size: 30px;
     }
 `;
 
