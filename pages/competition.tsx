@@ -63,7 +63,7 @@ const Competition = () => {
                                         <iframe
                                             width="560"
                                             height="349"
-                                            src="https://www.youtube.com/embed/u0-IZknoCmE?modestbranding=1"
+                                            src="https://www.youtube.com/embed/NmoPR-iLuI8?modestbranding=1"
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
