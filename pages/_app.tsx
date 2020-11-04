@@ -17,27 +17,27 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_ECHO,
     process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
-    process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT
+    process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT,
 ];
 
 // Date prototype enrichment
 
-Date.prototype.getMonthFormatted = function() {
+Date.prototype.getMonthFormatted = function () {
     var month = this.getMonth() + 1;
     return month < 10 ? '0' + month : '' + month;
-}
-Date.prototype.getHoursFormatted = function() {
+};
+Date.prototype.getHoursFormatted = function () {
     var month = this.getHours();
     return month < 10 ? '0' + month : '' + month;
-}
-Date.prototype.getSecondsFormatted = function() {
+};
+Date.prototype.getSecondsFormatted = function () {
     var month = this.getSeconds();
     return month < 10 ? '0' + month : '' + month;
-}
-Date.prototype.getMinutesFormatted = function() {
+};
+Date.prototype.getMinutesFormatted = function () {
     var month = this.getMinutes();
     return month < 10 ? '0' + month : '' + month;
-}
+};
 
 const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
@@ -45,8 +45,8 @@ const trackingConfig: TrackingManagerConfig = {
         cookieName: 'tracking-optedin',
         ignoreGDPR: true,
         trackingCookie: {
-            cookieName: "_tra_origin",
-            cookieHostname: process.env.NODE_ENV === "development" ? "localhost" : undefined,
+            cookieName: '_tra_origin',
+            cookieHostname: process.env.NODE_ENV === 'development' ? 'localhost' : undefined,
         },
         debug: process.env.NEXT_PUBLIC_APP_DEBUG === 'true',
         isBrowser: typeof window !== 'undefined',
@@ -60,12 +60,7 @@ const trackingConfig: TrackingManagerConfig = {
     setPageviewCallback: (callback: (url: string) => void) => {
         Router.events.on('routeChangeComplete', callback);
     },
-    setSessionDurationTracker: [
-        EventType.Time1m,
-        EventType.Time3m,
-        EventType.Time5m,
-        EventType.Time10m
-    ]
+    setSessionDurationTracker: [EventType.Time1m, EventType.Time3m, EventType.Time5m, EventType.Time10m],
 };
 
 class Trality extends App {

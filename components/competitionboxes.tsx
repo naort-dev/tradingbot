@@ -33,14 +33,14 @@ const getReadableDataFormat = (timestamp: number) => {
 };
 
 const CompetitionBoxes = () => {
-    if(url == null) {
+    if (url == null) {
         return null;
     }
     const [data, error] = useFetch<callResponse>(url, {});
     if (data !== null) {
         return (
             <BoxesContainer>
-                <Box key='start'>
+                <Box key="start">
                     <BoxHeadline>
                         <img src={HoursGlassStart} height={19} />
                         Start
@@ -58,7 +58,7 @@ const CompetitionBoxes = () => {
                             })}
                     </BoxData>
                 </Box>
-                <Box key='end'>
+                <Box key="end">
                     <BoxHeadline>
                         <img src={HoursGlassEnd} height={19} />
                         End
@@ -76,14 +76,14 @@ const CompetitionBoxes = () => {
                             })}
                     </BoxData>
                 </Box>
-                <Box key='participants'>
+                <Box key="participants">
                     <BoxHeadline>
                         <img src={Participants} height={19} />
                         Participants
                     </BoxHeadline>
                     <BoxData>{data.participants}</BoxData>
                 </Box>
-                <Box key='status'>
+                <Box key="status">
                     <BoxHeadline>
                         <img src={StatusClosed} height={19} />
                         Status
