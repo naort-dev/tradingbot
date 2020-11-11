@@ -49,6 +49,9 @@ const Competition = () => {
                             <strong>Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize!</strong>
                         </p>
                         <p>
+                            <strong>Note:</strong> Your trading algorithm and code will remain confidential and remains your intellectual property (see <a target="_blank" href="/competition-terms">terms and conditions</a>)
+                        </p>
+                        <p>
                             You have until the end of November to create and submit a bot after which it will run in a simulated environment for 45
                             days. At the end of the simulation period, the top three ranked participants according to our risk-adjusted return metric,
                             namely RoMaD (Return Over Maximum Drawdown) will receive a cash prize. This cash price is related to the performance of
