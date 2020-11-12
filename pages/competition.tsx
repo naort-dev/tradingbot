@@ -94,7 +94,7 @@ const Competition = () => {
             <Layout.Section id="how-to-participate">
                 <Layout.Center>
                     <ExtendedHeader center title="How to participate">
-                        <p>We make it very easy for users both new and existing to take part in this exciting competition. You simply have to:</p>
+                        <p>We make it very easy for users both new and existing to take part in this exciting competition. You simply:</p>
                         <NonDiscList>
                             <li>
                                 <strong>
@@ -127,6 +127,26 @@ const Competition = () => {
                     </ExtendedHeader>
                 </Layout.Center>
             </Layout.Section>
+            <Layout.Section id="ip-rights">
+                <Layout.Center>
+                    <ExtendedHeader center title="Your bot remains your property">
+                        <p>
+                            Your trading bot and its algorithm will always remain confidential and securely stored and will always be yours. The
+                            intellectual property for each trading bot remains completely with its creator!
+                        </p>
+                        <p>
+                            This is important to us because at Trality we believe in empowering Traders. We want to simply provide you with the best
+                            tools and the best infrastructure for you to be able to concentrate on what you love doing most: creating high-performing
+                            trading algorithms and bots. As a part of this goal we believe providing a great competition is important in order to
+                            foster the creativity of our creators - that's our rational.{' '}
+                        </p>
+                        <p>
+                            Our goal with this competition is to expand our community of enthusiastic developers and tech-savvy people in the industry
+                            therefore we welcome all kinds of traders to take part. It’s time to get creative and win!
+                        </p>
+                    </ExtendedHeader>
+                </Layout.Center>
+            </Layout.Section>
             <Layout.Section id="creativity-pays">
                 <Layout.Center>
                     <ExtendedHeader center title="Creativity pays">
@@ -138,9 +158,8 @@ const Competition = () => {
                         </p>
                         <p>
                             Our goal with this competition is to expand our community of enthusiastic developers and tech-savvy people in the industry
-                            therefore we welcome all kinds of traders to take part.
+                            therefore we welcome all kinds of traders to take part. It’s time to get creative and win!
                         </p>
-                        <p>It’s time to get creative and win!</p>
                     </ExtendedHeader>
                 </Layout.Center>
             </Layout.Section>
