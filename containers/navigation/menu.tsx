@@ -86,7 +86,7 @@ export const Menu = () => {
                     },
                     {
                         name: 'Blog',
-                        target: 'https://blog.trality.com',
+                        target: '/blog',
                     },
                     {
                         name: 'Jobs',

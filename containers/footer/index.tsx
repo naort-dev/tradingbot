@@ -104,7 +104,7 @@ export const Footer: React.FunctionComponent = () => {
                         <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
-                        <ExternalLink href="https://blog.trality.com">{'Blog'}</ExternalLink>
+                        <ExternalLink href="/blog">{'Blog'}</ExternalLink>
                         <Link href="/jobs">
                             <a>Jobs</a>
                         </Link>

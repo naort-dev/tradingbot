@@ -151,7 +151,7 @@ const Competition = () => {
                 <Layout.Center>
                     <ExtendedHeader center title="Creativity pays">
                         <p>
-                            We recently launched our <a href="https://blog.trality.com/introducing-the-trading-engine-2-0/">Trading Engine 2.0</a>{' '}
+                            We recently launched our <a href="/blog/introducing-the-trading-engine-2-0/">Trading Engine 2.0</a>{' '}
                             where flexibility took center stage. In that, we provided our creators with the tools they need to build the most advanced
                             trading bots they can imagine. Trality is for those who want the most freedom when developing bots with cutting-edge
                             technology.

@@ -2,5 +2,13 @@
     "version": 2,
     "name": "nextjs",
     "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-    "alias": "www.trality.com"
+    "alias": "www.trality.com",
+    "rewrites": [
+        { "source": "/blog", "destination": "https://blog.trality.com/blog/"},
+        { "source": "/blog/assets/:url*", "destination": "https://blog.trality.com/blog/assets/:url*" },
+        { "source": "/blog/content/:url*", "destination": "https://blog.trality.com/blog/content/:url*" },
+        { "source": "/blog/:url*", "destination": "https://blog.trality.com/blog/:url*/"},
+        { "source": "/assets/:url*", "destination": "https://blog.trality.com/blog/assets/:url*" },
+        { "source": "/content/:url*", "destination": "https://blog.trality.com/blog/content/:url*" }
+    ]
 }
