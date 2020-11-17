@@ -116,6 +116,12 @@ const Confirmation = styled.div`
     color: black;
 `;
 
+const Label = styled.label`
+    text-indent: -10000px; // hide if offscreen, but still available.
+`;
+
+const subscribePlaceholder = 'Your email <3';
+
 export const Subscribe = () => {
     const tracker = useTracker()
     const [cookie, setCookie] = useCookie('trality_subscribed');
@@ -159,7 +165,8 @@ export const Subscribe = () => {
     return (
         <ButtonContainer>
             <InputContainer>
-                <Text disabled={sending} type="input" placeholder="Your email <3" value={email} onChange={(ev) => setEmail(ev.target.value)} />
+                <Label htmlFor="textEmailInput">{subscribePlaceholder}</Label>
+                <Text id="textEmailInput" disabled={sending} type="input" placeholder={subscribePlaceholder} value={email} onChange={(ev) => setEmail(ev.target.value)} />
                 <Confirm disabled={sending}>
                     <Checkmark show={isValidEmail && !sending && !error} />
                     <Error show={!!error && !sending} />
