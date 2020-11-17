@@ -92,7 +92,6 @@ class Trality extends App {
                                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" />
                                 <meta httpEquiv="content-language" content="en" />
                                 <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
-                                <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />
                                 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
                                 <link rel="preconnect" href="https://www.googletagmanager.com" />
