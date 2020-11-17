@@ -4,6 +4,7 @@ import { Layout } from '@containers';
 import { Header } from '@components';
 import FractionLayout from 'components/fractionlayout';
 import { ConstUrl } from '@constants';
+import { MetaTags, Page } from '../util/metaTags';
 
 const Section = styled.div<{ center?: boolean }>`
     margin-top: 15px;
@@ -56,6 +57,7 @@ const Table = styled.table`
 const Terms = () => {
     return (
         <Layout.Page title="terms">
+            <MetaTags page={Page.CompetitionTerms} />
             <Layout.Section fullHeight noPadding id="overview">
                 <Layout.Center>
                     <Header title="Trality Trading Competition Terms &amp; Conditions">

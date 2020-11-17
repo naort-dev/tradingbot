@@ -8,6 +8,8 @@ import * as Alex from '../assets/images/people/alex.jpg';
 import * as Moritz from '../assets/images/people/moritz.jpg';
 import * as Linkedin from '../assets/images/logos/linkedin-square.svg';
 
+import {MetaTags, Page} from '../util/metaTags';
+
 type PersonSocialLinks = {
     type: 'linkedin';
     link: string;
@@ -131,6 +133,7 @@ const People = React.memo(() => {
 
 const Team = () => {
     return <Layout.Page title="team">
+        <MetaTags page={Page.About} />
         <Layout.Section id="headline" noPadding>
             <Layout.Center>
                 <ExtendedHeader center title="Meet the Trality Team!" subtitle="These people help you create successful bots. Nice to meet you!">

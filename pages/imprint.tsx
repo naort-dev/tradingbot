@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Layout } from '@containers';
 import { Header } from '@components';
 
+import {MetaTags, Page} from '../util/metaTags';
+
 const Description = styled.div`
     margin-bottom: 50px;
     justify-content: left;
@@ -29,6 +31,7 @@ const Description = styled.div`
 const Imprint = () => {
     return (
         <Layout.Page title="imprint">
+            <MetaTags page={Page.Imprint} />
             <Layout.Section fullHeight noPadding id="imprint">
                 <Layout.Center>
                     <Header title="Imprint">

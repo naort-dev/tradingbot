@@ -11,6 +11,7 @@ import { ConstUrl } from '@constants';
 import CompetitionBoxes from 'components/competitionboxes';
 import CompetitionTimeline from 'components/competitiontimeline';
 import FractionLayout from 'components/fractionlayout';
+import { MetaTags, Page } from '../util/metaTags';
 
 const HeroButtonSection = React.memo(() => {
     return (
@@ -23,6 +24,7 @@ const HeroButtonSection = React.memo(() => {
 const Competition = () => {
     return (
         <Layout.Page title="Competition">
+            <MetaTags page={Page.Competition} />
             <FirstSection id="hero">
                 <Layout.Center mobileFullWidth={true}>
                     <HeroSection>
@@ -49,7 +51,12 @@ const Competition = () => {
                             <strong>Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize!</strong>
                         </p>
                         <p>
-                            <strong>Note:</strong> Your trading algorithm and code will remain confidential and remains your intellectual property (see <a target="_blank" href="/competition-terms">terms and conditions</a>)
+                            <strong>Note:</strong> Your trading algorithm and code will remain confidential and remains your intellectual property
+                            (see{' '}
+                            <a target="_blank" href="/competition-terms">
+                                terms and conditions
+                            </a>
+                            )
                         </p>
                         <p>
                             You have until the end of November to create and submit a bot after which it will run in a simulated environment for 45

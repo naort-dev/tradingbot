@@ -3,10 +3,12 @@ import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@componen
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { Page, MetaTags } from '../../util/metaTags';
 
 const CodeEditor = () => {
     return (
         <Layout.Page title="creator-code-editor">
+            <MetaTags page={Page.CodeEditor} />
             <Layout.Section fullHeight noPadding id="description">
                 <Layout.Center>
                     <Layout.TwoColumn columnWidth={40}>

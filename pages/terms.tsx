@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Layout } from '@containers';
 import { Header } from '@components';
 
+import {MetaTags, Page} from '../util/metaTags';
+
 const Section = styled.div<{ center?: boolean }>`
     margin-top: 15px;
     text-align: justify;
@@ -36,6 +38,7 @@ const Section = styled.div<{ center?: boolean }>`
 const Terms = () => {
     return (
         <Layout.Page title="terms">
+            <MetaTags page={Page.Terms} />
             <Layout.Section fullHeight noPadding id="overview">
                 <Layout.Center>
                     <Header title="General Terms and Conditions" subtitle="(November 2019)">

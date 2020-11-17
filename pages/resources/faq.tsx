@@ -1,9 +1,12 @@
 import { Layout } from '@containers';
 import { Header, Link } from '@components';
 
+import { MetaTags, Page } from '../../util/metaTags';
+
 const Faq = () => {
     return (
         <Layout.Page title="resources-faq">
+            <MetaTags page={Page.FAQ} />
             <Layout.Section id="faq">
                 <Layout.Center>
                     <Header title="FAQ">

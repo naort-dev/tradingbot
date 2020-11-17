@@ -1,9 +1,11 @@
 import { Layout } from '@containers';
 import { Header, Link, Breadcrumb } from '@components';
+import { MetaTags, Page } from '../../util/metaTags';
 
 const Fullstack = () => {
     return (
         <Layout.Page title="jobs-fullstack">
+            <MetaTags page={Page.JobSrFullStack} />
             <Layout.Section fullHeight noPadding id="jobs-header">
                 <Layout.Center direction="column">
                     <Breadcrumb
@@ -95,15 +97,13 @@ const Fullstack = () => {
                                 </li>
                                 <li>Free snacks, great coffee and mate tea to keep you fueled and happy throughout the work day</li>
                                 <li>A possibility to negotiate an equity-based compensation</li>
-                                
                             </ul>
                         </>
                         <h3>Sounds interesting?</h3>
                         <p>
-                        To apply, drop us an email including a CV and a message stating your motivation to work with us to <b>jobs [at] trality [dot] com</b>. We can’t wait
-                            to hear about your ambitions and experience to grow Trality with us!
+                            To apply, drop us an email including a CV and a message stating your motivation to work with us to{' '}
+                            <b>jobs [at] trality [dot] com</b>. We can’t wait to hear about your ambitions and experience to grow Trality with us!
                         </p>
-                        
                     </Header>
                 </Layout.Center>
             </Layout.Section>

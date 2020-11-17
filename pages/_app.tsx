@@ -88,15 +88,9 @@ class Trality extends App {
                         <>
                             <GlobalStyle />
                             <Head>
-                                <title>{'Trality - Follow & Create Bots'}</title>
                                 <meta charSet="UTF-8" />
                                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" />
-                                <meta
-                                    name="description"
-                                    content="Trality is a platform for anybody who wants to profit from algorithmic crypto trading. "
-                                />
                                 <meta httpEquiv="content-language" content="en" />
-                                <meta name="title" content="Trality - Create Trading Bots" />
                                 <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
                                 <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />

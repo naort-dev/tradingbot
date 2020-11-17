@@ -3,10 +3,12 @@ import { Highlight, Button, Header, Image, TextBlock, KnowMore } from '@componen
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { Page, MetaTags } from '../../util/metaTags';
 
 const Features = () => {
     return (
         <Layout.Page title="creator-features">
+            <MetaTags page={Page.Features} />
             <Layout.Section fullHeight noPadding id="feature-description">
                 <Layout.Center>
                     <Layout.TwoColumn reverted columnWidth={40}>

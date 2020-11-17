@@ -1,6 +1,5 @@
 import React from 'react';
 import { Layout, AsSeenIn } from '@containers';
-import styled from 'styled-components';
 
 import { HeaderIcon } from 'components/headericon';
 import { Subscribe } from '@containers';
@@ -8,12 +7,14 @@ import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, Te
 import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { MetaTags, Page } from '../util/metaTags';
 
 const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
 
 const Index = () => {
     return (
         <Layout.Page title="home">
+            <MetaTags page={Page.HP} />
             <Layout.Section fullHeight noPadding id="home-description">
                 <Layout.Center>
                     <Layout.TwoColumn>

@@ -2,9 +2,12 @@ import { Layout } from '@containers';
 import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock } from '@components';
 import { ImagesMisc, Icons } from '@assets';
 
+import { MetaTags, Page } from '../util/metaTags';
+
 const Jobs = () => {
     return (
         <Layout.Page title="jobs">
+            <MetaTags page={Page.Jobs} />
             <Layout.Section fullHeight noPadding id="jobs-header">
                 <Layout.Center>
                     <Layout.TwoColumn>

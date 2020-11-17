@@ -15,6 +15,8 @@ import * as PricingEnterprise from '../assets/images/illustrations/pricing_enter
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
+import { Page, MetaTags } from '../util/metaTags';
+
 interface Plan {
     image: string;
     popular?: boolean;
@@ -131,6 +133,7 @@ const PricingComponent = () => {
 
     return (
         <Layout.Page title="pricing">
+            <MetaTags page={Page.Pricing} />
             <Layout.Section fullHeight noPadding id="pricing-overview">
                 <Layout.Center>
                     <Header title="Start trading like a professional.">

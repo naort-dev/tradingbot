@@ -1,10 +1,12 @@
 import { Layout, Subscribe } from '@containers';
 import { Header, HeaderIcon, Highlight, TextBlock, Image } from '@components';
 import { Illustrations, Screens } from '@assets';
+import { MetaTags, Page } from '../util/metaTags';
 
 const Marketplace = () => {
     return (
         <Layout.Page title="marketplace">
+            <MetaTags page={Page.MarketPlace} />
             <Layout.Section fullHeight noPadding id="marketplace-description">
                 <Layout.Center>
                     <Layout.TwoColumn>

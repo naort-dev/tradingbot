@@ -3,10 +3,12 @@ import { Highlight, Button, Header, Image, TextBlock } from '@components';
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { MetaTags, Page } from '../../util/metaTags';
 
 const RuleBuilder = () => {
     return (
         <Layout.Page title="creator-rule-editor">
+            <MetaTags page={Page.RuleBuilder} />
             <Layout.Section fullHeight noPadding id="rule-editor-description">
                 <Layout.Center>
                     <Layout.TwoColumn columnWidth={40} reverted>

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Layout } from '@containers';
 import { Header } from '@components';
 
+import {MetaTags, Page} from '../util/metaTags';
+
 const Container = styled.div`
     margin-bottom: 50px;
     justify-content: left;
@@ -49,6 +51,7 @@ const Section = styled.div<{ center?: boolean }>`
 const Privacy = () => {
     return (
         <Layout.Page title="privacy">
+            <MetaTags page={Page.Privacy} />
             <Layout.Section fullHeight noPadding id="policy">
                 <Layout.Center>
                     <Header title="Privacy Policy for Website Users" subtitle="(information in accordance with Article 13 GDPR, 18 July 2019)">
