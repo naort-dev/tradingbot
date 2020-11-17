@@ -30,7 +30,7 @@ export const Logo = () => {
     return (
         <Link href="/">
             <A>
-                <LogoImg src={dark || open ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} />
+                <LogoImg src={dark || open ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo"/>
             </A>
         </Link>
     );

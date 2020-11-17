@@ -42,7 +42,7 @@ const CompetitionBoxes = () => {
             <BoxesContainer>
                 <Box key="start">
                     <BoxHeadline>
-                        <img src={HoursGlassStart} height={19} />
+                        <img src={HoursGlassStart} height={19} alt="Start"/>
                         Start
                     </BoxHeadline>
                     <BoxData>
@@ -60,7 +60,7 @@ const CompetitionBoxes = () => {
                 </Box>
                 <Box key="end">
                     <BoxHeadline>
-                        <img src={HoursGlassEnd} height={19} />
+                        <img src={HoursGlassEnd} height={19} alt="End"/>
                         End
                     </BoxHeadline>
                     <BoxData>
@@ -78,14 +78,14 @@ const CompetitionBoxes = () => {
                 </Box>
                 <Box key="participants">
                     <BoxHeadline>
-                        <img src={Participants} height={19} />
+                        <img src={Participants} height={19} alt="Participants"/>
                         Participants
                     </BoxHeadline>
                     <BoxData>{data.participants}</BoxData>
                 </Box>
                 <Box key="status">
                     <BoxHeadline>
-                        <img src={StatusClosed} height={19} />
+                        <img src={StatusClosed} height={19} alt="status"/>
                         Status
                     </BoxHeadline>
                     <BoxData>{getCompetitionStatus(data.start, data.end)}</BoxData>

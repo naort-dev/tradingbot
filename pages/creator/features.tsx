@@ -37,7 +37,7 @@ const Features = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V3MacFeatures} />
+                                <Image image={Screens.V3MacFeatures} alt="Features" />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -66,7 +66,7 @@ const Features = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2BacktestUIElements} />
+                                <Image image={Screens.V2BacktestUIElements} alt="Backtesting UI Elements"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -93,7 +93,7 @@ const Features = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneFrontalB} scale={0.6} />
+                                <Image image={Screens.V2PhoneFrontalB} scale={0.6} alt="Phone Frontal image with Trality on screen"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -104,7 +104,7 @@ const Features = () => {
                     <Layout.TwoColumn reverted collapseMobile>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.Security} scale={2} mobileScale={1} />
+                                <Image image={Illustrations.Security} scale={2} mobileScale={1} alt="Security illustration" />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>

@@ -26,7 +26,7 @@ const Jobs = () => {
                             <Layout.CenterAllDirections>
                                 <Layout.CenterRight>
                                     <ImageContainer>
-                                        <img src={ImagesMisc.Jobs} />
+                                        <img src={ImagesMisc.Jobs} alt="Office ihfographic" />
                                     </ImageContainer>
                                 </Layout.CenterRight>
                             </Layout.CenterAllDirections>

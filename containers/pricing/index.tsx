@@ -141,10 +141,10 @@ const ImageContainer = styled.div`
     }
 `;
 
-const Image: React.FC<{ src: string }> = ({ src }) => {
+const Image: React.FC<{ src: string, alt?: string }> = ({ src, alt }) => {
     return (
         <ImageContainer>
-            <img src={src} />
+            <img src={src} alt={alt}/>
         </ImageContainer>
     );
 };

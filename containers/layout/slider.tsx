@@ -249,7 +249,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
             <Bar>
                 {items.map((i, idx) => (
                     <MenuItem key={i.name} onClick={() => select(idx)} active={active === idx}>
-                        <MenuIcon>{i.icon && <img src={i.icon} />}</MenuIcon>
+                        <MenuIcon>{i.icon && <img alt={i.name} src={i.icon} />}</MenuIcon>
                         <MenuText>{i.name}</MenuText>
                     </MenuItem>
                 ))}

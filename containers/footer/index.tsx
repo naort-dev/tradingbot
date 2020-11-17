@@ -173,10 +173,10 @@ export const Footer: React.FunctionComponent = () => {
                         All rights reserved © Trality 2020
                         <LogoContainer>
                             <a href="https://t.me/trality" target="_blank">
-                                <img src={Logos.Telegram} />
+                                <img src={Logos.Telegram} alt="Telegram Logo"/>
                             </a>
                             <a href="https://twitter.com/trality_bots" target="_blank">
-                                <img src={Logos.Twitter} />
+                                <img src={Logos.Twitter} alt="Twitter Logo"/>
                             </a>
                         </LogoContainer>
                     </L>

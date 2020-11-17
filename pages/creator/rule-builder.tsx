@@ -37,7 +37,7 @@ const RuleBuilder = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2MacRule} />
+                                <Image image={Screens.V2MacRule} alt="Mac with Rules on screen"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -66,7 +66,7 @@ const RuleBuilder = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2RuleUIElements} />
+                                <Image image={Screens.V2RuleUIElements} alt="Rules UI Elements" />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -91,7 +91,7 @@ const RuleBuilder = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.EvolveComponent} scale={1.4} />
+                                <Image image={Illustrations.EvolveComponent} scale={1.4} alt="Evolve Illustration"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>

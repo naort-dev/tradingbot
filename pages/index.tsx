@@ -46,7 +46,7 @@ const Index = () => {
                                     </Button>
                                     <div>
                                         <Layout.CenterLeft marginTop={15}>
-                                            <Image image={Icons.ActionCall} marginLeft={75} />
+                                            <Image image={Icons.ActionCall} marginLeft={75} alt="Only a few days of Beta left, try it out for free" />
                                         </Layout.CenterLeft>
                                     </div>
                                 </div>

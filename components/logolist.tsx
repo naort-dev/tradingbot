@@ -57,7 +57,7 @@ export const LogoList: React.FC<Props> = ({ logos }) => {
         <LogoContainer>
             {logos.map((l) => (
                 <Logo key={l.title}>
-                    <img title={l.title} src={dark && l.dark ? l.dark : l.light} />
+                    <img title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
                 </Logo>
             ))}
         </LogoContainer>

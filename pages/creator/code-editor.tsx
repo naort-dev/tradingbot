@@ -37,7 +37,7 @@ const CodeEditor = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2MacCode} />
+                                <Image image={Screens.V2MacCode} alt="Trality dashboard on a laptop"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -66,7 +66,7 @@ const CodeEditor = () => {
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Screens.V2CodeUI} />
+                                <Image image={Screens.V2CodeUI} alt="Bot creation screens"/>
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                     </Layout.TwoColumn>
@@ -77,7 +77,7 @@ const CodeEditor = () => {
                     <Layout.TwoColumn collapseMobile>
                         <Layout.OneColumn collapseMobile>
                             <Layout.CenterAllDirections>
-                                <Image image={Illustrations.DebugList} scale={2} mobileScale={1} />
+                                <Image image={Illustrations.DebugList} scale={2} mobileScale={1} alt="Debug Illustration" />
                             </Layout.CenterAllDirections>
                         </Layout.OneColumn>
                         <Layout.OneColumn collapseMobile>

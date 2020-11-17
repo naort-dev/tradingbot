@@ -55,19 +55,19 @@ export const AsSeenIn = () => {
             <div>As seen in</div>
             <div>
                 <Entry target="_blank" href="https://www.derbrutkasten.com/trality-erhalt-sechsstellige-ffg-fordreung/">
-                    <img src={BK} />
+                    <img src={BK} alt="Der Brutkasten"/>
                 </Entry>
                 <Entry target="_blank" href="https://de.cointelegraph.com/news/wiener-startup-trality-entwickelt-marktplatz-fur-krypto-trading-bots">
-                    <img src={CT} />
+                    <img src={CT} alt="Coin Telegraph"/>
                 </Entry>
                 <Entry
                     target="_blank"
                     href="https://de.investing.com/news/cryptocurrency-news/wiener-startup-trality-entwickelt-marktplatz-fur-kryptotradingbots-1976427"
                 >
-                    <img src={ICOM} />
+                    <img src={ICOM} alt="Investing" />
                 </Entry>
                 <Entry target="_blank" href="https://www.trendingtopics.at/trality-wiener-startup-baut-einen-app-store-fuer-krypto-bots/">
-                    <img src={TT} />
+                    <img src={TT} alt="Trending Topics"/>
                 </Entry>
             </div>
         </Container>

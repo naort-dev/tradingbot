@@ -139,7 +139,7 @@ const PricingComponent = () => {
                     <Header title="Start trading like a professional.">
                         <Pricing.PageHeader>
                             <Pricing.NoteBanner>
-                                <img src={UnderConstruction} />
+                                <img src={UnderConstruction} alt="Under Construction"/>
                                 <div>
                                     <h2>We're still in Beta!</h2>
                                     <p>
@@ -161,7 +161,7 @@ const PricingComponent = () => {
                                 <Pricing.Item id={plan.title} key={plan.title}>
                                     {plan.popular && <Pricing.PopularChoice>Popular choice</Pricing.PopularChoice>}
                                     {plan.trial && <Pricing.FreeTrial>1 week free trial</Pricing.FreeTrial>}
-                                    <Pricing.Image src={plan.image} />
+                                    <Pricing.Image src={plan.image} alt={plan.title}/>
                                     <Pricing.Header title={plan.title} price={plan.price[yearly]} />
                                     <Pricing.Description title="Trading Volume">{plan.volume}</Pricing.Description>
                                     <Pricing.Description title="Allowed Tick Interval">{plan.tickSize}</Pricing.Description>
@@ -224,7 +224,7 @@ const PricingComponent = () => {
             <Layout.Section id="enterprise" fullHeight={false} noPadding>
                 <Layout.Center>
                     <Pricing.EnterpriseBanner>
-                        <img src={PricingEnterprise} />
+                        <img src={PricingEnterprise} alt="King"/>
                         <div>
                             <h2>Enterprise</h2>
                             <p>

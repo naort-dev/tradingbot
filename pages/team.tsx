@@ -122,7 +122,7 @@ const People = React.memo(() => {
             <SocialLinks>{
                 item.socialLinks.map((socialLink, i) => {
                     return <SocialLink key={socialLink.link} href={socialLink.link}>
-                        <SocialImg src={Linkedin} />
+                        <SocialImg src={Linkedin} alt={item.name}/>
                     </SocialLink>
                 })}
             </SocialLinks>
