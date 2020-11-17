@@ -95,6 +95,7 @@ class Trality extends App {
                                 <link rel="canonical" href="https://www.trality.com/" />
                                 <link rel="shortcut icon" href="/static/favicon.ico" />
                                 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+                                <link rel="preconnect" href="https://www.googletagmanager.com" />
                                 <link rel="apple-touch-icon" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
                                 <link rel="apple-touch-icon" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
                                 <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-touch-icon-76x76.png" />
