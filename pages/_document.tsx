@@ -1,7 +1,5 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, { DocumentContext, Html, Head, Main, NextScript  } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { parseCookies } from '@util';
-import { CookieStorageProvider } from '@trality/web-tracking';
 
 export default class TralityDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -28,4 +26,15 @@ export default class TralityDocument extends Document {
             sheet.seal();
         }
     }
+    public render() {
+        return (
+          <Html lang="en">
+            <Head />
+            <body>
+              <Main />
+              <NextScript />
+            </body>
+          </Html>
+        );
+      }
 }
