@@ -104,7 +104,7 @@ export const ButtonItem: React.FC<ButtonItemProps> = ({ target, name, hollow, ..
     const isMobile = useIsMobile();
     return (
         <ButtonItemWrapper open={open} num={1} selected={false}>
-            <a>
+            <a href={target}>
                 <Button small={!isMobile} hollow={hollow} border to={target} {...props}>
                     {name}
                 </Button>
