@@ -3,6 +3,17 @@
     "name": "nextjs",
     "builds": [{ "src": "next.config.js", "use": "@now/next" }],
     "alias": "www.trality.com",
+    "headers": [
+        {
+          "source": "/",
+          "headers": [
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            }
+          ]
+        }
+    ],
     "rewrites": [
         { "source": "/blog/favicon.png", "destination": "/static/favicon.ico" },
         { "source": "/blog", "destination": "https://blog.trality.com/blog/" },

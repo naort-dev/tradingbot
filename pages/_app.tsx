@@ -9,7 +9,7 @@ import { GlobalStyle } from '../theme/style';
 import { PortalProvider } from 'hooks/usePortal';
 
 import '../fix.css';
-import { parseCookies } from '@util';
+import { Misc, parseCookies } from '@util';
 import { PopupManagerComponent } from '../containers/popup';
 
 // Found no way to fetch via env variable prefix, fetching explicitly ...
@@ -38,6 +38,15 @@ Date.prototype.getMinutesFormatted = function () {
     var month = this.getMinutes();
     return month < 10 ? '0' + month : '' + month;
 };
+
+if (!Misc.IsServer()) {
+    if (top !== self) {
+        const htmlTag = document.getElementsByTagName('html');
+        if (htmlTag.length === 1) {
+            htmlTag[0].style.display = 'none';
+        }
+    }
+}
 
 const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
