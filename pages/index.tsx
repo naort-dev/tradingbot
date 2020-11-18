@@ -192,18 +192,22 @@ const Index = () => {
                                 {
                                     title: 'Binance',
                                     light: Logos.Binance,
+                                    link: "https://www.binance.com/en/register?ref=K55AL9ZB"
                                 },
                                 {
                                     title: 'Bitpanda',
                                     light: Logos.Bitpanda,
+                                    link: "https://www.bitpanda.com/?ref=137460964105981108"
                                 },
                                 {
                                     title: 'Coinbase Pro',
                                     light: Logos.Coinbase,
+                                    link: "https://coinbase-consumer.sjv.io/nqWWx"
                                 },
                                 {
                                     title: 'Kraken',
                                     light: Logos.Kraken,
+                                    link: "https://r.kraken.com/N522O"
                                 },
                             ]}
                         />

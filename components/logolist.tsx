@@ -30,7 +30,7 @@ const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    > img {
+    & img {
         display: block;
         width: 90%;
         margin-left: 5%;
@@ -46,11 +46,19 @@ interface LogoType {
     title: string;
     light: string;
     dark?: string;
+    link?: string;
 }
 
 interface Props {
     logos: LogoType[];
 }
+
+const Link: React.FunctionComponent<React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>> = (props) => {
+    if (props.href || props.onClick) {
+        return <a {...props} />;
+    }
+    return <React.Fragment children={props.children} />;
+};
 
 export const LogoList: React.FC<Props> = ({ logos }) => {
     const { dark } = useDark();
@@ -58,7 +66,9 @@ export const LogoList: React.FC<Props> = ({ logos }) => {
         <LogoContainer>
             {logos.map((l) => (
                 <Logo key={l.title}>
-                    <LazyImage title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
+                    <Link href={l.link}>
+                        <LazyImage title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
+                    </Link>
                 </Logo>
             ))}
         </LogoContainer>
