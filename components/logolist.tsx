@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useDark } from 'hooks/dark';
+import { LazyImage } from './lazyImage';
 
 const LogoContainer = styled.div`
     display: flex;
@@ -57,7 +58,7 @@ export const LogoList: React.FC<Props> = ({ logos }) => {
         <LogoContainer>
             {logos.map((l) => (
                 <Logo key={l.title}>
-                    <img title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
+                    <LazyImage title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
                 </Logo>
             ))}
         </LogoContainer>

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Margins, Paddings } from 'theme';
 import { Button as B } from '@components';
+import { LazyImage } from 'components/lazyImage';
 
 const Container = styled.div`
     display: flex;
@@ -144,7 +145,7 @@ const ImageContainer = styled.div`
 const Image: React.FC<{ src: string, alt?: string }> = ({ src, alt }) => {
     return (
         <ImageContainer>
-            <img src={src} alt={alt}/>
+            <LazyImage src={src} alt={alt}/>
         </ImageContainer>
     );
 };

@@ -1,3 +1,4 @@
+import { LazyImage } from 'components/lazyImage';
 import React from 'react';
 import styled from 'styled-components';
 import { Margins } from 'theme';
@@ -49,7 +50,7 @@ export const FeatureTypeA: React.FC<A> = ({ icon, header, children }) => {
     return (
         <Wrapper>
             <Icon>
-                <ImgWrapper scale={1}>{typeof Item === 'string' ? <img src={Item} /> : <Item />}</ImgWrapper>
+                <ImgWrapper scale={1}>{typeof Item === 'string' ? <LazyImage src={Item} /> : <Item />}</ImgWrapper>
             </Icon>
             <Content>
                 <h3>{header}</h3>

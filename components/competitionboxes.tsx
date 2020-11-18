@@ -6,6 +6,7 @@ import * as StatusClosed from '../assets/images/icons/status-closed.svg';
 import * as HoursGlassStart from '../assets/images/icons/hourglass-start.svg';
 import * as HoursGlassEnd from '../assets/images/icons/hourglass-end.svg';
 import * as LoaderGif from '../assets/images/misc/trality-bot-animation.gif';
+import { LazyImage } from './lazyImage';
 
 type callResponse = {
     start: number;
@@ -42,7 +43,7 @@ const CompetitionBoxes = () => {
             <BoxesContainer>
                 <Box key="start">
                     <BoxHeadline>
-                        <img src={HoursGlassStart} height={19} alt="Start"/>
+                        <LazyImage src={HoursGlassStart} height={19} alt="Start"/>
                         Start
                     </BoxHeadline>
                     <BoxData>
@@ -60,7 +61,7 @@ const CompetitionBoxes = () => {
                 </Box>
                 <Box key="end">
                     <BoxHeadline>
-                        <img src={HoursGlassEnd} height={19} alt="End"/>
+                        <LazyImage src={HoursGlassEnd} height={19} alt="End"/>
                         End
                     </BoxHeadline>
                     <BoxData>
@@ -78,14 +79,14 @@ const CompetitionBoxes = () => {
                 </Box>
                 <Box key="participants">
                     <BoxHeadline>
-                        <img src={Participants} height={19} alt="Participants"/>
+                        <LazyImage src={Participants} height={19} alt="Participants"/>
                         Participants
                     </BoxHeadline>
                     <BoxData>{data.participants}</BoxData>
                 </Box>
                 <Box key="status">
                     <BoxHeadline>
-                        <img src={StatusClosed} height={19} alt="status"/>
+                        <LazyImage src={StatusClosed} height={19} alt="status"/>
                         Status
                     </BoxHeadline>
                     <BoxData>{getCompetitionStatus(data.start, data.end)}</BoxData>

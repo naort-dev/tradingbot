@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LazyImage } from './lazyImage';
 
 interface HeaderIconProps {
     name: string;
@@ -24,7 +25,7 @@ export const HeaderIcon: React.FC<HeaderIconProps> = ({ scale, name, source }) =
     const Item = source;
     return (
         <Wrapper>
-            <ImgWrapper scale={scale || 1}>{typeof Item === 'string' ? <img src={Item} alt={name} /> : <Item />}</ImgWrapper>
+            <ImgWrapper scale={scale || 1}>{typeof Item === 'string' ? <LazyImage src={Item} alt={name} /> : <Item />}</ImgWrapper>
             <h4>{name}</h4>
         </Wrapper>
     );

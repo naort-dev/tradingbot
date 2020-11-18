@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LazyImage } from './lazyImage';
 
 interface Props {
     scale?: number;
@@ -57,5 +58,5 @@ export const Image: React.FC<{
     marginTop?: number;
 }> = ({ image, alt, ...props }) => {
     const Item = image;
-    return <ImageContainer {...props}>{typeof Item === 'string' ? <img src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
+    return <ImageContainer {...props}>{typeof Item === 'string' ? <LazyImage src={Item} alt={alt} /> : <Item alt={alt} />}</ImageContainer>;
 };

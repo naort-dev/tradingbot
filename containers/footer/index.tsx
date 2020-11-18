@@ -10,6 +10,7 @@ import { Layout } from '@containers';
 import { Button, LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { LazyImage } from 'components/lazyImage';
 
 const Wrap = styled.div`
     margin-bottom: ${Margins.Middle};
@@ -101,7 +102,7 @@ export const Footer: React.FunctionComponent = () => {
             <Wrap>
                 <Top>
                     <div>
-                        <img src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
+                        <LazyImage src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
                         <ExternalLink href="/blog">{'Blog'}</ExternalLink>
@@ -173,10 +174,10 @@ export const Footer: React.FunctionComponent = () => {
                         All rights reserved © Trality 2020
                         <LogoContainer>
                             <a href="https://t.me/trality" target="_blank">
-                                <img src={Logos.Telegram} alt="Telegram Logo"/>
+                                <LazyImage src={Logos.Telegram} alt="Telegram Logo"/>
                             </a>
                             <a href="https://twitter.com/trality_bots" target="_blank">
-                                <img src={Logos.Twitter} alt="Twitter Logo"/>
+                                <LazyImage src={Logos.Twitter} alt="Twitter Logo"/>
                             </a>
                         </LogoContainer>
                     </L>

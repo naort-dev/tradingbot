@@ -7,6 +7,8 @@ import { Paddings, Margins } from 'theme';
 import { isObject } from 'util';
 import { useSection } from 'hooks/useSection';
 import { useIsMobile } from 'hooks/useIsMobile';
+import { LazyImage } from 'components/lazyImage';
+import { LazyVideo } from 'components/lazyVideo';
 
 const SlideContainer = styled.div`
     width: 100%;
@@ -48,7 +50,7 @@ const Content = styled.div`
     }
 `;
 
-const Item = styled.img<{ video?: boolean }>`
+const Item = styled(LazyImage)<{ video?: boolean }>`
     max-width: 100%;
     height: auto;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
@@ -62,7 +64,7 @@ max-width: 100%;
     top: 0;
 */
 
-const VideoItem = styled.video`
+const VideoItem = styled(LazyVideo)`
     height: 100%;
     @media (max-width: 1100px) {
         height: auto;
@@ -249,7 +251,7 @@ export const Slider: React.FC<SliderProps> = ({ items }) => {
             <Bar>
                 {items.map((i, idx) => (
                     <MenuItem key={i.name} onClick={() => select(idx)} active={active === idx}>
-                        <MenuIcon>{i.icon && <img alt={i.name} src={i.icon} />}</MenuIcon>
+                        <MenuIcon>{i.icon && <LazyImage alt={i.name} src={i.icon} />}</MenuIcon>
                         <MenuText>{i.name}</MenuText>
                     </MenuItem>
                 ))}

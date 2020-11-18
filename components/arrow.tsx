@@ -1,13 +1,14 @@
 import { Icons } from '@assets';
+import { LazyImage } from './lazyImage';
 
 export const ArrowDown = () => {
-    return <img src={Icons.ArrowDown} alt="arrow down"/>;
+    return <LazyImage src={Icons.ArrowDown} alt="arrow down"/>;
 };
 
 export const ArrowLeft = () => {
-    return <img src={Icons.ArrowLeft} alt="arrow left"/>;
+    return <LazyImage src={Icons.ArrowLeft} alt="arrow left"/>;
 };
 
 export const ArrowRight = () => {
-    return <img src={Icons.ArrowRight} alt="arrow right"/>;
+    return <LazyImage src={Icons.ArrowRight} alt="arrow right"/>;
 };

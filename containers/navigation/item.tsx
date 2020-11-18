@@ -6,6 +6,7 @@ import { useHover } from 'hooks/useHover';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';
 import { EventType } from '@trality/web-tracking';
+import { LazyImage } from 'components/lazyImage';
 
 interface LinkItemProps {
     target: string;
@@ -260,7 +261,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({ source, target }) => {
     const { open } = useOpen();
     return (
         <ContactItemButton type="button" hollow small open={open} to={target}>
-            <Img src={source} />
+            <LazyImage src={source} />
         </ContactItemButton>
     );
 };

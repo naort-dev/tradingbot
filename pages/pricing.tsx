@@ -16,6 +16,7 @@ import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
 import { Page, MetaTags } from '../util/metaTags';
+import { LazyImage } from 'components/lazyImage';
 
 interface Plan {
     image: string;
@@ -139,7 +140,7 @@ const PricingComponent = () => {
                     <Header title="Start trading like a professional.">
                         <Pricing.PageHeader>
                             <Pricing.NoteBanner>
-                                <img src={UnderConstruction} alt="Under Construction"/>
+                                <LazyImage src={UnderConstruction} alt="Under Construction"/>
                                 <div>
                                     <h2>We're still in Beta!</h2>
                                     <p>
@@ -153,7 +154,7 @@ const PricingComponent = () => {
                                     <Pricing.ToggleItem onClick={() => setYearly(0)}>Monthly</Pricing.ToggleItem>
                                     <Pricing.ToggleItem onClick={() => setYearly(1)}>Yearly</Pricing.ToggleItem>
                                 </Pricing.Toggle>
-                                <img src={SavePercent} />
+                                <LazyImage src={SavePercent} />
                             </Pricing.ToggleContainer>
                         </Pricing.PageHeader>
                         <Pricing.Container>
@@ -224,7 +225,7 @@ const PricingComponent = () => {
             <Layout.Section id="enterprise" fullHeight={false} noPadding>
                 <Layout.Center>
                     <Pricing.EnterpriseBanner>
-                        <img src={PricingEnterprise} alt="King"/>
+                        <LazyImage src={PricingEnterprise} alt="King"/>
                         <div>
                             <h2>Enterprise</h2>
                             <p>

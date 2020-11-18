@@ -3,6 +3,7 @@ import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock } from '@compon
 import { ImagesMisc, Icons } from '@assets';
 
 import { MetaTags, Page } from '../util/metaTags';
+import { LazyImage } from 'components/lazyImage';
 
 const Jobs = () => {
     return (
@@ -26,7 +27,7 @@ const Jobs = () => {
                             <Layout.CenterAllDirections>
                                 <Layout.CenterRight>
                                     <ImageContainer>
-                                        <img src={ImagesMisc.Jobs} alt="Office ihfographic" />
+                                        <LazyImage src={ImagesMisc.Jobs} alt="Office ihfographic" />
                                     </ImageContainer>
                                 </Layout.CenterRight>
                             </Layout.CenterAllDirections>

@@ -5,6 +5,7 @@ import * as BK from './der-brutkasten.png';
 import * as CT from './cointelegraph.png';
 import * as ICOM from './investing-com.png';
 import * as TT from './trending-topics.png';
+import { LazyImage } from 'components/lazyImage';
 
 const Container = styled.div`
     display: flex;
@@ -55,19 +56,19 @@ export const AsSeenIn = () => {
             <div>As seen in</div>
             <div>
                 <Entry target="_blank" href="https://www.derbrutkasten.com/trality-erhalt-sechsstellige-ffg-fordreung/">
-                    <img src={BK} alt="Der Brutkasten"/>
+                    <LazyImage src={BK} alt="Der Brutkasten"/>
                 </Entry>
                 <Entry target="_blank" href="https://de.cointelegraph.com/news/wiener-startup-trality-entwickelt-marktplatz-fur-krypto-trading-bots">
-                    <img src={CT} alt="Coin Telegraph"/>
+                    <LazyImage src={CT} alt="Coin Telegraph"/>
                 </Entry>
                 <Entry
                     target="_blank"
                     href="https://de.investing.com/news/cryptocurrency-news/wiener-startup-trality-entwickelt-marktplatz-fur-kryptotradingbots-1976427"
                 >
-                    <img src={ICOM} alt="Investing" />
+                    <LazyImage src={ICOM} alt="Investing" />
                 </Entry>
                 <Entry target="_blank" href="https://www.trendingtopics.at/trality-wiener-startup-baut-einen-app-store-fuer-krypto-bots/">
-                    <img src={TT} alt="Trending Topics"/>
+                    <LazyImage src={TT} alt="Trending Topics"/>
                 </Entry>
             </div>
         </Container>
