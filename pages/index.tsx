@@ -192,22 +192,34 @@ const Index = () => {
                                 {
                                     title: 'Binance',
                                     light: Logos.Binance,
-                                    link: "https://www.binance.com/en/register?ref=K55AL9ZB"
+                                    link: {
+                                        href: "https://www.binance.com/en/register?ref=K55AL9ZB",
+                                        target: "_blank"
+                                    } 
                                 },
                                 {
                                     title: 'Bitpanda',
                                     light: Logos.Bitpanda,
-                                    link: "https://www.bitpanda.com/?ref=137460964105981108"
+                                    link: {
+                                        href: "https://www.bitpanda.com/?ref=137460964105981108",
+                                        target: "_blank"
+                                    }
                                 },
                                 {
                                     title: 'Coinbase Pro',
                                     light: Logos.Coinbase,
-                                    link: "https://coinbase-consumer.sjv.io/nqWWx"
+                                    link: {
+                                        href: "https://coinbase-consumer.sjv.io/nqWWx",
+                                        target: "_blank"
+                                    }
                                 },
                                 {
                                     title: 'Kraken',
                                     light: Logos.Kraken,
-                                    link: "https://r.kraken.com/N522O"
+                                    link: {
+                                        href: "https://r.kraken.com/N522O",
+                                        target: "_blank"
+                                    }
                                 },
                             ]}
                         />

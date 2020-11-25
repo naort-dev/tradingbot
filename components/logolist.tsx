@@ -46,7 +46,10 @@ interface LogoType {
     title: string;
     light: string;
     dark?: string;
-    link?: string;
+    link?: {
+        href: string;
+        target?: '_blank' | '_self' | '_parent' | '_top'
+    }
 }
 
 interface Props {
@@ -66,7 +69,7 @@ export const LogoList: React.FC<Props> = ({ logos }) => {
         <LogoContainer>
             {logos.map((l) => (
                 <Logo key={l.title}>
-                    <Link href={l.link}>
+                    <Link href={l.link?.href} target={l.link?.target}>
                         <LazyImage title={l.title} alt={l.title} src={dark && l.dark ? l.dark : l.light} />
                     </Link>
                 </Logo>
