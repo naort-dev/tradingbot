@@ -33,15 +33,15 @@ const CompetitionTimeline = () => {
                     </Entry>
                     <Entry>
                         <MainEntryData>Submissions close</MainEntryData>
-                        <SecondaryEntryData>Nov 30, 2020</SecondaryEntryData>
+                        <SecondaryEntryData>Dec 7, 2020</SecondaryEntryData>
                     </Entry>
                     <Entry>
                         <MainEntryData>Live simulation starts</MainEntryData>
-                        <SecondaryEntryData>Dec 1, 2020</SecondaryEntryData>
+                        <SecondaryEntryData>Dec 8, 2020</SecondaryEntryData>
                     </Entry>
                     <Entry>
                         <MainEntryData>Live simulation ends</MainEntryData>
-                        <SecondaryEntryData>Jan 14, 2021</SecondaryEntryData>
+                        <SecondaryEntryData>Jan 21, 2021</SecondaryEntryData>
                     </Entry>
                 </BottomTimeline>
             </Timeline>
@@ -49,7 +49,7 @@ const CompetitionTimeline = () => {
                 <IconsWrapper>
                     <Icon src={Winners} />
                     <MainEntryData>Winners are announced</MainEntryData>
-                    <SecondaryEntryData>Jan 15, 2021</SecondaryEntryData>
+                    <SecondaryEntryData>Jan 22, 2021</SecondaryEntryData>
                 </IconsWrapper>
             </EndTimeline>
         </TimelineWrapper>

@@ -64,7 +64,7 @@ const Terms = () => {
                         <Section>
                             <b>Overview</b>
                             <p>
-                                The Trality Trading Competition will run from November 4th 2020 until January 14th 2021. There are 3 cash Prizes up
+                                The Trality Trading Competition will run from November 4th 2020 until January 21st 2021. There are 3 cash Prizes up
                                 for grabs and both current and new Trality users are invited to participate by submitting their Trading Bots, which
                                 they have previously created on the Trality platform. Scoring will be based on a risk adjusted return metric, namely{' '}
                                 <strong>Return over Maximum Drawdown (RoMaD)</strong>, but you can find all the fine details in the following
@@ -103,7 +103,7 @@ const Terms = () => {
                         <Section>
                             <b>Submission</b>
                             <ol>
-                                <li>Submission Deadline to the Competition is November 30, 2020 24:00 UTC.</li>
+                                <li>Submission Deadline to the Competition is December 7, 2020 24:00 UTC.</li>
                                 <li>
                                     To submit an entry to the Competition, you must create a Trading Bot on Trality adhering to the above mentioned
                                     Criteria, using either the Trality Code Editor or Trality Rule Builder. After the bot creation, you must click on
@@ -131,8 +131,8 @@ const Terms = () => {
                         <Section>
                             <b>Duration and Trading</b>
                             <p>
-                                The Simulation Period starts directly after the Submission Deadline, i.e. on December 1st, 2020, 00:00 UTC and runs
-                                for 45 days, i.e. until January 14th, 2021, 24:00 UTC. During this period the Trading Bots run continuously on a
+                                The Simulation Period starts directly after the Submission Deadline, i.e. on December 8th, 2020, 00:00 UTC and runs
+                                for 45 days, i.e. until January 21st, 2021, 24:00 UTC. During this period the Trading Bots run continuously on a
                                 virtual Binance exchange account, which will be automatically assigned. This means that the bots submitted to this
                                 Competition will NOT be trading with real assets but instead, run in a simulated environment, mirroring the real
                                 market on Binance using 0.15% fees for all trades (both maker and taker). At the beginning of the Simulation Period,

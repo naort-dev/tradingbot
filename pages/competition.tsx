@@ -33,7 +33,7 @@ const Competition = () => {
                         </Headline>
                         <HeroText>
                             <CalendarIcon src={Calendar} />
-                            Nov 4, 2020 - Jan 14, 2021
+                            Nov 4, 2020 - Jan 21, 2021
                         </HeroText>
                         <HeroButton to={ConstUrl.Signup}>Register Now</HeroButton>
                     </HeroSection>
@@ -59,7 +59,7 @@ const Competition = () => {
                             )
                         </p>
                         <p>
-                            You have until the end of November to create and submit a bot after which it will run in a simulated environment for 45
+                            You have until December 8th to create and submit a bot after which it will run in a simulated environment for 45
                             days. At the end of the simulation period, the top three ranked participants according to our risk-adjusted return metric,
                             namely RoMaD (Return Over Maximum Drawdown) will receive a cash prize. This cash price is related to the performance of
                             the winning bot, but you can find all the fine details in the following paragraphs. Participating Trading Bots can be
@@ -297,10 +297,10 @@ const Competition = () => {
                         <p>
                             There are two main phases in the competition: the <strong>submission</strong> period and the <strong>simulation</strong>{' '}
                             period. The submission period is the time where you can create and submit your bot to and it will run from November 4th
-                            until November 30th. The simulation period will run from December 1st until January 14th and during this period, the bots
+                            until December 7th. The simulation period will run from December 8th until January 21st and during this period, the bots
                             run continuously on a virtual Binance exchange account. The bots submitted to this competition will NOT be trading with
                             real assets but instead, run in a simulated environment mirroring the real market. Winners will be selected based on RoMaD
-                            (Return Over Maximum Drawdown) achieved over the course of the simulation period (1.12.2020 - 14.1.2021).
+                            (Return Over Maximum Drawdown) achieved over the course of the simulation period (7.12.2020 - 21.1.2021).
                         </p>
                         <CompetitionTimeline />
                     </ExtendedHeader>
