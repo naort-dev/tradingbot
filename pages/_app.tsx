@@ -18,6 +18,7 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
     process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT,
+    process.env.NEXT_PUBLIC_APP_TRACKER_SENTRY
 ];
 
 // Date prototype enrichment

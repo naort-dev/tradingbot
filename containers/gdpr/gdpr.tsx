@@ -57,7 +57,7 @@ export const GDPR: React.FunctionComponent = () => {
 
     const accept = React.useCallback(() => {
         //tmp cookie consent necessary till the cookie consent popup is redesigned
-        window.localStorage.setItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd', 'true')
+        window.localStorage.setItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd', 'true');
         tracker.OptIn();
         setHasOptedIn(true);
     }, [hasOptedIn]);
