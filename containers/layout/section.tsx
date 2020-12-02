@@ -29,11 +29,6 @@ const SectionWrapper = styled.section<SectionProps>`
         padding: ${Paddings.Large} 0px;
     }
     ${(props) =>
-        props.fullHeight &&
-        `
-        min-height: 80vh;
-    `}
-    ${(props) =>
         props.themeColor &&
         `
         background-color: ${props.theme[props.themeColor]};
@@ -59,6 +54,10 @@ const SectionWrapper = styled.section<SectionProps>`
         `
         margin-top: ${props.marginTop}px;
     `}
+`;
+
+const SectionWrapperFullHeight = styled(SectionWrapper)`
+    min-height: 80vh;
 `;
 
 const LeaveDelay = 0;
@@ -106,12 +105,14 @@ export const Section: React.FC<SectionProps> = ({ children, dark, className, def
         }
     }, [seen, ref.current]);
 
+    const Wrapper = props.fullHeight ? SectionWrapperFullHeight : SectionWrapper;
+
     return (
         <SectionCtx.Provider value={{ entered, seen }}>
             <Waypoint onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="35%" topOffset="35%">
-                <SectionWrapper {...props} className={className} ref={ref}>
+                <Wrapper {...props} className={className} ref={ref}>
                     {children}
-                </SectionWrapper>
+                </Wrapper>
             </Waypoint>
         </SectionCtx.Provider>
     );

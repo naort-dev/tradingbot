@@ -8,4 +8,4 @@ yarn-error.log
 .npmrc
 .vercel/README.txt
 .vercel/project.json
-.static/sitemap.xml
+static/sitemap.xml

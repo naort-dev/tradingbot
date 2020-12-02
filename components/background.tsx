@@ -5,11 +5,6 @@ import { Navigation } from 'theme';
 const Container = styled.div`
     background-color: ${(props) => props.theme.background};
     transition: 0.3s all;
-    @media (max-width: 768px) {
-        > section:nth-child(3) {
-            margin-top: ${Navigation.Height};
-        }
-    }
 `;
 
 export const Background: React.FunctionComponent = (props) => {

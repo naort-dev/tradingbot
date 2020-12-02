@@ -6,6 +6,7 @@ import { Button } from '@components';
 import { useDark, DarkProp } from '../../hooks/dark';
 import { Paddings } from 'theme';
 import { useTracker } from '@trality/web-tracking';
+import { Misc } from '@util';
 
 const GdprContainer = styled.div<DarkProp>`
     position: fixed;
