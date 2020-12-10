@@ -89,12 +89,14 @@ const descriptions = new Map([
 ]);
 
 export const MetaTags:React.FunctionComponent<{page: Page}> = ({page}) => {
+    const NoRobotsCheck = page === Page.Jobs || page === Page.JobMobile || page === Page.JobSrFullStack || page === Page.JobFrontend || page === Page.JobBackend;
     return (
         <Head>
             <title>{titles.get(page)}</title>
             <meta name="description" content={descriptions.get(page)} key="description" />
             <meta name="og:title" content={titles.get(page)} key="ogtitle" />
             <meta name="og:descrition" content={descriptions.get(page)} key="ogdesc" />
+            {NoRobotsCheck && <meta name="robots" content="noindex, nofollow" /> }
         </Head>
     );
 };
