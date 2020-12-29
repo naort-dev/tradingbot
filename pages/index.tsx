@@ -32,7 +32,7 @@ const Index = () => {
                                         like a professional
                                     </h1>
                                     <TextBlock>
-                                        Trality is a platform for anybody who wants to profit from algorithmic crypto trading without giving up the
+                                        Trality is a platform for anybody who wants to profit from algorithmic trading without giving up the
                                         day job. At least not right away 😉 ️
                                     </TextBlock>
                                     <Button
