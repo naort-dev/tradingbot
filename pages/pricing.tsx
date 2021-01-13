@@ -43,9 +43,9 @@ const AllPlans: Plan[] = [
             0: 'Free',
             1: 'Free',
         },
-        volume: '-',
+        volume: '5.000€',
         tickSize: '60m',
-        liveBots: '0',
+        liveBots: '1',
         virtualBots: '1',
         logRetention: '1 Week',
         backtests: 'Unlimited',
@@ -53,32 +53,32 @@ const AllPlans: Plan[] = [
         link: 'pawn',
     },
     {
-        image: PricingRook,
+        image: PricingKnight,
         popular: false,
-        trial: true,
-        title: 'Rook',
+        trial: false,
+        title: 'Knight',
         price: {
             0: '9.99€',
             1: '95€',
         },
         volume: '25.000€',
         tickSize: '60m',
-        liveBots: '1',
-        virtualBots: '3',
+        liveBots: '2',
+        virtualBots: '2',
         logRetention: '1 Month',
         backtests: 'Unlimited',
         origin: SignupOrigins.PricingRook,
-        link: 'rook',
+        link: 'knight',
     },
     {
-        image: PricingKnight,
+        image: PricingRook,
         popular: true,
-        title: 'Knight',
+        title: 'Rook',
         price: {
-            0: '29.99€',
-            1: '287€',
+            0: '39.99€',
+            1: '383€',
         },
-        volume: '100.000€',
+        volume: '250.000€',
         tickSize: '5m',
         liveBots: '5',
         virtualBots: '5',
@@ -140,7 +140,7 @@ const PricingComponent = () => {
                     <Header title="Start trading like a professional.">
                         <Pricing.PageHeader>
                             <Pricing.NoteBanner>
-                                <LazyImage src={UnderConstruction} alt="Under Construction"/>
+                                <LazyImage src={UnderConstruction} alt="Under Construction" />
                                 <div>
                                     <h2>We're still in Beta!</h2>
                                     <p>
@@ -162,7 +162,7 @@ const PricingComponent = () => {
                                 <Pricing.Item id={plan.title} key={plan.title}>
                                     {plan.popular && <Pricing.PopularChoice>Popular choice</Pricing.PopularChoice>}
                                     {plan.trial && <Pricing.FreeTrial>1 week free trial</Pricing.FreeTrial>}
-                                    <Pricing.Image src={plan.image} alt={plan.title}/>
+                                    <Pricing.Image src={plan.image} alt={plan.title} />
                                     <Pricing.Header title={plan.title} price={plan.price[yearly]} />
                                     <Pricing.Description title="Trading Volume">{plan.volume}</Pricing.Description>
                                     <Pricing.Description title="Allowed Tick Interval">{plan.tickSize}</Pricing.Description>
@@ -225,7 +225,7 @@ const PricingComponent = () => {
             <Layout.Section id="enterprise" fullHeight={false} noPadding>
                 <Layout.Center>
                     <Pricing.EnterpriseBanner>
-                        <LazyImage src={PricingEnterprise} alt="King"/>
+                        <LazyImage src={PricingEnterprise} alt="King" />
                         <div>
                             <h2>Enterprise</h2>
                             <p>
