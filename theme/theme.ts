@@ -1,8 +1,8 @@
 export const darkTheme = {
     font: '#fff',
-    main: '#00b3d8',
+    main: '#00b8e6',
     fontHeader: '#fff',
-    bluePrimary: '#00b3d8',
+    bluePrimary: '#00b8e6',
     darkPrimary: '#0c1014',
     lightPrimary: '#fff',
     onLight: '#646482',
@@ -17,18 +17,17 @@ export const darkTheme = {
     shadowColor: 'rgba(2, 179, 216, 0.09);',
     lightBlue: '#e5f7fb',
     linkBlue: '#00b4da',
-    grayPrimary: '#181927'
+    grayPrimary: '#181927',
 };
-
 export const lightTheme = {
-    font: '#646580',
-    main: '#00b3d8',
-    fontHeader: '#0c1014',
-    bluePrimary: '#00b3d8',
-    darkPrimary: '#0c1014',
+    font: '#353535',
+    main: '#00b8e6',
+    fontHeader: '#0c0c0c',
+    bluePrimary: '#00b8e6',
+    darkPrimary: '#0c0c0c',
     lightPrimary: '#fff',
     onLight: '#646482',
-    onDark: '#a5a5b0',
+    onDark: '#353535',
     background: '#fff',
     oppositeBackground: '#181927',
     errorRed: '#ec4040',
@@ -39,7 +38,7 @@ export const lightTheme = {
     shadowColor: 'rgba(13, 21, 67, 0.1)',
     lightBlue: '#e5f7fb',
     linkBlue: '#00b4da',
-    grayPrimary: '#181927'
+    grayPrimary: '#181927',
 };
 
 export type ThemeType = typeof darkTheme;

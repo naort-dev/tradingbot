@@ -10,6 +10,7 @@ const Menu = styled.div<{ open?: boolean }>`
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
+    margin-top: 6px;
     position: relative;
     @media (max-width: 768px) {
         display: flex;
@@ -37,31 +38,37 @@ const MenuBar = styled.div<{ id: string; open?: boolean }>`
         props.id == '1' &&
         `
         top: 5px;
-        ${props.open &&
+        ${
+            props.open &&
             `
             transform: rotate(-45deg);
             transform-origin: 100% 100%;
-        `}
+        `
+        }
     `}
     ${(props) =>
         props.id == '2' &&
         `
         top: 12px;
-        ${props.open &&
+        ${
+            props.open &&
             `
             transform: rotate(45deg) translate(2px);
             transform-origin: 55% 22%;
-        `}
+        `
+        }
     `}
     ${(props) =>
         props.id == '3' &&
         `
         top: 19px;
         width: 16px;
-        ${props.open &&
+        ${
+            props.open &&
             `
             opacity: 0.0;
-        `}
+        `
+        }
     `}
 `;
 

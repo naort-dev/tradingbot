@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Layout } from '@containers';
 import { Header } from '@components';
 
-import {MetaTags, Page} from '../util/metaTags';
+import { MetaTags, Page } from '../util/metaTags';
 
 const Description = styled.div`
     margin-bottom: 50px;
@@ -20,7 +20,7 @@ const Description = styled.div`
         font-size: 14px;
     }
     & > span {
-        color: #00b3d8 !important;
+        color: #00b8e6 !important;
     }
     > p {
         display: block;

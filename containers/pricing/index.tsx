@@ -142,10 +142,10 @@ const ImageContainer = styled.div`
     }
 `;
 
-const Image: React.FC<{ src: string, alt?: string }> = ({ src, alt }) => {
+const Image: React.FC<{ src: string; alt?: string }> = ({ src, alt }) => {
     return (
         <ImageContainer>
-            <LazyImage src={src} alt={alt}/>
+            <LazyImage src={src} alt={alt} />
         </ImageContainer>
     );
 };
@@ -179,14 +179,14 @@ const HeaderContainer = styled.div`
 
 const Button = styled(B)<{ popular?: boolean }>`
     background-color: #e5f7fb;
-    color: #00b3d8;
+    color: ${(props) => props.theme.bluePrimary};
     margin-top: 15px;
     margin-bottom: 25px;
 
     ${(props) =>
         props.popular &&
         `
-    background-color: #00b3d8;
+    background-color: ${props.theme.bluePrimary};
     color: #fff;
     `}
 `;
@@ -242,7 +242,7 @@ export const EnterpriseBanner = styled.div`
 export const Explanation = styled.div`
     > b {
         margin-right: 5px;
-        color: #00b3d8;
+        color: ${(props) => props.theme.bluePrimary};
     }
     margin-bottom: 10px;
 `;
@@ -271,7 +271,7 @@ export const NoteBanner = styled.div`
         margin-bottom: 0px;
     }
     h2 {
-        color: #00b3d8;
+        color: #00b8e6;
         font-size: 25px;
         margin-top: 10px;
         margin-bottom: 25px;
@@ -325,7 +325,7 @@ const Toggle = styled.div<{ left?: boolean }>`
         > div:first-child {
             box-shadow: 0 5px 15px 0 rgba(24, 25, 39, 0.1);
             background-color: #ffffff;
-            color: #00b3d8;
+            color: ${props.theme.bluePrimary}
         }
     `}
     ${(props) =>
@@ -334,7 +334,7 @@ const Toggle = styled.div<{ left?: boolean }>`
         > div:last-child {
             box-shadow: 0 5px 15px 0 rgba(24, 25, 39, 0.1);
             background-color: #ffffff;
-            color: #00b3d8;
+            color: ${props.theme.bluePrimary};
         }
     `}
 `;

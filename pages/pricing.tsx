@@ -3,10 +3,10 @@ import { Header, Button } from '@components';
 import { useState, useCallback } from 'react';
 import styled from 'styled-components';
 
-import * as PricingPawn from '../assets/images/illustrations/pricing_pawn.svg';
-import * as PricingRook from '../assets/images/illustrations/pricing_rook.svg';
-import * as PricingKnight from '../assets/images/illustrations/pricing_knight.svg';
-import * as PricingQueen from '../assets/images/illustrations/pricing_queen.svg';
+import * as PricingPawn from '../assets/images/illustrations/pricing_pawn.png';
+import * as PricingRook from '../assets/images/illustrations/pricing_rook.png';
+import * as PricingKnight from '../assets/images/illustrations/pricing_knight.png';
+import * as PricingQueen from '../assets/images/illustrations/pricing_queen.png';
 
 import * as UnderConstruction from '../assets/images/illustrations/under_construction.svg';
 import * as SavePercent from '../assets/images/pngs/save_20p.png';
@@ -43,7 +43,7 @@ const AllPlans: Plan[] = [
             0: 'Free',
             1: 'Free',
         },
-        volume: '5.000€',
+        volume: '€5.000',
         tickSize: '60m',
         liveBots: '1',
         virtualBots: '1',
@@ -58,10 +58,10 @@ const AllPlans: Plan[] = [
         trial: false,
         title: 'Knight',
         price: {
-            0: '9.99€',
-            1: '95€',
+            0: '€9.99',
+            1: '€95',
         },
-        volume: '25.000€',
+        volume: '€25.000',
         tickSize: '60m',
         liveBots: '2',
         virtualBots: '2',
@@ -75,10 +75,10 @@ const AllPlans: Plan[] = [
         popular: true,
         title: 'Rook',
         price: {
-            0: '39.99€',
-            1: '383€',
+            0: '€39.99',
+            1: '€383',
         },
-        volume: '250.000€',
+        volume: '€250.000',
         tickSize: '5m',
         liveBots: '5',
         virtualBots: '5',
@@ -92,8 +92,8 @@ const AllPlans: Plan[] = [
         popular: false,
         title: 'Queen',
         price: {
-            0: '59.99€',
-            1: '575€',
+            0: '€59.99',
+            1: '€575',
         },
         volume: 'Unlimited',
         tickSize: '1m',
@@ -139,16 +139,6 @@ const PricingComponent = () => {
                 <Layout.Center>
                     <Header title="Start trading like a professional.">
                         <Pricing.PageHeader>
-                            <Pricing.NoteBanner>
-                                <LazyImage src={UnderConstruction} alt="Under Construction" />
-                                <div>
-                                    <h2>We're still in Beta!</h2>
-                                    <p>
-                                        You can use all functionality entirely for free without providing any payment data. We will notify you in
-                                        advance when pricing is activated and our beta is completed.
-                                    </p>
-                                </div>
-                            </Pricing.NoteBanner>
                             <Pricing.ToggleContainer>
                                 <Pricing.Toggle left={!Boolean(yearly)}>
                                     <Pricing.ToggleItem onClick={() => setYearly(0)}>Monthly</Pricing.ToggleItem>
@@ -242,7 +232,7 @@ const PricingComponent = () => {
             <Layout.Section id="start-now" fullHeight={false} noPadding themeColor="main">
                 <Layout.Center>
                     <CTA>
-                        <h2>Join our beta</h2>
+                        <h2>Join us</h2>
                         <h3>
                             Become one of our many awesome traders that trust Trality.
                             <br /> No credit card required for you to get started.

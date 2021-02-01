@@ -29,7 +29,7 @@ const Top = styled.div`
     justify-content: space-between;
     align-items: center;
     & img {
-        height: 25px;
+        height: 50px;
     }
 `;
 
@@ -102,7 +102,7 @@ export const Footer: React.FunctionComponent = () => {
             <Wrap>
                 <Top>
                     <div>
-                        <LazyImage src={dark ? Logos.TralityWhiteWhite : Logos.TralityBlackBlue} alt="Trality Logo" />
+                        <LazyImage src={dark ? Logos.TralityMainLogoDark : Logos.TralityMainLogo} alt="Trality Logo" />
                     </div>
                     <LinkContainer>
                         <ExternalLink href="/blog">{'Blog'}</ExternalLink>
@@ -174,10 +174,10 @@ export const Footer: React.FunctionComponent = () => {
                         All rights reserved © Trality 2020
                         <LogoContainer>
                             <a href="https://t.me/trality" target="_blank">
-                                <LazyImage src={Logos.Telegram} alt="Telegram Logo"/>
+                                <LazyImage src={Logos.Telegram} alt="Telegram Logo" />
                             </a>
                             <a href="https://twitter.com/trality_bots" target="_blank">
-                                <LazyImage src={Logos.Twitter} alt="Twitter Logo"/>
+                                <LazyImage src={Logos.Twitter} alt="Twitter Logo" />
                             </a>
                         </LogoContainer>
                     </L>
