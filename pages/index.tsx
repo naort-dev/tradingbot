@@ -32,8 +32,8 @@ const Index = () => {
                                         like a professional
                                     </h1>
                                     <TextBlock>
-                                        Trality is a platform for anybody who wants to profit from algorithmic trading without giving up the
-                                        day job. At least not right away 😉 ️
+                                        Trality is a platform for anybody who wants to profit from algorithmic trading without giving up the day job.
+                                        At least not right away 😉 ️
                                     </TextBlock>
                                     <Button
                                         to={ConstUrl.Signup}
@@ -44,11 +44,6 @@ const Index = () => {
                                     >
                                         Try it for free!
                                     </Button>
-                                    <div>
-                                        <Layout.CenterLeft marginTop={15}>
-                                            <Image image={Icons.ActionCall} marginLeft={75} alt="Only a few days of Beta left, try it out for free" />
-                                        </Layout.CenterLeft>
-                                    </div>
                                 </div>
                             </Layout.CenterVertical>
                         </Layout.OneColumn>
@@ -193,33 +188,33 @@ const Index = () => {
                                     title: 'Binance',
                                     light: Logos.Binance,
                                     link: {
-                                        href: "https://www.binance.com/en/register?ref=K55AL9ZB",
-                                        target: "_blank"
-                                    } 
+                                        href: 'https://www.binance.com/en/register?ref=K55AL9ZB',
+                                        target: '_blank',
+                                    },
                                 },
                                 {
                                     title: 'Bitpanda',
                                     light: Logos.Bitpanda,
                                     link: {
-                                        href: "https://www.bitpanda.com/?ref=137460964105981108",
-                                        target: "_blank"
-                                    }
+                                        href: 'https://www.bitpanda.com/?ref=137460964105981108',
+                                        target: '_blank',
+                                    },
                                 },
                                 {
                                     title: 'Coinbase Pro',
                                     light: Logos.Coinbase,
                                     link: {
-                                        href: "https://coinbase-consumer.sjv.io/nqWWx",
-                                        target: "_blank"
-                                    }
+                                        href: 'https://coinbase-consumer.sjv.io/nqWWx',
+                                        target: '_blank',
+                                    },
                                 },
                                 {
                                     title: 'Kraken',
                                     light: Logos.Kraken,
                                     link: {
-                                        href: "https://r.kraken.com/N522O",
-                                        target: "_blank"
-                                    }
+                                        href: 'https://r.kraken.com/N522O',
+                                        target: '_blank',
+                                    },
                                 },
                             ]}
                         />
