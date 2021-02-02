@@ -40,7 +40,7 @@ const Terms = () => {
             <MetaTags page={Page.Terms} />
             <Layout.Section fullHeight noPadding id="overview">
                 <Layout.Center>
-                    <Header title="General Terms and Conditions" subtitle="(November 2019)">
+                    <Header title="General Terms and Conditions" subtitle="(February 2021)">
                         <Section>
                             <ol>
                                 <li>
