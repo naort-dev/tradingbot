@@ -155,7 +155,7 @@ const PricingComponent = () => {
                                     <Pricing.Image src={plan.image} alt={plan.title} />
                                     <Pricing.Header title={plan.title} price={plan.price[yearly]} />
                                     <Pricing.Description title="Trading Volume">{plan.volume}</Pricing.Description>
-                                    <Pricing.Description title="Allowed Tick Interval">{plan.tickSize}</Pricing.Description>
+                                    <Pricing.Description title="Smallest Tick Interval">{plan.tickSize}</Pricing.Description>
                                     <Pricing.Description title="Live Bots">{plan.liveBots}</Pricing.Description>
                                     <Pricing.Description title="Virtual Bots">{plan.virtualBots}</Pricing.Description>
                                     <Pricing.Description title="Log Retention">{plan.logRetention}</Pricing.Description>
@@ -190,7 +190,7 @@ const PricingComponent = () => {
                             trading volume quota, it is subsequently only allowed to process sell orders in order to exit open positions.
                         </Pricing.Explanation>
                         <Pricing.Explanation>
-                            <b>Allowed Tick Interval</b> Each bot runs on one or multiple tick intervals. Your plan specifies the lowest possible tick
+                            <b>Smallest Tick Interval</b> Each bot runs on one or multiple tick intervals. Your plan specifies the lowest possible tick
                             interval you can select, upon which your bot should be executed. We currently support 1m, 5m, 15m, 30m, 1h, 6h, 12h and 1d
                             tick intervals.
                         </Pricing.Explanation>
