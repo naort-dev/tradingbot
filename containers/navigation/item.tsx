@@ -163,7 +163,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
         box-shadow: none;
         color: #9ba1af;
         a {
-            color: ${(props) => props.theme.onDarkOld};
+            color: ${(props) => props.theme.onDarkOld} !important;
         }
     }
 `;
@@ -173,11 +173,7 @@ const DropdownEntry = styled.a`
     cursor: pointer;
     text-decoration: none;
     font-size: 14px;
-    @media (max-width: 768px) {
-        a {
-            color: ${(props) => props.theme.onDarkOld};
-        }
-    }
+
     &:hover {
         color: ${(props) => props.theme.main};
     }
