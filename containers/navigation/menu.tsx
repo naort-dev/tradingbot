@@ -71,7 +71,7 @@ export const Menu = () => {
             />
             <LinkItem name="Marketplace" target="/marketplace" />
             <LinkItem name="Pricing" target="/pricing" />
-            <LinkItem name="Competition" target="/competition" />
+            <LinkItem name="Blog" target="/blog" />
             <DropdownItem
                 name="Resources"
                 target="/"
@@ -85,16 +85,16 @@ export const Menu = () => {
                         target: 'https://docs.trality.com',
                     },
                     {
-                        name: 'Blog',
-                        target: '/blog',
-                    },
-                    {
                         name: 'Jobs',
                         target: '/jobs',
                     },
                     {
                         name: 'Team',
                         target: '/team',
+                    },
+                    {
+                        name: 'Competition',
+                        target: '/competition',
                     },
                 ]}
             />

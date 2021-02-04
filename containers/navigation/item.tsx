@@ -44,7 +44,7 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
     }
     @media (max-width: 768px) {
         display: none;
-        opacity: 0.0;
+        opacity: 0;
         font-size: 15px;
         margin-left: 0px;
         transition: 0.3s all;
@@ -149,6 +149,7 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     border-radius: 5px;
     box-shadow: 0 15px 60px 0 ${(props) => props.theme.shadowColor};
     background-color: ${(props) => props.theme.background};
+
     min-width: 100%;
     ${(props) =>
         props.visible &&
@@ -161,6 +162,9 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
         background-color: #30303d;
         box-shadow: none;
         color: #9ba1af;
+        a {
+            color: ${(props) => props.theme.onDarkOld};
+        }
     }
 `;
 
@@ -244,8 +248,7 @@ const ContactItemButton = styled((props) => <Button {...props} />)<{ open?: bool
             `
             display: block;
             margin-top: 15px;
-            `
-        }
+            `}
     }
 `;
 
