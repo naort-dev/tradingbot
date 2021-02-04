@@ -173,7 +173,11 @@ const DropdownEntry = styled.a`
     cursor: pointer;
     text-decoration: none;
     font-size: 14px;
-
+    @media (max-width: 768px) {
+        a {
+            color: ${(props) => props.theme.onDarkOld};
+        }
+    }
     &:hover {
         color: ${(props) => props.theme.main};
     }
