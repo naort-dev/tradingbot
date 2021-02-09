@@ -8,6 +8,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
 });
 
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = withBundleAnalyzer(
     withSourceMaps(
         withCSS(
@@ -21,7 +23,7 @@ module.exports = withBundleAnalyzer(
                         config.resolve.plugins = [new TsconfigPathsPlugin()];
                     }
 
-                    const { isServer } = options;
+                    const { isServer, dev } = options;
                     const prefix = config.assetPrefix ? config.assetPrefix : '';
                     config.module.rules.push(
                         {
@@ -62,6 +64,9 @@ module.exports = withBundleAnalyzer(
                                 urlPrefix: '~/next',
                             }),
                         );
+                    }
+                    if (dev && isServer) {
+                        config.plugins.push(new ForkTsCheckerWebpackPlugin());
                     }
                     /*config.plugins.push(
                     new webpack.EnvironmentPlugin({

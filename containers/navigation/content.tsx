@@ -1,13 +1,18 @@
+import { PageTypes } from 'containers/layout/page';
 import React from 'react';
 import { Logo } from './logo';
 import { Menu } from './menu';
 import { MobileIcon } from './mobileicon';
 
-export const NavigationContent: React.FC = () => {
+interface Props {
+    pageType: PageTypes;
+}
+
+export const NavigationContent: React.FC<Props> = ({ pageType }) => {
     return (
         <>
             <Logo />
-            <Menu />
+            <Menu pageType={pageType} />
             <MobileIcon />
         </>
     );

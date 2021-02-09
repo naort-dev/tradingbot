@@ -11,6 +11,16 @@ import { Button, LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
+import { PageTypes } from 'containers/layout/page';
+
+import * as BK from './../../containers/media/der-brutkasten.png';
+import * as CT from './../../containers/media/cointelegraph.png';
+import * as ICOM from './../../containers/media/investing-com.png';
+import * as TT from './../../containers/media/trending-topics.png';
+
+interface Props {
+    pageType: PageTypes;
+}
 
 const Wrap = styled.div`
     margin-bottom: ${Margins.Middle};
@@ -75,14 +85,14 @@ const LogoContainer = styled.div`
     }
 `;
 
-const LinkContainer = styled.div`
+const LinkContainer = styled.div<{ rightAlign: boolean }>`
     > a {
         text-decoration: none;
     }
     display: flex;
     flex-grow: 1;
     align-items: center;
-    justify-content: space-between;
+    justify-content: ${(props) => (props.rightAlign ? 'flex-end' : 'space-between')};
     max-width: 500px;
     @media (max-width: 768px) {
         display: none;
@@ -94,7 +104,7 @@ const LogoHeader = styled.div`
     color: ${(props) => props.theme.onDark};
 `;
 
-export const Footer: React.FunctionComponent = () => {
+export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
     const { dark } = useDark();
 
     return (
@@ -104,20 +114,25 @@ export const Footer: React.FunctionComponent = () => {
                     <div>
                         <LazyImage src={dark ? Logos.TralityMainLogoDark : Logos.TralityMainLogo} alt="Trality Logo" />
                     </div>
-                    <LinkContainer>
-                        <ExternalLink href="/blog">{'Blog'}</ExternalLink>
-                        <Link href="/jobs">
-                            <a>Jobs</a>
-                        </Link>
-                        <Link href="/imprint">
-                            <a>Imprint</a>
-                        </Link>
-                        <Link href="/privacy">
-                            <a>Privacy</a>
-                        </Link>
-                        <Link href="/terms">
-                            <a>Terms</a>
-                        </Link>
+
+                    <LinkContainer rightAlign={pageType === PageTypes.LP}>
+                        {pageType === PageTypes.Normal && (
+                            <>
+                                <ExternalLink href="/blog">{'Blog'}</ExternalLink>
+                                <Link href="/jobs">
+                                    <a>Jobs</a>
+                                </Link>
+                                <Link href="/imprint">
+                                    <a>Imprint</a>
+                                </Link>
+                                <Link href="/privacy">
+                                    <a>Privacy</a>
+                                </Link>
+                                <Link href="/terms">
+                                    <a>Terms</a>
+                                </Link>
+                            </>
+                        )}
                         <a>
                             <Button
                                 to={ConstUrl.Signup}
@@ -134,11 +149,6 @@ export const Footer: React.FunctionComponent = () => {
                 <LogoHeader>Proudly supported by</LogoHeader>
                 <LogoList
                     logos={[
-                        /**{
-                            title: 'AWS Activate',
-                            light: Logos.Aws,
-                            dark: Logos.AwsWhite,
-                        },*/
                         {
                             title: 'Tokentus',
                             light: Logos.TokentusBlack,

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+    <defs>
+        <style>
+            .cls-6{fill:none}.cls-2{fill:#fff}.cls-6{stroke-width:1.8px;stroke:#00b8e6}
+        </style>
+    </defs>
+    <g id="ic_encrypted" transform="translate(-1405 -4345)">
+        <path id="Rectangle_66" fill="none" d="M0 0H110V110H0z" transform="translate(1405 4345)"/>
+        <g id="Group_170" transform="translate(-4 2)">
+            <path id="Path_31" d="M14.133 13.26h62.943c7.764 0 8.529 3.8 8.529 8.5v53.48a8.506 8.506 0 0 1-8.529 8.5H14.133c-9.5 0-8.54-2.25-8.54-8.5V21.755c0-8.495.529-8.495 8.54-8.495z" class="cls-2" transform="translate(1408.434 4343.74)"/>
+            <path id="Path_32" fill="#e9f2f5" d="M50.57 13.26h21.761c6.582 0 7.561 0 7.561 7.28v55.9a7.426 7.426 0 0 1-7.561 7.291H50.57z" transform="translate(1414.068 4343.74)"/>
+            <rect id="Rectangle_30" width="80.012" height="70.482" fill="none" stroke="#7da3ad" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8px" rx="3.77" transform="translate(1414.027 4357)"/>
+            <path id="Path_33" fill="#fff" stroke="#7da3ad" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8px" d="M14.73 23.9h28.6m-28.6 8.473H63.8M14.73 49.329h32.214M14.73 66.286h26.183M14.73 57.768h12.04M21.954 40.89h15.359m-22.583 0h1.2" transform="translate(1409.581 4345.072)"/>
+            <path id="Path_34" d="M78.146 43.94a12.8 12.8 0 0 0-13 12.58v4.08h6.5v-4.08a6.5 6.5 0 0 1 13.007 0v4.08h6.481v-4.08a12.8 12.8 0 0 0-13-12.58z" class="cls-2" transform="translate(1415.893 4347.581)"/>
+            <path id="Path_35" d="M78.127 50.352a6.616 6.616 0 0 0-6.616 6.616V60.5h13.232v-3.532a6.616 6.616 0 0 0-6.616-6.616zm12.962 10.431v-3.612a12.951 12.951 0 0 0-25.879 0v3.612" class="cls-6" transform="translate(1415.901 4347.684)"/>
+            <rect id="Rectangle_31" width="39.899" height="32.732" class="cls-2" rx="6.49" transform="translate(1474.101 4406.947)"/>
+            <path id="Path_36" fill="#00b8e6" d="M95.44 65.16v17.587a7.089 7.089 0 0 1-7.089 7.1H81.51V58.06h6.841a7.077 7.077 0 0 1 7.089 7.1z" opacity="0.12" transform="translate(1417.941 4349.349)"/>
+            <rect id="Rectangle_32" width="38.684" height="31.269" class="cls-6" rx="4.71" transform="translate(1474.697 4407.69)"/>
+        </g>
+    </g>
+</svg>

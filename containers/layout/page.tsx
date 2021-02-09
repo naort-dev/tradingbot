@@ -16,12 +16,18 @@ const Background = styled.img`
     z-index: -1;
 `;
 
+export enum PageTypes {
+    Normal,
+    LP,
+}
+
 interface Props {
     title: string;
+    pageType?: PageTypes;
     dark?: boolean;
 }
 
-export const Page: React.FC<Props> = ({ dark, children }) => {
+export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
     const { setDark } = useDark();
 
     useEffect(() => {
@@ -35,24 +41,24 @@ export const Page: React.FC<Props> = ({ dark, children }) => {
         <Container>
             <BackgroundTriangle />
             <GDPR />
-            <Navigation />
+            <Navigation pageType={pageType} />
             <>{children}</>
             <Section id="footer">
-                <Footer />
-            </Section>           
+                <Footer pageType={pageType} />
+            </Section>
         </Container>
     );
 };
 
 const BackgroundTriangle = styled.div`
-    display:none;
-    @media(min-width: 767px) {
+    display: none;
+    @media (min-width: 767px) {
         max-width: 60vw;
         max-height: 90vh;
         width: 100%;
-        height: 100%;    
-        display:block;
-        background: linear-gradient(to top right, #fff 0%, #fff 50%, rgba(45, 50, 124, 0.01) 50%, rgba(45, 50, 124, 0.03)100%);
+        height: 100%;
+        display: block;
+        background: linear-gradient(to top right, transparent 0%, rgba(0, 0, 0, 0) 50%, rgba(45, 50, 124, 0.01) 50%, rgba(45, 50, 124, 0.03) 100%);
         position: absolute;
         right: 0px;
         top: 0px;

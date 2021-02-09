@@ -7,9 +7,14 @@ import { useIsMobile } from '../../hooks/useIsMobile';
 import { Navigation } from 'theme';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
+import { PageTypes } from 'containers/layout/page';
 
 interface OpenProps {
     open?: boolean;
+}
+
+interface Props {
+    pageType: PageTypes;
 }
 
 const Container = styled.nav<OpenProps>`
@@ -46,68 +51,87 @@ const Container = styled.nav<OpenProps>`
     }
 `;
 
-export const Menu = () => {
+export const Menu: React.FunctionComponent<Props> = ({ pageType }) => {
     const { open } = useOpen();
     const isMobile = useIsMobile();
     return (
         <Container open={open}>
-            <DropdownItem
-                name="Creator tools"
-                target="/"
-                items={[
-                    {
-                        name: 'Code Editor',
-                        target: '/creator/code-editor',
-                    },
-                    {
-                        name: 'Rule Builder',
-                        target: '/creator/rule-builder',
-                    },
-                    {
-                        name: 'Features',
-                        target: '/creator/features',
-                    },
-                ]}
-            />
-            <LinkItem name="Marketplace" target="/marketplace" />
-            <LinkItem name="Pricing" target="/pricing" />
-            <LinkItem name="Blog" target="/blog" />
-            <DropdownItem
-                name="Resources"
-                target="/"
-                items={[
-                    {
-                        name: 'FAQs',
-                        target: '/resources/faq',
-                    },
-                    {
-                        name: 'Documentation',
-                        target: 'https://docs.trality.com',
-                    },
-                    {
-                        name: 'Jobs',
-                        target: '/jobs',
-                    },
-                    {
-                        name: 'Team',
-                        target: '/team',
-                    },
-                    {
-                        name: 'Competition',
-                        target: '/competition',
-                    },
-                ]}
-            />
+            {pageType === PageTypes.Normal && (
+                <>
+                    {' '}
+                    <DropdownItem
+                        name="Creator tools"
+                        target="/"
+                        items={[
+                            {
+                                name: 'Code Editor',
+                                target: '/creator/code-editor',
+                            },
+                            {
+                                name: 'Rule Builder',
+                                target: '/creator/rule-builder',
+                            },
+                            {
+                                name: 'Features',
+                                target: '/creator/features',
+                            },
+                        ]}
+                    />
+                    <LinkItem name="Marketplace" target="/marketplace" />
+                    <LinkItem name="Pricing" target="/pricing" />
+                    <LinkItem name="Blog" target="/blog" />
+                    <DropdownItem
+                        name="Resources"
+                        target="/"
+                        items={[
+                            {
+                                name: 'FAQs',
+                                target: '/resources/faq',
+                            },
+                            {
+                                name: 'Documentation',
+                                target: 'https://docs.trality.com',
+                            },
+                            {
+                                name: 'Jobs',
+                                target: '/jobs',
+                            },
+                            {
+                                name: 'Team',
+                                target: '/team',
+                            },
+                            {
+                                name: 'Competition',
+                                target: '/competition',
+                            },
+                        ]}
+                    />
+                </>
+            )}
             <ItemGroup>
-                <ButtonItem name="Login" target={ConstUrl.Login} hollow={!isMobile} />
-                <ButtonItem
-                    name="Signup"
-                    target={ConstUrl.Signup}
-                    event={{
-                        type: EventType.SignupInitiated,
-                        attributes: { signupOrigin: SignupOrigins.HeaderCta },
-                    }}
-                />
+                {pageType === PageTypes.Normal && (
+                    <>
+                        <ButtonItem name="Login" target={ConstUrl.Login} hollow={!isMobile} />
+                        <ButtonItem
+                            name="Signup"
+                            target={ConstUrl.Signup}
+                            event={{
+                                type: EventType.SignupInitiated,
+                                attributes: { signupOrigin: SignupOrigins.HeaderCta },
+                            }}
+                        />
+                    </>
+                )}
+                {pageType === PageTypes.LP && (
+                    <ButtonItem
+                        name="Join now"
+                        target={ConstUrl.Signup}
+                        event={{
+                            type: EventType.SignupInitiated,
+                            attributes: { signupOrigin: SignupOrigins.HeaderCta },
+                        }}
+                    />
+                )}
             </ItemGroup>
         </Container>
     );

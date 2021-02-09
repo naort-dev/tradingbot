@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#353535;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="ic_expand-accordion" transform="translate(-805 -5176)">
+        <path id="Rectangle_67" fill="none" d="M0 0H20V20H0z" transform="translate(805 5176)"/>
+        <g id="Group_202">
+            <g id="Group_189" transform="translate(807 5186)">
+                <path id="Path_53" d="M812.436 5007.973h16.208" class="cls-2" transform="translate(-812.436 -5007.973)"/>
+            </g>
+            <g id="Group_201" transform="rotate(90 -2181.5 2996.5)">
+                <path id="Path_53-2" d="M812.436 5007.973h16.208" class="cls-2" transform="translate(-812.436 -5007.973)"/>
+            </g>
+        </g>
+    </g>
+</svg>
