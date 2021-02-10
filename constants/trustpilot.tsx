@@ -12,7 +12,7 @@ export const TrustPilotReviews: TrustPilotReview[] = [
         stars: 5,
         title: 'A good starting point',
         reviewText:
-            "The platform is smth I'm really happy I've come across. I'm a novice crypto trader, especially when it comes to automated trading. So Trality's bot templates and Rule Builder helped me a lot to set up an algorithm to trade for me. Exactly what I've needed.",
+            "The platform is smth I'm really happy I've come across. I'm a novice trader, especially when it comes to automated trading. So Trality's bot templates and Rule Builder helped me a lot to set up an algorithm to trade for me. Exactly what I've needed.",
         date: 'Dec 11, 2020',
     },
     {

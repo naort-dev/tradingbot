@@ -104,8 +104,6 @@ const FAQArea = () => {
     const leftColumn: JSX.Element[] = [];
     const rightColumn: JSX.Element[] = [];
 
-    let i = 0;
-
     FAQMap.map((currentFAQ, idx) =>
         idx % 2 ? rightColumn.push(<FAQCompItem faq={currentFAQ} />) : leftColumn.push(<FAQCompItem faq={currentFAQ} />),
     );
