@@ -9,7 +9,7 @@ import * as TralityWhiteBlue from './images/logos/logo_white_blue.png';
 import * as TralityBlackBlue from './images/logos/logo_black_blue.png';
 import * as TralityMainLogoDark from './images/pngs/logo-dark.png';
 import * as TralityMainLogo from './images/pngs/logo.png';
-import * as Telegram from './images/logos/telegram_trality.png';
+import * as Discord from './images/logos/discord_blue.png';
 import * as Twitter from './images/logos/twitter.svg';
 import * as Medium from './images/logos/medium.svg';
 
@@ -35,7 +35,7 @@ export const Logos = {
     TralityWhiteWhite,
     TralityWhiteBlue,
     TralityBlackBlue,
-    Telegram,
+    Discord,
     Twitter,
     Medium,
     Binance,

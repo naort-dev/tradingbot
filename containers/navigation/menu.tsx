@@ -104,6 +104,10 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType }) => {
                                 name: 'Competition',
                                 target: '/competition',
                             },
+                            {
+                                name: 'Security',
+                                target: '/security',
+                            },
                         ]}
                     />
                 </>

@@ -13,11 +13,6 @@ import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
 import { PageTypes } from 'containers/layout/page';
 
-import * as BK from './../../containers/media/der-brutkasten.png';
-import * as CT from './../../containers/media/cointelegraph.png';
-import * as ICOM from './../../containers/media/investing-com.png';
-import * as TT from './../../containers/media/trending-topics.png';
-
 interface Props {
     pageType: PageTypes;
 }
@@ -183,8 +178,8 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                     <L>
                         All rights reserved © Trality 2020
                         <LogoContainer>
-                            <a href="https://t.me/trality" target="_blank">
-                                <LazyImage src={Logos.Telegram} alt="Telegram Logo" />
+                            <a href="https://discord.gg/h5BPuKBQHv" target="_blank">
+                                <LazyImage src={Logos.Discord} alt="Discord Logo" />
                             </a>
                             <a href="https://twitter.com/trality_bots" target="_blank">
                                 <LazyImage src={Logos.Twitter} alt="Twitter Logo" />

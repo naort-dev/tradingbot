@@ -19,7 +19,8 @@ export enum Page {
     JobSrFullStack,
     JobBackend,
     JobFrontend,
-    JobMobile
+    JobMobile,
+    Security,
 }
 
 const titles = new Map([
@@ -40,7 +41,8 @@ const titles = new Map([
     [Page.JobSrFullStack, 'Trality Jobs - Senior Full-Stack Developer'],
     [Page.JobBackend, 'Trality Jobs - Backend Developer'],
     [Page.JobFrontend, 'Trality Jobs - Frontend Developer'],
-    [Page.JobMobile, 'Trality Jobs - Mobile Developer']
+    [Page.JobMobile, 'Trality Jobs - Mobile Developer'],
+    [Page.Security, 'Trality - Security'],
 ]);
 
 const descriptions = new Map([
@@ -80,23 +82,28 @@ const descriptions = new Map([
         Page.Terms,
         'The following General Terms and Conditions ("GTC") shall apply to all present and future business transactions, contracts and business relationships...',
     ],
-    [Page.Competition, 'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: December 8, 2020.'],
+    [
+        Page.Competition,
+        'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: December 8, 2020.',
+    ],
     [Page.CompetitionTerms, 'Trading Competition Terms & Conditions'],
     [Page.JobSrFullStack, 'Would you like to help us as Senior Full-stack Developer? Get in touch with us! Open Position...'],
     [Page.JobBackend, 'Would you like to help us as Backend Developer? Get in touch with us! Open Position...'],
     [Page.JobFrontend, 'Would you like to help us as Frontend Developer? Get in touch with us! Open Position...'],
     [Page.JobMobile, 'Would you like to help us as Mobile Developer? Get in touch with us! Open Position...'],
+    [Page.Security, ''],
 ]);
 
-export const MetaTags:React.FunctionComponent<{page: Page}> = ({page}) => {
-    const NoRobotsCheck = page === Page.Jobs || page === Page.JobMobile || page === Page.JobSrFullStack || page === Page.JobFrontend || page === Page.JobBackend;
+export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {
+    const NoRobotsCheck =
+        page === Page.Jobs || page === Page.JobMobile || page === Page.JobSrFullStack || page === Page.JobFrontend || page === Page.JobBackend;
     return (
         <Head>
             <title>{titles.get(page)}</title>
             <meta name="description" content={descriptions.get(page)} key="description" />
             <meta name="og:title" content={titles.get(page)} key="ogtitle" />
             <meta name="og:descrition" content={descriptions.get(page)} key="ogdesc" />
-            {NoRobotsCheck && <meta name="robots" content="noindex, nofollow" /> }
+            {NoRobotsCheck && <meta name="robots" content="noindex, nofollow" />}
         </Head>
     );
 };
