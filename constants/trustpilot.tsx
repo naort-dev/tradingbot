@@ -21,7 +21,7 @@ export const TrustPilotReviews: TrustPilotReview[] = [
         title: 'Best professional product for real algorithmic traders',
         reviewText: `So I thought to write a review for any quants and algorithmic traders who were left with nowhere to go after proquant shut down. Trality is a great platform with a lot of potential. The product itself is not the most beautiful but for a young company - they have everything that a real bot builder needs and to be honest it doesn't need to be beautiful, it just needs to work really well and that it does. I'm sure they will continue to work on the look in the future but where this company shines is the product. The functionality and flexibility is unrivalled. This isn't a copy/past bot platform like most.
 
-In-browser python code editor, loads of libraries to pull from, they've recently had an update to the whole platform which added loads of cool new features and order types and on top of that you can contact them at any time and they will get back to you either through email or through the cool Telegram channel where you can chat with others.
+In-browser python code editor, loads of libraries to pull from, they've recently had an update to the whole platform which added loads of cool new features and order types and on top of that you can contact them at any time and they will get back to you either through email or through the cool Discord channel where you can chat with others.
 
 Really pleased that I found this after being recommended by a mate and looking forward to seeing what they add in the future!!`,
         date: 'Jan 15, 2021',

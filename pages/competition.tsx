@@ -345,11 +345,7 @@ const Competition = () => {
                     <ExtendedHeader center title="Contact">
                         <p>
                             If you have any questions about the competition, you can contact us at competition<strong>[at]</strong>trality.com. If you
-                            have any other questions about the platform, our API or just want to give us some feedback then please join our{' '}
-                            <a target="_blank" href="https://t.me/trality">
-                                Telegram channel
-                            </a>
-                            .
+                            have any other questions about the platform, our API or just want to give us some feedback then please join our Discord server. 
                         </p>
                     </ExtendedHeader>
                 </Layout.Center>
