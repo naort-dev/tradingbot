@@ -107,6 +107,12 @@ const Privacy = () => {
                             This guidance extends to our social media and communications channels, too. If you’re engaging on our Discord server, for
                             example, don’t talk to strangers unless they're admins of the group and YOU initiate contact. For technical support, only
                             use our official support email: support@trality.com and never talk to any scammers on other platforms such as telegram!
+                            </p>
+                        <h3>When active in the Trality discussion discord chat, only trust official admins</h3>
+                        <p>
+                            Current list of Trality admins in Trality discord channel:
+                            <li>hello.moritz</li>
+                            <li>peacer212</li>
                         </p>
                         <h3>Activate multi-factor authentication</h3>
                         <p>
