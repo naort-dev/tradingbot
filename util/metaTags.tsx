@@ -19,6 +19,7 @@ export enum Page {
     JobSrFullStack,
     JobBackend,
     JobFrontend,
+    JobDesign,
     JobMobile,
     Security,
 }
@@ -41,6 +42,7 @@ const titles = new Map([
     [Page.JobSrFullStack, 'Trality Jobs - Senior Full-Stack Developer'],
     [Page.JobBackend, 'Trality Jobs - Backend Developer'],
     [Page.JobFrontend, 'Trality Jobs - Frontend Developer'],
+    [Page.JobDesign, 'Trality Jobs - Designer'],
     [Page.JobMobile, 'Trality Jobs - Mobile Developer'],
     [Page.Security, 'Trality - Security'],
 ]);
@@ -90,6 +92,7 @@ const descriptions = new Map([
     [Page.JobSrFullStack, 'Would you like to help us as Senior Full-stack Developer? Get in touch with us! Open Position...'],
     [Page.JobBackend, 'Would you like to help us as Backend Developer? Get in touch with us! Open Position...'],
     [Page.JobFrontend, 'Would you like to help us as Frontend Developer? Get in touch with us! Open Position...'],
+    [Page.JobDesign, 'Would you like to help us as Designer? Get in touch with us! Open Position...'],
     [Page.JobMobile, 'Would you like to help us as Mobile Developer? Get in touch with us! Open Position...'],
     [Page.Security, ''],
 ]);
