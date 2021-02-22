@@ -67,22 +67,18 @@ const Privacy = () => {
                         <p>That’s why we take every step possible to ensure the security of all our systems and users.</p>
                         <p>
                             Users funds are not held on your account and will always lie safely on the chosen exchange. Trality is unable to touch
-                            your funds directly without your explicit command and will only ever use official exchange APIs to execute orders on your
-                            behalf. On top of that, everything on Trality runs on a cloud-based system so you can be sure your bots are always up -
-                            we’ve also taken extra measures to ensure that our users are well-protected from all potential web attacks.
+                            your funds directly and will only ever use official exchange APIs to execute orders on your behalf. On top of that,
+                            everything on Trality runs on a cloud-based system so you can be sure your bots are always up - we’ve also taken extra
+                            measures to ensure that our users are well-protected from all potential web attacks.
                         </p>
-                        <p>
-                            Most importantly, we are taking steps to ensure that all your information and algorithms are end-to-end encrypted
-                            throughout the whole bot-creation and deployment process. This means that no one—not even Trality itself—can see your
-                            strategies.
-                        </p>
+
                         <h2>Sandboxed user strategies</h2>
                         <p>
                             Users’ strategies and algorithms are completely sandboxed and their creation is browser-based. What this means is that no
-                            one apart from yourself can see which ideas you are coming up with while you are developing and testing. In the near
-                            future full end-to-end encryption will render your IP completely your's and your's alone. This will be an essential part
-                            of us maximizing privacy and information security on the platform. It’s also a vital part of our mission to ultimately
-                            attract the smartest and highest-performing bot creators together on this platform .
+                            one apart from yourself can see the ideas you are coming up with while you develop and test your bots. In the near future
+                            full end-to-end encryption will render your IP completely your's and your's alone. This will be an essential part of us
+                            maximizing privacy and information security on the platform. It’s also a vital part of our mission to ultimately attract
+                            the smartest and highest-performing bot creators onto this platform.
                         </p>
                         <h2>Cloud-based ecosystem</h2>
                         <p>
@@ -102,6 +98,22 @@ const Privacy = () => {
                             While we take every step to protect our users and systems, there are a few things that you as a user can do to help secure
                             yourself even more. Let’s go through some of the basics.
                         </p>
+                        <h3>Be wary (never deal with apps and people from un-trusted sources)</h3>
+                        <p>
+                            Unfortunately, even with the strongest technical protection possible, users have to play their part as well in order to
+                            achieve collective security. You must always remain cautious and develop a sensible intuition when it comes to products
+                            and services. This applies everywhere online but more than ever when it comes to cryptocurrency trading. Small steps like
+                            avoiding public wifi or simply doing nothing online that you wouldn’t do in the real world can make all the difference.
+                            This guidance extends to our social media and communications channels, too. If you’re engaging on our Discord server, for
+                            example, don’t talk to strangers unless they're admins of the group and YOU initiate contact. For technical support, only
+                            use our official support email: support@trality.com and never talk to any scammers on other platforms such as telegram!
+                            </p>
+                        <h3>When active in the Trality discussion discord chat, only trust official admins</h3>
+                        <p>
+                            Current list of Trality admins in Trality discord channel:
+                            <li>hello.moritz</li>
+                            <li>peacer212</li>
+                        </p>
                         <h3>Activate multi-factor authentication</h3>
                         <p>
                             Multi-factor authentication (MFA) is the best and quickest way to add another layer of security to your account by
@@ -118,16 +130,6 @@ const Privacy = () => {
                             </a>{' '}
                             and that those passwords are breached all the time - you begin to understand the value of a long, strong password. Use
                             caps lock, use numbers, symbols and anything to make your password even more uncrackable.
-                        </p>
-                        <h3>Be wary (only deal with apps and people from trusted sources)</h3>
-                        <p>
-                            In the tech industry, we know that when tech is compromised, the fault usually lies with the user. Even with things like
-                            multi-factor authentication, you must still be cautious online and develop a sensible intuition when it comes to products
-                            and services. You can not rely on technology to protect you from all threats. This applies everywhere online but more than
-                            ever when it comes to cryptocurrency trading. Small steps like avoiding public wifi or simply doing nothing online that
-                            you wouldn’t do in the real world can make all the difference. This guidance extends to our social media and
-                            communications channels too. If you’re engaging in our Telegram groups, for example, don’t talk to strangers unless
-                            they're admins of the group and YOU initiate contact.
                         </p>
                         <h3>Don’t just share/copy code</h3>
                         <p>
@@ -151,7 +153,8 @@ const Privacy = () => {
                         <p>
                             Do not share your password with anyone at any time. No one at Trality will never ask for it. This is also the case for any
                             legitimate business. If you get an email or a message somewhere on social media which asks for your current password, you
-                            should be very careful as it is almost certainly a phishing attempt.
+                            should be very careful as it is almost certainly a phishing attempt. Neither should you EVER send cryptocurrency to a
+                            foreign wallet!
                         </p>
                         <h3>Don’t leave your precious devices unattended!</h3>
                         <p>
