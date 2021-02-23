@@ -178,9 +178,6 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                     <L>
                         All rights reserved © Trality 2020
                         <LogoContainer>
-                            <a href="https://discord.gg/h5BPuKBQHv" target="_blank">
-                                <LazyImage src={Logos.Discord} alt="Discord Logo" />
-                            </a>
                             <a href="https://twitter.com/trality_bots" target="_blank">
                                 <LazyImage src={Logos.Twitter} alt="Twitter Logo" />
                             </a>
