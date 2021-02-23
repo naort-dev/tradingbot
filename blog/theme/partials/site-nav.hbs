@@ -21,9 +21,9 @@
         {{navigation type="secondary"}}
         {{else}}
         <div class="login-links">
-            <a class="button-link hollow" title="Login" href="https://auth.beta.trality.com/#/login" target="_blank"
+            <a class="button-link hollow" title="Login" href="https://auth.trality.com/#/login" target="_blank"
                 rel="noopener">Login</a>
-            <a class="button-link" title="Signup" href="https://auth.beta.trality.com/#/signup" target="_blank"
+            <a class="button-link" title="Signup" href="https://auth.trality.com/#/signup" target="_blank"
                 rel="noopener">Signup</a>
         </div>
         <div class="social-links">
@@ -35,10 +35,6 @@
             <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
                 rel="noopener">{{> "icons/twitter"}}</a>
             {{/if}}
-            <a class="social-link social-link-tg" href="https://t.me/trality" title="Telegram" target="_blank"
-                rel="noopener">
-                <img src="/assets/img/telegram_trality.png" />
-            </a>
         </div>
         {{#unless @labs.members}}
         <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS"
