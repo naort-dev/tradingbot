@@ -12,7 +12,7 @@ interface BProps {
     className?: string;
     dark?: boolean;
     border?: boolean;
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const StyledButton = styled.button<BProps>`
@@ -32,7 +32,7 @@ export const StyledButton = styled.button<BProps>`
     transition: 0.3s all;
     box-sizing: border-box;
     &:focus {
-        outline:0;
+        outline: 0;
     }
     ${(props) =>
         props.border &&
@@ -89,28 +89,23 @@ export const StyledButton = styled.button<BProps>`
     & > img {
         margin-right: ${Margins.Middle};
     }
-
 `;
 
 export interface ButtonProps<K extends keyof EventProperties = EventType> {
     to?: string;
     blank?: boolean;
-    event?: { type: K, attributes: EventProperties[K] };
+    event?: { type: K; attributes: EventProperties[K] };
 }
 
 export function Button<K extends keyof EventProperties>(props: React.PropsWithChildren<BProps & ButtonProps<K>>) {
-    const { children, to, blank, event, className, onClick, ...rest } = props
+    const { children, to, blank, event, className, onClick, ...rest } = props;
     const tracker = useTracker();
     const router = useRouter();
 
-    const onClickDefault = () => {
+    const onClickDefault = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         if (event) {
-            tracker.TrackEvent(
-                createEvent(
-                    event.type,
-                    {...event.attributes}
-                )
-            );
+            tracker.TrackEvent(createEvent(event.type, { ...event.attributes }));
         }
         if (to) {
             if (blank || to.startsWith('http')) {
@@ -125,7 +120,7 @@ export function Button<K extends keyof EventProperties>(props: React.PropsWithCh
             {children}
         </StyledButton>
     );
-};
+}
 
 export const KnowMore: React.FunctionComponent<ButtonProps<EventType>> = ({ children, ...props }) => {
     return (
