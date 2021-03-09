@@ -1,4 +1,4 @@
 export enum ConstUrl {
-    Signup = 'https://auth.beta.trality.com/#/signup',
-    Login = 'https://auth.beta.trality.com/#/login',
+    Signup = 'https://auth.trality.com/#/signup',
+    Login = 'https://auth.trality.com/#/login',
 }

@@ -140,7 +140,7 @@ const Privacy = () => {
                                         </li>
                                     </ul>
                                     Depending on your interaction with <a href="https://app.trality.com">https://app.trality.com</a>,{' '}
-                                    <a href="https://app.beta.trality.com">https://app.beta.trality.com</a>, the iOS and Android mobile apps and/or{' '}
+                                    <a href="https://app.trality.com">https://app.trality.com</a>, the iOS and Android mobile apps and/or{' '}
                                     <a href="https://www.trality.com">https://www.trality.com</a>, the following Personal Information may be processed
                                     by us for the purposes as set out in the following:
                                 </div>
