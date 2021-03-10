@@ -2,7 +2,7 @@
     "name": "trality",
     "description": "Trality Blog Theme",
     "demo": "https://www.trality.com/blog",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -77,5 +77,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "uri-js": "^4.2.2"
     }
 }

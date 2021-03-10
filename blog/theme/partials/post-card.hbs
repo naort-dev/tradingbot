@@ -10,6 +10,7 @@
                     {{img_url feature_image size="l"}} 1000w,
                     {{img_url feature_image size="xl"}} 2000w"
             sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
             src="{{img_url feature_image size="m"}}"
             alt="{{title}}"
         />
@@ -50,7 +51,7 @@
             
                     {{#if profile_image}}
                     <a href="{{url}}" class="static-avatar">
-                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" loading="lazy" alt="{{name}}" />
                     </a>
                     {{else}}
                     <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
