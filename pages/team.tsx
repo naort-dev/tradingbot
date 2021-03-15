@@ -7,158 +7,265 @@ import * as Chris from '../assets/images/people/chris.jpg';
 import * as Alex from '../assets/images/people/alex.jpg';
 import * as Moritz from '../assets/images/people/moritz.jpg';
 import * as Linkedin from '../assets/images/logos/linkedin-square.svg';
+import * as TralityTeam from '../assets/images/pngs/trality_team.png';
 
-import {MetaTags, Page} from '../util/metaTags';
+import { MetaTags, Page } from '../util/metaTags';
 
 type PersonSocialLinks = {
     type: 'linkedin';
     link: string;
-}
+};
+
+const CenterContent = styled.div`
+    align-self: center;
+    width: 50%;
+    padding-right: 50px;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 25px;
+    }
+    > h3 {
+        font-weight: bold;
+        text-align: left;
+    }
+`;
+
+const TeamImage = styled.img`
+    width: 100%;
+`;
 
 type Person = {
     name: string;
     title: string;
     photo: string | null;
     socialLinks: PersonSocialLinks[];
-}
+};
 
 const pageData: Person[] = [
     {
         name: 'Moritz Putzhammer',
-        title: "Co-Founder & CEO",
+        title: 'Co-Founder & CEO',
         photo: Moritz,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/putzhammer'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/putzhammer',
+            },
+        ],
     },
     {
         name: 'Christopher Helf',
-        title: "Co-Founder & CTO",
+        title: 'Co-Founder & CTO',
         photo: Chris,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/christopher-helf'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/christopher-helf',
+            },
+        ],
     },
     {
         name: 'Alexander Kahl',
-        title: "VP of Product",
+        title: 'VP of Product',
         photo: Alex,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/alexander-kahl'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/alexander-kahl',
+            },
+        ],
     },
     {
         name: 'Carsten Schipke',
-        title: "VP of Architecture",
+        title: 'VP of Architecture',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/carstenschipke'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/carstenschipke',
+            },
+        ],
     },
     {
         name: 'Ovidiu Popescu',
-        title: "Head of Growth Marketing",
+        title: 'Head of Growth Marketing',
         photo: null,
-        socialLinks: [/* Don't have one. */]
+        socialLinks: [
+            /* Don't have one. */
+        ],
     },
     {
         name: 'Max Schneider',
-        title: "Sr. AI Engineer",
+        title: 'Sr. AI Engineer',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/maximilianschneider'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/maximilianschneider',
+            },
+        ],
     },
     {
         name: 'Constantin Dißelkamp',
-        title: "Jr. AI Engineer",
+        title: 'Jr. AI Engineer',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/constantin-dißelkamp-7105b81a2'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/constantin-dißelkamp-7105b81a2',
+            },
+        ],
     },
     {
         name: 'Tamas Hodobay',
-        title: "Sr. Backend Engineer",
+        title: 'Sr. Backend Engineer',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/hodobay/'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/hodobay/',
+            },
+        ],
     },
     {
         name: 'Declan Igoe',
-        title: "Copywriter & Content Specialist",
+        title: 'Copywriter & Content Specialist',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/digoe'
-        }]
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/digoe',
+            },
+        ],
     },
     {
         name: 'Jakub Strzadala',
-        title: "Sr. Frontend Engineer",
+        title: 'Sr. Frontend Engineer',
         photo: null,
-        socialLinks: [{
-            type: 'linkedin',
-            link: 'https://www.linkedin.com/in/jakub-strzadala-b9730526'
-        }]
-    }
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/jakub-strzadala-b9730526',
+            },
+        ],
+    },
 ];
 
 const People = React.memo(() => {
     var items: ReactNode[] = [];
     pageData.forEach((item, i) => {
-        items.push(<GridItem key={`griditem-${i}-${item.name}`}>
-            <PersonImg src={item.photo ?? DummyPerson} />
-            <Name>{item.name}</Name>
-            <Title>{item.title}</Title>
-            <SocialLinks>{
-                item.socialLinks.map((socialLink, i) => {
-                    return <SocialLink key={socialLink.link} href={socialLink.link}>
-                        <SocialImg src={Linkedin} alt={item.name}/>
-                    </SocialLink>
-                })}
-            </SocialLinks>
-            </GridItem>)
+        items.push(
+            <GridItem key={`griditem-${i}-${item.name}`}>
+                <PersonImg src={item.photo ?? DummyPerson} />
+                <Name>{item.name}</Name>
+                <Title>{item.title}</Title>
+                <SocialLinks>
+                    {item.socialLinks.map((socialLink, i) => {
+                        return (
+                            <SocialLink key={socialLink.link} href={socialLink.link}>
+                                <SocialImg src={Linkedin} alt={item.name} />
+                            </SocialLink>
+                        );
+                    })}
+                </SocialLinks>
+            </GridItem>,
+        );
     });
     return <>{items}</>;
 });
 
 const Team = () => {
-    return <Layout.Page title="team">
-        <MetaTags page={Page.About} />
-        <Layout.Section id="headline" noPadding>
-            <Layout.Center>
-                <ExtendedHeader center title="Meet the Trality Team!" subtitle="These people help you create successful bots. Nice to meet you!">
-                    <Layout.Grid.Container>
-                        <People />
-                    </Layout.Grid.Container>
-                </ExtendedHeader>
-            </Layout.Center>
-        </Layout.Section>
-        <Layout.Section id="start-now" fullHeight={false} noPadding themeColor="main">
-            <Layout.CenterLeft>
-                <CTA>
-                    <h2>Want to be part of the team?</h2>
-                    <Button dark to={`/jobs#positions`}>
-                        Let us know and join us
+    return (
+        <Layout.Page title="team">
+            <MetaTags page={Page.About} />
+            <Layout.Section id="headline" noPadding>
+                <Layout.Center>
+                    <ExtendedHeader title="Bot trading, for everyone.">
+                        <p>
+                            We see a future in which everything is automated by bots. When it comes to automated investing, there will be only one
+                            place to go: Trality. Founded in 2018 by Moritz Putzhammer and Christopher Helf, we strive to be the go-to-place for
+                            anyone wanting to experience the power and flexibility of trading bots.
+                        </p>
+                    </ExtendedHeader>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="tools-traders">
+                <Layout.Center>
+                    <CenterContent>
+                        <h3>Advanced tools for advanced traders</h3>
+                        <p>
+                            We provide powerful and flexible tools for anyone who is interested to create, test and deploy their bots in one
+                            cloud-based ecosystem.
+                        </p>
+                        <h3>Our vision</h3>
+                        <p>
+                            We will bring the power and potential of algorithmic trading to everyone who needs it. Regardless of whether or not they
+                            are advanced traders—every, single person will be able to have bots automatically manage their investments across asset
+                            classes and platforms. All in one place.
+                        </p>
+                    </CenterContent>
+                    <div>
+                        <TeamImage src={TralityTeam} />
+                    </div>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="our-story" noPadding>
+                <Layout.Center>
+                    <ExtendedHeader title="Our Story">
+                        <p>
+                            Once upon a time, two guys met at a university. Together they sat as they pondered the financial world and asked one
+                            another why trading bots are only accessible to big banks and institutions. They knew that 75% of private traders like you
+                            and me were losing money when they tried to compete against machines that are better traders in every way. This discussion
+                            turned into an idea, and that idea evolved into Trality's mission. Step by step, we will become the platform for everyone
+                            to create and invest through automated trading bots - this is what drives us. We welcome traders of all experience levels
+                            and attract the best bot creators by offering the most advanced tools for bot creation. Conversely, we will enable
+                            followers to easily invest in bots created on the platform to the benefit of all parties.
+                        </p>
+                    </ExtendedHeader>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="our-experts" noPadding>
+                <Layout.Center>
+                    <ExtendedHeader title="Our Experts">
+                        <p>
+                            As part of our mission, we strictly only hire people from a range of backgrounds that have demonstrated prowess in the
+                            field of financial services. Every single one of our team members is as enthusiastic as the next about revolutionising the
+                            world of private investing.
+                        </p>
+                    </ExtendedHeader>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="people" noPadding>
+                <Layout.Center>
+                    <ExtendedHeader title="">
+                        <Layout.Grid.Container>
+                            <People />
+                        </Layout.Grid.Container>
+                    </ExtendedHeader>
+                </Layout.Center>
+            </Layout.Section>
+            <Layout.Section id="start-now" fullHeight={false} noPadding themeColor="main">
+                <Layout.CenterLeft>
+                    <CTA>
+                        <h2>Want to be part of the team?</h2>
+                        <Button dark to={`/jobs#positions`}>
+                            Let us know and join us
                         </Button>
-                </CTA>
-            </Layout.CenterLeft>
-        </Layout.Section>
-    </Layout.Page>
+                    </CTA>
+                </Layout.CenterLeft>
+            </Layout.Section>
+        </Layout.Page>
+    );
 };
 
 export default Team;
 
 const ExtendedHeader = styled(Header)`
+    & > h3,
+    h2 {
+        text-align: left;
+    }
     & > h5 {
         margin-bottom: 80px;
     }
@@ -177,12 +284,13 @@ const SocialLink = styled.a`
             filter: brightness(0) invert(1);
         }
         background-color: ${(props) => props.theme.linkBlue};
-        @media all and (-ms-high-contrast:none) { // IE 11 hack, since it's not supporting filter. 
+        @media all and (-ms-high-contrast: none) {
+            // IE 11 hack, since it's not supporting filter.
             background-color: white;
         }
     }
     &:visited {
-        background-color: ${(props) => props.theme.linkBlue};;
+        background-color: ${(props) => props.theme.linkBlue};
     }
 `;
 
