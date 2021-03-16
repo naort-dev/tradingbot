@@ -77,13 +77,13 @@ const pageData: Person[] = [
         ],
     },
     {
-        name: 'Carsten Schipke',
-        title: 'VP of Architecture',
+        name: 'Andrea Salcedo',
+        title: 'Sr. Software Engineer',
         photo: null,
         socialLinks: [
             {
                 type: 'linkedin',
-                link: 'https://www.linkedin.com/in/carstenschipke',
+                link: 'https://www.linkedin.com/in/acsalcedo',
             },
         ],
     },
