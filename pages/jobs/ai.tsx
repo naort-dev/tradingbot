@@ -27,14 +27,13 @@ const Ai = () => {
                         <>
                             <ul>
                                 <li>
-                                    Design, implement and evaluate ML-models to predict large amounts of historical financial data using Python and
-                                    Tensorflow or PyTorch.
+                                    Design, implement and evaluate ML-models to predict large amounts of historical financial data using various tools
+                                    from xgboost to Tensorflow.
                                 </li>
                                 <li>
                                     Research and implement a generic supervised learning training and evaluation pipeline to improve and measure
                                     prediction accuracy of existing and newly designed ML-models
                                 </li>
-                                <li>Implement prototypical reinforcement learning agents to complete autonomous trading tasks</li>
                                 <li>
                                     Build a data processing pipeline for retreival, cleaning and augmentation that can be used in an offline-fashion
                                     for trainings that's highly generic and reusable and can be run on AWS/GCP
@@ -55,12 +54,17 @@ const Ai = () => {
                         <>
                             <ul>
                                 <li>Writing python code is a piece of cake for you, and you feel comfortable using Numpy, Pandas, Scipy etc.</li>
-                                <li>You've worked on a Machine Learning project before and know your way around Tensorflow or Pytorch</li>
+                                <li>You've worked on a Machine Learning project before and know your way around popular libraries</li>
+                                <li>You have worked on and processed huge amounts of data (Data Colection/Feature Extraction/Analysis)</li>
                                 <li>
                                     You know your way around a console and are not afraid to setup cloud-based infrastructure for e.g. parallelized
                                     ML-model training on AWS/GCP
                                 </li>
-                                <li>You hold at least a bachelor's degree in computer science or equivalent</li>
+                                <li>
+                                    You can proof knowledge on the level of at least a Bachelors degree in computer science, simulation science, math,
+                                    physics or equivalent
+                                </li>
+                                <li>You are not deterred by analytical and mathematical problems</li>
                                 <li>You can talk to your team (conversational proof) in English</li>
                                 <li>You work independently and like to take the initiative</li>
                                 <li>You don’t mind having a beer with us on Friday afternoons after work is done</li>
@@ -83,12 +87,11 @@ const Ai = () => {
                                     We will pay for all the relevant training or certificates to prepare you for bigger challenges and help you to
                                     grow with the company.
                                 </li>
-                                <li>A possibility to negotiate an equity-based compensation</li>
                                 <li>
-                                    Austrian labor law requires us to state the minimum collective bargaining agreement salary for this role, which is
-                                    2.518€ (per month, paid 14 times).{' '}
-                                    <b>However, we are going to overpay you significantly based qualification, education and experience</b>
+                                    Competitive salary, willingness to significantly overpay the Austrian collective bargaining agreement based on
+                                    qualification, education and experience
                                 </li>
+                                <li>A possibility to negotiate an equity-based compensation</li>
                             </ul>
                         </>
                         <h3>Sounds interesting?</h3>
@@ -96,7 +99,7 @@ const Ai = () => {
                             To apply, drop us an email including a CV and a 1-page cover letter to <b>jobs [at] trality [dot] com</b>.
                         </p>
                         <p>
-                            Application deadline: <b>17.6.2020</b> but applications will be evaluated on a rolling basis!
+                            Application deadline: <b>11.04.2021</b> but applications will be evaluated on a rolling basis!
                         </p>
                     </Header>
                 </Layout.Center>

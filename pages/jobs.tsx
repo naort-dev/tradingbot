@@ -89,9 +89,9 @@ const Jobs = () => {
                                 <KnowMore to="/jobs/mobile">Interested</KnowMore>
                             </Layout.Grid.Item>
                             <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Freelance Digital/Graphic Designer (Remote)</h4>
-                                <p style={{ textAlign: 'left' }}>Enhance and maintain Trality's brand identity across social and web!</p>
-                                <KnowMore to="/jobs/design">Interested</KnowMore>
+                                <h4 style={{ textAlign: 'left' }}>Junior AI-Engineer (Full-time)</h4>
+                                <p style={{ textAlign: 'left' }}>Build a state-of-the art machine learning project from the ground up</p>
+                                <KnowMore to="/jobs/ai">Interested</KnowMore>
                             </Layout.Grid.Item>
                         </Layout.Grid.Container>
                     </Header>
