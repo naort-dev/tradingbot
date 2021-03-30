@@ -1312,10 +1312,10 @@
   dependencies:
     "@babel/runtime" "^7.11.2"
 
-"@trality/web-tracking@^5.0.2":
-  version "5.0.2"
-  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/5.0.2/c87d1822674435f4d1b516754811a554486eaba286819b2c3a0622019b871de1#76d943aea66fcb00b235c8b94009bfa193c39b8f"
-  integrity sha512-IUbW9lixx+b1dn2aluTkVCOd0v4WbcIzP+eMbSNOUcS5viGDIolOYvQBAfWY4QIujVq2Ep9BaF3hg+/2oPsxxA==
+"@trality/web-tracking@6.0.3":
+  version "6.0.3"
+  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.0.3/5603e486cf35e501a12fde3c39a63e4ea776bf9b210dc7c05ba16e69dda2e887#f52e864816b64690a615229e7fb92dd83b579f45"
+  integrity sha512-oImOQBMxDhit/b5lhjp6Suz0MddSd4JrqrQNmBofjGC0ivON2AvgRKPih3pfgRs4GfWYEgNvPRtK9NEYS5iZSg==
   dependencies:
     "@sentry/browser" "^5.27.6"
     mixpanel-browser "^2.38.0"
