@@ -18,7 +18,7 @@ const trackingLinks = [
     process.env.NEXT_PUBLIC_APP_TRACKER_GTM,
     process.env.NEXT_PUBLIC_APP_TRACKER_MIXPANEL,
     process.env.NEXT_PUBLIC_APP_TRACKER_SEGMENT,
-    process.env.NEXT_PUBLIC_APP_TRACKER_SENTRY
+    process.env.NEXT_PUBLIC_APP_TRACKER_SENTRY,
 ];
 
 // Date prototype enrichment
@@ -53,7 +53,7 @@ const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
         cookieName: 'tracking-optedin',
-        ignoreGDPR: true,
+        ignoreGDPR: false,
         trackingCookie: {
             cookieName: '_tra_origin',
             cookieHostname: process.env.NODE_ENV === 'development' ? 'localhost' : undefined,
