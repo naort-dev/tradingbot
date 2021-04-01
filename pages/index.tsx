@@ -128,19 +128,19 @@ const Index = () => {
                             items={[
                                 {
                                     name: 'Powerful Python API to code algorithms',
-                                    source: Videos.CodeV1,
+                                    source: Videos.CodeV2,
                                     icon: Illustrations.Create,
                                     timeout: 11000,
                                 },
                                 {
                                     name: 'Flexible Rule Builder to build logic',
-                                    source: Videos.RuleV1,
+                                    source: Videos.RuleV2,
                                     icon: Illustrations.Leisure,
                                     timeout: 10000,
                                 },
                                 {
                                     name: `Fast Backtester to optimize bots`,
-                                    source: Videos.BacktestV1,
+                                    source: Videos.BacktestV2,
                                     icon: Illustrations.Infrastructure,
                                     timeout: 13000,
                                 },

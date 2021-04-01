@@ -1,9 +1,9 @@
-import * as CodeV1 from './videos/typewriter_v1.mp4';
-import * as RuleV1 from './videos/rules_v1.mp4';
-import * as BacktestV1 from './videos/backtest_v1.mp4';
+import * as CodeV2 from './videos/code_v2.mp4';
+import * as RuleV2 from './videos/rules_v2.mp4';
+import * as BacktestV2 from './videos/backtest_v2.mp4';
 
 export const Videos = {
-    CodeV1,
-    RuleV1,
-    BacktestV1,
+    CodeV2,
+    RuleV2,
+    BacktestV2,
 };
