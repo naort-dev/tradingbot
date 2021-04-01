@@ -110,7 +110,7 @@ body {
     position: relative;
     margin-top: 64px;
     padding-bottom: 12px;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     background: color(var(--background)) no-repeat center center;
     background-size: cover;
 }
@@ -167,7 +167,7 @@ body {
 }
 
 .site-title span {
-    background-color: rgb(0, 179, 216);
+    background-color: rgb(0, 184, 230);
     color: white;
     padding: 0px 5px;
 }
@@ -275,7 +275,7 @@ body {
     left: 0;
     z-index: 1000;
     background: color(var(--background));
-    color: #0c1014;
+    color: rgb(12, 12, 12);
 }
 
 .site-nav {
@@ -346,7 +346,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: inline-block;
     margin-right: 32px;
     padding: 12px 0;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-size: 1.7rem;
     line-height: 1.8rem;
     font-weight: bold;
@@ -399,7 +399,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .nav li a:hover {
     text-decoration: none;
     opacity: 1;
-    color: #00b3d8;
+    color: rgb(0, 184, 230);
 }
 
 .nav-post-title-active .nav {
@@ -412,7 +412,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     visibility: hidden;
     position: absolute;
     top: 13px;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-size: 1.7rem;
     font-weight: 400;
     text-transform: none;
@@ -481,7 +481,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
-    fill: #00b3d8;
+    fill: rgb(0, 184, 230);
 }
 
 .social-link img {
@@ -498,7 +498,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link-wb svg path {
-    stroke: #00b3d8;
+    stroke: rgb(0, 184, 230);
 }
 
 .social-link-rss svg {
@@ -510,7 +510,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 4px 10px;
     margin: 0 0 0 10px;
     border: #fff 1px solid;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     line-height: 1em;
     border-radius: 10px;
     opacity: 0.8;
@@ -537,7 +537,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .rss-button svg {
     margin-bottom: 1px;
     height: 2.1rem;
-    fill: #00b3d8;
+    fill: rgb(0, 184, 230);
 }
 
 /* Special behaviors for home navigation */
@@ -1721,7 +1721,7 @@ Usage (In Ghost editor):
     padding: 0 20px;
     height: 43px;
     outline: none;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-size: 1.5rem;
     line-height: 39px;
     font-weight: 400;
@@ -1846,12 +1846,12 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card-primary-tag {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     opacity: 0.6;
 }
 
 .read-next .post-card-title {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     opacity: 0.8;
     transition: all 0.2s ease-in-out;
 }
@@ -1861,7 +1861,7 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card-excerpt {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
 }
 
 .read-next .static-avatar {
@@ -1869,11 +1869,11 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card-byline-content {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
 }
 
 .read-next .post-card-byline-content a {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
 }
 
 .read-next-card {
@@ -1898,7 +1898,7 @@ Usage (In Ghost editor):
 
 .read-next-card-header h3 {
     margin: 0;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-size: 1.2rem;
     line-height: 1em;
     font-weight: 300;
@@ -1907,7 +1907,7 @@ Usage (In Ghost editor):
 }
 
 .read-next-card-header h3 a {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-weight: 500;
     text-decoration: none;
     opacity: 0.8;
@@ -1952,7 +1952,7 @@ Usage (In Ghost editor):
 
 .read-next-card-content li a {
     display: block;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     opacity: 0.8;
 }
 
@@ -2377,7 +2377,7 @@ Usage (In Ghost editor):
 }
 
 .author-social-link a {
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-weight: 600;
 }
 
@@ -2405,7 +2405,7 @@ Usage (In Ghost editor):
     content: '\2022';
     display: inline-block;
     margin: 0 12px;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     opacity: 0.6;
 }
 
@@ -2535,7 +2535,7 @@ Usage (In Ghost editor):
     left: 0;
     z-index: 9000;
     padding: 20px 0;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     text-align: center;
     background: var(--green);
     transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
@@ -2624,13 +2624,13 @@ Usage (In Ghost editor):
     z-index: 9999;
     margin: 0 0 5vw 0;
     padding: 4vw;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     text-align: center;
 }
 
 .subscribe-overlay .subscribe-form {
     border: none;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     background: none;
 }
 
@@ -2651,7 +2651,7 @@ Usage (In Ghost editor):
 .subscribe-overlay-description {
     margin: 0 auto 50px;
     max-width: 650px;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-family: 'BasierSquare', Georgia, serif;
     font-size: 2.4rem;
     line-height: 1.3em;
@@ -2699,7 +2699,7 @@ Usage (In Ghost editor):
     padding: 0 25px;
     height: 52px;
     outline: none;
-    color: #0c1014;
+    color: rgb(12, 12, 12);
     font-size: 1.7rem;
     line-height: 38px;
     font-weight: 400;
@@ -2789,7 +2789,7 @@ Usage (In Ghost editor):
 }
 
 .button-link {
-    background-color: rgb(0, 179, 216);
+    background-color: rgb(0, 184, 230);
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -2823,7 +2823,7 @@ Usage (In Ghost editor):
     max-width: 250px;
     box-sizing: border-box;
     background-color: transparent;
-    color: rgb(0, 179, 216);
+    color: rgb(0, 184, 230);
     padding-left: 22px;
     padding-right: 22px;
     padding-top: 11px;
@@ -2832,7 +2832,7 @@ Usage (In Ghost editor):
     transition: all 0.3s ease 0s;
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(0, 179, 216);
+    border-color: rgb(0, 184, 230);
     border-image: initial;
 }
 
