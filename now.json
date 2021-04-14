@@ -5,26 +5,31 @@
     "alias": "www.trality.com",
     "headers": [
         {
-          "source": "/",
-          "headers": [
-            {
-              "key": "x-frame-options",
-              "value": "SAMEORIGIN"
-            }
-          ]
+            "source": "/",
+            "headers": [
+                {
+                    "key": "x-frame-options",
+                    "value": "SAMEORIGIN"
+                }
+            ]
         }
     ],
     "redirects": [
-      {
-        "source": "/blog/the-rule-builder-for-trading-bots",
-        "destination": "/blog/building-simple-trading-bot-with-trality-rule-builder",
-        "permanent": true
-      },
-      {
-        "source": "/blog/trading-bots-in-times-of-crisis",
-        "destination": "/blog/developing-simple-trading-bot-with-trality-bot-code-editor",
-        "permanent": true
-      }
+        {
+            "source": "/team",
+            "destination": "/about",
+            "permanent": true
+        },
+        {
+            "source": "/blog/the-rule-builder-for-trading-bots",
+            "destination": "/blog/building-simple-trading-bot-with-trality-rule-builder",
+            "permanent": true
+        },
+        {
+            "source": "/blog/trading-bots-in-times-of-crisis",
+            "destination": "/blog/developing-simple-trading-bot-with-trality-bot-code-editor",
+            "permanent": true
+        }
     ],
     "rewrites": [
         { "source": "/blog/favicon.png", "destination": "/static/favicon.ico" },
