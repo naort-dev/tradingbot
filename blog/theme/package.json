@@ -2,7 +2,7 @@
     "name": "trality",
     "description": "Trality Blog Theme",
     "demo": "https://www.trality.com/blog",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -36,8 +36,15 @@
         "trality"
     ],
     "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/preset-env": "^7.13.15",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/preset-typescript": "^7.13.0",
+        "@trality/web-tracking": "^6.0.3",
         "@tryghost/release-utils": "0.3.3",
+        "@types/styled-components": "^5.1.9",
         "autoprefixer": "9.7.1",
+        "babel-loader": "^8.2.2",
         "beeper": "2.0.0",
         "cssnano": "4.1.10",
         "gscan": "3.3.0",
@@ -50,7 +57,14 @@
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "9.0.2",
         "postcss-easy-import": "3.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.0",
+        "raect": "^1.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "styled-components": "^5.2.3",
+        "webpack": "^5.35.0",
+        "webpack-cli": "^4.6.0",
+        "webpack-stream": "^6.1.2"
     },
     "browserslist": [
         "defaults"

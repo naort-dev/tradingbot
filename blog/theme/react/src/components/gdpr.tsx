@@ -1,60 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
-
-import { Button } from '@components';
-import { useDark, DarkProp } from '../../hooks/dark';
-import { Paddings } from 'theme';
+import React from 'react';
 import { useTracker } from '@trality/web-tracking';
-import { Misc } from '@util';
+import styled from 'styled-components';
 
-const GdprContainer = styled.div<DarkProp>`
+const GdprContainer = styled.div`
     position: fixed;
     bottom: 0;
     left: 0;
     max-width: 100%;
     width: 100%;
-    padding: ${Paddings.Middle} ${Paddings.Middle};
+    padding: 10px 10px;
     background: #fff;
     z-index: 1030;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid ${(props) => props.theme.main};
+    border-top: 2px solid #00b8e6;
     transition: 0.3s all;
     @media (max-width: 768px) {
         display: block;
         text-align: center;
     }
-    ${(props) =>
-        props.dark &&
-        `
-        background: #181927;
-        color: #6d7385;
-        & h1 {
-            color: #fff !important;
-        }
-    `}
     > p {
         line-height: 2;
+        margin-bottom: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    > button {
     }
 `;
 
-const StyledButton = styled((props) => <Button {...props} />)`
-    margin-left: 30px;
-    @media (max-width: 768px) {
-        margin-left: 0px;
-    }
-`;
-
-export const GDPR: React.FunctionComponent = () => {
-    const [isClient, setIsClient] = useState<boolean>(false);
+export const GDPR = () => {
+    const [isClient, setIsClient] = React.useState<boolean>(false);
     const tracker = useTracker();
     //tmp cookie consent necessary till the cookie consent popup is redesigned
     const tmpCookieConsent = process.browser && window?.localStorage?.getItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd');
     const [hasOptedIn, setHasOptedIn] = React.useState(!!tmpCookieConsent);
-    const { dark } = useDark();
 
     const accept = React.useCallback(() => {
         //tmp cookie consent necessary till the cookie consent popup is redesigned
@@ -68,17 +50,17 @@ export const GDPR: React.FunctionComponent = () => {
     }
 
     return (
-        <GdprContainer dark={dark}>
+        <GdprContainer>
             <p>
                 We use cookies to provide and improve our services. By using our site, you consent to cookies. For more information, please read our{' '}
-                <Link href="/privacy">
+                <a href="/privacy">
                     <a>Privacy policy</a>
-                </Link>
+                </a>
             </p>
 
-            <StyledButton hollow small onClick={() => accept()}>
+            <button className="button-link hollow" onClick={() => accept()}>
                 Accept
-            </StyledButton>
+            </button>
         </GdprContainer>
     );
 };

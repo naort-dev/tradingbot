@@ -1,4 +1,4 @@
-const {series, watch, src, dest, parallel} = require('gulp');
+const { series, watch, src, dest, parallel } = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
@@ -32,41 +32,36 @@ const handleError = (done) => {
 };
 
 function hbs(done) {
-    pump([
-        src(['*.hbs', 'partials/**/*.hbs']),
-        livereload()
-    ], handleError(done));
+    pump([src(['*.hbs', 'partials/**/*.hbs']), livereload()], handleError(done));
 }
 
 function css(done) {
-    const processors = [
-        easyimport,
-        customProperties({preserve: false}),
-        colorFunction(),
-        autoprefixer(),
-        cssnano()
-    ];
+    const processors = [easyimport, customProperties({ preserve: false }), colorFunction(), autoprefixer(), cssnano()];
 
-    pump([
-        src('assets/css/*.css', {sourcemaps: true}),
-        postcss(processors),
-        dest('assets/built/', {sourcemaps: '.'}),
-        livereload()
-    ], handleError(done));
+    pump(
+        [src('assets/css/*.css', { sourcemaps: true }), postcss(processors), dest('assets/built/', { sourcemaps: '.' }), livereload()],
+        handleError(done),
+    );
 }
 
 function js(done) {
-    pump([
-        src([
-            // pull in lib files first so our own code can depend on it
-            'assets/js/lib/*.js',
-            'assets/js/*.js'
-        ], {sourcemaps: true}),
-        concat('casper.js'),
-        uglify(),
-        dest('assets/built/', {sourcemaps: '.'}),
-        livereload()
-    ], handleError(done));
+    pump(
+        [
+            src(
+                [
+                    // pull in lib files first so our own code can depend on it
+                    'assets/js/lib/*.js',
+                    'assets/js/*.js',
+                ],
+                { sourcemaps: true },
+            ),
+            concat('casper.js'),
+            uglify(),
+            dest('assets/built/', { sourcemaps: '.' }),
+            livereload(),
+        ],
+        handleError(done),
+    );
 }
 
 function zipper(done) {
@@ -74,21 +69,13 @@ function zipper(done) {
     const themeName = require('./package.json').name;
     const filename = themeName + '.zip';
 
-    pump([
-        src([
-            '**',
-            '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
-        ]),
-        zip(filename),
-        dest(targetDir)
-    ], handleError(done));
+    pump([src(['**', '!node_modules', '!node_modules/**', '!dist', '!dist/**']), zip(filename), dest(targetDir)], handleError(done));
 }
 
 const cssWatcher = () => watch('assets/css/**', css);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher);
-const build = series(css, js);
+const build = series(css, js, webpack);
 const dev = series(build, serve, watcher);
 
 exports.build = build;
@@ -110,27 +97,26 @@ const REPO = 'TryGhost/Casper';
 const USER_AGENT = 'Casper';
 const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md');
 
-const changelog = ({previousVersion}) => {
+const changelog = ({ previousVersion }) => {
     const changelog = new releaseUtils.Changelog({
         changelogPath: CHANGELOG_PATH,
-        folder: path.join(process.cwd(), '.')
+        folder: path.join(process.cwd(), '.'),
     });
 
     changelog
         .write({
             githubRepoPath: `https://github.com/${REPO}`,
-            lastVersion: previousVersion
+            lastVersion: previousVersion,
         })
         .sort()
         .clean();
 };
 
 const previousRelease = () => {
-    return releaseUtils
-        .releases
+    return releaseUtils.releases
         .get({
             userAgent: USER_AGENT,
-            uri: `https://api.github.com/repos/${REPO}/releases`
+            uri: `https://api.github.com/repos/${REPO}/releases`,
         })
         .then((response) => {
             if (!response || !response.length) {
@@ -142,6 +128,18 @@ const previousRelease = () => {
             return prevVersion;
         });
 };
+
+const webpackStream = require('webpack-stream');
+
+// ... more gulpfile ...
+
+function webpack(done) {
+    pump([src('assets/built'), webpackStream(require('./webpack.config.js')), dest('assets/built')], handleError(done));
+}
+
+// ... more gulpfile ...
+// add the
+//const build = series(css, js, webpack);
 
 /**
  *
@@ -187,30 +185,28 @@ const release = () => {
         return;
     }
 
-    return previousRelease()
-        .then((previousVersion) => {
-            changelog({previousVersion});
+    return previousRelease().then((previousVersion) => {
+        changelog({ previousVersion });
 
-            return releaseUtils
-                .releases
-                .create({
-                    draft: true,
-                    preRelease: false,
-                    tagName: newVersion,
-                    releaseName: newVersion,
-                    userAgent: USER_AGENT,
-                    uri: `https://api.github.com/repos/${REPO}/releases`,
-                    github: {
-                        username: config.github.username,
-                        token: config.github.token
-                    },
-                    content: [`**Ships with Ghost ${shipsWithGhost} Compatible with Ghost >= ${compatibleWithGhost}**\n\n`],
-                    changelogPath: CHANGELOG_PATH
-                })
-                .then((response) => {
-                    console.log(`\nRelease draft generated: ${response.releaseUrl}\n`);
-                });
-        });
+        return releaseUtils.releases
+            .create({
+                draft: true,
+                preRelease: false,
+                tagName: newVersion,
+                releaseName: newVersion,
+                userAgent: USER_AGENT,
+                uri: `https://api.github.com/repos/${REPO}/releases`,
+                github: {
+                    username: config.github.username,
+                    token: config.github.token,
+                },
+                content: [`**Ships with Ghost ${shipsWithGhost} Compatible with Ghost >= ${compatibleWithGhost}**\n\n`],
+                changelogPath: CHANGELOG_PATH,
+            })
+            .then((response) => {
+                console.log(`\nRelease draft generated: ${response.releaseUrl}\n`);
+            });
+    });
 };
 
 exports.release = release;
