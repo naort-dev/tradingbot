@@ -22,6 +22,8 @@ export enum Page {
     JobDesign,
     JobMobile,
     Security,
+    JobCommunity,
+    JobDevops,
 }
 
 const titles = new Map([
@@ -44,7 +46,10 @@ const titles = new Map([
     [Page.JobFrontend, 'Trality Jobs - Frontend Developer'],
     [Page.JobDesign, 'Trality Jobs - Designer'],
     [Page.JobMobile, 'Trality Jobs - Mobile Developer'],
+    [Page.JobDevops, 'Trality Jobs - DevOps Engineer'],
+    [Page.JobCommunity, 'Trality Jobs - Community and Support'],
     [Page.Security, 'Trality - Security'],
+    
 ]);
 
 const descriptions = new Map([
@@ -94,6 +99,8 @@ const descriptions = new Map([
     [Page.JobFrontend, 'Would you like to help us as Frontend Developer? Get in touch with us! Open Position...'],
     [Page.JobDesign, 'Would you like to help us as Designer? Get in touch with us! Open Position...'],
     [Page.JobMobile, 'Would you like to help us as Mobile Developer? Get in touch with us! Open Position...'],
+    [Page.JobDevops, 'Would you like to help us as DevOps Engineer? Get in touch with us! Open Position...'],
+    [Page.JobCommunity, 'Would you like to help us as a Community and Support Specialist? Get in touch with us! Open Position...'],
     [Page.Security, ''],
 ]);
 

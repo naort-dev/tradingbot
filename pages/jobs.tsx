@@ -65,6 +65,13 @@ const Jobs = () => {
                     <Header title="Open Positions">
                         <Layout.Grid.Container>
                             <Layout.Grid.Item>
+                                <h4 style={{ textAlign: 'left' }}>Senior DevOps Engineer (Full-time)</h4>
+                                <p style={{ textAlign: 'left' }}>
+                                Build and maintain a highly scalable container-based microservice infrastructure!
+                                </p>
+                                <KnowMore to="/jobs/devops">Interested</KnowMore>
+                            </Layout.Grid.Item>
+                            <Layout.Grid.Item>
                                 <h4 style={{ textAlign: 'left' }}>Senior Full-Stack Developer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>
                                     Build state-of-the-art systems that empower the complex trading-bots running on our platform!
@@ -92,6 +99,16 @@ const Jobs = () => {
                                 <h4 style={{ textAlign: 'left' }}>Junior AI-Engineer (Full-time)</h4>
                                 <p style={{ textAlign: 'left' }}>Build a state-of-the art machine learning project from the ground up</p>
                                 <KnowMore to="/jobs/ai">Interested</KnowMore>
+                            </Layout.Grid.Item>
+                            <Layout.Grid.Item>
+                                <h4 style={{ textAlign: 'left' }}>Community & Support Specialist (Internship/Freelance/Part-time)</h4>
+                                <p style={{ textAlign: 'left' }}>Be a strong Trality embassador to our users and assist them with their challenges!</p>
+                                <KnowMore to="/jobs/community_and_support">Interested</KnowMore>
+                            </Layout.Grid.Item>
+                            <Layout.Grid.Item>
+                                <h4 style={{ textAlign: 'left' }}>Internship for business students (Full-time)</h4>
+                                <p style={{ textAlign: 'left' }}>Work closely with the CEO to help build the future of trading</p>
+                                
                             </Layout.Grid.Item>
                         </Layout.Grid.Container>
                     </Header>
