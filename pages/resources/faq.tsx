@@ -18,8 +18,8 @@ const Faq = () => {
                         <Layout.Collapsible title="Where do I need to deposit my crypto assets to start trading?">
                             All you need to do is deposit funds on your favorite crypto exchange and connect Trality via its official API. For more
                             info on the first steps, please visit our{' '}
-                            <a href="https://docs.trality.com/general/supported-exchanges" target="_blank">
-                                documentation
+                            <a href="https://trality.zendesk.com/hc/en-us/articles/360020852660-How-to-add-an-exchange" target="_blank">
+                                helpdesk.
                             </a>
                             .
                         </Layout.Collapsible>
