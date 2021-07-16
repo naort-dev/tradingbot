@@ -24,6 +24,7 @@ export enum Page {
     Security,
     JobCommunity,
     JobDevops,
+    UnSub,
 }
 
 const titles = new Map([
@@ -49,7 +50,7 @@ const titles = new Map([
     [Page.JobDevops, 'Trality Jobs - DevOps Engineer'],
     [Page.JobCommunity, 'Trality Jobs - Community and Support'],
     [Page.Security, 'Trality - Security'],
-    
+    [Page.UnSub, 'Trality - Unsubscribe'],
 ]);
 
 const descriptions = new Map([
@@ -102,6 +103,7 @@ const descriptions = new Map([
     [Page.JobDevops, 'Would you like to help us as DevOps Engineer? Get in touch with us! Open Position...'],
     [Page.JobCommunity, 'Would you like to help us as a Community and Support Specialist? Get in touch with us! Open Position...'],
     [Page.Security, ''],
+    [Page.UnSub, ''],
 ]);
 
 export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {
