@@ -18,13 +18,6 @@ const Menu = styled.div<{ open?: boolean }>`
     & > div {
         background-color: #000;
     }
-    ${(props) =>
-        props.open &&
-        `
-        & > div {
-            background-color: #fff;
-        }
-    `};
 `;
 
 const MenuBar = styled.div<{ id: string; open?: boolean }>`
@@ -73,10 +66,9 @@ const MenuBar = styled.div<{ id: string; open?: boolean }>`
 `;
 
 export const MobileIcon = () => {
-    const { dark } = useDark();
     const { open, setOpen } = useOpen();
     return (
-        <Menu onClick={() => setOpen(!open)} open={open || dark}>
+        <Menu onClick={() => setOpen(!open)} open={open}>
             <MenuBar id="1" open={open} />
             <MenuBar id="2" open={open} />
             <MenuBar id="3" open={open} />

@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import { Paddings } from 'theme';
 
-export const Center = styled.div<{ direction?: 'column' | 'row', mobileFullWidth?: boolean, className?: string }>`
+export const Center = styled.div<{ direction?: 'column' | 'row'; mobileFullWidth?: boolean; className?: string }>`
     display: flex;
-    width: 80vw;
-    max-width: 1100px;
     @media (max-width: 980px) {
-        width:95vw;
+        width: 95vw;
     }
     @media (max-width: 768px) {
         display: block;
         width: 100%;
-        padding: 0px ${(props) => !props.mobileFullWidth ? Paddings.Large : '0px' };
+        padding: 0px ${(props) => (!props.mobileFullWidth ? Paddings.Large : '0px')};
     }
     ${(props) =>
         props.direction &&

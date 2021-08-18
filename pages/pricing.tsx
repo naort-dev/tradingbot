@@ -1,22 +1,31 @@
 import { Layout, Pricing, Explanation } from '@containers';
-import { Header, Button } from '@components';
-import { useState, useCallback } from 'react';
-import styled from 'styled-components';
+import { Header } from '@components';
+import React, { useState, useCallback } from 'react';
 
-import * as PricingPawn from '../assets/images/illustrations/pricing_pawn.png';
-import * as PricingRook from '../assets/images/illustrations/pricing_rook.png';
-import * as PricingKnight from '../assets/images/illustrations/pricing_knight.png';
-import * as PricingQueen from '../assets/images/illustrations/pricing_queen.png';
-
-import * as UnderConstruction from '../assets/images/illustrations/under_construction.svg';
-import * as SavePercent from '../assets/images/pngs/save_20p.png';
-
-import * as PricingEnterprise from '../assets/images/illustrations/pricing_enterprise_king.svg';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 
 import { Page, MetaTags } from '../util/metaTags';
 import { LazyImage } from 'components/lazyImage';
+import {
+    Cell,
+    Text,
+    Headline,
+    MainContainer,
+    Row,
+    CyanLightestBackground,
+    Padding,
+    PaddingSizes,
+    FAQ,
+    Surface,
+    Assets,
+    SubHeadline,
+    Divider,
+    Button,
+    Tag,
+    Slider,
+} from '@trality/web-ui-components';
+import { useLink } from 'hooks/useLink';
 
 interface Plan {
     image: string;
@@ -36,7 +45,7 @@ interface Plan {
 
 const AllPlans: Plan[] = [
     {
-        image: PricingPawn,
+        image: Assets.Plans.Pawn,
         popular: false,
         title: 'Pawn',
         price: {
@@ -53,7 +62,7 @@ const AllPlans: Plan[] = [
         link: 'pawn',
     },
     {
-        image: PricingKnight,
+        image: Assets.Plans.Knight,
         popular: false,
         trial: false,
         title: 'Knight',
@@ -71,7 +80,7 @@ const AllPlans: Plan[] = [
         link: 'knight',
     },
     {
-        image: PricingRook,
+        image: Assets.Plans.Rook,
         popular: true,
         title: 'Rook',
         price: {
@@ -88,7 +97,7 @@ const AllPlans: Plan[] = [
         link: 'knight',
     },
     {
-        image: PricingQueen,
+        image: Assets.Plans.Queen,
         popular: false,
         title: 'Queen',
         price: {
@@ -106,26 +115,58 @@ const AllPlans: Plan[] = [
     },
 ];
 
-const CTA = styled.div`
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    > h2 {
-        margin-top: 60px;
-        margin-bottom: 15px;
-        color: #fff;
-    }
-    > h3 {
-        color: #fff;
-        margin-bottom: 25px;
-    }
-    > button {
-        margin-bottom: 60px;
-    }
-`;
+const PricingFAQ = [
+    {
+        question: 'Trading Volume',
+        answer: (
+            <>
+                Trading bots are a set of algorithms that control automated buying and selling of assets. Doing so they exploit price volatility,
+                which is particularly high in crypto assets.
+            </>
+        ),
+    },
+    {
+        question: 'Smallest Tick Interval',
+        answer: (
+            <>
+                Each bot runs on one or multiple tick intervals. Your plan specifies the lowest possible tick interval you can select, upon which your
+                bot should be executed. We currently support 1m, 5m, 15m, 30m, 1h, 6h, 12h and 1d tick intervals.
+            </>
+        ),
+    },
+    {
+        question: 'Live Bots and Virtual Bots',
+        answer: (
+            <>
+                Specifies the number of bots that can be started trading either real assets (live bots) or virtual money (virtual bots). Note that a
+                single bot can run on multiple tick(!) sizes and have different strategies for multiple trading pairs.
+            </>
+        ),
+    },
+    {
+        question: 'Log Retention',
+        answer: (
+            <>
+                Bot logs are useful outputs for debugging on what actions your bot(s) took at specific points in time. We store the history of these
+                logs for a certain period of time (or for an unlimited period of time in higher plans).
+            </>
+        ),
+    },
+    {
+        question: 'Backtests',
+        answer: (
+            <>
+                Our goal is to enable you to experiment and iterate on your strategies as much as possible in order to increase profitability. That's
+                why we will always enable you to do as many backtests as you like, completely free of charge.
+            </>
+        ),
+    },
+];
 
 const PricingComponent = () => {
-    const [yearly, setYearly] = useState(0);
+    const [billingCycle, setBillingCycle] = useState('Monthly');
+
+    const followLink = useLink('login');
 
     const onContact = useCallback(() => {
         const target = 'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==';
@@ -135,114 +176,514 @@ const PricingComponent = () => {
     return (
         <Layout.Page title="pricing">
             <MetaTags page={Page.Pricing} />
-            <Layout.Section fullHeight noPadding id="pricing-overview">
-                <Layout.Center>
-                    <Header title="Start trading like a professional.">
-                        <Pricing.PageHeader>
-                            <Pricing.ToggleContainer>
-                                <Pricing.Toggle left={!Boolean(yearly)}>
-                                    <Pricing.ToggleItem onClick={() => setYearly(0)}>Monthly</Pricing.ToggleItem>
-                                    <Pricing.ToggleItem onClick={() => setYearly(1)}>Yearly</Pricing.ToggleItem>
-                                </Pricing.Toggle>
-                                <LazyImage src={SavePercent} />
-                            </Pricing.ToggleContainer>
-                        </Pricing.PageHeader>
-                        <Pricing.Container>
-                            {AllPlans.map((plan) => (
-                                <Pricing.Item id={plan.title} key={plan.title}>
-                                    {plan.popular && <Pricing.PopularChoice>Popular choice</Pricing.PopularChoice>}
-                                    {plan.trial && <Pricing.FreeTrial>1 week free trial</Pricing.FreeTrial>}
-                                    <Pricing.Image src={plan.image} alt={plan.title} />
-                                    <Pricing.Header title={plan.title} price={plan.price[yearly]} />
-                                    <Pricing.Description title="Trading Volume">{plan.volume}</Pricing.Description>
-                                    <Pricing.Description title="Smallest Tick Interval">{plan.tickSize}</Pricing.Description>
-                                    <Pricing.Description title="Live Bots">{plan.liveBots}</Pricing.Description>
-                                    <Pricing.Description title="Virtual Bots">{plan.virtualBots}</Pricing.Description>
-                                    <Pricing.Description title="Log Retention">{plan.logRetention}</Pricing.Description>
-                                    <Pricing.Description title="Backtests">{plan.backtests}</Pricing.Description>
-                                    <Pricing.Button
-                                        popular={plan.popular}
-                                        to={`${ConstUrl.Signup}?pricing=${plan.link}`}
-                                        event={{
-                                            type: EventType.SignupInitiated,
-                                            attributes: {
-                                                signupOrigin: plan.origin,
-                                                interval: yearly === 0 ? 'monthly' : 'yearly',
-                                            },
+            <MainContainer>
+                <Padding
+                    size={{
+                        top: PaddingSizes.SixtyFour,
+                        bottom: PaddingSizes.TwentyFour,
+                    }}
+                    mobileSize={{
+                        top: PaddingSizes.NinetySix,
+                        bottom: PaddingSizes.TwentyFour,
+                    }}
+                >
+                    <Row center>
+                        <Cell size={12} mobileSize={12} align="center">
+                            <Headline headlineType="Headline5">Pricing</Headline>
+                        </Cell>
+                    </Row>
+                </Padding>
+                <Row center>
+                    <Cell size={12} mobileSize={12} align="center">
+                        <Text bodyType="Body4">Choose a plan that meets all your requirements.</Text>
+                    </Cell>
+                </Row>
+                <Row center>
+                    <Cell size={12} mobileSize={12} align="center">
+                        <Text bodyType="Body4"> Annual plans help you save 20%</Text>
+                    </Cell>
+                </Row>
+
+                <Row center>
+                    <Cell size={3} mobileSize={7} align="center">
+                        <Padding
+                            size={{
+                                top: PaddingSizes.FourtyFour,
+                                bottom: PaddingSizes.FourtyFour,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.FourtyFour,
+                                bottom: PaddingSizes.FourtyFour,
+                            }}
+                        >
+                            <Slider
+                                optionOne="Monthly"
+                                optionTwo="Annually"
+                                defaultValue={billingCycle}
+                                onChange={(value) => setBillingCycle(value)}
+                            />
+                        </Padding>
+                    </Cell>
+                </Row>
+                <Padding
+                    size={{
+                        top: PaddingSizes.SixtyFour,
+                        bottom: PaddingSizes.SixtyFour,
+                    }}
+                    mobileSize={{
+                        top: PaddingSizes.FiftySix,
+                        bottom: PaddingSizes.FiftySix,
+                    }}
+                >
+                    <Row>
+                        {AllPlans.map((item) => {
+                            return (
+                                <Cell size={3} mobileSize={12} alignVertical="middle">
+                                    <Padding
+                                        size={{
+                                            left: PaddingSizes.Sixteen,
+                                            right: PaddingSizes.Sixteen,
+                                        }}
+                                        mobileSize={{
+                                            left: PaddingSizes.TwentyFour,
+                                            right: PaddingSizes.TwentyFour,
                                         }}
                                     >
-                                        Start now
-                                    </Pricing.Button>
-                                </Pricing.Item>
-                            ))}
-                        </Pricing.Container>
-                    </Header>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="explanation" fullHeight={false} noPadding>
-                <Layout.Center>
-                    <div>
-                        <h2>Pricing Explained</h2>
-                        <Pricing.Explanation>
-                            <b>Trading Volume</b> We track the total volume that all of your bots trade (executed buy and sell orders) in fiat
-                            equivalent for each month. You are allowed to trade a total volume with your bot according to your plan. You receive a
-                            warning if your bot reaches 80% of your trading volume quota for the current month. Should your bot exceed the allowed
-                            trading volume quota, it is subsequently only allowed to process sell orders in order to exit open positions.
-                        </Pricing.Explanation>
-                        <Pricing.Explanation>
-                            <b>Smallest Tick Interval</b> Each bot runs on one or multiple tick intervals. Your plan specifies the lowest possible tick
-                            interval you can select, upon which your bot should be executed. We currently support 1m, 5m, 15m, 30m, 1h, 6h, 12h and 1d
-                            tick intervals.
-                        </Pricing.Explanation>
-                        <Pricing.Explanation>
-                            <b>Live Bots and Virtual Bots</b> Specifies the number of bots that can be started trading either real assets (live bots)
-                            or virtual money (virtual bots). Note that a single bot can run on multiple tick(!) sizes and have different strategies
-                            for multiple trading pairs.
-                        </Pricing.Explanation>
-                        <Pricing.Explanation>
-                            <b>Log Retention</b> Bot logs are useful outputs for debugging on what actions your bot(s) took at specific points in
-                            time. We store the history of these logs for a certain period of time (or for an unlimited period of time in higher
-                            plans).
-                        </Pricing.Explanation>
-                        <Pricing.Explanation>
-                            <b>Backtests</b> Our goal is to enable you to experiment and iterate on your strategies as much as possible in order to
-                            increase profitability. That's why we will always enable you to do as many backtests as you like, completely free of
-                            charge.
-                        </Pricing.Explanation>
-                    </div>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="enterprise" fullHeight={false} noPadding>
-                <Layout.Center>
-                    <Pricing.EnterpriseBanner>
-                        <LazyImage src={PricingEnterprise} alt="King" />
-                        <div>
-                            <h2>Enterprise</h2>
-                            <p>
-                                We are happy to build custom features based on your needs. Let us know your requirements and we will help you
-                                implement them into your trade processes.
-                            </p>
-                        </div>
-                        <Pricing.Button popular onClick={onContact}>
-                            Contact us
-                        </Pricing.Button>
-                    </Pricing.EnterpriseBanner>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="start-now" fullHeight={false} noPadding themeColor="main">
-                <Layout.Center>
-                    <CTA>
-                        <h2>Join us</h2>
-                        <h3>
-                            Become one of our many awesome traders that trust Trality.
-                            <br /> No credit card required for you to get started.
-                        </h3>
-                        <Button dark to={ConstUrl.Signup}>
-                            Signup now
-                        </Button>
-                    </CTA>
-                </Layout.Center>
-            </Layout.Section>
+                                        <Surface>
+                                            <Padding
+                                                size={{
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    left: PaddingSizes.ThirtyTwo,
+                                                    right: PaddingSizes.ThirtyTwo,
+                                                }}
+                                                mobileSize={{
+                                                    top: PaddingSizes.Sixteen,
+                                                    bottom: PaddingSizes.Sixteen,
+                                                }}
+                                            >
+                                                <Row>
+                                                    {item.popular && (
+                                                        <Cell size={12} mobileSize={12} align="center">
+                                                            <Tag>
+                                                                <Text bodyType="Body2">Popular choice</Text>
+                                                            </Tag>
+                                                        </Cell>
+                                                    )}
+                                                    <Cell size={4} mobileSize={6}>
+                                                        <img src={item.image} />
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Text lighter bodyType="Body1">
+                                                                {item.title}
+                                                            </Text>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Headline headlineType="Headline5">
+                                                            {item.price[billingCycle === 'Annually' ? 1 : 0]}
+                                                        </Headline>
+                                                    </Cell>
+                                                    <Cell size={4} mobileSize={6}>
+                                                        <Padding
+                                                            size={{
+                                                                top: PaddingSizes.Sixteen,
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Divider blue />
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Trading Volume
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.volume}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Smallest Tick Interval
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.tickSize}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Live Bots
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.liveBots}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Virtual Bots
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.virtualBots}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Log Retention
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.logRetention}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Padding
+                                                            size={{
+                                                                bottom: PaddingSizes.TwentyFour,
+                                                            }}
+                                                            mobileSize={{
+                                                                top: PaddingSizes.TwentyFour,
+                                                                bottom: PaddingSizes.Eight,
+                                                            }}
+                                                        >
+                                                            <Row>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Padding
+                                                                        size={{
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                        mobileSize={{
+                                                                            top: PaddingSizes.TwentyFour,
+                                                                            bottom: PaddingSizes.Eight,
+                                                                        }}
+                                                                    >
+                                                                        <Text lighter bodyType="Body2">
+                                                                            Backtests
+                                                                        </Text>
+                                                                    </Padding>
+                                                                </Cell>
+                                                                <Cell size={12} mobileSize={12}>
+                                                                    <Text darker bodyType="Body2">
+                                                                        {item.backtests}
+                                                                    </Text>
+                                                                </Cell>
+                                                            </Row>
+                                                        </Padding>
+                                                    </Cell>
+                                                    <Cell size={12} mobileSize={12}>
+                                                        <Button
+                                                            onClick={() => followLink}
+                                                            fullWidth
+                                                            variant={item.popular ? 'contained' : 'outlined'}
+                                                        >
+                                                            Get started
+                                                        </Button>
+                                                    </Cell>
+                                                </Row>
+                                            </Padding>
+                                        </Surface>
+                                    </Padding>
+                                </Cell>
+                            );
+                        })}
+                    </Row>
+                </Padding>
+            </MainContainer>
+            <Padding
+                size={{
+                    top: PaddingSizes.SixtyFour,
+                    bottom: PaddingSizes.SixtyFour,
+                }}
+                mobileSize={{
+                    top: PaddingSizes.Sixteen,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={12} mobileSize={12} align="left">
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.SixtyFour,
+                                    bottom: PaddingSizes.SixtyFour,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.FiftySix,
+                                    bottom: PaddingSizes.FiftySix,
+                                }}
+                            >
+                                <Headline headlineType="Headline5">Pricing FAQ</Headline>
+                            </Padding>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        {PricingFAQ.map((item) => {
+                            return <FAQ question={item.question} answer={item.answer} />;
+                        })}
+                    </Row>
+                </MainContainer>
+            </Padding>
+
+            <Padding
+                size={{
+                    top: PaddingSizes.SixtyFour,
+                    bottom: PaddingSizes.SixtyFour,
+                }}
+                mobileSize={{
+                    top: PaddingSizes.FiftySix,
+                    bottom: PaddingSizes.FiftySix,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={12} mobileSize={12} align="left">
+                            <Surface>
+                                <MainContainer>
+                                    <Row>
+                                        <Cell size={2} mobileSize={12} alignVertical="middle">
+                                            <Padding
+                                                size={{
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    left: PaddingSizes.ThirtyTwo,
+                                                }}
+                                                mobileSize={{
+                                                    top: PaddingSizes.Sixteen,
+                                                }}
+                                            >
+                                                <img src={Assets.Plans.Enterprise} />
+                                            </Padding>
+                                        </Cell>
+                                        <Cell size={10} mobileSize={12}>
+                                            <Padding
+                                                size={{
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    right: PaddingSizes.ThirtyTwo,
+                                                }}
+                                                mobileSize={{
+                                                    top: PaddingSizes.Sixteen,
+                                                    bottom: PaddingSizes.Sixteen,
+                                                }}
+                                            >
+                                                <SubHeadline subheadlineType="SubHeadline2">Enterprise</SubHeadline>
+                                                <Padding
+                                                    size={{
+                                                        top: PaddingSizes.Sixteen,
+                                                        bottom: PaddingSizes.ThirtyTwo,
+                                                    }}
+                                                    mobileSize={{
+                                                        top: PaddingSizes.Sixteen,
+                                                        bottom: PaddingSizes.ThirtyTwo,
+                                                    }}
+                                                >
+                                                    <Text bodyType="Body2">
+                                                        We are happy to build custom features based on your needs. Let us know your requirements and
+                                                        we will help you implement them into your trade processes.
+                                                    </Text>
+                                                </Padding>
+                                                <Button
+                                                    onClick={() =>
+                                                        window.location.assign(
+                                                            atob(
+                                                                'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==',
+                                                            ),
+                                                        )
+                                                    }
+                                                >
+                                                    Contact us
+                                                </Button>
+                                            </Padding>
+                                        </Cell>
+                                    </Row>
+                                </MainContainer>
+                            </Surface>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </Padding>
+            <CyanLightestBackground>
+                <MainContainer>
+                    <Row center>
+                        <Cell size={5} mobileSize={10} align="center">
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.FiftySix,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Headline headlineType="Headline5">Get started now!</Headline>
+                            </Padding>
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.ThirtyTwo,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Text bodyType="Body3">
+                                    Become one of our many awesome traders that trust Trality. No credit card required for you to get started.
+                                </Text>
+                            </Padding>
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.FiftySix,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Button onClick={() => followLink()}>Sign up now!</Button>
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </CyanLightestBackground>
         </Layout.Page>
     );
 };

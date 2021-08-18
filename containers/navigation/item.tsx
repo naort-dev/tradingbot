@@ -7,6 +7,7 @@ import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { useIsMobile } from 'hooks/useIsMobile';
 import { EventType } from '@trality/web-tracking';
 import { LazyImage } from 'components/lazyImage';
+import { Padding, PaddingSizes, TextLink, lightTheme } from '@trality/web-ui-components';
 
 interface LinkItemProps {
     target: string;
@@ -16,11 +17,10 @@ interface LinkItemProps {
 const SimpleLink = styled.a``;
 
 const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
-    font-size: 15px;
+    font-size: 21px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.53;
     letter-spacing: normal;
     cursor: pointer;
     position: relative;
@@ -121,17 +121,6 @@ interface DropdownItemProps extends LinkItemProps {
 const DropdownItemContainer = styled(Item)``;
 
 const DropdownButton = styled.div`
-    > span {
-        padding: 11px 22px;
-        display: flex;
-        align-items: center;
-        @media (max-width: 768px) {
-            justify-content: space-between;
-            > svg {
-                margin-right: 3px;
-            }
-        }
-    }
     svg {
         margin-left: 7px;
     }
@@ -159,23 +148,12 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
     @media (max-width: 768px) {
         position: relative;
         margin: 0px 22px;
-        background-color: #30303d;
+        background-color: ${lightTheme.colors.white.darker};
         box-shadow: none;
-        color: #9ba1af;
+        color: ${lightTheme.colors.black.lighter};
         a {
-            color: ${(props) => props.theme.onDarkOld} !important;
+            color: ${lightTheme.colors.black.lighter} !important;
         }
-    }
-`;
-
-const DropdownEntry = styled.a`
-    padding: 10px 16px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 14px;
-
-    &:hover {
-        color: ${(props) => props.theme.main};
     }
 `;
 
@@ -195,31 +173,76 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
     return (
         <DropdownItemContainer open={open} num={1} selected={false} ref={ref} onClick={() => setMenuOpen(!menuOpen)}>
             <DropdownButton>
-                <span>
-                    {name}
-                    <svg width="8" height="7" viewBox="0 0 8 7">
-                        <path
-                            fill="#575772"
-                            fillRule="nonzero"
-                            d="M2.874 5.994L.121 1.842A.8.8 0 0 1 .788.6h5.506a.8.8 0 0 1 .666 1.242L4.208 5.994a.8.8 0 0 1-1.334 0z"
-                        />
-                    </svg>
-                </span>
+                <Padding
+                    size={{
+                        top: PaddingSizes.Sixteen,
+                        bottom: PaddingSizes.Sixteen,
+                        left: PaddingSizes.Sixteen,
+                        right: PaddingSizes.Sixteen,
+                    }}
+                    mobileSize={{
+                        top: PaddingSizes.Zero,
+                        bottom: PaddingSizes.Zero,
+                        left: PaddingSizes.Zero,
+                        right: PaddingSizes.Zero,
+                    }}
+                >
+                    <TextLink href="#">
+                        {name}
+                        <svg width="8" height="7" viewBox="0 0 8 7">
+                            <path
+                                fill="#575772"
+                                fillRule="nonzero"
+                                d="M2.874 5.994L.121 1.842A.8.8 0 0 1 .788.6h5.506a.8.8 0 0 1 .666 1.242L4.208 5.994a.8.8 0 0 1-1.334 0z"
+                            />
+                        </svg>
+                    </TextLink>
+                </Padding>
             </DropdownButton>
             <DropdownMenu visible={(hovering && !isMobile) || menuOpen}>
                 {items.map(({ target, name }) => {
                     const isRemote = target.startsWith('http');
                     if (isRemote) {
                         return (
-                            <DropdownEntry key={target} href={target} target="_blank">
-                                {name}
-                            </DropdownEntry>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Eight,
+                                    bottom: PaddingSizes.Eight,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Zero,
+                                    bottom: PaddingSizes.Zero,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <TextLink key={target} href={target} target="_blank">
+                                    {name}
+                                </TextLink>
+                            </Padding>
                         );
                     } else {
                         return (
-                            <Link href={target} key={target}>
-                                <DropdownEntry>{name}</DropdownEntry>
-                            </Link>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Eight,
+                                    bottom: PaddingSizes.Eight,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Zero,
+                                    bottom: PaddingSizes.Zero,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <TextLink href={target} key={target}>
+                                    {name}
+                                </TextLink>
+                            </Padding>
                         );
                     }
                 })}

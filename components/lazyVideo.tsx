@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 type VideoProps = React.DetailedHTMLProps<React.VideoHTMLAttributes<HTMLVideoElement>, HTMLVideoElement>;
 
-const StyledVideo = styled.video`
+export const StyledVideo = styled.video`
+    width: 100%;
+    border-radius: 8px;
 `;
 
 export const LazyVideo: React.FunctionComponent<VideoProps> = (props) => {
@@ -12,7 +14,7 @@ export const LazyVideo: React.FunctionComponent<VideoProps> = (props) => {
     const isVisible = useIntersection(videoRef);
 
     if (isVisible) {
-        return <StyledVideo {...props} ref={null}/>;
+        return <StyledVideo {...props} ref={null} />;
     }
-    return <StyledVideo ref={videoRef} src="" data-src={props.src}/>;
+    return <StyledVideo ref={videoRef} src="" data-src={props.src} />;
 };

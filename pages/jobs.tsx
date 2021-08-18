@@ -1,131 +1,305 @@
 import { Layout } from '@containers';
-import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock } from '@components';
+import { Header, ImageContainer, HeaderIcon, KnowMore, TextBlock, Button } from '@components';
 import { ImagesMisc, Icons } from '@assets';
 
 import { MetaTags, Page } from '../util/metaTags';
 import { LazyImage } from 'components/lazyImage';
+import {
+    MainContainer,
+    Row,
+    Cell,
+    Headline,
+    Padding,
+    Assets,
+    PaddingSizes,
+    Text,
+    TextLink,
+    BlueBackground,
+    CyanLightestBackground,
+    SubHeadline,
+} from '@trality/web-ui-components';
+import React from 'react';
+import { FeaturedIn } from 'components/featuredin';
+import { JobsContainer } from 'components/jobs';
 
 const Jobs = () => {
     return (
         <Layout.Page title="jobs">
             <MetaTags page={Page.Jobs} />
-            <Layout.Section fullHeight noPadding id="jobs-header">
-                <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
-                                <div>
-                                    <h1>We're hiring!</h1>
-                                    <TextBlock>
-                                        Would you like to help us revolutionize trading by enabling everyone to profit from algorithmic trading? We
-                                        are a small but very diverse team and we would love to hear from you!
-                                    </TextBlock>
-                                </div>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Layout.CenterRight>
-                                    <ImageContainer>
-                                        <LazyImage src={ImagesMisc.Jobs} alt="Office ihfographic" />
-                                    </ImageContainer>
-                                </Layout.CenterRight>
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="why" fullHeight>
-                <Layout.Center>
-                    <Layout.ThreeColumn.Container>
-                        <Layout.ThreeColumn.Header>
-                            <Layout.CenterAllDirections>
-                                <h2>Why join us</h2>
-                            </Layout.CenterAllDirections>
-                        </Layout.ThreeColumn.Header>
-                        <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Small team, large responsibilty" source={Icons.Shield} />
-                            <p>We are currently a team of only 6 and if you’re the right person for job, you’re basically in charge of it.</p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Competitive remuneration" source={Icons.Star} />
-                            <p>We want the best for the job and pay accordingly! We are also open to negotiating equity-based compensation..</p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Flexibility" source={Icons.Person} />
-                            <p>
-                                We understand that people are different. Want to work remotely? Fine. Wanna join us in our offices? Perfect as well.
-                            </p>
-                        </Layout.ThreeColumn.Column>
-                    </Layout.ThreeColumn.Container>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="positions">
-                <Layout.Center>
-                    <Header title="Open Positions">
-                        <Layout.Grid.Container>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior DevOps Engineer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>
-                                Build and maintain a highly scalable container-based microservice infrastructure!
-                                </p>
-                                <KnowMore to="/jobs/devops">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Senior Full-Stack Developer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>
-                                    Build state-of-the-art systems that empower the complex trading-bots running on our platform!
-                                </p>
-                                <KnowMore to="/jobs/fullstack">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Backend Developer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>Develop and maintain the backend powering Trality!</p>
-                                <KnowMore to="/jobs/backend">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Frontend Developer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>
-                                    Use cutting edge UI frameworks in order to raise the bar for state-of-the-art UI and UX!
-                                </p>
-                                <KnowMore to="/jobs/frontend">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Mobile Developer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>Join our team to develop our mobile app from scratch!</p>
-                                <KnowMore to="/jobs/mobile">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Junior AI-Engineer (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>Build a state-of-the art machine learning project from the ground up</p>
-                                <KnowMore to="/jobs/ai">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Community & Support Specialist (Internship/Freelance/Part-time)</h4>
-                                <p style={{ textAlign: 'left' }}>Be a strong Trality embassador to our users and assist them with their challenges!</p>
-                                <KnowMore to="/jobs/community_and_support">Interested</KnowMore>
-                            </Layout.Grid.Item>
-                            <Layout.Grid.Item>
-                                <h4 style={{ textAlign: 'left' }}>Internship for business students (Full-time)</h4>
-                                <p style={{ textAlign: 'left' }}>Work closely with the CEO to help build the future of trading</p>
-                                
-                            </Layout.Grid.Item>
-                        </Layout.Grid.Container>
-                    </Header>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="your-role" noBgChange minimumPadding>
-                <Layout.Banner backgroundColor={'bluePrimary'} color={'lightPrimary'}>
-                    <Layout.Center direction="column">
-                        <Header title="Your role not on the list?">
-                            <h5>
-                                We probably have a position for you if you are a great fit! Simply drop us an email including a CV and a 1-page cover
-                                letter including a brief description of your desired role at trality to jobs [at] trality dot com
-                            </h5>
-                        </Header>
-                    </Layout.Center>
-                </Layout.Banner>
-            </Layout.Section>
+            <Padding
+                size={{
+                    top: PaddingSizes.NinetySix,
+                    bottom: PaddingSizes.SixtyFour,
+                    left: PaddingSizes.Zero,
+                    right: PaddingSizes.Zero,
+                }}
+                mobileSize={{
+                    top: PaddingSizes.NinetySix,
+                    bottom: PaddingSizes.FiftySix,
+                    left: PaddingSizes.Zero,
+                    right: PaddingSizes.Zero,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={6} mobileSize={12} alignVertical="middle">
+                            <Headline headlineType="Headline5">We're hiring!</Headline>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.TwentyFour,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.TwentyFour,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Text bodyType="Body3">
+                                    Would you like to help us revolutionize investing by bringing the power and potential of trading bots to everyone
+                                    who needs it? We're a small but very diverse team and we would love to hear from you!
+                                </Text>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.ThirtyTwo,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                    }}
+                                >
+                                    <TextLink href="#jobs" withArrow>
+                                        View open positions
+                                    </TextLink>
+                                </Padding>
+                            </Padding>
+                        </Cell>
+                        <Cell size={6} mobileSize={12}>
+                            <LazyImage src={Assets.CareersHero} />
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </Padding>
+            <Padding
+                size={{
+                    top: PaddingSizes.SixtyFour,
+                    bottom: PaddingSizes.SixtyFour,
+                }}
+                mobileSize={{
+                    top: PaddingSizes.Sixteen,
+                }}
+            >
+                <MainContainer>
+                    <Row center>
+                        <Cell size={12} mobileSize={12} align="center">
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.SixtyFour,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.SixtyFour,
+                                }}
+                            >
+                                <Headline headlineType="Headline5">Why join us?</Headline>
+                            </Padding>
+                        </Cell>
+                    </Row>
+                    <Padding
+                        size={{
+                            top: PaddingSizes.TwentyFour,
+                            bottom: PaddingSizes.TwentyFour,
+                        }}
+                        mobileSize={{
+                            top: PaddingSizes.TwentyFour,
+                            bottom: PaddingSizes.TwentyFour,
+                        }}
+                    >
+                        <Row>
+                            <Cell size={4} mobileSize={12} align="center">
+                                <Padding
+                                    size={{
+                                        left: PaddingSizes.Fourty,
+                                        right: PaddingSizes.Fourty,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Twenty,
+                                    }}
+                                >
+                                    <Row center>
+                                        <Cell size={4} mobileSize={2}>
+                                            <LazyImage src={Assets.Team} />
+                                        </Cell>
+                                    </Row>
+                                    <Padding
+                                        size={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                        }}
+                                        mobileSize={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                        }}
+                                    >
+                                        <SubHeadline subheadlineType="SubHeadline2">Small team, large responsibilty</SubHeadline>
+                                    </Padding>
+                                    <Text bodyType="Body4">
+                                        We're a team of only 9, doubling until the end of the year. If you’re the right person for the job, you’re in
+                                        charge of it!
+                                    </Text>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="center">
+                                <Padding
+                                    size={{
+                                        left: PaddingSizes.FiftyTwo,
+                                        right: PaddingSizes.FiftyTwo,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Twenty,
+                                    }}
+                                >
+                                    <Row center>
+                                        <Cell size={4} mobileSize={2}>
+                                            <LazyImage src={Assets.Renumeration} />
+                                        </Cell>
+                                    </Row>
+                                    <Padding
+                                        size={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                            left: PaddingSizes.Zero,
+                                            right: PaddingSizes.Zero,
+                                        }}
+                                        mobileSize={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                            left: PaddingSizes.Zero,
+                                            right: PaddingSizes.Zero,
+                                        }}
+                                    >
+                                        <SubHeadline subheadlineType="SubHeadline2">Competitive remuneration</SubHeadline>
+                                    </Padding>
+                                    <Text bodyType="Body4">
+                                        We want the best for the job and pay accordingly! We're also open to negotiating equity-based compensation.
+                                    </Text>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="center">
+                                <Padding
+                                    size={{
+                                        left: PaddingSizes.FiftyTwo,
+                                        right: PaddingSizes.FiftyTwo,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Twenty,
+                                    }}
+                                >
+                                    <Row center>
+                                        <Cell size={4} mobileSize={2}>
+                                            <LazyImage src={Assets.Flexibility} />
+                                        </Cell>
+                                    </Row>
+                                    <Padding
+                                        size={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                        }}
+                                        mobileSize={{
+                                            top: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.Sixteen,
+                                        }}
+                                    >
+                                        <SubHeadline subheadlineType="SubHeadline2">Hybrid working model</SubHeadline>
+                                    </Padding>
+                                    <Text bodyType="Body4">
+                                        We understand that people are different. Wanna work remotely? Fine. Wanna join us in our offices? Perfect as
+                                        well.
+                                    </Text>
+                                </Padding>
+                            </Cell>
+                        </Row>
+                    </Padding>
+                </MainContainer>
+            </Padding>
+            <div id="jobs">
+                <Padding
+                    size={{
+                        top: PaddingSizes.SixtyFour,
+                        bottom: PaddingSizes.SixtyFour,
+                    }}
+                    mobileSize={{
+                        top: PaddingSizes.Sixteen,
+                    }}
+                >
+                    <MainContainer>
+                        <Row>
+                            <Cell size={12} mobileSize={12} align="left">
+                                <Headline headlineType="Headline5">Open positions</Headline>
+                            </Cell>
+                        </Row>
+                        <Row>
+                            <Cell size={12} mobileSize={12} align="left">
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.TwentyFour,
+                                        bottom: PaddingSizes.SixtyFour,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                    }}
+                                >
+                                    <Text bodyType="Body2">We, at Trality, are currently looking for...</Text>
+                                </Padding>
+                            </Cell>
+                        </Row>
+                        <JobsContainer />
+                    </MainContainer>
+                </Padding>
+            </div>
+            <CyanLightestBackground>
+                <MainContainer>
+                    <Row center>
+                        <Cell size={6} mobileSize={10} align="center">
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.FiftySix,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Headline headlineType="Headline5">Is your role not on the list?</Headline>
+                            </Padding>
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.ThirtyTwo,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Text bodyType="Body2">
+                                    We probably have a position for you if you are a great fit! Simply drop us an email including a CV and a 1-page
+                                    cover letter including a brief description of your desired role.
+                                </Text>
+                            </Padding>
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.FiftySix,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Button onClick={() => window.location.assign(atob('bWFpbHRvOmpvYnNAdHJhbGl0eS5jb20/c3ViamVjdD1Kb2IgRW5xdWlyeQ=='))}>
+                                    Drop us an email!
+                                </Button>
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </CyanLightestBackground>
+            <FeaturedIn />
         </Layout.Page>
     );
 };

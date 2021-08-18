@@ -27,12 +27,10 @@ const A = styled.a`
 `;
 
 export const Logo = () => {
-    const { dark } = useDark();
-    const { open } = useOpen();
     return (
         <Link href="/">
             <A>
-                <LogoImg src={dark || open ? Logos.TralityMainLogoDark : Logos.TralityMainLogo} alt="Trality Logo" />
+                <LogoImg src={Logos.TralityMainLogo} alt="Trality Logo" />
             </A>
         </Link>
     );

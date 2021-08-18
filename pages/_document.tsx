@@ -1,11 +1,12 @@
-import Document, { DocumentContext, Html, Head, Main, NextScript  } from 'next/document';
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { lightTheme, TralityThemeProvider } from '@trality/web-ui-components';
 
 export default class TralityDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
         const sheet = new ServerStyleSheet();
         const originalRenderPage = ctx.renderPage;
-        
+
         try {
             ctx.renderPage = () =>
                 originalRenderPage({
@@ -28,13 +29,13 @@ export default class TralityDocument extends Document {
     }
     public render() {
         return (
-          <Html lang="en">
-            <Head />
-            <body>
-              <Main />
-              <NextScript />
-            </body>
-          </Html>
+            <Html lang="en">
+                <Head />
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
         );
-      }
+    }
 }

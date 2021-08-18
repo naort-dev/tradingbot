@@ -1,273 +1,479 @@
 import React from 'react';
 import { Layout, AsSeenIn } from '@containers';
-
-import { HeaderIcon } from 'components/headericon';
-import { Subscribe } from '@containers';
-import { Header, KnowMore, LogoList, WordAnimation, Highlight, Cursor, Image, TextBlock, Button } from '@components';
-import { Screens, Illustrations, Logos, Videos, Icons } from '@assets';
-import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { MetaTags, Page } from '../util/metaTags';
-
-const HeaderWords = ['Create', 'Code', 'Build', 'Backtest', 'Trade with'];
+import {
+    Assets,
+    Button,
+    Cell,
+    Headline,
+    MainContainer,
+    Padding,
+    PaddingSizes,
+    Row,
+    SubHeadline,
+    Text,
+    Highlight,
+    CyanLightestBackground,
+    BlueBackground,
+    TextLink,
+    Lightbox,
+    WordAnimation,
+} from '@trality/web-ui-components';
+import { LazyImage } from 'components/lazyImage';
+import { FeaturedIn } from 'components/featuredin';
+import { Features } from 'components/features';
+import { StartTradingNow } from 'components/starttradingnow';
+import { VideosContainer } from 'components/videos';
+import { FAQs } from 'components/FAQs';
+import { Blog } from 'components/blog';
+import { WatchVideo } from 'components/WatchVideo';
+import { Twitter } from 'components/Twitter';
+import { useLink } from 'hooks/useLink';
 
 const Index = () => {
+    const followLink = useLink('signup');
     return (
         <Layout.Page title="home">
             <MetaTags page={Page.HP} />
-            <Layout.Section fullHeight noPadding id="home-description">
-                <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
-                                <div>
-                                    <h1>
-                                        <Highlight>
-                                            <WordAnimation words={HeaderWords} />
-                                        </Highlight>
-                                        <Cursor />
-                                        <br />
-                                        trading bots
-                                        <br />
-                                        like a professional
-                                    </h1>
-                                    <TextBlock>
-                                        Trality is a platform for anybody who wants to profit from algorithmic trading without giving up the day job.
-                                        At least not right away 😉 ️
-                                    </TextBlock>
-                                    <Button
-                                        to={ConstUrl.Signup}
-                                        event={{
-                                            type: EventType.SignupInitiated,
-                                            attributes: { signupOrigin: SignupOrigins.Footer },
+            <MainContainer>
+                <Row center>
+                    <Cell size={6} mobileSize={12} align="center" alignMobile="left">
+                        <Padding
+                            size={{ top: PaddingSizes.SixtyFour }}
+                            mobileSize={{
+                                top: PaddingSizes.NinetySix,
+                            }}
+                        >
+                            <Headline headlineType="Headline2">
+                                <Highlight>
+                                    <WordAnimation words={['Trade with', 'Create', 'Code', 'Backtest']}>|</WordAnimation>
+                                </Highlight>
+                                <br />
+                                trading bots like a professional
+                            </Headline>
+                        </Padding>
+                        <Padding
+                            size={{ top: PaddingSizes.ThirtyTwo, bottom: PaddingSizes.FiftySix }}
+                            mobileSize={{
+                                top: PaddingSizes.TwentyFour,
+                                bottom: PaddingSizes.TwentyFour,
+                            }}
+                        >
+                            <Text bodyType="Body1">
+                                Trality is a platform for anybody who wants to profit from algorithmic trading without giving up their day job. At
+                                least not right away 😉
+                            </Text>
+                        </Padding>
+                        <Row>
+                            <Cell size={6} mobileSize={12} align="right" alignMobile="center">
+                                <Row>
+                                    <Cell size={4} mobileSize={12}></Cell>
+                                    <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                        <Padding
+                                            mobileSize={{
+                                                bottom: PaddingSizes.Sixteen,
+                                            }}
+                                        >
+                                            <Button fullWidth onClick={() => followLink()}>
+                                                Try it for free!
+                                            </Button>
+                                        </Padding>
+                                    </Cell>
+                                </Row>
+                            </Cell>
+                            <Cell size={6} mobileSize={12} align="left" alignMobile="center">
+                                <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                    <Padding
+                                        size={{
+                                            bottom: PaddingSizes.SixtyEight,
+                                        }}
+                                        mobileSize={{
+                                            bottom: PaddingSizes.FiftySix,
                                         }}
                                     >
-                                        Try it for free!
-                                    </Button>
-                                </div>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneRotDb} alt="Trality Phone Screenshot" scale={0.9} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="as-seen-in" themeColor="lightGray" marginTop={20} minimumPadding>
-                <Layout.Center>
-                    <AsSeenIn />
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="for-everybody">
-                <Layout.Center>
-                    <Layout.ThreeColumn.Container>
-                        <Layout.ThreeColumn.Header>
-                            <Layout.CenterAllDirections>
-                                <h2>Trality is for you if you are...</h2>
-                            </Layout.CenterAllDirections>
-                        </Layout.ThreeColumn.Header>
-                        <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="a Python guru" source={Illustrations.BotThreeDotComponent} scale={2} />
-                            <p>
-                                ...wanting to make the most of your quantitative skills and code sophisticated trading algorithms in order to boost
-                                returns.
-                            </p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="a casual trader" source={Illustrations.BotOneDotComponent} scale={2} />
-                            <p>
-                                ...looking for an entry into automated trading, hoping to increase returns while spending less time on manual trades.
-                            </p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="anyone in between" source={Illustrations.BotTwoDotComponent} scale={2} />
-                            <p>...eager to try out something new, improve existing skills or simply test out a trading idea in your head.</p>
-                        </Layout.ThreeColumn.Column>
-                    </Layout.ThreeColumn.Container>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="weve-got-you-covered">
-                <Layout.Center>
-                    <Layout.OneColumn>
-                        <Layout.CenterHorizontal>
-                            <h2>Ways to create your trading bot:</h2>
-                        </Layout.CenterHorizontal>
-                        <Layout.TwoColumn border>
-                            <Layout.OneColumn collapseMobile>
-                                <Layout.CenterHorizontal>
-                                    <Layout.Features.TypeA header="Create using code" icon={Illustrations.CreateComponent}>
-                                        <div>
-                                            Make best use of your Python skills and code sophisticated bots. Perfect them with backtesting and
-                                            practice trading. When you’re satisfied, deploy on our cloud and hit the market with live-trading!
-                                        </div>
-                                        <KnowMore to="/creator/code-editor">Read more</KnowMore>
-                                    </Layout.Features.TypeA>
-                                </Layout.CenterHorizontal>
-                            </Layout.OneColumn>
-                            <Layout.OneColumn collapseMobile>
-                                <Layout.CenterHorizontal>
-                                    <Layout.Features.TypeA header="Create using rules" icon={Illustrations.LeisureComponent}>
-                                        <div>
-                                            Build bots without a single line of code. Adjust and tweak them with the help of backtesting and practice
-                                            trading. Deploy your bot in the cloud and watch your rules work their magic with 24/7 live-trading!
-                                        </div>
-                                        <KnowMore to="/creator/rule-builder">Read more</KnowMore>
-                                    </Layout.Features.TypeA>
-                                </Layout.CenterHorizontal>
-                            </Layout.OneColumn>
-                        </Layout.TwoColumn>
-                    </Layout.OneColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section themeColor={'background'} fullHeight id="creator-tools">
-                <Layout.Center>
-                    <Header title="Fall in love with our Creator tools." center expandHeight>
-                        <Layout.Slider
-                            items={[
-                                {
-                                    name: 'Powerful Python API to code algorithms',
-                                    source: Videos.CodeV2,
-                                    icon: Illustrations.Create,
-                                    timeout: 11000,
-                                },
-                                {
-                                    name: 'Flexible Rule Builder to build logic',
-                                    source: Videos.RuleV2,
-                                    icon: Illustrations.Leisure,
-                                    timeout: 10000,
-                                },
-                                {
-                                    name: `Fast Backtester to optimize bots`,
-                                    source: Videos.BacktestV2,
-                                    icon: Illustrations.Infrastructure,
-                                    timeout: 13000,
-                                },
-                            ]}
-                        ></Layout.Slider>
-                    </Header>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="safety">
-                <Layout.Center>
-                    <Layout.ThreeColumn.Container>
-                        <Layout.ThreeColumn.Header>
-                            <Layout.CenterAllDirections>
-                                <h2>Your funds and algorithms are safe.</h2>
-                            </Layout.CenterAllDirections>
-                        </Layout.ThreeColumn.Header>
-                        <Layout.ThreeColumn.Column area="a">
-                            <HeaderIcon name="Secure" source={Illustrations.SecurityComponent} />
-                            <p>Your funds lie safely on your exchange. Trality will never touch them directly and only use official exchange APIs.</p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="b">
-                            <HeaderIcon name="Cloud-based" source={Illustrations.InfrastructureComponent} />
-                            <p>
-                                Your algorithms run reliably 24/7 and never miss a trade. Trality eliminates the need to setup your own trading
-                                servers!
-                            </p>
-                        </Layout.ThreeColumn.Column>
-                        <Layout.ThreeColumn.Column area="c">
-                            <HeaderIcon name="Encrypted" source={Illustrations.EncryptedComponent} />
-                            <p>
-                                Your trading strategies are end-to-end encrypted. We can't see your strategies as they are in-browser encrypted
-                                (coming soon!).
-                            </p>
-                        </Layout.ThreeColumn.Column>
-                    </Layout.ThreeColumn.Container>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="trade-now" minimumPadding>
-                <Layout.Banner backgroundColor={'backgroundLight'} color={'onLight'}>
-                    <Layout.Center direction="column">
-                        <h2>Start trading now!</h2>
-                        <LogoList
-                            logos={[
-                                {
-                                    title: 'Binance',
-                                    light: Logos.Binance,
-                                    link: {
-                                        href: 'https://www.binance.com/en/register?ref=K55AL9ZB',
-                                        target: '_blank',
-                                    },
-                                },
-                                {
-                                    title: 'Bitpanda',
-                                    light: Logos.Bitpanda,
-                                    link: {
-                                        href: 'https://www.bitpanda.com/?ref=137460964105981108',
-                                        target: '_blank',
-                                    },
-                                },
-                                {
-                                    title: 'Coinbase Pro',
-                                    light: Logos.Coinbase,
-                                    link: {
-                                        href: 'https://coinbase-consumer.sjv.io/nqWWx',
-                                        target: '_blank',
-                                    },
-                                },
-                                {
-                                    title: 'Kraken',
-                                    light: Logos.Kraken,
-                                    link: {
-                                        href: 'https://r.kraken.com/N522O',
-                                        target: '_blank',
-                                    },
-                                },
-                            ]}
-                        />
-                        <TextBlock>
-                            <Layout.CenterLeft>Trade on a continuously growing number of exchanges.</Layout.CenterLeft>
-                        </TextBlock>
-                        <Layout.CenterLeft>
-                            <Button
-                                to={ConstUrl.Signup}
-                                event={{
-                                    type: EventType.SignupInitiated,
-                                    attributes: { signupOrigin: SignupOrigins.Footer },
+                                        <WatchVideo srcYtb="https://www.youtube.com/embed/DjBYXT0H004" />
+                                    </Padding>
+                                </Cell>
+                            </Cell>
+                        </Row>
+                    </Cell>
+                </Row>
+            </MainContainer>
+            <CyanLightestBackground nonFullCover>
+                <MainContainer>
+                    <Row center>
+                        <Cell size={10} mobileSize={12}>
+                            <Padding
+                                size={{
+                                    bottom: PaddingSizes.SixtyFour,
+                                    left: PaddingSizes.Four,
                                 }}
                             >
-                                Try it for free!
-                            </Button>
-                        </Layout.CenterLeft>
-                    </Layout.Center>
-                </Layout.Banner>
-            </Layout.Section>
-            <Layout.Section id="features">
-                <Layout.Center>
-                    <Layout.TwoColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
-                                <Header title="Coming soon: Connecting traders.">
-                                    <TextBlock>
-                                        Once you've built a profitable bot, others will want to copy its moves - and they'll happily pay for the
-                                        privilege! We're building a marketplace where you'll be able to publish your best bots and get paid rent by
-                                        anyone wanting to piggyback. Your bot's algorithmic secret sauce, of course, will be for your eyes only!
-                                    </TextBlock>
-                                    <KnowMore to="/marketplace">Read more</KnowMore>
-                                </Header>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2PhoneFrontalA} alt="Trality Phone Screenshot" scale={0.8} />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="mailinglist" noBgChange minimumPadding>
-                <Layout.Banner backgroundColor={'bluePrimary'} color={'lightPrimary'}>
-                    <Layout.Center direction="column">
-                        <Header title="Stay connected!">
-                            <h5>Waiting for cool Trality updates? Join our monthly mailing list and stay up to date 💙</h5>
-                        </Header>
-                        <Subscribe />
-                    </Layout.Center>
-                </Layout.Banner>
-            </Layout.Section>
+                                <LazyImage src={Assets.HomepageImage} />
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </CyanLightestBackground>
+            <MainContainer>
+                <Row>
+                    <Cell size={12} mobileSize={12} align="center">
+                        <Padding
+                            size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}
+                            mobileSize={{
+                                top: PaddingSizes.FiftySix,
+                                bottom: PaddingSizes.FourtyFour,
+                            }}
+                        >
+                            <Headline headlineType="Headline5">Trality is for you if you're...</Headline>
+                        </Padding>
+                    </Cell>
+                </Row>
+            </MainContainer>
+            <Padding
+                size={{ bottom: PaddingSizes.SixtyFour }}
+                mobileSize={{
+                    top: PaddingSizes.Twenty,
+                    bottom: PaddingSizes.Fourty,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={4} mobileSize={12} align="center">
+                            <Padding
+                                mobileSize={{
+                                    top: PaddingSizes.Twenty,
+                                    bottom: PaddingSizes.Fourty,
+                                }}
+                            >
+                                <Row center>
+                                    <Cell size={6} mobileSize={6}>
+                                        <LazyImage src={Assets.PythonGuru} />
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Padding
+                                            size={{
+                                                top: PaddingSizes.ThirtyTwo,
+                                                bottom: PaddingSizes.Sixteen,
+                                            }}
+                                            mobileSize={{
+                                                top: PaddingSizes.Twenty,
+                                                bottom: PaddingSizes.Fourty,
+                                            }}
+                                        >
+                                            <SubHeadline subheadlineType="SubHeadline2">A Python Guru</SubHeadline>
+                                        </Padding>
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Text bodyType="Body2">
+                                            wanting to make the most of your quantitative skills by coding sophisticated trading algorithms in order
+                                            to boost returns.
+                                        </Text>
+                                    </Cell>
+                                </Row>
+                            </Padding>
+                        </Cell>
+                        <Cell size={4} mobileSize={12} align="center">
+                            <Padding
+                                mobileSize={{
+                                    top: PaddingSizes.Twenty,
+                                    bottom: PaddingSizes.Fourty,
+                                }}
+                            >
+                                <Row center>
+                                    <Cell size={6} mobileSize={6}>
+                                        <LazyImage src={Assets.CasualTrader} />
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Padding
+                                            size={{
+                                                top: PaddingSizes.ThirtyTwo,
+                                                bottom: PaddingSizes.Sixteen,
+                                            }}
+                                            mobileSize={{
+                                                top: PaddingSizes.Twenty,
+                                                bottom: PaddingSizes.Fourty,
+                                            }}
+                                        >
+                                            <SubHeadline subheadlineType="SubHeadline2">A Casual Trader</SubHeadline>
+                                        </Padding>
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Text bodyType="Body2">
+                                            looking for an entry into automated trading, hoping to increase returns while spending less time on manual
+                                            trades.
+                                        </Text>
+                                    </Cell>
+                                </Row>
+                            </Padding>
+                        </Cell>
+                        <Cell size={4} mobileSize={12} align="center">
+                            <Padding
+                                mobileSize={{
+                                    top: PaddingSizes.Twenty,
+                                    bottom: PaddingSizes.Fourty,
+                                }}
+                            >
+                                <Row center>
+                                    <Cell size={6} mobileSize={6}>
+                                        <LazyImage src={Assets.Anyone} />
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Padding
+                                            size={{
+                                                top: PaddingSizes.ThirtyTwo,
+                                                bottom: PaddingSizes.Sixteen,
+                                            }}
+                                            mobileSize={{
+                                                top: PaddingSizes.Twenty,
+                                                bottom: PaddingSizes.Fourty,
+                                            }}
+                                        >
+                                            <SubHeadline subheadlineType="SubHeadline2">Anyone in between</SubHeadline>
+                                        </Padding>
+                                    </Cell>
+                                </Row>
+                                <Row center>
+                                    <Cell size={11} mobileSize={10}>
+                                        <Text bodyType="Body2">
+                                            eager to try out something new, improve existing skills or simply test out a trading idea.
+                                        </Text>
+                                    </Cell>
+                                </Row>
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </Padding>
+            <FeaturedIn />
+            <MainContainer>
+                <Row>
+                    <Cell size={12} mobileSize={12} align="center">
+                        <Padding
+                            size={{
+                                top: PaddingSizes.NinetySix,
+                                bottom: PaddingSizes.EightyEight,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.FiftySix,
+                                bottom: PaddingSizes.FiftySix,
+                            }}
+                        >
+                            <Headline headlineType="Headline5">Ways to create your trading bot.</Headline>
+                        </Padding>
+                    </Cell>
+                </Row>
+            </MainContainer>
+            <MainContainer>
+                <Row>
+                    <Cell size={6} mobileSize={12} align="center">
+                        <Padding
+                            size={{
+                                bottom: PaddingSizes.NinetySix,
+                                left: PaddingSizes.SixtyEight,
+                                right: PaddingSizes.SixtyEight,
+                            }}
+                            mobileSize={{
+                                bottom: PaddingSizes.Fourty,
+                            }}
+                        >
+                            <Row center>
+                                <Cell size={3} mobileSize={10}>
+                                    <LazyImage src={Assets.CodeBuilder} />
+                                </Cell>
+                            </Row>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.ThirtyTwo,
+                                    bottom: PaddingSizes.Sixteen,
+                                    left: PaddingSizes.SixtyEight,
+                                    right: PaddingSizes.SixtyEight,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.Fourty,
+                                }}
+                            >
+                                <SubHeadline subheadlineType="SubHeadline2">The Code Editor</SubHeadline>
+                            </Padding>
+                            <Text bodyType="Body2">
+                                Leverage your Python skills and code sophisticated bots in the world’s first browser-based Python Code Editor. Harness
+                                an ever growing array of packages, a debugger and a full range of ML modules to backtest and live-trade like a pro.”
+                            </Text>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Fourty,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.ThirtyTwo,
+                                }}
+                            >
+                                <TextLink href="/creator/code-editor" withArrow bold>
+                                    Learn more
+                                </TextLink>
+                            </Padding>
+                        </Padding>
+                    </Cell>
+                    <Cell size={6} mobileSize={12} align="center">
+                        <Padding
+                            size={{
+                                left: PaddingSizes.SixtyEight,
+                                right: PaddingSizes.SixtyEight,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.ThirtyTwo,
+                                bottom: PaddingSizes.Fourty,
+                            }}
+                        >
+                            <Row center>
+                                <Cell size={3} mobileSize={10}>
+                                    <LazyImage src={Assets.RuleBuilder} />
+                                </Cell>
+                            </Row>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.ThirtyTwo,
+                                    bottom: PaddingSizes.Sixteen,
+                                    left: PaddingSizes.SixtyEight,
+                                    right: PaddingSizes.SixtyEight,
+                                }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.Fourty,
+                                }}
+                            >
+                                <SubHeadline subheadlineType="SubHeadline2">The Rule Builder</SubHeadline>{' '}
+                            </Padding>
+                            <Text bodyType="Body2">
+                                Benefit from automated trading without writing a single line of code. With Trality’s intuitive Rule Builder rely on
+                                pre-defined trading strategies, select from over 100 technical indicators and use boolean logic to arrange strategy
+                                parts.
+                            </Text>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Fourty,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.ThirtyTwo,
+                                }}
+                            >
+                                <TextLink href="/creator/rule-builder" withArrow bold>
+                                    Learn more
+                                </TextLink>
+                            </Padding>
+                        </Padding>
+                    </Cell>
+                </Row>
+            </MainContainer>
+            <VideosContainer />
+            <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
+                <BlueBackground>
+                    <MainContainer>
+                        <Padding
+                            size={{ top: PaddingSizes.FiftySix, bottom: PaddingSizes.FiftySix }}
+                            mobileSize={{
+                                bottom: PaddingSizes.Twenty,
+                            }}
+                        >
+                            <Row>
+                                <Cell size={4} mobileSize={12} align="center">
+                                    <Padding
+                                        mobileSize={{
+                                            top: PaddingSizes.Fourty,
+                                            bottom: PaddingSizes.Twenty,
+                                        }}
+                                    >
+                                        <Headline headlineType="Headline6">5M+</Headline>
+                                        <Text bodyType="Body2">Daily trading volume</Text>
+                                    </Padding>
+                                </Cell>
+                                <Cell size={4} mobileSize={12} align="center">
+                                    <Padding
+                                        mobileSize={{
+                                            top: PaddingSizes.Fourty,
+                                            bottom: PaddingSizes.Twenty,
+                                        }}
+                                    >
+                                        <Headline headlineType="Headline6">50K+</Headline>
+                                        <Text bodyType="Body2">Verified users</Text>
+                                    </Padding>
+                                </Cell>
+                                <Cell size={4} mobileSize={12} align="center">
+                                    <Padding
+                                        mobileSize={{
+                                            top: PaddingSizes.Fourty,
+                                            bottom: PaddingSizes.Twenty,
+                                        }}
+                                    >
+                                        <Headline headlineType="Headline6">10M+</Headline>
+                                        <Text bodyType="Body2">Connected AUM</Text>
+                                    </Padding>
+                                </Cell>
+                            </Row>
+                        </Padding>
+                    </MainContainer>
+                </BlueBackground>
+            </Padding>
+            <Features />
+            <StartTradingNow />
+            <Padding
+                size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}
+                mobileSize={{
+                    top: PaddingSizes.SixtyFour,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={6} mobileSize={12} alignVertical="middle">
+                            <Padding
+                                size={{ right: PaddingSizes.OneHundred }}
+                                mobileSize={{
+                                    bottom: PaddingSizes.ThirtyTwo,
+                                }}
+                            >
+                                <Headline headlineType="Headline5">The Marketplace (Coming Soon)</Headline>
+
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.TwentyFour,
+                                        bottom: PaddingSizes.FourtyEight,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.TwentyFour,
+                                        bottom: PaddingSizes.ThirtyTwo,
+                                    }}
+                                >
+                                    <Text bodyType="Body2">
+                                        Once you’ve built a profitable bot, you can earn even more by introducing it to The Marketplace, Trality’s
+                                        curated space where developers can rent their bespoke bots to crypto enthusiasts. As creators, you maintain
+                                        full control over your bot and its underlying algorithm.
+                                    </Text>
+                                </Padding>
+                                <TextLink href="/marketplace" withArrow bold>
+                                    Learn more
+                                </TextLink>
+                            </Padding>
+                        </Cell>
+                        <Cell size={6} mobileSize={12} align="center">
+                            <LazyImage src={Assets.MarketplacePromo} />
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </Padding>
+            <Twitter />
+            <FAQs />
+            <Blog />
         </Layout.Page>
     );
 };

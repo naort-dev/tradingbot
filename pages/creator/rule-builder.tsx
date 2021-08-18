@@ -1,102 +1,188 @@
 import { Layout } from '@containers';
-import { Highlight, Button, Header, Image, TextBlock } from '@components';
+import { Header, Image, TextBlock } from '@components';
 import { Screens, Illustrations } from '@assets';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { MetaTags, Page } from '../../util/metaTags';
+import React from 'react';
+import { Features } from 'components/features';
+import { StartTradingNow } from 'components/starttradingnow';
+import {
+    GreyBackground,
+    MainContainer,
+    Highlight,
+    Row,
+    Cell,
+    Headline,
+    Padding,
+    PaddingSizes,
+    Assets,
+    Text,
+    Button,
+    TextLink,
+} from '@trality/web-ui-components';
+import { FAQs } from 'components/FAQs';
+import { LazyImage } from 'components/lazyImage';
+import { WatchVideo } from 'components/WatchVideo';
+import { useLink } from 'hooks/useLink';
 
 const RuleBuilder = () => {
+    const followLink = useLink('login');
     return (
         <Layout.Page title="creator-rule-editor">
             <MetaTags page={Page.RuleBuilder} />
-            <Layout.Section fullHeight noPadding id="rule-editor-description">
-                <Layout.Center>
-                    <Layout.TwoColumn columnWidth={40} reverted>
-                        <Layout.OneColumn>
-                            <Layout.CenterVertical>
-                                <div>
-                                    <h1>
-                                        I want to <Highlight>build</Highlight> bots graphically.
-                                    </h1>
-                                    <TextBlock>
+            <GreyBackground>
+                <MainContainer>
+                    <Row>
+                        <Cell size={5} mobileSize={12} alignVertical="middle">
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Eighty,
+                                    right: PaddingSizes.Four,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Eighty,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Headline headlineType="Headline2">
+                                    Build trading strategies without <Highlight>Code</Highlight>
+                                </Headline>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.ThirtyTwo,
+                                        bottom: PaddingSizes.FiftySix,
+                                        right: PaddingSizes.Four,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}
+                                >
+                                    <Text bodyType="Body1">
                                         Start your journey to profitable algorithmic trading with the Trality Rule Builder. Its graphical user
                                         interface lets you build your trading bot's logic by simply dragging and dropping indicators and strategies.
-                                    </TextBlock>
-                                    <Button
-                                        to={ConstUrl.Signup}
-                                        blank
-                                        event={{
-                                            type: EventType.SignupInitiated,
-                                            attributes: { signupOrigin: SignupOrigins.HeaderCta },
-                                        }}
-                                    >
-                                        Start building for free!
-                                    </Button>
-                                </div>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2MacRule} alt="Mac with Rules on screen"/>
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="detail" collapseMobile>
-                <Layout.Center>
-                    <Layout.TwoColumn collapseMobile>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterVertical>
-                                <TextBlock>
-                                    <Header title="Building bots in a few minutes.">
-                                        <p>
-                                            Using the Trality Rule Builder, you can turn your ideas into a profitable strategy and optimize it until
-                                            you're satisfied.
-                                        </p>
-                                        <ul>
-                                            <li>Build upon curated, pre-defined trading strategies</li>
-                                            <li>Select from over 100 technical indicators</li>
-                                            <li>Use boolean logic to arrange strategy parts</li>
-                                            <li>Backtest your strategy with historical data</li>
-                                        </ul>
-                                    </Header>
-                                </TextBlock>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Screens.V2RuleUIElements} alt="Rules UI Elements" />
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
-            <Layout.Section id="learn" collapseMobile>
-                <Layout.Center>
-                    <Layout.TwoColumn reverted collapseMobile>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterVertical>
-                                <TextBlock>
-                                    <Header title="Evolve from rules to code.">
-                                        <p>Step up your algorithmic trading game using our different Creator Tools.</p>
-                                        <ul>
-                                            <li>Transform your rule-based bots into Python code automatically</li>
-                                            <li>Enjoy video tutorials to learn more about algorithmic trading</li>
-                                            <li>Make use of our detailed documentation</li>
-                                        </ul>
-                                    </Header>
-                                </TextBlock>
-                            </Layout.CenterVertical>
-                        </Layout.OneColumn>
-                        <Layout.OneColumn collapseMobile>
-                            <Layout.CenterAllDirections>
-                                <Image image={Illustrations.EvolveComponent} scale={1.4} alt="Evolve Illustration"/>
-                            </Layout.CenterAllDirections>
-                        </Layout.OneColumn>
-                    </Layout.TwoColumn>
-                </Layout.Center>
-            </Layout.Section>
+                                    </Text>
+                                </Padding>
+                                <Row>
+                                    <Cell size={6} mobileSize={12} align="right" alignMobile="right">
+                                        <Padding
+                                            size={{
+                                                right: PaddingSizes.Four,
+                                            }}
+                                            mobileSize={{
+                                                bottom: PaddingSizes.Sixteen,
+                                            }}
+                                        >
+                                            <Row>
+                                                <Button fullWidth onClick={() => followLink()}>
+                                                    Start building for free!
+                                                </Button>
+                                            </Row>
+                                        </Padding>
+                                    </Cell>
+                                    <Cell size={5} mobileSize={12} align="left" alignMobile="center">
+                                        <WatchVideo srcYtb="https://www.youtube.com/embed/4K7oPuWkM4c" />
+                                    </Cell>
+                                </Row>
+                            </Padding>
+                        </Cell>
+                        <Cell size={7} mobileSize={12}>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Eighty,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <LazyImage src={Assets.RuleBuilderIllustration} />
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </GreyBackground>
+            <Padding
+                size={{
+                    top: PaddingSizes.NinetySix,
+                    bottom: PaddingSizes.NinetySix,
+                }}
+                mobileSize={{
+                    top: PaddingSizes.TwentyFour,
+                    bottom: PaddingSizes.TwentyFour,
+                }}
+            >
+                <MainContainer>
+                    <Row>
+                        <Cell size={6} mobileSize={12} alignVertical="middle">
+                            <Headline headlineType="Headline5">Building bots in a few minutes</Headline>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.TwentyFour,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.TwentyFour,
+                                    bottom: PaddingSizes.TwentyFour,
+                                }}
+                            >
+                                <Text bodyType="Body2">
+                                    Using the Trality Rule Builder, you can turn your ideas into a profitable strategy and optimize it until you're
+                                    satisfied.
+                                </Text>
+                            </Padding>
+                            <ul>
+                                <li>Build upon curated, pre-defined trading strategies</li>
+                                <li>Select from over 100 technical indicators</li>
+                                <li>Use boolean logic to arrange strategy parts</li>
+                                <li>Backtest your strategy with historical data</li>
+                            </ul>
+                        </Cell>
+                        <Cell size={6} mobileSize={12}>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Eighty,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <LazyImage src={Assets.RBPage} />
+                            </Padding>
+                        </Cell>
+                    </Row>
+                </MainContainer>
+            </Padding>
+            <MainContainer>
+                <Row>
+                    <Cell size={6} mobileSize={12} align="right" alignMobile="right">
+                        <LazyImage src={Assets.HelpAndDocumentation} />
+                    </Cell>
+                    <Cell size={6} mobileSize={12} alignVertical="middle">
+                        <Headline headlineType="Headline5">Evolve from rules to code</Headline>
+                        <Padding
+                            size={{
+                                top: PaddingSizes.TwentyFour,
+                                bottom: PaddingSizes.TwentyFour,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.TwentyFour,
+                                bottom: PaddingSizes.TwentyFour,
+                            }}
+                        >
+                            <Text bodyType="Body2">Step up your algorithmic trading game using our different Creator Tools.</Text>
+                        </Padding>
+                        <ul>
+                            <li>Transform your rule-based bots into Python code automatically</li>
+                            <li>Enjoy video tutorials to learn more about algorithmic trading</li>
+                            <li>Make use of our detailed documentation</li>
+                        </ul>
+                    </Cell>
+                </Row>
+            </MainContainer>
+            <Features />
+            <StartTradingNow />
+            <FAQs />
         </Layout.Page>
     );
 };

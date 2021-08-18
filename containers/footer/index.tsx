@@ -7,185 +7,193 @@ import { Margins, Paddings } from 'theme';
 
 import { Logos } from '@assets';
 import { Layout } from '@containers';
-import { Button, LogoList, ExternalLink } from '@components';
+import { LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
 import { PageTypes } from 'containers/layout/page';
+import { Divider, Padding, Cell, MainContainer, Row, Button, Text, PaddingSizes, TextLink, Assets } from '@trality/web-ui-components';
+import { useLink } from 'hooks/useLink';
 
 interface Props {
     pageType: PageTypes;
 }
 
-const Wrap = styled.div`
-    margin-bottom: ${Margins.Middle};
-    margin-top: ${Margins.Middle};
-    width: 100%;
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
-    color: ${(props) => props.theme.onDark};
-`;
+const FooterLogos = [
+    {
+        title: 'Tokentus',
+        light: Logos.TokentusBlack,
+        dark: Logos.TokentusWhite,
+    },
+    {
+        title: 'Blockrocket',
+        light: Logos.BlockRocketBlack,
+        dark: Logos.BlockRocketWhite,
+    },
+    {
+        title: 'FFG',
+        light: Logos.FFGBlack,
+        dark: Logos.FFGWhite,
+    },
+    {
+        title: 'Herbst Kinsky Incubator',
+        light: Logos.Hk,
+    },
+    {
+        title: 'Inits Incubator',
+        light: Logos.Inits,
+    },
+    {
+        title: 'Vienna Business Agency',
+        light: Logos.Vba,
+        dark: Logos.VbaWhite,
+    },
+];
 
-const Top = styled.div`
-    padding: ${Paddings.Large} 0px;
-    border-bottom: 1px solid ${(props) => props.theme.borderColor};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    & img {
-        height: 50px;
-    }
-`;
+const firstMenu = [
+    { onClick: true, link: 'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==', name: 'Contact us' },
+    { link: '/about', name: 'About us' },
+    { link: '/blog', name: 'Blog' },
+    { link: '/jobs', name: 'Jobs' },
+];
 
-const Bottom = styled.div`
-    padding: ${Paddings.Large} 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
+const secondMenu = [
+    { link: '/imprint', name: 'Imprint' },
+    { link: '/privacy', name: 'Privacy' },
+    { link: '/terms', name: 'Terms' },
+];
 
-const L = styled.div`
-    text-align: left;
-    @media (max-width: 768px) {
-        width: 50%;
-    }
-    display: flex;
-    align-items: center;
-`;
-
-const R = styled.div`
-    text-align: right;
-    & > div {
-        margin-left: 35px;
-    }
-    & > div > a:hover {
-        cursor: pointer;
-        color: ${(props) => props.theme.main};
-    }
-    margin-top: -4px;
-    @media (max-width: 768px) {
-        width: 50%;
-    }
-`;
-
-const LogoContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    display: inline-block;
-    > a > img {
-        max-height: 25px;
-        margin-left: 10px;
-    }
-`;
-
-const LinkContainer = styled.div<{ rightAlign: boolean }>`
-    > a {
-        text-decoration: none;
-    }
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: ${(props) => (props.rightAlign ? 'flex-end' : 'space-between')};
-    max-width: 500px;
-    @media (max-width: 768px) {
-        display: none;
-    }
-`;
-
-const LogoHeader = styled.div`
-    margin: ${Margins.Large} 0;
-    color: ${(props) => props.theme.onDark};
-`;
+const SocialLinks = [
+    { link: 'https://discord.com/invite/h5BPuKBQHv', logo: Assets.Discord },
+    { link: 'https://twitter.com/trality_bots', logo: Assets.Twitter },
+    { link: 'https://www.instagram.com/trality_bots/', logo: Assets.Instagram },
+    { link: 'https://www.facebook.com/trality', logo: Assets.Facebook },
+];
 
 export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
-    const { dark } = useDark();
-
+    const followLink = useLink('signup');
+    const onContact = React.useCallback(() => {
+        const target = 'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==';
+        window.location.assign(atob(target));
+    }, []);
     return (
-        <Layout.Center>
-            <Wrap>
-                <Top>
-                    <div>
-                        <LazyImage src={dark ? Logos.TralityMainLogoDark : Logos.TralityMainLogo} alt="Trality Logo" />
-                    </div>
-
-                    <LinkContainer rightAlign={pageType === PageTypes.LP}>
-                        {pageType === PageTypes.Normal && (
-                            <>
-                                <ExternalLink href="/blog">{'Blog'}</ExternalLink>
-                                <Link href="/jobs">
-                                    <a>Jobs</a>
-                                </Link>
-                                <Link href="/imprint">
-                                    <a>Imprint</a>
-                                </Link>
-                                <Link href="/privacy">
-                                    <a>Privacy</a>
-                                </Link>
-                                <Link href="/terms">
-                                    <a>Terms</a>
-                                </Link>
-                            </>
-                        )}
-                        <a>
-                            <Button
-                                to={ConstUrl.Signup}
-                                event={{
-                                    type: EventType.SignupInitiated,
-                                    attributes: { signupOrigin: SignupOrigins.Footer },
-                                }}
-                            >
-                                Join now
-                            </Button>
-                        </a>
-                    </LinkContainer>
-                </Top>
-                <LogoHeader>Proudly supported by</LogoHeader>
-                <LogoList
-                    logos={[
-                        {
-                            title: 'Tokentus',
-                            light: Logos.TokentusBlack,
-                            dark: Logos.TokentusWhite,
-                        },
-                        {
-                            title: 'Blockrocket',
-                            light: Logos.BlockRocketBlack,
-                            dark: Logos.BlockRocketWhite,
-                        },
-                        {
-                            title: 'FFG',
-                            light: Logos.FFGBlack,
-                            dark: Logos.FFGWhite,
-                        },
-                        {
-                            title: 'Herbst Kinsky Incubator',
-                            light: Logos.Hk,
-                        },
-                        {
-                            title: 'Inits Incubator',
-                            light: Logos.Inits,
-                        },
-                        {
-                            title: 'Vienna Business Agency',
-                            light: Logos.Vba,
-                            dark: Logos.VbaWhite,
-                        },
-                    ]}
-                />
-                <Bottom>
-                    <L>
-                        All rights reserved © Trality 2020
-                        <LogoContainer>
-                            <a href="https://twitter.com/trality_bots" target="_blank">
-                                <LazyImage src={Logos.Twitter} alt="Twitter Logo" />
-                            </a>
-                        </LogoContainer>
-                    </L>
-                    <R>Made with 💙 by Trality</R>
-                </Bottom>
-            </Wrap>
-        </Layout.Center>
+        <MainContainer>
+            <Divider />
+            <Padding
+                size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+                mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+            >
+                <Row>
+                    <Cell size={3} mobileSize={12}>
+                        <MainContainer>
+                            <Row>
+                                <Cell size={8} mobileSize={6}>
+                                    <LazyImage src={Logos.TralityMainLogo} alt="Trality Logo" />
+                                </Cell>
+                            </Row>
+                            <Row>
+                                <Cell size={12} mobileSize={12}>
+                                    <Row>
+                                        {SocialLinks.map((item) => {
+                                            return (
+                                                <Cell size={2} mobileSize={2}>
+                                                    <a href={item.link} target="_blank">
+                                                        <img src={item.logo} />
+                                                    </a>
+                                                </Cell>
+                                            );
+                                        })}
+                                    </Row>
+                                </Cell>
+                            </Row>
+                        </MainContainer>
+                    </Cell>
+                    <Cell size={6} mobileSize={12}>
+                        <MainContainer>
+                            <Row>
+                                <Cell size={6} mobileSize={6}>
+                                    {firstMenu.map((item) => {
+                                        return (
+                                            <Padding
+                                                size={{
+                                                    top: PaddingSizes.Sixteen,
+                                                    bottom: PaddingSizes.Sixteen,
+                                                }}
+                                                mobileSize={{
+                                                    top: PaddingSizes.Twelve,
+                                                    bottom: PaddingSizes.Twelve,
+                                                }}
+                                            >
+                                                <TextLink
+                                                    href={item.onClick ? '#' : item.link}
+                                                    onClick={
+                                                        item.onClick
+                                                            ? () => {
+                                                                  window.location.assign(atob(item.link));
+                                                              }
+                                                            : undefined
+                                                    }
+                                                >
+                                                    {item.name}
+                                                </TextLink>
+                                            </Padding>
+                                        );
+                                    })}
+                                </Cell>
+                                <Cell size={6} mobileSize={6}>
+                                    {secondMenu.map((item) => {
+                                        return (
+                                            <Padding
+                                                size={{
+                                                    top: PaddingSizes.Sixteen,
+                                                    bottom: PaddingSizes.Sixteen,
+                                                }}
+                                                mobileSize={{
+                                                    top: PaddingSizes.Twelve,
+                                                    bottom: PaddingSizes.Twelve,
+                                                }}
+                                            >
+                                                <TextLink href={item.link}>{item.name}</TextLink>
+                                            </Padding>
+                                        );
+                                    })}
+                                </Cell>
+                            </Row>
+                        </MainContainer>
+                    </Cell>
+                    <Cell align="right" size={3} mobileSize={12} alignMobile="left">
+                        <Button onClick={() => followLink()}>Join now!</Button>
+                    </Cell>
+                </Row>
+            </Padding>
+            <Divider />
+            <Padding
+                size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+                mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+            >
+                <Row>
+                    {FooterLogos.map((item) => {
+                        return (
+                            <Cell size={2} mobileSize={6} alignVertical="middle">
+                                <LazyImage src={item.light} />
+                            </Cell>
+                        );
+                    })}
+                </Row>
+            </Padding>
+            <Padding
+                size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+                mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
+            >
+                <Row>
+                    <Cell size={6} mobileSize={12}>
+                        <Text bodyType="Body4">All rights reserved © Trality 2021</Text>
+                    </Cell>
+                    <Cell size={6} align="right" mobileSize={12} alignMobile="left">
+                        <Text bodyType="Body4">Made with 💙 by Trality</Text>
+                    </Cell>
+                </Row>
+            </Padding>
+        </MainContainer>
     );
 };

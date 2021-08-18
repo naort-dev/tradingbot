@@ -2,9 +2,20 @@ import { useIntersection } from 'hooks/useIntersection';
 import { useRef } from 'react';
 import styled from 'styled-components';
 
-type ImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>;
+interface Props {
+    borders?: boolean;
+}
 
-const StyledImage = styled.img`
+type ImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & Props;
+
+export const StyledImage = styled.img<ImageProps>`
+    max-width: 100%;
+    ${(props) => {
+        if (props.borders) {
+            return `border-radius: 8px;`;
+        }
+        return ``;
+    }}
 `;
 
 export const LazyImage: React.FunctionComponent<ImageProps> = (props) => {
@@ -12,7 +23,7 @@ export const LazyImage: React.FunctionComponent<ImageProps> = (props) => {
     const isVisible = useIntersection(imgRef);
 
     if (isVisible) {
-        return <StyledImage {...props} ref={null}/>;
+        return <StyledImage {...props} ref={null} />;
     }
-    return <StyledImage ref={imgRef} src="" alt={props.alt} data-src={props.src}/>;
+    return <StyledImage ref={imgRef} src="" alt={props.alt} data-src={props.src} />;
 };
