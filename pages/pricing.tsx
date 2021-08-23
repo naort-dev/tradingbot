@@ -514,7 +514,7 @@ const PricingComponent = () => {
                                                     </Cell>
                                                     <Cell size={12} mobileSize={12}>
                                                         <Button
-                                                            onClick={() => followLink}
+                                                            onClick={() => followLink()}
                                                             fullWidth
                                                             variant={item.popular ? 'contained' : 'outlined'}
                                                         >
