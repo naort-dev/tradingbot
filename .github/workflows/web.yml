@@ -1,4 +1,4 @@
-name: Web Unit testing.
+name: Web Dev release
 
 on:
     push:
