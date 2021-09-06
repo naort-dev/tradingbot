@@ -8,7 +8,7 @@ export const BlogData = () => {
     return (
         <StaticQuery
             query={graphql`
-                query BlogData {
+                query {
                     allGhostPost(filter: { ghostId: { in: ["5fb2ae9b79d36f3a78f3d54c", "604b24cfdfb5e2400d30bf19", "6092e4b5dfb5e2400d30c23e"] } }) {
                         edges {
                             node {
