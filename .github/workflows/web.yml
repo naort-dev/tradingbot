@@ -21,7 +21,7 @@ jobs:
                   registry-url: https://npm.pkg.github.com
                   scope: '@trality'
             - name: Install web dependencies
-              run: yarn install
+              run: yarn install --prod --pure-lockfile
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
             - name: Web build
@@ -31,4 +31,5 @@ jobs:
             - name: Let lambda know change of dev sha
               run: echo ${GITHUB_SHA}
               env:
+                  GATSBY_LAMBDA_TOKEN_DEV: ${{secrets.GATSBY_LAMBDA_TOKEN_DEV}}
                   CI: true
