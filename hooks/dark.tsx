@@ -8,7 +8,7 @@ export interface Darkmode extends DarkProp {
     setDark: (dark: boolean) => void;
 }
 
-const context = React.createContext<Darkmode>(null as any);
+const context = React.createContext<Darkmode>({ dark: true, setDark: (v: boolean) => {} } as any);
 export const Provider = context.Provider;
 
 export const useDark = () => {

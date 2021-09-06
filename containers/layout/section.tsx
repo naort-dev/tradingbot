@@ -1,9 +1,9 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { ThemeColors, Paddings } from 'theme';
+import { ThemeColors, Paddings } from '@theme';
 import { Waypoint } from 'react-waypoint';
-import { SectionCtx } from 'hooks/useSection';
-import { useDark } from 'hooks/dark';
+import { SectionCtx } from '@hooks';
+import { useDark } from '@hooks';
 import { Misc } from '@util';
 
 interface SectionProps {

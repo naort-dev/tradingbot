@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSection } from 'hooks/useSection';
+import { useSection } from '../../../hooks/useSection';
 import { Animator } from './animations';
-import { useDelay } from 'hooks';
+import { useDelay } from '../../../hooks';
 
 const Svg = styled.svg<{ seen?: boolean; delay: number }>`
-    ${Animator.Animate('> g > g.left')
-        .TranslateX(25)
-        .Render()}
-    ${Animator.Animate('> g > g.right')
-        .TranslateX(-25)
-        .Delay(0.4)
-        .Render()}
+    ${Animator.Animate('> g > g.left').TranslateX(25).Render()}
+    ${Animator.Animate('> g > g.right').TranslateX(-25).Delay(0.4).Render()}
 `;
 
 const Rules = () => {

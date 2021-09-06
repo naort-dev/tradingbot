@@ -1,14 +1,8 @@
 import React, { useState, useCallback, useRef, useEffect, createRef } from 'react';
 import styled from 'styled-components';
-import { Preload } from 'components/preload';
-import { useInterval } from 'hooks/useInterval';
-import { Loader, KnowMore } from '@components';
-import { Paddings, Margins } from 'theme';
-import { isObject } from 'util';
-import { useSection } from 'hooks/useSection';
-import { useIsMobile } from 'hooks/useIsMobile';
-import { LazyImage } from 'components/lazyImage';
-import { LazyVideo } from 'components/lazyVideo';
+import { Loader, KnowMore, Preload, LazyImage, LazyVideo } from 'components';
+import { Paddings, Margins } from '@theme';
+import { useSection, useIsMobile } from '@hooks';
 
 const SlideContainer = styled.div`
     width: 100%;

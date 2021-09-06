@@ -1,19 +1,10 @@
 import * as React from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-
-import { useDark } from 'hooks/dark';
-import { Margins, Paddings } from 'theme';
 
 import { Logos } from '@assets';
-import { Layout } from '@containers';
-import { LogoList, ExternalLink } from '@components';
-import { EventType, SignupOrigins } from '@trality/web-tracking';
-import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
 import { PageTypes } from 'containers/layout/page';
 import { Divider, Padding, Cell, MainContainer, Row, Button, Text, PaddingSizes, TextLink, Assets } from '@trality/web-ui-components';
-import { useLink } from 'hooks/useLink';
+import { useLink } from '@hooks';
 
 interface Props {
     pageType: PageTypes;
@@ -96,7 +87,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                     <Row>
                                         {SocialLinks.map((item) => {
                                             return (
-                                                <Cell size={2} mobileSize={2}>
+                                                <Cell size={2} mobileSize={2} key={item.link}>
                                                     <a href={item.link} target="_blank">
                                                         <img src={item.logo} />
                                                     </a>
@@ -123,6 +114,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                                     top: PaddingSizes.Twelve,
                                                     bottom: PaddingSizes.Twelve,
                                                 }}
+                                                key={item.link}
                                             >
                                                 <TextLink
                                                     href={item.onClick ? '#' : item.link}
@@ -152,6 +144,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                                     top: PaddingSizes.Twelve,
                                                     bottom: PaddingSizes.Twelve,
                                                 }}
+                                                key={item.link}
                                             >
                                                 <TextLink href={item.link}>{item.name}</TextLink>
                                             </Padding>
@@ -174,7 +167,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                 <Row>
                     {FooterLogos.map((item) => {
                         return (
-                            <Cell size={2} mobileSize={6} alignVertical="middle">
+                            <Cell size={2} mobileSize={6} alignVertical="middle" key={item.title}>
                                 <LazyImage src={item.light} />
                             </Cell>
                         );

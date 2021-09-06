@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link } from 'gatsby';
 
-import { Button } from '@components';
-import { useDark, DarkProp } from '../../hooks/dark';
-import { Paddings } from 'theme';
+import { Button } from 'components';
+import { useDark, DarkProp } from '@hooks';
+import { Paddings } from '@theme';
 import { useTracker } from '@trality/web-tracking';
 import { Misc } from '@util';
+import { TextLink } from '@trality/web-ui-components';
 
 const GdprContainer = styled.div<DarkProp>`
     position: fixed;
@@ -52,7 +53,7 @@ export const GDPR: React.FunctionComponent = () => {
     const [isClient, setIsClient] = useState<boolean>(false);
     const tracker = useTracker();
     //tmp cookie consent necessary till the cookie consent popup is redesigned
-    const tmpCookieConsent = process.browser && window?.localStorage?.getItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd');
+    const tmpCookieConsent = typeof window !== 'undefined' && window.localStorage?.getItem('tr_lp_7e4486c6-ccbd-4f88-a106-12719ad141dd');
     const [hasOptedIn, setHasOptedIn] = React.useState(!!tmpCookieConsent);
     const { dark } = useDark();
 
@@ -71,9 +72,9 @@ export const GDPR: React.FunctionComponent = () => {
         <GdprContainer dark={dark}>
             <p>
                 We use cookies to provide and improve our services. By using our site, you consent to cookies. For more information, please read our{' '}
-                <Link href="/privacy">
+                <TextLink href="/privacy">
                     <a>Privacy policy</a>
-                </Link>
+                </TextLink>
             </p>
 
             <StyledButton hollow small onClick={() => accept()}>

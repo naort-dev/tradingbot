@@ -9,5 +9,7 @@ yarn-error.log
 .vercel/README.txt
 .vercel/project.json
 static/sitemap.xml
-
+.cache
 .vercel
+public
+static/blog

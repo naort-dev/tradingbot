@@ -1,41 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSection } from 'hooks/useSection';
+import { useSection } from '@hooks';
 import { Animator } from './animations';
-import { useDelay } from 'hooks';
+import { useDelay } from '@hooks';
 
 const Svg = styled.svg<{ seen?: boolean; delay: number }>`
-    ${Animator.Animate('> g > g.left')
-        .TranslateX(25)
-        .Render()}
-    ${Animator.Animate('> g > g.right')
-        .TranslateX(-25)
-        .Delay(0.4)
-        .Render()}
-    ${Animator.Animate('> g > g.left > rect:nth-child(3)', 1)
-        .ScaleX(0.001)
-        .Delay(0.45)
-        .Render()}
-    ${Animator.Animate('> g > g.left > rect:nth-child(4)', 1)
-        .ScaleX(0.001)
-        .Delay(0.5)
-        .Render()}
-        ${Animator.Animate('> g > g.left > rect:nth-child(5)', 1)
-            .ScaleX(0.001)
-            .Delay(0.55)
-            .Render()}
-        ${Animator.Animate('> g > g.left > rect:nth-child(6)', 1)
-            .ScaleX(0.001)
-            .Delay(0.6)
-            .Render()}
-        ${Animator.Animate('> g > g.left > rect:nth-child(7)', 1)
-            .ScaleX(0.001)
-            .Delay(0.65)
-            .Render()}
-        ${Animator.Animate('> g > g.left > rect:nth-child(8)', 1)
-            .ScaleX(0.001)
-            .Delay(0.7)
-            .Render()}
+    ${Animator.Animate('> g > g.left').TranslateX(25).Render()}
+    ${Animator.Animate('> g > g.right').TranslateX(-25).Delay(0.4).Render()}
+    ${Animator.Animate('> g > g.left > rect:nth-child(3)', 1).ScaleX(0.001).Delay(0.45).Render()}
+    ${Animator.Animate('> g > g.left > rect:nth-child(4)', 1).ScaleX(0.001).Delay(0.5).Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(5)', 1).ScaleX(0.001).Delay(0.55).Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(6)', 1).ScaleX(0.001).Delay(0.6).Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(7)', 1).ScaleX(0.001).Delay(0.65).Render()}
+        ${Animator.Animate('> g > g.left > rect:nth-child(8)', 1).ScaleX(0.001).Delay(0.7).Render()}
 `;
 
 const Create = () => {

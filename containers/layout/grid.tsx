@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Paddings, Margins } from 'theme';
+import { Paddings, Margins } from '@theme';
 
 const Container = styled.div`
     display: flex;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTracker } from '@trality/web-tracking';
 import styled from 'styled-components';
+import { TextLink } from '@trality/web-ui-components';
 
 const GdprContainer = styled.div`
     position: fixed;
@@ -53,9 +54,9 @@ export const GDPR = () => {
         <GdprContainer>
             <p>
                 We use cookies to provide and improve our services. By using our site, you consent to cookies. For more information, please read our{' '}
-                <a href="/privacy">
-                    <a>Privacy policy</a>
-                </a>
+                <TextLink href="/privacy" intext>
+                    Privacy policy
+                </TextLink>
             </p>
 
             <button className="button-link hollow" onClick={() => accept()}>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useOpen } from './hooks/useOpen';
 import styled from 'styled-components';
-import { Button, Link, ButtonProps } from '@components';
-import { useHover } from 'hooks/useHover';
-import { useOnClickOutside } from 'hooks/useOnClickOutside';
-import { useIsMobile } from 'hooks/useIsMobile';
+import { Button, Link, ButtonProps } from 'components';
+import { useHover } from '@hooks';
+import { useOnClickOutside } from '@hooks';
+import { useIsMobile } from '@hooks';
 import { EventType } from '@trality/web-tracking';
 import { LazyImage } from 'components/lazyImage';
 import { Padding, PaddingSizes, TextLink, lightTheme } from '@trality/web-ui-components';
@@ -17,7 +17,7 @@ interface LinkItemProps {
 const SimpleLink = styled.a``;
 
 const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
-    font-size: 21px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -38,14 +38,9 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
             color: ${(props) => props.theme.main};
         }
     }
-    @media (max-width: 1024px) {
-        margin: 0;
-        font-size: 12px;
-    }
     @media (max-width: 768px) {
         display: none;
         opacity: 0;
-        font-size: 15px;
         margin-left: 0px;
         transition: 0.3s all;
         transition-delay: ${(props) => 0.3 + props.num * 0.1}s;
@@ -205,6 +200,7 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
                     if (isRemote) {
                         return (
                             <Padding
+                                key={`${target}_${name}`}
                                 size={{
                                     top: PaddingSizes.Eight,
                                     bottom: PaddingSizes.Eight,
@@ -226,6 +222,7 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
                     } else {
                         return (
                             <Padding
+                                key={`${target}_${name}`}
                                 size={{
                                     top: PaddingSizes.Eight,
                                     bottom: PaddingSizes.Eight,
@@ -297,7 +294,7 @@ export const ItemGroupWrapper = styled.div`
     > div {
         margin-left: 7px;
     }
-    > div:first-child {
+    > div:first-of-type {
         margin-left: 0px;
     }
     margin-left: 16px;

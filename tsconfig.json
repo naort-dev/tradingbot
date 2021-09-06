@@ -24,13 +24,15 @@
         "strict": true,
         "target": "esnext",
         "paths": {
-            "@containers": ["./containers/index.ts"],
-            "@components": ["./components/index.ts"],
-            "@assets": ["assets/index.ts"],
-            "@util": ["util/index.ts"],
-            "@constants": ["constants/index.ts"]
+            "@containers": ["../containers/index.ts"],
+            "@hooks": ["../hooks/index.ts"],
+            "@theme": ["../theme/index.ts"],
+            "@components": ["components/index.ts"],
+            "@assets": ["../assets/index.ts"],
+            "@util": ["../util/index.ts"],
+            "@constants": ["../constants/index.ts"]
         },
-        "baseUrl": ".",
+        "baseUrl": "./src/",
         "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,

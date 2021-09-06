@@ -1,4 +1,4 @@
-import { Button } from '@components';
+import { Button } from 'components';
 import { ConstUrl } from '@constants';
 import { Layout } from '@containers';
 import { Block } from 'components/block';

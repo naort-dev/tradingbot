@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ThemeColors, Paddings } from 'theme';
+import { ThemeColors, Paddings } from '@theme';
 import { PatternType, Patterns } from '@assets';
 
 interface BannerProps {

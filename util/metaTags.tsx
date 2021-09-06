@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet';
 
 export enum Page {
     HP,
@@ -25,6 +25,7 @@ export enum Page {
     JobCommunity,
     JobDevops,
     UnSub,
+    Blog
 }
 
 const titles = new Map([
@@ -51,6 +52,7 @@ const titles = new Map([
     [Page.JobCommunity, 'Trality Jobs - Community and Support'],
     [Page.Security, 'Trality - Security'],
     [Page.UnSub, 'Trality - Unsubscribe'],
+    [Page.Blog, 'Trality - Blog']
 ]);
 
 const descriptions = new Map([
@@ -110,12 +112,12 @@ export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {
     const NoRobotsCheck =
         page === Page.Jobs || page === Page.JobMobile || page === Page.JobSrFullStack || page === Page.JobFrontend || page === Page.JobBackend;
     return (
-        <Head>
+        <Helmet>
             <title>{titles.get(page)}</title>
             <meta name="description" content={descriptions.get(page)} key="description" />
             <meta name="og:title" content={titles.get(page)} key="ogtitle" />
             <meta name="og:descrition" content={descriptions.get(page)} key="ogdesc" />
             {NoRobotsCheck && <meta name="robots" content="noindex, nofollow" />}
-        </Head>
+        </Helmet>
     );
 };

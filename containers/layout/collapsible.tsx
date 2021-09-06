@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Margins } from 'theme';
+import { Margins } from '@theme';
 
 const Q = styled.div`
     position: relative;

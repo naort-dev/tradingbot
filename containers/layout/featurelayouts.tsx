@@ -1,7 +1,7 @@
 import { LazyImage } from 'components/lazyImage';
 import React from 'react';
 import styled from 'styled-components';
-import { Margins } from 'theme';
+import { Margins } from '@theme';
 
 interface A {
     icon: any;

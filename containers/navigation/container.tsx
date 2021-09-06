@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '@containers';
 import { useOpen } from './hooks/useOpen';
-import { Navigation } from 'theme';
+import { Navigation } from '@theme';
 import { MainContainer } from '@trality/web-ui-components';
 
 interface Props {

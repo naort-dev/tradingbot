@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Paddings } from 'theme';
+import { Paddings } from '@theme';
 
 export const Center = styled.div<{ direction?: 'column' | 'row'; mobileFullWidth?: boolean; className?: string }>`
     display: flex;

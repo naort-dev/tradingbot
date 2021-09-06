@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useCookie } from 'hooks/useCookie';
-import { useMailChimp } from 'hooks/useMailchimp';
+import { useCookie } from '@hooks';
+import { useMailChimp } from '@hooks';
 import { ArrowDown } from 'components/arrow';
-import { Button } from '@components';
+import { Button } from 'components';
 import { Loader } from 'components/loader';
-import { Paddings, Margins } from 'theme';
+import { Paddings, Margins } from '@theme';
 import { useTracker, createEvent, EventType, CookieStorageProvider, CookieStorage } from '@trality/web-tracking';
 
-const EmailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const EmailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const Text = styled.input`
     border-radius: none;
@@ -123,11 +124,11 @@ const Label = styled.label`
 const subscribePlaceholder = 'Your email <3';
 
 export const Subscribe = () => {
-    const tracker = useTracker()
+    const tracker = useTracker();
     const [cookie, setCookie] = useCookie('trality_subscribed');
     const [email, setEmail] = useState('');
     const { sending, send, error, setError, success } = useMailChimp();
-    const cookieStorage:CookieStorage = CookieStorageProvider.Get();
+    const cookieStorage: CookieStorage = CookieStorageProvider.Get();
 
     const isValidEmail = EmailRegex.test(email.toLowerCase());
 
@@ -142,13 +143,8 @@ export const Subscribe = () => {
 
     useEffect(() => {
         if (success) {
-            setCookie('true')
-            tracker.TrackEvent(
-                createEvent(
-                    EventType.SubscribeCompleted,
-                    {}
-                )
-            );
+            setCookie('true');
+            tracker.TrackEvent(createEvent(EventType.SubscribeCompleted, {}));
         }
     }, [success]);
 
@@ -166,7 +162,14 @@ export const Subscribe = () => {
         <ButtonContainer>
             <InputContainer>
                 <Label htmlFor="textEmailInput">{subscribePlaceholder}</Label>
-                <Text id="textEmailInput" disabled={sending} type="input" placeholder={subscribePlaceholder} value={email} onChange={(ev) => setEmail(ev.target.value)} />
+                <Text
+                    id="textEmailInput"
+                    disabled={sending}
+                    type="input"
+                    placeholder={subscribePlaceholder}
+                    value={email}
+                    onChange={(ev) => setEmail(ev.target.value)}
+                />
                 <Confirm disabled={sending}>
                     <Checkmark show={isValidEmail && !sending && !error} />
                     <Error show={!!error && !sending} />

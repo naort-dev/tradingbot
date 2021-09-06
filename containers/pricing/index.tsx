@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Margins, Paddings } from 'theme';
-import { Button as B } from '@components';
+import { Margins, Paddings } from '@theme';
+import { Button as B } from 'components';
 import { LazyImage } from 'components/lazyImage';
 
 const Container = styled.div`
@@ -322,7 +322,7 @@ const Toggle = styled.div<{ left?: boolean }>`
     ${(props) =>
         props.left &&
         `
-        > div:first-child {
+        > div:first-of-type {
             box-shadow: 0 5px 15px 0 rgba(24, 25, 39, 0.1);
             background-color: #ffffff;
             color: ${props.theme.bluePrimary}

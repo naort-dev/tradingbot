@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { GDPR } from '../gdpr';
 import { Navigation } from '../navigation';
-import { Background as Container } from '../../components/background';
+import { Background as Container } from 'components/background';
 import { Footer } from '@containers';
 import { Section } from './section';
 import { ImagesMisc } from '@assets';
-import { useDark } from 'hooks/dark';
-import { scrollIt } from 'util/scrollit';
+import { useDark } from '@hooks';
+import { scrollIt } from '@util';
 
 const Background = styled.img`
     position: absolute;

@@ -1,21 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSection } from 'hooks/useSection';
+import { useSection } from '@hooks';
 import { Animator } from './animations';
-import { useDelay } from 'hooks';
+import { useDelay } from '@hooks';
 
 const Svg = styled.svg<{ seen?: boolean; delay: number }>`
-    ${Animator.Animate('> g')
-        .Delay(0.01)
-        .Render()}
-    ${Animator.Animate('> g > g > g.bg')
-        .TranslateX(-25)
-        .Delay(0.1)
-        .Render()}
-    ${Animator.Animate('> g > g.bot')
-        .TranslateY(25)
-        .Delay(0.4)
-        .Render()}
+    ${Animator.Animate('> g').Delay(0.01).Render()}
+    ${Animator.Animate('> g > g > g.bg').TranslateX(-25).Delay(0.1).Render()}
+    ${Animator.Animate('> g > g.bot').TranslateY(25).Delay(0.4).Render()}
 `;
 
 const BotTwoDot = () => {

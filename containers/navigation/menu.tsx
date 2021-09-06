@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { useOpen } from './hooks/useOpen';
 import { ButtonItem, DropdownItem, ItemGroup, ContactItem } from './item';
 
-import { useIsMobile } from '../../hooks/useIsMobile';
-import { Navigation } from 'theme';
+import { useIsMobile } from '@hooks';
+import { Navigation } from '@theme';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { PageTypes } from 'containers/layout/page';
 import { MainContainer, Padding, PaddingSizes, TextLink, Row, Cell, Button, HideMobile, HideDesktop } from '@trality/web-ui-components';
 import { Misc } from '@util';
-import { useLink } from 'hooks/useLink';
+import { useLink } from '@hooks';
 
 interface OpenProps {
     open?: boolean;
@@ -30,7 +30,7 @@ const Container = styled.nav<OpenProps>`
         opacity: 0;
         width: 0;
         background: white;
-        > div:first-child {
+        > div:first-of-type {
             margin-top: 50px;
         }
         > div:last-child {
@@ -87,7 +87,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             />
                             <Padding
                                 size={{
-                                    top: PaddingSizes.Twenty,
+                                    top: PaddingSizes.Sixteen,
                                     bottom: PaddingSizes.Sixteen,
                                     left: PaddingSizes.Sixteen,
                                     right: PaddingSizes.Sixteen,
@@ -102,7 +102,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             <HideMobile>
                                 <Padding
                                     size={{
-                                        top: PaddingSizes.Twenty,
+                                        top: PaddingSizes.Sixteen,
                                         bottom: PaddingSizes.Sixteen,
                                         left: PaddingSizes.Sixteen,
                                         right: PaddingSizes.Sixteen,

@@ -1,18 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSection } from 'hooks/useSection';
+import { useSection } from '../../../hooks/useSection';
 import { Animator } from './animations';
-import { useDelay } from 'hooks';
+import { useDelay } from '../../../hooks';
 
 const Svg = styled.svg<{ seen?: boolean; delay: number }>`
-    ${Animator.Animate('g > g:nth-child(1)')
-        .TranslateX(25)
-        .Delay(0)
-        .Render()}
-    ${Animator.Animate('g > g:nth-child(2)')
-        .TranslateX(-25)
-        .Delay(0.3)
-        .Render()}
+    ${Animator.Animate('g > g:nth-child(1)').TranslateX(25).Delay(0).Render()}
+    ${Animator.Animate('g > g:nth-child(2)').TranslateX(-25).Delay(0.3).Render()}
 `;
 
 const Security = () => {

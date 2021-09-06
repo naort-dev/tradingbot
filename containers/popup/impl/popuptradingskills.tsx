@@ -1,6 +1,6 @@
 import React from 'react';
 import { PopupComponent } from '../types';
-import { PopupLayout, Button } from '@components';
+import { PopupLayout, Button } from 'components';
 
 import * as Image from './popupcompetition.png';
 import { ConstUrl } from '@constants';

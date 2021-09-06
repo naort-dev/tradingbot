@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { useDark } from '../../hooks/dark';
+import { useDark } from '@hooks';
 import { useOpen } from './hooks/useOpen';
-import Link from 'next/link';
+import { Link } from 'gatsby';
 import { Logos } from '@assets';
 
 const LogoImg = styled.img`
@@ -28,7 +28,7 @@ const A = styled.a`
 
 export const Logo = () => {
     return (
-        <Link href="/">
+        <Link to="/">
             <A>
                 <LogoImg src={Logos.TralityMainLogo} alt="Trality Logo" />
             </A>

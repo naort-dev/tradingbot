@@ -17,7 +17,7 @@ const Container = styled.div`
         text-align: center;
         justify-content: center;
     }
-    > div:first-child {
+    > div:first-of-type {
         min-width: 200px;
         justify-content: flex-start;
         align-items: center;
@@ -56,10 +56,10 @@ export const AsSeenIn = () => {
             <div>As seen in</div>
             <div>
                 <Entry target="_blank" href="https://www.derbrutkasten.com/trality-erhalt-sechsstellige-ffg-fordreung/">
-                    <LazyImage src={BK} alt="Der Brutkasten"/>
+                    <LazyImage src={BK} alt="Der Brutkasten" />
                 </Entry>
                 <Entry target="_blank" href="https://de.cointelegraph.com/news/wiener-startup-trality-entwickelt-marktplatz-fur-krypto-trading-bots">
-                    <LazyImage src={CT} alt="Coin Telegraph"/>
+                    <LazyImage src={CT} alt="Coin Telegraph" />
                 </Entry>
                 <Entry
                     target="_blank"
@@ -68,7 +68,7 @@ export const AsSeenIn = () => {
                     <LazyImage src={ICOM} alt="Investing" />
                 </Entry>
                 <Entry target="_blank" href="https://www.trendingtopics.at/trality-wiener-startup-baut-einen-app-store-fuer-krypto-bots/">
-                    <LazyImage src={TT} alt="Trending Topics"/>
+                    <LazyImage src={TT} alt="Trending Topics" />
                 </Entry>
             </div>
         </Container>

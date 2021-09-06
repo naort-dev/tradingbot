@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSection } from 'hooks/useSection';
-import { DelayRenderer, useDelay } from 'hooks';
-import { Paddings } from 'theme';
+import { useSection } from '@hooks';
+import { DelayRenderer, useDelay } from '@hooks';
+import { Paddings } from '@theme';
 
 const SingleColumnWrapper = styled.div<{ collapseMobile?: boolean }>`
     width: 100%;
@@ -34,7 +34,7 @@ interface TwoColumnProps {
 }
 
 const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
-    > div:first-child {
+    > div:first-of-type {
         width: ${(props) => (props.columnWidth ? props.columnWidth : 50)}%;
         ${(props) =>
             props.border &&
@@ -56,10 +56,12 @@ const TwoColumnWrapper = styled(SingleColumnWrapper)<TwoColumnProps>`
         props.reverted &&
         `
     flex-direction: row-reverse;
-    ${props.mobileReverted !== undefined &&
+    ${
+        props.mobileReverted !== undefined &&
         `
         flex-direction: ${props.mobileReverted ? 'row-reverse' : 'row'};
-    `}
+    `
+    }
 `}
 `;
 

@@ -1,6 +1,6 @@
 import { PopupComponents, PopupOptions } from './types';
 import { useState, useEffect, useCallback } from 'react';
-import { Popup } from '@components';
+import { Popup } from 'components';
 import { useRouter } from 'next/router';
 
 interface PopupItem {

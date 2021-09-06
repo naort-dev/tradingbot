@@ -18,18 +18,15 @@ interface FAQItem {
 const FAQMap: FAQItem[] = [
     {
         title: 'Do I need to deposit funds on Trality in order to trade?',
-        answer:
-            'No. There is no option for you to deposit funds on Trality because we are not an exchange and we do not store coins. In order to deploy a bot for live trading or paper trading, you need to connect your exchange account to Trality via an API key.',
+        answer: 'No. There is no option for you to deposit funds on Trality because we are not an exchange and we do not store coins. In order to deploy a bot for live trading or paper trading, you need to connect your exchange account to Trality via an API key.',
     },
     {
         title: 'Is Trality safe?',
-        answer:
-            'Security is the biggest priority at Trality. The trading orders are executed on your behalf on the exchange and we don’t require withdrawal rights, so your funds are 100% secure.',
+        answer: 'Security is the biggest priority at Trality. The trading orders are executed on your behalf on the exchange and we don’t require withdrawal rights, so your funds are 100% secure.',
     },
     {
         title: 'How much profit can I make?',
-        answer:
-            'As a platform for algorithmic trading bots, our main goal is to provide you with state-of-the-art tools to help you minimize risk, limit losses and increase profits. However, we can not and will not assure any profit. It depends on your strategy, settings and market conditions.',
+        answer: 'As a platform for algorithmic trading bots, our main goal is to provide you with state-of-the-art tools to help you minimize risk, limit losses and increase profits. However, we can not and will not assure any profit. It depends on your strategy, settings and market conditions.',
     },
     {
         title: 'Do you offer paper trading?',
@@ -41,8 +38,7 @@ const FAQMap: FAQItem[] = [
     },
     {
         title: 'Is your Free plan really free?',
-        answer:
-            'It sure is. The free plan is great for those who are just getting started. You can easily create, backtest and deploy one trading bot with a limit of €5,000 in trading volume per month. However, if you want to create and deploy more bots or if your trading volume exceeds the €5,000 monthly limit, you will need to upgrade your plan. Check the pricing page for more details.',
+        answer: 'It sure is. The free plan is great for those who are just getting started. You can easily create, backtest and deploy one trading bot with a limit of €5,000 in trading volume per month. However, if you want to create and deploy more bots or if your trading volume exceeds the €5,000 monthly limit, you will need to upgrade your plan. Check the pricing page for more details.',
     },
     {
         title: 'Does Trality take any fees from my trades?',

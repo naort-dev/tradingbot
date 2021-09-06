@@ -18,4 +18,4 @@ const useFetch = <T>(url: string, options: RequestInit) => {
     return [response, error];
 };
 
-export default useFetch;
+export { useFetch };

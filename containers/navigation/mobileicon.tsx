@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useDark } from 'hooks/dark';
+import { useDark } from '@hooks';
 import { useOpen } from './hooks/useOpen';
 
 const Menu = styled.div<{ open?: boolean }>`
