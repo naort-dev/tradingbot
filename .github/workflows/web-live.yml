@@ -31,5 +31,5 @@ jobs:
             - name: Let lambda know change of live sha
               run: echo ${GITHUB_SHA}
               env:
-                  GATSBY_LAMBDA_TOKEN_DEV: ${{secrets.GATSBY_LAMBDA_TOKEN_DEV}}
+                  GATSBY_LAMBDA_TOKEN_DEV: ${{secrets.GATSBY_LAMBDA_TOKEN_LIVE}}
                   CI: true
