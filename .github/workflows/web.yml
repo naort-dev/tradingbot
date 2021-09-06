@@ -29,6 +29,6 @@ jobs:
               env:
                   CI: true
             - name: Let lambda know change of dev sha
-              run: echo ${{GITHUB_SHA}}
+              run: echo ${GITHUB_SHA}
               env:
                   CI: true
