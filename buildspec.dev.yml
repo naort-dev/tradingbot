@@ -20,28 +20,32 @@ version: 0.2
 #build-matrix:
 #build-graph:
 phases:
-    #install:
-    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
-    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
-    #runtime-versions:
-    # name: version
-    # name: version
-    #commands:
-    # - command
-    # - command
-    #pre_build:
-    #commands:
-    # - command
-    # - command
-    build:
-        commands:
-            - yarn install
-            - yarn build
-            # - command
-    #post_build:
-    #commands:
-    # - command
-    # - command
+    install:
+        runtime-versions:
+            nodejs: 12
+        #install:
+        #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
+        #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
+        #runtime-versions:
+        # name: version
+        # name: version
+        #commands:
+        # - command
+        # - command
+        #pre_build:
+        #commands:
+        # - command
+        # - command
+        build:
+            commands:
+                - npm install yarn --global
+                - yarn install --prod --pure-lockfile
+                - yarn build
+                # - command
+        #post_build:
+        #commands:
+        # - command
+        # - command
 #reports:
 #report-name-or-arn:
 #files:
