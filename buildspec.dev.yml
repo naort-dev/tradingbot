@@ -40,7 +40,6 @@ phases:
             commands:
                 - npm install yarn --global
                 - yarn install --prod --pure-lockfile
-                - yarn build
                 # - command
         #post_build:
         #commands:
