@@ -24,7 +24,7 @@ export const WatchVideo: React.FunctionComponent<Props> = ({ srcYtb }) => {
                 </Lightbox>
             )}
             <Button variant="outlined" fullWidth onClick={() => setShow(true)}>
-                Watch video 2
+                Watch video 3
             </Button>
         </>
     );
