@@ -5,6 +5,7 @@ env:
         TEST: 'TESTING VALUE'
     parameter-store:
         NODE_AUTH_TOKEN: 'node_auth_token'
+
 phases:
     install:
         runtime-versions:
@@ -17,12 +18,10 @@ phases:
         # name: version
         commands:
             - npm install yarn --global
-            - echo ${NODE_AUTH_TOKEN}
             - echo "@trality:registry=https://npm.pkg.github.com" >> .npmrc
             - echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
             - cat .npmrc
-            - echo ${TEST}
-            - npm install
+            - yarn install --prod --pure-lockfile
         # - command
         #pre_build:
         #commands:
