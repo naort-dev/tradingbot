@@ -21,7 +21,7 @@ phases:
             - echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
             - cat .npmrc
             - echo ${TEST}
-            - export NODE_AUTH_TOKEN=${NODE_AUTH_TOKEN} && yarn install --prod --pure-lockfile
+            - yarn install --prod --pure-lockfile
         # - command
         #pre_build:
         #commands:
