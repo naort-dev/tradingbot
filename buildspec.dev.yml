@@ -1,5 +1,8 @@
 version: 0.2
 
+env:
+    parameter-store:
+        NODE_AUTH_TOKEN: node_auth_token
 phases:
     install:
         runtime-versions:
