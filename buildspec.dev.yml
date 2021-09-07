@@ -18,7 +18,8 @@ phases:
         commands:
             - npm install yarn --global
             - echo ${NODE_AUTH_TOKEN}
-            - echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+            - echo "@trality:registry=https://npm.pkg.github.com" >> .npmrc
+            - echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
             - cat .npmrc
             - echo ${TEST}
             - npm install
