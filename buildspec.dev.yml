@@ -1,24 +1,8 @@
-version: 0.2
+version: 0.3
 
-#env:
-#variables:
-# key: "value"
-# key: "value"
-#parameter-store:
-# key: "value"
-# key: "value"
-#secrets-manager:
-# key: secret-id:json-key:version-stage:version-id
-# key: secret-id:json-key:version-stage:version-id
-#exported-variables:
-# - variable
-# - variable
-#git-credential-helper: yes
-#batch:
-#fast-fail: true
-#build-list:
-#build-matrix:
-#build-graph:
+env:
+    secrets-manager:
+        NODE_AUTH_TOKEN: node_auth_token
 phases:
     install:
         runtime-versions:
