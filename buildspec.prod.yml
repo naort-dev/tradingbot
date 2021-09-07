@@ -27,7 +27,7 @@ phases:
         # - command
     build:
         commands:
-            - yarn build:ci:dev
+            - yarn build:ci:prod
             # - command
         #post_build:
         #commands:
