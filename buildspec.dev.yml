@@ -38,8 +38,10 @@ phases:
         # - command
         build:
             commands:
+                - echo We are trying to build this thing..
                 - npm install yarn --global
                 - yarn install --prod --pure-lockfile
+                - echo Well, we are the end here.
                 # - command
         #post_build:
         #commands:
