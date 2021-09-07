@@ -18,6 +18,8 @@ phases:
         commands:
             - npm install yarn --global
             - echo ${NODE_AUTH_TOKEN}
+            - echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+            - echo ~/.npmrc
             - echo ${TEST}
             - export NODE_AUTH_TOKEN=${NODE_AUTH_TOKEN} && yarn install --prod --pure-lockfile
         # - command
