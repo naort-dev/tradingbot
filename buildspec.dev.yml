@@ -10,8 +10,10 @@ phases:
         #runtime-versions:
         # name: version
         # name: version
-        #commands:
-        # - command
+        commands:
+            - npm install yarn --global
+            - export NODE_AUTH_TOKEN=$NODE_AUTH_TOKEN
+            - yarn install --prod --pure-lockfile
         # - command
         #pre_build:
         #commands:
@@ -19,10 +21,7 @@ phases:
         # - command
     build:
         commands:
-            - echo We are trying to build this thing..
-            - npm install yarn --global
-            - yarn install --prod --pure-lockfile
-            - echo Well, we are the end here.
+            - yarn build
             # - command
         #post_build:
         #commands:
