@@ -16,13 +16,6 @@ phases:
         commands:
             - npm install yarn --global
             - echo ${NODE_AUTH_TOKEN}
-            - cat <<EOF > .npmrc
-@trality:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-
-EOF
-            - cat .npmrc
-            - export NODE_AUTH_TOKEN=${NODE_AUTH_TOKEN}
             - yarn install --prod --pure-lockfile
         # - command
         #pre_build:
@@ -37,6 +30,10 @@ EOF
         #commands:
         # - command
         # - command
+artifacts:
+    files:
+        - '**/*'
+    base-directory: ./public
 #reports:
 #report-name-or-arn:
 #files:
