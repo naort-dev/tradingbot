@@ -36,10 +36,6 @@ phases:
 #base-directory: location
 #discard-paths: yes
 #file-format: JunitXml | CucumberJson
-artifacts:
-    files:
-        - '**/*'
-    base-directory: 'public'
 #files:
 # - location
 # - location
