@@ -11,7 +11,7 @@
         "build": "yarn clean && gatsby build",
         "build:prod": "export BUILD_ENV=prod && yarn build",
         "build:ci:dev": "export BUILD_ENV=dev && yarn build",
-        "build:ci:prod": "export BUILD_ENV=dev && yarn build",
+        "build:ci:prod": "export BUILD_ENV=prod && yarn build",
         "start": "next start",
         "vercel:login": "vercel login",
         "analyze": "cross-env ANALYZE=true next build",
