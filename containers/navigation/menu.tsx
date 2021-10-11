@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useOpen } from './hooks/useOpen';
-import { ButtonItem, DropdownItem, ItemGroup, ContactItem } from './item';
+import { DropdownItem } from './item';
 
-import { useIsMobile } from '@hooks';
-import { Navigation } from '@theme';
-import { EventType, SignupOrigins } from '@trality/web-tracking';
-import { ConstUrl } from '@constants';
-import { PageTypes } from 'containers/layout/page';
+import { Navigation } from '../../theme';
+import { PageTypes } from '../../containers/layout/page';
 import { MainContainer, Padding, PaddingSizes, TextLink, Row, Cell, Button, HideMobile, HideDesktop } from '@trality/web-ui-components';
-import { Misc } from '@util';
-import { useLink } from '@hooks';
+import { useLink } from '../../hooks/useLink';
 
 interface OpenProps {
     open?: boolean;
@@ -30,7 +26,7 @@ const Container = styled.nav<OpenProps>`
         opacity: 0;
         width: 0;
         background: white;
-        > div:first-of-type {
+        > div:first-child {
             margin-top: 50px;
         }
         > div:last-child {
@@ -87,8 +83,8 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             />
                             <Padding
                                 size={{
-                                    top: PaddingSizes.Sixteen,
-                                    bottom: PaddingSizes.Sixteen,
+                                    top: PaddingSizes.Twenty,
+                                    bottom: PaddingSizes.Twenty,
                                     left: PaddingSizes.Sixteen,
                                     right: PaddingSizes.Sixteen,
                                 }}
@@ -102,8 +98,8 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             <HideMobile>
                                 <Padding
                                     size={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.Twenty,
+                                        bottom: PaddingSizes.Twenty,
                                         left: PaddingSizes.Sixteen,
                                         right: PaddingSizes.Sixteen,
                                     }}

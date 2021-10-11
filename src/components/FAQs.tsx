@@ -170,6 +170,7 @@ export const FAQs = () => {
                 {Data.map((item) => {
                     return <FAQ question={item.question} answer={item.answer} />;
                 })}
+                <div id="faq"></div>
             </MainContainer>
         </Padding>
     );

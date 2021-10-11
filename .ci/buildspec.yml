@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm install yarn --global
+  pre_build:
+    commands:
+      - export NPM_AUTH_TOKEN="$(echo "${AUTHENTICATION}" | jq -r '.NPM_AUTH_TOKEN')"
+      - echo "@trality:registry=https://npm.pkg.github.com" >> .npmrc
+      - echo "//npm.pkg.github.com/:_authToken=${NPM_AUTH_TOKEN}" >> .npmrc
+      - yarn install --prod --pure-lockfile
+  build:
+    commands:
+      - yarn "build:ci:${ENVIRONMENT}"
+artifacts:
+  name: static
+  files:
+    - '**/*'
+  base-directory: public

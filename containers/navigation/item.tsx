@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useOpen } from './hooks/useOpen';
 import styled from 'styled-components';
-import { Button, Link, ButtonProps } from 'components';
-import { useHover } from '@hooks';
-import { useOnClickOutside } from '@hooks';
-import { useIsMobile } from '@hooks';
+import { Button, Link, ButtonProps } from '@components';
+import { useHover } from '../../hooks/useHover';
+import { useOnClickOutside } from '../../hooks/useOnClickOutside';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import { EventType } from '@trality/web-tracking';
 import { LazyImage } from 'components/lazyImage';
 import { Padding, PaddingSizes, TextLink, lightTheme } from '@trality/web-ui-components';
@@ -17,7 +17,6 @@ interface LinkItemProps {
 const SimpleLink = styled.a``;
 
 const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
-    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -38,6 +37,9 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
             color: ${(props) => props.theme.main};
         }
     }
+    @media (max-width: 1024px) {
+        margin: 0;
+    }
     @media (max-width: 768px) {
         display: none;
         opacity: 0;
@@ -51,7 +53,6 @@ const Item = styled.div<{ open?: boolean; num: number; selected?: boolean }>`
             `
             display: block;
             color: #fff;
-            font-size: 24px;
             opacity: 1.0;
             & > a {
                 color: white;
@@ -170,8 +171,8 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
             <DropdownButton>
                 <Padding
                     size={{
-                        top: PaddingSizes.Sixteen,
-                        bottom: PaddingSizes.Sixteen,
+                        top: PaddingSizes.Twenty,
+                        bottom: PaddingSizes.Twenty,
                         left: PaddingSizes.Sixteen,
                         right: PaddingSizes.Sixteen,
                     }}
@@ -200,7 +201,6 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
                     if (isRemote) {
                         return (
                             <Padding
-                                key={`${target}_${name}`}
                                 size={{
                                     top: PaddingSizes.Eight,
                                     bottom: PaddingSizes.Eight,
@@ -222,7 +222,6 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ name, items }) => {
                     } else {
                         return (
                             <Padding
-                                key={`${target}_${name}`}
                                 size={{
                                     top: PaddingSizes.Eight,
                                     bottom: PaddingSizes.Eight,
@@ -294,7 +293,7 @@ export const ItemGroupWrapper = styled.div`
     > div {
         margin-left: 7px;
     }
-    > div:first-of-type {
+    > div:first-child {
         margin-left: 0px;
     }
     margin-left: 16px;

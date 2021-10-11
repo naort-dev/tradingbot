@@ -21,10 +21,8 @@ import {
     BlogContainer,
 } from '@trality/web-ui-components';
 import { Helmet } from 'react-helmet';
-import { FeaturedIn } from 'components/featuredin';
 import { LazyImage } from 'components/lazyImage';
-import { graphql, useStaticQuery } from 'gatsby';
-import { elementType } from 'prop-types';
+import { graphql } from 'gatsby';
 import moment from 'moment';
 
 interface BlogDataItem {

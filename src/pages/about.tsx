@@ -1,5 +1,5 @@
 import { Layout } from '@containers';
-import { Header, Button } from 'components';
+import { Header, Button } from '@components';
 import React, { ReactNode } from 'react';
 
 import { MetaTags, Page } from '../../util/metaTags';
@@ -37,7 +37,7 @@ const pageData: Person[] = [
     {
         name: 'Moritz Putzhammer',
         title: 'Co-Founder & CEO',
-        bio: 'Completed project management and finance positions in six different countries while obtaining his PhD.',
+        bio: 'Moritz is passionate about crypto, loves all things digital and is driven by data. Holds a Ph.D. in Business and displays broad professional experience in strategy, finance, project mgmt and research. Fluent in German, English, Spanish and Python.',
         photo: Assets.TeamPhotos.Moritz,
         socialLinks: [
             {
@@ -49,7 +49,7 @@ const pageData: Person[] = [
     {
         name: 'Christopher Helf',
         title: 'Co-Founder & CTO',
-        bio: 'Built machine learning algorithms with <10ms latency on mobile outperforming state-of-the-art alternatives.',
+        bio: 'Christopher Helf is one of the co-founders of Trality and is the head of all technical developments that are undertaken to make Trality an awesome product. He has a great passion for computer science, and has previously worked on large-scale machine learning projects.',
         photo: Assets.TeamPhotos.Christopher,
         socialLinks: [
             {
@@ -61,7 +61,7 @@ const pageData: Person[] = [
     {
         name: 'Andrea Salcedo',
         title: 'Sr. Software Engineer',
-        bio: 'Andrea has worked as a backend engineer for over five years, focusing on API design, microservices, load testing and scalability.',
+        bio: 'Andrea has worked as a backend engineer for over five years, focusing on API design, microservices, load testing and scalability. She most recently worked at Runtastic before joining the Traliteam after wanting to expand into something new.',
         photo: Assets.TeamPhotos.Andrea,
         socialLinks: [
             {
@@ -73,7 +73,7 @@ const pageData: Person[] = [
     {
         name: 'Ovidiu Popescu',
         title: 'Head of Growth Marketing',
-        bio: 'Scaled an FX broker from 0 to 20k paying users over five years as Head of Marketing.',
+        bio: 'Ovidiu is a growth marketing professional with over 8 years of hands-on expertise in customer acquisition/retention. He spent 5 years as Head of Marketing for the fintech company BDSwiss where he successfully developed and executed the growth strategy, acquiring 500,000+ users.',
         photo: Assets.TeamPhotos.Ovi,
         socialLinks: [
             /* Don't have one. */
@@ -82,7 +82,7 @@ const pageData: Person[] = [
     {
         name: 'Constantin Dißelkamp',
         title: 'ML Engineer',
-        bio: 'M.Sc Theoretical Physics RWTH Aachen. Built ML strategies for crypto derivative platforms.',
+        bio: 'Constantine earned his Master of Science in Theoretical Physics at RWTH Aachen. Since then, he has worked on many different projects, namely building Machine Learning strategies for cryptocurrency derivative platforms.',
         photo: Assets.TeamPhotos.Constantin,
         socialLinks: [
             {
@@ -96,7 +96,7 @@ const pageData: Person[] = [
         title: 'Sr. Backend Engineer',
         bio: 'Spent years developing high traffic E-commerce websites, former blockchain developer at Lisk.io. True believer in cryptocurrencies and DeFi.',
 
-        photo: null,
+        photo: Assets.TeamPhotos.Tamas,
         socialLinks: [
             {
                 type: 'linkedin',
@@ -106,8 +106,8 @@ const pageData: Person[] = [
     },
     {
         name: 'Declan Igoe',
-        title: 'Copywriter & Content Specialist',
-        bio: "Trality's Wordsmith. Declan was Content Specialist and Social Media Manager at Bitpanda where he helped shape the overall content strategy.",
+        title: 'Communications Lead',
+        bio: 'Declan is Trality’s communications expert and resident talkaholic. When it comes to words, Declan is in his comfort zone and has been lucky enough to work with brands like Domino’s Pizza and Guinness. He worked as Social Media Manager at the neobroker Bitpanda before joining Trality.',
 
         photo: Assets.TeamPhotos.Declan,
         socialLinks: [
@@ -120,7 +120,7 @@ const pageData: Person[] = [
     {
         name: 'Jakub Strzadala',
         title: 'Sr. Frontend Engineer',
-        bio: "Spent years working a vast variety of online projects. It's fast delivery to anybody on the planet.",
+        bio: 'Jakub is the face behind everything Trality users see. Anything from the webapp to the homepage to some internal systems go under his keen eye. He’s passionate about computer science and user security. Outside of work, he loves bouldering and the great outdoors.',
 
         photo: Assets.TeamPhotos.Jakub,
         socialLinks: [
@@ -133,13 +133,39 @@ const pageData: Person[] = [
     {
         name: 'Davide Scassola',
         title: 'Jr AI Engineer',
-        bio: 'M.Sc Data Science & Scientific Computing at University of Trieste, SISSA.',
+        bio: 'Davide is a Data Scientist who is responsible for the development of Trality’s Machine Learning platform. His passion for mathematics and probability and his knack for the art of software make him a valuable member of the research and development team.',
 
         photo: Assets.TeamPhotos.Davide,
         socialLinks: [
             {
                 type: 'linkedin',
                 link: 'https://www.linkedin.com/in/davide-scassola/',
+            },
+        ],
+    },
+    {
+        name: 'Dominik De Zordo',
+        title: 'Head of DevOps',
+        bio: 'Dominik is a multi-faceted developer with a lot of experience leading and scaling technical teams. Before joining Trality as its DevOps lead, he worked at Bitpanda where his team grew from a handful to more than 100 people working across Europe.',
+        photo: null,
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/dominik-de-zordo/',
+            },
+        ],
+    },
+
+    {
+        name: 'Brian Haman',
+        title: 'Content & Copy Specialist',
+        bio: 'Some say that he’s terrified of pears and that there’s a village named after him in Tajikistan. All we know is that he’s a talented writer and editor whose words, which have appeared in the New York Times, Guardian, and elsewhere, will be driving Trality’s content and copy.',
+
+        photo: null,
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/brian-haman-661222176/',
             },
         ],
     },
@@ -168,9 +194,12 @@ const Team = () => {
                             </Padding>
                             <Text bodyType="Body2">
                                 At Trality, we see a future in which everything is automated by bots and when it comes to automated investing, there
-                                will be only one place to go: Trality. Founded in 2019 by Moritz Putzhammer and Christopher Helf, we strive to be the
-                                go-to-place for anyone wanting to experience the power and potential of trading bots and we will bring that to
-                                everyone who needs it — advanced users or beginners.
+                                will be only one place to go: Trality. Founded in 2019 by Moritz Putzhammer and Christopher Helf in response to the
+                                volatile and mostly unpredictable crypto market—Trality exists to bring automated, algorithmic trading to all who need
+                                it. While most investors are losing out due to emotional trading or poor timing, the upper echelons of the financial
+                                world are raking in the profit thanks to advanced, automated systems. We are changing that by giving everyone access
+                                to state-of-the-art tools they need to either automate their own strategies or follow those on the platform who are
+                                already doing so with multiple fair and flexible packages for different levels of users.
                             </Text>
                         </Cell>
                     </Row>

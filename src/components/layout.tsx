@@ -6,7 +6,6 @@ import { lightTheme } from '@trality/web-ui-components';
 import { EventOrigin, EventStage, EventType, TrackingManagerConfig, TrackingProvider } from '@trality/web-tracking';
 
 const trackingLinks = [process.env.TRACKER_ECHO, process.env.TRACKER_GTM, process.env.TRACKER_SENTRY, process.env.TRACKER_SEGMENT];
-debugger;
 const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {

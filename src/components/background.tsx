@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Navigation } from '@theme';
 
 const Container = styled.div`
-    background-color: ${(props) => props.theme.background};
+    background-color: #fff;
     transition: 0.3s all;
 `;
 

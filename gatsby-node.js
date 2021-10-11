@@ -32,6 +32,10 @@ exports.onCreateWebpackConfig = ({ stage, getConfig, rules, loaders, plugins, ac
     actions.replaceWebpackConfig(config);
 };
 
+const sleep = async (millis) => {
+    new Promise((resolve) => setTimeout(resolve, millis));
+};
+
 exports.createPages = async function ({ actions, graphql }) {
     const { data } = await graphql(`
         query {
@@ -66,7 +70,7 @@ exports.onPreBootstrap = function () {
     rimraf.sync('./static/blog');
 };
 
-exports.onCreateNode = function ({ node, actions, createNodeId, reporter, cache, store }, pluginOptions) {
+exports.onCreateNode = async function ({ node, actions, createNodeId, reporter, cache, store }, pluginOptions) {
     const { createNode } = actions;
     if (node.id.includes('Ghost__Author')) {
         let image;
@@ -91,6 +95,7 @@ exports.onCreateNode = function ({ node, actions, createNodeId, reporter, cache,
         }
         fs.writeFileSync(newUrl, image.getBody(), { flag: 'a' });
         node.profile_image = newUrl.replace('./static', '');
+        await sleep(5000);
         return;
     }
     if (node.ghostId !== undefined && node.feature_image) {
@@ -135,6 +140,7 @@ exports.onCreateNode = function ({ node, actions, createNodeId, reporter, cache,
                 //console.log(tag.attr('src'));
             });
 
+            await sleep(5000);
             node.html = $.html();
         }
     }

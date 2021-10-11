@@ -1,10 +1,13 @@
 import * as React from 'react';
-
 import { Logos } from '@assets';
+import { Layout } from '@containers';
+import { LogoList, ExternalLink } from '@components';
+import { EventType, SignupOrigins } from '@trality/web-tracking';
+import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
-import { PageTypes } from 'containers/layout/page';
+import { PageTypes } from '../../containers/layout/page';
 import { Divider, Padding, Cell, MainContainer, Row, Button, Text, PaddingSizes, TextLink, Assets } from '@trality/web-ui-components';
-import { useLink } from '@hooks';
+import { useLink } from '../../hooks/useLink';
 
 interface Props {
     pageType: PageTypes;
@@ -49,12 +52,13 @@ const firstMenu = [
 ];
 
 const secondMenu = [
+    { link: '/press', name: 'Press' },
     { link: '/imprint', name: 'Imprint' },
     { link: '/privacy', name: 'Privacy' },
     { link: '/terms', name: 'Terms' },
 ];
 
-const SocialLinks = [
+export const SocialLinks = [
     { link: 'https://discord.com/invite/h5BPuKBQHv', logo: Assets.Discord },
     { link: 'https://twitter.com/trality_bots', logo: Assets.Twitter },
     { link: 'https://www.instagram.com/trality_bots/', logo: Assets.Instagram },
@@ -79,7 +83,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                         <MainContainer>
                             <Row>
                                 <Cell size={8} mobileSize={6}>
-                                    <LazyImage src={Logos.TralityMainLogo} alt="Trality Logo" />
+                                    <LazyImage src={Assets.TralityLogo} alt="Trality Logo" />
                                 </Cell>
                             </Row>
                             <Row>
@@ -87,10 +91,10 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                     <Row>
                                         {SocialLinks.map((item) => {
                                             return (
-                                                <Cell size={2} mobileSize={2} key={item.link}>
-                                                    <a href={item.link} target="_blank">
+                                                <Cell size={2} mobileSize={2}>
+                                                    <TextLink href={item.link} target="_blank">
                                                         <img src={item.logo} />
-                                                    </a>
+                                                    </TextLink>
                                                 </Cell>
                                             );
                                         })}
@@ -107,14 +111,13 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                         return (
                                             <Padding
                                                 size={{
-                                                    top: PaddingSizes.Sixteen,
-                                                    bottom: PaddingSizes.Sixteen,
+                                                    top: PaddingSizes.Eight,
+                                                    bottom: PaddingSizes.Eight,
                                                 }}
                                                 mobileSize={{
                                                     top: PaddingSizes.Twelve,
                                                     bottom: PaddingSizes.Twelve,
                                                 }}
-                                                key={item.link}
                                             >
                                                 <TextLink
                                                     href={item.onClick ? '#' : item.link}
@@ -137,14 +140,13 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                         return (
                                             <Padding
                                                 size={{
-                                                    top: PaddingSizes.Sixteen,
-                                                    bottom: PaddingSizes.Sixteen,
+                                                    top: PaddingSizes.Eight,
+                                                    bottom: PaddingSizes.Eight,
                                                 }}
                                                 mobileSize={{
                                                     top: PaddingSizes.Twelve,
                                                     bottom: PaddingSizes.Twelve,
                                                 }}
-                                                key={item.link}
                                             >
                                                 <TextLink href={item.link}>{item.name}</TextLink>
                                             </Padding>
@@ -165,25 +167,32 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                 mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
             >
                 <Row>
-                    {FooterLogos.map((item) => {
-                        return (
-                            <Cell size={2} mobileSize={6} alignVertical="middle" key={item.title}>
-                                <LazyImage src={item.light} />
-                            </Cell>
-                        );
-                    })}
+                    <Cell size={12} mobileSize={12}>
+                        <Text bodyType="Body2">Proudly supported by</Text>
+                    </Cell>
                 </Row>
             </Padding>
+            <Row>
+                {FooterLogos.map((item) => {
+                    return (
+                        <Cell size={2} mobileSize={6} alignVertical="middle">
+                            <LazyImage src={item.light} />
+                        </Cell>
+                    );
+                })}
+            </Row>
             <Padding
                 size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                 mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
             >
                 <Row>
                     <Cell size={6} mobileSize={12}>
-                        <Text bodyType="Body4">All rights reserved © Trality 2021</Text>
+                        <Text bodyType="Caption" lighter>
+                            All rights reserved © Trality 2021
+                        </Text>
                     </Cell>
                     <Cell size={6} align="right" mobileSize={12} alignMobile="left">
-                        <Text bodyType="Body4">Made with 💙 by Trality</Text>
+                        <Text bodyType="Caption">Made with 💙 by Trality</Text>
                     </Cell>
                 </Row>
             </Padding>

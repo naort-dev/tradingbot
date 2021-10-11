@@ -41,6 +41,22 @@ export const Twitter = () => {
                 bottom: PaddingSizes.FiftySix,
             }}
         >
+            <MainContainer>
+                <Row>
+                    <Cell size={12} mobileSize={12}>
+                        <Padding
+                            size={{
+                                bottom: PaddingSizes.SixtyFour,
+                            }}
+                            mobileSize={{
+                                bottom: PaddingSizes.FiftySix,
+                            }}
+                        >
+                            <Headline headlineType="Headline5">Join the list of our happy users!</Headline>
+                        </Padding>
+                    </Cell>
+                </Row>
+            </MainContainer>
             <MainContainer scrollable>
                 <Padding
                     size={{
@@ -52,20 +68,6 @@ export const Twitter = () => {
                         right: PaddingSizes.TwentyFour,
                     }}
                 >
-                    <Row>
-                        <Cell size={12} mobileSize={12}>
-                            <Padding
-                                size={{
-                                    bottom: PaddingSizes.SixtyFour,
-                                }}
-                                mobileSize={{
-                                    bottom: PaddingSizes.FiftySix,
-                                }}
-                            >
-                                <Headline headlineType="Headline5">Join the list of our happy users!</Headline>
-                            </Padding>
-                        </Cell>
-                    </Row>
                     <Row noWrap>
                         {Tweets.map((item) => {
                             return (

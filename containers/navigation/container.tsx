@@ -18,7 +18,7 @@ const Top = styled.nav<Props>`
         position: fixed;
         left: 0;
         top: 0;
-        background-color: ${(props) => props.theme.background};
+        background-color: #fff;
         height: ${Navigation.Height};
         
 `;
