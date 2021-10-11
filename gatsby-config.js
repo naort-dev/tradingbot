@@ -48,15 +48,6 @@ module.exports = {
         'gatsby-plugin-emotion',
         'gatsby-plugin-react-helmet',
         {
-            resolve: `gatsby-plugin-s3`,
-            options: {
-                bucketName: process.env.S3_BUCKETNAME,
-                protocol: 'https',
-                hostname: process.env.APP_URL,
-                enableS3StaticWebsiteHosting: true,
-            },
-        },
-        {
             resolve: `gatsby-plugin-layout`,
             options: {
                 component: require.resolve(`./src/components/layout.tsx`),
