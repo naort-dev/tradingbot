@@ -77,13 +77,16 @@ exports.onCreateNode = async function ({ node, actions, createNodeId, reporter, 
         if (!node.profile_image) {
             return;
         }
-        if (!node.profile_image.includes('trality.com') && node.profile_image.includes('http')) {
+        if (!node.profile_image.includes('www.trality.com') && node.profile_image.includes('http')) {
             return;
         }
-        if (!node.profile_image.includes('trality.com')) {
-            image = request('GET', 'https://blog.trality.com' + node.profile_image);
+        if (!node.profile_image.includes('www.trality.com')) {
+            image = request('GET', 'https://blog.trality.com/blog/' + node.profile_image);
         } else {
-            image = request('GET', node.profile_image);
+            image = request(
+                'GET',
+                'https://blog.trality.com' + node.profile_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', ''),
+            );
         }
         let newUrl = './static' + node.profile_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
         if (!newUrl.includes('blog')) {
@@ -112,7 +115,14 @@ exports.onCreateNode = async function ({ node, actions, createNodeId, reporter, 
         if (!fs.existsSync(folder)) {
             fs.mkdirSync(folder, { recursive: true });
         }
-        const result = request('GET', node.feature_image);
+        let downloadUrl =
+            'https://blog.trality.com/blog' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+        if (node.feature_image.includes('blog/')) {
+            downloadUrl =
+                'https://blog.trality.com' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+        }
+
+        const result = request('GET', downloadUrl);
         fs.writeFileSync(newUrl, result.getBody(), { flag: 'a' });
         node.feature_image = newUrl.replace('./static', '');
         if (node.html) {
