@@ -41,6 +41,8 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
                 var clone = isThereIntent.cloneNode(true);
                 parent.appendChild(clone);
                 exitIntentShown = true;
+                const img = clone.querySelector('img');
+                img.setAttribute('src', img.dataset.src);
                 clone.querySelector('.close').addEventListener('click', () => {
                     clone.remove();
                 });

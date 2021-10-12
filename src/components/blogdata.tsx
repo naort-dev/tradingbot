@@ -26,6 +26,7 @@ export const BlogData = () => {
                                 excerpt
                                 feature_image
                                 published_at
+                                reading_time
                             }
                         }
                     }
@@ -71,7 +72,7 @@ export const BlogData = () => {
                                                             {item.authors[0].name.toUpperCase()}
                                                         </Text>
                                                         <Text bodyType={'Caption'} lighter>
-                                                            {moment(item.published_at).format('DD.m.YYYY')} • {item.reading_time} min read
+                                                            {moment(item.published_at).format('DD MMMM YYYY')} • {item.reading_time} min read
                                                         </Text>
                                                     </Cell>
                                                 </Row>

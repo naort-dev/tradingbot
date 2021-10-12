@@ -233,7 +233,7 @@ export const query = graphql`
             html
             meta_title
             meta_description
-            published_at
+            reading_time
             updated_at
         }
     }
