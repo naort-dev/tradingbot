@@ -94,7 +94,7 @@ const pageData: Person[] = [
     {
         name: 'Tamas Hodobay',
         title: 'Sr. Backend Engineer',
-        bio: 'Spent years developing high traffic E-commerce websites, former blockchain developer at Lisk.io. True believer in cryptocurrencies and DeFi.',
+        bio: 'Tamas spent many years working on high-traffic ecommerce websites. Aside from that, he was also a blockchain developer at Lisk.io which is one of the most popular networks in the industry. He is a true believer in DeFi and blockchain technology.',
 
         photo: Assets.TeamPhotos.Tamas,
         socialLinks: [
@@ -147,7 +147,7 @@ const pageData: Person[] = [
         name: 'Dominik De Zordo',
         title: 'Head of DevOps',
         bio: 'Dominik is a multi-faceted developer with a lot of experience leading and scaling technical teams. Before joining Trality as its DevOps lead, he worked at Bitpanda where his team grew from a handful to more than 100 people working across Europe.',
-        photo: null,
+        photo: Assets.TeamPhotos.Dominik,
         socialLinks: [
             {
                 type: 'linkedin',
@@ -161,11 +161,25 @@ const pageData: Person[] = [
         title: 'Content & Copy Specialist',
         bio: 'Some say that he’s terrified of pears and that there’s a village named after him in Tajikistan. All we know is that he’s a talented writer and editor whose words, which have appeared in the New York Times, Guardian, and elsewhere, will be driving Trality’s content and copy.',
 
-        photo: null,
+        photo: Assets.TeamPhotos.Brian,
         socialLinks: [
             {
                 type: 'linkedin',
                 link: 'https://www.linkedin.com/in/brian-haman-661222176/',
+            },
+        ],
+    },
+
+    {
+        name: 'Luca Poppi',
+        title: 'Chief of Staff',
+        bio: "Luca is Trality's Chief of Staff. He is responsible for amplifying CEO communication and driving strategic initiatives across the board to improve our processes and operations. He has held a range of operational and financial positions at VC funds and startups before joining Trality.",
+
+        photo: Assets.TeamPhotos.Luca,
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/luca-poppi/',
             },
         ],
     },
