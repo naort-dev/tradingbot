@@ -45,7 +45,7 @@ const RuleBuilder = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline2">
+                                <Headline headlineType="Headline1">
                                     Build trading strategies without <Highlight>Code</Highlight>
                                 </Headline>
                                 <Padding
@@ -115,7 +115,7 @@ const RuleBuilder = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">
-                            <Headline headlineType="Headline5">Building bots in a few minutes</Headline>
+                            <Headline headlineType="Headline2">Building bots in a few minutes</Headline>
                             <Padding
                                 size={{
                                     top: PaddingSizes.TwentyFour,
@@ -159,7 +159,7 @@ const RuleBuilder = () => {
                         <LazyImage src={Assets.HelpAndDocumentation} />
                     </Cell>
                     <Cell size={6} mobileSize={12} alignVertical="middle">
-                        <Headline headlineType="Headline5">Evolve from rules to code</Headline>
+                        <Headline headlineType="Headline2">Evolve from rules to code</Headline>
                         <Padding
                             size={{
                                 top: PaddingSizes.TwentyFour,

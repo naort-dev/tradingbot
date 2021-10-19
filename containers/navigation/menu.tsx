@@ -47,6 +47,11 @@ const Container = styled.nav<OpenProps>`
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            & > * {
+                width: 80% !important;
+                left: 10%;
+                position: relative;
+            }
         `};
     }
 `;
@@ -61,7 +66,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
         <Container open={open}>
             <MainContainer>
                 <Row>
-                    <Cell size={8} mobileSize={12} alignVertical="middle">
+                    <Cell size={9} mobileSize={12} alignVertical="middle">
                         <Row>
                             <DropdownItem
                                 name="Features"
@@ -151,7 +156,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             />
                         </Row>
                     </Cell>
-                    <Cell size={4} mobileSize={12} alignVertical="middle">
+                    <Cell size={3} mobileSize={12} alignVertical="middle">
                         <Row>
                             <Cell size={6} mobileSize={12} align="right" alignVertical="middle" alignMobile="left">
                                 <Padding

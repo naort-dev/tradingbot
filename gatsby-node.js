@@ -106,28 +106,26 @@ exports.onCreateNode = async function ({ node, actions, createNodeId, reporter, 
         if (!newUrl.includes('blog')) {
             newUrl = './static/blog' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
         }
-
-        //const file = fs.createWriteStream(newUrl, { flags: 'a' });
-        if (!node.feature_image.includes('trality.com') && node.feature_image.includes('http')) {
-            return;
-        }
         const folder = newUrl.substring(0, newUrl.lastIndexOf('/'));
         if (!fs.existsSync(folder)) {
             fs.mkdirSync(folder, { recursive: true });
         }
-        let downloadUrl =
-            'https://blog.trality.com/blog' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
-        if (node.feature_image.includes('blog/')) {
-            downloadUrl =
-                'https://blog.trality.com' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+        //const file = fs.createWriteStream(newUrl, { flags: 'a' });
+        if (node.feature_image.includes('trality.com') && !node.feature_image.includes('http:')) {
+            let downloadUrl =
+                'https://blog.trality.com/blog' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+            if (node.feature_image.includes('blog/')) {
+                downloadUrl =
+                    'https://blog.trality.com' + node.feature_image.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+            }
+
+            const result = request('GET', downloadUrl);
+            fs.writeFileSync(newUrl, result.getBody(), { flag: 'a' });
+            node.feature_image = newUrl.replace('./static', '');
         }
 
-        const result = request('GET', downloadUrl);
-        fs.writeFileSync(newUrl, result.getBody(), { flag: 'a' });
-        node.feature_image = newUrl.replace('./static', '');
         if (node.html) {
             const $ = cheerio.load(node.html);
-            const imgs = $('img');
 
             $('img').each((i, elm) => {
                 const tag = $(elm);
@@ -144,7 +142,8 @@ exports.onCreateNode = async function ({ node, actions, createNodeId, reporter, 
                 if (!fs.existsSync(folder)) {
                     fs.mkdirSync(folder, { recursive: true });
                 }
-                const result = request('GET', item);
+                const downloadUrl = 'https://blog.trality.com/' + item.replace('https://www.trality.com', '').replace('https://blog.trality.com', '');
+                const result = request('GET', downloadUrl);
                 fs.writeFileSync(newUrl, result.getBody(), { flag: 'a' });
                 tag.attr('src', newUrl.replace('./static', ''));
                 //console.log(tag.attr('src'));

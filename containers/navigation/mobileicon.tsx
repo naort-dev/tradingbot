@@ -11,7 +11,9 @@ const Menu = styled.div<{ open?: boolean }>`
     justify-content: flex-end;
     cursor: pointer;
     margin-top: 6px;
-    position: relative;
+    position: absolute;
+    top: 12px;
+    right: 25px;
     @media (max-width: 768px) {
         display: flex;
     }

@@ -52,7 +52,7 @@ export const Twitter = () => {
                                 bottom: PaddingSizes.FiftySix,
                             }}
                         >
-                            <Headline headlineType="Headline5">Join the list of our happy users!</Headline>
+                            <Headline headlineType="Headline2">Join the list of our happy users!</Headline>
                         </Padding>
                     </Cell>
                 </Row>

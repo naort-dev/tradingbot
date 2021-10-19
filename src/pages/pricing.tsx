@@ -188,7 +188,7 @@ const PricingComponent = () => {
                 >
                     <Row center>
                         <Cell size={12} mobileSize={12} align="center">
-                            <Headline headlineType="Headline5">Pricing</Headline>
+                            <Headline headlineType="Headline2">Pricing</Headline>
                         </Cell>
                     </Row>
                 </Padding>
@@ -244,8 +244,9 @@ const PricingComponent = () => {
                                             right: PaddingSizes.Sixteen,
                                         }}
                                         mobileSize={{
-                                            left: PaddingSizes.TwentyFour,
-                                            right: PaddingSizes.TwentyFour,
+                                            left: PaddingSizes.ThirtyTwo,
+                                            right: PaddingSizes.ThirtyTwo,
+                                            bottom: PaddingSizes.SixtyFour,
                                         }}
                                     >
                                         <Surface>
@@ -257,8 +258,10 @@ const PricingComponent = () => {
                                                     right: PaddingSizes.ThirtyTwo,
                                                 }}
                                                 mobileSize={{
-                                                    top: PaddingSizes.Sixteen,
-                                                    bottom: PaddingSizes.Sixteen,
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    left: PaddingSizes.ThirtyTwo,
+                                                    right: PaddingSizes.ThirtyTwo,
                                                 }}
                                             >
                                                 <Row>
@@ -279,7 +282,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.Eight,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
+                                                                top: PaddingSizes.Sixteen,
                                                                 bottom: PaddingSizes.Eight,
                                                             }}
                                                         >
@@ -289,7 +292,7 @@ const PricingComponent = () => {
                                                         </Padding>
                                                     </Cell>
                                                     <Cell size={12} mobileSize={12}>
-                                                        <Headline headlineType="Headline5">
+                                                        <Headline headlineType="Headline2">
                                                             {item.price[billingCycle === 'Annually' ? 1 : 0]}
                                                         </Headline>
                                                     </Cell>
@@ -300,7 +303,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
+                                                                top: PaddingSizes.Sixteen,
                                                                 bottom: PaddingSizes.Eight,
                                                             }}
                                                         >
@@ -313,8 +316,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
-                                                                bottom: PaddingSizes.Eight,
+                                                                bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                         >
                                                             <Row>
@@ -324,7 +326,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -347,8 +348,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
-                                                                bottom: PaddingSizes.Eight,
+                                                                bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                         >
                                                             <Row>
@@ -358,7 +358,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -381,8 +380,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
-                                                                bottom: PaddingSizes.Eight,
+                                                                bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                         >
                                                             <Row>
@@ -392,7 +390,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -415,7 +412,6 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
                                                                 bottom: PaddingSizes.Eight,
                                                             }}
                                                         >
@@ -426,7 +422,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -449,7 +444,6 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
                                                                 bottom: PaddingSizes.Eight,
                                                             }}
                                                         >
@@ -460,7 +454,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -483,8 +476,7 @@ const PricingComponent = () => {
                                                                 bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                             mobileSize={{
-                                                                top: PaddingSizes.TwentyFour,
-                                                                bottom: PaddingSizes.Eight,
+                                                                bottom: PaddingSizes.TwentyFour,
                                                             }}
                                                         >
                                                             <Row>
@@ -494,7 +486,6 @@ const PricingComponent = () => {
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                         mobileSize={{
-                                                                            top: PaddingSizes.TwentyFour,
                                                                             bottom: PaddingSizes.Eight,
                                                                         }}
                                                                     >
@@ -552,7 +543,7 @@ const PricingComponent = () => {
                                     bottom: PaddingSizes.FiftySix,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Pricing FAQ</Headline>
+                                <Headline headlineType="Headline2">Pricing FAQ</Headline>
                             </Padding>
                         </Cell>
                     </Row>
@@ -588,7 +579,9 @@ const PricingComponent = () => {
                                                     left: PaddingSizes.ThirtyTwo,
                                                 }}
                                                 mobileSize={{
-                                                    top: PaddingSizes.Sixteen,
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    left: PaddingSizes.ThirtyTwo,
                                                 }}
                                             >
                                                 <img src={Assets.Plans.Enterprise} />
@@ -602,8 +595,10 @@ const PricingComponent = () => {
                                                     right: PaddingSizes.ThirtyTwo,
                                                 }}
                                                 mobileSize={{
-                                                    top: PaddingSizes.Sixteen,
-                                                    bottom: PaddingSizes.Sixteen,
+                                                    top: PaddingSizes.ThirtyTwo,
+                                                    bottom: PaddingSizes.ThirtyTwo,
+                                                    right: PaddingSizes.ThirtyTwo,
+                                                    left: PaddingSizes.ThirtyTwo,
                                                 }}
                                             >
                                                 <SubHeadline subheadlineType="SubHeadline2">Enterprise</SubHeadline>
@@ -655,7 +650,7 @@ const PricingComponent = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Get started now!</Headline>
+                                <Headline headlineType="Headline2">Get started now!</Headline>
                             </Padding>
                             <Padding
                                 size={{

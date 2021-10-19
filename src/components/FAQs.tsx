@@ -163,7 +163,7 @@ export const FAQs = () => {
                                 right: PaddingSizes.Zero,
                             }}
                         >
-                            <Headline headlineType="Headline5">FAQs</Headline>
+                            <Headline headlineType="Headline2">FAQs</Headline>
                         </Padding>
                     </Cell>
                 </Row>

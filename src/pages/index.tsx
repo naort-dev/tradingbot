@@ -44,7 +44,7 @@ const Index = () => {
                                 top: PaddingSizes.NinetySix,
                             }}
                         >
-                            <Headline headlineType="Headline2">
+                            <Headline headlineType="Headline1">
                                 <Highlight>
                                     <WordAnimation words={['Trade with', 'Create', 'Code', 'Backtest']}>|</WordAnimation>
                                 </Highlight>
@@ -125,7 +125,7 @@ const Index = () => {
                                 bottom: PaddingSizes.FourtyFour,
                             }}
                         >
-                            <Headline headlineType="Headline5">Trality is for you if you're...</Headline>
+                            <Headline headlineType="Headline2">Trality is for you if you're...</Headline>
                         </Padding>
                     </Cell>
                 </Row>
@@ -269,7 +269,7 @@ const Index = () => {
                                 bottom: PaddingSizes.FiftySix,
                             }}
                         >
-                            <Headline headlineType="Headline5">Ways to create your trading bot.</Headline>
+                            <Headline headlineType="Headline2">Ways to create your trading bot.</Headline>
                         </Padding>
                     </Cell>
                 </Row>
@@ -393,7 +393,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">5M+</Headline>
+                                        <Headline headlineType="Headline3">5M+</Headline>
                                         <Text bodyType="Body2">Daily trading volume</Text>
                                     </Padding>
                                 </Cell>
@@ -404,7 +404,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">50K+</Headline>
+                                        <Headline headlineType="Headline3">50K+</Headline>
                                         <Text bodyType="Body2">Verified users</Text>
                                     </Padding>
                                 </Cell>
@@ -415,7 +415,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">10M+</Headline>
+                                        <Headline headlineType="Headline3">10M+</Headline>
                                         <Text bodyType="Body2">Connected AUM</Text>
                                     </Padding>
                                 </Cell>
@@ -441,7 +441,7 @@ const Index = () => {
                                     bottom: PaddingSizes.ThirtyTwo,
                                 }}
                             >
-                                <Headline headlineType="Headline5">The Marketplace (Coming Soon)</Headline>
+                                <Headline headlineType="Headline2">The Marketplace (Coming Soon)</Headline>
 
                                 <Padding
                                     size={{

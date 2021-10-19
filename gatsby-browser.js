@@ -1,6 +1,13 @@
 /* FIXME: We need to change the pieces requiring the js in onRouteUpdate below into react comps*/
 
+if (window.history.scrollRestoration) {
+    window.history.scrollRestoration = 'manual';
+}
+
 exports.onRouteUpdate = ({ location, prevLocation }) => {
+    if (window.history.scrollRestoration) {
+        window.history.scrollRestoration = 'manual';
+    }
     var exitIntentShown = false;
     var fixedBannerHidden = false;
     var elems = document.querySelector('.close');
@@ -45,6 +52,9 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
                 img.setAttribute('src', img.dataset.src);
                 clone.querySelector('.close').addEventListener('click', () => {
                     clone.remove();
+                });
+                clone.querySelector('button').addEventListener('click', () => {
+                    isThereIntent.querySelector('button').click();
                 });
             }
         }

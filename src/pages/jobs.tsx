@@ -43,7 +43,7 @@ const Jobs = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">
-                            <Headline headlineType="Headline5">We're hiring!</Headline>
+                            <Headline headlineType="Headline2">We're hiring!</Headline>
                             <Padding
                                 size={{
                                     top: PaddingSizes.TwentyFour,
@@ -98,7 +98,7 @@ const Jobs = () => {
                                     bottom: PaddingSizes.SixtyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Why join us?</Headline>
+                                <Headline headlineType="Headline2">Why join us?</Headline>
                             </Padding>
                         </Cell>
                     </Row>
@@ -232,7 +232,7 @@ const Jobs = () => {
                     <MainContainer>
                         <Row>
                             <Cell size={12} mobileSize={12} align="left">
-                                <Headline headlineType="Headline5">Open positions</Headline>
+                                <Headline headlineType="Headline2">Open positions</Headline>
                             </Cell>
                         </Row>
                         <Row>
@@ -268,7 +268,7 @@ const Jobs = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Is your role not on the list?</Headline>
+                                <Headline headlineType="Headline2">Is your role not on the list?</Headline>
                             </Padding>
                             <Padding
                                 size={{

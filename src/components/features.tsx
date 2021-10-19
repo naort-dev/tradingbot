@@ -17,7 +17,7 @@ export const Features = () => {
                                 bottom: PaddingSizes.SixtyFour,
                             }}
                         >
-                            <Headline headlineType="Headline5">Your funds and algorithms are safe.</Headline>
+                            <Headline headlineType="Headline2">Your funds and algorithms are safe.</Headline>
                         </Padding>
                     </Cell>
                 </Row>

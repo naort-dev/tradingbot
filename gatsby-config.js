@@ -47,6 +47,7 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-plugin-emotion',
         'gatsby-plugin-react-helmet',
+        `gatsby-plugin-remove-trailing-slashes`,
         {
             resolve: `gatsby-plugin-layout`,
             options: {

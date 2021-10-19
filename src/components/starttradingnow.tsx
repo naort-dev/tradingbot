@@ -5,7 +5,7 @@ import React from 'react';
 import { LazyImage } from './lazyImage';
 
 export const StartTradingNow = () => {
-    const followLink = useLink('login');
+    const followLink = useLink('signup');
     return (
         <Padding size={{ top: PaddingSizes.NinetySix, bottom: PaddingSizes.NinetySix }}>
             <MainContainer>
@@ -17,7 +17,7 @@ export const StartTradingNow = () => {
                                 bottom: PaddingSizes.Twenty,
                             }}
                         >
-                            <Headline headlineType="Headline5">Start trading now.</Headline>
+                            <Headline headlineType="Headline2">Start trading now.</Headline>
                         </Padding>
                         <Padding
                             size={{

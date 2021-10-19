@@ -17,8 +17,11 @@ export default function HTML(props) {
     .incontent-banner {
 		background-color: rgba(153, 226, 244, 0.25);
         padding: 20px;
-        width: 100%;
         margin: 0 0 1.5em;
+    }
+
+    .incontent-banner h2 {
+        overflow-wrap: break-word;
     }
     .primary-button {
     	background-color: rgb(0, 184, 230) !important;
@@ -46,6 +49,7 @@ export default function HTML(props) {
         border: 1px solid rgb(231, 233, 243);
     	border-radius: 10px;
  		box-shadow: 0 9.2px 18px 0 rgba(0, 0, 0, 0.1);
+        z-index:100;
     }
     
     @media screen and (max-width: 750px) {
@@ -149,12 +153,6 @@ export default function HTML(props) {
             padding: 20px 50px;
     }
     
-    .exit-intent .content .contentWrapper .contentLeft h3 {
-     	margin: .5em 0 .2em;
-        font-size: 2.5rem;
-        line-height: 1.3em;
-        font-weight: 600;   
-    }
     
     .exit-intent .content .contentWrapper .contentLeft .headline {
     	margin-bottom: 25px;   
@@ -177,13 +175,14 @@ export default function HTML(props) {
      	font-family: BasierSquare, Georgia, serif;
         font-size: 20px;
         font-stretch: 100%;
+        line-height: 0.5rem;
     }
 
     .exit-intent .content .contentWrapper .contentLeft ul li:before {
       content: '✓';
         margin-right: 20px;
         color: #00b7e5;
-      top: 1.3em;
+      top: 22px;
     }
     
     .exit-intent .content .contentWrapper .primary-button {
@@ -236,10 +235,10 @@ export default function HTML(props) {
     	border-bottom-left-radius: 10px;
     	border-bottom-right-radius: 10px;
         font-size: 28px;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
     }
     
     .exit-intent .content .contentWrapper .trustedBar img {
@@ -247,6 +246,8 @@ export default function HTML(props) {
         height: 20px;
         margin: 0px;
         margin-right: 15px;   
+        position: relative;
+        top: 3px;
     }
     
     .exit-intent .content .close {
@@ -342,6 +343,10 @@ export default function HTML(props) {
     .blueText {
         color: #00b8e6;
     }
+
+    figure {
+        margin: 0px;
+    }
     
     .timelineItem ul {
       list-style: none; /* Remove default bullets */
@@ -363,6 +368,10 @@ export default function HTML(props) {
                 {props.preBodyComponents}
                 <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
                 {props.postBodyComponents}
+                <script type="text/javascript" src="/prism.min.js"></script>
+                <script type="text/javascript" src="/prism-toolbar.min.js"></script>
+                <script type="text/javascript" src="/prism-copy-to-clipboard.min.js"></script>
+                <script src="/prism-python.min.js"></script>
             </body>
         </html>
     );

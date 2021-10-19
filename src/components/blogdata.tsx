@@ -11,7 +11,7 @@ export const BlogData = () => {
         <StaticQuery
             query={graphql`
                 query {
-                    allGhostPost(filter: { ghostId: { in: ["5fb2ae9b79d36f3a78f3d54c", "604b24cfdfb5e2400d30bf19", "6092e4b5dfb5e2400d30c23e"] } }) {
+                    allGhostPost(filter: { ghostId: { in: ["5fb2ae9b79d36f3a78f3d54c", "604b24cfdfb5e2400d30bf19", "5fb7b4f979d36f3a78f3d721"] } }) {
                         edges {
                             node {
                                 id
@@ -64,7 +64,7 @@ export const BlogData = () => {
                                             </Text>
                                             <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                 <Row>
-                                                    <Cell size={2} mobileSize={6}>
+                                                    <Cell size={2} mobileSize={2}>
                                                         <LazyImage src={item.authors[0].profile_image} />
                                                     </Cell>
                                                     <Cell size={10} mobileSize={6} alignVertical="middle">

@@ -37,7 +37,7 @@ const Press = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Press Kit</Headline>
+                                <Headline headlineType="Headline2">Press Kit</Headline>
                             </Padding>
                             <Padding
                                 size={{
@@ -160,7 +160,7 @@ const Press = () => {
                                     bottom: PaddingSizes.SixtyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">About Trality</Headline>
+                                <Headline headlineType="Headline2">About Trality</Headline>
                                 <Padding
                                     size={{
                                         top: PaddingSizes.Sixteen,
@@ -220,7 +220,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">5M+</Headline>
+                                        <Headline headlineType="Headline3">5M+</Headline>
                                         <Text bodyType="Body2">Daily trading volume</Text>
                                     </Padding>
                                 </Cell>
@@ -231,7 +231,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">50K+</Headline>
+                                        <Headline headlineType="Headline3">50K+</Headline>
                                         <Text bodyType="Body2">Verified users</Text>
                                     </Padding>
                                 </Cell>
@@ -242,7 +242,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline6">10M+</Headline>
+                                        <Headline headlineType="Headline3">10M+</Headline>
                                         <Text bodyType="Body2">Connected AUM</Text>
                                     </Padding>
                                 </Cell>
@@ -266,7 +266,7 @@ const Press = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Brand Assets</Headline>
+                                <Headline headlineType="Headline2">Brand Assets</Headline>
                             </Padding>
                         </Cell>
                     </Row>
@@ -487,7 +487,7 @@ const Press = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Recent Press Releases</Headline>
+                                <Headline headlineType="Headline2">Recent Press Releases</Headline>
                             </Padding>
                         </Cell>
                     </Row>
@@ -500,7 +500,7 @@ const Press = () => {
                                         bottom: PaddingSizes.ThirtyTwo,
                                     }}
                                 >
-                                    <LazyImage src="https://www.trality.com/blog/content/images/size/w2000/2020/03/ffg-de.png" borders />
+                                    <LazyImage src="/blog/content/images/2020/03/ffg-de.png" borders />
                                     <Padding
                                         size={{
                                             top: PaddingSizes.TwentyFour,
@@ -517,17 +517,14 @@ const Press = () => {
                             </TextLink>
                         </Cell>
                         <Cell size={4} mobileSize={12}>
-                            <TextLink href="https://www.trality.com/blog/fresh-capital-for-trality">
+                            <TextLink href="/blog/fresh-capital-for-trality">
                                 <Padding
                                     size={{}}
                                     mobileSize={{
                                         bottom: PaddingSizes.ThirtyTwo,
                                     }}
                                 >
-                                    <LazyImage
-                                        src="https://www.trality.com/blog/content/images/size/w2000/2021/03/Trality_founders_horizontal-min.png"
-                                        borders
-                                    />
+                                    <LazyImage src="/blog/content/images/2021/03/Trality_founders_horizontal-min.png" borders />
                                     <Padding
                                         size={{
                                             top: PaddingSizes.TwentyFour,

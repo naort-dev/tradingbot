@@ -65,7 +65,7 @@ const Job = () => {
                                         bottom: PaddingSizes.FiftySix,
                                     }}
                                 >
-                                    <Headline headlineType="Headline4">{data.title}</Headline>
+                                    <Headline headlineType="Headline1">{data.title}</Headline>
                                 </Padding>
                             </Cell>
                         </Row>
@@ -82,7 +82,7 @@ const Job = () => {
                                             bottom: PaddingSizes.FiftySix,
                                         }}
                                     >
-                                        <Headline headlineType="Headline5">{item.headline}</Headline>
+                                        <Headline headlineType="Headline2">{item.headline}</Headline>
                                     </Padding>
                                     <Text bodyType="Body2">
                                         <div dangerouslySetInnerHTML={{ __html: item.data }} />

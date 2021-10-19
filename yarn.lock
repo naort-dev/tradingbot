@@ -2275,6 +2275,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.15.4":
+  version "7.15.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
+  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.14.9":
   version "7.15.3"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.15.3.tgz#60f74273202ffcc6bb1428918053449fe477227c"
@@ -3738,10 +3745,10 @@
     moment-timezone "0.5.31"
     react-gtm-module "^2.0.8"
 
-"@trality/web-ui-components@^0.0.67":
-  version "0.0.67"
-  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.0.67/6a721327e3c918b5d5a69b92f5a61fa72ceb22fd666906a9e802d3688e7e3fec#399d8159fad0d2b2c52bb5b907e9ae3392335c95"
-  integrity sha512-MwVykSIFd9ShWDt1HHv6sWIVrqRFDxVcXFHBGi4rnOTqEFtKQolo51kXmpUGwLv/bzhy8AA+PlpOUVN2rYoQIw==
+"@trality/web-ui-components@0.0.69":
+  version "0.0.69"
+  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.0.69/479b3c2cdbaf53bd302b550c8dd5b99495b00d73305cfb991cd9e0e1a06c375c#68c5f648cecf9c029c796c17aed00b1ddae97da2"
+  integrity sha512-+DF+6st1gmykcAZnNR+mLwW8hqrXZyBt1NGDT3VVuow/SEA+HYsEILy/H4yJ9/bRgWyG+fVPkvIMQw9aD0KVzQ==
   dependencies:
     "@babel/cli" "7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -9678,6 +9685,13 @@ gatsby-plugin-remote-images@^3.0.0:
   dependencies:
     gatsby-source-filesystem "^3.4.0"
     lodash "^4.17.15"
+
+gatsby-plugin-remove-trailing-slashes@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-trailing-slashes/-/gatsby-plugin-remove-trailing-slashes-3.14.0.tgz#185abf2790e6421f39c3cfeab6f7d1f64a61ca96"
+  integrity sha512-NINYtaIKiT1FJONj4+erqVUlG6ih5h4Ke0EF410P/gNozLU0zHmAkfOtCzsBcBsbYgCVqPgW1cflF3gZvauotQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
 
 gatsby-plugin-sharp@^3.12.0:
   version "3.12.0"

@@ -10,7 +10,7 @@ const Error = () => {
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">
                             <Padding mobileSize={{ bottom: PaddingSizes.Sixteen }}>
-                                <Headline headlineType="Headline2">
+                                <Headline headlineType="Headline1">
                                     <Highlight>404</Highlight> Error
                                 </Headline>
                                 <Padding size={{ top: PaddingSizes.ThirtyTwo, bottom: PaddingSizes.SixtyFour }}>

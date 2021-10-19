@@ -41,7 +41,7 @@ const CodeEditor = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline2">
+                                <Headline headlineType="Headline1">
                                     Create trading bots with <Highlight>Code</Highlight>
                                 </Headline>
                                 <Padding
@@ -71,7 +71,7 @@ const CodeEditor = () => {
                                             }}
                                         >
                                             <Row>
-                                                <Button fullWidth onClick={() => followLink}>
+                                                <Button fullWidth onClick={() => followLink()}>
                                                     Start coding for free!
                                                 </Button>
                                             </Row>
@@ -118,7 +118,7 @@ const CodeEditor = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">
-                            <Headline headlineType="Headline5">Coding in Python</Headline>
+                            <Headline headlineType="Headline2">Coding in Python</Headline>
                             <Padding
                                 size={{
                                     top: PaddingSizes.TwentyFour,
@@ -162,7 +162,7 @@ const CodeEditor = () => {
                         <LazyImage src={Assets.BacktestingFeature} />
                     </Cell>
                     <Cell size={6} mobileSize={12} alignVertical="middle">
-                        <Headline headlineType="Headline5">We've got you covered</Headline>
+                        <Headline headlineType="Headline2">We've got you covered</Headline>
                         <Padding
                             size={{
                                 top: PaddingSizes.TwentyFour,

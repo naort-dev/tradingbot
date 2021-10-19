@@ -37,7 +37,7 @@ export const VideosContainer = () => {
                 <Row>
                     <Cell size={12} mobileSize={12} align="center">
                         <Padding size={{ bottom: PaddingSizes.SixtyFour }}>
-                            <Headline headlineType="Headline5">Fall in love with our Creator tools.</Headline>
+                            <Headline headlineType="Headline2">Fall in love with our Creator tools.</Headline>
                         </Padding>
                     </Cell>
                 </Row>

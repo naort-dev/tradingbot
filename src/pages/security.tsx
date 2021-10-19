@@ -55,7 +55,7 @@ const Privacy = () => {
             <Layout.Section fullHeight noPadding id="policy">
                 <BlogContainer>
                     <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SixtyFour }}>
-                        <Headline headlineType="Headline5" asH1>
+                        <Headline headlineType="Headline2" asH1>
                             Security matters.
                         </Headline>
                     </Padding>
@@ -73,7 +73,7 @@ const Privacy = () => {
                             measures to ensure that our users are well-protected from all potential web attacks.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline5">Sandboxed user strategies</Headline>
+                    <Headline headlineType="Headline2">Sandboxed user strategies</Headline>
                     <Padding
                         size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
                         mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
@@ -86,7 +86,7 @@ const Privacy = () => {
                             the smartest and highest-performing bot creators onto this platform.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline5">Cloud-based ecosystem</Headline>
+                    <Headline headlineType="Headline2">Cloud-based ecosystem</Headline>
                     <Padding
                         size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
                         mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
@@ -97,7 +97,7 @@ const Privacy = () => {
                             do all the legwork for you.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline5">Advanced firewall protection</Headline>
+                    <Headline headlineType="Headline2">Advanced firewall protection</Headline>
                     <Padding
                         size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
                         mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
@@ -109,7 +109,7 @@ const Privacy = () => {
                             execute battle tests to augment security.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline5">What can you do to augment your security online?</Headline>
+                    <Headline headlineType="Headline2">What can you do to augment your security online?</Headline>
                     <Padding
                         size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
                         mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}

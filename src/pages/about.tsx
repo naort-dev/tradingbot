@@ -204,7 +204,7 @@ const Team = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Automated investing, for everyone!</Headline>
+                                <Headline headlineType="Headline2">Automated investing, for everyone!</Headline>
                             </Padding>
                             <Text bodyType="Body2">
                                 At Trality, we see a future in which everything is automated by bots and when it comes to automated investing, there
@@ -300,7 +300,7 @@ const Team = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Our story</Headline>
+                                <Headline headlineType="Headline2">Our story</Headline>
                             </Padding>
                             <Text bodyType="Body2">
                                 Once upon a time, two guys met at a university. Together they sat as they pondered the financial world and asked one
@@ -332,7 +332,7 @@ const Team = () => {
                                     bottom: PaddingSizes.FiftySix,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Our experts</Headline>
+                                <Headline headlineType="Headline2">Our experts</Headline>
                             </Padding>
                         </Cell>
                     </Row>
@@ -436,7 +436,7 @@ const Team = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline5">Want to join the team?</Headline>
+                                <Headline headlineType="Headline2">Want to join the team?</Headline>
                             </Padding>
                             <Padding
                                 size={{

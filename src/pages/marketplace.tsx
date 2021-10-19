@@ -37,7 +37,7 @@ const Marketplace = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Headline headlineType="Headline2">
+                                <Headline headlineType="Headline1">
                                     Where <Highlight>creators</Highlight> and followers meet
                                 </Headline>
                                 <Padding
@@ -85,7 +85,7 @@ const Marketplace = () => {
                 <MainContainer>
                     <Row center>
                         <Cell size={12} mobileSize={12} align="center">
-                            <Headline headlineType="Headline5">It's simple</Headline>
+                            <Headline headlineType="Headline2">It's simple</Headline>
                         </Cell>
                     </Row>
                     <Padding
@@ -212,7 +212,7 @@ const Marketplace = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">
-                            <Headline headlineType="Headline5">Creators build a follower base and generate income.</Headline>
+                            <Headline headlineType="Headline2">Creators build a follower base and generate income.</Headline>
                             <Padding
                                 size={{
                                     top: PaddingSizes.TwentyFour,
@@ -246,7 +246,7 @@ const Marketplace = () => {
                         <LazyImage src={Assets.MarketplaceFeature2} />
                     </Cell>
                     <Cell size={6} mobileSize={12} alignVertical="middle">
-                        <Headline headlineType="Headline5">Followers profit from a quality-screened Creator bot.</Headline>
+                        <Headline headlineType="Headline2">Followers profit from a quality-screened Creator bot.</Headline>
                         <Padding
                             size={{
                                 top: PaddingSizes.TwentyFour,

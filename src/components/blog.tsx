@@ -14,7 +14,7 @@ export const Blog = () => {
                             bottom: PaddingSizes.FiftySix,
                         }}
                     >
-                        <Headline headlineType="Headline5">Featured Blogs</Headline>
+                        <Headline headlineType="Headline2">Featured Blogs</Headline>
                     </Padding>
                 </Cell>
                 <Cell size={6} mobileSize={12} align="right" alignVertical="middle">

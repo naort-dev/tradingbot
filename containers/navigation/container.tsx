@@ -23,24 +23,12 @@ const Top = styled.nav<Props>`
         
 `;
 
-const Wrapper = styled((props) => <Layout.Center {...props} />)`
-    display: flex;
-    z-index: 1;
-    @media (max-width: 768px) {
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-    }
-`;
-
 export const NavigationContainer: React.FC = ({ children }) => {
     const { open } = useOpen();
 
     return (
         <Top open={open}>
-            <MainContainer>
-                <Wrapper open={open}>{children}</Wrapper>
-            </MainContainer>
+            <MainContainer>{children}</MainContainer>
         </Top>
     );
 };

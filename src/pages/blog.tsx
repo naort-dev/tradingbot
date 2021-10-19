@@ -44,13 +44,16 @@ interface BlogPageProps {
 const Blog: React.FC<BlogPageProps> = ({ data }) => {
     const featured = data.allGhostPost.edges[0];
     const recent = data.allGhostPost.edges.slice(1, 4);
-    const others = data.allGhostPost.edges.slice(5);
+    const others = data.allGhostPost.edges.slice(4);
     return (
         <Layout.Page title="team">
             <MetaTags page={Page.Blog} />
             <MainContainer>
-                <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
-                    <Headline headlineType={'Headline5'}>Trality Blog</Headline>
+                <Padding
+                    size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}
+                    mobileSize={{ top: PaddingSizes.NinetyTwo, bottom: PaddingSizes.Zero }}
+                >
+                    <Headline headlineType="Headline2">Trality Blog</Headline>
                     <Padding size={{ top: PaddingSizes.TwentyFour }}>
                         <Text bodyType={'Body3'}>Create and invest through automated trading bots.</Text>
                     </Padding>
@@ -58,7 +61,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                 <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
                     <Row>
                         <Cell size={4} mobileSize={12} alignVertical="middle">
-                            <TextLink href={featured.node.url.replace('https://www.trality.com', '')}>
+                            <TextLink href={featured.node.url.replace('https://www.trality.com', '').slice(0, -1)}>
                                 <Padding
                                     size={{ bottom: PaddingSizes.ThirtyTwo }}
                                     mobileSize={{
@@ -82,7 +85,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                     </Text>
                                     <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                         <Row>
-                                            <Cell size={2} mobileSize={6}>
+                                            <Cell size={2} mobileSize={2}>
                                                 <LazyImage src={featured.node.authors[0].profile_image} rounded />
                                             </Cell>
                                             <Cell size={10} mobileSize={6} alignVertical="middle">
@@ -105,13 +108,13 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                     </Row>
                 </Padding>
                 <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
-                    <Headline headlineType={'Headline5'}>Recent blogs</Headline>
+                    <Headline headlineType="Headline2">Recent blogs</Headline>
                     <Padding size={{ top: PaddingSizes.TwentyFour }}>
                         <Row>
                             {recent.map((item) => {
                                 return (
                                     <Cell size={4} mobileSize={12} key={item.node.url}>
-                                        <TextLink href={item.node.url.replace('https://www.trality.com', '')}>
+                                        <TextLink href={item.node.url.replace('https://www.trality.com', '').slice(0, -1)}>
                                             <Padding
                                                 size={{ bottom: PaddingSizes.ThirtyTwo }}
                                                 mobileSize={{
@@ -136,7 +139,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                                 </Text>
                                                 <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                     <Row>
-                                                        <Cell size={2} mobileSize={6}>
+                                                        <Cell size={2} mobileSize={2}>
                                                             <LazyImage src={item.node.authors[0].profile_image} rounded />
                                                         </Cell>
                                                         <Cell size={10} mobileSize={6} alignVertical="middle">
@@ -159,13 +162,13 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                     </Padding>
                 </Padding>
                 <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
-                    <Headline headlineType={'Headline5'}>Older blogs</Headline>
+                    <Headline headlineType="Headline2">Older blogs</Headline>
                     <Padding size={{ top: PaddingSizes.TwentyFour }}>
                         <Row>
                             {others.map((item) => {
                                 return (
                                     <Cell size={4} mobileSize={12} key={item.node.url}>
-                                        <TextLink href={item.node.url.replace('https://www.trality.com', '')}>
+                                        <TextLink href={item.node.url.replace('https://www.trality.com', '').slice(0, -1)}>
                                             <Padding
                                                 size={{ bottom: PaddingSizes.ThirtyTwo }}
                                                 mobileSize={{
@@ -190,7 +193,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                                 </Text>
                                                 <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                     <Row>
-                                                        <Cell size={2} mobileSize={6}>
+                                                        <Cell size={2} mobileSize={2}>
                                                             <LazyImage src={item.node.authors[0].profile_image} rounded />
                                                         </Cell>
                                                         <Cell size={10} mobileSize={6} alignVertical="middle">
@@ -233,6 +236,7 @@ export const query = graphql`
                         profile_image
                     }
                     title
+                    reading_time
                     excerpt
                     feature_image
                     published_at

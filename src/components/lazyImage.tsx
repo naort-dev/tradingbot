@@ -5,12 +5,25 @@ import styled from 'styled-components';
 interface Props {
     borders?: boolean;
     rounded?: boolean;
+    ensureFullContainerWidth?: boolean;
 }
 
 type ImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & Props;
 
 export const StyledImage = styled.img<ImageProps>`
-    max-width: 100%;
+    ${(props) => {
+        if (props.width) {
+            return ``;
+        }
+        return `max-width: 100%;`;
+    }}
+
+    ${(props) => {
+        if (props.ensureFullContainerWidth) {
+            return `width: 100%`;
+        }
+        return ``;
+    }}
     ${(props) => {
         if (props.borders) {
             return `border-radius: 8px;`;

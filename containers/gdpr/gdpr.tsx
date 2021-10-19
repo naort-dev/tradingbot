@@ -14,7 +14,7 @@ const GdprContainer = styled.div<DarkProp>`
     bottom: 0;
     left: 0;
     max-width: 100%;
-    width: 100%;
+    width: calc(100% - 20px);
     padding: ${Paddings.Middle} ${Paddings.Middle};
     background: #fff;
     z-index: 1030;

@@ -145,6 +145,8 @@ const DropdownMenu = styled.div<{ visible?: boolean }>`
         position: relative;
         margin: 0px 22px;
         background-color: ${lightTheme.colors.white.darker};
+        min-width: calc(100% - 22px) !important;
+        margin-top: 16px;
         box-shadow: none;
         color: ${lightTheme.colors.black.lighter};
         a {
