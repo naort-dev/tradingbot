@@ -13,7 +13,7 @@ const trackingConfig: TrackingManagerConfig = {
         ignoreGDPR: false,
         trackingCookie: {
             cookieName: '_tra_origin',
-            cookieHostname: 'localhost',
+            cookieHostname: typeof process.env.BUILD_ENV === 'undefined' ? 'local.trality-internal.com' : undefined,
         },
         debug: false,
         isBrowser: typeof window !== 'undefined',
