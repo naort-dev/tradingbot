@@ -13,7 +13,7 @@ const trackingConfig: TrackingManagerConfig = {
         ignoreGDPR: false,
         trackingCookie: {
             cookieName: '_tra_origin',
-            cookieHostname: typeof process.env.BUILD_ENV === 'undefined' ? 'local.trality-internal.com' : undefined,
+            cookieHostname: typeof process.env.TRACKING_ON === 'undefined' ? 'localhost' : undefined,
         },
         debug: false,
         isBrowser: typeof window !== 'undefined',
@@ -26,7 +26,6 @@ const trackingConfig: TrackingManagerConfig = {
     },
     setSessionDurationTracker: [EventType.Time1m, EventType.Time3m, EventType.Time5m, EventType.Time10m],
 };
-
 const Layout: React.FunctionComponent = ({ children }) => (
     <DarkProvider>
         <TrackingProvider config={trackingConfig}>
