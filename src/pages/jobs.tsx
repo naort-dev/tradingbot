@@ -102,6 +102,20 @@ const Jobs = () => {
                             </Padding>
                         </Cell>
                     </Row>
+                    <Row>
+                        <Cell size={1} mobileSize={0} />
+                        <Cell size={10} mobileSize={12} align="center">
+                            <iframe
+                                width="100%"
+                                height="315"
+                                src="https://www.youtube.com/embed/hOXwl2DVofI"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </Cell>
+                    </Row>
                     <Padding
                         size={{
                             top: PaddingSizes.TwentyFour,

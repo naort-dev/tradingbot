@@ -59,7 +59,7 @@ const secondMenu = [
 ];
 
 export const SocialLinks = [
-    { link: 'https://discord.com/invite/h5BPuKBQHv', logo: Assets.Discord },
+    { link: 'https://discord.gg/trality', logo: Assets.Discord },
     { link: 'https://twitter.com/trality_bots', logo: Assets.Twitter },
     { link: 'https://www.instagram.com/trality_bots/', logo: Assets.Instagram },
     { link: 'https://www.facebook.com/trality', logo: Assets.Facebook },

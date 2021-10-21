@@ -261,7 +261,7 @@ const options: HTMLReactParserOptions = {
         if ((domNode as any).name === 'a') {
             const props = attributesToProps((domNode as any).attribs);
             return (
-                <TextLink href={props['href']} target={props['target']} intext>
+                <TextLink href={props['href']} target={props['href'].includes('trality.com') ? undefined : '_blank'} intext>
                     {domToReact((domNode as any).children, options)}
                 </TextLink>
             );

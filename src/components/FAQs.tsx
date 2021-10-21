@@ -106,7 +106,7 @@ const Data = [
         answer: (
             <>
                 Yes!{' '}
-                <TextLink intext href="https://discord.gg/h5BPuKBQHv" target="_blank">
+                <TextLink intext href="https://discord.gg/trality" target="_blank">
                     Our Discord channel
                 </TextLink>{' '}
                 is active with a number of different enthusiastic traders - join the discussion!
@@ -118,7 +118,7 @@ const Data = [
         answer: (
             <>
                 For most basic questions, you can get an answer in our Discord channels. For more advanced questions, check out our{' '}
-                <TextLink intext href="https://trality.zendesk.com/hc/en-us" target="_blank">
+                <TextLink intext href="https://help.trality.com" target="_blank">
                     Helpdesk
                 </TextLink>{' '}
                 or write to us at:{' '}
