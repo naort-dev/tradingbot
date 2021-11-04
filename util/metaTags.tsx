@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-        
+
 export enum Page {
     HP,
     CodeEditor,
@@ -27,6 +27,7 @@ export enum Page {
     UnSub,
     Press,
     Blog,
+    Vote,
 }
 
 const titles = new Map([
@@ -55,6 +56,8 @@ const titles = new Map([
     [Page.UnSub, 'Trality - Unsubscribe'],
     [Page.Press, 'Trality - Press Kit'],
     [Page.Blog, 'Trality - Blog'],
+    [Page.Blog, 'Trality - Blog'],
+    [Page.Vote, 'Trality - Thank you for voting'],
 ]);
 
 const descriptions = new Map([
@@ -109,6 +112,7 @@ const descriptions = new Map([
     [Page.Security, ''],
     [Page.UnSub, ''],
     [Page.Press, ''],
+    [Page.Vote, ''],
 ]);
 
 export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {

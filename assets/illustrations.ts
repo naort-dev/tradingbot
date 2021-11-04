@@ -42,6 +42,8 @@ import BotThreeDotComponent from './images/illustrations/botThreeDot';
 import * as BotTwoDot from './images/illustrations/botTwoDot.svg';
 import BotTwoDotComponent from './images/illustrations/botTwoDot';
 
+import * as BotPencil from './images/illustrations/botPencil.svg';
+
 export const Illustrations = {
     Follow,
     Profit,
@@ -75,4 +77,5 @@ export const Illustrations = {
     BotThreeDotComponent,
     BotTwoDot,
     BotTwoDotComponent,
+    BotPencil,
 };
