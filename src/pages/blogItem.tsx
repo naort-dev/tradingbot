@@ -260,8 +260,10 @@ const options: HTMLReactParserOptions = {
         }
         if ((domNode as any).name === 'a') {
             const props = attributesToProps((domNode as any).attribs);
+            const matches = /\/\/(blog)/.exec(props['href']);
+            const aggregatedHref = matches && matches[1] ? props['href'].replace(matches[1], 'www') : props['href'];
             return (
-                <TextLink href={props['href']} target={props['href'].includes('trality.com') ? undefined : '_blank'} intext>
+                <TextLink href={aggregatedHref} target={props['href'].includes('trality.com') ? undefined : '_blank'} intext>
                     {domToReact((domNode as any).children, options)}
                 </TextLink>
             );

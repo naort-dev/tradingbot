@@ -63,5 +63,11 @@ module.exports = {
                 // Pass in "v2" if your Ghost install is not on 3.0 yet!!!
             },
         },
+        {
+            resolve: 'gatsby-plugin-html-attributes',
+            options: {
+                lang: 'en'
+            }
+        }
     ],
 };

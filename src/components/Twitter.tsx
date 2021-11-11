@@ -71,7 +71,7 @@ export const Twitter = () => {
                     <Row noWrap>
                         {Tweets.map((item) => {
                             return (
-                                <Cell size={3} mobileSize={12} key={item.text}>
+                                <Cell size={3} mobileSize={12} key={item.text} keepSpacingsOnMobile>
                                     <Surface>
                                         <Padding
                                             size={{

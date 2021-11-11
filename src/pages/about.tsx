@@ -183,6 +183,20 @@ const pageData: Person[] = [
             },
         ],
     },
+
+    {
+        name: 'Jim Morrison',
+        title: 'Senior Mobile Developer',
+        bio: "Jim has been a software engineer for twenty years, mostly focusing on front end applications. He has worked in London, Zurich, Paris and Barcelona among other places. He is fluent in English and Catalan, and can understand a few other languages.",
+
+        photo: Assets.TeamPhotos.Jim,
+        socialLinks: [
+            {
+                type: 'linkedin',
+                link: 'https://www.linkedin.com/in/jimmorrisoncoventry/',
+            },
+        ],
+    },
 ];
 
 const Team = () => {
