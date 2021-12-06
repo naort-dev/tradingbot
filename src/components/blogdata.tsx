@@ -65,7 +65,7 @@ export const BlogData = () => {
                                             <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                 <Row>
                                                     <Cell size={2} mobileSize={2}>
-                                                        <LazyImage src={item.authors[0].profile_image} />
+                                                        <LazyImage src={item.authors[0].profile_image} rounded />
                                                     </Cell>
                                                     <Cell size={10} mobileSize={6} alignVertical="middle">
                                                         <Text bodyType={'Caption'} darker>

@@ -62,7 +62,7 @@ export const JobsContainer = () => {
                             >
                                 <Text bodyType="Body3">{item.desc.length > 250 ? item.desc.slice(0, 250) + '...' : item.desc}</Text>
                             </Padding>
-                            <TextLink href={`/job/?id=${item.id}`} withArrow>
+                            <TextLink href={`/job?id=${item.id}`} withArrow>
                                 Know more
                             </TextLink>
                         </Padding>
