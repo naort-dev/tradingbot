@@ -284,6 +284,7 @@ const BlogItem: React.FC<BlogPageProps> = ({ location, data }) => {
                 <link rel="stylesheet" href="/prism-tomorrow.min.css" />
                 <link rel="stylesheet" href="/prism-toolbar.min.css" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="description" content={post.meta_description} />
 
                 <title>{post.title} | Trality</title>
                 <meta name="HandheldFriendly" content="True" />
