@@ -167,10 +167,10 @@ export const FAQs = () => {
                         </Padding>
                     </Cell>
                 </Row>
+                <div id="faq"></div>
                 {Data.map((item) => {
                     return <FAQ question={item.question} answer={item.answer} />;
                 })}
-                <div id="faq"></div>
             </MainContainer>
         </Padding>
     );
