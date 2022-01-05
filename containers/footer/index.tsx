@@ -181,15 +181,17 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                     );
                 })}
             </Row>
-            <Row>
-                <Cell size={12} align="center" alignMobile="center" mobileSize={12}>
-                    <Cell size={1} mobileSize={3} align="center" style={{ margin: '0 auto' }}>
-                        <a href="https://sourceforge.net/software/product/Trality/">
-                            <LazyImage src={'https://b.sf-syn.com/badge_img/3322874/light-partner?&variant_id=sf&r=https://www.trality.com/'} />
-                        </a>
+            {/blog/g.test(window.location.href) && (
+                <Row>
+                    <Cell size={12} align="center" alignMobile="center" mobileSize={12}>
+                        <Cell size={1} mobileSize={3} align="center" style={{ margin: '0 auto' }}>
+                            <a href="https://sourceforge.net/software/product/Trality/">
+                                <LazyImage src={'https://b.sf-syn.com/badge_img/3322874/light-partner?&variant_id=sf&r=https://www.trality.com/'} />
+                            </a>
+                        </Cell>
                     </Cell>
-                </Cell>
-            </Row>
+                </Row>
+            )}
             <Padding
                 size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                 mobileSize={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
