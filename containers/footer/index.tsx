@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useLocation } from '@reach/router';
 import { Logos } from '@assets';
 import { Layout } from '@containers';
 import { LogoList, ExternalLink } from '@components';
@@ -67,6 +68,7 @@ export const SocialLinks = [
 
 export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
     const followLink = useLink('signup');
+    const location = useLocation();
     const onContact = React.useCallback(() => {
         const target = 'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==';
         window.location.assign(atob(target));
@@ -181,7 +183,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                     );
                 })}
             </Row>
-            {/blog/g.test(window.location.href) && (
+            {/blog/g.test(location.pathname) && (
                 <Row>
                     <Cell size={12} align="center" alignMobile="center" mobileSize={12}>
                         <Cell size={1} mobileSize={3} align="center" style={{ margin: '0 auto' }}>
