@@ -220,7 +220,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">5M+</Headline>
+                                        <Headline headlineType="Headline3">10M+</Headline>
                                         <Text bodyType="Body2">Daily trading volume</Text>
                                     </Padding>
                                 </Cell>
@@ -231,7 +231,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">50K+</Headline>
+                                        <Headline headlineType="Headline3">80K+</Headline>
                                         <Text bodyType="Body2">Verified users</Text>
                                     </Padding>
                                 </Cell>
@@ -242,7 +242,7 @@ const Press = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">10M+</Headline>
+                                        <Headline headlineType="Headline3">100M+</Headline>
                                         <Text bodyType="Body2">Connected AUM</Text>
                                     </Padding>
                                 </Cell>
