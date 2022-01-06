@@ -16,7 +16,7 @@ import {
     CyanLightestBackground,
     BlueBackground,
     TextLink,
-    Lightbox,
+    HideMobile,
     WordAnimation,
 } from '@trality/web-ui-components';
 import { LazyImage } from 'components/lazyImage';
@@ -375,7 +375,9 @@ const Index = () => {
                     </Cell>
                 </Row>
             </MainContainer>
-            <VideosContainer />
+            <HideMobile>
+                <VideosContainer />
+            </HideMobile>
             <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
                 <BlueBackground>
                     <MainContainer>
