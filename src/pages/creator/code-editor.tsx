@@ -3,7 +3,6 @@ import { Page, MetaTags } from '../../../util/metaTags';
 import React from 'react';
 import { Features } from 'components/features';
 import { StartTradingNow } from 'components/starttradingnow';
-import { FAQs } from 'components/FAQs';
 import {
     MainContainer,
     Padding,
@@ -187,7 +186,6 @@ const CodeEditor = () => {
             </MainContainer>
             <Features />
             <StartTradingNow />
-            <FAQs />
         </Layout.Page>
     );
 };
