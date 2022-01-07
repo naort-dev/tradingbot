@@ -41,7 +41,7 @@ const Index = () => {
                         <Padding
                             size={{ top: PaddingSizes.SixtyFour }}
                             mobileSize={{
-                                top: PaddingSizes.NinetySix,
+                                top: PaddingSizes.OneHundred,
                             }}
                         >
                             <Headline headlineType="Headline1">

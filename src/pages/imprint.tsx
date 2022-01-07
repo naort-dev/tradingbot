@@ -41,7 +41,7 @@ const Imprint = () => {
                                 bottom: PaddingSizes.NinetySix,
                             }}
                             mobileSize={{
-                                top: PaddingSizes.FiftySix,
+                                top: PaddingSizes.OneHundred,
                                 bottom: PaddingSizes.FiftySix,
                             }}
                         >

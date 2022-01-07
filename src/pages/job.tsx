@@ -50,7 +50,7 @@ const Job = () => {
                         bottom: PaddingSizes.SixtyFour,
                     }}
                     mobileSize={{
-                        top: PaddingSizes.NinetySix,
+                        top: PaddingSizes.SeventySix,
                         bottom: PaddingSizes.FiftySix,
                     }}
                 >
