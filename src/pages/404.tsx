@@ -5,7 +5,7 @@ import { Header, LazyImage } from 'components';
 const Error = () => {
     return (
         <Layout.Page title="error">
-            <Padding size={{ top: PaddingSizes.OneHundred }} mobileSize={{ top: PaddingSizes.EightyFour }}>
+            <Padding size={{ top: PaddingSizes.OneHundred }} mobileSize={{ top: PaddingSizes.OneHundred }}>
                 <MainContainer>
                     <Row>
                         <Cell size={6} mobileSize={12} alignVertical="middle">

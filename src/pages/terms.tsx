@@ -48,14 +48,14 @@ const Terms = () => {
                         right: PaddingSizes.Zero,
                     }}
                     mobileSize={{
-                        top: PaddingSizes.FiftySix,
+                        top: PaddingSizes.SeventySix,
                         bottom: PaddingSizes.FiftySix,
                         left: PaddingSizes.Zero,
                         right: PaddingSizes.Zero,
                     }}
                 >
                     <Layout.Section fullHeight noPadding id="overview">
-                        <Layout.Center>
+                        <Layout.Center mobileFullWidth>
                             <Header title="General Terms and Conditions" subtitle="(February 2021)">
                                 <Section>
                                     <ol>

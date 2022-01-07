@@ -311,7 +311,7 @@ const BlogItem: React.FC<BlogPageProps> = ({ location, data }) => {
                 <meta property="og:image:width" content="1920" />
                 <meta property="og:image:height" content="1080" />
             </Helmet>
-            <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.NinetySix }}>
+            <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.OneHundred }}>
                 <MainContainer>
                     <BlogContainer>
                         <Row>
