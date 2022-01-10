@@ -54,8 +54,8 @@ const Privacy = () => {
             <MetaTags page={Page.Security} />
             <Layout.Section fullHeight noPadding id="policy">
                 <BlogContainer>
-                    <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SixtyFour }}>
-                        <Headline headlineType="Headline2" asH1>
+                    <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SeventySix }}>
+                        <Headline headlineType="Headline2">
                             Security matters.
                         </Headline>
                     </Padding>

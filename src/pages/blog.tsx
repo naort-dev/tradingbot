@@ -51,7 +51,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
             <MainContainer>
                 <Padding
                     size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}
-                    mobileSize={{ top: PaddingSizes.NinetyTwo, bottom: PaddingSizes.Zero }}
+                    mobileSize={{ top: PaddingSizes.OneHundred, bottom: PaddingSizes.Zero }}
                 >
                     <Headline headlineType="Headline2">Trality Blog</Headline>
                     <Padding size={{ top: PaddingSizes.TwentyFour }}>

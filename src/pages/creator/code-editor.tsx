@@ -37,7 +37,7 @@ const CodeEditor = () => {
                                     right: PaddingSizes.Four,
                                 }}
                                 mobileSize={{
-                                    top: PaddingSizes.Eighty,
+                                    top: PaddingSizes.OneHundred,
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
@@ -51,7 +51,7 @@ const CodeEditor = () => {
                                         right: PaddingSizes.Four,
                                     }}
                                     mobileSize={{
-                                        top: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.TwentyFour,
                                         bottom: PaddingSizes.TwentyFour,
                                     }}
                                 >

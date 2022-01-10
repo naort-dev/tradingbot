@@ -25,7 +25,7 @@ const Press = () => {
             <MainContainer>
                 <Padding
                     size={{ top: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
-                    mobileSize={{ top: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
+                    mobileSize={{ top: PaddingSizes.OneHundred, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                 >
                     <Row>
                         <Cell size={8} mobileSize={12}>

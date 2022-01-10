@@ -61,7 +61,7 @@ const Privacy = () => {
                         right: PaddingSizes.Zero,
                     }}
                     mobileSize={{
-                        top: PaddingSizes.SixtyFour,
+                        top: PaddingSizes.OneHundred,
                         bottom: PaddingSizes.FiftySix,
                         left: PaddingSizes.Zero,
                         right: PaddingSizes.Zero,
