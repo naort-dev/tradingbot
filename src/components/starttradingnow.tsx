@@ -1,5 +1,4 @@
-import { Button } from 'components';
-import { Padding, PaddingSizes, MainContainer, Row, Text, Cell, Headline, Assets, HideMobile, HideDesktop } from '@trality/web-ui-components';
+import { Padding, PaddingSizes, Button, MainContainer, Row, Text, Cell, Headline, Assets, HideMobile, HideDesktop } from '@trality/web-ui-components';
 import { useLink } from '@hooks';
 import React from 'react';
 import { LazyImage } from './lazyImage';
@@ -36,7 +35,7 @@ export const StartTradingNow = () => {
                         </HideMobile>
                     </Cell>
                     <Cell size={6} mobileSize={12}>
-                        <Row>
+                        <Row multiline>
                             <Cell size={6} mobileSize={6} align="right">
                                 <Padding
                                     size={{
