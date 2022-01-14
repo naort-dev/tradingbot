@@ -30,7 +30,7 @@
         "@sentry/webpack-plugin": "^1.13.0",
         "@svgr/webpack": "^5.5.0",
         "@trality/web-tracking": "6.0.3",
-        "@trality/web-ui-components": "0.1.8",
+        "@trality/web-ui-components": "0.1.10",
         "@zeit/next-css": "^1.0.1",
         "case-sensitive-paths-webpack-plugin": "^2.4.0",
         "cheerio": "^1.0.0-rc.10",
