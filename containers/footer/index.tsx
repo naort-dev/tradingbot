@@ -201,7 +201,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                 <Row>
                     <Cell size={6} mobileSize={12}>
                         <Text bodyType="Caption" lighter>
-                            All rights reserved © Trality 2021
+                            All rights reserved © Trality {new Date().getFullYear()}
                         </Text>
                     </Cell>
                     <Cell size={6} align="right" mobileSize={12} alignMobile="left">

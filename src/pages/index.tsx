@@ -67,8 +67,8 @@ const Index = () => {
                         <Row>
                             <Cell size={6} mobileSize={12} align="right" alignMobile="center">
                                 <Row>
-                                    <Cell size={4} mobileSize={12}></Cell>
-                                    <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                    <Cell size={3} mobileSize={12}></Cell>
+                                    <Cell size={9} mobileSize={12} align="right" alignMobile="center">
                                         <Padding
                                             mobileSize={{
                                                 bottom: PaddingSizes.Sixteen,
@@ -82,7 +82,7 @@ const Index = () => {
                                 </Row>
                             </Cell>
                             <Cell size={6} mobileSize={12} align="left" alignMobile="center">
-                                <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                <Cell size={9} mobileSize={12} align="right" alignMobile="center">
                                     <Padding
                                         size={{
                                             bottom: PaddingSizes.SixtyEight,
