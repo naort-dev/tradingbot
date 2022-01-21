@@ -47,21 +47,21 @@ const Press = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Text bodyType="Body1">
+                                <Text bodyType="Body2">
                                     Trality brings the power and potential of complex automated trading to the world of the everyday investor so they,
                                     and not just the richest traders, can also benefit from this revolutionary technology. Here, you will find our
                                     latest press releases with related materials such as company statistics, logos and an image library.
                                 </Text>
                             </Padding>
-                            <Text bodyType="Body1">For media inquiries, please send an email to our Communications Lead.</Text>
+                            <Text bodyType="Body2">For media inquiries, please send an email to our Communications Lead.</Text>
                         </Cell>
                     </Row>
                 </Padding>
                 <HideMobile>
                     <Padding
-                        size={{ top: PaddingSizes.ThirtySix, bottom: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
+                        size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                         mobileSize={{
-                            top: PaddingSizes.ThirtySix,
+                            top: PaddingSizes.SixtyFour,
                             bottom: PaddingSizes.SixtyFour,
                             left: PaddingSizes.Zero,
                             right: PaddingSizes.Zero,
@@ -78,7 +78,7 @@ const Press = () => {
                                         bottom: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1" darker>
+                                    <Text bodyType="Body2" darker>
                                         Contact
                                     </Text>
                                 </Padding>
@@ -93,7 +93,7 @@ const Press = () => {
                                         bottom: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1" darker>
+                                    <Text bodyType="Body2" darker>
                                         Get in touch
                                     </Text>
                                 </Padding>
@@ -110,7 +110,7 @@ const Press = () => {
                                         bottom: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1">
+                                    <Text bodyType="Body2">
                                         <TextLink href="mailto:pr@trality.com" intext>
                                             pr@trality.com
                                         </TextLink>
@@ -127,7 +127,7 @@ const Press = () => {
                                         bottom: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1">
+                                    <Text bodyType="Body2">
                                         <Row>
                                             {SocialLinks.map((item) => {
                                                 return (
@@ -163,13 +163,13 @@ const Press = () => {
                                 <Headline headlineType="Headline2">About Trality</Headline>
                                 <Padding
                                     size={{
-                                        top: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.TwentyFour,
                                     }}
                                     mobileSize={{
                                         top: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1">
+                                    <Text bodyType="Body2">
                                         Founded in 2018 by Moritz Putzhammer and Christopher Helf in response to the volatile and mostly unpredictable
                                         cryptocurrency market—Trality exists to bring automated, algorithmic trading to all who need it.
                                     </Text>
@@ -182,7 +182,7 @@ const Press = () => {
                                         top: PaddingSizes.SixtyFour,
                                     }}
                                 >
-                                    <Text bodyType="Body1">
+                                    <Text bodyType="Body2">
                                         While most investors are losing out due to emotional trading or poor timing, the upper echelons of the
                                         financial world are raking in the profit thanks to advanced, automated systems. We are changing that by giving
                                         everyone the state-of-the-art tools they need to automate their own strategies with multiple fair and flexible
@@ -253,7 +253,7 @@ const Press = () => {
             </Padding>
             <MainContainer>
                 <Padding
-                    size={{ top: PaddingSizes.ThirtySix, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
+                    size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                     mobileSize={{ top: PaddingSizes.ThirtySix, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                 >
                     <Row>
@@ -281,7 +281,7 @@ const Press = () => {
                                 bottom: PaddingSizes.TwentyFour,
                             }}
                         >
-                            <Surface>
+                            <Surface fullHeight>
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
@@ -327,11 +327,11 @@ const Press = () => {
                                     >
                                         <Row>
                                             <Cell size={12} mobileSize={12}>
-                                                <Text bodyType="Body3">All Trality logo variations in different formats & alignments.</Text>
+                                                <Text bodyType="Body3">All Trality logo variations in different formats &amp; alignments.</Text>
                                             </Cell>
                                         </Row>
                                     </Padding>
-                                    <TextLink href="/Trality-Logos.zip">
+                                    <TextLink href="/Trality-Logos.zip" bold>
                                         Download logos <img src={Assets.DownloadArrow} />
                                     </TextLink>
                                 </Padding>
@@ -393,11 +393,11 @@ const Press = () => {
                                     >
                                         <Row>
                                             <Cell size={12} mobileSize={12}>
-                                                <Text bodyType="Body3">A collection of images displaying our product & its unique features.</Text>
+                                                <Text bodyType="Body3">A collection of images displaying our product &amp; its unique features.</Text>
                                             </Cell>
                                         </Row>
                                     </Padding>
-                                    <TextLink href="/Product-images.zip">
+                                    <TextLink href="/Product-images.zip" bold>
                                         Download images <img src={Assets.DownloadArrow} />
                                     </TextLink>
                                 </Padding>
@@ -445,7 +445,7 @@ const Press = () => {
                                     >
                                         <Row>
                                             <Cell size={12} mobileSize={12}>
-                                                <SubHeadline subheadlineType="SubHeadline2">Founders & Team Images</SubHeadline>
+                                                <SubHeadline subheadlineType="SubHeadline2">Founders &amp; Team Images</SubHeadline>
                                             </Cell>
                                         </Row>
                                     </Padding>
@@ -459,11 +459,11 @@ const Press = () => {
                                     >
                                         <Row>
                                             <Cell size={12} mobileSize={12}>
-                                                <Text bodyType="Body3">A collection of our entire team's & founders' profile images.</Text>
+                                                <Text bodyType="Body3">A collection of our entire team's &amp; founders' profile images.</Text>
                                             </Cell>
                                         </Row>
                                     </Padding>
-                                    <TextLink href="/Team-images.zip">
+                                    <TextLink href="/Team-images.zip" bold>
                                         Download images <img src={Assets.DownloadArrow} />
                                     </TextLink>
                                 </Padding>
@@ -474,14 +474,14 @@ const Press = () => {
             </MainContainer>
             <MainContainer>
                 <Padding
-                    size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
+                    size={{ top: PaddingSizes.OneHundred, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                     mobileSize={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.ThirtySix, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                 >
                     <Row>
                         <Cell size={12} mobileSize={12}>
                             <Padding
                                 size={{
-                                    bottom: PaddingSizes.TwentyFour,
+                                    bottom: PaddingSizes.SixtyFour,
                                 }}
                                 mobileSize={{
                                     bottom: PaddingSizes.TwentyFour,
