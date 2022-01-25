@@ -55,6 +55,10 @@ const Container = styled.nav<OpenProps>`
     }
 `;
 
+const LoginBlock = styled(Cell)`
+    margin-left: auto;
+`;
+
 export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => {
     const { open } = useOpen();
 
@@ -111,6 +115,38 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         bottom: PaddingSizes.Sixteen,
                                     }}
                                 >
+                                    <NavLink href="/about">About us</NavLink>
+                                </Padding>
+                            </HideMobile>
+                            <HideDesktop>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                        left: PaddingSizes.Sixteen,
+                                        right: PaddingSizes.Sixteen,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                    }}
+                                >
+                                    <NavLink href="/about">About us</NavLink>
+                                </Padding>
+                            </HideDesktop>
+                            <HideMobile>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.Twenty,
+                                        bottom: PaddingSizes.Twenty,
+                                        left: PaddingSizes.Sixteen,
+                                        right: PaddingSizes.Sixteen,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                    }}
+                                >
                                     <NavLink href="/blog">Blog</NavLink>
                                 </Padding>
                             </HideMobile>
@@ -143,10 +179,6 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         target: '/jobs',
                                     },
                                     {
-                                        name: 'About us',
-                                        target: '/about',
-                                    },
-                                    {
                                         name: 'Security',
                                         target: '/security',
                                     },
@@ -154,7 +186,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             />
                         </Row>
                     </Cell>
-                    <Cell size={3} mobileSize={12} alignVertical="middle">
+                    <LoginBlock size={3} mobileSize={12} alignVertical="middle">
                         <Row>
                             <Cell size={6} mobileSize={12} align="right" alignVertical="middle" alignMobile="left">
                                 <Padding
@@ -180,7 +212,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                 </Button>
                             </Cell>
                         </Row>
-                    </Cell>
+                    </LoginBlock>
                 </Row>
             </MainContainer>
         </Container>
