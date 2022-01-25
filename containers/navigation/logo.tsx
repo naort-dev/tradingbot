@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useDark } from '@hooks';
 import { useOpen } from './hooks/useOpen';
 import { Link } from 'gatsby';
-import { Logos } from '@assets';
+import { Assets } from '@trality/web-ui-components';
 
 const LogoImg = styled.img`
     height: 70px;
@@ -30,7 +30,7 @@ export const Logo = () => {
     return (
         <Link to="/">
             <A>
-                <LogoImg src={Logos.TralityMainLogo} alt="Trality Logo" />
+                <LogoImg src={Assets.TralityLogo} alt="Trality Logo" />
             </A>
         </Link>
     );
