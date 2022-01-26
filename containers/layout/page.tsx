@@ -29,9 +29,9 @@ interface Props {
 }
 
 const Placeholder = styled.div`
-    margin-bottom: ${PaddingSizes.NinetyTwo}px;
+    margin-bottom: 0px;
     @media only screen and (min-width: 768px) {
-        margin-bottom: 0px;
+        margin-bottom: ${PaddingSizes.NinetyTwo}px;
     }
 `;
 
