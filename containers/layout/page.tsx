@@ -8,6 +8,7 @@ import { Section } from './section';
 import { ImagesMisc } from '@assets';
 import { useDark } from '@hooks';
 import { scrollIt } from '@util';
+import { PaddingSizes } from '@trality/web-ui-components';
 
 const Background = styled.img`
     position: absolute;
@@ -28,7 +29,10 @@ interface Props {
 }
 
 const Placeholder = styled.div`
-    margin-bottom: 92px;
+    margin-bottom: ${PaddingSizes.NinetyTwo}px;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 0px;
+    }
 `;
 
 export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
