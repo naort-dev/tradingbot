@@ -27,6 +27,10 @@ interface Props {
     dark?: boolean;
 }
 
+const Placeholder = styled.div`
+    margin-bottom: 92px;
+`;
+
 export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
     const { setDark } = useDark();
 
@@ -41,6 +45,7 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
         <Container>
             <GDPR />
             <Navigation pageType={pageType} />
+            <Placeholder />
             <>{children}</>
             <Section id="footer">
                 <Footer pageType={pageType} />

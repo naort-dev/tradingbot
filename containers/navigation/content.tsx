@@ -2,7 +2,7 @@ import { Logos } from '@assets';
 import { useIsMobile } from '@hooks';
 import { MainContainer, Cell, Row, Padding, PaddingSizes, TextLink, Assets } from '@trality/web-ui-components';
 import { LazyImage } from 'components/lazyImage';
-import { PageTypes } from 'containers/layout/page';
+import { PageTypes } from '../../containers/layout/page';
 import React from 'react';
 import { useOpen } from './hooks/useOpen';
 import { Menu } from './menu';

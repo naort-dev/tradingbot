@@ -19,7 +19,7 @@ const Top = styled.nav<Props>`
     top: 0;
     background-color: #fff;
     ${(props) => !props.isOnTop && 'box-shadow: 0px 8px 24px #0C0C0C14'};
-    transition: .25s;
+    transition: 0.25s;
     @media (max-width: 768px) {
         border-bottom: solid 1px #e9ecef;
         height: ${Navigation.Height};
@@ -27,30 +27,25 @@ const Top = styled.nav<Props>`
     }
 `;
 
-const Placeholder = styled.div`
-    margin-bottom: 92px;
-`;
-
 export const NavigationContainer: React.FC = ({ children }) => {
     const { open } = useOpen();
-    const [ onTop, setOnTop ] = useState(true);
-    
+    const [onTop, setOnTop] = useState(true);
+
     const watchScroll = (e: Event) => {
         const pagePosotion = document.documentElement.scrollTop || document.body.scrollTop;
         setOnTop(pagePosotion === 0);
     };
 
     useEffect(() => {
-        document.addEventListener("scroll", watchScroll);
-        
+        document.addEventListener('scroll', watchScroll);
+
         return () => {
-            document.removeEventListener("scroll", watchScroll);
+            document.removeEventListener('scroll', watchScroll);
         };
     }, []);
 
     return (
         <>
-            <Placeholder />
             <Top open={open} isOnTop={onTop}>
                 <MainContainer>{children}</MainContainer>
             </Top>
