@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useOpen } from './hooks/useOpen';
-import { DropdownItem } from './item';
 
 import { Navigation } from '../../theme';
 import { PageTypes } from '../../containers/layout/page';
-import { MainContainer, Padding, PaddingSizes, TextLink, Row, Cell, Button, HideMobile, HideDesktop } from '@trality/web-ui-components';
+import { MainContainer, Padding, PaddingSizes, Row, Cell, Button, HideMobile, HideDesktop, Dropdown, NavLink } from '@trality/web-ui-components';
 import { useLink } from '../../hooks/useLink';
 
 interface OpenProps {
@@ -56,6 +55,10 @@ const Container = styled.nav<OpenProps>`
     }
 `;
 
+const LoginBlock = styled(Cell)`
+    margin-left: auto;
+`;
+
 export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => {
     const { open } = useOpen();
 
@@ -68,9 +71,8 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                 <Row>
                     <Cell size={9} mobileSize={12} alignVertical="middle">
                         <Row>
-                            <DropdownItem
-                                name="Features"
-                                target="/"
+                            <Dropdown
+                                text="Features"
                                 items={[
                                     {
                                         name: 'Code Editor',
@@ -98,7 +100,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                     bottom: PaddingSizes.Sixteen,
                                 }}
                             >
-                                <TextLink href="/pricing">Pricing</TextLink>
+                                <NavLink href="/pricing">Pricing</NavLink>
                             </Padding>
                             <HideMobile>
                                 <Padding
@@ -113,7 +115,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         bottom: PaddingSizes.Sixteen,
                                     }}
                                 >
-                                    <TextLink href="/blog">Blog</TextLink>
+                                    <NavLink href="/about">About us</NavLink>
                                 </Padding>
                             </HideMobile>
                             <HideDesktop>
@@ -125,16 +127,48 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         right: PaddingSizes.Sixteen,
                                     }}
                                     mobileSize={{
+                                        top: PaddingSizes.Sixteen,
                                         bottom: PaddingSizes.Sixteen,
                                     }}
                                 >
-                                    <TextLink href="/blog">Blog</TextLink>
+                                    <NavLink href="/about">About us</NavLink>
+                                </Padding>
+                            </HideDesktop>
+                            <HideMobile>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.Twenty,
+                                        bottom: PaddingSizes.Twenty,
+                                        left: PaddingSizes.Sixteen,
+                                        right: PaddingSizes.Sixteen,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                    }}
+                                >
+                                    <NavLink href="/blog">Blog</NavLink>
+                                </Padding>
+                            </HideMobile>
+                            <HideDesktop>
+                                <Padding
+                                    size={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                        left: PaddingSizes.Sixteen,
+                                        right: PaddingSizes.Sixteen,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Sixteen,
+                                        bottom: PaddingSizes.Sixteen,
+                                    }}
+                                >
+                                    <NavLink href="/blog">Blog</NavLink>
                                 </Padding>
                             </HideDesktop>
 
-                            <DropdownItem
-                                name="Resources"
-                                target="/"
+                            <Dropdown
+                                text="Resources"
                                 items={[
                                     {
                                         name: 'Documentation',
@@ -145,10 +179,6 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         target: '/jobs',
                                     },
                                     {
-                                        name: 'About us',
-                                        target: '/about',
-                                    },
-                                    {
                                         name: 'Security',
                                         target: '/security',
                                     },
@@ -156,7 +186,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                             />
                         </Row>
                     </Cell>
-                    <Cell size={3} mobileSize={12} alignVertical="middle">
+                    <LoginBlock size={3} mobileSize={12} alignVertical="middle">
                         <Row>
                             <Cell size={6} mobileSize={12} align="right" alignVertical="middle" alignMobile="left">
                                 <Padding
@@ -182,7 +212,7 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                 </Button>
                             </Cell>
                         </Row>
-                    </Cell>
+                    </LoginBlock>
                 </Row>
             </MainContainer>
         </Container>

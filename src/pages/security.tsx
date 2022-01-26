@@ -54,14 +54,13 @@ const Privacy = () => {
             <MetaTags page={Page.Security} />
             <Layout.Section fullHeight noPadding id="policy">
                 <BlogContainer>
-                    <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SixtyFour }}>
-                        <Headline headlineType="Headline2" asH1>
+                    <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SeventySix }}>
+                        <Headline headlineType="Headline2">
                             Security matters.
                         </Headline>
                     </Padding>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Padding size={{ bottom: PaddingSizes.Sixteen }} mobileSize={{ bottom: PaddingSizes.Sixteen }}>
                             <Text bodyType="Body2">That’s why we take every step possible to ensure the security of all our systems and users.</Text>
@@ -73,10 +72,9 @@ const Privacy = () => {
                             measures to ensure that our users are well-protected from all potential web attacks.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline2">Sandboxed user strategies</Headline>
+                    <Headline headlineType="Headline3">Sandboxed user strategies</Headline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Users’ strategies and algorithms are completely sandboxed and their creation is browser-based. What this means is that no
@@ -86,10 +84,9 @@ const Privacy = () => {
                             the smartest and highest-performing bot creators onto this platform.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline2">Cloud-based ecosystem</Headline>
+                    <Headline headlineType="Headline3">Cloud-based ecosystem</Headline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Thanks to the fact that everything is cloud-based, you can rest easy knowing that your bot will be running 24/7 and never
@@ -97,10 +94,9 @@ const Privacy = () => {
                             do all the legwork for you.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline2">Advanced firewall protection</Headline>
+                    <Headline headlineType="Headline3">Advanced firewall protection</Headline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Thanks to our web service provider, our users can rest easy knowing that we have a firewall that protects all our systems
@@ -109,10 +105,9 @@ const Privacy = () => {
                             execute battle tests to augment security.
                         </Text>
                     </Padding>
-                    <Headline headlineType="Headline2">What can you do to augment your security online?</Headline>
+                    <Headline headlineType="Headline3">What can you do to augment your security online?</Headline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             While we take every step to protect our users and systems, there are a few things that you as a user can do to help secure
@@ -121,8 +116,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be wary (never deal with apps and people from un-trusted sources)</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Unfortunately, even with the strongest technical protection possible, users have to play their part as well in order to
@@ -138,8 +132,7 @@ const Privacy = () => {
                         When active in the Trality discussion discord chat, only trust official admins
                     </SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Current list of Trality admins in Trality discord channel:
@@ -151,8 +144,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Activate multi-factor authentication</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Multi-factor authentication (MFA) is the best and quickest way to add another layer of security to your account by
@@ -164,8 +156,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Utilise a strong password.</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             You might think that this goes without saying but when you realize that many people{' '}
@@ -178,8 +169,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Don’t just share/copy code</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Please don’t simply copy and paste code snippets which someone else has given to you and don’t trust other people blindly.
@@ -188,8 +178,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Keep your software up to date</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             This is a tip that most people don’t think about. - even those who are more familiar with technology security. When your
@@ -200,8 +189,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be sure that you log in at the right address</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Before logging into Trality (or any account), it’s good practice to double-check the URL. Always take a look at the
@@ -211,8 +199,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be wary of suspicious emails and never share your password with anyone</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Do not share your password with anyone at any time. No one at Trality will never ask for it. This is also the case for any
@@ -223,8 +210,7 @@ const Privacy = () => {
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Don’t leave your precious devices unattended!</SubHeadline>
                     <Padding
-                        size={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
-                        mobileSize={{ top: PaddingSizes.Fourty, bottom: PaddingSizes.TwentyFour }}
+                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
                     >
                         <Text bodyType="Body2">
                             Always be cautious when using Trality from a public network. Be extra cautious when working with your devices in open,

@@ -16,7 +16,7 @@ import {
     CyanLightestBackground,
     BlueBackground,
     TextLink,
-    Lightbox,
+    HideMobile,
     WordAnimation,
 } from '@trality/web-ui-components';
 import { LazyImage } from 'components/lazyImage';
@@ -41,7 +41,7 @@ const Index = () => {
                         <Padding
                             size={{ top: PaddingSizes.SixtyFour }}
                             mobileSize={{
-                                top: PaddingSizes.NinetySix,
+                                top: PaddingSizes.OneHundred,
                             }}
                         >
                             <Headline headlineType="Headline1">
@@ -67,8 +67,8 @@ const Index = () => {
                         <Row>
                             <Cell size={6} mobileSize={12} align="right" alignMobile="center">
                                 <Row>
-                                    <Cell size={4} mobileSize={12}></Cell>
-                                    <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                    <Cell size={3} mobileSize={12}></Cell>
+                                    <Cell size={9} mobileSize={12} align="right" alignMobile="center">
                                         <Padding
                                             mobileSize={{
                                                 bottom: PaddingSizes.Sixteen,
@@ -82,7 +82,7 @@ const Index = () => {
                                 </Row>
                             </Cell>
                             <Cell size={6} mobileSize={12} align="left" alignMobile="center">
-                                <Cell size={8} mobileSize={12} align="right" alignMobile="center">
+                                <Cell size={9} mobileSize={12} align="right" alignMobile="center">
                                     <Padding
                                         size={{
                                             bottom: PaddingSizes.SixtyEight,
@@ -375,7 +375,9 @@ const Index = () => {
                     </Cell>
                 </Row>
             </MainContainer>
-            <VideosContainer />
+            <HideMobile>
+                <VideosContainer />
+            </HideMobile>
             <Padding size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour }}>
                 <BlueBackground>
                     <MainContainer>
@@ -393,7 +395,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">5M+</Headline>
+                                        <Headline headlineType="Headline3">10M+</Headline>
                                         <Text bodyType="Body2">Daily trading volume</Text>
                                     </Padding>
                                 </Cell>
@@ -404,7 +406,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">50K+</Headline>
+                                        <Headline headlineType="Headline3">80K+</Headline>
                                         <Text bodyType="Body2">Verified users</Text>
                                     </Padding>
                                 </Cell>
@@ -415,7 +417,7 @@ const Index = () => {
                                             bottom: PaddingSizes.Twenty,
                                         }}
                                     >
-                                        <Headline headlineType="Headline3">10M+</Headline>
+                                        <Headline headlineType="Headline3">100M+</Headline>
                                         <Text bodyType="Body2">Connected AUM</Text>
                                     </Padding>
                                 </Cell>

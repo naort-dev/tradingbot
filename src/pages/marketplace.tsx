@@ -2,7 +2,6 @@ import { Layout } from '@containers';
 import { MetaTags, Page } from '../../util/metaTags';
 import React from 'react';
 import { StartTradingNow } from 'components/starttradingnow';
-import { FAQs } from 'components/FAQs';
 import {
     Padding,
     Text,
@@ -33,7 +32,7 @@ const Marketplace = () => {
                                     right: PaddingSizes.Four,
                                 }}
                                 mobileSize={{
-                                    top: PaddingSizes.Eighty,
+                                    top: PaddingSizes.OneHundred,
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
@@ -47,7 +46,7 @@ const Marketplace = () => {
                                         right: PaddingSizes.Four,
                                     }}
                                     mobileSize={{
-                                        top: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.TwentyFour,
                                         bottom: PaddingSizes.TwentyFour,
                                     }}
                                 >
@@ -271,7 +270,6 @@ const Marketplace = () => {
                 </Row>
             </MainContainer>
             <StartTradingNow />
-            <FAQs />
         </Layout.Page>
     );
 };

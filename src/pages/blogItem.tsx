@@ -284,6 +284,7 @@ const BlogItem: React.FC<BlogPageProps> = ({ location, data }) => {
                 <link rel="stylesheet" href="/prism-tomorrow.min.css" />
                 <link rel="stylesheet" href="/prism-toolbar.min.css" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="description" content={post.meta_description} />
 
                 <title>{post.title} | Trality</title>
                 <meta name="HandheldFriendly" content="True" />
@@ -310,7 +311,7 @@ const BlogItem: React.FC<BlogPageProps> = ({ location, data }) => {
                 <meta property="og:image:width" content="1920" />
                 <meta property="og:image:height" content="1080" />
             </Helmet>
-            <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.NinetySix }}>
+            <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.OneHundred }}>
                 <MainContainer>
                     <BlogContainer>
                         <Row>

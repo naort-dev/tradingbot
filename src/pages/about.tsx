@@ -206,7 +206,7 @@ const Team = () => {
             <MainContainer>
                 <Padding
                     size={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
-                    mobileSize={{ top: PaddingSizes.SixtyFour, bottom: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
+                    mobileSize={{ top: PaddingSizes.OneHundred, bottom: PaddingSizes.SixtyFour, left: PaddingSizes.Zero, right: PaddingSizes.Zero }}
                 >
                     <Row>
                         <Cell size={8} mobileSize={12}>

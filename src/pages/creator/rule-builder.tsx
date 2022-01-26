@@ -21,7 +21,6 @@ import {
     Button,
     TextLink,
 } from '@trality/web-ui-components';
-import { FAQs } from 'components/FAQs';
 import { LazyImage } from 'components/lazyImage';
 import { WatchVideo } from 'components/WatchVideo';
 import { useLink } from '@hooks';
@@ -41,7 +40,7 @@ const RuleBuilder = () => {
                                     right: PaddingSizes.Four,
                                 }}
                                 mobileSize={{
-                                    top: PaddingSizes.Eighty,
+                                    top: PaddingSizes.OneHundred,
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
@@ -55,7 +54,7 @@ const RuleBuilder = () => {
                                         right: PaddingSizes.Four,
                                     }}
                                     mobileSize={{
-                                        top: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.TwentyFour,
                                         bottom: PaddingSizes.TwentyFour,
                                     }}
                                 >
@@ -182,7 +181,6 @@ const RuleBuilder = () => {
             </MainContainer>
             <Features />
             <StartTradingNow />
-            <FAQs />
         </Layout.Page>
     );
 };

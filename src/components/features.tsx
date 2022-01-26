@@ -30,6 +30,7 @@ export const Features = () => {
                             }}
                             mobileSize={{
                                 top: PaddingSizes.Twenty,
+                                bottom: PaddingSizes.Fourty,
                             }}
                         >
                             <Row center>
@@ -41,10 +42,6 @@ export const Features = () => {
                                 size={{
                                     top: PaddingSizes.ThirtyTwo,
                                     bottom: PaddingSizes.Sixteen,
-                                }}
-                                mobileSize={{
-                                    top: PaddingSizes.Twenty,
-                                    bottom: PaddingSizes.Zero,
                                 }}
                             >
                                 <SubHeadline subheadlineType="SubHeadline2">Secure</SubHeadline>
@@ -62,6 +59,7 @@ export const Features = () => {
                             }}
                             mobileSize={{
                                 top: PaddingSizes.Twenty,
+                                bottom: PaddingSizes.Fourty,
                             }}
                         >
                             <Row center>
@@ -72,10 +70,6 @@ export const Features = () => {
                             <Padding
                                 size={{
                                     top: PaddingSizes.ThirtyTwo,
-                                    bottom: PaddingSizes.Sixteen,
-                                }}
-                                mobileSize={{
-                                    top: PaddingSizes.Twenty,
                                     bottom: PaddingSizes.Sixteen,
                                 }}
                             >
@@ -91,7 +85,7 @@ export const Features = () => {
                         <Padding
                             size={{
                                 left: PaddingSizes.ThirtyTwo,
-                                right: PaddingSizes.ThirtyTwo,
+                                right: PaddingSizes.Fourty,
                             }}
                             mobileSize={{
                                 top: PaddingSizes.Twenty,
@@ -106,10 +100,6 @@ export const Features = () => {
                             <Padding
                                 size={{
                                     top: PaddingSizes.ThirtyTwo,
-                                    bottom: PaddingSizes.Sixteen,
-                                }}
-                                mobileSize={{
-                                    top: PaddingSizes.Twenty,
                                     bottom: PaddingSizes.Sixteen,
                                 }}
                             >

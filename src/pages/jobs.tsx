@@ -34,7 +34,7 @@ const Jobs = () => {
                     right: PaddingSizes.Zero,
                 }}
                 mobileSize={{
-                    top: PaddingSizes.NinetySix,
+                    top: PaddingSizes.OneHundred,
                     bottom: PaddingSizes.FiftySix,
                     left: PaddingSizes.Zero,
                     right: PaddingSizes.Zero,

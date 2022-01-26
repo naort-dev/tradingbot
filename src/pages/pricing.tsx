@@ -182,7 +182,7 @@ const PricingComponent = () => {
                         bottom: PaddingSizes.TwentyFour,
                     }}
                     mobileSize={{
-                        top: PaddingSizes.NinetySix,
+                        top: PaddingSizes.OneHundred,
                         bottom: PaddingSizes.TwentyFour,
                     }}
                 >

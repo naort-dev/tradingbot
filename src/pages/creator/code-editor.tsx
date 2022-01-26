@@ -3,7 +3,6 @@ import { Page, MetaTags } from '../../../util/metaTags';
 import React from 'react';
 import { Features } from 'components/features';
 import { StartTradingNow } from 'components/starttradingnow';
-import { FAQs } from 'components/FAQs';
 import {
     MainContainer,
     Padding,
@@ -37,7 +36,7 @@ const CodeEditor = () => {
                                     right: PaddingSizes.Four,
                                 }}
                                 mobileSize={{
-                                    top: PaddingSizes.Eighty,
+                                    top: PaddingSizes.OneHundred,
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
@@ -51,7 +50,7 @@ const CodeEditor = () => {
                                         right: PaddingSizes.Four,
                                     }}
                                     mobileSize={{
-                                        top: PaddingSizes.Sixteen,
+                                        top: PaddingSizes.TwentyFour,
                                         bottom: PaddingSizes.TwentyFour,
                                     }}
                                 >
@@ -187,7 +186,6 @@ const CodeEditor = () => {
             </MainContainer>
             <Features />
             <StartTradingNow />
-            <FAQs />
         </Layout.Page>
     );
 };

@@ -1,5 +1,4 @@
-import { Button } from 'components';
-import { Padding, PaddingSizes, MainContainer, Row, Text, Cell, Headline, Assets, HideMobile, HideDesktop } from '@trality/web-ui-components';
+import { Padding, PaddingSizes, Button, MainContainer, Row, Text, Cell, Headline, Assets, HideMobile, HideDesktop } from '@trality/web-ui-components';
 import { useLink } from '@hooks';
 import React from 'react';
 import { LazyImage } from './lazyImage';
@@ -36,8 +35,8 @@ export const StartTradingNow = () => {
                         </HideMobile>
                     </Cell>
                     <Cell size={6} mobileSize={12}>
-                        <Row>
-                            <Cell size={6} mobileSize={6} align="right">
+                        <Row multiline>
+                            <Cell size={6} mobileSize={6} align="right" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.Fourty,
@@ -50,7 +49,7 @@ export const StartTradingNow = () => {
                                     <LazyImage src={Assets.Exchanges.Binance} />
                                 </Padding>
                             </Cell>
-                            <Cell size={6} mobileSize={6} align="right">
+                            <Cell size={6} mobileSize={6} align="right" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.Fourty,
@@ -63,10 +62,10 @@ export const StartTradingNow = () => {
                                     <LazyImage src={Assets.Exchanges.Bitpanda} />
                                 </Padding>
                             </Cell>
-                            <Cell size={6} mobileSize={6} align="right">
+                            <Cell size={6} mobileSize={6} align="right" alignMobile="center">
                                 <LazyImage src={Assets.Exchanges.Kraken} />
                             </Cell>
-                            <Cell size={6} mobileSize={6} align="right">
+                            <Cell size={6} mobileSize={6} align="right" alignMobile="center">
                                 <LazyImage src={Assets.Exchanges.Coinbase} />
                             </Cell>
                         </Row>
