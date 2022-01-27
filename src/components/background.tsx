@@ -5,6 +5,7 @@ import { Navigation } from '@theme';
 const Container = styled.div`
     background-color: #fff;
     transition: 0.3s all;
+    overflow: hidden;
 `;
 
 export const Background: React.FunctionComponent = (props) => {
