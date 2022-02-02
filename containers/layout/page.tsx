@@ -8,6 +8,7 @@ import { Section } from './section';
 import { ImagesMisc } from '@assets';
 import { useDark } from '@hooks';
 import { scrollIt } from '@util';
+import { PaddingSizes } from '@trality/web-ui-components';
 
 const Background = styled.img`
     position: absolute;
@@ -27,6 +28,13 @@ interface Props {
     dark?: boolean;
 }
 
+const Placeholder = styled.div`
+    margin-bottom: 0px;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: ${PaddingSizes.NinetyTwo}px;
+    }
+`;
+
 export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
     const { setDark } = useDark();
 
@@ -41,6 +49,7 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
         <Container>
             <GDPR />
             <Navigation pageType={pageType} />
+            <Placeholder />
             <>{children}</>
             <Section id="footer">
                 <Footer pageType={pageType} />

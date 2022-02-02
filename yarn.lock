@@ -3773,10 +3773,10 @@
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
   integrity sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==
 
-"@trality/web-tracking@6.0.3":
-  version "6.0.3"
-  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.0.3/5603e486cf35e501a12fde3c39a63e4ea776bf9b210dc7c05ba16e69dda2e887#f52e864816b64690a615229e7fb92dd83b579f45"
-  integrity sha512-oImOQBMxDhit/b5lhjp6Suz0MddSd4JrqrQNmBofjGC0ivON2AvgRKPih3pfgRs4GfWYEgNvPRtK9NEYS5iZSg==
+"@trality/web-tracking@^6.1.5":
+  version "6.1.5"
+  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.1.5/b4ac23a723424e6ceb8eaed2d0173d5803047927e51aca5524e6103677f9342d#f5809ec6c16a7776030113e2d6a29b94b564d77c"
+  integrity sha512-tXb4FtNzB/OrPqhUw4CfXIFD9Bz12zWXYZhli/8fP1+cF0b1R3qC/cGCFQIrJDcV8z+QQ1Pmyj9FszUuc6T2IA==
   dependencies:
     "@sentry/browser" "^5.27.6"
     mixpanel-browser "^2.38.0"

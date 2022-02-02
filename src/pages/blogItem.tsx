@@ -73,6 +73,13 @@ const BlogDataContainer = styled.div`
     & li::before {
         top: 1.3em;
     }
+    & li > p {
+        position: relative;
+        bottom: 26px;
+        @media (max-width: 768px) {
+            bottom: 21px;
+        }
+    }
 
     & figure {
         text-align: center;
@@ -220,14 +227,14 @@ const options: HTMLReactParserOptions = {
             if (!props['src'].includes('ic_trust.png') && !props['style'] && (!props['className'] || !props['className'].includes('img-gallery'))) {
                 // Certain images we don't want to use lazyimage since observer doesn't work with fixed elements
                 if (props['src'].includes('exit-intent-popup') || props['src'].includes('sidebar-popup')) {
-                    return <LazyImage src={props['src']} />;
+                    return <LazyImage src={props['src']} alt={props['alt'] ?? ''} />;
                 }
                 return (
                     <Padding
                         size={{ top: PaddingSizes.Sixteen, bottom: PaddingSizes.Sixteen }}
                         mobileSize={{ top: PaddingSizes.Sixteen, bottom: PaddingSizes.Sixteen }}
                     >
-                        <LazyImage src={props['src']} />
+                        <LazyImage src={props['src']} alt={props['alt'] ?? ''} />
                     </Padding>
                 );
             }
