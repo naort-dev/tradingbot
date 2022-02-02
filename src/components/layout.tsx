@@ -5,7 +5,14 @@ import React from 'react';
 import { lightTheme } from '@trality/web-ui-components';
 import { EventOrigin, EventStage, EventType, TrackingManagerConfig, TrackingProvider } from '@trality/web-tracking';
 
-const trackingLinks = [process.env.TRACKER_ECHO, process.env.TRACKER_GTM, process.env.TRACKER_SENTRY, process.env.TRACKER_SEGMENT];
+const trackingLinks = [
+    process.env.TRACKER_ECHO,
+    process.env.TRACKER_GTM,
+    process.env.TRACKER_SENTRY,
+    process.env.TRACKER_SEGMENT,
+    process.env.TRACKER_REDDIT,
+    process.env.TRACKER_TWITTER,
+];
 const trackingConfig: TrackingManagerConfig = {
     configLinks: trackingLinks.filter((link) => !!link) as string[],
     options: {
