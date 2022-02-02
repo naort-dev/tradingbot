@@ -127,7 +127,7 @@ export default function HTML(props) {
         left: 0;
         bottom: 0;
         right: 0;
-    z-index: 10000;
+        z-index: 10000;
         background: rgba(33, 33, 33, 0.8);
     }
     
@@ -216,6 +216,7 @@ export default function HTML(props) {
         letter-spacing: normal;
         line-height: 32px;
         vertical-align: baseline;
+        display:inline-block;
     }
     
     .exit-intent .content .contentWrapper .contentRight img {
