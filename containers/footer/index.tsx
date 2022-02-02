@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
 import { Logos } from '@assets';
 import { Layout } from '@containers';
@@ -7,7 +8,7 @@ import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
 import { LazyImage } from 'components/lazyImage';
 import { PageTypes } from '../../containers/layout/page';
-import { Divider, Padding, Cell, MainContainer, Row, Button, Text, PaddingSizes, TextLink, Assets } from '@trality/web-ui-components';
+import { Divider, Padding, Cell, MainContainer, Row, Button, Text, PaddingSizes, TextLink, Assets, SvgIcon } from '@trality/web-ui-components';
 import { useLink } from '../../hooks/useLink';
 
 interface Props {
@@ -21,22 +22,22 @@ const FooterLogos = [
         dark: Logos.TokentusWhite,
     },
     {
-        title: 'Blockrocket',
-        light: Logos.BlockRocketBlack,
-        dark: Logos.BlockRocketWhite,
-    },
-    {
         title: 'FFG',
         light: Logos.FFGBlack,
         dark: Logos.FFGWhite,
     },
     {
-        title: 'Herbst Kinsky Incubator',
-        light: Logos.Hk,
-    },
-    {
         title: 'Inits Incubator',
         light: Logos.Inits,
+    },
+    {
+        title: 'Blockrocket',
+        light: Logos.BlockRocketBlack,
+        dark: Logos.BlockRocketWhite,
+    },
+    {
+        title: 'Herbst Kinsky Incubator',
+        light: Logos.Hk,
     },
     {
         title: 'Vienna Business Agency',
@@ -60,11 +61,18 @@ const secondMenu = [
 ];
 
 export const SocialLinks = [
-    { link: 'https://discord.gg/trality', logo: Assets.Discord },
-    { link: 'https://twitter.com/trality_bots', logo: Assets.Twitter },
-    { link: 'https://www.instagram.com/trality_bots/', logo: Assets.Instagram },
-    { link: 'https://www.facebook.com/trality', logo: Assets.Facebook },
+    { link: 'https://discord.gg/trality', icon: 'ic-social-discord' },
+    { link: 'https://twitter.com/trality_bots', icon: 'ic-social-twitter' },
+    { link: 'https://www.instagram.com/trality_bots/', icon: 'ic-social-instagram' },
+    { link: 'https://www.facebook.com/trality', icon: 'ic-social-facebook' },
 ];
+
+const SocialIcon = styled(SvgIcon)`
+    fill: #353535;
+    &:hover {
+        fill: #00B8E6;
+    }
+`;
 
 export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
     const followLink = useLink('signup');
@@ -85,7 +93,9 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                         <MainContainer>
                             <Row>
                                 <Cell size={8} mobileSize={6}>
-                                    <LazyImage src={Assets.TralityLogo} alt="Trality Logo" />
+                                    <Padding size={{ bottom: PaddingSizes.ThirtySix }}>
+                                        <LazyImage src={Assets.TralityLogo} alt="Trality Logo" />
+                                    </Padding>
                                 </Cell>
                             </Row>
                             <Row>
@@ -95,7 +105,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                             return (
                                                 <Cell size={2} mobileSize={2}>
                                                     <TextLink href={item.link} target="_blank">
-                                                        <img src={item.logo} />
+                                                        <SocialIcon name={item.icon} width="24" height="24" viewBox="0 0 24 24"/>
                                                     </TextLink>
                                                 </Cell>
                                             );
@@ -131,7 +141,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                                             : undefined
                                                     }
                                                 >
-                                                    {item.name}
+                                                    <Text bodyType="Body2">{item.name}</Text>
                                                 </TextLink>
                                             </Padding>
                                         );
@@ -150,7 +160,9 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                                     bottom: PaddingSizes.Twelve,
                                                 }}
                                             >
-                                                <TextLink href={item.link}>{item.name}</TextLink>
+                                                <TextLink href={item.link}>
+                                                    <Text bodyType="Body2">{item.name}</Text>
+                                                </TextLink>
                                             </Padding>
                                         );
                                     })}
@@ -178,7 +190,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                 {FooterLogos.map((item) => {
                     return (
                         <Cell size={2} mobileSize={6} alignVertical="middle">
-                            <LazyImage src={item.light} />
+                            <LazyImage src={item.light} maxWidth={164}/>
                         </Cell>
                     );
                 })}

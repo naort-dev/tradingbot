@@ -8,7 +8,7 @@ import { Section } from './section';
 import { ImagesMisc } from '@assets';
 import { useDark } from '@hooks';
 import { scrollIt } from '@util';
-import { PaddingSizes } from '@trality/web-ui-components';
+import { PaddingSizes, SvgSprite } from '@trality/web-ui-components';
 
 const Background = styled.img`
     position: absolute;
@@ -48,6 +48,7 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
     return (
         <Container>
             <GDPR />
+            <SvgSprite />
             <Navigation pageType={pageType} />
             <Placeholder />
             <>{children}</>
