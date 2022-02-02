@@ -73,6 +73,13 @@ const BlogDataContainer = styled.div`
     & li::before {
         top: 1.3em;
     }
+    & li > p {
+        position: relative;
+        bottom: 26px;
+        @media (max-width: 768px) {
+            bottom: 21px;
+        }
+    }
 
     & figure {
         text-align: center;
