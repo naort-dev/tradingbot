@@ -45,6 +45,8 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
     const featured = data.allGhostPost.edges[0];
     const recent = data.allGhostPost.edges.slice(1, 4);
     const others = data.allGhostPost.edges.slice(4);
+    const bracketsLinkExcerpt = /(\[.*?\])/g ;
+    
     return (
         <Layout.Page title="team">
             <MetaTags page={Page.Blog} />
@@ -81,7 +83,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                         <SubHeadline subheadlineType="SubHeadline1">{featured.node.title}</SubHeadline>
                                     </Padding>
                                     <Text bodyType="Body2">
-                                        {featured.node.excerpt.length > 250 ? featured.node.excerpt.slice(0, 250) + '...' : featured.node.excerpt}
+                                        {featured.node.excerpt.length > 250 ? featured.node.excerpt.replace(bracketsLinkExcerpt, '').slice(0, 250) + '...' : featured.node.excerpt}
                                     </Text>
                                     <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                         <Row>
@@ -135,7 +137,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                                     <SubHeadline subheadlineType="SubHeadline1">{item.node.title}</SubHeadline>
                                                 </Padding>
                                                 <Text bodyType="Body2">
-                                                    {item.node.excerpt.length > 250 ? item.node.excerpt.slice(0, 250) + '...' : item.node.excerpt}
+                                                    {item.node.excerpt.length > 250 ? item.node.excerpt.replace(bracketsLinkExcerpt, '').slice(0, 250) + '...' : item.node.excerpt}
                                                 </Text>
                                                 <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                     <Row>
@@ -189,7 +191,7 @@ const Blog: React.FC<BlogPageProps> = ({ data }) => {
                                                     <SubHeadline subheadlineType="SubHeadline1">{item.node.title}</SubHeadline>
                                                 </Padding>
                                                 <Text bodyType="Body2">
-                                                    {item.node.excerpt.length > 250 ? item.node.excerpt.slice(0, 250) + '...' : item.node.excerpt}
+                                                    {item.node.excerpt.length > 250 ? item.node.excerpt.replace(bracketsLinkExcerpt, '').slice(0, 250) + '...' : item.node.excerpt}
                                                 </Text>
                                                 <Padding size={{ top: PaddingSizes.TwentyFour }} mobileSize={{ top: PaddingSizes.TwentyFour }}>
                                                     <Row>
