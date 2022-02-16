@@ -6,8 +6,8 @@ import { StyledImage } from './lazyImage';
 import { LazyVideo, StyledVideo } from './lazyVideo';
 
 const videoSlider = [
-    { video: Videos.CodeV2, title: 'Flexible Rule Builder to build logic', icon: Assets.CodeBuilder },
-    { video: Videos.RuleV2, title: 'Powerful Python API to code algorithms', icon: Assets.RuleBuilder },
+    { video: Videos.RuleV2, title: 'Flexible Rule Builder to build logic', icon: Assets.RuleBuilder },
+    { video: Videos.CodeV2, title: 'Powerful Python API to code algorithms', icon: Assets.CodeBuilder },
     { video: Videos.BacktestV2, title: 'Fast backtester to optimize your bots', icon: Assets.Backtest },
 ];
 
@@ -69,12 +69,16 @@ export const VideosContainer = () => {
                                         >
                                             <Row center>
                                                 <Cell size={12} mobileSize={12} alignMobile="center">
-                                                    <StyledImage src={item.icon} />
+                                                    <Padding
+                                                        size={{bottom: PaddingSizes.Twelve}}
+                                                    >
+                                                        <StyledImage src={item.icon} maxWidth={56}/>
+                                                    </Padding>
                                                 </Cell>
                                             </Row>
                                             <Row center>
                                                 <Cell size={12} mobileSize={12} alignMobile="center">
-                                                    <Text bodyType="Body3">{item.title}</Text>
+                                                    <Text bodyType="Body2">{item.title}</Text>
                                                 </Cell>
                                             </Row>
                                         </Padding>
