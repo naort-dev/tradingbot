@@ -182,6 +182,10 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                         name: 'Security',
                                         target: '/security',
                                     },
+                                    {
+                                        name: 'Competition',
+                                        target: '/competition',
+                                    },
                                 ]}
                             />
                         </Row>
