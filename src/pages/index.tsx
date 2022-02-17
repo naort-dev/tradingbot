@@ -18,6 +18,7 @@ import {
     TextLink,
     HideMobile,
     WordAnimation,
+    device,
 } from '@trality/web-ui-components';
 import { LazyImage } from 'components/lazyImage';
 import { FeaturedIn } from 'components/featuredin';
@@ -29,6 +30,29 @@ import { Blog } from 'components/blog';
 import { WatchVideo } from 'components/WatchVideo';
 import { Twitter } from 'components/Twitter';
 import { useLink } from '@hooks';
+import styled from '@emotion/styled';
+
+const FirstScreenButtonsContainer = styled(Cell)`
+    display: flex;
+    justify-content: center;
+    padding-bottom: ${PaddingSizes.SixtyEight}px;
+    @media ${device.tablet} {
+        flex-direction: column;
+    }
+    > button {
+        width: 180px;
+        &:first-child {
+            margin-right: ${PaddingSizes.Sixteen}px;
+        }
+        @media ${device.tablet} {
+            width: 100%;
+            &:first-child {
+                margin-right: 0;
+                margin-bottom: ${PaddingSizes.Sixteen}px;
+            }
+        }
+    }
+`;
 
 const Index = () => {
     const followLink = useLink('signup');
@@ -65,36 +89,12 @@ const Index = () => {
                             </Text>
                         </Padding>
                         <Row>
-                            <Cell size={6} mobileSize={12} align="right" alignMobile="center">
-                                <Row>
-                                    <Cell size={3} mobileSize={12}></Cell>
-                                    <Cell size={9} mobileSize={12} align="right" alignMobile="center">
-                                        <Padding
-                                            mobileSize={{
-                                                bottom: PaddingSizes.Sixteen,
-                                            }}
-                                        >
-                                            <Button fullWidth onClick={() => followLink()}>
-                                                Try it for free!
-                                            </Button>
-                                        </Padding>
-                                    </Cell>
-                                </Row>
-                            </Cell>
-                            <Cell size={6} mobileSize={12} align="left" alignMobile="center">
-                                <Cell size={9} mobileSize={12} align="right" alignMobile="center">
-                                    <Padding
-                                        size={{
-                                            bottom: PaddingSizes.SixtyEight,
-                                        }}
-                                        mobileSize={{
-                                            bottom: PaddingSizes.FiftySix,
-                                        }}
-                                    >
-                                        <WatchVideo srcYtb="https://www.youtube.com/embed/DjBYXT0H004" />
-                                    </Padding>
-                                </Cell>
-                            </Cell>
+                            <FirstScreenButtonsContainer size={12} mobileSize={12} align="center">
+                                <Button fullWidth onClick={() => followLink()}>
+                                    Try it for free!
+                                </Button>
+                                <WatchVideo srcYtb="https://www.youtube.com/embed/DjBYXT0H004" />
+                            </FirstScreenButtonsContainer>
                         </Row>
                     </Cell>
                 </Row>

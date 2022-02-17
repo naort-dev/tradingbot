@@ -55,7 +55,7 @@ const Privacy = () => {
             <MainContainer>
                 <Padding
                     size={{
-                        top: PaddingSizes.NinetySix,
+                        top: PaddingSizes.SixtyFour,
                         bottom: PaddingSizes.NinetySix,
                         left: PaddingSizes.Zero,
                         right: PaddingSizes.Zero,
@@ -67,10 +67,10 @@ const Privacy = () => {
                         right: PaddingSizes.Zero,
                     }}
                 >
-                    <Headline headlineType="Headline1">Privacy Policy for Website Users</Headline>
-                    <Text bodyType="Body1">(information in accordance with Article 13 GDPR, 18 July 2019)</Text>
+                    <Headline headlineType="Headline2">Privacy Policy for Website Users</Headline>
+                    <Text bodyType="Body2">(information in accordance with Article 13 GDPR, 18 July 2019)</Text>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Date: 18 July 2019</b>
                             <br />
                             <b>Controller of all processing activities is:</b>
@@ -83,7 +83,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>
                                 For all inquiries concerning the protection of your personal data please contact:
                                 <br /> TRALITY GmbH
@@ -92,10 +92,10 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">1.Who We Are and What this Policy Is</Headline>
+                        <Headline headlineType="Headline3">1.Who We Are and What this Policy Is</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Welcome to{' '}
                             <TextLink intext href="https://www.trality.com">
                                 https://www.trality.com
@@ -108,7 +108,7 @@ const Privacy = () => {
                             .
                         </Text>
                     </Padding>
-                    <Text bodyType="Body1">
+                    <Text bodyType="Body2">
                         We respect the privacy of the users of our website and our services (“you”, “your”) and are committed to protecting your
                         personal data and information according to the applicable law. For this reason, your data will be used exclusively on the
                         basis of the applicable legal provisions, in particular the National Data Protection Act (DSG), the General Data Protection
@@ -118,10 +118,10 @@ const Privacy = () => {
                         on this website.
                     </Text>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">2.Definitions</Headline>
+                        <Headline headlineType="Headline3">2.Definitions</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>“Personal Information”</b> means any information that either (a) personally identifies a natural person; or (b)
                             pertains to an identifiable natural person, i.e. someone who can be identified, directly or indirectly, in particular, by
                             reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more
@@ -135,7 +135,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>“Processing”</b> means any operation or set of operations which is performed on Personal Information or on sets of
                             Personal Information, whether or not by automated means, such as the collection, recording, organization, structuring,
                             storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise
@@ -143,7 +143,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>“Sensitive Personal Information”</b> means Personal Information revealing racial or ethnic origin, political opinions,
                             religious or philosophical beliefs, or trade union membership, and the Processing of genetic data, biometric data for the
                             purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or
@@ -151,10 +151,10 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">3.Processing of Your Personal Information</Headline>
+                        <Headline headlineType="Headline3">3.Processing of Your Personal Information</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We process personal data
                             <ul>
                                 <li>
@@ -172,7 +172,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Depending on your interaction with{' '}
                             <TextLink intext href="https://app.trality.com">
                                 https://app.trality.com
@@ -191,7 +191,7 @@ const Privacy = () => {
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
                         <Headline headlineType="Headline3">3.1. Marketing activities</Headline>
                     </Padding>
-                    <Text bodyType="Body1">
+                    <Text bodyType="Body2">
                         Our website provides you with the possibility to submit information regarding you and your company to us. We will process your
                         personal data (name, address, e-mail-address, in order to provide you with alerts and information about news and developments
                         as well as articles from experts and invitations to events of TRALITY, in case you have expressed your interest in such
@@ -201,7 +201,7 @@ const Privacy = () => {
                         <Headline headlineType="Headline3">3.2. Cookies</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Our Site makes use of cookies. Cookies are small text files or other storage technologies downloaded by your Internet
                             browser and stored on the device you use to access the Site (e.g., your desktop computer, tablet or smartphone). Depending
                             on their purpose, cookies log specific user-related information such as your user preferences, authentication information,
@@ -214,7 +214,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Session Cookies</b> These are cookies that allow our Site to collect information about what you do during a browsing
                             session each time you visit the Site. When connecting to our server, your device will be allocated a session ID, which
                             enables our server to identify your device during the session and facilitates Site usability. These cookies are temporary
@@ -222,7 +222,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Persistent Cookies</b> These are cookies that are stored by your Internet browser for more than a session and are set
                             to expire within a defined time period. Persistent cookies enable us to remember your settings and information, so you do
                             not have to keep re-entering them whenever you visit our Site. They also measure how you use and interact with the Site
@@ -231,7 +231,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>First-Party Cookies</b> These are cookies that we store and access on your device in our capacity as controller of your
                             Personal Information when you visit our Site. They might include cookies related to third-party service providers,
                             provided that we control and determine the purposes and means of the Processing of your Personal Information logged by
@@ -240,7 +240,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Third-Party Cookies</b> These are cookies that are stored and accessed on your device by third parties determining the
                             purposes and means of the Processing of your Personal Information logged by such cookies. You may influence the scope and
                             extent to which we use cookies when you visit our Site. In particular, you may prevent cookies from being stored on your
@@ -249,7 +249,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Third-Party Cookies</b> These are cookies that are stored and accessed on your device by third parties determining the
                             purposes and means of the Processing of your Personal Information logged by such cookies. You may influence the scope and
                             extent to which we use cookies when you visit our Site. In particular, you may prevent cookies from being stored on your
@@ -258,7 +258,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Chrome:</b>{' '}
                             <TextLink intext href="https://www.google.com/intl/en/chrome/browser/privacy/">
                                 https://www.google.com/intl/en/chrome/browser/privacy/
@@ -266,7 +266,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Firefox:</b>{' '}
                             <TextLink intext href="https://support.mozilla.org/en-US/products/firefox/protect-your-privacy">
                                 https://support.mozilla.org/en-US/products/firefox/protect-your-privacy
@@ -274,7 +274,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             <b>Safari:</b>{' '}
                             <TextLink intext href="http://www.apple.com/privacy/manage-your-privacy/">
                                 http://www.apple.com/privacy/manage-your-privacy/
@@ -282,7 +282,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             However, please be aware that this might render certain functions of our Site inoperable or more difficult to use.
                             Depending on the Internet browser you use, you might also be able to specifically reject third-party cookies. In this
                             context, please note, however, that third parties might still have access to your Personal Information to the extent that
@@ -299,14 +299,14 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Google Analytics</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We use Google Analytics on our website. This is a web analytics service provided by Google Inc., Gordon House, Barrow
                             Street, Dublin 4, Ireland ("Google"). Our legitimate interest in using Google lies in the analysis, optimization, and
                             economic operation of our site.
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Through certification according to the EU-US Privacy Shield:{' '}
                             <TextLink intext href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active">
                                 https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active
@@ -315,13 +315,13 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             The Google Analytics service is used to analyse how our website is used. The legal basis is Art. 6 Para. 1 lit. f) GDPR.
                             Our legitimate interest lies in the analysis, optimization, and economic operation of our site.
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Usage and user-related information, such as IP address, place, time, or frequency of your visits to our website will be
                             transmitted to a Google server in the United States and stored there. However, we use Google Analytics with the so-called
                             anonymization function, whereby Google truncates the IP address within the EU or the EEA before it is transmitted to the
@@ -336,7 +336,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             In addition, Google offers an opt-out add-on at{' '}
                             <TextLink intext href="https://tools.google.com/dlpage/gaoptout?hl=en">
                                 https://tools.google.com/dlpage/gaoptout?hl=en
@@ -351,7 +351,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">CloudFlare</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             To secure our website and to optimize loading times, we use the CloudFlare CDN (content delivery network). This is a
                             service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA ("CloudFlare"). Through
                             certification according to the EU-US Privacy Shield (
@@ -377,7 +377,7 @@ const Privacy = () => {
                         </ul>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             The data is used by CloudFlare for statistical evaluations of the accesses as well as for the security and optimization of
                             the offer. If you do not agree to this processing, you have the option of preventing the installation of cookies by making
                             the appropriate settings in your browser. Further details can be found in the section about cookies above. CloudFlare
@@ -393,14 +393,14 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Mixpanel</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Our websites regularly uses content from the online marketing services of the provider Mixpanel Inc., 405 Howard Street,
                             Floor 2, San Francisco, CA 94105 ("Mixpanel"). Our legitimate interest in using Mixpanel lies in the analysis,
                             optimization, and economic operation of our site.
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Mixpanel's services allow us to evaluate user interactions on our website in a more targeted manner. For these purposes, a
                             code of Mixpanel will be executed when calling up our and other websites on which Mixpanel is active and it will be
                             integrated into the website so-called (re)marketing tags (invisible graphics or code, also called "web beacons"). With
@@ -412,7 +412,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Further information as well as possible objections to the registration by Mixpanel can be found in the data protection
                             regulations of Mixpanel:{' '}
                             <TextLink intext href="https://mixpanel.com/legal/privacy-policy/">
@@ -429,13 +429,13 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Hotjar</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We use Hotjar on our website. This is a web analytics service provided by Hotjar Ltd, Level 2, St Julians Business Centre,
                             3, Elia Zammit Street, St Julians STJ 1000, Malta, Europe ("Hotjar").
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Hotjar is used to analyze how our website is used. Our legitimate interest lies in the analysis, optimization, and
                             economic operation of our site. Hotjar allows us to monitor your usage behaviour on our website, such as logging and
                             evaluating your mouse movements or mouse clicks. However, your visit to our website will be anonymized. In addition,
@@ -450,7 +450,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             In addition, you have the option of terminating the analysis of your usage behavior by opting out. By confirming the link{' '}
                             <TextLink intext href="https://www.hotjar.com/opt-out">
                                 https://www.hotjar.com/opt-out
@@ -463,7 +463,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Typeform</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We use the Typeform service (TYPEFORM S.L., Passatge de la Pau 10 Bis, 1-2, Spain) ("Typeform"). Typeform is a website
                             integration used to embed forms (such as surveys, polls and quizzes) on the Trality platform. Users are free to complete
                             these forms. If they do, the users answers are being sent to Trality as well as the typeform platform. You can find out
@@ -478,7 +478,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Sentry</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We use the services of Sentry (Functional Software, Inc. dba Sentry, 132 Hawthorne Street, San Francisco, CA 94107)
                             ("Sentry"). Sentry is an open-source error tracking software that helps developers monitor and fix crashes in real time.
                             It documents bugs and error reports for our front end services, which includes error parameters as well as user and
@@ -492,10 +492,10 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">4. Data Security and Transfer of Data</Headline>
+                        <Headline headlineType="Headline3">4. Data Security and Transfer of Data</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">We transfer personal data to third parties such as:</Text>
+                        <Text bodyType="Body2">We transfer personal data to third parties such as:</Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
                         <ul>
@@ -506,13 +506,13 @@ const Privacy = () => {
                         </ul>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             We therefore comply with the provisions of Article 32 DSGVO in order to guarantee the confidentiality and security of your
                             personal data and take appropriate technical and organisational security measures.
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Notwithstanding efforts to maintain a consistently high level of due diligence, the possibility cannot be excluded that
                             information that you provide to us via the Internet may be viewed and used by others. Please note that we therefore accept
                             no liability whatsoever for the disclosure of information due to errors in data transmission and/or unauthorized access by
@@ -520,13 +520,13 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">5. Your Rights</Headline>
+                        <Headline headlineType="Headline3">5. Your Rights</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
                         <SubHeadline subheadlineType="SubHeadline3">Right to information</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             As long as we process your Personal Information, you have the right to information about the purposes of Processing, the
                             categories of personal data, the origin and the recipients of your personal data, the duration of storage. Your right to
                             information might be subject to our professional duty of confidentiality.
@@ -536,7 +536,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Rectification and erasure of data</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             If we process inaccurate or incomplete Personal Information, you have the right to rectification of such data. If your
                             Personal Information is processed unlawfully, you may also request us to erase your Personal Information. You may also
                             request the erasure of your Personal Information if your data is processed unlawfully, subject to legal obligations
@@ -547,13 +547,13 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Limitation of processing</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">You may request us to limit the processing of your Personal Information in certain cases.</Text>
+                        <Text bodyType="Body2">You may request us to limit the processing of your Personal Information in certain cases.</Text>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
                         <SubHeadline subheadlineType="SubHeadline3">Data portability</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             You have the right to receive the Personal Information, which you have provided to us, in a structured, commonly used and
                             machine-readable format. You have the right to direct transmission of those data to another controller as far as this is
                             technically feasible.
@@ -563,7 +563,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Right to object</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             You have the right to object, on grounds relating to your particular situation, at any time to processing of Personal
                             Information concerning you which is based on our legitimate interests according to art 6 para 1 point f GDPR. If you
                             object to processing of your Personal Information we shall cease to process this data unless our legitimate interests to
@@ -576,7 +576,7 @@ const Privacy = () => {
                         <SubHeadline subheadlineType="SubHeadline3">Complaint</SubHeadline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             You have the right to lodge a complaint with the Austrian Data Protection Authority (Österreichische Datenschutzbehörde),
                             Wickenburggasse 8, 1080 Wien, +43 1 531 15-202525, E-Mail: dsb@dsb.gv.at if you believe that your rights to protection of
                             your personal data have been infringed.
@@ -584,10 +584,10 @@ const Privacy = () => {
                     </Padding>
 
                     <Padding size={{ bottom: PaddingSizes.TwentyFour, top: PaddingSizes.TwentyFour }}>
-                        <Headline headlineType="Headline2">6. Changes to this Privacy Policy</Headline>
+                        <Headline headlineType="Headline3">6. Changes to this Privacy Policy</Headline>
                     </Padding>
                     <Padding size={{ bottom: PaddingSizes.TwentyFour }}>
-                        <Text bodyType="Body1">
+                        <Text bodyType="Body2">
                             Due to ongoing further development, this Privacy Policy will continue to be adapted. Changes will be announced on this
                             website in due time. Therefore, you should regularly access this Privacy Policy in order to inform yourself about the
                             current version.:

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 interface Props {
     borders?: boolean;
     rounded?: boolean;
+    maxWidth?: number;
     ensureFullContainerWidth?: boolean;
 }
 
@@ -14,6 +15,9 @@ export const StyledImage = styled.img<ImageProps>`
     ${(props) => {
         if (props.width) {
             return ``;
+        }
+        if (props.maxWidth) {
+            return `max-width: ${props.maxWidth}px;`;
         }
         return `max-width: 100%;`;
     }}

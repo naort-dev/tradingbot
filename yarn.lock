@@ -3773,20 +3773,20 @@
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
   integrity sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==
 
-"@trality/web-tracking@^6.1.4":
-  version "6.1.4"
-  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.1.4/d4dbae54322d3fdb4ccff5220b6047480c70be7bd866b82b861cda8cc2545ea9#43b1aaff462853e9e42c5f7bc429d4d5f9126a44"
-  integrity sha512-dldwGw7gKIbvJ+mReaEfom1FxbNxkZ/cB6tWQCTcyLvCK07eNLT6YSQq+Jtwy53nYJBUEs6bUAwSeibCSzTMdg==
+"@trality/web-tracking@^6.1.5":
+  version "6.1.5"
+  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.1.5/b4ac23a723424e6ceb8eaed2d0173d5803047927e51aca5524e6103677f9342d#f5809ec6c16a7776030113e2d6a29b94b564d77c"
+  integrity sha512-tXb4FtNzB/OrPqhUw4CfXIFD9Bz12zWXYZhli/8fP1+cF0b1R3qC/cGCFQIrJDcV8z+QQ1Pmyj9FszUuc6T2IA==
   dependencies:
     "@sentry/browser" "^5.27.6"
     mixpanel-browser "^2.38.0"
     moment-timezone "0.5.31"
     react-gtm-module "^2.0.8"
 
-"@trality/web-ui-components@0.1.14":
-  version "0.1.14"
-  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.14/01b18426ce6f42cea66cf13f1499b9d3ad2ce91507ee95ff39a8116402a3dfb2#f178486cbd799c0e643e303dc47a767faca8cf73"
-  integrity sha512-BktYXdrCMSomXq0aCDOxAopvVRYfyIwcSDBQmjsIQxCL7iwJhos5tVh/cNGkTk1uZU1K7zAoZhcs5PXFlrgaFw==
+"@trality/web-ui-components@^0.1.24":
+  version "0.1.24"
+  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.24/2178cb3c576331560d547ac67f1d3cd49e537c9b48896e820df01e382d7625e0#1c1be8a0d7146a2bc17e43e54de2730ba3192d7b"
+  integrity sha512-2DSFfXZfsMpg3pd3v6jpg/FrcXcWHrEZjzR9tSOossBkmVNXKnk5Xo8OzOiIReH/YqhC3M41UJmd5tkhyMZmqw==
   dependencies:
     "@babel/cli" "7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.12.1"

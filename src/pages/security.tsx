@@ -1,51 +1,17 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { Layout } from '@containers';
-import { Header } from '@components';
-
+import styled from 'styled-components';
 import { MetaTags, Page } from '../../util/metaTags';
-import { BlogContainer, Padding, Text, MainContainer, Row, TextLink, Headline, PaddingSizes, SubHeadline } from '@trality/web-ui-components';
+import { BlogContainer, Padding, Text, Row, TextLink, Headline, PaddingSizes, SubHeadline, device } from '@trality/web-ui-components';
 
-const Container = styled.div`
-    margin-bottom: 50px;
-    justify-content: left;
-    text-align: left;
-    ul {
-        text-align: left;
-    }
-    font-size: 15px;
-    @media (max-width: 768px) {
-        width: 100%;
-        padding-right: 25px;
-        padding-left: 25px;
-        text-align: center;
-        font-size: 13px;
-    }
-    & > span {
-        color: #00b8e6 !important;
-    }
-    > p {
-        display: block;
-        margin-top: 15px;
-    }
-`;
-
-const Top = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-
-const Section = styled.div<{ center?: boolean }>`
-    margin-top: 15px;
-    text-align: justify;
+const SecurityContainer = styled.div`
+    max-width: 680px;
     width: 100%;
-    line-height: 170%;
-    ${(props) =>
-        props.center &&
-        `
-        text-align: center;
-        margin-bottom: 40px;
-    `}
+    margin: 0 auto;
+    @media ${device.tablet} {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 `;
 
 const Privacy = () => {
@@ -53,15 +19,11 @@ const Privacy = () => {
         <Layout.Page title="privacy">
             <MetaTags page={Page.Security} />
             <Layout.Section fullHeight noPadding id="policy">
-                <BlogContainer>
-                    <Padding size={{ top: PaddingSizes.NinetySix }} mobileSize={{ top: PaddingSizes.SeventySix }}>
-                        <Headline headlineType="Headline2">
-                            Security matters.
-                        </Headline>
+                <SecurityContainer>
+                    <Padding size={{ top: PaddingSizes.SixtyFour }} mobileSize={{ top: PaddingSizes.OneHundred }}>
+                        <Headline headlineType="Headline2">Security matters.</Headline>
                     </Padding>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Padding size={{ bottom: PaddingSizes.Sixteen }} mobileSize={{ bottom: PaddingSizes.Sixteen }}>
                             <Text bodyType="Body2">That’s why we take every step possible to ensure the security of all our systems and users.</Text>
                         </Padding>
@@ -73,9 +35,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Headline headlineType="Headline3">Sandboxed user strategies</Headline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Users’ strategies and algorithms are completely sandboxed and their creation is browser-based. What this means is that no
                             one apart from yourself can see the ideas you are coming up with while you develop and test your bots. In the near future
@@ -85,9 +45,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Headline headlineType="Headline3">Cloud-based ecosystem</Headline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Thanks to the fact that everything is cloud-based, you can rest easy knowing that your bot will be running 24/7 and never
                             miss a trade - no need to set up or maintain your own trading servers or organise security measures for those servers - we
@@ -95,9 +53,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Headline headlineType="Headline3">Advanced firewall protection</Headline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Thanks to our web service provider, our users can rest easy knowing that we have a firewall that protects all our systems
                             against web exploits that may affect uptime, security, or consumes excessive resources such as in a DDOS attack. We have
@@ -106,18 +62,14 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <Headline headlineType="Headline3">What can you do to augment your security online?</Headline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             While we take every step to protect our users and systems, there are a few things that you as a user can do to help secure
                             yourself even more. Let’s go through some of the basics.
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be wary (never deal with apps and people from un-trusted sources)</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Unfortunately, even with the strongest technical protection possible, users have to play their part as well in order to
                             achieve collective security. You must always remain cautious and develop a sensible intuition when it comes to products
@@ -131,9 +83,7 @@ const Privacy = () => {
                     <SubHeadline subheadlineType="SubHeadline1">
                         When active in the Trality discussion discord chat, only trust official admins
                     </SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Current list of Trality admins in Trality discord channel:
                             <ul>
@@ -143,9 +93,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Activate multi-factor authentication</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Multi-factor authentication (MFA) is the best and quickest way to add another layer of security to your account by
                             validating the user’s identity through two or more steps. For services like Trality, the first step is to input your
@@ -155,9 +103,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Utilise a strong password.</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             You might think that this goes without saying but when you realize that many people{' '}
                             <TextLink intext href="https://nordpass.com/most-common-passwords-list/" target="_blank">
@@ -168,18 +114,14 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Don’t just share/copy code</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Please don’t simply copy and paste code snippets which someone else has given to you and don’t trust other people blindly.
                             You never know when someone might be trying to trick you into using a harmful algorithm.
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Keep your software up to date</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             This is a tip that most people don’t think about. - even those who are more familiar with technology security. When your
                             applications keep popping up with those update reminders, you should probably pay attention to them. Bad actors and
@@ -188,9 +130,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be sure that you log in at the right address</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Before logging into Trality (or any account), it’s good practice to double-check the URL. Always take a look at the
                             address bar and ensure the small lock icon is present. This icon means that the website you are on is the genuine,
@@ -198,9 +138,7 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Be wary of suspicious emails and never share your password with anyone</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Do not share your password with anyone at any time. No one at Trality will never ask for it. This is also the case for any
                             legitimate business. If you get an email or a message somewhere on social media which asks for your current password, you
@@ -209,15 +147,13 @@ const Privacy = () => {
                         </Text>
                     </Padding>
                     <SubHeadline subheadlineType="SubHeadline1">Don’t leave your precious devices unattended!</SubHeadline>
-                    <Padding
-                        size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}
-                    >
+                    <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                         <Text bodyType="Body2">
                             Always be cautious when using Trality from a public network. Be extra cautious when working with your devices in open,
                             public places.
                         </Text>
                     </Padding>
-                </BlogContainer>
+                </SecurityContainer>
             </Layout.Section>
         </Layout.Page>
     );
