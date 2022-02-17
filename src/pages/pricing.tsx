@@ -249,7 +249,7 @@ const PricingComponent = () => {
                                             bottom: PaddingSizes.SixtyFour,
                                         }}
                                     >
-                                        <Surface>
+                                        <Surface shadowType="dark-l">
                                             <Padding
                                                 size={{
                                                     top: PaddingSizes.ThirtyTwo,
@@ -568,7 +568,7 @@ const PricingComponent = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={12} mobileSize={12} align="left">
-                            <Surface>
+                            <Surface shadowType="dark-l">
                                 <MainContainer>
                                     <Row>
                                         <Cell size={2} mobileSize={12} alignVertical="middle">
