@@ -35,6 +35,8 @@ const Placeholder = styled.div`
     }
 `;
 
+const isBrowser = typeof window !== 'undefined';
+
 export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
     const { setDark } = useDark();
 
@@ -47,7 +49,7 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
 
     return (
         <Container>
-            <GDPR />
+            {isBrowser && <GDPR />}
             <SvgSprite />
             <Navigation pageType={pageType} />
             <Placeholder />
