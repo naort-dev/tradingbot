@@ -48,13 +48,13 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
     return (
         <Container>
             <GDPR />
-            <SvgSprite />
             <Navigation pageType={pageType} />
             <Placeholder />
             <>{children}</>
             <Section id="footer">
                 <Footer pageType={pageType} />
             </Section>
+            <SvgSprite />
         </Container>
     );
 };
