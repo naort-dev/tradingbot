@@ -3,8 +3,8 @@ import { CompetitionPage, PaddingSizes, Padding, CompetitionData } from '@tralit
 import React from 'react';
 import { MetaTags, Page } from '../../util/metaTags';
 
-const CompetitionUrl = typeof process.env.COMPETITION_URL === 'undefined' ? false : process.env.COMPETITION_URL;
-const CompetitionDataUrl = typeof process.env.COMPETITION_DATA_URL === 'undefined' ? false : process.env.COMPETITION_DATA_URL;
+const CompetitionUrl = typeof process.env.GATSBY_COMPETITION_URL === 'undefined' ? false : process.env.GATSBY_COMPETITION_URL;
+const CompetitionDataUrl = typeof process.env.GATSBY_COMPETITION_DATA_URL === 'undefined' ? false : process.env.GATSBY_COMPETITION_DATA_URL;
 
 const DataFetch = () => {
     return new Promise<CompetitionData>((resolve) => {
