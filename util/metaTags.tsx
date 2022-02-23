@@ -99,7 +99,7 @@ const descriptions = new Map([
     ],
     [
         Page.Competition,
-        'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: December 8, 2020.',
+        'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: March 31, 2022.',
     ],
     [Page.CompetitionTerms, 'Trading Competition Terms & Conditions'],
     [Page.JobSrFullStack, 'Would you like to help us as Senior Full-stack Developer? Get in touch with us! Open Position...'],

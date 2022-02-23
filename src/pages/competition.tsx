@@ -8,7 +8,7 @@ const Competition = () => {
         <Layout.Page title="Competition">
             <MetaTags page={Page.Competition} />
             <Padding size={{ top: PaddingSizes.SixtyFour }} mobileSize={{ top: PaddingSizes.NinetySix }}>
-                <CompetitionPage callToActionsVisible={false} competitionBoxesVisible={false} />
+                <CompetitionPage pageStyle="lp" callToActionsVisible={false} competitionBoxesVisible={false} />
             </Padding>
         </Layout.Page>
     );
