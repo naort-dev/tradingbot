@@ -67,27 +67,41 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
     const followSignupLink = useLink('signup');
     return (
         <Container open={open}>
-            <MainContainer>
-                <Row>
-                    <Cell size={9} mobileSize={12} alignVertical="middle">
-                        <Row>
-                            <Dropdown
-                                text="Features"
-                                items={[
-                                    {
-                                        name: 'Code Editor',
-                                        target: '/creator/code-editor',
-                                    },
-                                    {
-                                        name: 'Rule Builder',
-                                        target: '/creator/rule-builder',
-                                    },
-                                    {
-                                        name: 'Marketplace',
-                                        target: '/marketplace',
-                                    },
-                                ]}
-                            />
+            <Row>
+                <Cell size={9} mobileSize={12} alignVertical="middle">
+                    <Row>
+                        <Dropdown
+                            text="Features"
+                            items={[
+                                {
+                                    name: 'Code Editor',
+                                    target: '/creator/code-editor',
+                                },
+                                {
+                                    name: 'Rule Builder',
+                                    target: '/creator/rule-builder',
+                                },
+                                {
+                                    name: 'Marketplace',
+                                    target: '/marketplace',
+                                },
+                            ]}
+                        />
+                        <Padding
+                            size={{
+                                top: PaddingSizes.Twenty,
+                                bottom: PaddingSizes.Twenty,
+                                left: PaddingSizes.Sixteen,
+                                right: PaddingSizes.Sixteen,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.Sixteen,
+                                bottom: PaddingSizes.Sixteen,
+                            }}
+                        >
+                            <NavLink href="/pricing">Pricing</NavLink>
+                        </Padding>
+                        <HideMobile>
                             <Padding
                                 size={{
                                     top: PaddingSizes.Twenty,
@@ -100,125 +114,109 @@ export const Menu: React.FunctionComponent<Props> = ({ pageType, isMobile }) => 
                                     bottom: PaddingSizes.Sixteen,
                                 }}
                             >
-                                <NavLink href="/pricing">Pricing</NavLink>
+                                <NavLink href="/about">About us</NavLink>
                             </Padding>
-                            <HideMobile>
-                                <Padding
-                                    size={{
-                                        top: PaddingSizes.Twenty,
-                                        bottom: PaddingSizes.Twenty,
-                                        left: PaddingSizes.Sixteen,
-                                        right: PaddingSizes.Sixteen,
-                                    }}
-                                    mobileSize={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                    }}
-                                >
-                                    <NavLink href="/about">About us</NavLink>
-                                </Padding>
-                            </HideMobile>
-                            <HideDesktop>
-                                <Padding
-                                    size={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                        left: PaddingSizes.Sixteen,
-                                        right: PaddingSizes.Sixteen,
-                                    }}
-                                    mobileSize={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                    }}
-                                >
-                                    <NavLink href="/about">About us</NavLink>
-                                </Padding>
-                            </HideDesktop>
-                            <HideMobile>
-                                <Padding
-                                    size={{
-                                        top: PaddingSizes.Twenty,
-                                        bottom: PaddingSizes.Twenty,
-                                        left: PaddingSizes.Sixteen,
-                                        right: PaddingSizes.Sixteen,
-                                    }}
-                                    mobileSize={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                    }}
-                                >
-                                    <NavLink href="/blog">Blog</NavLink>
-                                </Padding>
-                            </HideMobile>
-                            <HideDesktop>
-                                <Padding
-                                    size={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                        left: PaddingSizes.Sixteen,
-                                        right: PaddingSizes.Sixteen,
-                                    }}
-                                    mobileSize={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                    }}
-                                >
-                                    <NavLink href="/blog">Blog</NavLink>
-                                </Padding>
-                            </HideDesktop>
+                        </HideMobile>
+                        <HideDesktop>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <NavLink href="/about">About us</NavLink>
+                            </Padding>
+                        </HideDesktop>
+                        <HideMobile>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Twenty,
+                                    bottom: PaddingSizes.Twenty,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <NavLink href="/blog">Blog</NavLink>
+                            </Padding>
+                        </HideMobile>
+                        <HideDesktop>
+                            <Padding
+                                size={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                    left: PaddingSizes.Sixteen,
+                                    right: PaddingSizes.Sixteen,
+                                }}
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <NavLink href="/blog">Blog</NavLink>
+                            </Padding>
+                        </HideDesktop>
 
-                            <Dropdown
-                                text="Resources"
-                                items={[
-                                    {
-                                        name: 'Documentation',
-                                        target: 'https://docs.trality.com',
-                                    },
-                                    {
-                                        name: 'Jobs',
-                                        target: '/jobs',
-                                    },
-                                    {
-                                        name: 'Security',
-                                        target: '/security',
-                                    },
-                                    {
-                                        name: 'Competition',
-                                        target: '/competition',
-                                    },
-                                ]}
-                            />
-                        </Row>
-                    </Cell>
-                    <LoginBlock size={3} mobileSize={12} alignVertical="middle">
-                        <Row>
-                            <Cell size={6} mobileSize={12} align="right" alignVertical="middle" alignMobile="left">
-                                <Padding
-                                    mobileSize={{
-                                        top: PaddingSizes.Sixteen,
-                                        bottom: PaddingSizes.Sixteen,
-                                    }}
+                        <Dropdown
+                            text="Resources"
+                            items={[
+                                {
+                                    name: 'Documentation',
+                                    target: 'https://docs.trality.com',
+                                },
+                                {
+                                    name: 'Jobs',
+                                    target: '/jobs',
+                                },
+                                {
+                                    name: 'Security',
+                                    target: '/security',
+                                },
+                                {
+                                    name: 'Competition',
+                                    target: '/competition',
+                                },
+                            ]}
+                        />
+                    </Row>
+                </Cell>
+                <LoginBlock size={3} mobileSize={12} alignVertical="middle">
+                    <Row>
+                        <Cell size={6} mobileSize={12} align="right" alignVertical="middle" alignMobile="left">
+                            <Padding
+                                mobileSize={{
+                                    top: PaddingSizes.Sixteen,
+                                    bottom: PaddingSizes.Sixteen,
+                                }}
+                            >
+                                <Button
+                                    size={'medium'}
+                                    fullWidth={isMobile}
+                                    variant={isMobile ? 'outlined' : 'text'}
+                                    onClick={() => followLoginLink()}
                                 >
-                                    <Button
-                                        size={'medium'}
-                                        fullWidth={isMobile}
-                                        variant={isMobile ? 'outlined' : 'text'}
-                                        onClick={() => followLoginLink()}
-                                    >
-                                        {' '}
-                                        Login{' '}
-                                    </Button>
-                                </Padding>
-                            </Cell>
-                            <Cell size={6} mobileSize={12} alignVertical="middle">
-                                <Button fullWidth={isMobile} size={'medium'} onClick={() => followSignupLink()}>
-                                    Signup
+                                    {' '}
+                                    Login{' '}
                                 </Button>
-                            </Cell>
-                        </Row>
-                    </LoginBlock>
-                </Row>
-            </MainContainer>
+                            </Padding>
+                        </Cell>
+                        <Cell size={6} mobileSize={12} alignVertical="middle">
+                            <Button fullWidth={isMobile} size={'medium'} onClick={() => followSignupLink()}>
+                                Signup
+                            </Button>
+                        </Cell>
+                    </Row>
+                </LoginBlock>
+            </Row>
         </Container>
     );
 };

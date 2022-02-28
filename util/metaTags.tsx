@@ -28,6 +28,7 @@ export enum Page {
     Press,
     Blog,
     Vote,
+    Guild,
 }
 
 const titles = new Map([
@@ -58,6 +59,7 @@ const titles = new Map([
     [Page.Blog, 'Trality - Blog'],
     [Page.Blog, 'Trality - Blog'],
     [Page.Vote, 'Trality - Thank you for voting'],
+    [Page.Guild, 'Trality - The guild'],
 ]);
 
 const descriptions = new Map([
@@ -99,7 +101,7 @@ const descriptions = new Map([
     ],
     [
         Page.Competition,
-        'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: December 8, 2020.',
+        'Create a winning trading bot using the Trality Bot Creator tools and get your hands on a big cash prize. Submission deadline: March 31, 2022.',
     ],
     [Page.CompetitionTerms, 'Trading Competition Terms & Conditions'],
     [Page.JobSrFullStack, 'Would you like to help us as Senior Full-stack Developer? Get in touch with us! Open Position...'],
@@ -113,6 +115,7 @@ const descriptions = new Map([
     [Page.UnSub, ''],
     [Page.Press, ''],
     [Page.Vote, ''],
+    [Page.Guild, ''],
 ]);
 
 export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {

@@ -3773,20 +3773,20 @@
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
   integrity sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==
 
-"@trality/web-tracking@^6.1.5":
-  version "6.1.5"
-  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.1.5/b4ac23a723424e6ceb8eaed2d0173d5803047927e51aca5524e6103677f9342d#f5809ec6c16a7776030113e2d6a29b94b564d77c"
-  integrity sha512-tXb4FtNzB/OrPqhUw4CfXIFD9Bz12zWXYZhli/8fP1+cF0b1R3qC/cGCFQIrJDcV8z+QQ1Pmyj9FszUuc6T2IA==
+"@trality/web-tracking@^6.1.7":
+  version "6.1.7"
+  resolved "https://npm.pkg.github.com/download/@trality/web-tracking/6.1.7/7671bbd306f41e579d8203d26d07e0ff7842272ce13db1ba0d7a17367920e671#f3b3c7321cc4ddf7b799d1e6b7a5c1c52ad5ec70"
+  integrity sha512-ZXz8sXR3MWUgAapl2yr7dy8sUQrMJkBnHnIdt2JCNAOMjrbDMb4wFl9BEaSxXA0MjlRqWBeRAnWcQpfKecxmnw==
   dependencies:
     "@sentry/browser" "^5.27.6"
     mixpanel-browser "^2.38.0"
     moment-timezone "0.5.31"
     react-gtm-module "^2.0.8"
 
-"@trality/web-ui-components@^0.1.26":
-  version "0.1.26"
-  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.26/b59abb629910fdec2887b142434a9475cfd84616dd735888686000b19bdf4954#5a88d134a9501c96da85285a0fe8a75648ceab6d"
-  integrity sha512-lpclY9NGRoaenZtU6q4D6rioKE2Pd0rHLRZw6DnunAze+Rut6K4cN+5V3vGGH8ofW6SgMmoFmZiYxB7sRTTRig==
+"@trality/web-ui-components@0.1.28":
+  version "0.1.28"
+  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.28/c718fcbae0d70a12f8b95a1a500f378112975c910bf37bf5c3bcc8531ae4e285#3e26d30ef42b87cefd2399c0021344a3ac56c52b"
+  integrity sha512-e3UMy40dZ1W0EwlfAC7vbBWmdFuXjrWSt2WB6tu/pPQCbitwAD6IHsSAHaLJzcJxLwaeVuWMYqRIg8tA+Y6aLQ==
   dependencies:
     "@babel/cli" "7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -7937,6 +7937,13 @@ dom-walk@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
   integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+
+dom7@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.4.tgz#8b68c5d8e5e2ed0fddb1cb93e433bc9060c8f3fb"
+  integrity sha512-DSSgBzQ4rJWQp1u6o+3FVwMNnT5bzQbMb+o31TjYYeRi05uAcpF8koxdfzeoe5ElzPmua7W7N28YJhF7iEKqIw==
+  dependencies:
+    ssr-window "^4.0.0"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -16993,6 +17000,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+ssr-window@^4.0.0, ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 ssri@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
@@ -17570,6 +17582,14 @@ svgo@^2.3.0:
     css-tree "^1.1.2"
     csso "^4.2.0"
     stable "^0.1.8"
+
+swiper@^8.0.6:
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.0.6.tgz#3996d3212cb73b93e9f274e18ea58c029340c7c7"
+  integrity sha512-Ssyu1+FeNATF/G8e84QG+ZUNtUOAZ5vngdgxzczh0oWZPhGUVgkdv+BoePUuaCXLAFXnwVpNjgLIcGnxMdmWPA==
+  dependencies:
+    dom7 "^4.0.4"
+    ssr-window "^4.0.2"
 
 symbol-observable@^1.0.4:
   version "1.2.0"

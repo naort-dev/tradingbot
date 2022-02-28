@@ -27,29 +27,25 @@ export const NavigationContent: React.FC<Props> = ({ pageType }) => {
                 left: PaddingSizes.Twelve,
             }}
         >
-            <MainContainer>
-                <Row>
-                    <Cell size={2} mobileSize={5} align="left">
-                        <TextLink href="/">
-                            <LazyImage src={Assets.TralityLogo} width={isMobile ? '140px' : '170px'} />
-                        </TextLink>
+            <Row>
+                <Cell size={2} mobileSize={5} align="left">
+                    <TextLink href="/">
+                        <LazyImage src={Assets.TralityLogo} width={isMobile ? '140px' : '170px'} />
+                    </TextLink>
+                </Cell>
+                <Cell size={10} mobileSize={0} alignVertical="middle">
+                    <Menu pageType={pageType} isMobile={false} />
+                </Cell>
+                <Cell size={0} mobileSize={5} align="right" alignVertical="middle"></Cell>
+                <Cell size={0} mobileSize={2} align="right" alignVertical="middle">
+                    <MobileIcon />
+                </Cell>
+                {open && (
+                    <Cell size={0} mobileSize={12} alignVertical="middle">
+                        <Menu pageType={pageType} isMobile={true} />
                     </Cell>
-                    <Cell size={10} mobileSize={0} alignVertical="middle">
-                        <Menu pageType={pageType} isMobile={false} />
-                    </Cell>
-                    <Cell size={0} mobileSize={5} align="right" alignVertical="middle"></Cell>
-                    <Cell size={0} mobileSize={2} align="right" alignVertical="middle">
-                        <MobileIcon />
-                    </Cell>
-                    {open && (
-                        <MainContainer>
-                            <Cell size={0} mobileSize={12} alignVertical="middle">
-                                <Menu pageType={pageType} isMobile={true} />
-                            </Cell>
-                        </MainContainer>
-                    )}
-                </Row>
-            </MainContainer>
+                )}
+            </Row>
         </Padding>
     );
 };
