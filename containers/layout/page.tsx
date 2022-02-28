@@ -8,7 +8,8 @@ import { Section } from './section';
 import { ImagesMisc } from '@assets';
 import { useDark } from '@hooks';
 import { scrollIt } from '@util';
-import { PaddingSizes, SvgSprite } from '@trality/web-ui-components';
+import { HideDesktop, HideMobile, PaddingSizes, SvgSprite } from '@trality/web-ui-components';
+import { CompetitionBanner } from './competitionbanner';
 
 const Background = styled.img`
     position: absolute;
@@ -48,7 +49,13 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
     return (
         <Container>
             <GDPR />
+            <HideMobile>
+                <CompetitionBanner />
+            </HideMobile>
             <Navigation pageType={pageType} />
+            <HideDesktop>
+                <CompetitionBanner />
+            </HideDesktop>
             <Placeholder />
             <>{children}</>
             <Section id="footer">
