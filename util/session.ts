@@ -5,5 +5,8 @@ export const setSessionDismissed = () => {
 };
 
 export const isDissmissed = () => {
+    if (typeof window === 'undefined') {
+        return true; // SSR always on
+    }
     return sessionStorage.getItem(SESSION_STORAGE_BANNER_KEY);
 };

@@ -36,6 +36,10 @@ const Placeholder = styled.div`
     }
 `;
 
+const Hidden = styled.div`
+    display: none;
+`;
+
 export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Normal }) => {
     const { setDark } = useDark();
 
@@ -48,7 +52,6 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
 
     return (
         <Container>
-            <GDPR />
             <HideMobile>
                 <CompetitionBanner />
             </HideMobile>
@@ -58,10 +61,12 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
             </HideDesktop>
             <Placeholder />
             <>{children}</>
+            <Hidden>
+                <SvgSprite />
+            </Hidden>
             <Section id="footer">
                 <Footer pageType={pageType} />
             </Section>
-            <SvgSprite />
         </Container>
     );
 };

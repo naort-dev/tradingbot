@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
 import { Logos } from '@assets';
-import { Layout } from '@containers';
+import { GDPR, Layout } from '@containers';
 import { LogoList, ExternalLink } from '@components';
 import { EventType, SignupOrigins } from '@trality/web-tracking';
 import { ConstUrl } from '@constants';
@@ -70,7 +70,7 @@ export const SocialLinks = [
 const SocialIcon = styled(SvgIcon)`
     fill: #353535;
     &:hover {
-        fill: #00B8E6;
+        fill: #00b8e6;
     }
 `;
 
@@ -105,7 +105,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                                             return (
                                                 <Cell size={2} mobileSize={2}>
                                                     <TextLink href={item.link} target="_blank">
-                                                        <SocialIcon name={item.icon} width="24" height="24" viewBox="0 0 24 24"/>
+                                                        <SocialIcon name={item.icon} width="24" height="24" viewBox="0 0 24 24" />
                                                     </TextLink>
                                                 </Cell>
                                             );
@@ -190,7 +190,7 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                 {FooterLogos.map((item) => {
                     return (
                         <Cell size={2} mobileSize={6} alignVertical="middle">
-                            <LazyImage src={item.light} maxWidth={164}/>
+                            <LazyImage src={item.light} maxWidth={164} />
                         </Cell>
                     );
                 })}
@@ -221,6 +221,8 @@ export const Footer: React.FunctionComponent<Props> = ({ pageType }) => {
                     </Cell>
                 </Row>
             </Padding>
+
+            <GDPR />
         </MainContainer>
     );
 };
