@@ -234,7 +234,7 @@ const Terms = () => {
                         </Padding>
                         <Padding size={{ top: PaddingSizes.TwentyFour }}>
                             <Text bodyType="Body2">
-                                <i>TradePenalty = min(1.0, 
+                                <i>InactivityPenalty = min(1.0, 
                                     <FractionLayout up={<> NumTrades</>} down={<>(1+TradingDays*0.16)</>} />)</i>
                             </Text>
                         </Padding>
@@ -259,7 +259,7 @@ const Terms = () => {
                         </Padding>
                         <Padding size={{ top: PaddingSizes.TwentyFour }}>
                             <Text bodyType="Body2">
-                                The main performance indicator is based on total profit with a penalty for max drawdown. In addition, a penalty will be applied to the risk adjusted return for bots that are deemed "inactive". For the bot to be "active", the minimum expected number of trades is once per week. The penalty will only be applied if a bot has less trades that this threshold. All "active" bots are treated equally and will be compared using PnL - DD as the risk adjusted return metric.
+                                The main performance indicator is based on total profit with a penalty for max drawdown. In addition, a penalty will be applied to the risk adjusted return for bots that are deemed "inactive". For the bot to be "active", the minimum expected number of trades is once per week. The penalty will only be applied if a bot has less trades that this threshold. All "active" bots are treated equally and will be compared using PnL - DD as the risk adjusted return metric. The InactivityPenalty will only be applied to bots where (PnL - MaxDD) is greater than 0.
                             </Text>
                         </Padding>
                         <Padding size={{ top: PaddingSizes.TwentyFour }}>
@@ -320,7 +320,7 @@ const Terms = () => {
                             </Padding>
                             <Padding size={{ top: PaddingSizes.TwentyFour }}>
                             <Text bodyType="Body2">
-                                The guild will be open only to a very select number of participants and membership will be offered as a bonus to this competition. Please note, that induction into the Guild will not be directly related solely to the bot’s performance during the submission or subsequent live-trading period. Additional factors such as fit with the overall Trality Marketplace strategy, personal reliability of the creator, and willingness to maintain and improve a bot will also play a role.
+                                The guild will be open only to a very select number of participants and membership will be offered as a bonus to this competition. Please note, that induction into the Guild will not be directly related solely to the bot’s performance during the submission or subsequent live-trading period. Additional factors such as fit with the overall Trality Marketplace strategy, personal reliability of the creator, and willingness to maintain and improve a bot will also play a role. For more info, please visit: <TextLink intext href="https://trality.com/guild" target="_blank">https://trality.com/guild</TextLink>
                             </Text>
                             </Padding>
                             <Padding size={{ top: PaddingSizes.TwentyFour }}>

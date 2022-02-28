@@ -28,6 +28,7 @@ export enum Page {
     Press,
     Blog,
     Vote,
+    Guild,
 }
 
 const titles = new Map([
@@ -58,6 +59,7 @@ const titles = new Map([
     [Page.Blog, 'Trality - Blog'],
     [Page.Blog, 'Trality - Blog'],
     [Page.Vote, 'Trality - Thank you for voting'],
+    [Page.Guild, 'Trality - The guild'],
 ]);
 
 const descriptions = new Map([
@@ -113,6 +115,7 @@ const descriptions = new Map([
     [Page.UnSub, ''],
     [Page.Press, ''],
     [Page.Vote, ''],
+    [Page.Guild, ''],
 ]);
 
 export const MetaTags: React.FunctionComponent<{ page: Page }> = ({ page }) => {
