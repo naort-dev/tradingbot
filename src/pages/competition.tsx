@@ -1,9 +1,10 @@
 import { Layout } from '@containers';
 import { CompetitionPage, PaddingSizes, Padding, CompetitionData } from '@trality/web-ui-components';
 import React from 'react';
+import { ConstUrl } from '../../constants/url';
 import { MetaTags, Page } from '../../util/metaTags';
 
-const CompetitionUrl = typeof process.env.GATSBY_COMPETITION_URL === 'undefined' ? false : process.env.GATSBY_COMPETITION_URL;
+const CompetitionUrl = ConstUrl.Signup;
 const CompetitionDataUrl = typeof process.env.GATSBY_COMPETITION_DATA_URL === 'undefined' ? false : process.env.GATSBY_COMPETITION_DATA_URL;
 
 const DataFetch = () => {

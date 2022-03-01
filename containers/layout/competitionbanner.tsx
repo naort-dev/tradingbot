@@ -88,8 +88,8 @@ export const CompetitionBanner = () => {
                                     size={{ left: PaddingSizes.Fourty }}
                                     mobileSize={{ left: PaddingSizes.Zero, top: PaddingSizes.TwentyFour }}
                                 >
-                                    <Button onClick={() => window.location.assign(CompetitionUrl)} size="medium">
-                                        Join now!
+                                    <Button onClick={() => window.location.assign('/competition')} size="medium">
+                                        Learn more
                                     </Button>
                                 </ButtonPadding>
                                 <CloseContainer onClick={onDismiss}>
