@@ -61,8 +61,6 @@ const CompCell = styled(Cell)`
     position: relative;
 `;
 
-const CompetitionUrl = typeof process.env.GATSBY_COMPETITION_URL === 'undefined' ? false : process.env.GATSBY_COMPETITION_URL;
-
 export const CompetitionBanner = () => {
     const [dismissed, setDismissed] = React.useState(() => (isDissmissed() ? true : false));
 
@@ -71,7 +69,7 @@ export const CompetitionBanner = () => {
         setSessionDismissed();
     };
 
-    if (dismissed || !CompetitionUrl) {
+    if (dismissed) {
         return null;
     }
     return (
@@ -88,8 +86,8 @@ export const CompetitionBanner = () => {
                                     size={{ left: PaddingSizes.Fourty }}
                                     mobileSize={{ left: PaddingSizes.Zero, top: PaddingSizes.TwentyFour }}
                                 >
-                                    <Button onClick={() => window.location.assign(CompetitionUrl)} size="medium">
-                                        Join now!
+                                    <Button onClick={() => window.location.assign('/competition')} size="medium">
+                                        Learn more
                                     </Button>
                                 </ButtonPadding>
                                 <CloseContainer onClick={onDismiss}>
