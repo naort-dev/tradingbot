@@ -47,7 +47,7 @@ const FooterLogos = [
 ];
 
 const firstMenu = [
-    { onClick: true, link: 'bWFpbHRvOmVudGVycHJpc2VAdHJhbGl0eS5jb20/c3ViamVjdD1FbnRlcnByaXNlIFBsYW4gRW5xdWlyeQ==', name: 'Contact us' },
+
     { link: '/about', name: 'About us' },
     { link: '/blog', name: 'Blog' },
     { link: '/jobs', name: 'Jobs' },
