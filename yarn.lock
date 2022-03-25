@@ -3783,10 +3783,10 @@
     moment-timezone "0.5.31"
     react-gtm-module "^2.0.8"
 
-"@trality/web-ui-components@^0.1.30":
-  version "0.1.30"
-  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.30/bd6b36ad4089b1acfa700b7bddb6c4951a82a2bdba89a4a52816830aa40fe909#8756a4844ce632df04a978ab209e30ad7b648055"
-  integrity sha512-z25AEy4w6VDfQ0kyO43KLblzANGkRvAscQwxf9vqvWzUu9zEF2L3HT3nsSeE1Toi4mJzIREfdQsJgM5lQagWFg==
+"@trality/web-ui-components@0.1.48":
+  version "0.1.48"
+  resolved "https://npm.pkg.github.com/download/@trality/web-ui-components/0.1.48/581e367571e537aef88e197f8066a03175b88aec62c19980818656231552d99e#f1c2319a95b68126edd13b1251861fb07ecc4e0d"
+  integrity sha512-HEQS73VFPVMV4f1+RSPAY4vN+uYNKbgbGxgXKepkABog4mkvvujetW+v/yHxs9W/EXUBym36ZITrk0wPeSx5NQ==
   dependencies:
     "@babel/cli" "7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
