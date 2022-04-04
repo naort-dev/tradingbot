@@ -16,7 +16,7 @@ const Top = styled.nav<Props>`
     z-index: 1002;
     position: fixed;
     left: 0;
-    top: 72px;
+    // top: 72px;
     background-color: #fff;
     ${(props) => !props.isOnTop && 'box-shadow: 0px 8px 24px #0C0C0C14'};
     transition: 0.25s;
