@@ -52,13 +52,13 @@ export const Page: React.FC<Props> = ({ dark, children, pageType = PageTypes.Nor
 
     return (
         <Container>
-            <HideMobile>
+            {/* <HideMobile>
                 <CompetitionBanner />
-            </HideMobile>
+            </HideMobile> */}
             <Navigation pageType={pageType} />
-            <HideDesktop>
+            {/* <HideDesktop>
                 <CompetitionBanner />
-            </HideDesktop>
+            </HideDesktop> */}
             <Placeholder />
             <>{children}</>
             <Hidden>
