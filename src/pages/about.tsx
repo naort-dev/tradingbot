@@ -355,7 +355,7 @@ No matter if advanced trader or beginner, everyone can have AI-based bots, other
                     </Cell>
                     <Cell size={12} mobileSize={12}>
                         <Row multiline>
-                            <Cell size={4} mobileSize={12} align="left" alignMobile="left" alignVerticalMobile="middle"  alignMobile="center" >
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="left" alignMobile="center" >
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
@@ -367,7 +367,7 @@ No matter if advanced trader or beginner, everyone can have AI-based bots, other
                                 <TextOnImage text="Teamwork" variant="Teamwork"></TextOnImage>
                                 </Padding>
                             </Cell>
-                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
@@ -380,7 +380,7 @@ No matter if advanced trader or beginner, everyone can have AI-based bots, other
                                     <TextOnImage text="Transparency" variant="Transparency"></TextOnImage>
                                 </Padding>
                             </Cell>
-                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
@@ -388,7 +388,7 @@ No matter if advanced trader or beginner, everyone can have AI-based bots, other
                                     <TextOnImage text="Trust" variant="Trust"></TextOnImage>
                                 </Padding>
                             </Cell>
-                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
@@ -396,7 +396,7 @@ No matter if advanced trader or beginner, everyone can have AI-based bots, other
                                     <TextOnImage text="Commitment" variant="Commitment"></TextOnImage>
                                 </Padding>
                             </Cell>
-                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="center">
                                 <Padding
                                     size={{
                                         bottom: PaddingSizes.TwentyFour,
