@@ -16,9 +16,11 @@ import {
     Surface,
     Text,
     TextLink,
+    TextOnImage
 } from '@trality/web-ui-components';
 import { FeaturedIn } from 'components/featuredin';
 import { LazyImage } from 'components/lazyImage';
+
 
 type PersonSocialLinks = {
     type: 'linkedin';
@@ -261,9 +263,8 @@ const Team = () => {
                                     }}
                                 >
                                     <Text bodyType="Body2">
-                                        We will bring the power and potential of algorithmic trading to everyone who needs it. Regardless of whether
-                                        they are advanced traders or beginners, every single person will be able to have bots automatically manage
-                                        their investments — across asset classes and platforms. All in one place.
+                                    We bring the power and flexibility of algorithmic trading to everyone who is looking for new ways to invest their hard-earned money.
+No matter if advanced trader or beginner, everyone can have AI-based bots, otherwise reserved for the pros, automatically manage their investments. Across strategies, asset classes and platforms, all in one place and all with just a few taps on your mobile phone.
                                     </Text>
                                 </Padding>
 
@@ -329,6 +330,84 @@ const Team = () => {
                         </Cell>
                     </Row>
                 </Padding>
+                <Padding size={{ top: PaddingSizes.NinetySix, bottom: PaddingSizes.NinetySix }}>
+                <Row> {/*start of core value container*/}
+                    <Cell size={12} mobileSize={12} alignVertical="middle" alignMobile="center">
+                        <Padding
+                                mobileSize={{
+                                    top: PaddingSizes.SixtyFour,
+                                    bottom: PaddingSizes.Twenty,
+                                }}
+                            >
+                                <Headline headlineType="Headline2">Cultures & Values</Headline>
+                        </Padding>
+                        <Padding
+                            size={{
+                                top: PaddingSizes.TwentyFour,
+                                bottom: PaddingSizes.TwentyFour,
+                            }}
+                            mobileSize={{
+                                top: PaddingSizes.Twenty,
+                                bottom: PaddingSizes.Twenty,
+                            }}>
+                            <Text bodyType="Body2">Trality has five core values: Teamwork, Transparency, Trust, Commitment, and Curiosity.</Text>
+                        </Padding>
+                    </Cell>
+                    <Cell size={12} mobileSize={12}>
+                        <Row multiline>
+                            <Cell size={4} mobileSize={12} align="left" alignMobile="left" alignVerticalMobile="middle"  alignMobile="center" >
+                                <Padding
+                                    size={{
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Twenty,
+                                        bottom: PaddingSizes.Twenty,
+                                    }}>
+                                <TextOnImage text="Teamwork" variant="Teamwork"></TextOnImage>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                                <Padding
+                                    size={{
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}
+                                    mobileSize={{
+                                        top: PaddingSizes.Twenty,
+                                        bottom: PaddingSizes.Twenty,
+                                    }}
+                                >
+                                    <TextOnImage text="Transparency" variant="Transparency"></TextOnImage>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                                <Padding
+                                    size={{
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}>                             
+                                    <TextOnImage text="Trust" variant="Trust"></TextOnImage>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                                <Padding
+                                    size={{
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}>  
+                                    <TextOnImage text="Commitment" variant="Commitment"></TextOnImage>
+                                </Padding>
+                            </Cell>
+                            <Cell size={4} mobileSize={12} align="right" alignMobile="center">
+                                <Padding
+                                    size={{
+                                        bottom: PaddingSizes.TwentyFour,
+                                    }}>  
+                                    <TextOnImage text="Curiosity" variant="Curiosity"></TextOnImage>
+                                </Padding>
+                            </Cell>
+                        </Row>
+                    </Cell>
+                </Row>
+                </Padding>      
             </MainContainer>
             <FeaturedIn />
             <Padding
