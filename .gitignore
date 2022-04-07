@@ -13,3 +13,4 @@ static/sitemap.xml
 .vercel
 public
 static/blog
+.history/

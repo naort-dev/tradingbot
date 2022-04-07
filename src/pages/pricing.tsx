@@ -34,6 +34,8 @@ interface Plan {
     price: { [key: number]: string };
     volume: string;
     tickSize: string;
+    rentedBots: string;
+    createdBots: string;
     liveBots: string;
     virtualBots: string;
     logRetention: string;
@@ -53,6 +55,8 @@ const AllPlans: Plan[] = [
         },
         volume: '€5,000',
         tickSize: '60m',
+        rentedBots: '1',
+        createdBots: '1',
         liveBots: '1',
         virtualBots: '1',
         logRetention: '1 Week',
@@ -71,6 +75,8 @@ const AllPlans: Plan[] = [
         },
         volume: '€25,000',
         tickSize: '60m',
+        rentedBots: '1',
+        createdBots: '2',
         liveBots: '2',
         virtualBots: '2',
         logRetention: '1 Month',
@@ -88,6 +94,8 @@ const AllPlans: Plan[] = [
         },
         volume: '€250,000',
         tickSize: '5m',
+        rentedBots: '1',
+        createdBots: '5',
         liveBots: '5',
         virtualBots: '5',
         logRetention: '6 Months',
@@ -105,6 +113,8 @@ const AllPlans: Plan[] = [
         },
         volume: 'Unlimited',
         tickSize: '1m',
+        rentedBots: '1',
+        createdBots: '10',
         liveBots: '10',
         virtualBots: '10',
         logRetention: 'Unlimited',
@@ -119,8 +129,7 @@ const PricingFAQ = [
         question: 'Trading Volume',
         answer: (
             <>
-                Trading bots are a set of algorithms that control automated buying and selling of assets. Doing so they exploit price volatility,
-                which is particularly high in crypto assets.
+                Trading volume specifies the maximum cumulative volume of buy as well as sell orders that can be filled per month per account.
             </>
         ),
     },
@@ -134,11 +143,26 @@ const PricingFAQ = [
         ),
     },
     {
-        question: 'Live Bots and Virtual Bots',
+        question: 'Rented Bots',
         answer: (
             <>
-                Specifies the number of bots that can be started trading either real assets (live bots) or virtual money (virtual bots). Note that a
-                single bot can run on multiple tick(!) sizes and have different strategies for multiple trading pairs.
+                This specifies the number of bots that can be rented via the marketplace to trade with real assets (live bots) or virtual assets (virtual bots). Note that users on the free plan cannot trade with real assets on the Marketplace.
+            </>
+        ),
+    },
+    {
+        question: 'Created Bots',
+        answer: (
+            <>
+                This specifies the number of bots that can be run live or virtually after having been created using the Bot Creation Tools. A single bot can run on multiple tick (!) sizes and have different strategies for multiple trading pairs.
+            </>
+        ),
+    },
+    {
+        question: 'Bot Limits',
+        answer: (
+            <>
+                Whichever paid plan that you choose, you can only have a maximum of 1 real marketplace and 1 virtual marketplace bot.
             </>
         ),
     },
@@ -155,8 +179,7 @@ const PricingFAQ = [
         question: 'Backtests',
         answer: (
             <>
-                Our goal is to enable you to experiment and iterate on your strategies as much as possible in order to increase profitability. That's
-                why we will always enable you to do as many backtests as you like, completely free of charge.
+                Our goal is to enable you to experiment and iterate on your strategies as much as possible in order to increase profitability, which is why there is never a limit on the number of backtests that you can perform. And the best part? They’re always free!
             </>
         ),
     },
@@ -394,13 +417,13 @@ const PricingComponent = () => {
                                                                         }}
                                                                     >
                                                                         <Text lighter bodyType="Body2">
-                                                                            Live Bots
+                                                                            Rented Bots
                                                                         </Text>
                                                                     </Padding>
                                                                 </Cell>
                                                                 <Cell size={12} mobileSize={12}>
                                                                     <Text darker bodyType="Body2">
-                                                                        {item.liveBots}
+                                                                        {item.rentedBots}
                                                                     </Text>
                                                                 </Cell>
                                                             </Row>
@@ -426,13 +449,13 @@ const PricingComponent = () => {
                                                                         }}
                                                                     >
                                                                         <Text lighter bodyType="Body2">
-                                                                            Virtual Bots
+                                                                            Created Bots
                                                                         </Text>
                                                                     </Padding>
                                                                 </Cell>
                                                                 <Cell size={12} mobileSize={12}>
                                                                     <Text darker bodyType="Body2">
-                                                                        {item.virtualBots}
+                                                                        {item.createdBots}
                                                                     </Text>
                                                                 </Cell>
                                                             </Row>
@@ -613,8 +636,7 @@ const PricingComponent = () => {
                                                     }}
                                                 >
                                                     <Text bodyType="Body2">
-                                                        We are happy to build custom features based on your needs. Let us know your requirements and
-                                                        we will help you implement them into your trade processes.
+                                                    We are happy to build custom features based on your needs. Let us know your requirements and we will help you implement them into your trade processes.
                                                     </Text>
                                                 </Padding>
                                                 <Button
@@ -661,7 +683,7 @@ const PricingComponent = () => {
                                 }}
                             >
                                 <Text bodyType="Body2">
-                                    Become one of our many awesome traders that trust Trality. No credit card required for you to get started.
+                                Turbocharge your trading by joining Trality today!
                                 </Text>
                             </Padding>
                             <Padding
