@@ -48,13 +48,14 @@ const Jobs = () => {
                                 size={{
                                     top: PaddingSizes.TwentyFour,
                                     bottom: PaddingSizes.TwentyFour,
+                                    right: PaddingSizes.FourtyEight,
                                 }}
                                 mobileSize={{
                                     top: PaddingSizes.TwentyFour,
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Text bodyType="Body3">
+                                <Text bodyType="Body2">
                                     Would you like to help us revolutionize investing by bringing the power and potential of trading bots to everyone
                                     who needs it? We're a small but very diverse team and we would love to hear from you!
                                 </Text>
@@ -106,8 +107,8 @@ const Jobs = () => {
                         <Cell size={1} mobileSize={0} />
                         <Cell size={10} mobileSize={12} align="center">
                             <iframe
-                                width="100%"
-                                height="315"
+                                width="720"
+                                height="405"
                                 src="https://www.youtube.com/embed/hOXwl2DVofI"
                                 title="YouTube video player"
                                 frameBorder="0"
@@ -154,7 +155,7 @@ const Jobs = () => {
                                     >
                                         <SubHeadline subheadlineType="SubHeadline2">Small team, large responsibilty</SubHeadline>
                                     </Padding>
-                                    <Text bodyType="Body4">
+                                    <Text bodyType="Body2">
                                         We're a team of only 9, doubling until the end of the year. If you’re the right person for the job, you’re in
                                         charge of it!
                                     </Text>
@@ -191,7 +192,7 @@ const Jobs = () => {
                                     >
                                         <SubHeadline subheadlineType="SubHeadline2">Competitive remuneration</SubHeadline>
                                     </Padding>
-                                    <Text bodyType="Body4">
+                                    <Text bodyType="Body2">
                                         We want the best for the job and pay accordingly! We're also open to negotiating equity-based compensation.
                                     </Text>
                                 </Padding>
@@ -223,7 +224,7 @@ const Jobs = () => {
                                     >
                                         <SubHeadline subheadlineType="SubHeadline2">Hybrid working model</SubHeadline>
                                     </Padding>
-                                    <Text bodyType="Body4">
+                                    <Text bodyType="Body2">
                                         We understand that people are different. Wanna work remotely? Fine. Wanna join us in our offices? Perfect as
                                         well.
                                     </Text>

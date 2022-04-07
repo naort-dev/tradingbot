@@ -35,8 +35,8 @@ export const JobsContainer = () => {
                             size={{
                                 top: PaddingSizes.Zero,
                                 bottom: PaddingSizes.SixtyFour,
-                                left: PaddingSizes.Twenty,
-                                right: PaddingSizes.Twenty,
+                                left: PaddingSizes.TwentyFour,
+                                right: PaddingSizes.TwentyFour,
                             }}
                             mobileSize={{
                                 top: PaddingSizes.Zero,

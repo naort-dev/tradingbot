@@ -194,12 +194,12 @@ const PricingComponent = () => {
                 </Padding>
                 <Row center>
                     <Cell size={12} mobileSize={12} align="center">
-                        <Text bodyType="Body4">Choose a plan that meets all your requirements.</Text>
+                        <Text bodyType="Body2">Choose a plan that meets all your requirements.</Text>
                     </Cell>
                 </Row>
                 <Row center>
                     <Cell size={12} mobileSize={12} align="center">
-                        <Text bodyType="Body4"> Annual plans help you save 20%</Text>
+                        <Text bodyType="Body2"> Annual plans help you save 20%</Text>
                     </Cell>
                 </Row>
 
@@ -249,7 +249,7 @@ const PricingComponent = () => {
                                             bottom: PaddingSizes.SixtyFour,
                                         }}
                                     >
-                                        <Surface shadowType="dark-l">
+                                        <Surface shadowType="dark-2">
                                             <Padding
                                                 size={{
                                                     top: PaddingSizes.ThirtyTwo,
@@ -568,7 +568,7 @@ const PricingComponent = () => {
                 <MainContainer>
                     <Row>
                         <Cell size={12} mobileSize={12} align="left">
-                            <Surface shadowType="dark-l">
+                            <Surface shadowType="dark-2">
                                 <MainContainer>
                                     <Row>
                                         <Cell size={2} mobileSize={12} alignVertical="middle">
@@ -660,7 +660,7 @@ const PricingComponent = () => {
                                     bottom: PaddingSizes.TwentyFour,
                                 }}
                             >
-                                <Text bodyType="Body3">
+                                <Text bodyType="Body2">
                                     Become one of our many awesome traders that trust Trality. No credit card required for you to get started.
                                 </Text>
                             </Padding>

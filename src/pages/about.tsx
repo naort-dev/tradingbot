@@ -386,6 +386,7 @@ const Team = () => {
                                                     <LazyImage
                                                         style={{
                                                             borderRadius: '1000px',
+                                                            boxShadow: '0px 8px 16px rgba(12,12,12,0.08)',
                                                         }}
                                                         src={person.photo ?? Assets.TeamPhotos.Unknown}
                                                     />
