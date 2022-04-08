@@ -121,8 +121,5 @@
         "typescript-plugin-styled-components": "^1.4.2",
         "vercel": "^21.0.1"
     },
-    "license": "ISC",
-    "engines": {
-        "node": "12.x"
-    }
+    "license": "ISC"
 }
