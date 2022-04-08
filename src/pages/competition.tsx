@@ -30,7 +30,8 @@ const Competition = () => {
             <Padding size={{ top: PaddingSizes.SixtyFour }} mobileSize={{ top: PaddingSizes.NinetySix }}>
                 <CompetitionPage
                     pageStyle="lp"
-                    callToActionsVisible={CompetitionUrl ? true : false}
+                    // callToActionsVisible={CompetitionUrl ? true : false}
+                    callToActionsVisible={false}
                     competitionData={CompetitionDataUrl ? DataFetch : undefined}
                     competitionBoxesVisible={CompetitionDataUrl ? true : false}
                     onCallToAction={CompetitionUrl ? () => window.location.assign(CompetitionUrl) : undefined}

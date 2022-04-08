@@ -75,19 +75,11 @@ const Terms = () => {
                                         <b>Scope / amendment of the General Terms and Conditions</b>
                                         <ol>
                                             <li>
-                                                The following General Terms and Conditions ("GTC") shall apply to all present and future business
-                                                transactions, contracts and business relationships, in any case and in particular also to transactions
-                                                with/on online or electronic platforms (such as https://www.trality.com, https://app.trality.com) as
-                                                well as mobile applications ("App"; App together with online or electronic platforms the "Platform"),
-                                                between TRALITY GmbH, FN 504493 b ("TRALITY") and persons who visit or use the Platform and/or users
-                                                of the App as well as persons who use one or more services and functions offered on the Platform
-                                                ("Services") and meet al requirements in accordance with the Platform ("Users"; the User and TRALITY
-                                                together the "Parties" and each a "Party"), in each case in the version valid at the time of
-                                                conclusion of a contract, even if no express reference is made in each case to the GTC.
+                                                The following General Terms and Conditions ("GTC") shall apply to all present and future business transactions, contracts and business relationships, in any case and in particular also to transactions with/on online or electronic platforms (such as <a href="https://www.trality.com">https://www.trality.com</a>, <a href="https://app.trality.com">https://app.trality.com</a>) as well as mobile applications ("App"; App together with online or electronic platforms the "Platform"), between TRALITY GmbH, FN 504493 b ("TRALITY") and persons who visit or use the Platform and/or users of the App as well as persons who use one or more services and functions offered on the Platform ("Services") and meet all requirements in accordance with the Platform ("Users"; the User and TRALITY together the "Parties" and each a "Party"), in each case in the version valid at the time of conclusion of a contract, even if no express reference is made in each case to the GTC.
+
                                             </li>
                                             <li>
-                                                These GTC apply both to consumers and to entrepreneurs within the meaning of the Austrian Consumer
-                                                Protection Act (Konsumentenschutzgesetz "KSchG").
+                                                These GTC apply both to consumers and to entrepreneurs within the meaning of the Austrian Consumer Protection Act (Konsumentenschutzgesetz "KSchG").
                                             </li>
                                             <li>
                                                 Insofar as reference is made to "consumer" in this GTC, these are natural persons in accordance with
@@ -129,21 +121,14 @@ const Terms = () => {
                                         <b>Conclusion of a contract</b>
                                         <ol>
                                             <li>
-                                                TRALITY only offers services and access to the Platform to those persons who are of legal age. The
-                                                User declares to be at least 18 years old. The time of the respective conclusion of the contract
-                                                between the User and TRALITY is governed by the following provisions. The User shall only be notified
-                                                separately of the conclusion of the contract if so provided for in the following provisions or
-                                                required by law. The fulfilment of the contract shall be carried out immediately after the conclusion
-                                                of the contract.
+                                                TRALITY only offers services and access to the Platform to those persons who are of legal age. The User declares to be at least 18 years old. The time of the respective conclusion of the contract between the User and TRALITY is governed by the following provisions. The User shall only be notified separately of the conclusion of the contract if so provided for in the following provisions or required by law. The fulfilment of the contract shall be carried out immediately after the conclusion of the contract.
                                             </li>
                                             <li>
                                                 Every user who is to be classified as a consumer hereby expressly wishes TRALITY to begin fulfilling
                                                 the contract prematurely, i.e. before the expiry of any right of withdrawal on the part of the User.
                                             </li>
                                             <li>
-                                                The User hereby expressly declares, that, in case the account of the User on the Platform is linked to
-                                                an electronic wallet or exchange account ("Wallet") via application programming interface ("API"), the
-                                                User has the power of disposal over the Wallet whether as owner, or as authorised representative.
+                                                The User hereby expressly declares, that, in case the account of the User on the Platform is linked to an electronic wallet or exchange account ("Wallet") via application programming interface ("API"), the User has the power of disposal over the Wallet whether as owner, or as authorised representative.
                                             </li>
                                         </ol>
                                     </li>
@@ -154,14 +139,7 @@ const Terms = () => {
                                                 General
                                                 <ol>
                                                     <li>
-                                                        TRALITY offers Users on the Platform the possibility to program algorithmic trading programs
-                                                        ("Bots"), whereby the User is provided with various programming models, at the sole discretion
-                                                        of TRALITY. It is expressly stated that TRALITY shall not serve as a trading centre for
-                                                        cryptographic block-chain-based digital information units ("Cryptoassets") or other goods of
-                                                        any kind. TRALITY does not accept or receive, transmit or place any trade orders. All
-                                                        trade-related processes relating to Cryptoassets or other goods of any kind shall take place
-                                                        exclusively with third parties. TRALITY merely provides the software for programming, testing
-                                                        and deploying (which means live-, mirror- and paper-trading) Bots of Users.
+                                                        TRALITY offers Users on the Platform the possibility to program algorithmic trading programs ("Bots"), whereby the User is provided with various programming models, at the sole discretion of TRALITY. It is expressly stated that TRALITY shall not serve as a trading centre for cryptographic block-chain-based digital information units ("Cryptoassets") or other goods of any kind. TRALITY does not accept or receive, transmit or place any trade orders. All trade-related processes relating to Cryptoassets or other goods of any kind shall take place exclusively with third parties. TRALITY merely provides the software for programming, testing and deploying (which means live-, mirror- and paper-trading) Bots of Users.
                                                     </li>
                                                     <li>
                                                         The User expressly agrees that TRALITY may change or remove functions and Services on the
@@ -207,51 +185,71 @@ const Terms = () => {
                                                 Bot Creation
                                                 <ol>
                                                     <li>
-                                                        The tab "Create Bots" offers Users tools to create and store their own Bots on the platform by
-                                                        using the tools as provided for by the platform.
+                                                        The tab "Create new Bots" offers Users tools to create and store their own Bots on the platform by using the tools as provided for by the platform.
                                                     </li>
                                                     <li>
-                                                        Via the Platform, TRALITY provides the User with standard settings of a source code
-                                                        ("Templates") on which a bot may be created. It is expressly stated, that these Templates are
-                                                        no recommendation or suggestion of any kind, but shall provide the User merely with a basic
-                                                        structure on which the Bot may be built.
+                                                        Via the Platform, TRALITY provides the User inter alia with standard settings of a source code ("Templates") on which a bot may be created. It is expressly stated, that these Templates are no recommendation or suggestion of any kind, but shall provide the User merely with a basic structure on which the Bot may be built.
                                                     </li>
                                                     <li>
-                                                        Back-testing: During the process of creating a Bot, the User is provided with the possibility
-                                                        to test the created Bot (the "Back-Testing"). During the Back-Testing, the provided services
-                                                        search for any technical problems in the created Bots (i.e. code errors). In addition, in the
-                                                        course of the Back-Testing process, the User can also test the outcome of the Bot by running a
-                                                        demo with the created Bot with historical data available from Cryptocurrency exchanges on the
-                                                        Platform. The User expressly declares, that it is understood, that the process of Back-testing
-                                                        is no guarantee for future economic success – please also see clause 9.4.
+                                                        Back-testing
+                                                        <br />
+                                                        During the process of creating a Bot, the User is provided with the possibility to test the created Bot (the "Back-Testing"). During the Back-Testing, the provided services search for any technical problems in the created Bots (i.e. code errors). In addition, in the course of the Back-Testing process, the User can also test the outcome of the Bot by running a demo with the created Bot with historical data available from Cryptocurrency exchanges on the Platform. The User expressly declares, that it is understood, that the process of Back-testing is no guarantee for future economic success – please also see clause 9.4.
+                                                    </li>
+                                                    <li>
+                                                        Intellectual property and non-disclosure of the source code
+                                                        <br />
+                                                        Any intellectual property, in particular, but not limited to, in relation to a Bot created by Users shall remain with the User, except this GTC provide expressly for otherwise.
                                                     </li>
                                                 </ol>
                                             </li>
                                             <li>
-                                                Tutorial: On the Platform, the User can find a tutorial in which useful tips relating to the Platform,
-                                                the Services provided and the creation of Bots can be found. The tutorial shall help the User navigate
-                                                through the Platform and optimise its use of the Services. The User understands and acknowledges that
-                                                the tutorial shall and must not be considered an investment advice or any other proposal on how to
-                                                create or use a Bot.
+                                                Submission of the created Bots to the Marketplace
+                                                <br />
+                                                Via the Platform and under the section "Monetize", TRALITY provides Users the possibility to offer their created Bots via the Marketplace (as defined below and such offer to the Marketplace the "Submission") to other Users. The process is set forth in the Marketplace Submission Terms and Conditions, which shall form an integral part of this GTC.
                                             </li>
                                             <li>
-                                                Documentation: Via <a href="https://docs.trality.com">https://docs.trality.com</a> ("Docs"), TRALITY,
-                                                besides the Platform, built a knowledge base on the various possibilities of how to program a Bot.
-                                                Docs is an additional service that shall help the User to create and implement a strategy for the Bot.
-                                                The User understands and acknowledges that Docs shall and must not be considered an investment advice
-                                                or any other proposal on how to create or use a Bot. The website{' '}
-                                                <a href="https://docs.trality.com">https://docs.trality.com</a> is hosted at and maintained by Gitbook
-                                                (<a href="https://www.gitbook.com">https://www.gitbook.com</a>); TRALITY only provides the content for
-                                                the Users.
+                                                Tutorials
+                                                <br />
+                                                On the Platform, the User can find one or more tutorial(s) in which useful tips relating to the Platform, the Services provided and the creation of Bots can be found. The tutorials shall help the User navigate through the Platform and optimise its use of the Services. The User understands and acknowledges that the tutorials shall and must not be considered an investment advice or any other proposal on how to create or use a Bot.
                                             </li>
                                             <li>
-                                                Marketplace: Via the Platform, TRALITY provides the possibility for Users to follow Bots from other
-                                                Users of TRALITY. The Bots followed send trading signals to the followers account. A software solution
-                                                on the Platform forward these signals to the respective Exchange of the following User for trading
-                                                with their Cryptocurrencies on the account of the following User. The User understands and expressly
-                                                acknowledges, that the service on the Platform, which enables a User to follow Bots of other Users,
-                                                shall and must not be considered an investment advice or any other proposal by TRALITY. It remains the
-                                                free and unaffected choice of each User, whether he follows one or several Bots.
+                                                TRALITY Documentation:
+                                                <br />
+                                                Via <a href="https://docs.trality.com">https://docs.trality.com</a> (Docs), <a href="https://trality.zendesk.com/hc/en-us">https://trality.zendesk.com/hc/en-us</a> (Helpdesk), <a href="https://discord.com/invite/h5BPuKBQHv">https://discord.com/invite/h5BPuKBQHv</a> (Discord), <a href="https://www.trality.com/blog">https://www.trality.com/blog</a> (Blog) and <a href="https://www.trality.com/masterclass">https://www.trality.com/masterclass</a> (Masterclass), TRALITY, besides the Platform, built a knowledge base on the various possibilities of how to program a Bot. These sites are an additional service that shall help the User to create and implement a strategy for the Bot. The User understands and acknowledges that they shall and must not be considered an investment advice or any other proposal on how to create or use a Bot. The website <a href="https://docs.trality.com">https://docs.trality.com</a> is hosted at and maintained by Gitbook (<a href="https://www.gitbook.com">https://www.gitbook.com</a>); TRALITY only provides the content for the Users.
+                                            </li>
+                                            <li>
+                                                Marketplace
+                                                <br />
+                                                Via the Platform and under the section "Marketplace", TRALITY provides the possibility for Users to follow and rent Bots from other Users of TRALITY (the "Creator"), which they have submitted to the marketplace in accordance with section 3.4 (such marketplace the "Marketplace").
+                                                <ol>
+                                                    <li>
+                                                        After selection of the relevant bot and clicking the tab "Rent this bot", the User can click either "Proceed with paper trading" or "Proceed with live trading".
+                                                    </li>
+                                                    <li>
+                                                        If the User clicks on "Proceed with paper trading", the User may select an account or create one by adding exchange, name, the assets and the quantity of the Cryptoassets. Then the User may click the button "Add account & proceed". By ticking the boxes "I agree to start the bot" and clicking the tab "Rent this bot" the rent of the Bot by the respective User starts.
+                                                    </li>
+                                                    <li>
+                                                        If the User clicks on "Proceed with live trading", then the User can choose an existing exchange account or add one. If the User adds an exchange account, he has to add the exchange details such as name of the account, account token and private key. After insertion of the aforementioned details and clicking of the button "Add account & proceed" a new mask opens. By ticking the boxes "I agree to start the bot", "I accept the Marketplace Submission T&Cs" and then clicking the Tab "Rent this bot", the User starts to rent the Bot. If the entered details were not correct, an alert is generated and the User may cross-check and try again.
+                                                    </li>
+                                                    <li>
+                                                        The Bots followed and rent send trading signals to the Users account. A software solution on the Platform forward these signals to the respective Exchange of the User for trading with their Cryptocurrencies on the account of such User. The User understands and expressly acknowledges that the service on the Platform, which enables a User to follow and rent Bots of other Users, shall and must not be considered an investment advice or any other proposal by TRALITY and/or the Creator. It remains the free and unaffected choice of each User, whether he follows and rent one or several Bots.
+                                                    </li>
+                                                    <li>
+                                                        TRALITY provides for services on the Platform in order to pass on signals from the Bot followed and rent to the respective User account on its respective exchange, were the signals are executed by the respective exchange in the sole responsibility of the User. As such TRALITY does expressly not assume any reliability and/or warranty in respect of any Bot, whatsoever, in particular, but not limited to, and its performance, quality, coding, compliance with any laws, appropriateness for the Users requirements, as the case may be, and/or its technical compliance with the exchanges software, as amended from time to time.
+                                                    </li>
+                                                    <li>
+                                                        The rent of any Bot to a User shall be deemed a non-exclusive, non-sublicense able software license between the Creator and the User. However, the software source code shall not be provided to any User and shall remain the exclusive property of the Creator.
+                                                    </li>
+                                                    <li>
+                                                        In order to rent a Bot, the User is required to be subscribed for such pricing model as set forth in section 4, which enables such scope of services as required by the Bot rented.
+                                                    </li>
+                                                    <li>
+                                                        The Creator shall not be obliged to maintain operational the Bot for any specific period of time; the Creator shall be entitled to terminate the operation of the Bot at any time. The Creator does expressly not assume any reliability and/or warranty in respect of any Bot, whatsoever, in particular, but not limited to, and its performance, quality, coding, compliance with any laws, appropriateness for the Users requirements, as the case may be, and/or its technical compliance with the exchanges software, as amended from time to time.
+                                                    </li>
+                                                    <li>
+                                                        The Creator accepts no liability for loss of data or computer damage arising from the following and rental of any Bot.
+                                                    </li>
+                                                </ol>
                                             </li>
                                             <li>
                                                 Live Trading
@@ -279,12 +277,17 @@ const Terms = () => {
                                                 </ol>
                                             </li>
                                             <li>
-                                                Licencing: TRALITY agrees to grant the User a non-exclusive license to use the software services on
-                                                the Platform. TRALITY reserves the right to exclude the User from such services without any notice and
-                                                without any grounds in the sole discretion of TRALITY, in particular, if the User has breached one of
-                                                his obligations under this GTC without curing such breach within 14 days or, if the User creates a Bot
-                                                which does not comply with the rules and regulations of a Cryptoasset exchange used by the Bot, or if
-                                                the User has breached any law in connection with the function of the Bot.
+                                                Licencing:
+                                                <br />
+                                                TRALITY agrees to grant the User a non-exclusive license to use the software services on
+                                                        the Platform. TRALITY reserves the right to exclude the User from such services without any notice and
+                                                        without any grounds in the sole discretion of TRALITY, in particular, if the User has breached one of
+                                                        his obligations under this GTC without curing such breach within 14 days or, if the User creates a Bot
+                                                        which does not comply with the rules and regulations of a Cryptoasset exchange used by the Bot, or if
+                                                        the User has breached any law in connection with the function of the Bot.
+                                            </li>
+                                            <li>
+                                                TRALITY offers end-to-end encryption. As a default the respective encryption key is stored with TRALITY. By clicking "Settings", "Security", "Bot Data Encryption", "Manage" and "Enable paranoia mode" the User may retrieve the encryption key and delete any backup of the encryption keys from TRALITYs servers. Then, the User is the only one who have access to the encryption key.
                                             </li>
                                         </ol>
                                     </li>
@@ -292,21 +295,10 @@ const Terms = () => {
                                         <b>Pricing and Subscription Models</b>
                                         <ol>
                                             <li>
-                                                TRALITY offers the User on the Platform four different pricing and subscription models for trading via
-                                                a Bot, which differ in the scope of services and costs. Those models are called "Pawn", "Knight",
-                                                "Rook" and "Queen" (together "Pricing Models" and individually each a "Pricing Model").
+                                                TRALITY offers the User on the Platform four different pricing and subscription models for trading via a Bot, which differ in the scope of services and costs. Those models are called "Pawn", "Knight", "Rook" and "Queen" (together "Pricing Models" and individually each a "Pricing Model").
                                             </li>
                                             <li>
-                                                On the Platform under "Pricing" and by clicking the tab "Monthly" or "Yearly", the User can find the
-                                                prices for buying the Pricing Model monthly,- or yearly. The tab "Start Now" guides the User to the
-                                                subscription and/or Login, as the case may be. If the User is logged in, the Pricing Models are
-                                                available under "Settings" and "Subscription". By clicking the Tab "Change Plan", the User changes
-                                                from the pre-chosen Pricing Model "Pawn" to the selection field "Select Plan". Under "Select Plan" the
-                                                User can choose the respective Pricing Model. Under "Billing Cycle" the User may select and agree on
-                                                the respective term of the contract and the respective billing period by clicking on the tab
-                                                "continue" (the respective period the "Subscription Period" and the respective price the "Subscription
-                                                Fee"). Under "Payment Method" the User shall select its payment method and under "Review & Confirm"
-                                                the User is able to conclude the respective contract legally binding by clicking "confirm & pay".
+                                                On the Platform under "Pricing" and by clicking the tab "Monthly" or "Yearly", the User can find the prices for buying the Pricing Model monthly,- or yearly. The tab "Start Now" guides the User to the subscription and/or Login, as the case may be. If the User is logged in, the Pricing Models are available under "Settings" and "Subscription". By clicking the Tab "Change Plan", the User changes from the pre-chosen Pricing Model "Pawn" to the selection field "Select Plan". Under "Select Plan" the User can choose the respective Pricing Model. Under "Billing Cycle" the User may select and agree on the respective term of the contract and the respective billing period by clicking on the tab "continue" (the respective period the "Subscription Period" and the respective price the "Subscription Fee"). Under "Payment Method" the User shall select its payment method and under "Review & Confirm" the User is able to conclude the respective contract legally binding by clicking "confirm & pay".
                                             </li>
                                             <li>
                                                 After the expiry of a Subscription Period, the respective contract automatically renews for a time
@@ -344,28 +336,10 @@ const Terms = () => {
                                                 Changes of Pricing Models during Subscription Period:
                                                 <ol>
                                                     <li>
-                                                        During current Subscription Period, the User is not allowed to change to a Pricing Model,
-                                                        which consists of less services than the one subscribed for ("Downgrade"). Downgrade shall
-                                                        only be permissible with effect at the end of a Subscription Period and if the User informs
-                                                        TRALITY via e-mail in advance.
+                                                        During current Subscription Period, the User is not allowed to change to a Pricing Model, which consists of less services than the one subscribed for ("Downgrade"). Downgrade shall only be permissible with effect at the end of a Subscription Period and if the User informs TRALITY via e-mail in advance.
                                                     </li>
                                                     <li>
-                                                        The change to a Pricing Model, which consists of more services than the ones subscribed for
-                                                        shall be permissible anytime via the Platform under "Subscription" during a Subscription
-                                                        Period ("Upgrade"). If the User undertakes an Upgrade (such day on which the Upgrade has been
-                                                        made by the User the "Upgrade Day"), by clicking on the tab "Change Plan" under "Settings" and
-                                                        "Subscription", the User changes from the previous chosen Pricing Model to the one selected
-                                                        under "Select Plan". Under "Billing Cycle" the User may select and agree on the respective
-                                                        term of the upgrade contract and the respective billing period by clicking on the tab
-                                                        "continue" (the respective upgrade period the "Upgrade Subscription Period" and the respective
-                                                        price the "Upgrade Subscription Fee"). Under "Payment Method" the User shall select its
-                                                        payment method and under "Review & Confirm" the User is able to finally conclude the
-                                                        respective contract and undertake the upgrade legally binding by clicking "confirm & pay". In
-                                                        case of an Upgrade, the portion of the Subscription Fee already paid to TRALITY in advance for
-                                                        the current subscription attributable to the amount of days between the Upgrade Day and the
-                                                        end of the current Subscription Period, shall be set-off with the portion of the Upgrade
-                                                        Subscription Fee attributable to the amount of days between the Upgrade Day and the end of the
-                                                        current Subscription Period.
+                                                        The change to a Pricing Model, which consists of more services than the ones subscribed for shall be permissible anytime via the Platform under "Subscription" during a Subscription Period ("Upgrade"). If the User undertakes an Upgrade (such day on which the Upgrade has been made by the User the "Upgrade Day"), by clicking on the tab "Change Plan" under "Settings" and "Subscription", the User changes from the previous chosen Pricing Model to the one selected under "Select Plan". Under "Billing Cycle" the User may select and agree on the respective term of the upgrade contract and the respective billing period by clicking on the tab "continue" (the respective upgrade period the "Upgrade Subscription Period" and the respective price the "Upgrade Subscription Fee"). Under "Payment Method" the User shall select its payment method and under "Review & Confirm" the User is able to finally conclude the respective contract and undertake the upgrade legally binding by clicking "confirm & pay". In case of an Upgrade, the portion of the Subscription Fee already paid to TRALITY in advance for the current subscription attributable to the amount of days between the Upgrade Day and the end of the current Subscription Period, shall be set-off with the portion of the Upgrade Subscription Fee attributable to the amount of days between the Upgrade Day and the end of the current Subscription Period.
                                                     </li>
                                                 </ol>
                                             </li>
@@ -375,33 +349,28 @@ const Terms = () => {
                                         <b>Payment and Delay of Payment</b>
                                         <ol>
                                             <li>
-                                                If the User chooses a Pricing Model for Live Trading via the Platform, the User will be charged a
-                                                respective Subscription Fee according to the Subscription Fee and Subscription Period by TRALITY in
-                                                advance for each Subscription Period (the "Payment"). TRALITY offers the User the following
-                                                possibilities for Payment via stripe: Visa, Mastercard, Discover, Amex, Diners, Apple Pay, Google Pay,
-                                                Klarna and EPS (each a "Payment Method").
+                                                If the User chooses a Pricing Model for Live Trading via the Platform, the User will be charged a respective Subscription Fee according to the Subscription Fee and Subscription Period by TRALITY in advance for each Subscription Period (the "Payment"). TRALITY may offer the User one or more of the following possibilities for Payment via stripe: Visa, Mastercard, Discover, Amex, Diners, Apple Pay, Google Pay, Paypal, Klarna and EPS (each a "Payment Method").
                                             </li>
                                             <li>
-                                                When signing up for Live Trading, the User is obliged to deposit his payment information subject to
-                                                the Payment Method used by the User (the "Payment Account") with TRALITY. The respective Payment shall
-                                                be immediately payable and due on the first day of each Subscription Period in advance. Thus, the User
-                                                shall authorize TRALITY to charge the Payment Account in accordance with the general terms and
-                                                conditions applicable for the Payment Method used by the User for its respective Payment. The User is
-                                                obliged to provide sufficient funds on the due date. If collection via the Payment Method is not
-                                                possible (e.g. insufficient funds), the User shall bear any resulting costs (e.g. credit card fees)
+                                                When signing up for Live Trading, the User is obliged to deposit his payment information subject to the Payment Method used by the User (the "Payment Account") with TRALITY. The respective Payment shall be immediately payable and due on the first day of each Subscription Period in advance. Thus, the User shall authorize TRALITY to charge the Payment Account in accordance with the general terms and conditions applicable for the Payment Method used by the User for its respective Payment. The User is obliged to provide sufficient funds on the due date. If collection via the Payment Method is not possible (e.g. insufficient funds), the User shall bear any resulting costs (e.g. credit card fees).
                                             </li>
                                             <li>
-                                                The User is in delay with its Payment if the Payment cannot be charged from the Payment Account
-                                                because of insufficient funds or any other reason attributable to the User.{' '}
+                                                If a User rents a Bot submitted to the Marketplace in accordance with section 3.7, the respective Creator shall be entitled to a payment (the "Creator Payment"). The Creator Payment shall be agreed upon with TRALITY on a one-by-one basis separately.
                                             </li>
                                             <li>
-                                                In the case of delay of the User, TRALITY shall be entitled to charge any fees related to such delay,
-                                                in particular, but not limited to, any dunning fees (a total amount of at least EUR 10.00 up to a
-                                                maximum of EUR 20.00 will be charged). In case TRALITY engages a third party with any dunning and
-                                                collection services, TRALITY shall be entitled to additionally charge any additional expenses charged
-                                                by the third party and in compliance with the "Verordnung des Bundesministers für wirtschaftliche
-                                                Angelegenheiten über die Höchstsätze der Inkassoinstituten gebührenden Vergütungen" (BGBI Nr. 141/1996
-                                                idgF), to the extent that these are reasonable and necessary to cover adequate prosecution costs.{' '}
+                                                Trality reserves the right to change the earning structure of the Creator Payment, in particular, but not limited to, may amend any uptime based or running timed based fee structure to a fixed fee structure or vice versa.
+                                            </li>
+                                            <li>
+                                                The User is in delay with its Payment if the Payment cannot be charged from the Payment Account because of insufficient funds or any other reason attributable to the User.
+
+                                            </li>
+                                            <li>
+                                                Further, TRALITY shall not be liable for any delay in payments of a User to a Creator, whatsoever, in particular with regard to any loss incurred to the Creator due to a later or a non-payment of a User caused by lack of funds.
+
+                                            </li>
+                                            <li>
+                                                In the case of delay of the User, TRALITY shall be entitled to charge any fees related to such delay, in particular, but not limited to, any dunning fees (a total amount of at least EUR 10.00 up to a maximum of EUR 20.00 will be charged). In case TRALITY engages a third party with any dunning and collection services, TRALITY shall be entitled to additionally charge any additional expenses charged by the third party and in compliance with the "Verordnung des Bundesministers für wirtschaftliche Angelegenheiten über die Höchstsätze der Inkassoinstituten gebührenden Vergütungen" (BGBI Nr. 141/1996 idgF), to the extent that these are reasonable and necessary to cover adequate prosecution costs.
+
                                             </li>
                                         </ol>
                                     </li>
@@ -409,7 +378,7 @@ const Terms = () => {
                                         <b>Termination and Refund of Payments</b>
                                         <ol>
                                             <li>
-                                                6.1. If the User or TRALITY terminate the contract extraordinarily, the User shall be entitled to a
+                                                If the User or TRALITY terminate the contract extraordinarily, the User shall be entitled to a
                                                 certain refund according to this section 6.2 ("Refund"). However and for the avoidance of any doubt,
                                                 there shall be no automatic refund. Instead and as a prerequisite, the User shall be obliged to claim
                                                 such Refund from TRALITY via e-mail in order to be entitled to such Refund. The amount of the Refund,
@@ -536,10 +505,7 @@ const Terms = () => {
                                                 connection with the implementation of orders at any third-party platform and/or exchange.
                                             </li>
                                             <li>
-                                                TRALITY expressly points out that no liability is assumed for the processing of transactions based on
-                                                the Bots. This applies in particular to damage caused by interruptions or other systemic failures as
-                                                well as special features of third parties (e.g. server downtime, internet outage, non-availability of
-                                                APIs, programming and/or system errors on the part of a trading centre or exchange for Cryptoassets).
+                                                TRALITY expressly points out that no liability is assumed for the processing of transactions based on the Bots and the availability of the Marketplace and of any Bots thereon. This applies in particular to damage caused by interruptions or other systemic failures as well as special features of third parties (e.g. server downtime, internet outage, non-availability of APIs, programming and/or system errors on the part of a trading centre or exchange for Cryptoassets).
                                             </li>
                                             <li>
                                                 The User is aware that TRALITY has no influence on the placement and/or execution of transactions with
@@ -587,13 +553,7 @@ const Terms = () => {
                                         <b>Copyright, Links</b>
                                         <ol>
                                             <li>
-                                                TRALITY hereby reserves all copyrights and IP-rights as used on or in connection with the Platform or
-                                                the Services provided, including external Services (Docs)- The Platform, the associated Services and
-                                                the underlying software are protected by copyright and may not be used or modified beyond the granted
-                                                right of use without the prior written consent of TRALITY. Similarly, the design of the Platform and,
-                                                in particular, the contents posted on the Platform (e.g. photos, images or texts) are protected by
-                                                copyright and are subject to other laws for the protection of intellectual property and TRALITY is
-                                                entitled to the rights thereto, unless otherwise indicated.
+                                                TRALITY hereby reserves all copyrights and IP-rights as used on or in connection with the Platform or the Services provided, including external Services (Docs), but, however, expressly excluding any IP on the created Bots, which shall remain with the Creator. The Platform, the associated Services and the underlying software are protected by copyright and may not be used or modified beyond the granted right of use without the prior written consent of TRALITY. Similarly, the design of the Platform and, in particular, the contents posted on the Platform (e.g. photos, images or texts) are protected by copyright and are subject to other laws for the protection of intellectual property and TRALITY is entitled to the rights thereto, unless otherwise indicated.
                                             </li>
                                             <li>
                                                 The direct or indirect references offered on the Platform to external content (e.g. external links,
