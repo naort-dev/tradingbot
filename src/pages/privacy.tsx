@@ -75,7 +75,7 @@ const Privacy = () => {
                             <br />
                             <b>Controller of all processing activities is:</b>
                             <p>TRALITY GmbH</p>
-                            <p>Novaragasse 19/9 AT-1020 Wien</p>
+                            <p>Kirchengasse 18/8 AT-1070 Wien</p>
                             <p>Email: hello@trality.com</p>
                             <p>UID: ATU73931338</p>
                             <p>Company Register: 504493b, Commercial Court Vienna</p>
