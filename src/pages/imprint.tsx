@@ -17,7 +17,7 @@ const Imprint = () => {
                         </Padding>
                         <Padding size={{ top: PaddingSizes.TwentyFour, bottom: PaddingSizes.TwentyFour }}>
                             <Text bodyType="Body2">TRALITY GmbH</Text>
-                            <Text bodyType="Body2">Novaragasse 19/9 AT-1020 Wien</Text>
+                            <Text bodyType="Body2">Kirchengasse 18/8 AT-1070 Wien</Text>
                             <Text bodyType="Body2">Email: hello@trality.com</Text>
                             <Text bodyType="Body2">UID: ATU73931338</Text>
                             <Text bodyType="Body2">Company Register: 504493b, Commercial Court Vienna</Text>
