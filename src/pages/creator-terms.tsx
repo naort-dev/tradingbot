@@ -53,7 +53,7 @@ const Section = styled.div<{ center?: boolean }>`
 const Terms = () => {
     return (
         <Layout.Page title="terms">
-            <MetaTags page={Page.Terms} />
+            <MetaTags page={Page.CreatorTerms} />
             <MainContainer>
                 <Padding
                     size={{

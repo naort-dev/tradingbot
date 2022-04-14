@@ -44,6 +44,7 @@ const titles = new Map([
     [Page.Imprint, 'Trality - Imprint'],
     [Page.Privacy, 'Trality - Privacy'],
     [Page.Terms, 'Trality - General Terms and Conditions'],
+    [Page.CreatorTerms, 'Trality - Marketplace Submission Terms and Conditions'],
     [Page.Competition, 'Trality Trading Competition'],
     [Page.CompetitionTerms, 'Trality - Competition Terms and Conditions'],
     [Page.JobSrFullStack, 'Trality Jobs - Senior Full-Stack Developer'],
@@ -98,6 +99,10 @@ const descriptions = new Map([
     [
         Page.Terms,
         'The following General Terms and Conditions ("GTC") shall apply to all present and future business transactions, contracts and business relationships...',
+    ],
+    [
+        Page.CreatorTerms,
+        'The following Terms and Conditions are directed towards Creators, who wish to submit their trading bot to the Trality Bot Marketplace, in order to rent it out to potential users.',
     ],
     [
         Page.Competition,
