@@ -270,7 +270,7 @@ const Terms = () => {
                                                 (<a href="https://www.gitbook.com">https://www.gitbook.com</a>); TRALITY only provides the content for
                                                 the Users.
                                             </li>
-                                            <li>
+                                            <li id="marketplace-terms">
                                                 Marketplace
                                                 <br />
                                                 Via the Platform and under the section "Marketplace", TRALITY provides the possibility for Users to
